@@ -1,0 +1,66 @@
+# ============================================================
+# RepGuard .gitignore
+# ============================================================
+
+# ----- Secrets & Environment -----
+.env
+.env.local
+.env.production
+
+# ----- Python -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+
+# ----- Virtual Environments -----
+.venv/
+venv/
+env/
+
+# ----- Data & Caches (never commit raw benchmark data) -----
+data/raw/
+data/cache/
+data/downloads/
+*.parquet
+*.arrow
+*.h5
+
+# ----- LLM Call Cache -----
+.llm_cache/
+
+# ----- Experiment Artifacts & Outputs -----
+artifacts/
+outputs/
+results/
+logs/*.jsonl
+wandb/
+
+# ----- Type Checking & Linting -----
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# ----- IDE -----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ----- OS -----
+.DS_Store
+Thumbs.db
+
+# ----- Jupyter -----
+.ipynb_checkpoints/
+
+# ----- Coverage -----
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml

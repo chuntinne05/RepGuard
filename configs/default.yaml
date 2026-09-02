@@ -1,0 +1,79 @@
+# ============================================================
+# RepGuard Default Experiment Configuration
+# ============================================================
+# This configuration enables a full dry-run with MockProvider.
+# No API keys are required.
+
+experiment:
+  name: "default_smoke_test"
+  description: "Default configuration for smoke testing the RepGuard pipeline"
+  seed: 42
+  tags:
+    - smoke-test
+    - mock
+
+data:
+  dataset: "TIGER-Lab/MMLU-Pro"
+  data_dir: "./data"
+  # Split ratios: train_calibration gets 60%, dev gets 20%, test gets 20%
+  splits:
+    train_calibration_ratio: 0.6
+    dev_ratio: 0.2
+    test_ratio: 0.2
+  # Maximum number of tasks to load for dry-run (null = load all)
+  max_tasks: 100
+
+provider:
+  # Options: mock, openai, anthropic
+  name: "mock"
+  model_id: "mock-model-v1"
+  parameters:
+    temperature: 0.0
+    max_tokens: 512
+    top_p: 1.0
+
+harness:
+  # Prompt mode: "direct" (answer only) or "cot" (chain-of-thought)
+  prompt_mode: "direct"
+  batch_size: 10
+  # Rate limiting (requests per minute / tokens per minute)
+  rate_limit:
+    requests_per_minute: 60
+    tokens_per_minute: 100000
+  # Retry configuration
+  retry:
+    max_attempts: 3
+    min_wait_seconds: 1.0
+    max_wait_seconds: 60.0
+  # Disk cache for LLM responses
+  cache:
+    enabled: true
+    cache_dir: "./.llm_cache"
+
+logging:
+  log_dir: "./logs"
+  # Verbosity: DEBUG, INFO, WARNING, ERROR
+  level: "INFO"
+  # Write structured JSON-lines experiment log
+  structured: true
+
+# ----- Week 2+ Configuration (Placeholders) -----
+# These sections are scaffolded for future use.
+
+feedback:
+  # Feedback regime for Week 2+ experiments
+  # Options: oracle, noisy, sparse, judge, mixed
+  regime: "oracle"
+  # Noise level (probability of flipping correct feedback)
+  noise_eta: 0.0
+  # Sparsity (probability of revealing feedback)
+  sparsity_rho: 1.0
+
+transfer:
+  # Transfer condition for Week 2+ experiments
+  # Options: same, related, unrelated
+  condition: "same"
+
+agents:
+  # Agent pool configuration for Week 2+
+  pool: []
