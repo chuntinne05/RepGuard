@@ -48,6 +48,7 @@ dev = [
 
 [project.scripts]
 repguard-run = "repguard.harness.runner:main"
+repguard-audit = "repguard.audit.capability_audit:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

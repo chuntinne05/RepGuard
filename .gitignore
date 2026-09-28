@@ -23,12 +23,15 @@ venv/
 env/
 
 # ----- Data & Caches (never commit raw benchmark data) -----
-data/raw/
-data/cache/
-data/downloads/
+data/
 *.parquet
 *.arrow
 *.h5
+
+# ----- Build & Presentation Artifacts -----
+.codex-finalizer/
+.pptx-build/
+.pptx-output/
 
 # ----- LLM Call Cache -----
 .llm_cache/

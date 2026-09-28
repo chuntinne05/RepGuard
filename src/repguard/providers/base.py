@@ -130,15 +130,19 @@ class LLMProvider(ABC):
 def create_provider(config: ProviderConfig) -> LLMProvider:
     """Factory function to create the appropriate LLM provider.
 
+    Supported providers: ``mock``, ``openai``, ``anthropic``, ``gemini``.
+    Each real provider reads its API key from a dedicated environment variable.
+    Add new providers here and implement their LLMProvider subclass.
+
     Args:
-        config: Provider configuration.
+        config: Provider configuration (name, model_id, parameters).
 
     Returns:
         An initialized LLMProvider instance.
 
     Raises:
         ValueError: If the provider name is not recognized.
-        RuntimeError: If required API keys are not set.
+        RuntimeError: If a required API key environment variable is not set.
     """
     if config.name == "mock":
         from repguard.providers.mock import MockProvider
@@ -166,6 +170,20 @@ def create_provider(config: ProviderConfig) -> LLMProvider:
         from repguard.providers.anthropic_ import AnthropicProvider
         return AnthropicProvider(config, api_key=api_key)
 
+    elif config.name == "gemini":
+        api_key = os.environ.get("GEMINI_API_KEY", "")
+        if not api_key:
+            msg = (
+                "GEMINI_API_KEY environment variable is not set. "
+                "Set it in your .env file: GEMINI_API_KEY=<your-key>"
+            )
+            raise RuntimeError(msg)
+        from repguard.providers.gemini_ import GeminiProvider
+        return GeminiProvider(config, api_key=api_key)
+
     else:
-        msg = f"Unknown provider: '{config.name}'. Use 'mock', 'openai', or 'anthropic'."
+        msg = (
+            f"Unknown provider: '{config.name}'. "
+            "Supported: 'mock', 'openai', 'anthropic', 'gemini'."
+        )
         raise ValueError(msg)

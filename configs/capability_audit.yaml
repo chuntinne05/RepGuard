@@ -1,0 +1,149 @@
+# ============================================================
+# RepGuard Capability Audit Configuration
+# Step 1.1 — Heterogeneity Gate (OQ-1: Model Pool Composition)
+# ============================================================
+#
+# Usage:
+#   python -m repguard.audit.capability_audit --config configs/capability_audit.yaml
+#
+# To add a new model/provider:
+#   - Append another block under `agents:` with your provider's settings.
+#   - Set the API key in .env (or export to shell) before running.
+#
+# Supported providers: mock | gemini | openai | anthropic
+
+audit:
+  seed: 42
+
+  # Tasks sampled per domain (subject) from the train_calibration split.
+  # Note: For Gemini Free Tier (quota: 5 requests/minute):
+  #   - n_samples_per_domain: 3 (8 domains = 24 tasks) finishes in ~6 minutes.
+  #   - n_samples_per_domain: 15 (8 domains = 120 tasks) takes ~30 minutes.
+  n_samples_per_domain: 3
+
+  # MMLU-Pro subjects to include. Leave empty [] to use all available subjects.
+  # Full list: math, physics, chemistry, biology, computer science, engineering,
+  #            health, psychology, business, economics, history, philosophy, law, other
+  domains:
+    - math
+    - physics
+    - computer science
+    - history
+    - law
+    - psychology
+    - biology
+    - economics
+
+  # Prompt format: "direct" (answer letter only) or "cot" (chain-of-thought)
+  prompt_mode: direct
+
+  # ──────────────────────────────────────────────────────────
+  # Data source
+  # ──────────────────────────────────────────────────────────
+  # Set use_synthetic: true to run the full pipeline WITHOUT network access.
+  # Results will be meaningless for real heterogeneity analysis, but
+  # it validates that all code paths work before spending API budget.
+  use_synthetic: false
+  synthetic_n: 400         # only used when use_synthetic: true
+
+  data_dir: "./data"
+  dataset_id: "TIGER-Lab/MMLU-Pro"
+
+  # Where to write results (JSON, CSV, gate decision)
+  output_dir: "./results/capability_audit"
+
+
+# ============================================================
+# Agent pool
+# ============================================================
+# Each agent entry defines one LLM configuration.
+# The audit evaluates ALL agents on the SAME sampled tasks.
+#
+# Fields:
+#   name             Human-readable label (appears in reports and CSV)
+#   provider         Backend: gemini | openai | anthropic | mock
+#   model_id         Model string sent to the API
+#   temperature      Sampling temperature (0.0 = greedy/deterministic)
+#   max_tokens       Max output tokens
+#   top_p            Top-p sampling parameter
+#   api_key_env      Name of the env var holding the API key
+#   requests_per_minute  Rate limit (adjust to stay within quota)
+#   tokens_per_minute    Token rate limit
+#   cache_dir        Directory for caching API responses (avoids re-spending budget)
+
+agents:
+
+  # ────────────────────────────────────────────────────────────
+  # Agent 1: Google Gemini Flash (primary candidate)
+  # Set GEMINI_API_KEY in .env before running.
+  # ────────────────────────────────────────────────────────────
+  - name: gemini-flash
+    provider: gemini
+    model_id: gemini-flash-latest
+    temperature: 0.0
+    max_tokens: 512
+    top_p: 1.0
+    api_key_env: GEMINI_API_KEY
+    requests_per_minute: 4    # Free Tier limit is 5 RPM. Set to 4 to prevent 429 quota errors.
+    tokens_per_minute: 1000000
+    cache_dir: ./.llm_cache
+
+  # ────────────────────────────────────────────────────────────
+  # Agent 2: Mock baseline (deterministic, no API cost)
+  # Useful for validating the pipeline and as a weak baseline.
+  # ────────────────────────────────────────────────────────────
+  - name: mock-baseline
+    provider: mock
+    model_id: mock-model-v1
+    temperature: 0.0
+    max_tokens: 512
+    top_p: 1.0
+    api_key_env: ""       # no key needed for mock
+    requests_per_minute: 10000
+    tokens_per_minute: 10000000
+    cache_dir: ./.llm_cache
+
+  # ────────────────────────────────────────────────────────────
+  # Agent 3: (Example) Add a second real model here for heterogeneity.
+  # Uncomment and fill in when you have a second API key.
+  # ────────────────────────────────────────────────────────────
+  # - name: gemini-pro
+  #   provider: gemini
+  #   model_id: gemini-1.5-pro
+  #   temperature: 0.0
+  #   max_tokens: 512
+  #   top_p: 1.0
+  #   api_key_env: GEMINI_API_KEY   # same key, different model
+  #   requests_per_minute: 10
+  #   tokens_per_minute: 100000
+  #   cache_dir: ./.llm_cache
+
+  # ────────────────────────────────────────────────────────────
+  # Agent 4: (Example) OpenAI GPT-4o-mini
+  # Uncomment when OPENAI_API_KEY is available.
+  # ────────────────────────────────────────────────────────────
+  # - name: gpt-4o-mini
+  #   provider: openai
+  #   model_id: gpt-4o-mini
+  #   temperature: 0.0
+  #   max_tokens: 512
+  #   top_p: 1.0
+  #   api_key_env: OPENAI_API_KEY
+  #   requests_per_minute: 500
+  #   tokens_per_minute: 200000
+  #   cache_dir: ./.llm_cache
+
+  # ────────────────────────────────────────────────────────────
+  # Agent 5: (Example) Anthropic Claude Haiku
+  # Uncomment when ANTHROPIC_API_KEY is available.
+  # ────────────────────────────────────────────────────────────
+  # - name: claude-haiku
+  #   provider: anthropic
+  #   model_id: claude-3-haiku-20240307
+  #   temperature: 0.0
+  #   max_tokens: 512
+  #   top_p: 1.0
+  #   api_key_env: ANTHROPIC_API_KEY
+  #   requests_per_minute: 50
+  #   tokens_per_minute: 100000
+  #   cache_dir: ./.llm_cache
