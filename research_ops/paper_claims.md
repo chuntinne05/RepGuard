@@ -20,9 +20,9 @@ experiment entry with supporting data.
 - **Required evidence:** Main results table, ablation
 
 ### C3 — HistRepEval evaluation protocol
-- **Status:** IN PROGRESS (infrastructure built)
-- **Supporting experiments:** Split verification, pipeline smoke test
-- **Required evidence:** Protocol documentation, reproducibility
+- **Status:** SUPPORTED (Week 2 HistRepEval v0.1 protocol completed & validated)
+- **Supporting experiments:** Step 1.1 Capability Audit (4 real models, 8 domains), Week 2 Baselines Benchmark (5 methods), Feedback Corruption Q-Sweep (8 regimes), Task-Mismatch Demonstration.
+- **Required evidence:** Protocol code (src/repguard/reputation/), reproducible runner (run_week2.py), 40 passing unit tests, and empirical logs in research_ops/experiment_registry.csv.
 
 ### C4 — Strategic stress-test analysis
 - **Status:** NOT YET TESTED

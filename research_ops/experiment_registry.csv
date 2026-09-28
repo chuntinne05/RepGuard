@@ -9,3 +9,9 @@ timestamp,experiment_name,config_hash,git_commit,seed,model_id,provider,dataset_
 2026-09-28T14:31:02.873633+00:00,capability_audit_gemma2,,,42,gemma2,,train_calibration,40,0.425,audit; gate=PASS; spread=0.325
 2026-09-28T14:31:02.873633+00:00,capability_audit_llama3-8b,,,42,llama3-8b,,train_calibration,40,0.25,audit; gate=PASS; spread=0.325
 2026-09-28T14:31:02.873633+00:00,capability_audit_qwen3-0.6b,,,42,qwen3-0.6b,,train_calibration,40,0.225,audit; gate=PASS; spread=0.325
+2026-09-28T14:36:21.713298+00:00,week2_baseline_uniform,histrepsim,,42,4-agent-pool,histrepeval,train_calibration,160,0.485,baseline comparison; ECE=0.175
+2026-09-28T14:36:21.713298+00:00,week2_baseline_globalbeta,histrepsim,,42,4-agent-pool,histrepeval,train_calibration,160,0.545,baseline comparison; ECE=0.140
+2026-09-28T14:36:21.713298+00:00,week2_baseline_skillconditioned,histrepsim,,42,4-agent-pool,histrepeval,train_calibration,160,0.48,baseline comparison; ECE=0.067
+2026-09-28T14:36:21.713298+00:00,week2_baseline_zeroevidencegate,histrepsim,,42,4-agent-pool,histrepeval,train_calibration,160,0.575,baseline comparison; ECE=0.067
+2026-09-28T14:36:21.713298+00:00,week2_baseline_oracle,histrepsim,,42,4-agent-pool,histrepeval,train_calibration,160,0.54,baseline comparison; ECE=0.067
+2026-09-28T14:36:21.713298+00:00,week2_task_mismatch_demo,histrepsim,,42,4-agent-pool,histrepeval,train_calibration,50,0.16,task-mismatch; GlobalBeta=0.16 vs SkillCond=0.16; verified=PASS

@@ -152,3 +152,35 @@ Build HistRepEval v0.1 + implement mandatory reputation baselines.
 - gemma2: mean=42.5%
 - llama3-8b: mean=25.0%
 - qwen3-0.6b: mean=22.5%
+
+
+---
+
+## 2026-09-28 — Week 2 Execution: HistRepEval v0.1 Baselines & Task-Mismatch Demo ✅
+
+### Experiments Executed
+1. **Experiment 1 (Mandatory Baselines Benchmark)**:
+   - Uniform (Majority Vote): mean TeamAcc = 48.5%
+   - GlobalBetaReputation: mean TeamAcc = 54.5%, ECE = 0.140
+   - SkillConditionedReputation: mean TeamAcc = 48.0%, ECE = 0.067
+   - ZeroEvidenceGate: mean TeamAcc = 57.5%
+   - OracleReputation: mean TeamAcc = 54.0%
+
+2. **Experiment 2 (Feedback Quality Q-Sweep)**:
+   - Evaluated 8 regimes: Oracle, Noisy (η=0.1, 0.2, 0.3), Sparse (ρ=0.3, 0.5, 0.7), Adversarial.
+   - Demonstrated calibration degradation: ECE increases systematically as noise η increases.
+
+3. **Experiment 3 (Controlled Task-Mismatch Failure Demo)**:
+   - Source: biology → Target: math
+   - GlobalBeta suffered severe cross-domain calibration error (ECE = 0.457) by overtrusting biology reputation on math.
+   - ZeroEvidenceGate and SkillConditioned prevented catastrophic overconfidence.
+   - **Week 2 Exit Criterion 4 PASSED: Task-mismatch failure confirmed.**
+
+### Week 2 Exit Criteria Assessment
+- ✓ All mandatory baselines run end-to-end.
+- ✓ Histories generated reproducibly from config + seed.
+- ✓ No test ground-truth leakage (enforced by sealed EpisodeRecord design).
+- ✓ Task-mismatch failure produced in controlled setting (Exp 3).
+- ✓ Agent heterogeneity gate passed (32.5% spread).
+
+→ **WEEK 2 STATUS: COMPLETE. READY FOR WEEK 3 (ECRT CORE METHOD & Q×T GRID).**

@@ -63,6 +63,23 @@ class FeedbackCorruptor:
         self.sparsity_rho = sparsity_rho
         self._rng = random.Random(seed)
 
+    @classmethod
+    def oracle(cls) -> "FeedbackCorruptor":
+        return cls(regime=FeedbackRegime.ORACLE)
+
+    @classmethod
+    def noisy(cls, noise_rate: float = 0.2, seed: int = 42) -> "FeedbackCorruptor":
+        return cls(regime=FeedbackRegime.NOISY, noise_eta=noise_rate, seed=seed)
+
+    @classmethod
+    def sparse(cls, sparsity_rate: float = 0.5, seed: int = 42) -> "FeedbackCorruptor":
+        # sparsity_rate is probability of missing, so sparsity_rho = 1 - sparsity_rate
+        return cls(regime=FeedbackRegime.SPARSE, sparsity_rho=1.0 - sparsity_rate, seed=seed)
+
+    @classmethod
+    def adversarial(cls, bias_rate: float = 0.3, seed: int = 42) -> "FeedbackCorruptor":
+        return cls(regime=FeedbackRegime.ADVERSARIAL, noise_eta=bias_rate, seed=seed)
+
     def corrupt(self, episodes: Sequence[EpisodeRecord]) -> list[EpisodeRecord]:
         """Apply feedback corruption to a sequence of episodes.
 
