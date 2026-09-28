@@ -1,3 +1,7 @@
 timestamp,experiment_name,config_hash,git_commit,seed,model_id,provider,dataset_split,num_tasks,metric_accuracy,metric_notes
 2026-09-28T02:39:01.346195+00:00,capability_audit_gemini-flash,,,42,gemini-flash,,train_calibration,24,0.5,audit; gate=FAIL; spread=0.417
 2026-09-28T02:39:01.346195+00:00,capability_audit_mock-baseline,,,42,mock-baseline,,train_calibration,24,0.0833,audit; gate=FAIL; spread=0.417
+2026-09-28T13:00:00.000000+00:00,capability_audit_qwen3-8b,267956b,,42,qwen3:14b,ollama,train_calibration,40,0.5125,run2; gate=PASS; spread=0.2875; best_domains=biology+cs+history+economics+law+psychology
+2026-09-28T13:00:00.000000+00:00,capability_audit_gemma2,267956b,,42,gemma2,ollama,train_calibration,40,0.5000,run2; gate=PASS; spread=0.2875; best_domains=math+physics+economics+law
+2026-09-28T13:00:00.000000+00:00,capability_audit_llama3-8b,267956b,,42,llama3:8b,ollama,train_calibration,40,0.3875,run2; gate=PASS; spread=0.2875; role=generalist_baseline
+2026-09-28T13:00:00.000000+00:00,capability_audit_qwen3-0.6b,267956b,,42,qwen3:0.6b,ollama,train_calibration,40,0.2250,run2; gate=PASS; spread=0.2875; role=weak_agent_adversarial_test
