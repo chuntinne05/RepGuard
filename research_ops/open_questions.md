@@ -14,7 +14,7 @@ and supporting evidence.
 - **Constraints:** Need genuine heterogeneity (best agent must change across domains)
 - **Candidates:** GPT-4o, GPT-4o-mini, Claude 3.5 Sonnet, Claude 3 Haiku, Llama 3.1, Gemini
 - **Decision criteria:** Per-domain capability audit (Week 1 exit criterion)
-- **Status:** OPEN — pending API key availability
+- **Status:** CLOSED — gate passed on 2026-09-28. Winners per domain: qwen3-0.6b, qwen3-8b. Spread: 32.5%.
 
 ### OQ-2: MMLU-Pro split sizes
 - **Question:** Are the 60/20/20 split ratios appropriate?

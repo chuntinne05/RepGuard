@@ -74,32 +74,58 @@ audit:
 agents:
 
   # ────────────────────────────────────────────────────────────
-  # Agent 1: Qwen 3 14B hosted on Modal (Ollama)
-  # Remote GPU server on Modal with single-token direct answering
+  # Agent 1: Qwen3 8B (Primary reasoning agent)
   # ────────────────────────────────────────────────────────────
-  - name: qwen3-14b-modal
+  - name: qwen3-8b
     provider: ollama
-    model_id: qwen3:14b
+    model_id: qwen3:8b
     temperature: 0.0
     max_tokens: 16
     top_p: 1.0
-    api_key_env: ""       # Handled via Modal-Authorization header
+    api_key_env: ""
     requests_per_minute: 1000
     tokens_per_minute: 10000000
     cache_dir: ./.llm_cache
 
   # ────────────────────────────────────────────────────────────
-  # Agent 2: Mock baseline (deterministic, no memory / no cost)
-  # Provides reference baseline for Heterogeneity Gate (needs >= 2 agents)
+  # Agent 2: Gemma2 (Quantitative / Math / Physics specialist)
   # ────────────────────────────────────────────────────────────
-  - name: mock-baseline
-    provider: mock
-    model_id: mock-model-v1
+  - name: gemma2
+    provider: ollama
+    model_id: gemma2
     temperature: 0.0
     max_tokens: 16
     top_p: 1.0
     api_key_env: ""
-    requests_per_minute: 10000
+    requests_per_minute: 1000
+    tokens_per_minute: 10000000
+    cache_dir: ./.llm_cache
+
+  # ────────────────────────────────────────────────────────────
+  # Agent 3: Llama3 8B (Generalist baseline)
+  # ────────────────────────────────────────────────────────────
+  - name: llama3-8b
+    provider: ollama
+    model_id: llama3:8b
+    temperature: 0.0
+    max_tokens: 16
+    top_p: 1.0
+    api_key_env: ""
+    requests_per_minute: 1000
+    tokens_per_minute: 10000000
+    cache_dir: ./.llm_cache
+
+  # ────────────────────────────────────────────────────────────
+  # Agent 4: Qwen3 0.6B (Budget / weak agent)
+  # ────────────────────────────────────────────────────────────
+  - name: qwen3-0.6b
+    provider: ollama
+    model_id: qwen3:0.6b
+    temperature: 0.0
+    max_tokens: 16
+    top_p: 1.0
+    api_key_env: ""
+    requests_per_minute: 1000
     tokens_per_minute: 10000000
     cache_dir: ./.llm_cache
 

@@ -116,3 +116,39 @@ Build HistRepEval v0.1 + implement mandatory reputation baselines.
 - Feedback corruption controlled via FeedbackConfig (noise_eta, sparsity_rho).
 - Transfer conditions: same-domain / cross-domain (related / unrelated).
 - All baselines use Beta distribution formulation for principled uncertainty.
+
+---
+
+## 2026-09-28 — Capability Audit (Step 1.1)
+
+### Agents evaluated
+- qwen3-8b
+- gemma2
+- llama3-8b
+- qwen3-0.6b
+
+### Domains covered
+- biology
+- computer science
+- economics
+- history
+- law
+- math
+- physics
+- psychology
+
+### Heterogeneity Gate: PASS ✓
+- ✓ Best agent changes across domains: YES (winners: 'qwen3-0.6b', 'qwen3-8b')
+- ✓ Performance spread: 32.5% (threshold ≥ 10%) — meaningful.
+-    qwen3-8b                  mean accuracy = 55.0%
+-    gemma2                    mean accuracy = 42.5%
+-    llama3-8b                 mean accuracy = 25.0%
+-    qwen3-0.6b                mean accuracy = 22.5%
+- 
+→ OQ-1 CLOSED: Proceed with Week 2 baselines and HistRepEval v0.1.
+
+### Accuracy summary
+- qwen3-8b: mean=55.0%
+- gemma2: mean=42.5%
+- llama3-8b: mean=25.0%
+- qwen3-0.6b: mean=22.5%

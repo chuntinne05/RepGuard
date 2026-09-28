@@ -29,36 +29,36 @@ logger = logging.getLogger("repguard")
 _DEFAULT_OLLAMA_HOST = "http://127.0.0.1:11434"
 
 
-def _get_modal_auth_token(base_url: str) -> str | None:
+def _get_modal_auth_token(base_url: str, *, force_refresh: bool = False) -> str | None:
     """Retrieve Modal flash authorization token for the endpoint if available.
 
     Checks:
-    1. MODAL_AUTH_TOKEN environment variable.
+    1. MODAL_AUTH_TOKEN environment variable (unless force_refresh).
     2. Cached token in ~/.cache/modal/curl-flash-auth-tokens.json (written by modal CLI).
     3. Programmatic token fetch via modal SDK if available.
     """
-    # 1. Environment variable override
-    env_token = os.environ.get("MODAL_AUTH_TOKEN")
-    if env_token:
-        return env_token
+    if not force_refresh:
+        # 1. Environment variable override
+        env_token = os.environ.get("MODAL_AUTH_TOKEN")
+        if env_token:
+            return env_token
 
-    # 2. Check cached token file from modal CLI
-    cache_path = Path.home() / ".cache" / "modal" / "curl-flash-auth-tokens.json"
-    if cache_path.exists():
-        try:
-            cache_data = json.loads(cache_path.read_text())
-            now = time.time()
-            # Clean hostname for matching
-            from urllib.parse import urlparse
+        # 2. Check cached token file from modal CLI
+        cache_path = Path.home() / ".cache" / "modal" / "curl-flash-auth-tokens.json"
+        if cache_path.exists():
+            try:
+                cache_data = json.loads(cache_path.read_text())
+                now = time.time()
+                from urllib.parse import urlparse
 
-            hostname = urlparse(base_url).hostname or base_url
+                hostname = urlparse(base_url).hostname or base_url
 
-            for key, val in cache_data.items():
-                if (key in hostname or hostname in key) and isinstance(val, dict):
-                    if val.get("expires_at", 0) > now:
-                        return val.get("token")
-        except Exception as exc:
-            logger.debug(f"Failed to read modal token cache: {exc}")
+                for key, val in cache_data.items():
+                    if (key in hostname or hostname in key) and isinstance(val, dict):
+                        if val.get("expires_at", 0) > (now + 60):  # at least 60s buffer
+                            return val.get("token")
+            except Exception as exc:
+                logger.debug(f"Failed to read modal token cache: {exc}")
 
     # 3. Try modal client if installed
     try:
@@ -72,7 +72,9 @@ def _get_modal_auth_token(base_url: str) -> str | None:
             resp = await client.stub.CurlGetAuthToken(api_pb2.CurlAuthTokenRequest(url=base_url))
             return resp.token
 
-        return asyncio.run(_fetch())
+        token = asyncio.run(_fetch())
+        if token:
+            return token
     except Exception as exc:
         logger.debug(f"Failed to fetch modal auth token via SDK: {exc}")
 
@@ -198,6 +200,16 @@ class OllamaProvider(LLMProvider):
                     )
 
                 if http_response.status_code == 401:
+                    if attempt < self._max_retries and ("modal.direct" in self._base_url or "modal.run" in self._base_url):
+                        logger.warning(
+                            f"[Modal 401] Auth token expired or invalid. Refreshing token ({attempt + 1}/{self._max_retries})..."
+                        )
+                        new_token = _get_modal_auth_token(self._base_url, force_refresh=True)
+                        if new_token:
+                            self._client.headers["Modal-Authorization"] = f"Bearer {new_token}"
+                            time.sleep(1.0)
+                            continue
+
                     raise RuntimeError(
                         f"Modal proxy authentication failed (401) for {self._base_url}. "
                         f"Run 'modal curl {self._base_url}' in terminal to refresh the token, "

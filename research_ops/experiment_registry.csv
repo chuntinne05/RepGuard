@@ -5,3 +5,7 @@ timestamp,experiment_name,config_hash,git_commit,seed,model_id,provider,dataset_
 2026-09-28T13:00:00.000000+00:00,capability_audit_gemma2,267956b,,42,gemma2,ollama,train_calibration,40,0.5000,run2; gate=PASS; spread=0.2875; best_domains=math+physics+economics+law
 2026-09-28T13:00:00.000000+00:00,capability_audit_llama3-8b,267956b,,42,llama3:8b,ollama,train_calibration,40,0.3875,run2; gate=PASS; spread=0.2875; role=generalist_baseline
 2026-09-28T13:00:00.000000+00:00,capability_audit_qwen3-0.6b,267956b,,42,qwen3:0.6b,ollama,train_calibration,40,0.2250,run2; gate=PASS; spread=0.2875; role=weak_agent_adversarial_test
+2026-09-28T14:31:02.873633+00:00,capability_audit_qwen3-8b,,,42,qwen3-8b,,train_calibration,40,0.55,audit; gate=PASS; spread=0.325
+2026-09-28T14:31:02.873633+00:00,capability_audit_gemma2,,,42,gemma2,,train_calibration,40,0.425,audit; gate=PASS; spread=0.325
+2026-09-28T14:31:02.873633+00:00,capability_audit_llama3-8b,,,42,llama3-8b,,train_calibration,40,0.25,audit; gate=PASS; spread=0.325
+2026-09-28T14:31:02.873633+00:00,capability_audit_qwen3-0.6b,,,42,qwen3-0.6b,,train_calibration,40,0.225,audit; gate=PASS; spread=0.325
