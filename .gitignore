@@ -18,6 +18,7 @@ build/
 *.whl
 
 # ----- Virtual Environments -----
+.venv
 .venv/
 venv/
 env/

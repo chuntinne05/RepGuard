@@ -181,9 +181,15 @@ def create_provider(config: ProviderConfig) -> LLMProvider:
         from repguard.providers.gemini_ import GeminiProvider
         return GeminiProvider(config, api_key=api_key)
 
+    elif config.name == "ollama":
+        from repguard.providers.ollama_ import OllamaProvider
+
+        base_url = os.environ.get("OLLAMA_URL") or os.environ.get("OLLAMA_HOST")
+        return OllamaProvider(config, base_url=base_url)
+
     else:
         msg = (
             f"Unknown provider: '{config.name}'. "
-            "Supported: 'mock', 'openai', 'anthropic', 'gemini'."
+            "Supported: 'mock', 'openai', 'anthropic', 'gemini', 'ollama'."
         )
         raise ValueError(msg)

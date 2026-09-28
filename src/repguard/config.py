@@ -73,7 +73,7 @@ class ProviderConfig(BaseModel):
 
     name: str = Field(
         default="mock",
-        description="Provider name: mock, openai, anthropic, gemini",
+        description="Provider name: mock, openai, anthropic, gemini, ollama",
     )
     model_id: str = Field(default="mock-model-v1", description="Model identifier")
     parameters: ProviderParams = Field(default_factory=ProviderParams)
@@ -82,7 +82,7 @@ class ProviderConfig(BaseModel):
     @classmethod
     def validate_provider_name(cls, v: str) -> str:
         """Ensure provider name is one of the supported values."""
-        allowed = {"mock", "openai", "anthropic", "gemini"}
+        allowed = {"mock", "openai", "anthropic", "gemini", "ollama"}
         if v not in allowed:
             msg = f"Provider must be one of {allowed}, got '{v}'"
             raise ValueError(msg)

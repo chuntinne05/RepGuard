@@ -28,3 +28,33 @@ Updated at the end of every working day.
 - Run capability audit with 2-4 candidate models
 - Begin literature structured notes
 - Start paper writing (Introduction v0.5, Related Work v0.7)
+
+---
+
+## 2026-09-28 — Capability Audit (Step 1.1)
+
+### Agents evaluated
+- gemini-flash
+- mock-baseline
+
+### Domains covered
+- biology
+- computer science
+- economics
+- history
+- law
+- math
+- physics
+- psychology
+
+### Heterogeneity Gate: FAIL ✗
+- ✗ Best agent does NOT change — 'gemini-flash' wins every domain. Add more heterogeneous agents.
+- ✓ Performance spread: 41.7% (threshold ≥ 10%) — meaningful.
+-    gemini-flash              mean accuracy = 50.0%
+-    mock-baseline             mean accuracy = 8.3%
+- 
+→ OQ-1 OPEN: Adjust agent pool before running experiments.
+
+### Accuracy summary
+- gemini-flash: mean=50.0%
+- mock-baseline: mean=8.3%

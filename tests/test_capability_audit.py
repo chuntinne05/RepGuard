@@ -103,7 +103,7 @@ class TestGeminiProvider:
         fake_error_response.status_code = 429
         fake_error_response.text = "RATE_LIMIT_EXCEEDED"
 
-        with patch.object(
+        with patch("time.sleep"), patch.object(
             provider._client,
             "post",
             side_effect=httpx.HTTPStatusError(
@@ -445,3 +445,88 @@ class TestCapabilityAuditSynthetic:
                     f"Non-reproducible result for {agent}/{domain}: "
                     f"{r1.accuracy} vs {r2.accuracy}"
                 )
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# OllamaProvider tests (mocked HTTP)
+# ─────────────────────────────────────────────────────────────────────────────
+
+class TestOllamaProvider:
+    """Unit tests for OllamaProvider using a mocked HTTP client."""
+
+    def _make_provider(self, model_id: str = "qwen2.5:3b") -> Any:
+        from repguard.providers.ollama_ import OllamaProvider
+
+        config = ProviderConfig(
+            name="ollama",
+            model_id=model_id,
+            parameters=ProviderParams(temperature=0.0, max_tokens=512, top_p=1.0),
+        )
+        return OllamaProvider(config, base_url="http://127.0.0.1:11434")
+
+    def test_complete_returns_response(self) -> None:
+        """Ollama completion should parse response, token counts, and have 0 cost."""
+        import httpx
+
+        provider = self._make_provider()
+        fake_data = {
+            "model": "qwen2.5:3b",
+            "response": "(C) Correct answer",
+            "done": True,
+            "prompt_eval_count": 120,
+            "eval_count": 15,
+            "total_duration": 450000000,
+        }
+        mock_resp = MagicMock(spec=httpx.Response)
+        mock_resp.status_code = 200
+        mock_resp.json.return_value = fake_data
+        mock_resp.raise_for_status.return_value = None
+
+        with patch.object(provider._client, "post", return_value=mock_resp):
+            resp = provider.complete("What is 2+2?")
+
+        assert resp.content == "(C) Correct answer"
+        assert resp.model_id == "qwen2.5:3b"
+        assert resp.input_tokens == 120
+        assert resp.output_tokens == 15
+        assert resp.cost_usd == 0.0  # 100% free
+        assert resp.cached is False
+
+    def test_model_not_found_raises_pull_instructions(self) -> None:
+        """HTTP 404 should raise a RuntimeError instructing user to ollama pull."""
+        import httpx
+
+        provider = self._make_provider(model_id="nonexistent-model")
+        mock_resp = MagicMock(spec=httpx.Response)
+        mock_resp.status_code = 404
+        mock_resp.json.return_value = {"error": "model 'nonexistent-model' not found"}
+
+        with patch.object(provider._client, "post", return_value=mock_resp):
+            with pytest.raises(RuntimeError, match="ollama pull nonexistent-model"):
+                provider.complete("Test prompt")
+
+    def test_connect_error_raises_serve_instructions(self) -> None:
+        """Connection failure should suggest starting the Ollama app or ollama serve."""
+        import httpx
+
+        provider = self._make_provider()
+        provider._max_retries = 0
+        mock_request = MagicMock(spec=httpx.Request)
+
+        with patch.object(
+            provider._client,
+            "post",
+            side_effect=httpx.ConnectError("Connection refused", request=mock_request),
+        ):
+            with pytest.raises(RuntimeError, match="ollama serve"):
+                provider.complete("Test prompt")
+
+    def test_provider_factory_creates_ollama(self) -> None:
+        """create_provider with name='ollama' should instantiate OllamaProvider."""
+        from repguard.providers.base import create_provider
+        from repguard.providers.ollama_ import OllamaProvider
+
+        cfg = ProviderConfig(name="ollama", model_id="llama3.2:3b")
+        p = create_provider(cfg)
+        assert isinstance(p, OllamaProvider)
+        assert p.model_id == "llama3.2:3b"

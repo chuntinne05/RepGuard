@@ -16,10 +16,10 @@ audit:
   seed: 42
 
   # Tasks sampled per domain (subject) from the train_calibration split.
-  # Note: For Gemini Free Tier (quota: 5 requests/minute):
-  #   - n_samples_per_domain: 3 (8 domains = 24 tasks) finishes in ~6 minutes.
-  #   - n_samples_per_domain: 15 (8 domains = 120 tasks) takes ~30 minutes.
-  n_samples_per_domain: 3
+  # With local Ollama (no rate limits):
+  #   - n_samples_per_domain: 5 (8 domains = 40 tasks) takes ~30 seconds per model.
+  #   - n_samples_per_domain: 15 (8 domains = 120 tasks) takes ~1.5 minutes per model.
+  n_samples_per_domain: 5
 
   # MMLU-Pro subjects to include. Leave empty [] to use all available subjects.
   # Full list: math, physics, chemistry, biology, computer science, engineering,
@@ -74,76 +74,46 @@ audit:
 agents:
 
   # ────────────────────────────────────────────────────────────
-  # Agent 1: Google Gemini Flash (primary candidate)
-  # Set GEMINI_API_KEY in .env before running.
+  # Agent 1: Qwen 3 14B hosted on Modal (Ollama)
+  # Remote GPU server on Modal with single-token direct answering
   # ────────────────────────────────────────────────────────────
-  - name: gemini-flash
-    provider: gemini
-    model_id: gemini-flash-latest
+  - name: qwen3-14b-modal
+    provider: ollama
+    model_id: qwen3:14b
     temperature: 0.0
-    max_tokens: 512
+    max_tokens: 16
     top_p: 1.0
-    api_key_env: GEMINI_API_KEY
-    requests_per_minute: 4    # Free Tier limit is 5 RPM. Set to 4 to prevent 429 quota errors.
-    tokens_per_minute: 1000000
+    api_key_env: ""       # Handled via Modal-Authorization header
+    requests_per_minute: 1000
+    tokens_per_minute: 10000000
     cache_dir: ./.llm_cache
 
   # ────────────────────────────────────────────────────────────
-  # Agent 2: Mock baseline (deterministic, no API cost)
-  # Useful for validating the pipeline and as a weak baseline.
+  # Agent 2: Mock baseline (deterministic, no memory / no cost)
+  # Provides reference baseline for Heterogeneity Gate (needs >= 2 agents)
   # ────────────────────────────────────────────────────────────
   - name: mock-baseline
     provider: mock
     model_id: mock-model-v1
     temperature: 0.0
-    max_tokens: 512
+    max_tokens: 16
     top_p: 1.0
-    api_key_env: ""       # no key needed for mock
+    api_key_env: ""
     requests_per_minute: 10000
     tokens_per_minute: 10000000
     cache_dir: ./.llm_cache
 
   # ────────────────────────────────────────────────────────────
-  # Agent 3: (Example) Add a second real model here for heterogeneity.
-  # Uncomment and fill in when you have a second API key.
+  # (Optional Cloud) Google Gemini Flash
+  # Uncomment if you want to compare local models vs cloud
   # ────────────────────────────────────────────────────────────
-  # - name: gemini-pro
+  # - name: gemini-flash
   #   provider: gemini
-  #   model_id: gemini-1.5-pro
+  #   model_id: gemini-flash-latest
   #   temperature: 0.0
   #   max_tokens: 512
   #   top_p: 1.0
-  #   api_key_env: GEMINI_API_KEY   # same key, different model
-  #   requests_per_minute: 10
-  #   tokens_per_minute: 100000
-  #   cache_dir: ./.llm_cache
-
-  # ────────────────────────────────────────────────────────────
-  # Agent 4: (Example) OpenAI GPT-4o-mini
-  # Uncomment when OPENAI_API_KEY is available.
-  # ────────────────────────────────────────────────────────────
-  # - name: gpt-4o-mini
-  #   provider: openai
-  #   model_id: gpt-4o-mini
-  #   temperature: 0.0
-  #   max_tokens: 512
-  #   top_p: 1.0
-  #   api_key_env: OPENAI_API_KEY
-  #   requests_per_minute: 500
-  #   tokens_per_minute: 200000
-  #   cache_dir: ./.llm_cache
-
-  # ────────────────────────────────────────────────────────────
-  # Agent 5: (Example) Anthropic Claude Haiku
-  # Uncomment when ANTHROPIC_API_KEY is available.
-  # ────────────────────────────────────────────────────────────
-  # - name: claude-haiku
-  #   provider: anthropic
-  #   model_id: claude-3-haiku-20240307
-  #   temperature: 0.0
-  #   max_tokens: 512
-  #   top_p: 1.0
-  #   api_key_env: ANTHROPIC_API_KEY
-  #   requests_per_minute: 50
-  #   tokens_per_minute: 100000
+  #   api_key_env: GEMINI_API_KEY
+  #   requests_per_minute: 4
+  #   tokens_per_minute: 1000000
   #   cache_dir: ./.llm_cache

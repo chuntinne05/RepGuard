@@ -113,32 +113,49 @@ class GeminiProvider(LLMProvider):
 
         max_retries = getattr(self, "_max_retries", 3)
         base_backoff = 10.0
+        retryable_codes = {429, 500, 502, 503, 504}
 
         for attempt in range(max_retries + 1):
             start = time.monotonic()
             try:
                 http_response = self._client.post(url, json=payload)
-                if http_response.status_code == 429 and attempt < max_retries:
-                    wait_seconds = _parse_retry_delay(
-                        http_response, fallback_seconds=base_backoff * (attempt + 1)
-                    )
-                    logger.warning(
-                        f"[Gemini 429 Rate Limit] Quota exceeded. Sleeping "
-                        f"{wait_seconds:.1f}s before retry ({attempt + 1}/{max_retries})..."
-                    )
+                if http_response.status_code in retryable_codes and attempt < max_retries:
+                    if http_response.status_code == 429:
+                        wait_seconds = _parse_retry_delay(
+                            http_response, fallback_seconds=base_backoff * (attempt + 1)
+                        )
+                        logger.warning(
+                            f"[Gemini 429 Rate Limit] Quota exceeded. Sleeping "
+                            f"{wait_seconds:.1f}s before retry ({attempt + 1}/{max_retries})..."
+                        )
+                    else:
+                        wait_seconds = 5.0 * (attempt + 1)
+                        logger.warning(
+                            f"[Gemini {http_response.status_code} Server Busy] High demand. Sleeping "
+                            f"{wait_seconds:.1f}s before retry ({attempt + 1}/{max_retries})..."
+                        )
                     time.sleep(wait_seconds)
                     continue
+
                 http_response.raise_for_status()
                 break
             except httpx.HTTPStatusError as exc:
-                if exc.response.status_code == 429 and attempt < max_retries:
-                    wait_seconds = _parse_retry_delay(
-                        exc.response, fallback_seconds=base_backoff * (attempt + 1)
-                    )
-                    logger.warning(
-                        f"[Gemini 429 Rate Limit] Quota exceeded. Sleeping "
-                        f"{wait_seconds:.1f}s before retry ({attempt + 1}/{max_retries})..."
-                    )
+                code = exc.response.status_code
+                if code in retryable_codes and attempt < max_retries:
+                    if code == 429:
+                        wait_seconds = _parse_retry_delay(
+                            exc.response, fallback_seconds=base_backoff * (attempt + 1)
+                        )
+                        logger.warning(
+                            f"[Gemini 429 Rate Limit] Quota exceeded. Sleeping "
+                            f"{wait_seconds:.1f}s before retry ({attempt + 1}/{max_retries})..."
+                        )
+                    else:
+                        wait_seconds = 5.0 * (attempt + 1)
+                        logger.warning(
+                            f"[Gemini {code} Server Busy] High demand. Sleeping "
+                            f"{wait_seconds:.1f}s before retry ({attempt + 1}/{max_retries})..."
+                        )
                     time.sleep(wait_seconds)
                     continue
                 raise RuntimeError(
@@ -146,8 +163,11 @@ class GeminiProvider(LLMProvider):
                 ) from exc
             except httpx.RequestError as exc:
                 if attempt < max_retries:
-                    logger.warning(f"Gemini request failed: {exc}. Retrying...")
-                    time.sleep(2.0)
+                    wait_seconds = 3.0 * (attempt + 1)
+                    logger.warning(
+                        f"Gemini connection failed: {exc}. Retrying in {wait_seconds:.1f}s..."
+                    )
+                    time.sleep(wait_seconds)
                     continue
                 raise RuntimeError(f"Gemini API request failed: {exc}") from exc
 

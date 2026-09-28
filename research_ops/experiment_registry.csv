@@ -1,1 +1,3 @@
 timestamp,experiment_name,config_hash,git_commit,seed,model_id,provider,dataset_split,num_tasks,metric_accuracy,metric_notes
+2026-09-28T02:39:01.346195+00:00,capability_audit_gemini-flash,,,42,gemini-flash,,train_calibration,24,0.5,audit; gate=FAIL; spread=0.417
+2026-09-28T02:39:01.346195+00:00,capability_audit_mock-baseline,,,42,mock-baseline,,train_calibration,24,0.0833,audit; gate=FAIL; spread=0.417
