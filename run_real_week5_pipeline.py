@@ -9,6 +9,8 @@ ledger; a transient failure can be retried without repeating completed calls.
 from __future__ import annotations
 
 import json
+import os
+import signal
 import subprocess
 import sys
 import time
@@ -57,18 +59,77 @@ def restart_week4_runner() -> None:
                    check=True)
 
 
+def modal_container_active() -> bool:
+    modal_cli = str(Path(sys.executable).with_name("modal"))
+    result = subprocess.run([modal_cli, "container", "list"],
+                            capture_output=True, text=True, timeout=30, check=True)
+    return "ollama-server" in result.stdout
+
+
+def recover_week4_runner(*, rollover: bool) -> None:
+    pattern = (r"^\.venv/bin/python run_real_week4_thinking\.py "
+               r"--limit-per-subject 30 --timeout-seconds 600$")
+    processes = subprocess.run(["pgrep", "-f", pattern],
+                               capture_output=True, text=True)
+    for pid_text in processes.stdout.splitlines():
+        os.kill(int(pid_text), signal.SIGTERM)
+    for _ in range(10):
+        remaining = subprocess.run(["pgrep", "-f", pattern],
+                                   capture_output=True, text=True)
+        if not remaining.stdout.strip():
+            break
+        time.sleep(1)
+    else:
+        raise RuntimeError("Old Week 4 runner did not stop; refusing duplicate run")
+    subprocess.run(["screen", "-S", "repguard_week4", "-X", "quit"],
+                   capture_output=True, text=True)
+    if rollover:
+        modal_cli = str(Path(sys.executable).with_name("modal"))
+        subprocess.run([modal_cli, "app", "rollover", "ollama-server"],
+                       check=True, timeout=120)
+    restart_week4_runner()
+
+
 def wait_for_week4(max_wait_hours: float = 24.0) -> None:
     deadline = time.monotonic() + max_wait_hours * 3600
     last_report = -1
     last_restart_n = -1
     no_progress_restarts = 0
+    last_recovery_time = 0.0
+    recovery_attempts = 0
     while time.monotonic() < deadline:
-        n = count_jsonl(WEEK4 / "predictions.jsonl")
+        ledger = WEEK4 / "predictions.jsonl"
+        n = count_jsonl(ledger)
         if n > EXPECTED_WEEK4_CALLS:
             raise RuntimeError(f"Week 4 ledger has too many calls: {n}")
         if n == EXPECTED_WEEK4_CALLS:
             status("week4_ledger_complete", completed_calls=n)
             return
+        if n != last_report:
+            recovery_attempts = 0
+        stale_seconds = time.time() - ledger.stat().st_mtime if ledger.exists() else 0.0
+        if (stale_seconds > 600 and
+            time.monotonic() - last_recovery_time > 600):
+            try:
+                container_active = modal_container_active()
+            except Exception as exc:
+                status("modal_health_check_failed", completed_calls=n,
+                       error_type=type(exc).__name__, error=str(exc)[:300])
+                time.sleep(60)
+                continue
+            if not container_active or stale_seconds > 2400:
+                recovery_attempts += 1
+                if recovery_attempts > 3:
+                    raise RuntimeError("Week 4 stalled after three recovery attempts")
+                status("recovering_stalled_week4", completed_calls=n,
+                       stale_seconds=round(stale_seconds),
+                       modal_container_active=container_active,
+                       recovery_attempt=recovery_attempts)
+                recover_week4_runner(rollover=not container_active)
+                last_recovery_time = time.monotonic()
+                last_restart_n = n
+                time.sleep(60)
+                continue
         if not week4_runner_alive():
             no_progress_restarts = (no_progress_restarts + 1
                                     if n == last_restart_n else 0)
