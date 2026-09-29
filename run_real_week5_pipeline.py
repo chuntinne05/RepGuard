@@ -44,9 +44,24 @@ def count_jsonl(path: Path) -> int:
         return sum(bool(line.strip()) for line in fh)
 
 
+def week4_runner_alive() -> bool:
+    result = subprocess.run(["screen", "-ls"], capture_output=True, text=True)
+    return "repguard_week4" in result.stdout
+
+
+def restart_week4_runner() -> None:
+    command = (".venv/bin/python run_real_week4_thinking.py "
+               "--limit-per-subject 30 --timeout-seconds 600 "
+               ">> results/real_week4_thinking_pilot_v3/screen.log 2>&1")
+    subprocess.run(["screen", "-dmS", "repguard_week4", "zsh", "-c", command],
+                   check=True)
+
+
 def wait_for_week4(max_wait_hours: float = 24.0) -> None:
     deadline = time.monotonic() + max_wait_hours * 3600
     last_report = -1
+    last_restart_n = -1
+    no_progress_restarts = 0
     while time.monotonic() < deadline:
         n = count_jsonl(WEEK4 / "predictions.jsonl")
         if n > EXPECTED_WEEK4_CALLS:
@@ -54,6 +69,15 @@ def wait_for_week4(max_wait_hours: float = 24.0) -> None:
         if n == EXPECTED_WEEK4_CALLS:
             status("week4_ledger_complete", completed_calls=n)
             return
+        if not week4_runner_alive():
+            no_progress_restarts = (no_progress_restarts + 1
+                                    if n == last_restart_n else 0)
+            if no_progress_restarts >= 6:
+                raise RuntimeError("Week 4 runner repeatedly exits without progress")
+            restart_week4_runner()
+            last_restart_n = n
+            status("week4_runner_restarted", completed_calls=n,
+                   no_progress_restarts=no_progress_restarts)
         if n != last_report:
             status("waiting_for_week4", completed_calls=n,
                    expected_calls=EXPECTED_WEEK4_CALLS)

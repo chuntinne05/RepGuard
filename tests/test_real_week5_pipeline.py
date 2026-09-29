@@ -7,6 +7,7 @@ def test_pipeline_does_not_advance_on_partial_week4(monkeypatch):
     counts = iter([839, 840])
     seen = []
     monkeypatch.setattr(pipeline, "count_jsonl", lambda _: next(counts))
+    monkeypatch.setattr(pipeline, "week4_runner_alive", lambda: True)
     monkeypatch.setattr(pipeline, "status", lambda stage, **details:
                         seen.append((stage, details)))
     monkeypatch.setattr(pipeline.time, "sleep", lambda _: None)
