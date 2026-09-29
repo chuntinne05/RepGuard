@@ -6,8 +6,7 @@ Supports:
   (Automatically handles Modal authentication via 'Modal-Authorization: Bearer <token>')
 
 Configured for multiple-choice benchmarking:
-- Uses /api/chat with think=False and stream=False.
-- Uses num_predict=16 and temperature=0 for fast 1-token output.
+- Uses /api/chat with stream=False and configurable thinking (default off).
 """
 
 from __future__ import annotations
@@ -157,6 +156,7 @@ class OllamaProvider(LLMProvider):
         top_p: float | None = None,
         stop: list[str] | None = None,
         response_format: dict[str, Any] | None = None,
+        think: bool | str = False,
     ) -> LLMResponse:
         """Generate completion from Ollama /api/chat.
 
@@ -174,7 +174,7 @@ class OllamaProvider(LLMProvider):
             RuntimeError: If server fails, model is missing, or connection drops.
         """
         url = f"{self._base_url}/api/chat"
-        payload = self._build_payload(prompt, temperature, max_tokens, top_p, stop)
+        payload = self._build_payload(prompt, temperature, max_tokens, top_p, stop, think)
         if response_format is not None:
             payload["format"] = response_format
 
@@ -270,8 +270,10 @@ class OllamaProvider(LLMProvider):
         message = data.get("message", {})
         if isinstance(message, dict):
             content = message.get("content", "").strip()
+            thinking = message.get("thinking", "") or ""
         else:
             content = ""
+            thinking = ""
         if not content:
             content = data.get("response", "").strip()
 
@@ -286,7 +288,12 @@ class OllamaProvider(LLMProvider):
             total_tokens=input_tokens + output_tokens,
             cost_usd=0.0,
             latency_ms=round(elapsed_ms, 2),
-            raw_response={"done": data.get("done", True)},
+            raw_response={
+                "done": data.get("done", True),
+                "done_reason": data.get("done_reason"),
+                "thinking_present": bool(thinking),
+                "thinking_chars": len(thinking),
+            },
             cached=False,
         )
 
@@ -307,11 +314,11 @@ class OllamaProvider(LLMProvider):
         max_tokens: int | None,
         top_p: float | None,
         stop: list[str] | None,
+        think: bool | str,
     ) -> dict[str, Any]:
-        """Construct the exact /api/chat payload for direct answer extraction.
-
-        Uses think=False to skip reasoning chain, saving tokens and Modal credit.
-        """
+        """Construct the exact /api/chat payload for answer extraction."""
+        if not isinstance(think, bool) and not isinstance(think, str):
+            raise ValueError("think must be a boolean or named thinking level")
         options: dict[str, Any] = {
             "temperature": (
                 temperature
@@ -338,7 +345,7 @@ class OllamaProvider(LLMProvider):
                     "content": prompt,
                 }
             ],
-            "think": False,
+            "think": think,
             "stream": False,
             "options": options,
         }

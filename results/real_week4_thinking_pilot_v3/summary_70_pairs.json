@@ -1,0 +1,142 @@
+{
+  "protocol_hash": "74f421ecab1f1d2cc83ecd44320c3b56612ffd7f3b0d3b6a4d73e5b63a8cff78",
+  "selected_n": 420,
+  "completed_calls": 140,
+  "paired_n": 70,
+  "subjects_paired": 14,
+  "variants": {
+    "direct64": {
+      "correct": 28,
+      "n": 70,
+      "accuracy": 0.4,
+      "invalid": 0,
+      "truncated": 0,
+      "thinking_present": 0,
+      "total_output_tokens": 679,
+      "total_request_seconds": 78.84,
+      "output_tokens": {
+        "median": 10.0,
+        "p95": 10
+      },
+      "latency_seconds": {
+        "median": 1.07,
+        "p95": 1.71
+      }
+    },
+    "thinking8192": {
+      "correct": 41,
+      "n": 70,
+      "accuracy": 0.5857,
+      "invalid": 5,
+      "truncated": 5,
+      "thinking_present": 70,
+      "total_output_tokens": 179031,
+      "total_request_seconds": 4908.31,
+      "output_tokens": {
+        "median": 1793.5,
+        "p95": 8192
+      },
+      "latency_seconds": {
+        "median": 48.93,
+        "p95": 226.51
+      }
+    }
+  },
+  "subjects": {
+    "biology": {
+      "n": 5,
+      "direct64": 3,
+      "thinking8192": 4,
+      "thinking_truncated": 0
+    },
+    "business": {
+      "n": 5,
+      "direct64": 1,
+      "thinking8192": 2,
+      "thinking_truncated": 0
+    },
+    "chemistry": {
+      "n": 5,
+      "direct64": 4,
+      "thinking8192": 4,
+      "thinking_truncated": 1
+    },
+    "computer science": {
+      "n": 5,
+      "direct64": 1,
+      "thinking8192": 4,
+      "thinking_truncated": 1
+    },
+    "economics": {
+      "n": 5,
+      "direct64": 4,
+      "thinking8192": 4,
+      "thinking_truncated": 0
+    },
+    "engineering": {
+      "n": 5,
+      "direct64": 2,
+      "thinking8192": 3,
+      "thinking_truncated": 1
+    },
+    "health": {
+      "n": 5,
+      "direct64": 2,
+      "thinking8192": 2,
+      "thinking_truncated": 0
+    },
+    "history": {
+      "n": 5,
+      "direct64": 2,
+      "thinking8192": 3,
+      "thinking_truncated": 0
+    },
+    "law": {
+      "n": 5,
+      "direct64": 0,
+      "thinking8192": 1,
+      "thinking_truncated": 0
+    },
+    "math": {
+      "n": 5,
+      "direct64": 0,
+      "thinking8192": 2,
+      "thinking_truncated": 0
+    },
+    "other": {
+      "n": 5,
+      "direct64": 1,
+      "thinking8192": 2,
+      "thinking_truncated": 1
+    },
+    "philosophy": {
+      "n": 5,
+      "direct64": 2,
+      "thinking8192": 4,
+      "thinking_truncated": 0
+    },
+    "physics": {
+      "n": 5,
+      "direct64": 3,
+      "thinking8192": 3,
+      "thinking_truncated": 1
+    },
+    "psychology": {
+      "n": 5,
+      "direct64": 3,
+      "thinking8192": 3,
+      "thinking_truncated": 0
+    }
+  },
+  "paired_difference": {
+    "thinking_only_correct": 17,
+    "direct_only_correct": 4,
+    "net_questions": 13,
+    "accuracy_pp": 18.57,
+    "bootstrap_95ci_pp": [
+      7.14,
+      30.0
+    ],
+    "exact_mcnemar_p": 0.0072
+  }
+}
