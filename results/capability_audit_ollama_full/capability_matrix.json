@@ -1,0 +1,409 @@
+{
+  "timestamp": "2026-09-28T14:57:11.159983+00:00",
+  "seed": 42,
+  "n_samples_per_domain": 10000,
+  "agents": [
+    "gemma2-latest",
+    "qwen3-8b",
+    "llama3-8b"
+  ],
+  "agent_metadata": {
+    "gemma2-latest": {
+      "provider": "ollama",
+      "model_id": "gemma2:latest",
+      "base_url": "http://127.0.0.1:11434",
+      "temperature": 0.0,
+      "max_tokens": 128,
+      "top_p": 1.0
+    },
+    "qwen3-8b": {
+      "provider": "ollama",
+      "model_id": "qwen3:8b",
+      "base_url": "http://127.0.0.1:11434",
+      "temperature": 0.0,
+      "max_tokens": 128,
+      "top_p": 1.0
+    },
+    "llama3-8b": {
+      "provider": "ollama",
+      "model_id": "llama3:8b",
+      "base_url": "http://127.0.0.1:11434",
+      "temperature": 0.0,
+      "max_tokens": 128,
+      "top_p": 1.0
+    }
+  },
+  "domains": [
+    "biology",
+    "business",
+    "chemistry",
+    "computer science",
+    "economics",
+    "engineering",
+    "health",
+    "history",
+    "law",
+    "math",
+    "other",
+    "philosophy",
+    "physics",
+    "psychology"
+  ],
+  "results": {
+    "gemma2-latest": {
+      "biology": {
+        "n_tasks": 436,
+        "n_correct": 336,
+        "accuracy": 0.7706,
+        "ci_lower": 0.7317,
+        "ci_upper": 0.8096,
+        "total_cost_usd": 0.0
+      },
+      "business": {
+        "n_tasks": 468,
+        "n_correct": 156,
+        "accuracy": 0.3333,
+        "ci_lower": 0.2916,
+        "ci_upper": 0.3782,
+        "total_cost_usd": 0.0
+      },
+      "chemistry": {
+        "n_tasks": 667,
+        "n_correct": 202,
+        "accuracy": 0.3028,
+        "ci_lower": 0.2661,
+        "ci_upper": 0.3358,
+        "total_cost_usd": 0.0
+      },
+      "computer science": {
+        "n_tasks": 243,
+        "n_correct": 92,
+        "accuracy": 0.3786,
+        "ci_lower": 0.3188,
+        "ci_upper": 0.4384,
+        "total_cost_usd": 0.0
+      },
+      "economics": {
+        "n_tasks": 492,
+        "n_correct": 287,
+        "accuracy": 0.5833,
+        "ci_lower": 0.5376,
+        "ci_upper": 0.626,
+        "total_cost_usd": 0.0
+      },
+      "engineering": {
+        "n_tasks": 575,
+        "n_correct": 218,
+        "accuracy": 0.3791,
+        "ci_lower": 0.3426,
+        "ci_upper": 0.4209,
+        "total_cost_usd": 0.0
+      },
+      "health": {
+        "n_tasks": 500,
+        "n_correct": 272,
+        "accuracy": 0.544,
+        "ci_lower": 0.498,
+        "ci_upper": 0.585,
+        "total_cost_usd": 0.0
+      },
+      "history": {
+        "n_tasks": 222,
+        "n_correct": 106,
+        "accuracy": 0.4775,
+        "ci_lower": 0.4099,
+        "ci_upper": 0.545,
+        "total_cost_usd": 0.0
+      },
+      "law": {
+        "n_tasks": 677,
+        "n_correct": 234,
+        "accuracy": 0.3456,
+        "ci_lower": 0.3087,
+        "ci_upper": 0.3833,
+        "total_cost_usd": 0.0
+      },
+      "math": {
+        "n_tasks": 825,
+        "n_correct": 259,
+        "accuracy": 0.3139,
+        "ci_lower": 0.2842,
+        "ci_upper": 0.343,
+        "total_cost_usd": 0.0
+      },
+      "other": {
+        "n_tasks": 558,
+        "n_correct": 252,
+        "accuracy": 0.4516,
+        "ci_lower": 0.4086,
+        "ci_upper": 0.4928,
+        "total_cost_usd": 0.0
+      },
+      "philosophy": {
+        "n_tasks": 299,
+        "n_correct": 136,
+        "accuracy": 0.4548,
+        "ci_lower": 0.4013,
+        "ci_upper": 0.5101,
+        "total_cost_usd": 0.0
+      },
+      "physics": {
+        "n_tasks": 778,
+        "n_correct": 256,
+        "accuracy": 0.329,
+        "ci_lower": 0.2956,
+        "ci_upper": 0.3638,
+        "total_cost_usd": 0.0
+      },
+      "psychology": {
+        "n_tasks": 501,
+        "n_correct": 333,
+        "accuracy": 0.6647,
+        "ci_lower": 0.6267,
+        "ci_upper": 0.7076,
+        "total_cost_usd": 0.0
+      }
+    },
+    "qwen3-8b": {
+      "biology": {
+        "n_tasks": 436,
+        "n_correct": 333,
+        "accuracy": 0.7638,
+        "ci_lower": 0.7248,
+        "ci_upper": 0.804,
+        "total_cost_usd": 0.0
+      },
+      "business": {
+        "n_tasks": 468,
+        "n_correct": 174,
+        "accuracy": 0.3718,
+        "ci_lower": 0.3333,
+        "ci_upper": 0.4209,
+        "total_cost_usd": 0.0
+      },
+      "chemistry": {
+        "n_tasks": 667,
+        "n_correct": 225,
+        "accuracy": 0.3373,
+        "ci_lower": 0.3058,
+        "ci_upper": 0.3748,
+        "total_cost_usd": 0.0
+      },
+      "computer science": {
+        "n_tasks": 243,
+        "n_correct": 113,
+        "accuracy": 0.465,
+        "ci_lower": 0.4033,
+        "ci_upper": 0.5309,
+        "total_cost_usd": 0.0
+      },
+      "economics": {
+        "n_tasks": 492,
+        "n_correct": 290,
+        "accuracy": 0.5894,
+        "ci_lower": 0.5407,
+        "ci_upper": 0.6341,
+        "total_cost_usd": 0.0
+      },
+      "engineering": {
+        "n_tasks": 575,
+        "n_correct": 249,
+        "accuracy": 0.433,
+        "ci_lower": 0.3913,
+        "ci_upper": 0.4713,
+        "total_cost_usd": 0.0
+      },
+      "health": {
+        "n_tasks": 500,
+        "n_correct": 280,
+        "accuracy": 0.56,
+        "ci_lower": 0.515,
+        "ci_upper": 0.598,
+        "total_cost_usd": 0.0
+      },
+      "history": {
+        "n_tasks": 222,
+        "n_correct": 108,
+        "accuracy": 0.4865,
+        "ci_lower": 0.4234,
+        "ci_upper": 0.5586,
+        "total_cost_usd": 0.0
+      },
+      "law": {
+        "n_tasks": 677,
+        "n_correct": 236,
+        "accuracy": 0.3486,
+        "ci_lower": 0.3124,
+        "ci_upper": 0.3811,
+        "total_cost_usd": 0.0
+      },
+      "math": {
+        "n_tasks": 825,
+        "n_correct": 306,
+        "accuracy": 0.3709,
+        "ci_lower": 0.3358,
+        "ci_upper": 0.4024,
+        "total_cost_usd": 0.0
+      },
+      "other": {
+        "n_tasks": 558,
+        "n_correct": 257,
+        "accuracy": 0.4606,
+        "ci_lower": 0.4166,
+        "ci_upper": 0.5027,
+        "total_cost_usd": 0.0
+      },
+      "philosophy": {
+        "n_tasks": 299,
+        "n_correct": 136,
+        "accuracy": 0.4548,
+        "ci_lower": 0.3913,
+        "ci_upper": 0.5084,
+        "total_cost_usd": 0.0
+      },
+      "physics": {
+        "n_tasks": 778,
+        "n_correct": 281,
+        "accuracy": 0.3612,
+        "ci_lower": 0.3245,
+        "ci_upper": 0.401,
+        "total_cost_usd": 0.0
+      },
+      "psychology": {
+        "n_tasks": 501,
+        "n_correct": 320,
+        "accuracy": 0.6387,
+        "ci_lower": 0.6008,
+        "ci_upper": 0.6826,
+        "total_cost_usd": 0.0
+      }
+    },
+    "llama3-8b": {
+      "biology": {
+        "n_tasks": 436,
+        "n_correct": 283,
+        "accuracy": 0.6491,
+        "ci_lower": 0.5997,
+        "ci_upper": 0.6881,
+        "total_cost_usd": 0.0
+      },
+      "business": {
+        "n_tasks": 468,
+        "n_correct": 152,
+        "accuracy": 0.3248,
+        "ci_lower": 0.2842,
+        "ci_upper": 0.3675,
+        "total_cost_usd": 0.0
+      },
+      "chemistry": {
+        "n_tasks": 667,
+        "n_correct": 157,
+        "accuracy": 0.2354,
+        "ci_lower": 0.2031,
+        "ci_upper": 0.2699,
+        "total_cost_usd": 0.0
+      },
+      "computer science": {
+        "n_tasks": 243,
+        "n_correct": 78,
+        "accuracy": 0.321,
+        "ci_lower": 0.2634,
+        "ci_upper": 0.3827,
+        "total_cost_usd": 0.0
+      },
+      "economics": {
+        "n_tasks": 492,
+        "n_correct": 234,
+        "accuracy": 0.4756,
+        "ci_lower": 0.4298,
+        "ci_upper": 0.5214,
+        "total_cost_usd": 0.0
+      },
+      "engineering": {
+        "n_tasks": 575,
+        "n_correct": 177,
+        "accuracy": 0.3078,
+        "ci_lower": 0.2721,
+        "ci_upper": 0.3453,
+        "total_cost_usd": 0.0
+      },
+      "health": {
+        "n_tasks": 500,
+        "n_correct": 234,
+        "accuracy": 0.468,
+        "ci_lower": 0.4249,
+        "ci_upper": 0.51,
+        "total_cost_usd": 0.0
+      },
+      "history": {
+        "n_tasks": 222,
+        "n_correct": 89,
+        "accuracy": 0.4009,
+        "ci_lower": 0.3423,
+        "ci_upper": 0.4685,
+        "total_cost_usd": 0.0
+      },
+      "law": {
+        "n_tasks": 677,
+        "n_correct": 174,
+        "accuracy": 0.257,
+        "ci_lower": 0.2245,
+        "ci_upper": 0.2918,
+        "total_cost_usd": 0.0
+      },
+      "math": {
+        "n_tasks": 825,
+        "n_correct": 168,
+        "accuracy": 0.2036,
+        "ci_lower": 0.1751,
+        "ci_upper": 0.2339,
+        "total_cost_usd": 0.0
+      },
+      "other": {
+        "n_tasks": 558,
+        "n_correct": 201,
+        "accuracy": 0.3602,
+        "ci_lower": 0.3181,
+        "ci_upper": 0.3988,
+        "total_cost_usd": 0.0
+      },
+      "philosophy": {
+        "n_tasks": 299,
+        "n_correct": 94,
+        "accuracy": 0.3144,
+        "ci_lower": 0.2642,
+        "ci_upper": 0.3663,
+        "total_cost_usd": 0.0
+      },
+      "physics": {
+        "n_tasks": 778,
+        "n_correct": 196,
+        "accuracy": 0.2519,
+        "ci_lower": 0.2198,
+        "ci_upper": 0.2841,
+        "total_cost_usd": 0.0
+      },
+      "psychology": {
+        "n_tasks": 501,
+        "n_correct": 278,
+        "accuracy": 0.5549,
+        "ci_lower": 0.517,
+        "ci_upper": 0.5988,
+        "total_cost_usd": 0.0
+      }
+    }
+  },
+  "heterogeneity": {
+    "passed": true,
+    "n_domains_best_changes": true,
+    "performance_spread": 0.1084,
+    "reason_lines": [
+      "\u2713 Best agent changes across domains: YES (winners: 'gemma2-latest', 'qwen3-8b')",
+      "\u2713 Performance spread: 10.8% (threshold \u2265 10%) \u2014 meaningful.",
+      "   qwen3-8b                  mean accuracy = 47.4%",
+      "   gemma2-latest             mean accuracy = 45.2%",
+      "   llama3-8b                 mean accuracy = 36.6%",
+      "\n\u2192 OQ-1 CLOSED: Proceed with Week 2 baselines and HistRepEval v0.1."
+    ]
+  }
+}

@@ -68,8 +68,9 @@ class AgentConfig:
 
     Attributes:
         name: Human-readable agent label (used in reports and CSV output).
-        provider: Provider name (``mock``, ``gemini``, ``openai``, ``anthropic``).
+        provider: Provider name (``mock``, ``gemini``, ``openai``, ``anthropic``, ``ollama``).
         model_id: Model identifier string sent to the provider API.
+        base_url: Optional endpoint override for local or hosted Ollama.
         temperature: Sampling temperature.
         max_tokens: Maximum tokens to generate.
         top_p: Top-p sampling parameter.
@@ -83,6 +84,7 @@ class AgentConfig:
     name: str
     provider: str
     model_id: str
+    base_url: str | None = None
     temperature: float = 0.0
     max_tokens: int = 512
     top_p: float = 1.0
@@ -162,6 +164,7 @@ class CapabilityAuditConfig:
                 name=a["name"],
                 provider=a["provider"],
                 model_id=a["model_id"],
+                base_url=a.get("base_url"),
                 temperature=float(a.get("temperature", 0.0)),
                 max_tokens=int(a.get("max_tokens", 512)),
                 top_p=float(a.get("top_p", 1.0)),
@@ -653,7 +656,12 @@ class CapabilityAudit:
             # Inject into environment so that create_provider() can find it
             os.environ[_PROVIDER_ENV_MAP.get(agent_cfg.provider, agent_cfg.api_key_env)] = api_key
 
-        return create_provider(agent_cfg.to_provider_config())
+        provider_config = agent_cfg.to_provider_config()
+        if agent_cfg.provider == "ollama":
+            from repguard.providers.ollama_ import OllamaProvider
+
+            return OllamaProvider(provider_config, base_url=agent_cfg.base_url)
+        return create_provider(provider_config)
 
     def _evaluate_agent_on_domain(
         self,

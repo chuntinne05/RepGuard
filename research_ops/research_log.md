@@ -170,6 +170,16 @@ Build HistRepEval v0.1 + implement mandatory reputation baselines.
 - llama3-8b: mean=25.0%
 - qwen3-0.6b: mean=22.5%
 
+---
+
+## 2026-09-28 — Full local Ollama capability audit (selected 3-model pool)
+
+- Evaluated `gemma2:latest`, `qwen3:8b`, and `llama3:8b` on all 7,241 `train_calibration` questions across 14 MMLU-Pro domains; Qwen3 0.6B was excluded from this run.
+- Heterogeneity gate: **PASS**. Domain winners change between Gemma2 and Qwen3 8B; macro-average spread is 10.84 percentage points (threshold: 10).
+- Macro-average accuracy: Qwen3 8B 47.44%, Gemma2 45.21%, Llama3 8B 36.60%.
+- The held-out Dev and Test splits were not used in this audit.
+- Aggregate artifacts: `results/capability_audit_ollama_full/`.
+
 
 ---
 

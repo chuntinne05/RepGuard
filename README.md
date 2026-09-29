@@ -60,10 +60,20 @@ python -m repguard.harness.runner --config configs/default.yaml --dry-run
 ```
 
 This will:
-1. Download MMLU-Pro from HuggingFace (or use cached data)
+1. Generate deterministic synthetic tasks (the mock provider does not measure real model capability)
 2. Create deterministic Train/Calibration, Dev, and Test splits
 3. Evaluate sample tasks using the MockProvider
 4. Output accuracy metrics and per-domain breakdown
+
+### Local Model Capability Audit
+
+RepGuard can compare Ollama models installed on the same machine using the real MMLU-Pro benchmark. The example config evaluates 80 shared train/calibration questions per model across eight subjects. It writes a capability matrix and a heterogeneity-gate decision.
+
+```bash
+python -m repguard.audit.capability_audit --config configs/capability_audit.ollama.yaml
+```
+
+The Ollama server must be running at `http://127.0.0.1:11434`; update `base_url` in the config if it uses another address. MMLU-Pro is downloaded and cached under `./data` on the first run. Results are saved under `./results/capability_audit_ollama`; reruns reuse each model's cached responses.
 
 ## Architecture
 
@@ -72,6 +82,8 @@ src/repguard/
 ├── config.py           # Pydantic configuration schema
 ├── seed.py             # Deterministic seed management
 ├── logging_.py         # Structured experiment logger
+├── audit/
+│   └── capability_audit.py # Multi-model benchmark and heterogeneity gate
 ├── data/
 │   ├── models.py       # Core data models (GT isolation enforced)
 │   ├── mmlu_pro.py     # MMLU-Pro download, parse, cache
@@ -80,7 +92,8 @@ src/repguard/
 │   ├── base.py         # LLMProvider protocol
 │   ├── mock.py         # Deterministic mock (dry-run)
 │   ├── openai_.py      # OpenAI provider
-│   └── anthropic_.py   # Anthropic provider
+│   ├── anthropic_.py   # Anthropic provider
+│   └── ollama_.py      # Local Ollama provider
 ├── harness/
 │   ├── prompts.py      # MC prompt formatting
 │   ├── parser.py       # Answer extraction
