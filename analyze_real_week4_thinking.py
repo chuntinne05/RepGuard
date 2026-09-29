@@ -55,16 +55,18 @@ def analyze(output: Path, predictions_file: Path | None = None) -> dict:
     tasks = load_mmlu_pro(data_dir="data")
     task_map = {task.task_id: task for task in tasks}
     labels = {task.task_id: task.ground_truth_answer for task in tasks}
-    selected = {tid: subject for subject, ids in manifest["selected_train_ids"].items()
+    split_name = manifest.get("selection_split", "train_calibration")
+    selected_key = "selected_dev_ids" if split_name == "dev" else "selected_train_ids"
+    selected = {tid: subject for subject, ids in manifest[selected_key].items()
                 for tid in ids}
-    if len(selected) != sum(map(len, manifest["selected_train_ids"].values())):
+    if len(selected) != sum(map(len, manifest[selected_key].values())):
         raise RuntimeError("Duplicate selected task ID")
     week3 = json.loads(Path("results/real_week3_json_v1/manifest.json").read_text())
     _, splits = load_dataset_and_splits(manifest["split_seed"])
-    train_ids = {task.task_id for task in splits["train_calibration"].records}
-    week3_ids = {tid for ids in week3["selected"]["train_calibration"].values() for tid in ids}
-    if not set(selected) <= train_ids or set(selected) & week3_ids:
-        raise RuntimeError("Week 4 selection is not unused train data")
+    split_ids = {task.task_id for task in splits[split_name].records}
+    week3_ids = {tid for ids in week3["selected"][split_name].values() for tid in ids}
+    if not set(selected) <= split_ids or set(selected) & week3_ids:
+        raise RuntimeError(f"Selection is not unused {split_name} data")
     if manifest["dataset_task_id_sha256"] != hashlib.sha256(
             "\n".join(sorted(task_map)).encode()).hexdigest():
         raise RuntimeError("Dataset digest mismatch")
@@ -76,6 +78,7 @@ def analyze(output: Path, predictions_file: Path | None = None) -> dict:
         if (row["model_digest"] != manifest["model_digest"] or
             row["model_id"] != manifest["model_id"] or
             row["subject"] != selected[task_id] or
+            row["split"] != split_name or
             row["think"] != settings["think"] or
             row["max_tokens"] != settings["max_tokens"]):
             raise RuntimeError("Prediction metadata differs from frozen protocol")
@@ -96,13 +99,13 @@ def analyze(output: Path, predictions_file: Path | None = None) -> dict:
         if row["output_tokens"] > settings["max_tokens"]:
             raise RuntimeError("Output exceeded protocol token budget")
     by_subject = defaultdict(list)
-    for subject, ids in manifest["selected_train_ids"].items():
+    for subject, ids in manifest[selected_key].items():
         for task_id in ids:
             if all((task_id, variant) in indexed for variant in variants):
                 by_subject[subject].append(task_id)
     paired_ids = [task_id for ids in by_subject.values() for task_id in ids]
     summary = {"protocol_hash": manifest["protocol_hash"],
-               "selected_n": sum(map(len, manifest["selected_train_ids"].values())),
+               "selected_n": sum(map(len, manifest[selected_key].values())),
                "completed_calls": len(rows), "paired_n": len(paired_ids),
                "subjects_paired": len([x for x in by_subject.values() if x]),
                "variants": {}, "subjects": {}}
