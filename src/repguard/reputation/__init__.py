@@ -1,12 +1,13 @@
-"""RepGuard Reputation module — Week 2.
+"""RepGuard Reputation module — Week 2–3.
 
-Implements the HistRepEval v0.1 evaluation protocol:
+Implements the HistRepEval v0.1–v0.2 evaluation protocol:
 - EpisodeRecord: unit of historical interaction data
 - FeedbackCorruptor: controlled noise/sparsity injection
 - Reputation baselines: Uniform, GlobalBeta, SkillConditioned, Oracle, ZeroEvidenceGate
-- TransferEstimator: task transferability strata
+- TransferEstimator: task transferability strata (τ weights)
 - Aggregator: majority vote & reputation-weighted aggregation
-- Reputation metrics: ECE, ExpertLeverage, RankCorr
+- Reputation metrics: ECE, ExpertLeverage, RankCorr, BrierScore, NLL
+- ECRT: Evidence-Calibrated Reputation Transfer (Week 3 core method)
 """
 
 from repguard.reputation.episode import DomainTransferCondition, EpisodeRecord
@@ -20,7 +21,13 @@ from repguard.reputation.baselines import (
 )
 from repguard.reputation.transfer import TransferEstimator
 from repguard.reputation.aggregator import AggregationResult, ReputationAggregator
-from repguard.reputation.metrics import ReputationMetrics
+from repguard.reputation.metrics import MetricsResult, ReputationMetrics
+from repguard.reputation.ecrt import (
+    ECRTReputation,
+    FeedbackReliabilityEstimator,
+    FeedbackReliabilityParams,
+    build_ecrt_variants,
+)
 
 __all__ = [
     "EpisodeRecord",
@@ -35,5 +42,11 @@ __all__ = [
     "TransferEstimator",
     "AggregationResult",
     "ReputationAggregator",
+    "MetricsResult",
     "ReputationMetrics",
+    # Week 3 — ECRT
+    "ECRTReputation",
+    "FeedbackReliabilityEstimator",
+    "FeedbackReliabilityParams",
+    "build_ecrt_variants",
 ]

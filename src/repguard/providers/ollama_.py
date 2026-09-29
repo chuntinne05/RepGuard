@@ -156,6 +156,7 @@ class OllamaProvider(LLMProvider):
         max_tokens: int | None = None,
         top_p: float | None = None,
         stop: list[str] | None = None,
+        response_format: dict[str, Any] | None = None,
     ) -> LLMResponse:
         """Generate completion from Ollama /api/chat.
 
@@ -174,6 +175,8 @@ class OllamaProvider(LLMProvider):
         """
         url = f"{self._base_url}/api/chat"
         payload = self._build_payload(prompt, temperature, max_tokens, top_p, stop)
+        if response_format is not None:
+            payload["format"] = response_format
 
         retryable_codes = {429, 500, 502, 503, 504}
 

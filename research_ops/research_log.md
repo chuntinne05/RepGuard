@@ -1,5 +1,22 @@
 # RepGuard Research Log
 
+## 2026-09-29 — Re-audit of legacy Week 3 and real-data rerun
+
+- The 2026-09-28 Week 3 `GO-B`/`COMPLETE` entry below is **superseded**. Its Q×T and attack outputs were generated from simulated Bernoulli correctness based on a very small capability pilot, rather than per-question model answers. The earlier audit also used an overly broad task-relatedness mapping and did not establish a paired target-domain comparison. Those outputs are retained as exploratory engineering artifacts only.
+- Registered the real-answer protocol in `research_ops/real_week3_protocol.md`. All 14 MMLU-Pro subjects, all four actual Ollama model IDs, deterministic disjoint splits, and an append-only prediction ledger are in use.
+- Completed the initial 70-test-question-per-subject pilot, then documented a post-pilot expansion to every held-out test question for **all** subjects. At this checkpoint the test ledger contained 9,664 valid model answers on 2,416 distinct test questions; history/dev collection and Q×T analysis followed and are recorded below.
+- At this checkpoint, no replacement Week 3 go/no-go decision was valid until the real-data grid and paired uncertainty analysis finished.
+
+### Final real-data outcome, 2026-09-29
+
+- Completed all **18,064/18,064** real model answers: four actual model IDs × (1,400 history + 700 dev + 2,416 full held-out test questions). Ledger SHA-256: `1c69cd9d49f3b2c97bf20868e246c5b524492a0f28f9b0095170fa1dded9fd4e`. Audit found zero missing, duplicate or invalid responses. Full test accuracy: Qwen3 8B 47.76%, Gemma2 45.12%, Llama3 8B 36.30%, Qwen3 0.6B 23.51%.
+- History-selected subject specialist confirmation: **only Qwen3 8B in physics** passes the paired gate; no second model passes. Subject routing from history 47.19% vs history-selected single global Qwen3 8B 47.76% on the same test questions; paired CI for difference [−1.90, +0.75] percentage points.
+- Completed paired Q×T analysis: 182 source–target pairs, four feedback regimes, three seeds, nine methods, 19,656 result rows and 13 complete target subjects. Feedback degradation and source mismatch have clear calibration effects; team accuracy differences are much smaller. In the prespecified related + 25% noise cell, ECRT minus FixedBorrow team accuracy +0.02 percentage points (95% subject-bootstrap CI [−0.04,+0.10]); no meaningful method gain. Under directional false positives, ECRT improves Brier calibration but does not improve team accuracy.
+- A1/A2 dev-selected attack pilots completed using real model answer traces with explicit forced-wrong and feedback-poisoning interventions. Targeted poisoning can hurt ECRT more than FixedBorrow in the selected A2 related-domain case; the pilot is not a claim about spontaneous malicious model behavior.
+- **Superseding decision: GO-C.** Week 3 experimentation and report are complete; the original method-superiority/robust-specialist hypothesis is not established. Stop treating the old `GO-B` entry below as active. Full methods, effect sizes, CIs, failure modes and next steps: `docs/analysis/repguard_week3_real_report.md`.
+
+---
+
 ## Purpose
 Daily record of research activities, decisions, and observations.
 Updated at the end of every working day.
@@ -184,3 +201,28 @@ Build HistRepEval v0.1 + implement mandatory reputation baselines.
 - ✓ Agent heterogeneity gate passed (32.5% spread).
 
 → **WEEK 2 STATUS: COMPLETE. READY FOR WEEK 3 (ECRT CORE METHOD & Q×T GRID).**
+
+
+---
+
+## 2026-09-28 - Week 3 Execution: Q x T Factorial Grid + Attack Pilot
+
+### Experiments Executed
+1. **Q x T Factorial Grid** (4 x 3 x 3 seeds x 5 methods):
+   - Q main effect on team_accuracy: range = 0.037
+   - T main effect on team_accuracy: range = 0.238
+   - Results: results/week3/qt_grid/qt_grid_results.csv
+
+2. **Attack Pilot**:
+   - A1 (Delayed Betrayal): completed.
+   - A2 (Cross-Skill Laundering): ECRT blocks laundering (tau=0 for unrelated).
+
+### Go/No-Go: **GO-B**
+
+### Week 3 Exit Criteria
+- [x] Q x T grid completed (3 seeds)
+- [x] Bootstrap CIs computed
+- [x] Attack pilot A1+A2 done
+- [x] Go/No-Go decision documented
+
+-> **WEEK 3 COMPLETE. PROCEED TO WEEK 4 (ECRT FULL ABLATION + MAIN TABLE).**

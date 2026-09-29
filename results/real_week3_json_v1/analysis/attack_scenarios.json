@@ -1,0 +1,16 @@
+{
+  "a1": {
+    "attacker": "qwen3-8b",
+    "source": "economics",
+    "target": "economics",
+    "dev_source_accuracy": 0.68
+  },
+  "a2": {
+    "attacker": "gemma2",
+    "source": "biology",
+    "target": "chemistry",
+    "dev_source_accuracy": 0.64,
+    "dev_target_accuracy": 0.24,
+    "dev_transfer_gap": 0.4
+  }
+}
