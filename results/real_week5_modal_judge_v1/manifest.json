@@ -1,0 +1,7002 @@
+{
+  "created_at": "2026-09-29T09:23:43.873776+00:00",
+  "protocol_hash": "aea88c2c99be006561040acf1a243c4f08cbf0bd9146c27020df1557408a4f48",
+  "name": "week5_real_modal_ollama_judge_v1",
+  "dataset_id": "TIGER-Lab/MMLU-Pro",
+  "dataset_task_id_sha256": "30f0aa8131e595db378dbd9f1dca33aae2f2d8fee9b48d6b1faeb3c4283444b2",
+  "split_seed": 42,
+  "selection_seed": 1618033,
+  "selected_history_ids": {
+    "biology": [
+      "mmlu_pro_3020",
+      "mmlu_pro_3099",
+      "mmlu_pro_3471",
+      "mmlu_pro_3202",
+      "mmlu_pro_3445",
+      "mmlu_pro_2830",
+      "mmlu_pro_3015",
+      "mmlu_pro_3464",
+      "mmlu_pro_2919",
+      "mmlu_pro_3339",
+      "mmlu_pro_3181",
+      "mmlu_pro_3129",
+      "mmlu_pro_3191",
+      "mmlu_pro_2993",
+      "mmlu_pro_2878",
+      "mmlu_pro_2872",
+      "mmlu_pro_3297",
+      "mmlu_pro_3186",
+      "mmlu_pro_3081",
+      "mmlu_pro_2846"
+    ],
+    "business": [
+      "mmlu_pro_110",
+      "mmlu_pro_256",
+      "mmlu_pro_121",
+      "mmlu_pro_686",
+      "mmlu_pro_175",
+      "mmlu_pro_850",
+      "mmlu_pro_438",
+      "mmlu_pro_617",
+      "mmlu_pro_462",
+      "mmlu_pro_405",
+      "mmlu_pro_722",
+      "mmlu_pro_790",
+      "mmlu_pro_326",
+      "mmlu_pro_298",
+      "mmlu_pro_811",
+      "mmlu_pro_557",
+      "mmlu_pro_554",
+      "mmlu_pro_349",
+      "mmlu_pro_441",
+      "mmlu_pro_135"
+    ],
+    "chemistry": [
+      "mmlu_pro_4600",
+      "mmlu_pro_3585",
+      "mmlu_pro_4587",
+      "mmlu_pro_4248",
+      "mmlu_pro_4610",
+      "mmlu_pro_3586",
+      "mmlu_pro_4652",
+      "mmlu_pro_3736",
+      "mmlu_pro_3644",
+      "mmlu_pro_4046",
+      "mmlu_pro_4435",
+      "mmlu_pro_4091",
+      "mmlu_pro_3565",
+      "mmlu_pro_3551",
+      "mmlu_pro_4460",
+      "mmlu_pro_4583",
+      "mmlu_pro_4039",
+      "mmlu_pro_3847",
+      "mmlu_pro_3862",
+      "mmlu_pro_3818"
+    ],
+    "computer science": [
+      "mmlu_pro_10531",
+      "mmlu_pro_10498",
+      "mmlu_pro_10725",
+      "mmlu_pro_10580",
+      "mmlu_pro_10551",
+      "mmlu_pro_10572",
+      "mmlu_pro_10461",
+      "mmlu_pro_10361",
+      "mmlu_pro_10674",
+      "mmlu_pro_10616",
+      "mmlu_pro_10590",
+      "mmlu_pro_10612",
+      "mmlu_pro_10476",
+      "mmlu_pro_10387",
+      "mmlu_pro_10385",
+      "mmlu_pro_10584",
+      "mmlu_pro_10462",
+      "mmlu_pro_10473",
+      "mmlu_pro_10696",
+      "mmlu_pro_10505"
+    ],
+    "economics": [
+      "mmlu_pro_7132",
+      "mmlu_pro_7486",
+      "mmlu_pro_7609",
+      "mmlu_pro_6829",
+      "mmlu_pro_7458",
+      "mmlu_pro_6975",
+      "mmlu_pro_7102",
+      "mmlu_pro_7351",
+      "mmlu_pro_7641",
+      "mmlu_pro_7534",
+      "mmlu_pro_7387",
+      "mmlu_pro_7046",
+      "mmlu_pro_7455",
+      "mmlu_pro_7336",
+      "mmlu_pro_7464",
+      "mmlu_pro_6927",
+      "mmlu_pro_7311",
+      "mmlu_pro_7213",
+      "mmlu_pro_7648",
+      "mmlu_pro_6951"
+    ],
+    "engineering": [
+      "mmlu_pro_11492",
+      "mmlu_pro_11909",
+      "mmlu_pro_11917",
+      "mmlu_pro_11328",
+      "mmlu_pro_11991",
+      "mmlu_pro_11327",
+      "mmlu_pro_11746",
+      "mmlu_pro_11630",
+      "mmlu_pro_11848",
+      "mmlu_pro_11557",
+      "mmlu_pro_11353",
+      "mmlu_pro_12062",
+      "mmlu_pro_11803",
+      "mmlu_pro_11890",
+      "mmlu_pro_11958",
+      "mmlu_pro_11588",
+      "mmlu_pro_11758",
+      "mmlu_pro_11399",
+      "mmlu_pro_11380",
+      "mmlu_pro_11969"
+    ],
+    "health": [
+      "mmlu_pro_6314",
+      "mmlu_pro_6309",
+      "mmlu_pro_6531",
+      "mmlu_pro_6119",
+      "mmlu_pro_6433",
+      "mmlu_pro_6598",
+      "mmlu_pro_6112",
+      "mmlu_pro_6150",
+      "mmlu_pro_6530",
+      "mmlu_pro_6052",
+      "mmlu_pro_6577",
+      "mmlu_pro_6617",
+      "mmlu_pro_6063",
+      "mmlu_pro_6426",
+      "mmlu_pro_6818",
+      "mmlu_pro_6476",
+      "mmlu_pro_6263",
+      "mmlu_pro_6418",
+      "mmlu_pro_6450",
+      "mmlu_pro_6144"
+    ],
+    "history": [
+      "mmlu_pro_4890",
+      "mmlu_pro_5043",
+      "mmlu_pro_4774",
+      "mmlu_pro_4963",
+      "mmlu_pro_4726",
+      "mmlu_pro_5024",
+      "mmlu_pro_5022",
+      "mmlu_pro_5009",
+      "mmlu_pro_4745",
+      "mmlu_pro_4938",
+      "mmlu_pro_4670",
+      "mmlu_pro_4891",
+      "mmlu_pro_4705",
+      "mmlu_pro_4943",
+      "mmlu_pro_5058",
+      "mmlu_pro_4824",
+      "mmlu_pro_4986",
+      "mmlu_pro_4756",
+      "mmlu_pro_4763",
+      "mmlu_pro_5037"
+    ],
+    "law": [
+      "mmlu_pro_1914",
+      "mmlu_pro_1330",
+      "mmlu_pro_1382",
+      "mmlu_pro_1814",
+      "mmlu_pro_925",
+      "mmlu_pro_1806",
+      "mmlu_pro_1089",
+      "mmlu_pro_1106",
+      "mmlu_pro_1667",
+      "mmlu_pro_1546",
+      "mmlu_pro_1676",
+      "mmlu_pro_1861",
+      "mmlu_pro_898",
+      "mmlu_pro_1073",
+      "mmlu_pro_1083",
+      "mmlu_pro_1680",
+      "mmlu_pro_956",
+      "mmlu_pro_1800",
+      "mmlu_pro_1439",
+      "mmlu_pro_1121"
+    ],
+    "math": [
+      "mmlu_pro_8341",
+      "mmlu_pro_7996",
+      "mmlu_pro_8747",
+      "mmlu_pro_8479",
+      "mmlu_pro_7712",
+      "mmlu_pro_8122",
+      "mmlu_pro_8332",
+      "mmlu_pro_8626",
+      "mmlu_pro_8451",
+      "mmlu_pro_8069",
+      "mmlu_pro_8917",
+      "mmlu_pro_8621",
+      "mmlu_pro_7857",
+      "mmlu_pro_8390",
+      "mmlu_pro_8947",
+      "mmlu_pro_8913",
+      "mmlu_pro_7968",
+      "mmlu_pro_7688",
+      "mmlu_pro_8802",
+      "mmlu_pro_7737"
+    ],
+    "other": [
+      "mmlu_pro_5305",
+      "mmlu_pro_5510",
+      "mmlu_pro_5581",
+      "mmlu_pro_5368",
+      "mmlu_pro_5752",
+      "mmlu_pro_5907",
+      "mmlu_pro_5846",
+      "mmlu_pro_5407",
+      "mmlu_pro_5607",
+      "mmlu_pro_5256",
+      "mmlu_pro_5892",
+      "mmlu_pro_5148",
+      "mmlu_pro_5312",
+      "mmlu_pro_5440",
+      "mmlu_pro_5086",
+      "mmlu_pro_5521",
+      "mmlu_pro_5668",
+      "mmlu_pro_5936",
+      "mmlu_pro_5820",
+      "mmlu_pro_5512"
+    ],
+    "philosophy": [
+      "mmlu_pro_10927",
+      "mmlu_pro_10796",
+      "mmlu_pro_11227",
+      "mmlu_pro_10905",
+      "mmlu_pro_11168",
+      "mmlu_pro_10798",
+      "mmlu_pro_11068",
+      "mmlu_pro_10987",
+      "mmlu_pro_10825",
+      "mmlu_pro_11260",
+      "mmlu_pro_11280",
+      "mmlu_pro_10964",
+      "mmlu_pro_11120",
+      "mmlu_pro_11092",
+      "mmlu_pro_10842",
+      "mmlu_pro_10910",
+      "mmlu_pro_10892",
+      "mmlu_pro_10947",
+      "mmlu_pro_11149",
+      "mmlu_pro_11197"
+    ],
+    "physics": [
+      "mmlu_pro_9547",
+      "mmlu_pro_9715",
+      "mmlu_pro_9649",
+      "mmlu_pro_9129",
+      "mmlu_pro_9566",
+      "mmlu_pro_9889",
+      "mmlu_pro_10116",
+      "mmlu_pro_9090",
+      "mmlu_pro_9388",
+      "mmlu_pro_9128",
+      "mmlu_pro_9927",
+      "mmlu_pro_9142",
+      "mmlu_pro_9497",
+      "mmlu_pro_9258",
+      "mmlu_pro_9110",
+      "mmlu_pro_9289",
+      "mmlu_pro_9745",
+      "mmlu_pro_9201",
+      "mmlu_pro_9635",
+      "mmlu_pro_9694"
+    ],
+    "psychology": [
+      "mmlu_pro_2592",
+      "mmlu_pro_2503",
+      "mmlu_pro_2144",
+      "mmlu_pro_2384",
+      "mmlu_pro_2504",
+      "mmlu_pro_2664",
+      "mmlu_pro_2205",
+      "mmlu_pro_2758",
+      "mmlu_pro_2173",
+      "mmlu_pro_2284",
+      "mmlu_pro_2364",
+      "mmlu_pro_2176",
+      "mmlu_pro_2310",
+      "mmlu_pro_2475",
+      "mmlu_pro_2660",
+      "mmlu_pro_2318",
+      "mmlu_pro_2412",
+      "mmlu_pro_2669",
+      "mmlu_pro_2419",
+      "mmlu_pro_2140"
+    ]
+  },
+  "judge_model_id": "qwen3:14b",
+  "judge_model_digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+  "ollama_version": "0.34.4",
+  "think": false,
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "max_output_tokens": 256,
+  "prompt_version": "independent_mcq_candidate_judge_v1",
+  "schema_version": "candidate_correct_boolean_confidence_chosen_letter_v1",
+  "candidate_cases": [
+    {
+      "task_id": "mmlu_pro_3020",
+      "subject": "biology",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "9247e7a09b170273dab391260568ff0e3e50c87dc6dde307a4616c4df67bbdaa"
+    },
+    {
+      "task_id": "mmlu_pro_3099",
+      "subject": "biology",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "b5ddc8c37d4f9eac08cca6d78385b3579a2abe8c3843d7e9e3cd95c8a2a3b3ab"
+    },
+    {
+      "task_id": "mmlu_pro_3471",
+      "subject": "biology",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "c01588e3d79ebe81fabe21900c4386fd2746a9031f197d7a1dee6c37775ee77e"
+    },
+    {
+      "task_id": "mmlu_pro_3202",
+      "subject": "biology",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "3702936db2aee729ad939c9ed70b4042d95cebbda6b486dfcea3dfac1581d27e"
+    },
+    {
+      "task_id": "mmlu_pro_3202",
+      "subject": "biology",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "87647ea78076580da6cbfb9dd656c13660a3c2b1e2b949bc4856d051d80eb22a"
+    },
+    {
+      "task_id": "mmlu_pro_3445",
+      "subject": "biology",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "c1f9c343a6e22e362124e1851626f7a4a3710d81f5f4a112854d9888f3cf1a7a"
+    },
+    {
+      "task_id": "mmlu_pro_3445",
+      "subject": "biology",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "d52d9cedb555d66c69a628b5654b8dd8bb79a897a6a8b9df7f92691f1f114a31"
+    },
+    {
+      "task_id": "mmlu_pro_3445",
+      "subject": "biology",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "482c90fd681ebbfd3a5280dc787202fd87285cfc2044ef6a435e19aa84dc0d0a"
+    },
+    {
+      "task_id": "mmlu_pro_2830",
+      "subject": "biology",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "b5c61406b150f8f876ffe95d7e4dc3be3e7fb8d64474dde9109d9d6314f1f274"
+    },
+    {
+      "task_id": "mmlu_pro_3015",
+      "subject": "biology",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "64de448f667ceee83556b204f0e0552d536eeed1c29a91529eabd44005193098"
+    },
+    {
+      "task_id": "mmlu_pro_3015",
+      "subject": "biology",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "1fec574e103df2ab620007a0e33b1df6f18dea6acbae7cfe42b8d871fd4fd0c8"
+    },
+    {
+      "task_id": "mmlu_pro_3015",
+      "subject": "biology",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "c4ae5f7258d663a0251987e5a3565f53be57882f617fb03c6dfc6e4ac60c2011"
+    },
+    {
+      "task_id": "mmlu_pro_3015",
+      "subject": "biology",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "ad32e66fee9698425dd7ec05c567939c251563d8072e9cec8681c90b6d8a9f1b"
+    },
+    {
+      "task_id": "mmlu_pro_3464",
+      "subject": "biology",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "4c144d94ad46808b9b5f23d5e08e3073d56f02ce0f12119ddd8c23ddccc711ce"
+    },
+    {
+      "task_id": "mmlu_pro_3464",
+      "subject": "biology",
+      "candidate_answer": "G",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "0c7fd47f47e8d6692fb8247e5796d7f1e8cee3e98b3be56a135f9dadade56279"
+    },
+    {
+      "task_id": "mmlu_pro_3464",
+      "subject": "biology",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "13e074e9925974dddf501bfcf31dd1ee69f14d18747ae5b67a6b3abd45bd0432"
+    },
+    {
+      "task_id": "mmlu_pro_2919",
+      "subject": "biology",
+      "candidate_answer": "I",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "436447e3680e46cf20fdbf8810d062b58d4e7c6518f525fe61f40af6e0970304"
+    },
+    {
+      "task_id": "mmlu_pro_2919",
+      "subject": "biology",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "70cfa0c34ef86838fdef693191178a5b9b5f6bd8ccfb5b74f6afb09a3c2b3271"
+    },
+    {
+      "task_id": "mmlu_pro_3339",
+      "subject": "biology",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "770853eaed066bb8a2c7fc4da808f172456099eb04e1dd2c59c6b89921dcec18"
+    },
+    {
+      "task_id": "mmlu_pro_3339",
+      "subject": "biology",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "df019f27d3bab88b024ffc3b86a37bdb9933996f759c0ad631b583d991f3da73"
+    },
+    {
+      "task_id": "mmlu_pro_3181",
+      "subject": "biology",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "42747b507e8f53944d2c1d7597c993a5b456a607c186b0dc5873022590c517a8"
+    },
+    {
+      "task_id": "mmlu_pro_3181",
+      "subject": "biology",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "9bafd7686107895a6f6b5d6d37b2180eb2ae49474b88455b95d4d480017cc5c7"
+    },
+    {
+      "task_id": "mmlu_pro_3129",
+      "subject": "biology",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "d50d81c742213c8f35f03651c651073be1a3b46336d0d72b1f5cdcb48adae32e"
+    },
+    {
+      "task_id": "mmlu_pro_3129",
+      "subject": "biology",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "f740673453067d689e32136eb5f9602f721acca7950538cd0d614f5484261f42"
+    },
+    {
+      "task_id": "mmlu_pro_3191",
+      "subject": "biology",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "d0248bda70eca2513d2724adac1be8e86171e48a3370e578eeb4ce116fac878d"
+    },
+    {
+      "task_id": "mmlu_pro_3191",
+      "subject": "biology",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "1af38ca9edb30280eaf549ceef6008453081fa2661638ab91280012cd6096a2f"
+    },
+    {
+      "task_id": "mmlu_pro_3191",
+      "subject": "biology",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "83132d3c04cd1ecac64781c1588cbd1f072c0febb8093cdb2e5cf0aa82c39762"
+    },
+    {
+      "task_id": "mmlu_pro_3191",
+      "subject": "biology",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "425bac8c10555d8b035ff92e8c78eda625500fb4c5c6368be1d8105c88bde64b"
+    },
+    {
+      "task_id": "mmlu_pro_2993",
+      "subject": "biology",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "39051afef319aef79ebd580512ab27bf48c324357952b38355c9c6facccaee4c"
+    },
+    {
+      "task_id": "mmlu_pro_2993",
+      "subject": "biology",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "2763536dc8c915e71501bcd6d5425324598cc2d7f88cea3c4ab835a014bbbdfc"
+    },
+    {
+      "task_id": "mmlu_pro_2993",
+      "subject": "biology",
+      "candidate_answer": "H",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "9b1e339743f056f0c672e5bafd4a7fb84d6d7651d623a7d6e9658fbcc054c9b2"
+    },
+    {
+      "task_id": "mmlu_pro_2878",
+      "subject": "biology",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "39238cfe57766c7df092525b36d2fde0fd1bd5f3252cc1c14f07d50cdebdd174"
+    },
+    {
+      "task_id": "mmlu_pro_2872",
+      "subject": "biology",
+      "candidate_answer": "A",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "235b090a7554b4cbcd0f5143e9da4a48fdaa34e8dad182907c827ffd113ebf9e"
+    },
+    {
+      "task_id": "mmlu_pro_2872",
+      "subject": "biology",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "f962c6117205a32a40b17ea5d45a0167e75fa6d34f19a6a8e9b9673bd5116def"
+    },
+    {
+      "task_id": "mmlu_pro_2872",
+      "subject": "biology",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "6d49f70d925f7e8ac2bb4441d5e339eefca21d0ab33c7ff512c1eb234a7f8094"
+    },
+    {
+      "task_id": "mmlu_pro_3297",
+      "subject": "biology",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "dde47cfa5f0d6adf26b68e73f81f008eef56ef986e01690de6e6fa47ac7e98e4"
+    },
+    {
+      "task_id": "mmlu_pro_3297",
+      "subject": "biology",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "16305e73f452f9eb34af0d75243503b95bac45c0af87e1a7ffa20e50dbe64566"
+    },
+    {
+      "task_id": "mmlu_pro_3186",
+      "subject": "biology",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e3689c4c24057f4ef21211bd4cf3e3e7f27439422b7e8511efd98e1009a79fcd"
+    },
+    {
+      "task_id": "mmlu_pro_3081",
+      "subject": "biology",
+      "candidate_answer": "A",
+      "agents": [
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "0f151108eb9e2788f45289e3f570cf8e61caa49bd7d01cb47de426017516ba85"
+    },
+    {
+      "task_id": "mmlu_pro_3081",
+      "subject": "biology",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "32a6a2e51699fd3644baf2722c7124b95f7c15d01b4cb36e7c36bb8c5be21784"
+    },
+    {
+      "task_id": "mmlu_pro_2846",
+      "subject": "biology",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "e8a819b4e0e2895fecafea4a5c61d920de8d79201b2d55def69889f622eac667"
+    },
+    {
+      "task_id": "mmlu_pro_2846",
+      "subject": "biology",
+      "candidate_answer": "G",
+      "agents": [
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "b7351d33fe33048a9fdb2d6daa212544304bc2589a141706fe050b308f8c8f58"
+    },
+    {
+      "task_id": "mmlu_pro_110",
+      "subject": "business",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "db57d1012d2b6646f657131aa40f4575af2f3ba5a69afc32bcb596a2972e0437"
+    },
+    {
+      "task_id": "mmlu_pro_110",
+      "subject": "business",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "dfb651a2e41a4da0b8675377f5400e3565cf79c11c811868ab083b73785e6087"
+    },
+    {
+      "task_id": "mmlu_pro_110",
+      "subject": "business",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "69f86d4c891e8b4a73a6028cffca00e0dd4882ed0b614777167e57637abb56ad"
+    },
+    {
+      "task_id": "mmlu_pro_256",
+      "subject": "business",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "dfdab748101a32c2d2639c69dcbe4a9f3845e0278990baba46b1a3b7ec680567"
+    },
+    {
+      "task_id": "mmlu_pro_121",
+      "subject": "business",
+      "candidate_answer": "A",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "00942f20c09afb60a80e02d0fe1b2faa53cf97b25488c9494f72122c5ce28c1c"
+    },
+    {
+      "task_id": "mmlu_pro_121",
+      "subject": "business",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e5c47fd4e2d15acd16d409919f9e1c1a80ae7fd4e3a1a8e0fd4871940084ab36"
+    },
+    {
+      "task_id": "mmlu_pro_686",
+      "subject": "business",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "0e86a898e83b1b68005713ddb17695e6c64affc10e444edfdfbf21c2e00fd69b"
+    },
+    {
+      "task_id": "mmlu_pro_175",
+      "subject": "business",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "030e60740e71bb7bbe190596b305e4040752d19b252ae48780c853c721fbc825"
+    },
+    {
+      "task_id": "mmlu_pro_175",
+      "subject": "business",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "9da6ad031be1f218d66f62a67ac0bce9e886131e26347598ed6498ac2ab55603"
+    },
+    {
+      "task_id": "mmlu_pro_850",
+      "subject": "business",
+      "candidate_answer": "A",
+      "agents": [
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "8895ae3039d8373913be90229087723d4a4be78722dd6d4a7f868a3e549c9f13"
+    },
+    {
+      "task_id": "mmlu_pro_850",
+      "subject": "business",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "8a5409adf358aa37f64569401960c9579bb48daaf39a4f67375c0430c7c52c71"
+    },
+    {
+      "task_id": "mmlu_pro_850",
+      "subject": "business",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "e14b2aae4bc93226112701f61ed69a6a6dd32f9217299af54099dfee9fee49b1"
+    },
+    {
+      "task_id": "mmlu_pro_438",
+      "subject": "business",
+      "candidate_answer": "B",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "92992bc3460b32331734a4eba5fdc39060dad02a61237b1afff868fff25f6f6f"
+    },
+    {
+      "task_id": "mmlu_pro_438",
+      "subject": "business",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "ef7d3e354cc92954f6e6170f7c4b56f5e66b4acff5b83352eec8508a4e58edce"
+    },
+    {
+      "task_id": "mmlu_pro_617",
+      "subject": "business",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "fb2ad8286334b2328ef684dd01eaab2680e38e11d411d8cf8a85a464052834c3"
+    },
+    {
+      "task_id": "mmlu_pro_617",
+      "subject": "business",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "1f010eab21696d8c7d48388aa2f90d5d3718bdacbcc4db5a5b8f5a300c7e8c5c"
+    },
+    {
+      "task_id": "mmlu_pro_617",
+      "subject": "business",
+      "candidate_answer": "J",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "f2ec75e198137a6f28b0ce092f99eeb19fc8c172476a3eb9c386f9176da1561c"
+    },
+    {
+      "task_id": "mmlu_pro_462",
+      "subject": "business",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "64a35abf97f63e7c98c4aaca9aa199c2d07d3058f040e9acac5d8279d657ac88"
+    },
+    {
+      "task_id": "mmlu_pro_462",
+      "subject": "business",
+      "candidate_answer": "B",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "83b8ab05e478e8e9bdefb9b0650f085a22d6e89967ec170a271478d5d60b67d9"
+    },
+    {
+      "task_id": "mmlu_pro_405",
+      "subject": "business",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "7fa1bfcedf2464821ef54c1455107af6052a07640f0de0e0445814dd07855ac9"
+    },
+    {
+      "task_id": "mmlu_pro_405",
+      "subject": "business",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "d736001a3b6dd9905df06a64c0b65caa5dc96889f6005a9b60f4088d30dd81fd"
+    },
+    {
+      "task_id": "mmlu_pro_405",
+      "subject": "business",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "69d23bf4f6ccdf43e06e897baedcd8258609a87759c36186afce8bfa94a9e51d"
+    },
+    {
+      "task_id": "mmlu_pro_722",
+      "subject": "business",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "54a4f7936650a109bdbdedfa4c3c394307cc7808754325813a17e7d8a38f8d54"
+    },
+    {
+      "task_id": "mmlu_pro_722",
+      "subject": "business",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "04a81d1074c96f1df5392d6c4927dd2980d54be51d211df2ea55fb29c53e540c"
+    },
+    {
+      "task_id": "mmlu_pro_790",
+      "subject": "business",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "109a2430ce3b9a6539688e142aba025ba39f39d51e50534ace0f73f0d2dbc037"
+    },
+    {
+      "task_id": "mmlu_pro_790",
+      "subject": "business",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "fd724c75e0badd24dcc103903952d027227b5cccf28cbc91d46150bdbf0040c3"
+    },
+    {
+      "task_id": "mmlu_pro_790",
+      "subject": "business",
+      "candidate_answer": "G",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "79e40f0c5a022442a6220cd80dfd8c2ee8fa162c9d4109089fd1b4d175298b31"
+    },
+    {
+      "task_id": "mmlu_pro_326",
+      "subject": "business",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e3568a3a91cbbca8c8fd723e03ed4503a3e54ce687754da6a77522d9aedb138b"
+    },
+    {
+      "task_id": "mmlu_pro_326",
+      "subject": "business",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "751e847ce043fd7c23d629dca061ed126ec1ab889f5573a7864ee9b3e6225723"
+    },
+    {
+      "task_id": "mmlu_pro_326",
+      "subject": "business",
+      "candidate_answer": "G",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "dea0cbcf9d6f55913cb2fcb8d7b718ebed7b67b24176cd654b18e7bf43ad5edf"
+    },
+    {
+      "task_id": "mmlu_pro_298",
+      "subject": "business",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "46ba3d55e71e26b072b7dcd4775b92a0d9a81837cfb8f1e69f13fab68be3f162"
+    },
+    {
+      "task_id": "mmlu_pro_298",
+      "subject": "business",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "b7431b17eb7154f80138d7722e50d44a60e9b8ab960fb067e5d35a1927068e2d"
+    },
+    {
+      "task_id": "mmlu_pro_811",
+      "subject": "business",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "874d87d74a65c0c195bcb6a4170116cd61e4ec2a3467a8871f34509d16b3ed5c"
+    },
+    {
+      "task_id": "mmlu_pro_811",
+      "subject": "business",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "40d500625f9bb3f4dab476ef61510045c43da3ffff99fcf6c2d06beefbbb6084"
+    },
+    {
+      "task_id": "mmlu_pro_811",
+      "subject": "business",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "4ab6412b918155190f8f56c91b59b1bd5d2c222f7c782bcf0ef48cc116359bb9"
+    },
+    {
+      "task_id": "mmlu_pro_811",
+      "subject": "business",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "4367a8e24e1ebb92018bf747f0700fb06f9de4af42b787a948e10820f3e2f953"
+    },
+    {
+      "task_id": "mmlu_pro_557",
+      "subject": "business",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "d977d0b30296950aab6b7891c70f80d9f8fa662478224786ad914f4c69b90fc2"
+    },
+    {
+      "task_id": "mmlu_pro_557",
+      "subject": "business",
+      "candidate_answer": "H",
+      "agents": [
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "7c943c8dcded401f8c40b09c5a277ff57d582b97c7d95811cc31250856494107"
+    },
+    {
+      "task_id": "mmlu_pro_554",
+      "subject": "business",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "db4fda925a5c5e97d5348d7649040277da2bc91e6a28acf814ef9210c5dfcca1"
+    },
+    {
+      "task_id": "mmlu_pro_554",
+      "subject": "business",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "7ab1fff0103ecf3239ffb45ca270167b87c5032a143c843ada2904f336004001"
+    },
+    {
+      "task_id": "mmlu_pro_349",
+      "subject": "business",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "a6f62774de37e58626c9be8e60aaecced1648acb087ecd1cfb2662a2ce5e0ffb"
+    },
+    {
+      "task_id": "mmlu_pro_349",
+      "subject": "business",
+      "candidate_answer": "J",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "7d0badc5e33c4cb83c2167f9f1d17cad356a4a2c96ece3619facec7f89f9c8e5"
+    },
+    {
+      "task_id": "mmlu_pro_441",
+      "subject": "business",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "8d89a33795dd0337e237f904578a293d8fd78e479933fc2b00c0ddfcf3ae46a5"
+    },
+    {
+      "task_id": "mmlu_pro_441",
+      "subject": "business",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "0d218845ab43f6810afcdfd34f4f30523288d7196f302364013e63a07de27fcf"
+    },
+    {
+      "task_id": "mmlu_pro_135",
+      "subject": "business",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "d14b96a4087b62afad09ceac541b2825634e1285b8ca95cbc6f791a71cc06856"
+    },
+    {
+      "task_id": "mmlu_pro_135",
+      "subject": "business",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "b7dcb587b7d35783200b9c2db3da558c32c81e1ad3fb2093baaa9c149c5889ed"
+    },
+    {
+      "task_id": "mmlu_pro_135",
+      "subject": "business",
+      "candidate_answer": "G",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "1663c8160223d5b8f661cca53dd40935af350401d54f4d2a6ab9d1829738da14"
+    },
+    {
+      "task_id": "mmlu_pro_135",
+      "subject": "business",
+      "candidate_answer": "J",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "8f908dc0b77aa75e3572e5ccba2e02c25039ae2fab0f39f01d6266e01af1e881"
+    },
+    {
+      "task_id": "mmlu_pro_4600",
+      "subject": "chemistry",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "bfc9e8f112a7c63c231dce7d0ff2b1f30a5354b77418427545796e01d9a605cd"
+    },
+    {
+      "task_id": "mmlu_pro_3585",
+      "subject": "chemistry",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e826789dd7dcd2feda2b5a6a18ecc12e67c4b1935824c1f6bd31af5eba6c4ba0"
+    },
+    {
+      "task_id": "mmlu_pro_3585",
+      "subject": "chemistry",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "d2b176a573c78d23485801dcd8e9fe02c5c9452094c8a5010290778564d030ec"
+    },
+    {
+      "task_id": "mmlu_pro_4587",
+      "subject": "chemistry",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "5a17ceee2d5cd8ce24b25d16b7191bce641f43b720a05e3f96d3b85d2bb9ccdb"
+    },
+    {
+      "task_id": "mmlu_pro_4587",
+      "subject": "chemistry",
+      "candidate_answer": "J",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "e028394602bb1ce4d8acf8b82bf548ee876742d9ee1ed8d62d00bb290e4e794c"
+    },
+    {
+      "task_id": "mmlu_pro_4248",
+      "subject": "chemistry",
+      "candidate_answer": "B",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "f4a024da7fdc809ba3bca0d9fe6ce119187336e7c5ca51f29430b1c1948214da"
+    },
+    {
+      "task_id": "mmlu_pro_4248",
+      "subject": "chemistry",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "89327b34d2ed679f14523b0e6cc4574517e6e06a93a23dd24f43d33bd58a3ccc"
+    },
+    {
+      "task_id": "mmlu_pro_4610",
+      "subject": "chemistry",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "de7bc20c123713f9b22bc44f29cbe78d3a60ea86926cc2a9a76aa9fd69e7487c"
+    },
+    {
+      "task_id": "mmlu_pro_4610",
+      "subject": "chemistry",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "38f59b32677ae8dd1fbebc0bf08a930cf4d635cce7e89ba93d634d865b81c148"
+    },
+    {
+      "task_id": "mmlu_pro_3586",
+      "subject": "chemistry",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "892afff776e87eb0c91094c287f298b744171dc92f692e583fedacdb3cec01b2"
+    },
+    {
+      "task_id": "mmlu_pro_3586",
+      "subject": "chemistry",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "3c89ed859119bf8fdd1ff41d4533713a71d1b8189f85071b186a9efb0f3801e1"
+    },
+    {
+      "task_id": "mmlu_pro_3586",
+      "subject": "chemistry",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "f2d2aee043a6f153f50aef6755cb96e8415cfc556c71aa4a35c5dd5aad97fbb8"
+    },
+    {
+      "task_id": "mmlu_pro_3586",
+      "subject": "chemistry",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "5f3771104b953122188eef96993066b2da767ba2c7f8f43dd51d6da2b1648ec8"
+    },
+    {
+      "task_id": "mmlu_pro_4652",
+      "subject": "chemistry",
+      "candidate_answer": "B",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "4fa9a45ca1baebf7a92c9ccb597a02d750a4ebdd1af25a1ce6ab6acb1a7492a5"
+    },
+    {
+      "task_id": "mmlu_pro_4652",
+      "subject": "chemistry",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "8ea1f1bc0c67d48a236159c72a903708c06be514a8a87a5a6ca17be8b3fe7aed"
+    },
+    {
+      "task_id": "mmlu_pro_3736",
+      "subject": "chemistry",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "bfdfcaaa88c31ab8a8ef1c4292e644cbd7b43411dfde0d9f0e40128bf2682662"
+    },
+    {
+      "task_id": "mmlu_pro_3736",
+      "subject": "chemistry",
+      "candidate_answer": "C",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "555e1bb2d88b101a0547d6b29e06fc7de1b2767250c79d01a897d1641baf7195"
+    },
+    {
+      "task_id": "mmlu_pro_3736",
+      "subject": "chemistry",
+      "candidate_answer": "G",
+      "agents": [
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "378fe37ef695aef19d3325e6408e2c5421a71e7fdf817ba5f228ec13ce5037f0"
+    },
+    {
+      "task_id": "mmlu_pro_3644",
+      "subject": "chemistry",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "df89fcb57d5dbf5464ca16b6d88591f3cfb2a40f31f6370d978737364e2dd7c4"
+    },
+    {
+      "task_id": "mmlu_pro_3644",
+      "subject": "chemistry",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "b7af26c4662a8ef4098932117cd49fa899265ee13fc2fbde0b7b5887150e42f1"
+    },
+    {
+      "task_id": "mmlu_pro_4046",
+      "subject": "chemistry",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "33e3969bde187e6dab4bbf14a6589358df9fa963da15fe20765bf1667ef0f504"
+    },
+    {
+      "task_id": "mmlu_pro_4046",
+      "subject": "chemistry",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "727904c4532a685a732d06b06a7455629804d4676fa371577ddc7799fad6322a"
+    },
+    {
+      "task_id": "mmlu_pro_4046",
+      "subject": "chemistry",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "e490cbec5375cba5d89d8e5847884046e0a9adea7422634dbc9256302d9d9642"
+    },
+    {
+      "task_id": "mmlu_pro_4046",
+      "subject": "chemistry",
+      "candidate_answer": "I",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "22b8db0c1199344a1ae135c7be5bfc8bebff5beb6bd78e1f580877d8be39b64c"
+    },
+    {
+      "task_id": "mmlu_pro_4435",
+      "subject": "chemistry",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "a0a4e99bdd95887f996dfc6969bce362d0124d42ce7fc5a631a525859c96e72d"
+    },
+    {
+      "task_id": "mmlu_pro_4435",
+      "subject": "chemistry",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "f43b086f671e88e083a01e85bff2f31f2297e5cab19a91af33d7085e9a94fe38"
+    },
+    {
+      "task_id": "mmlu_pro_4435",
+      "subject": "chemistry",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "7aa5a47dd8368ecc3d667c0a3f521d85d07def12a68f61710ff1d6da5d31bc45"
+    },
+    {
+      "task_id": "mmlu_pro_4435",
+      "subject": "chemistry",
+      "candidate_answer": "H",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "66abacb5aa4752c33141c14089b1c00d96c2c944456dfe34a83873b816c617d6"
+    },
+    {
+      "task_id": "mmlu_pro_4091",
+      "subject": "chemistry",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "e2a6b4c8dc843a683f8c59bb91dca3e00bb1a7f695fbcb8144841778a0481a60"
+    },
+    {
+      "task_id": "mmlu_pro_4091",
+      "subject": "chemistry",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "9014af7eb4ab079a98b3c0d9715ce43d2e22fcb9f8845cc484baf5cd0dc4fe85"
+    },
+    {
+      "task_id": "mmlu_pro_4091",
+      "subject": "chemistry",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "367609fcfd265f6af6e471522eeaed821130169f9456ca0a28847234884ad758"
+    },
+    {
+      "task_id": "mmlu_pro_3565",
+      "subject": "chemistry",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "477b01b6db7b836795d912786dbd45dd2d33719d7e2581a15fb00b9f2e54ed7e"
+    },
+    {
+      "task_id": "mmlu_pro_3565",
+      "subject": "chemistry",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "912c5af25e4f335d3706028b0c5c685b55cd279f3ecb2ed03e6a7718cbbeacd0"
+    },
+    {
+      "task_id": "mmlu_pro_3565",
+      "subject": "chemistry",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "85d6b55adb2b68c9a8e914123775067a2d9928dcba11df1ad75b457267035e28"
+    },
+    {
+      "task_id": "mmlu_pro_3551",
+      "subject": "chemistry",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "4434b8ae819d7ab8aa8c6337b17b8bf5fe11d3a11b23243177976a0f55cea808"
+    },
+    {
+      "task_id": "mmlu_pro_3551",
+      "subject": "chemistry",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "2d08a136a13cfa48715c8cdec52927008efb3b63c22f932cae72efa4e133db9c"
+    },
+    {
+      "task_id": "mmlu_pro_4460",
+      "subject": "chemistry",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "58923ca328bc6ea0ff4d1841217351bb55b97feb48aa25a1c84539b1a84c1813"
+    },
+    {
+      "task_id": "mmlu_pro_4460",
+      "subject": "chemistry",
+      "candidate_answer": "G",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "e3ac125dcb92e9daaf7a62b884c32e65bf2d22bf2d2edf29c6d1aa647db196cd"
+    },
+    {
+      "task_id": "mmlu_pro_4460",
+      "subject": "chemistry",
+      "candidate_answer": "H",
+      "agents": [
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "6c863997d8639368f8fc4e5c0c9df6848ac9d262d87e1251b6a17398d6914697"
+    },
+    {
+      "task_id": "mmlu_pro_4583",
+      "subject": "chemistry",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "3c14c8a64e5a40a7dddb389dcc0ee25b06c1dd03315f4fa6d90d9ce4cf395dc2"
+    },
+    {
+      "task_id": "mmlu_pro_4039",
+      "subject": "chemistry",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "9cc83dba7ae94d22d8e039c6d0dbd4b93de4ffb63f31e3127f3bbf91221d237d"
+    },
+    {
+      "task_id": "mmlu_pro_4039",
+      "subject": "chemistry",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "1f92600ec4083fcff9ab0aa057add1bf437bf2d1a75598aa5ea0acf4ea12a6eb"
+    },
+    {
+      "task_id": "mmlu_pro_3847",
+      "subject": "chemistry",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "125012c1d5a02717088c600988c9cc8184ae3aa8108e7649bcc813392e1de2f1"
+    },
+    {
+      "task_id": "mmlu_pro_3847",
+      "subject": "chemistry",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "36a17874afd3fc2722b1c3bc534b2dd028d62fb0a34d53dbdc4810a461258dd5"
+    },
+    {
+      "task_id": "mmlu_pro_3847",
+      "subject": "chemistry",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "a6217a76d40b37b6039020a930d326efb98b65af9ed394631f1705431c832eb7"
+    },
+    {
+      "task_id": "mmlu_pro_3862",
+      "subject": "chemistry",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "51fdda848c217ebe764a26ced36da585a12e8265010209a1d44e009661cda9cf"
+    },
+    {
+      "task_id": "mmlu_pro_3862",
+      "subject": "chemistry",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "9958e01d5bb192b5a0884d8ca5f3e5e0d81ad6a3eeec04b2510dd4015eabb758"
+    },
+    {
+      "task_id": "mmlu_pro_3862",
+      "subject": "chemistry",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "baf80f399117e83bbadddc696a0d8b40a81e4127f84ac1fad84754d6579f5c72"
+    },
+    {
+      "task_id": "mmlu_pro_3818",
+      "subject": "chemistry",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "594f28623c78abaa320aad35311818b3b74027292c1da35ff099b7cfb3a27ae3"
+    },
+    {
+      "task_id": "mmlu_pro_3818",
+      "subject": "chemistry",
+      "candidate_answer": "G",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "4116c0a201e27acf1634e60eb7d617c7669dbdc8916520a15c52410d674208c8"
+    },
+    {
+      "task_id": "mmlu_pro_3818",
+      "subject": "chemistry",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "6fb2488b9bd8fc09c599c78ecfdcf44371dfb42434be0fdb035f62b0e2152dd1"
+    },
+    {
+      "task_id": "mmlu_pro_10531",
+      "subject": "computer science",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "9c1514b484a42180c02f48b7d7ba1edb25a729f69256aea62e7d5426c71b8b13"
+    },
+    {
+      "task_id": "mmlu_pro_10531",
+      "subject": "computer science",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "73a5c93396784df5817ab2ec9bc0052b5441a50b13ba939a3a32eb6890cb8ba0"
+    },
+    {
+      "task_id": "mmlu_pro_10498",
+      "subject": "computer science",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "a7165cab934d436dfa763ec5304b9fff23749d05fa76b1b8a3d096db5dc46bb1"
+    },
+    {
+      "task_id": "mmlu_pro_10498",
+      "subject": "computer science",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "db330a757585f6e6cd1e963e59ac615cf481524cd359ad32ac8cc8fdd77dc505"
+    },
+    {
+      "task_id": "mmlu_pro_10498",
+      "subject": "computer science",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "2a68288fa9bf947397c77c08a7904611e7d6fc9c4d31eaeae671fae652d8ef32"
+    },
+    {
+      "task_id": "mmlu_pro_10725",
+      "subject": "computer science",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "3312013b5ac0e304ff85a12922e22ed3867b514f38403dfb6a7e7251796796b5"
+    },
+    {
+      "task_id": "mmlu_pro_10725",
+      "subject": "computer science",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "a143a302a399f54975ddd48c9ab01df6b91989bd12c1010c4af72aa2ad9ea6cf"
+    },
+    {
+      "task_id": "mmlu_pro_10725",
+      "subject": "computer science",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "b7c34562b8868b8b70d7eccd0fd04d70ce40e45f8af14b69c5aa5cb73e142378"
+    },
+    {
+      "task_id": "mmlu_pro_10725",
+      "subject": "computer science",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "cdc43b8a2912875ee0feb1e3ad3e2bf11164a8bbed999e29f2d9546e7796fd91"
+    },
+    {
+      "task_id": "mmlu_pro_10580",
+      "subject": "computer science",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "daf463b278ad23e183aa5de3c8106000ec9d18e45c28bd649b556f8fe9b5824e"
+    },
+    {
+      "task_id": "mmlu_pro_10580",
+      "subject": "computer science",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "2cc5e2eec89c1dfef59cdb6a41ba6eda9cd18dd14589f09d4aa8111c77f1f144"
+    },
+    {
+      "task_id": "mmlu_pro_10551",
+      "subject": "computer science",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "bf4e6d291a53cad3cff4dcc4112de9684efc25b6209ed853ec123680c2022cdc"
+    },
+    {
+      "task_id": "mmlu_pro_10551",
+      "subject": "computer science",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "b993defb1565205655884a702fc882f0996bebd695e81f25ada1e83a37766239"
+    },
+    {
+      "task_id": "mmlu_pro_10572",
+      "subject": "computer science",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "04013bfa87e3ae6ad191bd542a3525d9ac4ac4d54e60e90782c7015f5e50b630"
+    },
+    {
+      "task_id": "mmlu_pro_10572",
+      "subject": "computer science",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "af8046b7853f63110734780ffbc5781eb9b39e7f23098e9d87e2f70177e4c83d"
+    },
+    {
+      "task_id": "mmlu_pro_10572",
+      "subject": "computer science",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "912ad14bd8d34650dc975fc2776006996688406cfe23661d492ab1b5f2a17969"
+    },
+    {
+      "task_id": "mmlu_pro_10461",
+      "subject": "computer science",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "98e0da418afbc65b74792688082e06149ea841c83c547f234a08805bb2438b47"
+    },
+    {
+      "task_id": "mmlu_pro_10461",
+      "subject": "computer science",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "933ff559f03c5ec1b4bc0de2d78b6efe92baeb12e06b74954b891a76dc2c9fcd"
+    },
+    {
+      "task_id": "mmlu_pro_10461",
+      "subject": "computer science",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "f02ba8ff00caae3662220918dd246e5472b3e829e49f34641086ed223771ff34"
+    },
+    {
+      "task_id": "mmlu_pro_10361",
+      "subject": "computer science",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "db53dbff81bb7001e6e7a7ddc54d71769e1a3149457e3994700a07bc96519b5f"
+    },
+    {
+      "task_id": "mmlu_pro_10361",
+      "subject": "computer science",
+      "candidate_answer": "B",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "915173812ace55dc8c02d4394682ddc98c755e7747740860125d9f723b80d83e"
+    },
+    {
+      "task_id": "mmlu_pro_10361",
+      "subject": "computer science",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "1bc5f2bef63f93afd9f797cfa53efae86d579551c70f8ee928e0b0d5e5698725"
+    },
+    {
+      "task_id": "mmlu_pro_10361",
+      "subject": "computer science",
+      "candidate_answer": "H",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "1e433681be5a598a091ac94d53124146f5afd30c806fbc4766e13afed315fac2"
+    },
+    {
+      "task_id": "mmlu_pro_10674",
+      "subject": "computer science",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "fd6685ac6eb360423a5f41065cd64417742243357058a1e47294a38dd52a4fd2"
+    },
+    {
+      "task_id": "mmlu_pro_10674",
+      "subject": "computer science",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "7341300a21d267d9e27c21335d82842c0c3429ba77d12ba6b2d20969bfe6f605"
+    },
+    {
+      "task_id": "mmlu_pro_10674",
+      "subject": "computer science",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "37f42c881969c23d1bc287c249d716840fcb6182545cc7cb0230990a5d2c8e83"
+    },
+    {
+      "task_id": "mmlu_pro_10616",
+      "subject": "computer science",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "27f66dacd485b3690336d7e83eaf1624a9996e614f1ca0004eb2551135735948"
+    },
+    {
+      "task_id": "mmlu_pro_10590",
+      "subject": "computer science",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "4546ae639f75d2091ae1a4c49f8002e0ae16c3962d4b65d52f154057f4860603"
+    },
+    {
+      "task_id": "mmlu_pro_10590",
+      "subject": "computer science",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "36a298f68b90fe9c3f9cd6f78fd44d1e2d37cc0b622820a4d6559d724cd117bb"
+    },
+    {
+      "task_id": "mmlu_pro_10590",
+      "subject": "computer science",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "2f2afd92019f707a70b3347a89390465d49f61f15cbd91a929488f460e103595"
+    },
+    {
+      "task_id": "mmlu_pro_10590",
+      "subject": "computer science",
+      "candidate_answer": "J",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "9a1285edf91e07916d7e99a52478868738de8a95f508cf5c2c205cb06dd022db"
+    },
+    {
+      "task_id": "mmlu_pro_10612",
+      "subject": "computer science",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "6552ce81b0016404e95e917828589f60f1cb4e017372717ca738aace7f320bba"
+    },
+    {
+      "task_id": "mmlu_pro_10612",
+      "subject": "computer science",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "e14dd24e72ecbfbf0bf7050cc0524e2b5d309a348a1f6bd36730f79c73226ec7"
+    },
+    {
+      "task_id": "mmlu_pro_10612",
+      "subject": "computer science",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e0b33242a0c5ad0357324dac0fc786591dc7ea629633dd2c5fb2a15580b2df81"
+    },
+    {
+      "task_id": "mmlu_pro_10612",
+      "subject": "computer science",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "b5a215e449fbef9922cd7c18fba7a719c4ba11b6fee08510d5dc99fe5858bd83"
+    },
+    {
+      "task_id": "mmlu_pro_10476",
+      "subject": "computer science",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "cd93c90ebe40b2cf57d33b15ef4f10da872cbca5b9d2182f2de785dce88c6585"
+    },
+    {
+      "task_id": "mmlu_pro_10476",
+      "subject": "computer science",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "06a1df072b926a8fa7191fc9882865a82a658a854066af84a291c1de2026075b"
+    },
+    {
+      "task_id": "mmlu_pro_10387",
+      "subject": "computer science",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "722a113949a2fd711ed264b457f8f9eea0fee026d71386fad0bd3ab654dadaa0"
+    },
+    {
+      "task_id": "mmlu_pro_10387",
+      "subject": "computer science",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "40054d1729e0fec08c00e2a9bce2b2382ed03ef419478f06493510d999d9a72e"
+    },
+    {
+      "task_id": "mmlu_pro_10385",
+      "subject": "computer science",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "796ea0f6d33f64fca6310a6a77705363e0ae5deeb23e15974df9cfa42b99abf6"
+    },
+    {
+      "task_id": "mmlu_pro_10385",
+      "subject": "computer science",
+      "candidate_answer": "E",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "6cb1d4d5254e550a6f6bf53554af11cad09e3356318a4574290777b6f3f34549"
+    },
+    {
+      "task_id": "mmlu_pro_10385",
+      "subject": "computer science",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "325a0f2d03c2ee379ddfab1b6781d1abd5a282abedce5d12a7a7bdb88a2b45d1"
+    },
+    {
+      "task_id": "mmlu_pro_10584",
+      "subject": "computer science",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "dad2a68e288024b30df93117e4b98e59182559ff67fe0c9f62183663466399fd"
+    },
+    {
+      "task_id": "mmlu_pro_10584",
+      "subject": "computer science",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "1ba052ab6e28ed501395533d11f20265d223ed9295c0ac4ac61aa5f606dbe202"
+    },
+    {
+      "task_id": "mmlu_pro_10584",
+      "subject": "computer science",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "86c3152228f963c91927a621b68ce3bedc2711db8759f87ba6776a066c558c63"
+    },
+    {
+      "task_id": "mmlu_pro_10462",
+      "subject": "computer science",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "19af616218d5763850016707e50e5e9d6ae277f40ab17c17722347013673de0f"
+    },
+    {
+      "task_id": "mmlu_pro_10462",
+      "subject": "computer science",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "420c5f55d70866d70b8abfebd710f42321a1cf07ee7d76b4b0228f1e548284d5"
+    },
+    {
+      "task_id": "mmlu_pro_10462",
+      "subject": "computer science",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "78aa1fd6665cb06c1e7c06fcf0fc2344f59441beb0dd3300c3adc0627a2adc78"
+    },
+    {
+      "task_id": "mmlu_pro_10473",
+      "subject": "computer science",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "674b0ac8ba2356d4dd09e1d437e0b360f8f84ededbe4c7aa75f5876b88f1c323"
+    },
+    {
+      "task_id": "mmlu_pro_10473",
+      "subject": "computer science",
+      "candidate_answer": "C",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "5bf48598bb2ebff1a0449cee259e9fb84e6c8978f127f168be73c1aedeb68ffd"
+    },
+    {
+      "task_id": "mmlu_pro_10473",
+      "subject": "computer science",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "a696bb704672bf5cce7f9767845b97d013575b425d06b0dc302edee9e4ab936b"
+    },
+    {
+      "task_id": "mmlu_pro_10696",
+      "subject": "computer science",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "6af0e0999b49da3e7183ca6d8e994f7e70eb2a4bfeb7943ff0f491678e4f043d"
+    },
+    {
+      "task_id": "mmlu_pro_10696",
+      "subject": "computer science",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "83744dbbc91affe5ccb84fe26ae22b6de74646b145fa90e48014fea866d21885"
+    },
+    {
+      "task_id": "mmlu_pro_10696",
+      "subject": "computer science",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "0442ac0c0358ffb28688024030a750024e22338ba83bb5931321b581b77d77de"
+    },
+    {
+      "task_id": "mmlu_pro_10505",
+      "subject": "computer science",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "d5d78c090df80851a6890652add2cf7dee1c016ac70cdb5e9df6639f6b883895"
+    },
+    {
+      "task_id": "mmlu_pro_10505",
+      "subject": "computer science",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "d85c12f4eb0af2f8da04871469a2524e0f57e90b9231afeae8751b9a0c37fc5f"
+    },
+    {
+      "task_id": "mmlu_pro_7132",
+      "subject": "economics",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "3750306e0c6b429bbf4ea9e5ccbd10c35b2c173f4cb2bee74f2b16a5e0e1b38d"
+    },
+    {
+      "task_id": "mmlu_pro_7132",
+      "subject": "economics",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "8cf735e93c22b909c5391a1d89271270eec93f3d80243e4b8067e88b2775f2d4"
+    },
+    {
+      "task_id": "mmlu_pro_7486",
+      "subject": "economics",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "495a2f61ccfbd2526cf325ca739cbd8f07cc80d18766f6a17aa2a8f9a683b336"
+    },
+    {
+      "task_id": "mmlu_pro_7486",
+      "subject": "economics",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "11ae94935757adaaeb10d686206eee6e107fd89d69f4320ff89b912e7ef98b8a"
+    },
+    {
+      "task_id": "mmlu_pro_7609",
+      "subject": "economics",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "cf1f69ffee6e44f954d4f46096ff272a63de5966445f79d2fb78801726d2bb9d"
+    },
+    {
+      "task_id": "mmlu_pro_6829",
+      "subject": "economics",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "dce29b59084d0f4357665a710ba3a5f9decf3575e04f07acb504dc2038a8d42b"
+    },
+    {
+      "task_id": "mmlu_pro_6829",
+      "subject": "economics",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "0e6da8092fa66bbbbd9eea8e18d7843c6a5ce24ce62b84590ed5c97c71573ac5"
+    },
+    {
+      "task_id": "mmlu_pro_7458",
+      "subject": "economics",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "7dd504013482908d22911276a935dd8ea0657d33dbfbba10dae0f3d1a0b6c24d"
+    },
+    {
+      "task_id": "mmlu_pro_7458",
+      "subject": "economics",
+      "candidate_answer": "B",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e15a87ae776f02082297baa795e226c17a58e42d61011659b307732ee0962695"
+    },
+    {
+      "task_id": "mmlu_pro_7458",
+      "subject": "economics",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "f5b907bfcb94cd911198a7d17b00573afe332f488e8409c053194bfbadd32578"
+    },
+    {
+      "task_id": "mmlu_pro_6975",
+      "subject": "economics",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "a20ed0f17d84080a110181af801da179b4be7e58eba82408e19e5a649304851f"
+    },
+    {
+      "task_id": "mmlu_pro_6975",
+      "subject": "economics",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "45e65caccddf4752fb5ccffb565f04316ee33302f73dd936e721e09cfe81a668"
+    },
+    {
+      "task_id": "mmlu_pro_6975",
+      "subject": "economics",
+      "candidate_answer": "I",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "29546d2a498ae8891b8feec2fdf329d8f829a9ae214270ca01b7ed1850e63698"
+    },
+    {
+      "task_id": "mmlu_pro_7102",
+      "subject": "economics",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "7ade6a5591a31581ce747795e02624ee238a470e8422060693f957ac8f05bed7"
+    },
+    {
+      "task_id": "mmlu_pro_7102",
+      "subject": "economics",
+      "candidate_answer": "C",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "9769a5b89dbddf7ca7f08af7148f5f0420200b4b8a67a14e54e4c38253bf9354"
+    },
+    {
+      "task_id": "mmlu_pro_7102",
+      "subject": "economics",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "ffb55d8990dc5a91ee9891bbf5f6bb944a072094b8f71e88775b1d2d0e1c3c76"
+    },
+    {
+      "task_id": "mmlu_pro_7351",
+      "subject": "economics",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "c18b643f3f6d142d3b5f6a13a79c214bbbb85b1e598d4115a04f69ae56565e36"
+    },
+    {
+      "task_id": "mmlu_pro_7351",
+      "subject": "economics",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "4ed2ef22ddf1eb07a7e637139794b60ac50d5a90b1c5e1209883161e78e2e598"
+    },
+    {
+      "task_id": "mmlu_pro_7351",
+      "subject": "economics",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "1f0aaecc912a76561ab332965218426dd59b67132d11c988bea97564a167d6ba"
+    },
+    {
+      "task_id": "mmlu_pro_7641",
+      "subject": "economics",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "4666bafa45ef44b41256c41194005d452024be70220b56b9ce8c947ea5bf9eb3"
+    },
+    {
+      "task_id": "mmlu_pro_7641",
+      "subject": "economics",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "58504cc7bc3b9dc59c3c75a6ac88f81e174db86949c5db33eff918170e08b54b"
+    },
+    {
+      "task_id": "mmlu_pro_7641",
+      "subject": "economics",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "f50fed7685ff94b491073448b94f8b17b271d2bf1e567c08c001edaa944835d0"
+    },
+    {
+      "task_id": "mmlu_pro_7641",
+      "subject": "economics",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "fe0db7bf102d106d9e900b29c02591ffb1bed529b3da1df751e8026363aadfb1"
+    },
+    {
+      "task_id": "mmlu_pro_7534",
+      "subject": "economics",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "aa9f99af5ce86549880d85b69998058e0be9d3e1784329b5b4500459cdd52d8c"
+    },
+    {
+      "task_id": "mmlu_pro_7534",
+      "subject": "economics",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "63d58ed9b31c120e4ff609394251abb4a3ae56bfa94dd23941f334de4faf0682"
+    },
+    {
+      "task_id": "mmlu_pro_7534",
+      "subject": "economics",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "93a3d51f0e3c2fed6b67ab4918492201821709ffa21c161e1bf23d031409bd8a"
+    },
+    {
+      "task_id": "mmlu_pro_7387",
+      "subject": "economics",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "24cf419c3727acec85d729b3930e4c185b60019a3615c7e75e39f55c132a1798"
+    },
+    {
+      "task_id": "mmlu_pro_7046",
+      "subject": "economics",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "6427b0c78c4693638fcbd894d660b11c19e34c0e19ac483295f4b2f54bf32d3a"
+    },
+    {
+      "task_id": "mmlu_pro_7046",
+      "subject": "economics",
+      "candidate_answer": "C",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "410bf20d9ced948730b7d0089bc56657354e65381a8a4df62ddd98eed0ccf2c1"
+    },
+    {
+      "task_id": "mmlu_pro_7046",
+      "subject": "economics",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "03862b50ab3d21bbd1969e7b1a464a7c2bfab9450ca91a473a442dd5bf589bfd"
+    },
+    {
+      "task_id": "mmlu_pro_7455",
+      "subject": "economics",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "51a518835ed7314738b87a8ad98199e7ac4d442eab40dc72304e0ebf3c6e184e"
+    },
+    {
+      "task_id": "mmlu_pro_7336",
+      "subject": "economics",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "09cc6788252d1317fe7da603199169f1b32fefd8550280b4091fce439473fd59"
+    },
+    {
+      "task_id": "mmlu_pro_7464",
+      "subject": "economics",
+      "candidate_answer": "B",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "61c1bad610dd206164b04a89417f255926326530938f6520a10ea37eec86d37d"
+    },
+    {
+      "task_id": "mmlu_pro_7464",
+      "subject": "economics",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "86011e0ee6951b620f38cdab10edb650ca05f64a5a71c72760125b622951de49"
+    },
+    {
+      "task_id": "mmlu_pro_7464",
+      "subject": "economics",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "bad529a7865a07fae7272c1e496a42cb81bc4f7714a1c530dd6a51c7fd1d148b"
+    },
+    {
+      "task_id": "mmlu_pro_6927",
+      "subject": "economics",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "8770e912c5e6b4eea96e9fb73ae62259cf1c465963694110717b0ad99e03f186"
+    },
+    {
+      "task_id": "mmlu_pro_6927",
+      "subject": "economics",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "44321af6bc6252b28835b3ba8edeb09e30d136907652209301ddd3ad7439bd50"
+    },
+    {
+      "task_id": "mmlu_pro_7311",
+      "subject": "economics",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "147a776bfbdc9737edfb26c7375dfcb21ad21df42cf309e40bff449d4a753015"
+    },
+    {
+      "task_id": "mmlu_pro_7311",
+      "subject": "economics",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "543b37e42d6e286e5f872896bf3cb6618dfbaea361f41c3c62175afd6c812aee"
+    },
+    {
+      "task_id": "mmlu_pro_7311",
+      "subject": "economics",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "be2ca1dd8466c627ab31ae83c2e97692a1b4abaa584fdef2e43116ff2e4f4022"
+    },
+    {
+      "task_id": "mmlu_pro_7213",
+      "subject": "economics",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "75c8c6f51240960aeeb5b536e5a0fac4b3eb5c31e6f90281ccfb13c33eb10665"
+    },
+    {
+      "task_id": "mmlu_pro_7648",
+      "subject": "economics",
+      "candidate_answer": "E",
+      "agents": [
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "acaf337e0230ec575e6c0f1aaa1a4a68a3508951a499d94fb9f19d4d816e549e"
+    },
+    {
+      "task_id": "mmlu_pro_7648",
+      "subject": "economics",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "27eccbfcb311e7f83db2b5e90f4c4bf21c4137c454c21b2c6af831dc33080882"
+    },
+    {
+      "task_id": "mmlu_pro_6951",
+      "subject": "economics",
+      "candidate_answer": "C",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "33a5115d85541e50af7c41990cae90f9bec1f84efe11ce0d5f299e1f3dc0e30e"
+    },
+    {
+      "task_id": "mmlu_pro_6951",
+      "subject": "economics",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "176c6730f1be1938bff58a2ffa0bce4043edd16e273fc62b8bdd946c85d023f0"
+    },
+    {
+      "task_id": "mmlu_pro_6951",
+      "subject": "economics",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "1cc52482429ac7b1425a6a41a211983a8119159cfd41ca88622f83ccdffd270b"
+    },
+    {
+      "task_id": "mmlu_pro_6951",
+      "subject": "economics",
+      "candidate_answer": "J",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "a6faca6aef305c9cc0dccb112292fc8dc911a09d13371e307bb9b7aa1e900381"
+    },
+    {
+      "task_id": "mmlu_pro_11492",
+      "subject": "engineering",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "2560d9cbcbba6d935fabacbb0e893afb0d6b0e4ae7250fd882c537f3d159dd82"
+    },
+    {
+      "task_id": "mmlu_pro_11492",
+      "subject": "engineering",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "09cc2b1ee3e5257efb0eb8ca6e6cd20cfbd2c12f58e72140844a994ddbd66b2c"
+    },
+    {
+      "task_id": "mmlu_pro_11492",
+      "subject": "engineering",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "5d3e1bcf862606ceb90c56f2c0824eacc29846fca042a11bf4f5d09903a88424"
+    },
+    {
+      "task_id": "mmlu_pro_11492",
+      "subject": "engineering",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "643edac4291d59d777d82350c4e7d34c42c5c08148cb7aec7e627c4ee3c385c5"
+    },
+    {
+      "task_id": "mmlu_pro_11909",
+      "subject": "engineering",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "c8afab782bd130a56c5b4cac5a55640121742149afb2b2688eb26a6efc468ad4"
+    },
+    {
+      "task_id": "mmlu_pro_11909",
+      "subject": "engineering",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "7d8b18d7b79b316f88387e285b4aef81e5bb2615b9b05c37f9b72566b1fc84b6"
+    },
+    {
+      "task_id": "mmlu_pro_11909",
+      "subject": "engineering",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "9178df94923a8ff6b0aa958aae31fdb084b160d49e597a3f7bb2dfd4ff2f511f"
+    },
+    {
+      "task_id": "mmlu_pro_11909",
+      "subject": "engineering",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "f1a79442a7cd592905a021b18af6ebdd9c9165a4082d1053fce581da7c522a66"
+    },
+    {
+      "task_id": "mmlu_pro_11917",
+      "subject": "engineering",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "ac1fd57cf431cb690922cb206cb0c364bf5010651f5b0ca4457fd71f8ac732b2"
+    },
+    {
+      "task_id": "mmlu_pro_11917",
+      "subject": "engineering",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "224940113045511aa2b477ace505b6140c47a0532f9b16081f64b84a014014c5"
+    },
+    {
+      "task_id": "mmlu_pro_11917",
+      "subject": "engineering",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "751e1a3163aeb3988bfb694f4cebb556e08c1d21545946960329a1f5bf6d2195"
+    },
+    {
+      "task_id": "mmlu_pro_11328",
+      "subject": "engineering",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "f33ff9050c4842a59ddd7e745901c479525291e6788d0f85cc3b6838ceebc7ff"
+    },
+    {
+      "task_id": "mmlu_pro_11328",
+      "subject": "engineering",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "917972f26d403756fcb9b0c03dff8c59611f757e158c34910181040482c8410a"
+    },
+    {
+      "task_id": "mmlu_pro_11328",
+      "subject": "engineering",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "faa8ef84a13b24f5d8bb8b8d6ec33cb0de115d97ac636679de457682ceac5dbe"
+    },
+    {
+      "task_id": "mmlu_pro_11991",
+      "subject": "engineering",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "51c63e67d88d289ef83d3fef351b47b56be758d28940b84c0dc326d968e53668"
+    },
+    {
+      "task_id": "mmlu_pro_11991",
+      "subject": "engineering",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "f059d47a1d5b53083c07d13bdb33c8a024ad65d8d86d0ddef12d9cf00d8d46bb"
+    },
+    {
+      "task_id": "mmlu_pro_11991",
+      "subject": "engineering",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e518f65b9ad6d4491a3d97639af5a7db45761e4ea16c954adcf8c637f3c14537"
+    },
+    {
+      "task_id": "mmlu_pro_11327",
+      "subject": "engineering",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "7ec9575c531c289f9bb811920ab7c20c835a43ab79c372ee8fb6611770c57135"
+    },
+    {
+      "task_id": "mmlu_pro_11327",
+      "subject": "engineering",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "7830ba80ea72bb99bbc34de1f9d013309cb784504a15814d18d5df316774a903"
+    },
+    {
+      "task_id": "mmlu_pro_11746",
+      "subject": "engineering",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "82555ee5ab7c84493d1c07a2c2ef329aacca80bab2314c2d71045a4664858786"
+    },
+    {
+      "task_id": "mmlu_pro_11746",
+      "subject": "engineering",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "62aba8061ce8a9253095af5e726af2857f354915cc9c089978b034203ae2690c"
+    },
+    {
+      "task_id": "mmlu_pro_11746",
+      "subject": "engineering",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "2ac6e8c4da93a1f0bb19ac2bc6b9ffefca373d5abedaf3a97cd758ac84f5b263"
+    },
+    {
+      "task_id": "mmlu_pro_11630",
+      "subject": "engineering",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e3c6670fd4eb16f4e3b93cfa8057b2f2170df87a42b18772849df1a24737f1ac"
+    },
+    {
+      "task_id": "mmlu_pro_11630",
+      "subject": "engineering",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "06f2b80d8a26482f10114c0a76527396418840cbd0830e3b6359ed8d9528c658"
+    },
+    {
+      "task_id": "mmlu_pro_11630",
+      "subject": "engineering",
+      "candidate_answer": "I",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "43c2a9e6bbb97504a2e50c9a8d48dbd4c462696cd2e3eb46401cd65f6b5625f5"
+    },
+    {
+      "task_id": "mmlu_pro_11848",
+      "subject": "engineering",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "443d019528ff0e6649bbd25f7086f1329fda95c8fde931e4d1862998529e8dda"
+    },
+    {
+      "task_id": "mmlu_pro_11848",
+      "subject": "engineering",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "45f3ed33baaecf9af7d6eaa4b87b9abad2dd866f01877699e464e985c0c7377a"
+    },
+    {
+      "task_id": "mmlu_pro_11848",
+      "subject": "engineering",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "186598d3a82aa8393e51d2fc5dd99d075188be951cedca6558d972c8d5c8cbb2"
+    },
+    {
+      "task_id": "mmlu_pro_11848",
+      "subject": "engineering",
+      "candidate_answer": "J",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "59ab6eaa989b5ff7dc56e23f0253b69609121385c53e158155e55d6fa481562c"
+    },
+    {
+      "task_id": "mmlu_pro_11557",
+      "subject": "engineering",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "9dd39cc45a03bc348711cf4a7b0d907621bd3ef96efcb88d54afa243c5f15a85"
+    },
+    {
+      "task_id": "mmlu_pro_11353",
+      "subject": "engineering",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "02cfd53a34c352414f94f18a389aa34f878f4be06600410f1b1c877fabe9d12a"
+    },
+    {
+      "task_id": "mmlu_pro_11353",
+      "subject": "engineering",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "3629d58cf593de2be1026740d6bda4c9346a9cf1f91140b7e858d076daf9a603"
+    },
+    {
+      "task_id": "mmlu_pro_11353",
+      "subject": "engineering",
+      "candidate_answer": "H",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "afe2349f636830630a8b5e7a2708e6ad56dc524e181e4846b69f640e577dbfa6"
+    },
+    {
+      "task_id": "mmlu_pro_12062",
+      "subject": "engineering",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "653ed082504efca627261d2e6abd987acf90da0711a6a3c238dc3dd76b676ada"
+    },
+    {
+      "task_id": "mmlu_pro_12062",
+      "subject": "engineering",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "12dd2e8a51954a77bc314ad5de91679e27420f095a00d689989edd96c3d2efe8"
+    },
+    {
+      "task_id": "mmlu_pro_12062",
+      "subject": "engineering",
+      "candidate_answer": "C",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "1af9059c1f217e26431bcb9ec188ea14daf4b5b737b625f6d139c6add19a22a6"
+    },
+    {
+      "task_id": "mmlu_pro_11803",
+      "subject": "engineering",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "cee9698ef37a134aa3801e1b38ba45ae943f848700a7e2c60b2fc2ab568ced6d"
+    },
+    {
+      "task_id": "mmlu_pro_11803",
+      "subject": "engineering",
+      "candidate_answer": "G",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "61bea3bdab68413461a118319a9ed0e757b024e5e150c63c540973c2a0872256"
+    },
+    {
+      "task_id": "mmlu_pro_11803",
+      "subject": "engineering",
+      "candidate_answer": "H",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "3725ffdf3a0c5c7172ec7f39c3bcd12a5e87f848c58780a4263d5193c0eb185a"
+    },
+    {
+      "task_id": "mmlu_pro_11803",
+      "subject": "engineering",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "cccae5a908df4172b52e2d823923055b1fc7e3b924b9bf9d645a7c884c1a7a12"
+    },
+    {
+      "task_id": "mmlu_pro_11890",
+      "subject": "engineering",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "1e1fea1330bb17290b287529005ca5de8338a2d21a3a07206ed96f28fa7c5f68"
+    },
+    {
+      "task_id": "mmlu_pro_11890",
+      "subject": "engineering",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "f74472ddfe220ccd4030a58d0940bcb5fd29c78ec6c3780043775dc4db752374"
+    },
+    {
+      "task_id": "mmlu_pro_11958",
+      "subject": "engineering",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "125b7ed1425daf45f03c6a1639f97b27b95eafc2ef5b2919aef190c5faa70fbd"
+    },
+    {
+      "task_id": "mmlu_pro_11958",
+      "subject": "engineering",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "69f1a3ed5685123780f8112a87197faaf2db8d03d8a41f3308fbb1c87586db40"
+    },
+    {
+      "task_id": "mmlu_pro_11958",
+      "subject": "engineering",
+      "candidate_answer": "J",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "62fd44af299ac3faa19ce0ed74092ba54d2067fe9f59906f932a1dfa75de30d3"
+    },
+    {
+      "task_id": "mmlu_pro_11588",
+      "subject": "engineering",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "ba9291fef80b947fceeaefc2d941ac4733e096e10c2298f4f71868278200ebe6"
+    },
+    {
+      "task_id": "mmlu_pro_11588",
+      "subject": "engineering",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "0763fca3a78433614b8ab30ca40555148dec0caa25a8963566896f5cd1cb4adf"
+    },
+    {
+      "task_id": "mmlu_pro_11588",
+      "subject": "engineering",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "85590aff2332e9b191ce676ecb7c983fb581fb8138ca86a1443785710d5f91eb"
+    },
+    {
+      "task_id": "mmlu_pro_11758",
+      "subject": "engineering",
+      "candidate_answer": "G",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "34b740842a23fb1b516699f6ca83eaed68dda23e8c9c088c6d3708bc69006295"
+    },
+    {
+      "task_id": "mmlu_pro_11758",
+      "subject": "engineering",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "6e7bbd7d1fe64e2b34e2105dfc127d9c97e16f4a104cd720e474e06caf93474d"
+    },
+    {
+      "task_id": "mmlu_pro_11758",
+      "subject": "engineering",
+      "candidate_answer": "I",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "e177e02d114e462076789cd6bf5b61dea7b2dde5ed6b67acaf87a1693546522e"
+    },
+    {
+      "task_id": "mmlu_pro_11399",
+      "subject": "engineering",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "b002fec5afecee53c480a1812dcf9aeccf2ac6dc7b36973a7f4f6e51fab493a2"
+    },
+    {
+      "task_id": "mmlu_pro_11399",
+      "subject": "engineering",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e1003bed7d6ec0960a61d98961a99e42f5abbcb2280dfb1a088723b96ed0e674"
+    },
+    {
+      "task_id": "mmlu_pro_11399",
+      "subject": "engineering",
+      "candidate_answer": "G",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "10793c529ddd722dc69614148979f82405fb159c9ec1d181fc208e0bffa87ddf"
+    },
+    {
+      "task_id": "mmlu_pro_11399",
+      "subject": "engineering",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "c3a10d5f0ee6000d5272ebc7c483cc0a37abd04256483f8dadc568cc615a0eba"
+    },
+    {
+      "task_id": "mmlu_pro_11380",
+      "subject": "engineering",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "c4bf41624b85f77690238f98ded715f08469203eeaf5c5c56b664487ce82de38"
+    },
+    {
+      "task_id": "mmlu_pro_11380",
+      "subject": "engineering",
+      "candidate_answer": "G",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "ad0764bf49b90b6b4b9aec7fe26faad869e834abf1715b105e010a79307cf7ef"
+    },
+    {
+      "task_id": "mmlu_pro_11380",
+      "subject": "engineering",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "ab536e988841e46bd78de0bc4c3184fc580709afa7c797ea9b60e90698b3093c"
+    },
+    {
+      "task_id": "mmlu_pro_11969",
+      "subject": "engineering",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "9c4ae13703ce5533c6461995bcc920506572f49eef855131e6104f83e8a9651b"
+    },
+    {
+      "task_id": "mmlu_pro_11969",
+      "subject": "engineering",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "7fb96e19bfe4df1ccdf6d843c39b69d2d4ef93f5090b8d2bddefaa8b74f96540"
+    },
+    {
+      "task_id": "mmlu_pro_6314",
+      "subject": "health",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "c3877d8b8a26d67e96cb5ddbe30ec96f62089b75335dd87271cea108fd2dcfab"
+    },
+    {
+      "task_id": "mmlu_pro_6314",
+      "subject": "health",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "e2c7f4cf20eaa3b0dee1f24f9c2381035ef68ef59bff505d6d4b4cb35ac201e9"
+    },
+    {
+      "task_id": "mmlu_pro_6309",
+      "subject": "health",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "65b2832f829a100e3f872941b2fbeeb291a422ea2c3c82529d8d87fcb89fc5da"
+    },
+    {
+      "task_id": "mmlu_pro_6309",
+      "subject": "health",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "3263634e06392c7eee63ebafa7b3f72ca426e7bf70181155d3e0d374d1ccd8ad"
+    },
+    {
+      "task_id": "mmlu_pro_6309",
+      "subject": "health",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "4b04ce1e6e3c4e6c810c425c6f86c1be985cf63716755a6eb2c067c920b9fdcb"
+    },
+    {
+      "task_id": "mmlu_pro_6531",
+      "subject": "health",
+      "candidate_answer": "A",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "d9a62e889a4c6cdf95f4a7ae1a4850c9ef81b24751cb0c1d3643a25207018869"
+    },
+    {
+      "task_id": "mmlu_pro_6531",
+      "subject": "health",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "daf81b4e7d84c9c85c45d61c26653d097039675fcd8ded3fc4b07f6cb733e4a1"
+    },
+    {
+      "task_id": "mmlu_pro_6531",
+      "subject": "health",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "ea2a4e6b876ad06d2c552dc737d3638394243a41935fb24d7eeb651c00f18fbd"
+    },
+    {
+      "task_id": "mmlu_pro_6119",
+      "subject": "health",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "a2b03cf3763bc09002e9f762992b1b25a8cd0cee711c3fbd5c37a4b593cbe92e"
+    },
+    {
+      "task_id": "mmlu_pro_6433",
+      "subject": "health",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "b78f7fa20c3e5942d1e2b4866b000adb9286d46dd5059425236ca68b0047d0fa"
+    },
+    {
+      "task_id": "mmlu_pro_6433",
+      "subject": "health",
+      "candidate_answer": "H",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "a351e09ebe17686d402eaa32d7c0b4da8f69854ad3e1b3998f90b790c912e157"
+    },
+    {
+      "task_id": "mmlu_pro_6433",
+      "subject": "health",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "24a9547a4b9d31acc666477129669852dee0ecaf33de06026a0805abcce90673"
+    },
+    {
+      "task_id": "mmlu_pro_6598",
+      "subject": "health",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "1a22581583717f544731856c76a8a9547574f1d0bb040353a98f3a264c7b67ca"
+    },
+    {
+      "task_id": "mmlu_pro_6598",
+      "subject": "health",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "1a2a23831dce241c3f1e00c16c78270b2b026a849514372737b6dce777c26ec9"
+    },
+    {
+      "task_id": "mmlu_pro_6112",
+      "subject": "health",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "af487be79b69c9f0b283a2eee5861cbdd352440751aa4c546d89024853398c8e"
+    },
+    {
+      "task_id": "mmlu_pro_6112",
+      "subject": "health",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "4d565b912899379b0eb56fcc319c1608e6f8463797f78cfe54f44edf2886f075"
+    },
+    {
+      "task_id": "mmlu_pro_6150",
+      "subject": "health",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "203f6d34bc2de51c4741d37c66a7efbad553c373009696564bc0e467254aac66"
+    },
+    {
+      "task_id": "mmlu_pro_6150",
+      "subject": "health",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "45ebbd6e3980b81e5967c24dba45b32487ab16404be7d5b063f91561b4ffce9f"
+    },
+    {
+      "task_id": "mmlu_pro_6150",
+      "subject": "health",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "81ec35ba0c75da7163596299c29d3fcee1ba6a1a8def09049da373b484efcf64"
+    },
+    {
+      "task_id": "mmlu_pro_6530",
+      "subject": "health",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "6ddb13cd43a8eae9f20a28ce67f96c635981c3f288e916e328855643230a8584"
+    },
+    {
+      "task_id": "mmlu_pro_6530",
+      "subject": "health",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "79f15c54836c297116b427b14c23c8e1ab06bbeebbbb72b8d2c21ff4e9ea8708"
+    },
+    {
+      "task_id": "mmlu_pro_6530",
+      "subject": "health",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "f9c4c7f867bd1a44a9932b639573d1dc84ac4be7fcd7761ab813e6ddaaa078d4"
+    },
+    {
+      "task_id": "mmlu_pro_6052",
+      "subject": "health",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "ff9be36e80681de1038bbf5393b5b4719a2edd7eb511d873c2da9c25a1631797"
+    },
+    {
+      "task_id": "mmlu_pro_6052",
+      "subject": "health",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "36ed774991f4a36879e99d700bc300aee1f4b4f6c3426a9c2450ecec956ba6db"
+    },
+    {
+      "task_id": "mmlu_pro_6052",
+      "subject": "health",
+      "candidate_answer": "I",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "cb3ae258be7ece155c8f7f576168daf51612ed772168200876de12616e9e0f31"
+    },
+    {
+      "task_id": "mmlu_pro_6577",
+      "subject": "health",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "233ec7353f6d653af04f3566b5121fdc560000e3bad94ecffcfe809e972213be"
+    },
+    {
+      "task_id": "mmlu_pro_6617",
+      "subject": "health",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "358b8602da8088c50dd88a37f6f976cbea99ec105ca6415490b6a5f94d554047"
+    },
+    {
+      "task_id": "mmlu_pro_6617",
+      "subject": "health",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "2db591288d7a4f874dbc0be4b9c2aed90b32cc43d11b1a84546c90d01aed1075"
+    },
+    {
+      "task_id": "mmlu_pro_6617",
+      "subject": "health",
+      "candidate_answer": "H",
+      "agents": [
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "698012d79066af0c44b26579e24ffe983707eb639a6c4692738db2ab7a80d5c8"
+    },
+    {
+      "task_id": "mmlu_pro_6063",
+      "subject": "health",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "dda81abf54bc1524fcc01d3e8965c2f2d23b79df4c6b5a5732c8506c380dac9a"
+    },
+    {
+      "task_id": "mmlu_pro_6063",
+      "subject": "health",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "707b7f5bc74dcaa551e38b7675aecd6e94d851979205750408ddc1d62eda57b3"
+    },
+    {
+      "task_id": "mmlu_pro_6063",
+      "subject": "health",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "b091ab307142f140c47cd06ea9198e29f9987b66a8bc2fbae0e78212a5835e23"
+    },
+    {
+      "task_id": "mmlu_pro_6426",
+      "subject": "health",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "2e30c905154e7bfe67fb57024c14e8623ff318a73d992e7f93a2c257722063e4"
+    },
+    {
+      "task_id": "mmlu_pro_6426",
+      "subject": "health",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "7c1ca3ba2f077a6585c5c042c209293b062e2bc8cd2f43623841f794801d5989"
+    },
+    {
+      "task_id": "mmlu_pro_6818",
+      "subject": "health",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "9d215a7d02f2874b40ba7085f7d011add473209cadac28502ed59d7506361eab"
+    },
+    {
+      "task_id": "mmlu_pro_6818",
+      "subject": "health",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "376be4f11a52734adf722671aba3e0cf82cdb7ac69f24b799ef681af103029b1"
+    },
+    {
+      "task_id": "mmlu_pro_6818",
+      "subject": "health",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "fabe75a5d1e6125bf90e6ad70607cf6c7f6988187f549946ffb4a63dfb9d2df5"
+    },
+    {
+      "task_id": "mmlu_pro_6476",
+      "subject": "health",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e40053e8cd1e9d5466650ad0f0ef38fa2ec9c015604b64bec88e7d6f85c9cde0"
+    },
+    {
+      "task_id": "mmlu_pro_6476",
+      "subject": "health",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "45f33d03a31a44316a1f9c9d7f62b8d71f9107319dc034fed81ab5c209d0d891"
+    },
+    {
+      "task_id": "mmlu_pro_6476",
+      "subject": "health",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "2ad844281e1a403e7f74b750844c870a3e5fc41c1d9de5b797e13019ba129af7"
+    },
+    {
+      "task_id": "mmlu_pro_6263",
+      "subject": "health",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "15b10e5990998ce40618d3fcb07d4916a743bfdf4a22d428035a82c491d57031"
+    },
+    {
+      "task_id": "mmlu_pro_6263",
+      "subject": "health",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "6727db0ee6b99be902889c4bc99cb5ad6232c8fa41a1a4b52ee9b547b711507f"
+    },
+    {
+      "task_id": "mmlu_pro_6263",
+      "subject": "health",
+      "candidate_answer": "G",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "b616738cd794169f05cd4d47a751732da84697b7c3e302d0d77c8d02e21f9e17"
+    },
+    {
+      "task_id": "mmlu_pro_6418",
+      "subject": "health",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "368b56ea63db988c9b38ca50f32b5217847632efba922244c90d20518d6d347b"
+    },
+    {
+      "task_id": "mmlu_pro_6418",
+      "subject": "health",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "2046df6c4675adc5650a0bd71a535ef208cc926a7aab050cbf3d0a4e26dc9d9f"
+    },
+    {
+      "task_id": "mmlu_pro_6450",
+      "subject": "health",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "4f337e6f4175e848cd2bd2da61db8d8bb81c8fbd8d0a6a6685e66a7853aa8b57"
+    },
+    {
+      "task_id": "mmlu_pro_6144",
+      "subject": "health",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "df7d34ada2690c019e0d539b14cf9f73b02a1803a26288ad003edbd55b95fd1d"
+    },
+    {
+      "task_id": "mmlu_pro_6144",
+      "subject": "health",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "8269b0099265f91ddb7223507d9f4281ca983702650c306f54f7dd27069f1cf4"
+    },
+    {
+      "task_id": "mmlu_pro_6144",
+      "subject": "health",
+      "candidate_answer": "J",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "be30155472681cf8050757ab77bfb8f6f6ecab4272d7c450b59e314800eadba2"
+    },
+    {
+      "task_id": "mmlu_pro_4890",
+      "subject": "history",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "8b4a724550f0e05fa6f9991d29428b49965d36d68b8e81e95f41d5ac4921212b"
+    },
+    {
+      "task_id": "mmlu_pro_5043",
+      "subject": "history",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "948012655c14a32d4836d38979e335ef323954c956bcf6fa4b09505efbd9b58e"
+    },
+    {
+      "task_id": "mmlu_pro_5043",
+      "subject": "history",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "fda9cf47598c9eb82eaaafcff19699aa07028949d9983324946612bc12ba7540"
+    },
+    {
+      "task_id": "mmlu_pro_5043",
+      "subject": "history",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "2de37a648cd47e92eb423bdca67c71e0676e35d3891e6e8717002c7d968b8926"
+    },
+    {
+      "task_id": "mmlu_pro_4774",
+      "subject": "history",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "73e83241ab8ed3aa838cb4e6ee29e51b153b407a81e36c303f7df01f1a2b9df3"
+    },
+    {
+      "task_id": "mmlu_pro_4774",
+      "subject": "history",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "d3097c53fd160e36d5a59413ac0d2b0fc9de0a8ee9dbb5d756fc53df94795c80"
+    },
+    {
+      "task_id": "mmlu_pro_4963",
+      "subject": "history",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "c370bfb27f11305b508f6d2aa9bd5f0238b265565925d12afbc3ab8fbc3ba6f2"
+    },
+    {
+      "task_id": "mmlu_pro_4963",
+      "subject": "history",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "60852686a8b08db528c724569e51c4a43c5cd00334a3593f17ccc005c81e629b"
+    },
+    {
+      "task_id": "mmlu_pro_4963",
+      "subject": "history",
+      "candidate_answer": "G",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "1513f5dbe73833ec32312e33bc031967c6c359c8e2fdfcc584a49b278c730a1f"
+    },
+    {
+      "task_id": "mmlu_pro_4726",
+      "subject": "history",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "7fa82c2da0aeab0fd360890e27417222c7f4f4918c7a1f3d6bb1018dc19a3978"
+    },
+    {
+      "task_id": "mmlu_pro_4726",
+      "subject": "history",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "5515dc9e4133dc9f2ff3956591bbc3f345eb9e137edd939560477e99fb3c155b"
+    },
+    {
+      "task_id": "mmlu_pro_5024",
+      "subject": "history",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "5c2ecce34e6201fee174d24b0461d2128cc17d7eb777cf8bae71f5221878a040"
+    },
+    {
+      "task_id": "mmlu_pro_5022",
+      "subject": "history",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "191d3e5bbdd0908984032a1ada60dfab18ed1de9f66a78172e4cc12e8708a8cb"
+    },
+    {
+      "task_id": "mmlu_pro_5022",
+      "subject": "history",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "f1abdf4a45a370e78d0f995489b59dba31c9d033c3675170a3e5aeef61bfc6d4"
+    },
+    {
+      "task_id": "mmlu_pro_5009",
+      "subject": "history",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "a12a4be39942c95bd29d74c7044e4edd6e6933856ea4d3bca4ce60ea5b02d9a5"
+    },
+    {
+      "task_id": "mmlu_pro_5009",
+      "subject": "history",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "4b6c84202fe03e49db26719a1e068268759b55c187bc80fe5f2e840e50d28475"
+    },
+    {
+      "task_id": "mmlu_pro_4745",
+      "subject": "history",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "8e089522c33048f5238c3891542c0609220838ef160f42aca5694d1e5297c115"
+    },
+    {
+      "task_id": "mmlu_pro_4745",
+      "subject": "history",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "dfefb9f2eea09946e5a8aaae6d7cd1d1426863c44f0692419ce96aa3fda44138"
+    },
+    {
+      "task_id": "mmlu_pro_4938",
+      "subject": "history",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "8397df38c257edae4008b04655007c5183ab494b3b218cd6a5119e13411b1691"
+    },
+    {
+      "task_id": "mmlu_pro_4938",
+      "subject": "history",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "5a38437458330294920b1568340f67ed2c329886fc8d662f34b0d825d9d1f6fa"
+    },
+    {
+      "task_id": "mmlu_pro_4670",
+      "subject": "history",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "c0e06a807a847d8615329a15b68b12b654b627a6d92a61acd484aad75bfc9132"
+    },
+    {
+      "task_id": "mmlu_pro_4670",
+      "subject": "history",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "22bba016b7ac0652e8563f50d0578a6758403d06e03cd9a22e462007c643182f"
+    },
+    {
+      "task_id": "mmlu_pro_4891",
+      "subject": "history",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "d3f80748972a443f7c683cbfdf712fa2041ada0d1013f9ccb5a4cebd686892a8"
+    },
+    {
+      "task_id": "mmlu_pro_4891",
+      "subject": "history",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "1664defbf2dfd905bb3ff5dfa62b83a3d9b0f385ca6f9893f21f0f4df14d3cd7"
+    },
+    {
+      "task_id": "mmlu_pro_4891",
+      "subject": "history",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "29c60c209ed0cba81d44315e6573398c67748bf3da648ef6284b9748daf2de91"
+    },
+    {
+      "task_id": "mmlu_pro_4891",
+      "subject": "history",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "0e15051a66b81fe5f827cb0b95d3f2ba90c455aa31f08816448c1de2635aeeb5"
+    },
+    {
+      "task_id": "mmlu_pro_4705",
+      "subject": "history",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "4bf00a5d483abc0ed73c7b429902a191bc53a1641fd3f63976e56d4a7cd047ee"
+    },
+    {
+      "task_id": "mmlu_pro_4705",
+      "subject": "history",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "ba8eb4ffa7e35b59726becbce4151a6d56d173c57f880022676a068042b692eb"
+    },
+    {
+      "task_id": "mmlu_pro_4943",
+      "subject": "history",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "3ff04f711b68dcacd47a8fc74d70b8aca4fa0b956b458c318ba89e2d59dd133a"
+    },
+    {
+      "task_id": "mmlu_pro_5058",
+      "subject": "history",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "fe1e294b33dee9e2fee7409073873d646a4fe6f5316aacbd885e74ae850acab4"
+    },
+    {
+      "task_id": "mmlu_pro_4824",
+      "subject": "history",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "8454985935143f6ebc0650969269dd6702eec8ebc27a9c167670c93461ddab92"
+    },
+    {
+      "task_id": "mmlu_pro_4824",
+      "subject": "history",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "0c09b059d827f1a6c8f41002565e4c36ba199ab8baa1b4ccad9d3fc269f5128a"
+    },
+    {
+      "task_id": "mmlu_pro_4824",
+      "subject": "history",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "284f12134824fbc2aefbf05e6fa99174b4740540d3bbb49b64617f068279ca43"
+    },
+    {
+      "task_id": "mmlu_pro_4986",
+      "subject": "history",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "d8e30a87a1b700ae52ff4182ad594b45a6aeda644d65d101681570b9e3c9a724"
+    },
+    {
+      "task_id": "mmlu_pro_4986",
+      "subject": "history",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "726283055f3503e293570a672387f0ecedd5a4941ca818622eae29ab677bd99e"
+    },
+    {
+      "task_id": "mmlu_pro_4756",
+      "subject": "history",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "5cf142159cc3c811772f6a77e999130c0ae473d85e12b0d5eaaf22c061b8700e"
+    },
+    {
+      "task_id": "mmlu_pro_4763",
+      "subject": "history",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "deb0d4f1cde05755fb7f41534f4506de99836fad844e2941cc3f00c7ed594603"
+    },
+    {
+      "task_id": "mmlu_pro_4763",
+      "subject": "history",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "dd80f3e7cbbdc0607924657727a1094cce43f0ae7d322754d88f95d12cdb9be2"
+    },
+    {
+      "task_id": "mmlu_pro_4763",
+      "subject": "history",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "00861dc1361aa4893ca80795de5622b248c7756fff2927dc25149d59e4e4c522"
+    },
+    {
+      "task_id": "mmlu_pro_5037",
+      "subject": "history",
+      "candidate_answer": "A",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "69a6969b4900b81f74393484b24ea2e508fb14a12a9fc47f7b11b64f2b0f9373"
+    },
+    {
+      "task_id": "mmlu_pro_5037",
+      "subject": "history",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "335b8767b67ec551b900f4c3a3bee33ddf370e940865772baeb9c54c91552149"
+    },
+    {
+      "task_id": "mmlu_pro_5037",
+      "subject": "history",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "29c38c2019fc11bb2c92903c60d0bbfe93c944aecbc4cd27d5ce67af76696fbd"
+    },
+    {
+      "task_id": "mmlu_pro_1914",
+      "subject": "law",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "a19aa4a9cc3eb0f5f2e4e8421a004aba88948a661c0172ef25391b3165f9615c"
+    },
+    {
+      "task_id": "mmlu_pro_1914",
+      "subject": "law",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "fcdc1b4d8812ddf584e213a9609c102b1da458e8e285e444d1d5ec2537629ed3"
+    },
+    {
+      "task_id": "mmlu_pro_1914",
+      "subject": "law",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "2e21e5fda57c466a3c03d80a127ee11435186cf213ac0f7f9973a0d76c0d7a85"
+    },
+    {
+      "task_id": "mmlu_pro_1914",
+      "subject": "law",
+      "candidate_answer": "J",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "cfdafc0ea239250914da8d4d7475fa6091418262eeba99a7b0511e5d07ab5351"
+    },
+    {
+      "task_id": "mmlu_pro_1330",
+      "subject": "law",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "4f921d0c5a6e137b78ad68c32dc96a16113aef6c0096af1b99df5ef9eb72ddbd"
+    },
+    {
+      "task_id": "mmlu_pro_1330",
+      "subject": "law",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "6818531e7ca8b9e481eb4642792389a25d04768518ef9ccc52af4f6853745c87"
+    },
+    {
+      "task_id": "mmlu_pro_1330",
+      "subject": "law",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "1696dfd1c9151a18905ac6cdc9e3cd6f17e64a7f855ccc87204e5339ccb66330"
+    },
+    {
+      "task_id": "mmlu_pro_1382",
+      "subject": "law",
+      "candidate_answer": "A",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "dd8119b1fd9c48252b3049bebc7a9a137b266667290b0e850dbff6e39c18af1e"
+    },
+    {
+      "task_id": "mmlu_pro_1382",
+      "subject": "law",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e1cfd01bb3133de200755e9b7806e786bbaf726c31c91397b051fd0874fc0e7c"
+    },
+    {
+      "task_id": "mmlu_pro_1814",
+      "subject": "law",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "f4ccd1fd5ed1f27dd8c54f56b7941ff75439e94a06a4859246eb9724095ec46d"
+    },
+    {
+      "task_id": "mmlu_pro_1814",
+      "subject": "law",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "8c2c37aeb9439acf889fd2a236f3170f033eb7a9271ff37d203499b0c6add8d0"
+    },
+    {
+      "task_id": "mmlu_pro_1814",
+      "subject": "law",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "4f1f40806f3d1e523c31ee8e9f0ee2b7eed33d3d0fae86839afa2a16815f92a0"
+    },
+    {
+      "task_id": "mmlu_pro_925",
+      "subject": "law",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "454b61442bbe094adb45e3b2316dd4c8b4b36ce2b7e7a67c628da51dc99ae3d1"
+    },
+    {
+      "task_id": "mmlu_pro_925",
+      "subject": "law",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "f0013ae3843e42880176cfc362786cb1c8023623a1a4736d2ee08e9b051707da"
+    },
+    {
+      "task_id": "mmlu_pro_1806",
+      "subject": "law",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "d8f5f2af9cfc282dfe89369e429c8054fef1664dc3b77c116f00ddfd093a2576"
+    },
+    {
+      "task_id": "mmlu_pro_1806",
+      "subject": "law",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "898bde018edddf6601c2fd6260287849b000ac57bbc2fb0843ef10144d098d1f"
+    },
+    {
+      "task_id": "mmlu_pro_1806",
+      "subject": "law",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "c0a61f83fc582e95fea5e28d566aced0e5e8f8f59054938f32e2ac8446fd917f"
+    },
+    {
+      "task_id": "mmlu_pro_1089",
+      "subject": "law",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "45c3d35582673dc20ecf079665f50fa4c96c1a37becf5e5ebfef68127cbee5c7"
+    },
+    {
+      "task_id": "mmlu_pro_1089",
+      "subject": "law",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "ee97948943f0dd10a9504180949661a6f0a439cd54ae7f824c50a45aced045d4"
+    },
+    {
+      "task_id": "mmlu_pro_1106",
+      "subject": "law",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "80f21307f6177a448d0979b436140b02b4dc4192e370a1aa92de1cab29776c54"
+    },
+    {
+      "task_id": "mmlu_pro_1106",
+      "subject": "law",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "8eec305733d2b8ec76d0e66a28aa72ce0299dcb61a9a589f9b8d6d180a8aa113"
+    },
+    {
+      "task_id": "mmlu_pro_1667",
+      "subject": "law",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "5720a6d804528c8c34820beaaea45690cffb8a2f7c8491f333835a392b9d6a1c"
+    },
+    {
+      "task_id": "mmlu_pro_1667",
+      "subject": "law",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "f74754ff24a0c7ccf2b7cb755cd8b5fd6ef6e6b58f433fd1645a299337dba720"
+    },
+    {
+      "task_id": "mmlu_pro_1667",
+      "subject": "law",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "020d2742a34eeb6d7724c73ccf1fdb759b2218b7900472a46888829e1f72e6b0"
+    },
+    {
+      "task_id": "mmlu_pro_1546",
+      "subject": "law",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "ac3eb8281b99a874ca11992b2f67e2902f5db0af6067f0e145843b47d71498c3"
+    },
+    {
+      "task_id": "mmlu_pro_1546",
+      "subject": "law",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "33c02829ed5dc7732f0884919c347bfb77bc554cb5a6f469c9c4f75e0144eef9"
+    },
+    {
+      "task_id": "mmlu_pro_1546",
+      "subject": "law",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "8e270b33e118d2784b8f292d38d2b4595b8571a68c929bebc243315570623f7a"
+    },
+    {
+      "task_id": "mmlu_pro_1676",
+      "subject": "law",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "529693363b17936a0aba199da20b63dbd4ae12dcb2d2f231b0a1d9ba04719101"
+    },
+    {
+      "task_id": "mmlu_pro_1676",
+      "subject": "law",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "85858d8606585bcf6f0c06a4d67bf0d2a96e1f82e0a0ab173b4623249e4f2fa4"
+    },
+    {
+      "task_id": "mmlu_pro_1676",
+      "subject": "law",
+      "candidate_answer": "J",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "2cc8be9d9d2c68f2016ffe06aa0ecdc103e0ac755fa61bc89421170049c1c3f2"
+    },
+    {
+      "task_id": "mmlu_pro_1861",
+      "subject": "law",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "aa8874f1d1d52ec76f128e3a293d6cc4b6575ca62112ed91ac8fd015c0e8910e"
+    },
+    {
+      "task_id": "mmlu_pro_1861",
+      "subject": "law",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "1b74f659432bf51324b2dbade33e3c1f2384f9c60e09564593aeef66d614ed20"
+    },
+    {
+      "task_id": "mmlu_pro_1861",
+      "subject": "law",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "0d2bf83bc8fbc999a98a456aa94f381e909b003757e8d5230ae4f49eee5a971f"
+    },
+    {
+      "task_id": "mmlu_pro_898",
+      "subject": "law",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "40634e4f6cecf784d7f413fad654aeedf072fc5de4f0818dd0788a7cd9883945"
+    },
+    {
+      "task_id": "mmlu_pro_898",
+      "subject": "law",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "7a9fb3ee5541e2dfb1ea896c0dfd4843fd8adbd0a09beee2bacc64d29650c594"
+    },
+    {
+      "task_id": "mmlu_pro_898",
+      "subject": "law",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "8bd9b34018a009726e46b9d666f1fedda25aa36f9ca92a54e4bd322dc08275ea"
+    },
+    {
+      "task_id": "mmlu_pro_898",
+      "subject": "law",
+      "candidate_answer": "H",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "c1892eff6b8997c068efd83053f1a9e64c6b71892a613c5ae848b52b288ea29c"
+    },
+    {
+      "task_id": "mmlu_pro_1073",
+      "subject": "law",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "33cd144e69894f8dbd71cea836e3d2bbd27983923389d5bdfd0cab6b4bd4c487"
+    },
+    {
+      "task_id": "mmlu_pro_1073",
+      "subject": "law",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "9f12667c34c7de14d09c4ba7e340c0b63b9e84bc036d33bd9d4397287e39e1d1"
+    },
+    {
+      "task_id": "mmlu_pro_1073",
+      "subject": "law",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "563ba6e432bcc1da33250a7e2c04091c1223f8c2912dfcce3715c9b16ef5d8fb"
+    },
+    {
+      "task_id": "mmlu_pro_1083",
+      "subject": "law",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "ca502ca63f4b8730298b5f1d06cf390a85ff86e60f83fd7d4ebc784e3affb486"
+    },
+    {
+      "task_id": "mmlu_pro_1083",
+      "subject": "law",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "cc28d004bfe4378c133d5fcb8ac6f129ce11186d53c4d7ecf118450be052e668"
+    },
+    {
+      "task_id": "mmlu_pro_1680",
+      "subject": "law",
+      "candidate_answer": "G",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "7170b965a857244ca66cd70cd956e37ec9c6e4ed00162501d6e987de1fd77495"
+    },
+    {
+      "task_id": "mmlu_pro_1680",
+      "subject": "law",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "dcffe72207174f62942b022f3c1a47a70c4cd56a2b4e5a7a711fe027b92787fa"
+    },
+    {
+      "task_id": "mmlu_pro_956",
+      "subject": "law",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "035058fe584de02a3d354592c1d314b21aab2afa6a8f98e6367096e7a80401d4"
+    },
+    {
+      "task_id": "mmlu_pro_956",
+      "subject": "law",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "91352932260347766e62d275f3f9d70b94aadf3a596ab1de1ca93fe21fbaa68b"
+    },
+    {
+      "task_id": "mmlu_pro_956",
+      "subject": "law",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "cb5f89752122410a832d9112d65fa73dc23e333ab5bf051ceaf5cb796aec3b03"
+    },
+    {
+      "task_id": "mmlu_pro_1800",
+      "subject": "law",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "e66905ab4aec44e41ce79a0d3fc9e51ff98cbe2ef9a2c3c707438ac36fa3e812"
+    },
+    {
+      "task_id": "mmlu_pro_1800",
+      "subject": "law",
+      "candidate_answer": "G",
+      "agents": [
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "9429fb1a541286f7b827eb578ae29a3a249c421fa3d8eb6e4087311a8d1b2db7"
+    },
+    {
+      "task_id": "mmlu_pro_1439",
+      "subject": "law",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "cb7179f1c8e156022559f00ab42b58f5e6234db8848ff266f39fd717297cf5ea"
+    },
+    {
+      "task_id": "mmlu_pro_1439",
+      "subject": "law",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "ed69e2e7029f44d022239be662666f418e6e5ea7b2b3f3225eb614ae0f2933b3"
+    },
+    {
+      "task_id": "mmlu_pro_1439",
+      "subject": "law",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "0c862573149fa65db2fa1d9f635c707cca5c967fefb283fd567d02666a37d981"
+    },
+    {
+      "task_id": "mmlu_pro_1121",
+      "subject": "law",
+      "candidate_answer": "G",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "61f2f31609395db29f9fdeda5bceec7211ba406807af7f558ffd3572c584bf2a"
+    },
+    {
+      "task_id": "mmlu_pro_1121",
+      "subject": "law",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "1b70fc5fe2cb7e9443e7ff995d600506620c1671addf7919dfd8927bc5bcff6a"
+    },
+    {
+      "task_id": "mmlu_pro_8341",
+      "subject": "math",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "c6d96a6212312746c1804a2e297411678dd6d1e66b34ae31d7fd5c1d3fc479ae"
+    },
+    {
+      "task_id": "mmlu_pro_8341",
+      "subject": "math",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "24740721c5dda133316c3eaf500dd81481ccc90f89f0a1ed0a42b4e9cbe1d0fa"
+    },
+    {
+      "task_id": "mmlu_pro_8341",
+      "subject": "math",
+      "candidate_answer": "H",
+      "agents": [
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "52e5d1c1c69dfc9d84d2f09697a50db6a195e595d35c2b286d963a96da602ff7"
+    },
+    {
+      "task_id": "mmlu_pro_7996",
+      "subject": "math",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "580e1592e9c0fd6b21281b6bd307c984e7e5f6e8ed90a1203b694605e4f5442d"
+    },
+    {
+      "task_id": "mmlu_pro_7996",
+      "subject": "math",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "f7b0c0423d275218ebae6589916414158fd9a2d0dda2b2764e61cd42c87e9fc2"
+    },
+    {
+      "task_id": "mmlu_pro_7996",
+      "subject": "math",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "82d270d30cc947e4f4d4784dccd56125da461ad48df940c45b3125fa435addd1"
+    },
+    {
+      "task_id": "mmlu_pro_7996",
+      "subject": "math",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "c6f5ce941e1b72c0fab0e65fc15c17df8797c07de3530c143c4b8fd3cc4d2a58"
+    },
+    {
+      "task_id": "mmlu_pro_8747",
+      "subject": "math",
+      "candidate_answer": "B",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "884403aa992ca014eb64af6b3c995c005440cd03b098dfdf21c3e9786611d754"
+    },
+    {
+      "task_id": "mmlu_pro_8747",
+      "subject": "math",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "4b2cee498e0b54de5d7778e73ab087617c911f11a21e59e43995ada7c0d8977b"
+    },
+    {
+      "task_id": "mmlu_pro_8747",
+      "subject": "math",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e70d030503f8ffcaa97cfd11df009e60891de293707114b95ef54175467a3d27"
+    },
+    {
+      "task_id": "mmlu_pro_8479",
+      "subject": "math",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "f4184751a05f72197329ac1531f397d23b13a95228ca552810d17a5da790b68e"
+    },
+    {
+      "task_id": "mmlu_pro_8479",
+      "subject": "math",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "8fb56a8b5c2fd60c83e79b1f8954481c076fb884e488038856aff9937bf253f6"
+    },
+    {
+      "task_id": "mmlu_pro_8479",
+      "subject": "math",
+      "candidate_answer": "I",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "a6a7d3f129cd8dc360710d90a3ffa425c07340a4f37d2ddf13b28bb347653b4e"
+    },
+    {
+      "task_id": "mmlu_pro_8479",
+      "subject": "math",
+      "candidate_answer": "J",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "d6a60855a94a8efd9ba6e11265248bc11ee5780b943572e8f2939c0883d3eb7c"
+    },
+    {
+      "task_id": "mmlu_pro_7712",
+      "subject": "math",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "dc0ab1c26d44a7ef9dff9c88e3705664c6d296382ef7cdc4e90b471ccc70b09d"
+    },
+    {
+      "task_id": "mmlu_pro_8122",
+      "subject": "math",
+      "candidate_answer": "G",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "5e0deac8f1d044e9654975fe9ce7b15cdb6dbef147eabce940dc0e090f47599a"
+    },
+    {
+      "task_id": "mmlu_pro_8122",
+      "subject": "math",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "af95fbbc4ffae4c171fd624c4738be3e365c80155b622bfe2200142ca778dbf9"
+    },
+    {
+      "task_id": "mmlu_pro_8332",
+      "subject": "math",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "81343d8680127b70c2853dbc970d1a44130bb0ab0349a6b0aa8acb7a720f58cb"
+    },
+    {
+      "task_id": "mmlu_pro_8332",
+      "subject": "math",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "365b54dc9c354a4c74731c8ae5b2a955f0ef60486bbe7f2935d2f8a9451e4ca7"
+    },
+    {
+      "task_id": "mmlu_pro_8332",
+      "subject": "math",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "772487bdd0f523c1d98b40510b44f09dbe62c38c324d1044631c078b103a6ddf"
+    },
+    {
+      "task_id": "mmlu_pro_8626",
+      "subject": "math",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "b897423af82bbf3f37d345016d2dc6dca44f2925f5a95d5e03bafa7a2d5a7026"
+    },
+    {
+      "task_id": "mmlu_pro_8626",
+      "subject": "math",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "791d2704647f58063f4ce367dcbf4eee2cab3cb9c103a426df5759762fcc18ca"
+    },
+    {
+      "task_id": "mmlu_pro_8626",
+      "subject": "math",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "5dd9d84f377ed5fddf68f6afbdbf3ddb29f9d6c3a13600bd4510fc29aa93c55f"
+    },
+    {
+      "task_id": "mmlu_pro_8451",
+      "subject": "math",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "8fe038370a4263bc19a5dfddcbcc19bd1480a22cfe475342efe282eb109f6090"
+    },
+    {
+      "task_id": "mmlu_pro_8451",
+      "subject": "math",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "b71bcd30a3971737d30cbff91065abce723dc30f2c741e38b20aa876557c643b"
+    },
+    {
+      "task_id": "mmlu_pro_8069",
+      "subject": "math",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "27330b7890f04b9aeaa93e8a14f3297d565c40c22b35164b7dda232c8d2f5dc9"
+    },
+    {
+      "task_id": "mmlu_pro_8069",
+      "subject": "math",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "0d9a8a1f393d144e28f6e4c7226437f9f782f68dac9971e785e5ab310154986a"
+    },
+    {
+      "task_id": "mmlu_pro_8069",
+      "subject": "math",
+      "candidate_answer": "G",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "32cb2cac2affc55756b73746be827a786178dcc9408e2e43fe303fd6ad672446"
+    },
+    {
+      "task_id": "mmlu_pro_8069",
+      "subject": "math",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "23c39e8627fb82d638d22528c09d0541c248056caa48a52f27648eaba3bea03f"
+    },
+    {
+      "task_id": "mmlu_pro_8917",
+      "subject": "math",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "d4526a4bc81198f89e77e6d4a7aeb0f3571600dfae450107425e97510f12b186"
+    },
+    {
+      "task_id": "mmlu_pro_8917",
+      "subject": "math",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "62fadce7a0e9edd69abed1145f5eb93ad78d0965230c5edc2e6657890fd64034"
+    },
+    {
+      "task_id": "mmlu_pro_8917",
+      "subject": "math",
+      "candidate_answer": "J",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "262e06aaf4704338258a1e421f4d407f217022b9f8cfc445957096b100d887fb"
+    },
+    {
+      "task_id": "mmlu_pro_8621",
+      "subject": "math",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "b1ae9439f7472b70e3e2857f93212d42309302fa96183f7428b21d839d280c79"
+    },
+    {
+      "task_id": "mmlu_pro_8621",
+      "subject": "math",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "6b29b1acb48000a29467e7ec0823c3e5e880ed8b6d318e0e2be9744284f6048f"
+    },
+    {
+      "task_id": "mmlu_pro_8621",
+      "subject": "math",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "3fb8136a3b7c312c6a917eb68989823f024d9ce30142d0f759c9270ded5a395e"
+    },
+    {
+      "task_id": "mmlu_pro_8621",
+      "subject": "math",
+      "candidate_answer": "J",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "fd364dcb731e38f665a3f11ffd0983a98a5e7af82d8472afa8b5bb3435e5ea9e"
+    },
+    {
+      "task_id": "mmlu_pro_7857",
+      "subject": "math",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "ae05be47a56441a986de92433f259f8cf5e3f794c399543acf641a74630fc377"
+    },
+    {
+      "task_id": "mmlu_pro_7857",
+      "subject": "math",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "a5b43bc96f076ef24faf803ee69b6a7efd2f69a425c156acf2666db157fb1912"
+    },
+    {
+      "task_id": "mmlu_pro_7857",
+      "subject": "math",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "5d93bc89486d40e0e71aef2b660ca1d440c4acd41da8e6a9c3d51db7d03d2757"
+    },
+    {
+      "task_id": "mmlu_pro_8390",
+      "subject": "math",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "59304a0daceabdea3769c35ae25c56048300a3dff97ec098c08b379a0776d49e"
+    },
+    {
+      "task_id": "mmlu_pro_8390",
+      "subject": "math",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "09d3d0b0eaeef92e641470a801f0aa2101092939bf97c9bd5b47589abcd745a6"
+    },
+    {
+      "task_id": "mmlu_pro_8390",
+      "subject": "math",
+      "candidate_answer": "E",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "dbeed4ba91af6abbb50498bc9c5099c61c0cd5faef2dc88691f6af921d2b62d5"
+    },
+    {
+      "task_id": "mmlu_pro_8947",
+      "subject": "math",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "3c625ffd7a78161e22a58e50a691807003de494f0e4a9fdbf11f3f41f6cf0ab3"
+    },
+    {
+      "task_id": "mmlu_pro_8947",
+      "subject": "math",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "2e106aa6a36e115e7802e2510c3f936ad4ff5fa5072c5298f9d89d7168cbd9ac"
+    },
+    {
+      "task_id": "mmlu_pro_8947",
+      "subject": "math",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "82d833b8789038755acc12e15dcc8c0b0d858d200f2a543cba98290d44661834"
+    },
+    {
+      "task_id": "mmlu_pro_8947",
+      "subject": "math",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "81867bd85e182ba93039625aa7265037384ea720ebfb32d0481996db87da2294"
+    },
+    {
+      "task_id": "mmlu_pro_8913",
+      "subject": "math",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "006fb46a2a530500897be6d3943cd5dea15cc723b6130a875df2dd4323f001d9"
+    },
+    {
+      "task_id": "mmlu_pro_8913",
+      "subject": "math",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "5258bf51a239913ca3473c97d60ce5da8012254140f569c73a8ccc3d7cb053ac"
+    },
+    {
+      "task_id": "mmlu_pro_8913",
+      "subject": "math",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "1f5dc41425147ab1a1440a61190539e40ed3fa243f3c67eaf58053283551e781"
+    },
+    {
+      "task_id": "mmlu_pro_7968",
+      "subject": "math",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "45d124765a2fe867c50e3853cfb8ae2e1b50cfa2dfc8575ce2e90f13c29a2d4e"
+    },
+    {
+      "task_id": "mmlu_pro_7968",
+      "subject": "math",
+      "candidate_answer": "E",
+      "agents": [
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "9a8baa66c4d01476c060e0cce21dd359c766ade656773a38893442b650270acd"
+    },
+    {
+      "task_id": "mmlu_pro_7968",
+      "subject": "math",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "e64004d4c86a35bc2f52b4e137e573466e91fadc3149dee8177cd4b96830473f"
+    },
+    {
+      "task_id": "mmlu_pro_7688",
+      "subject": "math",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "33bf390cb7e30b0d6730b644e69221944f63343656443ea161f0baf3c5fdfe77"
+    },
+    {
+      "task_id": "mmlu_pro_7688",
+      "subject": "math",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "6142c62278974109bed1a392aa6fb67ecff200bf46c905a93f5b7671fea20819"
+    },
+    {
+      "task_id": "mmlu_pro_7688",
+      "subject": "math",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "2601c7c473daba8113a4d47bf96b12c245c5d8144501fe71d2d02ad331030ea2"
+    },
+    {
+      "task_id": "mmlu_pro_8802",
+      "subject": "math",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "87b90f973518bcf6a533e1de30e4c13f00ea851871b73131d5e93bd1b0f05bab"
+    },
+    {
+      "task_id": "mmlu_pro_8802",
+      "subject": "math",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "50d5ffab6b2a7dcf7844836e69b7b1ab6067524039e49553e2cf8721c027fd6e"
+    },
+    {
+      "task_id": "mmlu_pro_8802",
+      "subject": "math",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "5ad428f610179ac919cf4aaee083f050e9ccf1e9c90d87460b3983e6c63d0771"
+    },
+    {
+      "task_id": "mmlu_pro_8802",
+      "subject": "math",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "f205a46b3953dc84d4174d043dfd7611eb7d4f81ef0ef5899be2ebddbc7943f1"
+    },
+    {
+      "task_id": "mmlu_pro_7737",
+      "subject": "math",
+      "candidate_answer": "C",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "e8d7400413f365840924ef560fea86ada26c5d5a6cdab6342a0d09f412362766"
+    },
+    {
+      "task_id": "mmlu_pro_7737",
+      "subject": "math",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "5f3747c1fa2809fd413274fae5300c3d7cc1026d5cf7c8a54f57b42b3b09cafb"
+    },
+    {
+      "task_id": "mmlu_pro_7737",
+      "subject": "math",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "c65e336b7ce433e4ce1f9aa4436f8733a8b30f53c859bcb6952e97746b240a11"
+    },
+    {
+      "task_id": "mmlu_pro_7737",
+      "subject": "math",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "bfe1405e98370126cf144122c9326ea47b1e1156f88475cc3579079f1175336e"
+    },
+    {
+      "task_id": "mmlu_pro_5305",
+      "subject": "other",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "a682718dbcda776dd6f1059c431792387740a97bd646e426bcc8e622e5284b74"
+    },
+    {
+      "task_id": "mmlu_pro_5305",
+      "subject": "other",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "4d411f093a8da75bccfadd0e7593b3ef6160ee07e4ad1e6cfce9a1a1e1ab4dfe"
+    },
+    {
+      "task_id": "mmlu_pro_5305",
+      "subject": "other",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "14bca1e4b5db063f669947a04319f785e69824efc4196e5cfb3e5596288195c7"
+    },
+    {
+      "task_id": "mmlu_pro_5510",
+      "subject": "other",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "00b6784296be8c9a1f8700de41a4a226f659f3380e8d0e75ea9d8d804095eddb"
+    },
+    {
+      "task_id": "mmlu_pro_5581",
+      "subject": "other",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "938978976e056c4f9564ba8f14a2ce381fd14b1adc481dc71ac25069a3ca984e"
+    },
+    {
+      "task_id": "mmlu_pro_5368",
+      "subject": "other",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "578adfc0f9032ce8ecb2d13aa3de3f3044292daae890dcdd65a6d040b32fbd47"
+    },
+    {
+      "task_id": "mmlu_pro_5368",
+      "subject": "other",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "ebeabb678df74273aa2c5ee638df2c5d85276e7bf83d3893ffdc9802b6866d12"
+    },
+    {
+      "task_id": "mmlu_pro_5368",
+      "subject": "other",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "024a4c3e75b590dbc17df6f4a57564598727f9ceb1a150417753a15d5352396e"
+    },
+    {
+      "task_id": "mmlu_pro_5752",
+      "subject": "other",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "e409d519162c24604d20ee9c258393bf078c54d302d71b591873497f867ea062"
+    },
+    {
+      "task_id": "mmlu_pro_5752",
+      "subject": "other",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "02c1e41d961b14d3fc37efdcc1b3b0b199cd27965638db6e2985eca727f661a8"
+    },
+    {
+      "task_id": "mmlu_pro_5752",
+      "subject": "other",
+      "candidate_answer": "H",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "b28bc122958e35d2e3b8968f1aa4303e6fd46cc5c51ba76089b86d7e67d47582"
+    },
+    {
+      "task_id": "mmlu_pro_5752",
+      "subject": "other",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "d5d08376e127f9dd31b1b999fd74603b02f72190eb45227db4c1700f492a4a1f"
+    },
+    {
+      "task_id": "mmlu_pro_5907",
+      "subject": "other",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "cb368d295cae5c93c94150435c854619184891c6d9957d82d69ce7505cfd80e8"
+    },
+    {
+      "task_id": "mmlu_pro_5846",
+      "subject": "other",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "bc26036cec0d536f87b148b91886e73605c6f7ca01a862a2b79eb4f6ee136038"
+    },
+    {
+      "task_id": "mmlu_pro_5846",
+      "subject": "other",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "08b051955e4dddf664662ed9dfa389dbdfaf5c042332d03bd14e2e1954e84b7b"
+    },
+    {
+      "task_id": "mmlu_pro_5407",
+      "subject": "other",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "9003708e9e255cbe50cf1b5783a047b610685a9f702a3266bbf7d440dc0905dd"
+    },
+    {
+      "task_id": "mmlu_pro_5407",
+      "subject": "other",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "198c97c35f449a9a58cbac46d74feacbe5fbf64b7b7503798526a11352c1a4ad"
+    },
+    {
+      "task_id": "mmlu_pro_5407",
+      "subject": "other",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "d86b4ab2016b123977b6bf1f2e44572a62778f9db2d1f1563f34b222cf409718"
+    },
+    {
+      "task_id": "mmlu_pro_5407",
+      "subject": "other",
+      "candidate_answer": "G",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "b6170c45d7ef4fceeda391b27019f34b6680e176b9aefa5d70f4292f78b6718c"
+    },
+    {
+      "task_id": "mmlu_pro_5607",
+      "subject": "other",
+      "candidate_answer": "B",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "894752d61f41a6336b90a2a50f22c7eebc6ba77ddcfcaa1e1402f552a3eb07b0"
+    },
+    {
+      "task_id": "mmlu_pro_5607",
+      "subject": "other",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "3f29902f2bdf3b4fa4a0272272de388b27144a1ed766ee0ec314a967261739a8"
+    },
+    {
+      "task_id": "mmlu_pro_5607",
+      "subject": "other",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "01d2c76eb3200a63b7b6cd49a8800bb20f2f4e7d322b9f3627eca22e33abf6a5"
+    },
+    {
+      "task_id": "mmlu_pro_5256",
+      "subject": "other",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "b259d1d367a6f5665fb01068dfb51ad6b38de57814e1afb64057968af780a3c4"
+    },
+    {
+      "task_id": "mmlu_pro_5256",
+      "subject": "other",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e69151f398f5ffe2c53bb73efef6c2bd9a8b824dc340a3018292e06a2c8f7a07"
+    },
+    {
+      "task_id": "mmlu_pro_5256",
+      "subject": "other",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "c55400a908aa854fc09e544b8dc461f5b198821adbd8c8bcdc0737c17899750e"
+    },
+    {
+      "task_id": "mmlu_pro_5892",
+      "subject": "other",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "5a271f40e2d535f78d3abbbf071cfa4da57ae3493429753d2341c0a323dc4e44"
+    },
+    {
+      "task_id": "mmlu_pro_5892",
+      "subject": "other",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "956ac16dd210d7a8704cf8195d34cd41ac161d3d47826d42878e7b3c3faf0414"
+    },
+    {
+      "task_id": "mmlu_pro_5148",
+      "subject": "other",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "d611e47409fd9bda25b1fb5f66c1952809ed5307d315307bd0da5920aa64be08"
+    },
+    {
+      "task_id": "mmlu_pro_5148",
+      "subject": "other",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "8dfc9b2c441bac85958499a4a3212908f36b50a450431a6fe415dc785db0adcf"
+    },
+    {
+      "task_id": "mmlu_pro_5312",
+      "subject": "other",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "2918609bf3479a5ffb1a8ca35a035b444f59058a8fcd7108bcff25cbf65305c9"
+    },
+    {
+      "task_id": "mmlu_pro_5440",
+      "subject": "other",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "03bddae12819ab12beb5a0600046351fac3fe35594a624a71b9f138a8b47ad07"
+    },
+    {
+      "task_id": "mmlu_pro_5440",
+      "subject": "other",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "3e685230aa7220eaef1d6fe821e003e0a075d69ba5beaae566c04ad5c78b412f"
+    },
+    {
+      "task_id": "mmlu_pro_5086",
+      "subject": "other",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "6fbd7a22239a4f3711556f6e81a5c05e410c57ed5badd264b0b8e62d8629e0b4"
+    },
+    {
+      "task_id": "mmlu_pro_5086",
+      "subject": "other",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "1961ef43bd031bf04f5599a8512b597b493f515a8dd42e31dc2f194cf79b5f1e"
+    },
+    {
+      "task_id": "mmlu_pro_5521",
+      "subject": "other",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "8b0149b3489f2423bb8f99e72b2923636851b189c1f94d97b18d5170bd0c3992"
+    },
+    {
+      "task_id": "mmlu_pro_5521",
+      "subject": "other",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "44ac50dd0e687178bcc03a3ad35166d04ac252e13f007136eb415b51515d779e"
+    },
+    {
+      "task_id": "mmlu_pro_5521",
+      "subject": "other",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "2a89c679d3da09d86b34f5357e701d1f394b3502a2d0a38bf26ef7385fe874d1"
+    },
+    {
+      "task_id": "mmlu_pro_5668",
+      "subject": "other",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "b4575c8b0d6951fae2d81a3b5c4a2af943d1a3cf3df56b2b5a1e93808bcc0ba9"
+    },
+    {
+      "task_id": "mmlu_pro_5936",
+      "subject": "other",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "0ec8473a4db43f6313dccc8b01f419c3a1f7c4947cd7e269225d750b1c9385af"
+    },
+    {
+      "task_id": "mmlu_pro_5820",
+      "subject": "other",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "79c624ddd8e701ba5e79940e8f55614fe95a1395007e430955c4c3e145fc4e24"
+    },
+    {
+      "task_id": "mmlu_pro_5512",
+      "subject": "other",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "7b623b62fc33e69ca764c22178008242af00e1221163189903fb8fbd50bbde3c"
+    },
+    {
+      "task_id": "mmlu_pro_5512",
+      "subject": "other",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "8f994054952ea8d7213250bc00bd590a62f3bd0d5f5de31834f4ad313624f590"
+    },
+    {
+      "task_id": "mmlu_pro_5512",
+      "subject": "other",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "44049d6933ca212ef3c5c4ff5ca0f50845121a213a078aad0588821a136845d3"
+    },
+    {
+      "task_id": "mmlu_pro_5512",
+      "subject": "other",
+      "candidate_answer": "G",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "cf31a7ccd1f9ef04358c48131c403eebeaf56543a95dae9a0cce7adbd7685c4d"
+    },
+    {
+      "task_id": "mmlu_pro_10927",
+      "subject": "philosophy",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e9704e59e60d6da902304e7cf975aa84bf60392ff284d264b0d6cd0eac2c9a67"
+    },
+    {
+      "task_id": "mmlu_pro_10796",
+      "subject": "philosophy",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "ead011f14d74b511539bd7682962d7ea33ed990ea363ad6ed407df5005fbcdde"
+    },
+    {
+      "task_id": "mmlu_pro_10796",
+      "subject": "philosophy",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "473b9e5715036f4ee1b816c979d47ae1e2c499e6b6dd42a9caf7b2d1c880d9eb"
+    },
+    {
+      "task_id": "mmlu_pro_11227",
+      "subject": "philosophy",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "4a7dafcb442d51321045522cf60ef54a8dd4b4a79797af174f50041cde3a6db3"
+    },
+    {
+      "task_id": "mmlu_pro_11227",
+      "subject": "philosophy",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "16b17d5d4d0bb0cedb1465c795c99a4cf508da72d058d96fa6359634e135cf9b"
+    },
+    {
+      "task_id": "mmlu_pro_11227",
+      "subject": "philosophy",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "1dcea10a54dcc3b992b589ff76e21ede3280604e77ecf9b60983764358147181"
+    },
+    {
+      "task_id": "mmlu_pro_11227",
+      "subject": "philosophy",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "47388f8466285230accbf4dfe108c59cf98503f6bbc934455b1c01f8fa873061"
+    },
+    {
+      "task_id": "mmlu_pro_10905",
+      "subject": "philosophy",
+      "candidate_answer": "A",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "b38bd0f99c2d19dbb4102a75315c03a5cef30a2dcb5608dec6d4b3d8a2dc61bd"
+    },
+    {
+      "task_id": "mmlu_pro_10905",
+      "subject": "philosophy",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "1390f9e295a9ead6e4857a8cda21e5575c6f1ff9d15e5aa623a9805a3441a467"
+    },
+    {
+      "task_id": "mmlu_pro_10905",
+      "subject": "philosophy",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "b457c413d7eefeafe7bfde5b8cdfa8030b1f740bfb67dfa1ca4aa5df34f3a7d4"
+    },
+    {
+      "task_id": "mmlu_pro_11168",
+      "subject": "philosophy",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "a68c71cbe25fb8af682b8f1dfa72830d2cb40aa4916ee58a4ca9c7eaf8fff325"
+    },
+    {
+      "task_id": "mmlu_pro_11168",
+      "subject": "philosophy",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "18612e521e76e1552d3beb7ef7e08299ad5d93f2521f4d8166b845e1ca69388d"
+    },
+    {
+      "task_id": "mmlu_pro_10798",
+      "subject": "philosophy",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "bbd2bc01699f3949e09003d180315401cb595940831edaa14e7aa5369d1c7961"
+    },
+    {
+      "task_id": "mmlu_pro_11068",
+      "subject": "philosophy",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "b3cb6518b7dc31e79b17ebb71bcab850f1f9dbcb3f39f36018914b10ecd61753"
+    },
+    {
+      "task_id": "mmlu_pro_11068",
+      "subject": "philosophy",
+      "candidate_answer": "J",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e78d4d3f157bd16caa9cafd06255b6e1b4367232c3ebeeb96826ec2d6c9ad377"
+    },
+    {
+      "task_id": "mmlu_pro_10987",
+      "subject": "philosophy",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "bffd5d209073df07548a6c27054f546241047b7741ace1c7c0032b1a3b32b156"
+    },
+    {
+      "task_id": "mmlu_pro_10987",
+      "subject": "philosophy",
+      "candidate_answer": "G",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "3e969a4045bd53a13232f263ca4ab42f90156c6ad8878605c660feb0365adad2"
+    },
+    {
+      "task_id": "mmlu_pro_10825",
+      "subject": "philosophy",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "8c1a21b000ffabbca66adbb827359bf651ee39e80e4ada23d1022b8aeb3c6839"
+    },
+    {
+      "task_id": "mmlu_pro_10825",
+      "subject": "philosophy",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "61534365e112749f5b6df14b526a139ae1abed565355a9aa169adb87fef7d3f6"
+    },
+    {
+      "task_id": "mmlu_pro_11260",
+      "subject": "philosophy",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "9c2deb386df31bd51b6f20cd3338863a129be60ddb1964d6abaa74d6f3fd0576"
+    },
+    {
+      "task_id": "mmlu_pro_11260",
+      "subject": "philosophy",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "965a23b363415c88e0d8fc394e24956212a97db27dcefc5774f2a29f34bbe3c5"
+    },
+    {
+      "task_id": "mmlu_pro_11280",
+      "subject": "philosophy",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "88510889bee1957b4d635296b70f779d853c2882a9a1ad272783b64ab3d42156"
+    },
+    {
+      "task_id": "mmlu_pro_10964",
+      "subject": "philosophy",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "de22c9ad7deb807f37f002fa224df7d8e23c759f9c62a79d58c0735b5d74be15"
+    },
+    {
+      "task_id": "mmlu_pro_10964",
+      "subject": "philosophy",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "c62d1b8fbb1b2f3e69660b5485a18f0254c7b6c9c19e5c5962dca682d4c041e7"
+    },
+    {
+      "task_id": "mmlu_pro_10964",
+      "subject": "philosophy",
+      "candidate_answer": "H",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "525b886fa77fd10596f21aa62b60896cba0581b8a5e99fbd50770a96904cdb6f"
+    },
+    {
+      "task_id": "mmlu_pro_11120",
+      "subject": "philosophy",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "d3056cc203bf6cd6c587574beb4321166c692272939577af5fc9f3b3a614e52e"
+    },
+    {
+      "task_id": "mmlu_pro_11120",
+      "subject": "philosophy",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "57b4b61eddb85796f84c8a0e1270312d1ceb5c93635c8c9f19893655056d215d"
+    },
+    {
+      "task_id": "mmlu_pro_11120",
+      "subject": "philosophy",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "3d35500602f8b8047cb83d73bb9900f12cb97270c8362a83f04f620aa0496005"
+    },
+    {
+      "task_id": "mmlu_pro_11092",
+      "subject": "philosophy",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "846d8fc6fcfe557bb1cd63d4e779b6ebb877ef58564dd627967f6c47e75c43ab"
+    },
+    {
+      "task_id": "mmlu_pro_10842",
+      "subject": "philosophy",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "4e70731cca52cab6df15a26d893a0518eaa557484b6cb4f0bcce0e0f2539b6ef"
+    },
+    {
+      "task_id": "mmlu_pro_10842",
+      "subject": "philosophy",
+      "candidate_answer": "H",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "78baaaf4c1a2966049bf4c79bdc4e8720de5599e7289f1ddbe15035fe32fecc1"
+    },
+    {
+      "task_id": "mmlu_pro_10910",
+      "subject": "philosophy",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "04dbda5f4792dee8b36b4d4e14ecb8d95f2aa6d9ba04a5f2b252dc184ae19d2f"
+    },
+    {
+      "task_id": "mmlu_pro_10910",
+      "subject": "philosophy",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "5267fa6538708c2f8b2f36772f7d3a0f3a5a0ad57e9b846d7eca948b9c4081b6"
+    },
+    {
+      "task_id": "mmlu_pro_10892",
+      "subject": "philosophy",
+      "candidate_answer": "A",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "1b839cc42e70be9524045d3bac3388ba90eef1426f519d71945db7cb98b3b82d"
+    },
+    {
+      "task_id": "mmlu_pro_10892",
+      "subject": "philosophy",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "2e012ee2f4c780ea3adae73a369370864ab5a17b504e11a36b43c6e1248cee4a"
+    },
+    {
+      "task_id": "mmlu_pro_10947",
+      "subject": "philosophy",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "e1f4a9e4236c6e696a0c5dd54c1e6cbf2bbcaf0e240f0817dcc5b8e427ae4407"
+    },
+    {
+      "task_id": "mmlu_pro_10947",
+      "subject": "philosophy",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "d109b8b75910333fc934cb85c4ec8d58547e54fc584fb8640ee1862e7f086aff"
+    },
+    {
+      "task_id": "mmlu_pro_10947",
+      "subject": "philosophy",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "6d4b5579a44a22a6db7f1d9b3a2324b53e759beb83287ce8ebf8b7d0cc282d4b"
+    },
+    {
+      "task_id": "mmlu_pro_11149",
+      "subject": "philosophy",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "d3d2cfc26836e958b0ad9e2d486272c399cb207a1f4530d63fdf700698e6c3be"
+    },
+    {
+      "task_id": "mmlu_pro_11149",
+      "subject": "philosophy",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "1d8a770505d5d89704ae7ac63d4d5e2346c24b1f7007c1235f097e091cab7ecc"
+    },
+    {
+      "task_id": "mmlu_pro_11149",
+      "subject": "philosophy",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "c86ab93fadefa9fa42c7c39319dcb59ed351cc992cae3d283d7bdfcc70f0b0b2"
+    },
+    {
+      "task_id": "mmlu_pro_11197",
+      "subject": "philosophy",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "9c79a822d0f8714e6dbc754eba83405e53e3949750b0c2827e24342b68a039cd"
+    },
+    {
+      "task_id": "mmlu_pro_11197",
+      "subject": "philosophy",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "d9435dc36f15ac44c784cee8ee90e692f8110070565ebe31919ba9630db96b06"
+    },
+    {
+      "task_id": "mmlu_pro_11197",
+      "subject": "philosophy",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b"
+      ],
+      "prompt_hash": "9b06eff69b0af354c5a976f65a895d2edafac87927e790e731a6882b34915a0d"
+    },
+    {
+      "task_id": "mmlu_pro_9547",
+      "subject": "physics",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "434762a4e0e3081127d91c48caa564ec1b3544f7c97bab07e07391e20f8c5b38"
+    },
+    {
+      "task_id": "mmlu_pro_9715",
+      "subject": "physics",
+      "candidate_answer": "A",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "3b08ca4308fdcba71960931c6de3fc3a745b0411a6ac7b2e13328e9c05995f39"
+    },
+    {
+      "task_id": "mmlu_pro_9715",
+      "subject": "physics",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "850d3989c1ba41477c8dbb72c19fb9406a4011412a6b6abbdc613bd22ae089a8"
+    },
+    {
+      "task_id": "mmlu_pro_9715",
+      "subject": "physics",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "53cfd201a85ed28ea7b81c70a0d3eadf73751c0db68c545a519aafdbe2612f28"
+    },
+    {
+      "task_id": "mmlu_pro_9649",
+      "subject": "physics",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e43b30296a475eb28f60ea4ed55593802bdfb53cd9e6b15fceb091588754ba61"
+    },
+    {
+      "task_id": "mmlu_pro_9649",
+      "subject": "physics",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "8b80ef46f4ec07c5bacd0799c780e9402568c7c443780d1145c551438f7d637e"
+    },
+    {
+      "task_id": "mmlu_pro_9649",
+      "subject": "physics",
+      "candidate_answer": "G",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "6beb44566a6ab283a55148ae0ae661ff8cccf5e8901e04f496018c40c7e12972"
+    },
+    {
+      "task_id": "mmlu_pro_9129",
+      "subject": "physics",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "e75ff2ed0681cd43bf11958be97b4eb8912b5e944618421dcfd9afd3ee061489"
+    },
+    {
+      "task_id": "mmlu_pro_9129",
+      "subject": "physics",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "f423e574d49560dc9221b3011518a33349ba49ac1af8adb285880161a8afd752"
+    },
+    {
+      "task_id": "mmlu_pro_9129",
+      "subject": "physics",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "98166bcf2536bae146169c838400ef90effb75438f87e23d2f9f2055cbe859eb"
+    },
+    {
+      "task_id": "mmlu_pro_9566",
+      "subject": "physics",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "a094b863c1ec8be79d09ce6a1e8a8590b2e1c5dbfc3ab6dbed082d796c97a8da"
+    },
+    {
+      "task_id": "mmlu_pro_9566",
+      "subject": "physics",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "f837d3db31cde5a508835c57e64afeb282952dfe4c5d2f648328e4a1d28d08ab"
+    },
+    {
+      "task_id": "mmlu_pro_9566",
+      "subject": "physics",
+      "candidate_answer": "E",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "14d11ddd91ca9266d040252835c71d9f37e58127e8a3ed3a3d2f7099c724378b"
+    },
+    {
+      "task_id": "mmlu_pro_9889",
+      "subject": "physics",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "d3bb785f22827136f7f62e3cbc876ad5eb57ca0b7409fb47616ca2e53d9cff88"
+    },
+    {
+      "task_id": "mmlu_pro_9889",
+      "subject": "physics",
+      "candidate_answer": "C",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "6695564053f0772ea827fb3caff81a843c9156658731c0ec6b649727d1dd600b"
+    },
+    {
+      "task_id": "mmlu_pro_10116",
+      "subject": "physics",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "672811e2a1a8a6e54cb5249287718c895b12eecb99260b44683905fd16ed39ad"
+    },
+    {
+      "task_id": "mmlu_pro_10116",
+      "subject": "physics",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "1074d0b037b369a868a92c067fcbc7b57cd11812109d8881207a3cc89b591a95"
+    },
+    {
+      "task_id": "mmlu_pro_10116",
+      "subject": "physics",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "a1bc2abae1554a9ae9763fba5a15f96e7a0c7088c31b2bcd89dc6c3716f834c6"
+    },
+    {
+      "task_id": "mmlu_pro_10116",
+      "subject": "physics",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "032160f04b60850eef99b35261b436c14e4dcb73fd28119ac13acb1b2c92f85a"
+    },
+    {
+      "task_id": "mmlu_pro_9090",
+      "subject": "physics",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "cddd6e33d9cd62326fa0563dca937cdd11566298f18ab7e4ea90643206024418"
+    },
+    {
+      "task_id": "mmlu_pro_9090",
+      "subject": "physics",
+      "candidate_answer": "B",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "fb65bff7a81b13330b4bddb9df5bac1e2e9af1b6d5a2c92c6514ea28839befaf"
+    },
+    {
+      "task_id": "mmlu_pro_9090",
+      "subject": "physics",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "c837fdfce2e9e4b8c8a968f8435495a3471c436eefc3134e115eb36665b17a0f"
+    },
+    {
+      "task_id": "mmlu_pro_9090",
+      "subject": "physics",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "ed7bb7bdb6f85fbf3323b4c5dcf49383322dcbd22da1997f62cc040d08eacebd"
+    },
+    {
+      "task_id": "mmlu_pro_9388",
+      "subject": "physics",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "30ff4b7e03e134055d21d2b1443e6d4df95a6bce65f92811595eabb31731218b"
+    },
+    {
+      "task_id": "mmlu_pro_9388",
+      "subject": "physics",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "ed15d5f891dc3e340963e452237125b6c1a5acdc962ecaef9b91ef37d6c16dfd"
+    },
+    {
+      "task_id": "mmlu_pro_9388",
+      "subject": "physics",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "afed5219e67af0bfdfca1a2fc0ac7e094bd994f77497cd5d7c7421f809fb2d9c"
+    },
+    {
+      "task_id": "mmlu_pro_9128",
+      "subject": "physics",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "4a7e18f9b7aa2b21f583e4464f8d0e149694acfcdff23063cfe590bbb8e153f0"
+    },
+    {
+      "task_id": "mmlu_pro_9128",
+      "subject": "physics",
+      "candidate_answer": "C",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "8d351741a8a2beb770b41e1f94d9e6647e3af92b4f5c9256cb49c6b107047ce3"
+    },
+    {
+      "task_id": "mmlu_pro_9128",
+      "subject": "physics",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "f3ebf970e1d04816ef061b64ed24c6434e56c4c3c1f116ca57e724bb289f60f5"
+    },
+    {
+      "task_id": "mmlu_pro_9927",
+      "subject": "physics",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "02d4e1f16b092aabf8328d8cacbf40aa7d14cb99a36aa3fcba0f695f44b9f6ba"
+    },
+    {
+      "task_id": "mmlu_pro_9927",
+      "subject": "physics",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "afb2f517f8be95340c4567e0f31a47bba2f88ede59018624a1382223d4b1626a"
+    },
+    {
+      "task_id": "mmlu_pro_9142",
+      "subject": "physics",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e3245a081aed713130f27095525734fa85ffb40498542550990f9a39fa537bb8"
+    },
+    {
+      "task_id": "mmlu_pro_9142",
+      "subject": "physics",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "f519df9c3d35eca3158c4974fd645dc17a1627a6b463b3cb8cdb335632db475f"
+    },
+    {
+      "task_id": "mmlu_pro_9142",
+      "subject": "physics",
+      "candidate_answer": "E",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "8b824c7b0167dad30376000e7e6d6226de5ad693bc26a1074427f7bea17ebc16"
+    },
+    {
+      "task_id": "mmlu_pro_9497",
+      "subject": "physics",
+      "candidate_answer": "H",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "ba7dde874b11bc41081e32b900fdfa93222b4345bdb22e62dd6daa71d14b6693"
+    },
+    {
+      "task_id": "mmlu_pro_9497",
+      "subject": "physics",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "9bff780ca196ed83380cbb74b37cb606328dc55d7dfb9630c7cc57b6e68669a1"
+    },
+    {
+      "task_id": "mmlu_pro_9497",
+      "subject": "physics",
+      "candidate_answer": "J",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "e9c0ba5428624e28a35f8398ae52348c84e6b31902a0118d097269031d917356"
+    },
+    {
+      "task_id": "mmlu_pro_9258",
+      "subject": "physics",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "15dcf7f5a912f2973bcf0cb72af6cdfc7297b5bce07d84089eecac45f91361be"
+    },
+    {
+      "task_id": "mmlu_pro_9258",
+      "subject": "physics",
+      "candidate_answer": "E",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "e1309ab626a021e350d586a071ca92de46d0e548f85dafe3e72cde822ce2e742"
+    },
+    {
+      "task_id": "mmlu_pro_9110",
+      "subject": "physics",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "acbc576cc85609482e6027efcd1ebd828be57f42d4169708590b65cb2775778a"
+    },
+    {
+      "task_id": "mmlu_pro_9110",
+      "subject": "physics",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "f1cd414746935d37c03ff6ca6a6b104297b52b98a045e9b1a94b25013b51c5dc"
+    },
+    {
+      "task_id": "mmlu_pro_9110",
+      "subject": "physics",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "12ebe87989088359ac47d416b7094c619c20f71a5d6914bd589669a8b377596c"
+    },
+    {
+      "task_id": "mmlu_pro_9289",
+      "subject": "physics",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "7155f49dd52a63b5c7485c8fe51dc3e7a6f3da38aa54efeefe7b87d5754f93ae"
+    },
+    {
+      "task_id": "mmlu_pro_9289",
+      "subject": "physics",
+      "candidate_answer": "B",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "ce58098acb122ce07470befdf174afe8e662774cb40205871a82adc126ded3e5"
+    },
+    {
+      "task_id": "mmlu_pro_9289",
+      "subject": "physics",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "de6df589dae5d6c135b4f91d6e0518610c9e6a02e8eea87e83a26c5196d7f749"
+    },
+    {
+      "task_id": "mmlu_pro_9745",
+      "subject": "physics",
+      "candidate_answer": "A",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "c42c9b913b3de0106373c396280f3a09a67632564169ac9c1fdc4397f69e586a"
+    },
+    {
+      "task_id": "mmlu_pro_9745",
+      "subject": "physics",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "144092806183b752f5f5a865b81905c5fad2e23a8bdd8d40dbf9e3daf0731f0e"
+    },
+    {
+      "task_id": "mmlu_pro_9745",
+      "subject": "physics",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "cd88d933c33f36f15d1238430379c42b22c659b51f215c4f66601acf3419586b"
+    },
+    {
+      "task_id": "mmlu_pro_9201",
+      "subject": "physics",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "1355e8b2b3bfe0aa2cd1bcf93cb5b57b8d0d51cca72480e4dcf41f7a8b00482f"
+    },
+    {
+      "task_id": "mmlu_pro_9635",
+      "subject": "physics",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "c90da98fc51d3430845211c8ca4566dedfa2e44623b410a446fddf0badd4a953"
+    },
+    {
+      "task_id": "mmlu_pro_9635",
+      "subject": "physics",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "68d2653a847da2dc51c49caa3a348b3eae86929283d1edc5c7e9a4576cfe82c0"
+    },
+    {
+      "task_id": "mmlu_pro_9694",
+      "subject": "physics",
+      "candidate_answer": "C",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "684c21d6444e7030f722ab4455ccc4d1200371834eea7117ea0c5798c0caf4eb"
+    },
+    {
+      "task_id": "mmlu_pro_9694",
+      "subject": "physics",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "d8897dc54bf0158c31a97ab9830a8dea0683b5d571ab82c8e94891d8965feba8"
+    },
+    {
+      "task_id": "mmlu_pro_9694",
+      "subject": "physics",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "6ace3ce5de3b75d78162d0b127d84f211613aa014d468ae4f4deda6c936316b7"
+    },
+    {
+      "task_id": "mmlu_pro_9694",
+      "subject": "physics",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "b53ecd9c527db5e24fab9f2dcbad41dd2f6515b3ec048e248ebbbc9fca7b4966"
+    },
+    {
+      "task_id": "mmlu_pro_2592",
+      "subject": "psychology",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "db0af86e787c70bbc0ccf68497d61b20f9e1d058ff369c8a7a5231f134d1b159"
+    },
+    {
+      "task_id": "mmlu_pro_2592",
+      "subject": "psychology",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "8597d5b630c949857ae7836a93012422c05e4aa9ddbd94a51b6fabf04c46d6d7"
+    },
+    {
+      "task_id": "mmlu_pro_2592",
+      "subject": "psychology",
+      "candidate_answer": "F",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "ae1880441123af090e0afa1392dded4ad38acd049399de8ee97fe39c4316e2f5"
+    },
+    {
+      "task_id": "mmlu_pro_2503",
+      "subject": "psychology",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "7d8c6274ed2bb60df51f90a4bdfbe5d97c7b308ba6a39fb39edd9224cfbfcf0e"
+    },
+    {
+      "task_id": "mmlu_pro_2144",
+      "subject": "psychology",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "496cd34ac00e712a7c23e7c6579f010983ae25f752f3386e725042e4fab95f57"
+    },
+    {
+      "task_id": "mmlu_pro_2384",
+      "subject": "psychology",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "381036d50788d453afadea4b89ab94cc0a32f5d2e93ce8f7e6f5f9ba1dad90df"
+    },
+    {
+      "task_id": "mmlu_pro_2384",
+      "subject": "psychology",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "3c1cd81a685fb93514d0264d9fe54a831a7df1495f1c593787d55e621427d792"
+    },
+    {
+      "task_id": "mmlu_pro_2504",
+      "subject": "psychology",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "6136ce1b096bcdaadfdf939d69d169f1078c3a9d89c360e6e3a5e9078ccb9f20"
+    },
+    {
+      "task_id": "mmlu_pro_2504",
+      "subject": "psychology",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "452e9c8e97ed7120a4db9dcafd35c59745fb694262e96f3d0541fa3dc74db6f9"
+    },
+    {
+      "task_id": "mmlu_pro_2504",
+      "subject": "psychology",
+      "candidate_answer": "H",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "70a5611fb40f0dca9b5000ef303373b80aec71bdb78c3e3dc5b12fd86aefe7c1"
+    },
+    {
+      "task_id": "mmlu_pro_2664",
+      "subject": "psychology",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "0a62fac70a8c7165547e3e5815fe27dbf04aae4f8264843a34cedce38b32d586"
+    },
+    {
+      "task_id": "mmlu_pro_2205",
+      "subject": "psychology",
+      "candidate_answer": "F",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "a4d76ca39f9aef847db999c7f49318671729f0cf5880b917efda5f801dbc1247"
+    },
+    {
+      "task_id": "mmlu_pro_2205",
+      "subject": "psychology",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "ab1c26557e05fbcd4d5a8e3aadc50e8a077d99ae6d8a35d4e829ac611c818acb"
+    },
+    {
+      "task_id": "mmlu_pro_2205",
+      "subject": "psychology",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "6d28ea5746ee198005c7113420ac9a1ac06eb3a72ef5bd4cfa95673ccfa56dcc"
+    },
+    {
+      "task_id": "mmlu_pro_2758",
+      "subject": "psychology",
+      "candidate_answer": "D",
+      "agents": [
+        "gemma2"
+      ],
+      "prompt_hash": "fd189c304af3d6da8ff2ee55bc08c9c3bad2937e23dedb0c5f22d5dcb7c3ab0e"
+    },
+    {
+      "task_id": "mmlu_pro_2758",
+      "subject": "psychology",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "1761f48aa020e064d3740bd70d50cf45d4f0f94ee36f7e67aab0781739f517a9"
+    },
+    {
+      "task_id": "mmlu_pro_2173",
+      "subject": "psychology",
+      "candidate_answer": "A",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "94d44b6825dd945fa59d91bc2086834a389cebd28b7a1e12530064eb2463655d"
+    },
+    {
+      "task_id": "mmlu_pro_2173",
+      "subject": "psychology",
+      "candidate_answer": "D",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "9a44283bb71fbae262bac601e6ed2eebff6eb20e00bbc453937cabddb1562269"
+    },
+    {
+      "task_id": "mmlu_pro_2173",
+      "subject": "psychology",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "3cde39da96138c937779358e6667ac8cd0708ee8e527f5420e589973391a1cee"
+    },
+    {
+      "task_id": "mmlu_pro_2284",
+      "subject": "psychology",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "7faf3ca216c6b6c828875d57068d9f004075036e2d01bd74adc8d39ba3e9c7d1"
+    },
+    {
+      "task_id": "mmlu_pro_2284",
+      "subject": "psychology",
+      "candidate_answer": "J",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "42da1e0fd8fb20e8ea6cdb4df6a4e1880f86af79d31c0c97f34ded83eaa2f737"
+    },
+    {
+      "task_id": "mmlu_pro_2364",
+      "subject": "psychology",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "11ef3b3b2ad234cfb1a65b8333853cad658faf10b5ef330a80d1d207fba4e4f6"
+    },
+    {
+      "task_id": "mmlu_pro_2176",
+      "subject": "psychology",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "35adb8d3f5fe70189a5cb9a06992da499d15439f500839afaafdc9f01302214f"
+    },
+    {
+      "task_id": "mmlu_pro_2176",
+      "subject": "psychology",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "18c5fa1c6a085b4a9da8a1f753b6ae7d4db0a56b5210a41144e15f4b2b2bc862"
+    },
+    {
+      "task_id": "mmlu_pro_2176",
+      "subject": "psychology",
+      "candidate_answer": "G",
+      "agents": [
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "68fc7d9cdee6e4126175acc12b17d37ff9a4eca6c95c33a2bd671ac8e02fa556"
+    },
+    {
+      "task_id": "mmlu_pro_2310",
+      "subject": "psychology",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "063ce8269732bf6bc4830a5eadac511a6dcb9b8c1ff56dffe808e0f9a0bd9912"
+    },
+    {
+      "task_id": "mmlu_pro_2475",
+      "subject": "psychology",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "7b83ac3e80f2aa8416ed32cc95fe32ff7fba63e96fea64f65951752e58e7b9d7"
+    },
+    {
+      "task_id": "mmlu_pro_2660",
+      "subject": "psychology",
+      "candidate_answer": "D",
+      "agents": [
+        "llama3-8b"
+      ],
+      "prompt_hash": "de6d89019355448328e1449e099ace2622ad839bb65e239b8713897b0307eaa6"
+    },
+    {
+      "task_id": "mmlu_pro_2660",
+      "subject": "psychology",
+      "candidate_answer": "H",
+      "agents": [
+        "qwen3-8b"
+      ],
+      "prompt_hash": "beb7ab9155506c1f00f2a7c92bc18f28aa3916a4eb6c1b40220876a261cc8c30"
+    },
+    {
+      "task_id": "mmlu_pro_2660",
+      "subject": "psychology",
+      "candidate_answer": "J",
+      "agents": [
+        "gemma2",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "25f321054f3e5fab66a801249481e9baa5eacfa7807d42659fffeebb62f3d17f"
+    },
+    {
+      "task_id": "mmlu_pro_2318",
+      "subject": "psychology",
+      "candidate_answer": "C",
+      "agents": [
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "794e6753efdf533202760a834251141a568546f04a92119307c4f281d1375ad8"
+    },
+    {
+      "task_id": "mmlu_pro_2318",
+      "subject": "psychology",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-8b",
+        "gemma2"
+      ],
+      "prompt_hash": "5922fcdf204541f226c1fa4fd9f30ddd1412b842560124f5f15d3f1d11bd1637"
+    },
+    {
+      "task_id": "mmlu_pro_2412",
+      "subject": "psychology",
+      "candidate_answer": "C",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b",
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "8441322495a3398e3bd49259908a6ac1200d37c2a30d5c90585dad8c7ea13fa5"
+    },
+    {
+      "task_id": "mmlu_pro_2669",
+      "subject": "psychology",
+      "candidate_answer": "E",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "931a7293f6001f3242eff48e374236aff65c867d329af5f0bd2ad94edef43522"
+    },
+    {
+      "task_id": "mmlu_pro_2669",
+      "subject": "psychology",
+      "candidate_answer": "G",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "a1ffa98e1dd91c7a9a3e3a365b557b893481c24feef0abed48e466b00d67ec70"
+    },
+    {
+      "task_id": "mmlu_pro_2419",
+      "subject": "psychology",
+      "candidate_answer": "F",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "b6a40d96836dbfed7d1ab7e5842b39d81ab574bc21a705508b4430e6e72c983b"
+    },
+    {
+      "task_id": "mmlu_pro_2419",
+      "subject": "psychology",
+      "candidate_answer": "I",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "5e372a8c58b26e0587f8616eeed39e30fcc6caced39693ac676554bcae859d79"
+    },
+    {
+      "task_id": "mmlu_pro_2140",
+      "subject": "psychology",
+      "candidate_answer": "A",
+      "agents": [
+        "qwen3-0.6b"
+      ],
+      "prompt_hash": "9be59cddae6ed3f952207becd9775bb068df229bc7454b5bd4ac33162e7fe71e"
+    },
+    {
+      "task_id": "mmlu_pro_2140",
+      "subject": "psychology",
+      "candidate_answer": "B",
+      "agents": [
+        "qwen3-8b",
+        "gemma2",
+        "llama3-8b"
+      ],
+      "prompt_hash": "850824aabb09c47d179dbdd2375e0ef27cccb088ff3967856d5b5b34596c30ac"
+    }
+  ]
+}
