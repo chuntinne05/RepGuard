@@ -1,0 +1,321 @@
+{
+  "design": {
+    "status": "exploratory_reused_week3_test_not_independent_validation",
+    "inference_unit": "target subject",
+    "folds": 2,
+    "history_questions_per_source_per_fold": 10,
+    "calibration_questions_per_source_per_fold": 10,
+    "related_sources_and_folds": "averaged within target"
+  },
+  "cells": {
+    "related": {
+      "team_accuracy": {
+        "ECRT": {
+          "estimate": 0.49207727729701806,
+          "ci_lo": 0.43657547844460665,
+          "ci_hi": 0.5557056840024287,
+          "n_targets": 13
+        },
+        "FixedBorrow": {
+          "estimate": 0.4936397840163433,
+          "ci_lo": 0.43717635735620397,
+          "ci_hi": 0.5572902619747206,
+          "n_targets": 13
+        },
+        "OracleFixedBorrow": {
+          "estimate": 0.49372992713152075,
+          "ci_lo": 0.43683252803352307,
+          "ci_hi": 0.5578793333016169,
+          "n_targets": 13
+        },
+        "Uniform": {
+          "estimate": 0.47819873522913225,
+          "ci_lo": 0.4188678993871476,
+          "ci_hi": 0.5478004007216346,
+          "n_targets": 13
+        }
+      },
+      "brier_binary": {
+        "ECRT": {
+          "estimate": 0.23849518474367673,
+          "ci_lo": 0.22918377950614202,
+          "ci_hi": 0.24825300931402816,
+          "n_targets": 13
+        },
+        "FixedBorrow": {
+          "estimate": 0.2597972999991167,
+          "ci_lo": 0.2450589728640593,
+          "ci_hi": 0.2743878863631993,
+          "n_targets": 13
+        },
+        "OracleFixedBorrow": {
+          "estimate": 0.24570740384673748,
+          "ci_lo": 0.23435013994382883,
+          "ci_hi": 0.25569998001591,
+          "n_targets": 13
+        },
+        "Uniform": {
+          "estimate": 0.25,
+          "ci_lo": 0.25,
+          "ci_hi": 0.25,
+          "n_targets": 13
+        }
+      },
+      "competence_mae": {
+        "ECRT": {
+          "estimate": 0.12218658760693502,
+          "ci_lo": 0.09898082562714723,
+          "ci_hi": 0.14702856077931664,
+          "n_targets": 13
+        },
+        "FixedBorrow": {
+          "estimate": 0.17307889266991858,
+          "ci_lo": 0.1388282712807617,
+          "ci_hi": 0.21051480430575611,
+          "n_targets": 13
+        },
+        "OracleFixedBorrow": {
+          "estimate": 0.13693837455263866,
+          "ci_lo": 0.1123786989495392,
+          "ci_hi": 0.16208375115230272,
+          "n_targets": 13
+        },
+        "Uniform": {
+          "estimate": 0.15354433863392386,
+          "ci_lo": 0.13041416080235818,
+          "ci_hi": 0.17647436274889958,
+          "n_targets": 13
+        }
+      }
+    },
+    "same": {
+      "team_accuracy": {
+        "ECRT": {
+          "estimate": 0.48623145210430974,
+          "ci_lo": 0.42910147616024213,
+          "ci_hi": 0.5484326648210057,
+          "n_targets": 14
+        },
+        "FixedBorrow": {
+          "estimate": 0.48539682808113244,
+          "ci_lo": 0.42805674061186666,
+          "ci_hi": 0.5475596804653505,
+          "n_targets": 14
+        },
+        "OracleFixedBorrow": {
+          "estimate": 0.4908617338218534,
+          "ci_lo": 0.4353067861774025,
+          "ci_hi": 0.5514567715469889,
+          "n_targets": 14
+        },
+        "Uniform": {
+          "estimate": 0.47650921518029815,
+          "ci_lo": 0.42009926749279647,
+          "ci_hi": 0.5408951575132942,
+          "n_targets": 14
+        }
+      },
+      "brier_binary": {
+        "ECRT": {
+          "estimate": 0.2305932668600763,
+          "ci_lo": 0.22310085604642943,
+          "ci_hi": 0.23759539910817765,
+          "n_targets": 14
+        },
+        "FixedBorrow": {
+          "estimate": 0.24948939777917767,
+          "ci_lo": 0.23891129161913768,
+          "ci_hi": 0.2605587560551496,
+          "n_targets": 14
+        },
+        "OracleFixedBorrow": {
+          "estimate": 0.23642471659711836,
+          "ci_lo": 0.22561600461176762,
+          "ci_hi": 0.2468913654190044,
+          "n_targets": 14
+        },
+        "Uniform": {
+          "estimate": 0.25,
+          "ci_lo": 0.25,
+          "ci_hi": 0.25,
+          "n_targets": 14
+        }
+      },
+      "competence_mae": {
+        "ECRT": {
+          "estimate": 0.09553729512003184,
+          "ci_lo": 0.08670343833170495,
+          "ci_hi": 0.10633084761882827,
+          "n_targets": 14
+        },
+        "FixedBorrow": {
+          "estimate": 0.1459448767400942,
+          "ci_lo": 0.11899317294579555,
+          "ci_hi": 0.17283758823895262,
+          "n_targets": 14
+        },
+        "OracleFixedBorrow": {
+          "estimate": 0.10611961177821992,
+          "ci_lo": 0.08489921302576618,
+          "ci_hi": 0.1283021302969535,
+          "n_targets": 14
+        },
+        "Uniform": {
+          "estimate": 0.15059827624868943,
+          "ci_lo": 0.12886542485679825,
+          "ci_hi": 0.17287436635422052,
+          "n_targets": 14
+        }
+      }
+    }
+  },
+  "paired_differences": {
+    "related": {
+      "team_accuracy": {
+        "ECRT_minus_FixedBorrow": {
+          "estimate": -0.0015625067193252168,
+          "ci_lo": -0.004161062740471267,
+          "ci_hi": 0.0010594220428396315,
+          "n_targets": 13
+        },
+        "ECRT_minus_Uniform": {
+          "estimate": 0.013878542067885755,
+          "ci_lo": 0.003198617787660947,
+          "ci_hi": 0.024923540222496172,
+          "n_targets": 13
+        },
+        "ECRT_minus_OracleFixedBorrow": {
+          "estimate": -0.0016526498345026397,
+          "ci_lo": -0.007577040760091649,
+          "ci_hi": 0.0037710292301312972,
+          "n_targets": 13
+        }
+      },
+      "brier_binary": {
+        "ECRT_minus_FixedBorrow": {
+          "estimate": -0.021302115255439888,
+          "ci_lo": -0.0353813365055515,
+          "ci_hi": -0.0075934563557703135,
+          "n_targets": 13
+        },
+        "ECRT_minus_Uniform": {
+          "estimate": -0.011504815256323221,
+          "ci_lo": -0.020816220493857982,
+          "ci_hi": -0.0017469906859718793,
+          "n_targets": 13
+        },
+        "ECRT_minus_OracleFixedBorrow": {
+          "estimate": -0.007212219103060759,
+          "ci_lo": -0.013492056279995775,
+          "ci_hi": -0.0011551291153963149,
+          "n_targets": 13
+        }
+      },
+      "competence_mae": {
+        "ECRT_minus_FixedBorrow": {
+          "estimate": -0.050892305062983555,
+          "ci_lo": -0.08073573988534521,
+          "ci_hi": -0.0196927452437125,
+          "n_targets": 13
+        },
+        "ECRT_minus_Uniform": {
+          "estimate": -0.03135775102698883,
+          "ci_lo": -0.057226793650365156,
+          "ci_hi": -0.006169584086118071,
+          "n_targets": 13
+        },
+        "ECRT_minus_OracleFixedBorrow": {
+          "estimate": -0.014751786945703622,
+          "ci_lo": -0.034063604955077445,
+          "ci_hi": 0.004994714725582369,
+          "n_targets": 13
+        }
+      }
+    },
+    "same": {
+      "team_accuracy": {
+        "ECRT_minus_FixedBorrow": {
+          "estimate": 0.0008346240231773035,
+          "ci_lo": -0.000364100983296034,
+          "ci_hi": 0.0021384195634950903,
+          "n_targets": 14
+        },
+        "ECRT_minus_Uniform": {
+          "estimate": 0.009722236924011664,
+          "ci_lo": 0.0019064281546922865,
+          "ci_hi": 0.017711095767498877,
+          "n_targets": 14
+        },
+        "ECRT_minus_OracleFixedBorrow": {
+          "estimate": -0.004630281717543558,
+          "ci_lo": -0.011022968506428516,
+          "ci_hi": 0.0018180813263686812,
+          "n_targets": 14
+        }
+      },
+      "brier_binary": {
+        "ECRT_minus_FixedBorrow": {
+          "estimate": -0.01889613091910137,
+          "ci_lo": -0.028116087009318638,
+          "ci_hi": -0.009186688446802064,
+          "n_targets": 14
+        },
+        "ECRT_minus_Uniform": {
+          "estimate": -0.019406733139923693,
+          "ci_lo": -0.026899143953570563,
+          "ci_hi": -0.012404600891822335,
+          "n_targets": 14
+        },
+        "ECRT_minus_OracleFixedBorrow": {
+          "estimate": -0.005831449737042055,
+          "ci_lo": -0.014132964421575968,
+          "ci_hi": 0.0023361967362354424,
+          "n_targets": 14
+        }
+      },
+      "competence_mae": {
+        "ECRT_minus_FixedBorrow": {
+          "estimate": -0.05040758162006235,
+          "ci_lo": -0.0784466592834768,
+          "ci_hi": -0.019007268242688235,
+          "n_targets": 14
+        },
+        "ECRT_minus_Uniform": {
+          "estimate": -0.055060981128657586,
+          "ci_lo": -0.0778983552803697,
+          "ci_hi": -0.03261555802068618,
+          "n_targets": 14
+        },
+        "ECRT_minus_OracleFixedBorrow": {
+          "estimate": -0.0105823166581881,
+          "ci_lo": -0.035295801098049404,
+          "ci_hi": 0.016041831481472136,
+          "n_targets": 14
+        }
+      }
+    }
+  },
+  "provenance": {
+    "judge_protocol_hash": "aea88c2c99be006561040acf1a243c4f08cbf0bd9146c27020df1557408a4f48",
+    "judge_model_digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+    "week3_manifest": "results/real_week3_json_v1/manifest.json",
+    "test_set": "Week 3 test including its earlier viewed extension",
+    "n_cell_rows": 352,
+    "reliability_by_fold": [
+      {
+        "fold": 0,
+        "n_episodes": 560,
+        "sensitivity": 0.7982456140350878,
+        "specificity": 0.6716867469879518,
+        "p_correct_prior": 0.40714285714285714
+      },
+      {
+        "fold": 1,
+        "n_episodes": 560,
+        "sensitivity": 0.7935779816513762,
+        "specificity": 0.6988304093567251,
+        "p_correct_prior": 0.3892857142857143
+      }
+    ]
+  }
+}
