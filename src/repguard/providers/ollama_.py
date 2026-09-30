@@ -157,6 +157,7 @@ class OllamaProvider(LLMProvider):
         stop: list[str] | None = None,
         response_format: dict[str, Any] | None = None,
         think: bool | str = False,
+        num_ctx: int | None = None,
     ) -> LLMResponse:
         """Generate completion from Ollama /api/chat.
 
@@ -174,7 +175,8 @@ class OllamaProvider(LLMProvider):
             RuntimeError: If server fails, model is missing, or connection drops.
         """
         url = f"{self._base_url}/api/chat"
-        payload = self._build_payload(prompt, temperature, max_tokens, top_p, stop, think)
+        payload = self._build_payload(prompt, temperature, max_tokens, top_p, stop, think,
+                                      num_ctx)
         if response_format is not None:
             payload["format"] = response_format
 
@@ -315,6 +317,7 @@ class OllamaProvider(LLMProvider):
         top_p: float | None,
         stop: list[str] | None,
         think: bool | str,
+        num_ctx: int | None = None,
     ) -> dict[str, Any]:
         """Construct the exact /api/chat payload for answer extraction."""
         if not isinstance(think, bool) and not isinstance(think, str):
@@ -336,6 +339,10 @@ class OllamaProvider(LLMProvider):
         }
         if stop:
             options["stop"] = stop
+        if num_ctx is not None:
+            if not isinstance(num_ctx, int) or isinstance(num_ctx, bool) or num_ctx <= 0:
+                raise ValueError("num_ctx must be a positive integer")
+            options["num_ctx"] = num_ctx
 
         return {
             "model": self._model_id,

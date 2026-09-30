@@ -1,6 +1,6 @@
 # RepGuard: sửa thuật toán, đối chứng audit công bằng và pilot poisoning có mục tiêu
 
-**Ngày:** 30/09/2026. **Trạng thái:** các replay trên ledger Week 3/420 câu đã chạy xong; bốn policy direct đã đủ 560 development ID mới, policy thinking còn đang chạy với watchdog. Mọi kết quả replay dùng test Week 3 hoặc pool 420 đã được xem trước đây, nên là **phát triển**, không phải xác nhận trên holdout. Sealed holdout 420 ID chưa chạy.
+**Ngày:** 30/09/2026. **Trạng thái cập nhật:** các replay trên ledger Week 3/420 câu đã chạy xong; bốn policy direct đã đủ 560 development ID mới. Policy thinking đã tới 376/560 rồi pipeline dừng vì Modal app bị stop từ dashboard lúc 16:04 UTC; đang chờ xác nhận có triển khai lại hay không. Chi tiết trong [`repguard_modal_stop_context_diagnostic_2026-09-30.md`](repguard_modal_stop_context_diagnostic_2026-09-30.md). Mọi kết quả replay dùng test Week 3 hoặc pool 420 đã được xem trước đây, nên là **phát triển**, không phải xác nhận trên holdout. Sealed holdout 420 ID chưa chạy.
 
 ## 1. Việc đã thực hiện và ranh giới dữ liệu
 

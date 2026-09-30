@@ -51,6 +51,16 @@ def test_select_unused_does_not_reuse_week3_history():
     assert len(selected["biology"]) == 2
 
 
+def test_ollama_context_override_is_explicit_and_default_is_unchanged():
+    provider = OllamaProvider(ProviderConfig(name="ollama", model_id="qwen3:8b",
+        parameters=ProviderParams(temperature=0.0, max_tokens=64, top_p=1.0)),
+        base_url="http://localhost:11434")
+    default = provider._build_payload("question", 0.0, 8192, 1.0, None, True)
+    expanded = provider._build_payload("question", 0.0, 8192, 1.0, None, True, 8192)
+    assert "num_ctx" not in default["options"]
+    assert expanded["options"]["num_ctx"] == 8192
+
+
 def test_resume_key_includes_variant_and_protocol(tmp_path):
     ledger = tmp_path / "predictions.jsonl"
     ledger.write_text(json.dumps({"protocol_hash": "abc", "variant": "direct64",
