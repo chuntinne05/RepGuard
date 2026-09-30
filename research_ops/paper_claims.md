@@ -1,5 +1,20 @@
 # Paper Claims Tracker
 
+**Post-pipeline audit, 2026-09-30:** The Week 4/5 capability and judge pipeline
+is complete; this is an experiment-stage status, not completion of the original
+Week 4–6 research gates. See
+`docs/analysis/repguard_final_pipeline_assessment_2026-09-30.md` for the full
+evidence table and decision. The original ECRT team-outcome claim remains
+unsupported.
+
+**Pool Gate 0, 2026-09-30:** The additional three-model pool study completed
+1,260/1,260 real responses over the same 420 questions. Qwen3 8B thinking
+remains the strongest single policy (280/420); an oracle over five answers
+is 344/420 but not implementable; a five-fold subject router is 274/420.
+There is insufficient independent specialist structure for DART in this pool.
+See `docs/analysis/repguard_pool_gate_assessment_2026-09-30.md`. The newly
+frozen 420-question holdout has not been used for model or method outcomes.
+
 **Evidence audit, 2026-09-29:** The legacy Week 2/3 outcome tables and the
 eight-subject, five-question capability pilot are exploratory. They do not
 support publication claims because Week 3 model answers were simulated from
@@ -35,6 +50,21 @@ experiment entry with supporting data.
 - **Status:** EXPLORATORY A1/A2 CONTROLLED-INTERVENTION PILOT; robustness claim NOT SUPPORTED.
 - **Supporting experiment:** Dev-selected A1/A2 scenarios with actual original model answers, forced-wrong test intervention and selective false-positive history feedback. In A2 at budget 100, attacker-poisoned ECRT loses 16.7 team-accuracy points versus FixedBorrow 11.1 points.
 - **Required before an attack claim:** Multiple attackers/history samples, uncertainty intervals, actual malicious model-generated responses and unseen task pool.
+
+### C5 — Qwen3 8B thinking policy improves MMLU-Pro answer accuracy
+- **Status:** SUPPORTED WITHIN THIS MODEL/BENCHMARK/PROTOCOL; not a novel CoT finding or a validation of ECRT.
+- **Supporting experiment:** Disjoint 14-subject paired screen, 280/420 thinking vs 200/420 direct (+19.05 pp, CI [14.29, 23.81]), followed by frozen unused-dev validation, 203/280 vs 137/280 (+23.57 pp, CI [17.86, 29.29]). Same model digest and task-level pairing. Thinking used about 212.6 times the output tokens and 52.7 times the summed request time on validation; 15/280 thinking responses were truncated/invalid.
+- **Required before a broader claim:** Other model families and benchmarks, compute-matched baselines, and an untouched evaluation set for any newly selected routing policy.
+
+### C6 — Candidate-blind judge improves feedback quality
+- **Status:** EXPLORATORY ONLY; blind prompt was chosen after observing candidate-conditioned errors on the same 280 questions.
+- **Supporting experiment:** Qwen3 14B blind verdict 549/694 correct versus candidate-conditioned 514/694; paired question-cluster difference +5.04 pp, CI [1.57, 8.56]. Blind choice accuracy was 151/280. Improvement came from 35 fewer false positives; false negatives were unchanged.
+- **Required before a paper claim:** Freeze the prompt, evaluate fresh questions and another judge family, and show improved team decisions at matched cost.
+
+### C7 — New model pool supports DART method superiority
+- **Status:** NOT SUPPORTED; prespecified pool gate failed.
+- **Supporting experiment:** Three additional real-model direct outputs on 420 paired MMLU-Pro questions (1,260 new calls). Qwen3 8B thinking 280/420, Qwen3 14B direct 226/420, Gemma2 195/420, Llama3 158/420. Oracle any-of-five 344/420, but cross-fitted subject routing 274/420. The observed engineering crossover (18/30 versus 13/30) is only one weak candidate specialty.
+- **Required before a method claim:** Distinct environment/pool with reproducible complementary expertise, learned decision gain over always-thinking, simple invalid-output fallback, routing, voting, and cost-matched published methods on independent holdout plus external benchmark. Audit/reputation ablations must add realized value.
 
 ---
 

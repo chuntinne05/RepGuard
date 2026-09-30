@@ -7,6 +7,12 @@
 
 **RepGuard** studies how multi-agent LLM systems should convert imperfect historical feedback into task-relevant teammate reputation. It proposes **Evidence-Calibrated Reputation Transfer (ECRT)**, which distinguishes *whether historical evidence is trustworthy* from *whether it is relevant to the current task* before allowing that evidence to influence team decisions.
 
+### Current research status (2026-09-30)
+
+The full real-answer rerun covers **all 14 MMLU-Pro subjects** and 18,064 answers from four Ollama models. In the prespecified `related + 25% noise` condition, ECRT's team-accuracy difference against FixedBorrow is only +0.02 percentage points (95% CI [−0.04, +0.10]); ECRT superiority is **not established**. A separate paired Qwen3 8B study found a +23.57-point thinking-policy accuracy gain on 280 unused dev questions, with about 213 times the output tokens. A new 1,260-response real-model pool study found an oracle upper reference of 344/420 but a cross-fitted subject router of 274/420 versus 280/420 for always thinking. The prespecified pool gate for DART **failed**; the new sealed holdout remains unused.
+
+See the [full evidence audit](docs/analysis/repguard_final_pipeline_assessment_2026-09-30.md), the [pool gate assessment](docs/analysis/repguard_pool_gate_assessment_2026-09-30.md), the [next study protocol](docs/analysis/repguard_next_study_registered_plan_2026-09-30.md), and the [HistRepEval benchmark card draft](docs/analysis/histrepeval_benchmark_card_draft_2026-09-30.md). DART remains a conditional method hypothesis, not a validated result.
+
 ### Key Research Questions
 
 1. How do feedback sparsity, noise, and evaluator error affect learned reputation calibration?
@@ -67,7 +73,7 @@ This will:
 
 ### Local Model Capability Audit
 
-RepGuard can compare Ollama models installed on the same machine using the real MMLU-Pro benchmark. The example config evaluates 80 shared train/calibration questions per model across eight subjects. It writes a capability matrix and a heterogeneity-gate decision.
+RepGuard can compare Ollama models installed on the same machine using the real MMLU-Pro benchmark. The **example config** evaluates 80 shared train/calibration questions per model across eight subjects; the completed study described above uses a separate 14-subject protocol. The example writes a capability matrix and a heterogeneity-gate decision.
 
 ```bash
 python -m repguard.audit.capability_audit --config configs/capability_audit.ollama.yaml

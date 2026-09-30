@@ -1,5 +1,17 @@
 # RepGuard Research Log
 
+## 2026-09-30 — Post-Week-5 method gate, active real-model pool study
+
+- Week 5 pipeline completed before this entry: 840 direct/thinking screen answers, 280 blind-judge calls, and 560 direct/thinking validation answers, all real Ollama/Modal requests. Interpretation and limitations are in `docs/analysis/repguard_final_pipeline_assessment_2026-09-30.md`.
+- Froze 560 new development IDs and 420 sealed holdout IDs from previously unused MMLU-Pro train/calibration questions across all 14 subjects. Protocol SHA-256 `0bd154554e845ca472f73a5c113985a115b4f1a55322092909d798e45b326d1d`. The sealed holdout must stay untouched until method, baselines, attack policy, and primary endpoint are frozen.
+- Completed and audited a real **1,260/1,260-response** pool overlap study on 420 previously screened questions, adding Gemma2, Llama3 8B, and Qwen3 14B direct outputs to the existing Qwen3 8B direct/thinking pair. Protocol SHA-256 `f4d3b237728c0b0463c49e47673793e9e1290903c187f0741dc533f51e4c7308`; ledger SHA-256 `81319c132b75d7822027d943fe67c05c8c616c366e57ea46473d0b0289da0437`. New model correct counts: Gemma2 195/420, Llama3 158/420, Qwen3 14B 226/420, versus Qwen3 8B thinking 280/420. No new-model invalid output.
+- Oracle any-of-five reaches 344/420 but uses test gold and is not a method. Five-fold out-of-fold subject routing learns from other task IDs and reaches 274/420 versus always-thinking 280/420; 95% subject-stratified paired bootstrap CI of the accuracy difference is [−3.57, +0.71] percentage points. Engineering shows a Qwen3 14B direct advantage of 18/30 versus 13/30 thinking, but no second independently clear specialist. Registered Gate 0 for DART on this pool **failed**. Keep the 420-question sealed holdout untouched; do not search method variants on it. Full assessment: `docs/analysis/repguard_pool_gate_assessment_2026-09-30.md`.
+- Ran exploratory replay of actual Week 4/5 direct/thinking outputs: at 50% thinking quota, question feature router 181/280, subject-only 185/280, direct-first 186/280, always thinking 203/280. The Week 5 dev set has been viewed; these are development findings, not paper confirmation.
+- Found the decision-sensitivity bottleneck of ECRT: with real judge feedback, reputation changes about 0.10 on average relative to FixedBorrow, while selected answers differ on only 37 or 41 of 2,416 already viewed Week 3 test questions across two folds. This is a HistRepEval metric and an argument against claiming decision improvement from calibration alone.
+- Updated prior-art screen with BEST-Route (ICML 2025), Budgeted Act-or-Defer (2026), Share the Judge/Learn the Deferral (2026), TRUST-Bench/VISTA-Guard (2026), and CP-Router (AAAI 2026). Routing, local reliability bounds, audited deferral, and feedback poisoning each have direct prior art. DART requires a narrower, empirically demonstrated contribution; there is no guaranteed A* method win.
+
+---
+
 ## 2026-09-29 — Re-audit of legacy Week 3 and real-data rerun
 
 - The 2026-09-28 Week 3 `GO-B`/`COMPLETE` entry below is **superseded**. Its Q×T and attack outputs were generated from simulated Bernoulli correctness based on a very small capability pilot, rather than per-question model answers. The earlier audit also used an overly broad task-relatedness mapping and did not establish a paired target-domain comparison. Those outputs are retained as exploratory engineering artifacts only.
