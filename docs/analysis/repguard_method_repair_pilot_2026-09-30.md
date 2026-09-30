@@ -1,6 +1,6 @@
 # RepGuard: sửa thuật toán, đối chứng audit công bằng và pilot poisoning có mục tiêu
 
-**Ngày:** 30/09/2026. **Trạng thái:** các replay trên ledger Week 3/420 câu đã chạy xong; suy luận thật trên 560 development ID mới đã bắt đầu. Mọi kết quả replay dùng test Week 3 hoặc pool 420 đã được xem trước đây, nên là **phát triển**, không phải xác nhận trên holdout. Sealed holdout 420 ID chưa chạy.
+**Ngày:** 30/09/2026. **Trạng thái:** các replay trên ledger Week 3/420 câu đã chạy xong; bốn policy direct đã đủ 560 development ID mới, policy thinking còn đang chạy với watchdog. Mọi kết quả replay dùng test Week 3 hoặc pool 420 đã được xem trước đây, nên là **phát triển**, không phải xác nhận trên holdout. Sealed holdout 420 ID chưa chạy.
 
 ## 1. Việc đã thực hiện và ranh giới dữ liệu
 
@@ -56,10 +56,32 @@ Endpoint Modal `ollama-server` đã deploy và scale-to-zero khi không có requ
 
 Hai phép đánh giá mới đã viết trước khi xem outcome development: (1) selector cũ train trên 420, test trên 560 mới, tính đầy đủ chi phí gọi thêm Qwen14; (2) `AuditedECRT` so với ECRT, FixedBorrow, AuditOnly và FixedPlusAudit trên đội ba direct model chung với history cũ, dưới clean và attack Qwen0.6B. Mỗi phép yêu cầu đủ các variant liên quan và báo CI ghép cặp theo target; development mới vẫn **không phải sealed holdout cuối**.
 
+Một router bổ sung `evaluate_fresh_dev_router.py` cũng đã được cố định **trước khi có đủ output thinking 560**: ridge λ=10 huấn luyện trên toàn bộ 420 câu cũ, cùng feature nhìn thấy sau Qwen8 thinking nhưng *trước* Qwen14; gọi Qwen14 nếu estimated accuracy delta >0 hoặc thinking invalid. Đây là policy triển khai được theo chi phí có điều kiện, khác selector cũ cần biết hai output có bất đồng. Replay 5-fold trên pool cũ đã xem: thinking **280/420**, fallback invalid **286/420 với 24 call Qwen14**, router **285/420 với 104 call**, 16 rescue và 11 harm; chi phí Qwen14 router 728 output token/117,35 s request so 2.940 token/554,76 s nếu gọi toàn bộ. **Replay không qua gate so fallback**; kết quả 560 mới vẫn được chấm theo code đã khóa để biết có replication hay không. Không mở holdout để tối ưu threshold.
+
 **Gate phát triển được ghi trước kết quả 560:** với poisoning agent yếu ở cặp môn `related`, cả `AuditedECRT − FixedPlusAudit` **và** `AuditedECRT − AuditOnly` phải có CI bootstrap theo target nằm trên 0; đồng thời `AuditedECRT − FixedPlusAudit` ở clean không được thấp hơn 1 điểm accuracy quan sát. Đây là tiêu chí chọn xem có đáng chuẩn bị một phép xác nhận holdout hay không, **không phải kiểm định paper cuối**. Với selector, phần gain so fallback invalid phải ít nhất 2 điểm accuracy quan sát để biện minh việc gọi Qwen14 trên mọi câu; nếu không thì chỉ giữ fallback như baseline vận hành. Các ngưỡng này là quyết định quản trị compute, không phải bảo đảm thống kê.
 
 ## 6. Quyết định nghiên cứu hiện tại
 
-Nhánh **phòng poisoning có mục tiêu bằng audit theo agent** có tín hiệu đáng kiểm tra trên dữ liệu mới. Nhánh **selector theo câu trên pool MMLU-Pro generalist** chưa có lợi ích đủ lớn để trả chi phí gọi thêm model. Chưa thể claim DART thắng hay đủ bài A*. Sau development mới, chỉ mở holdout khi đã khóa một primary comparison, budget gold/audit/inference công bằng và một đối chứng mạnh; nếu development không lặp lại tín hiệu, dừng nhánh phương pháp trên pool này.
+### Kết quả mới trên 560 development ID (đã chấm sau khi khóa phương pháp)
+
+`analyze_real_dev_pool.py` kiểm tra 2.240/2.240 output direct: 0 invalid và không có dòng lỗi. Năng lực trực tiếp trên 560 câu: Qwen3 8B **277**, Qwen3 14B **297**, Gemma2 **236**, Qwen3 0.6B **123** câu đúng. Qwen3 8B thinking mới đang chạy; không dùng 14 pilot để suy ra accuracy.
+
+Phép `evaluate_fresh_dev_audit.py` dùng đội ba direct agent có history cũ (Qwen8, Gemma2, Qwen0.6). So trên **cùng 13 môn mục tiêu × 40 câu = 520 câu**. Đơn vị bootstrap là môn mục tiêu; source và ba attack seed được trung bình trong môn trước. Attack tiếp tục chỉ làm giả feedback của Qwen0.6B trên output lịch sử thật.
+
+| Phương pháp | Related clean | Related targeted attack |
+|---|---:|---:|
+| ECRT cũ | 46,25% | 39,78% |
+| Fixed + cùng gold audit | 46,06% | 43,07% |
+| AuditOnly | 45,03% | 45,03% |
+| AuditedECRT theo agent | 45,67% | **45,67%** |
+| **Qwen3 14B direct đơn lẻ** | **53,08%** | **53,08%** |
+
+ECRT cũ giảm **6,47 điểm** khi bị targeted feedback attack, CI bootstrap **[−8,79; −4,24]**; AuditedECRT không đổi. Dưới attack, AuditedECRT hơn Fixed+Audit **2,61 điểm**, CI **[+0,44; +4,92]**, nhưng chỉ hơn AuditOnly **0,64 điểm**, CI **[−0,32; +1,73]**. So Qwen14 đơn lẻ, AuditedECRT kém **7,40 điểm**, CI **[−11,06; −3,94]**. Đây là replication thực trên target ID mới của cơ chế *phòng attack so ECRT cũ*, đồng thời là bằng chứng **không đạt** mục tiêu phương pháp team accuracy trên pool này. Dữ liệu vẫn là development và attack feedback theo quy tắc; chưa kiểm chứng trên holdout/external benchmark.
+
+So sánh Qwen14 đơn lẻ được thêm vào bảng phân tích **sau khi direct ledger đã đủ**, như một baseline mô tả. Yêu cầu đối chiếu với solver đơn mạnh nhất đã có trong kế hoạch nghiên cứu trước đó, nhưng hàng và CI này không thuộc hai phép so primary của gate đã khóa ngay trước lượt development; không dùng nó để điều chỉnh phương pháp.
+
+Trong toàn bộ 560 request development, Qwen14 direct dùng **3.926 output token** và **650,73 s** thời gian request cộng dồn; ba thành phần direct của team dùng tổng **14.958 output token** và **1.468,18 s**. Đây là chi phí đo trên Modal T4 với warm-up/server state có thể khác nhau, không phải USD; nhưng team hiện cũng không có lợi thế chi phí quan sát để bù cho accuracy thấp hơn.
+
+**Quyết định Gate audit trên development: STOP.** Điều kiện đã khóa yêu cầu hơn cả Fixed+Audit lẫn AuditOnly dưới attack; CI so AuditOnly chứa 0. Baseline solver đơn còn mạnh hơn rõ. Không mở sealed holdout để tiếp tục tìm biến thể vote/threshold trên pool này. Nhánh **selector theo câu trên pool MMLU-Pro generalist** cũng chưa có lợi ích đủ lớn trong replay 420 để trả chi phí gọi thêm model; vẫn chờ phép đánh giá thinking trên 560 ID đã khóa. Nếu selector cũng không qua gate, chuyển trọng tâm sang môi trường agent tương tác hoặc HistRepEval, thay vì tiếp tục thay ngưỡng trên MMLU-Pro.
 
 **Tái lập:** `.venv/bin/python analyze_audit_budget_replay.py`, `.venv/bin/python analyze_targeted_attack_replay.py`, `.venv/bin/python analyze_contextual_selector.py`. Các JSON đầu ra trong `results/` bị Git ignore; mọi bảng trên lấy từ ledger real Week 3 hoặc pool 420 và các script này. Test hiện tại: **202/202** suite qua, gồm core audited ECRT và protocol runner mới.

@@ -33,7 +33,8 @@ OLD = Path("results/real_week3_json_v1")
 AGENTS = ("qwen3-8b", "gemma2", "qwen3-0.6b")
 NEW_VARIANTS = {"qwen3-8b": "qwen3_8b_direct", "gemma2": "gemma2_direct",
                 "qwen3-0.6b": "qwen3_06b_direct"}
-METHODS = ("FixedBorrow", "ECRT", "AuditOnly", "FixedPlusAudit", "AuditedECRT")
+METHODS = ("FixedBorrow", "ECRT", "AuditOnly", "FixedPlusAudit",
+           "AuditedECRT", "SingleQwen14Direct")
 CONDITIONS = ("clean", "targeted_false_positive_040")
 
 
@@ -81,7 +82,7 @@ def summarize(rows):
                       (target, relation, CONDITIONS[0], method) in avg}
             effects[relation][f"{method}_attack_minus_clean"] = cluster_bootstrap(
                 values, n_boot=5000)
-        for baseline in ("ECRT", "FixedPlusAudit", "AuditOnly"):
+        for baseline in ("ECRT", "FixedPlusAudit", "AuditOnly", "SingleQwen14Direct"):
             values = {target: avg[target, relation, CONDITIONS[1], "AuditedECRT"]
                       - avg[target, relation, CONDITIONS[1], baseline]
                       for target in targets if
@@ -147,10 +148,14 @@ def run() -> dict:
                     methods["AuditedECRT"] = AuditedECRTReputation(transfer).fit(
                         history, calibration)
                     for method in METHODS:
-                        scores = {agent: methods[method].score(agent, target)
-                                  for agent in AGENTS}
-                        correct = sum(choose(tid, answers[tid], scores, method) == gold[tid]
-                                      for tid in ids)
+                        if method == "SingleQwen14Direct":
+                            correct = sum(new_rows["qwen3_14b_direct", tid]["answer"]
+                                          == gold[tid] for tid in ids)
+                        else:
+                            scores = {agent: methods[method].score(agent, target)
+                                      for agent in AGENTS}
+                            correct = sum(choose(tid, answers[tid], scores, method) == gold[tid]
+                                          for tid in ids)
                         rows.append({"target": target, "source": source,
                                      "relation": relation, "seed": seed,
                                      "condition": condition, "method": method,
