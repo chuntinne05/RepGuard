@@ -1,0 +1,27 @@
+# HistRepEval trên AppWorld — giao thức khảo sát khả thi trước khi chạy lớn
+
+**Ngày:** 30/09/2026. **Trạng thái:** kế hoạch pilot, **chưa có kết quả AppWorld**. MMLU-Pro pool gate đã dừng DART: [`repguard_pool_gate_assessment_2026-09-30.md`](repguard_pool_gate_assessment_2026-09-30.md).
+
+## Vì sao đổi môi trường
+
+MMLU-Pro hiện chỉ có model trả lời trắc nghiệm độc lập. Qwen3 8B thinking áp đảo pool generalist; reputation khác đi khoảng 0,10 có thể hầu như không đổi đáp án. Một nghiên cứu về *lịch sử feedback ảnh hưởng quyết định agent* cần các hành động nhiều bước, phản hồi từ công cụ và các agent/policy có lỗi bổ sung đo được. [AppWorld (ACL 2024)](https://aclanthology.org/2024.acl-long.850/) có 750 task tương tác trên chín ứng dụng, 457 API và chấm bằng kiểm tra trạng thái. Đây là một ứng viên phù hợp về mặt cấu trúc, **chưa biết** có qua gate năng lực hay không.
+
+## Giới hạn novelty và đối chứng bắt buộc
+
+[Xia & Wang 2026](https://arxiv.org/abs/2606.14200) đã xét skill-conditional trust và laundering; [TRUST-Bench/VISTA-Guard 2026](https://arxiv.org/abs/2605.17453) đã xét tool feedback poisoning và final-action risk; [Budgeted Act-or-Defer 2026](https://arxiv.org/abs/2606.29654) đã xét local reliability bound và deferral; [Share the Judge/Learn the Deferral 2026](https://arxiv.org/abs/2607.27984) đã xét audit deferral. Vì vậy phải chứng minh riêng **giá trị của audit lịch sử theo nguồn và skill đối với lựa chọn hành động cuối**, không tuyên bố routing/trust/defer/audit là mới.
+
+## Pilot tuần tiếp theo: quyết định có triển khai hay dừng
+
+1. Cài bản AppWorld cố định trong môi trường tách riêng; chạy `appworld verify` và tải data bằng lệnh chính thức. Chỉ dùng `train`/`dev` cho khảo sát, không mở test để chọn method. Ghi phiên bản package, checksum data, thiết lập môi trường. Không đưa task/solution/trace giải mã lên Git nếu quy định của [AppWorld repo](https://github.com/StonyBrookNLP/appworld) yêu cầu bundle mã hóa.
+2. **Gate A — complementarity:** output baseline chính thức chỉ có test nên không dùng để chọn policy. Chọn hai policy có thể chạy trong cùng harness từ tài liệu/code đã công bố, khóa model, giới hạn bước/token, và chạy pilot task **train** ghép cặp mới. Đòi ít nhất hai vùng task/app/skill có lợi thế khác nhau, với CI ghép cặp; nếu một policy áp đảo, dừng method ở môi trường đó.
+3. **Gate B — feedback thật:** trích lịch sử tool result/step failure trên task train; tách feedback quan sát, evaluator/LLM judge, và gold state-check. Gold chỉ dùng để audit với budget công khai. Kiểm tra có đủ false positives, false negatives, sparsity và chuyển skill để reputation estimation thực sự có việc phải làm. Không gán correctness của một step bằng outcome cuối khi nhiều nguyên nhân khác nhau.
+4. **Gate C — tác động quyết định:** trên dev ID không dùng để học, so best-single, random/subject/app router, feedback-blind, skill-conditional trust, FixedBorrow/ECRT, always-audit, random-audit và decision-aware audit ở cùng ngân sách. Primary là task success hoặc final-action utility đã khóa, tính cả chi phí LLM/tool/audit; secondary gồm số hành động đổi, rescue thực tế, calibration, worst-app và under targeted feedback poisoning. Trường hợp lỗi/truncation vẫn trong mẫu.
+5. Chỉ khi A–C qua, mới thiết kế DART phiên bản AppWorld và mở test/benchmark ngoài với protocol, attack và baseline đã khóa. Nếu không qua, HistRepEval giữ vai trò nghiên cứu đo lường và kết quả âm; không sửa liên tục method sau khi xem test.
+
+## Tình trạng thực thi
+
+Đã cài `appworld==0.1.3.post1` vào `/private/tmp/repguard_appworld_env`, giải nén package và tải bundle data chính thức SHA-256 `fd9f9608c2ec71ed0ac25c3633a738b9129a318a129e31230425b9188e508250`. Dữ liệu nằm trong `results/appworld_external_v1/`, là thư mục Git ignore. `appworld verify` thoát mã 0; API đọc được **90 train, 57 dev, 168 test_normal, 417 test_challenge** task ID trong bản cài này. Đã mở một world train và chạy `print('ready')` qua `world.execute`, chưa chạy agent/model hay chấm task outcome. Con số 750 task ở phần mở đầu là mô tả trong bài AppWorld gốc; số ID liệt kê ở bản package hiện tại là 732, nên phải kiểm tra version/split trước khi so với bài gốc.
+
+Bundle baseline outputs chính thức SHA-256 `1a80df83d1061133da8952714cf0d20c7867d49201e7fea50909f323d77609af` chỉ có **28 thư mục `test_normal`/`test_challenge`**, không có train/dev. Đã kiểm tra **tên thư mục**, không đọc score/trace test để chọn method. Các thư mục test đã giải nén được xóa khỏi working directory để tránh truy cập nhầm; bundle mã hóa còn trong `.tmp/` nội bộ. Do đó Gate A cần **chạy baseline mới trên train/dev**, không thể dùng output chính thức làm pilot phát triển. Chưa có kết quả bổ trợ agent. Sealed holdout MMLU-Pro 420 câu vẫn chưa dùng.
+
+**Ranh giới gold trong adapter:** đối tượng `world.task` của AppWorld có trường `ground_truth` ngay khi mở task. Agent policy phải nhận một projection chỉ gồm instruction, API docs được phép, thời gian và trạng thái tool; không được truyền cả object, `vars(world.task)`, hay exception chứa gold vào prompt/ledger agent. Evaluator giữ `ground_truth` tách biệt. Đây là gate kỹ thuật trước bất cứ baseline chạy thật nào.
