@@ -80,7 +80,9 @@ def paired_summary(rows):
             comparisons += [("AuditedECRT", "targeted_false_positive_040",
                              "ECRT", "targeted_false_positive_040"),
                             ("AuditedECRT", "targeted_false_positive_040",
-                             "FixedPlusAudit", "targeted_false_positive_040")]
+                             "FixedPlusAudit", "targeted_false_positive_040"),
+                            ("AuditedECRT", "targeted_false_positive_040",
+                             "AuditOnly", "targeted_false_positive_040")]
             for a, ac, b, bc in comparisons:
                 values = {target: avg[attacker, target, relation, ac, a]
                           - avg[attacker, target, relation, bc, b]

@@ -36,6 +36,8 @@ Các số sau là team accuracy trung bình theo **target subject** ở nhóm `r
 
 Trong điều kiện attack agent yếu, `AuditedECRT − ECRT cũ = +4,02 điểm`, CI bootstrap **[+2,54; +5,55]**; so `FixedPlusAudit`, **+1,51 điểm**, CI **[+0,57; +2,59]**. Đây là **cơ chế phòng poisoning có tiềm năng**, nhưng là corruption feedback bằng quy tắc trên Week 3 test đã xem; không phải attacker sinh câu trả lời mới, không chứng minh chống mọi agent, mọi attack hoặc hiệu quả clean tốt hơn. Attack vào agent mạnh thậm chí có thể tăng vote cho solver mạnh, nên effect phụ thuộc năng lực attacker.
 
+Đối chứng `AuditOnly` vẫn rất mạnh: dưới attack agent yếu, `AuditedECRT − AuditOnly` ở `related` chỉ **+0,55 điểm**, CI **[−0,04; +1,27]**, còn ở `same` AuditedECRT **kém 0,64 điểm**, CI **[−1,08; −0,22]**. Do đó replay chưa chứng minh phần feedback history của phương pháp mới đem thêm lợi ích so chỉ dùng gold audit.
+
 ## 4. Selector theo câu trên pool thinking thật
 
 Một ridge selector cố định (`λ=10`) dùng subject, độ dài câu/đáp án, độ dài output thinking và dấu hiệu số; chỉ học target rescue/harm từ bốn fold khác trong pool 420 đã xem. Nó chỉ chọn giữa Qwen3 8B thinking và Qwen3 14B direct **sau khi cả hai đã trả lời**, nên phải tính chi phí gọi cả hai trên tất cả 420 câu.
@@ -54,7 +56,7 @@ Endpoint Modal `ollama-server` đã deploy và scale-to-zero khi không có requ
 
 Hai phép đánh giá mới đã viết trước khi xem outcome development: (1) selector cũ train trên 420, test trên 560 mới, tính đầy đủ chi phí gọi thêm Qwen14; (2) `AuditedECRT` so với ECRT, FixedBorrow, AuditOnly và FixedPlusAudit trên đội ba direct model chung với history cũ, dưới clean và attack Qwen0.6B. Mỗi phép yêu cầu đủ các variant liên quan và báo CI ghép cặp theo target; development mới vẫn **không phải sealed holdout cuối**.
 
-**Gate phát triển được ghi trước kết quả 560:** với poisoning agent yếu ở cặp môn `related`, `AuditedECRT − FixedPlusAudit` phải có CI bootstrap theo target nằm trên 0, đồng thời `AuditedECRT − FixedPlusAudit` ở clean không được thấp hơn 1 điểm accuracy quan sát. Đây là tiêu chí chọn xem có đáng chuẩn bị một phép xác nhận holdout hay không, **không phải kiểm định paper cuối**. Với selector, phần gain so fallback invalid phải ít nhất 2 điểm accuracy quan sát để biện minh việc gọi Qwen14 trên mọi câu; nếu không thì chỉ giữ fallback như baseline vận hành. Các ngưỡng này là quyết định quản trị compute, không phải bảo đảm thống kê.
+**Gate phát triển được ghi trước kết quả 560:** với poisoning agent yếu ở cặp môn `related`, cả `AuditedECRT − FixedPlusAudit` **và** `AuditedECRT − AuditOnly` phải có CI bootstrap theo target nằm trên 0; đồng thời `AuditedECRT − FixedPlusAudit` ở clean không được thấp hơn 1 điểm accuracy quan sát. Đây là tiêu chí chọn xem có đáng chuẩn bị một phép xác nhận holdout hay không, **không phải kiểm định paper cuối**. Với selector, phần gain so fallback invalid phải ít nhất 2 điểm accuracy quan sát để biện minh việc gọi Qwen14 trên mọi câu; nếu không thì chỉ giữ fallback như baseline vận hành. Các ngưỡng này là quyết định quản trị compute, không phải bảo đảm thống kê.
 
 ## 6. Quyết định nghiên cứu hiện tại
 
