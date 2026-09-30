@@ -131,7 +131,7 @@ class ECRTReputation(BaseReputation):
         no_reliability: Raw feedback, no Bayesian inversion
         no_uncertainty: Use posterior mean instead of lower credible bound
         oracle_f:       Oracle feedback + estimated transfer (diagnostic)
-        oracle_ft:      Oracle feedback + oracle transfer (upper bound)
+        oracle_ft:      Oracle feedback + explicitly supplied oracle transfer
     """
 
     def __init__(
@@ -142,8 +142,14 @@ class ECRTReputation(BaseReputation):
         prior_alpha: float = 1.0,
         prior_beta: float = 1.0,
         uncertainty_mode: str = "lower_bound",
+        oracle_transfer_estimator: TransferEstimator | None = None,
     ) -> None:
+        if uncertainty_mode not in ("lower_bound", "mean"):
+            raise ValueError("uncertainty_mode must be 'lower_bound' or 'mean'")
+        if mode == "no_uncertainty":
+            uncertainty_mode = "mean"
         self.transfer_estimator = transfer_estimator or TransferEstimator()
+        self.oracle_transfer_estimator = oracle_transfer_estimator
         self.reliability_params = reliability_params or FeedbackReliabilityParams()
         self.reliability_estimator = FeedbackReliabilityEstimator()
         self.mode = mode
@@ -188,7 +194,23 @@ class ECRTReputation(BaseReputation):
     def _compute_tau(self, source_domain: str, target_domain: str) -> float:
         if self.mode == "no_transfer":
             return 1.0
+        if self.mode == "oracle_ft":
+            if self.oracle_transfer_estimator is None:
+                raise ValueError(
+                    "oracle_ft requires an explicit oracle_transfer_estimator; "
+                    "the metadata taxonomy is not an oracle"
+                )
+            return self.oracle_transfer_estimator.estimate(source_domain, target_domain).tau
         return self.transfer_estimator.estimate(source_domain, target_domain).tau
+
+    def decision_weight(self, score: ReputationScore) -> float:
+        """Select the influence statistic specified by this ablation.
+
+        Callers that directly read ``score.mean`` or ``score.lower_bound`` must
+        make their own explicit choice; ``uncertainty_mode`` cannot alter either
+        posterior summary itself.
+        """
+        return score.mean if self.uncertainty_mode == "mean" else score.lower_bound
 
     def _compute_p_correct(self, episode: EpisodeRecord) -> tuple[float, float]:
         if self.mode in ("oracle_f", "oracle_ft"):
@@ -216,6 +238,7 @@ class ECRTReputation(BaseReputation):
 def build_ecrt_variants(
     transfer_estimator: TransferEstimator | None = None,
     reliability_params: FeedbackReliabilityParams | None = None,
+    oracle_transfer_estimator: TransferEstimator | None = None,
 ) -> dict[str, ECRTReputation]:
     """Build all Week 4 ablation variants.
 
@@ -230,5 +253,7 @@ def build_ecrt_variants(
         "ECRT-noReliab":   ECRTReputation(te, rp, mode="no_reliability", uncertainty_mode="lower_bound"),
         "ECRT-noUncert":   ECRTReputation(te, rp, mode="ecrt",           uncertainty_mode="mean"),
         "ECRT-oracleF":    ECRTReputation(te, rp, mode="oracle_f",       uncertainty_mode="lower_bound"),
-        "ECRT-oracleFT":   ECRTReputation(te, rp, mode="oracle_ft",      uncertainty_mode="lower_bound"),
+        "ECRT-oracleFT":   ECRTReputation(
+            te, rp, mode="oracle_ft", uncertainty_mode="lower_bound",
+            oracle_transfer_estimator=oracle_transfer_estimator),
     }

@@ -93,6 +93,32 @@ class TestFeedbackReliabilityEstimator:
 
 
 class TestECRTReputation:
+    def test_uncertainty_ablation_selects_the_requested_weight(self):
+        episode = _make_episode(observed_feedback=1.0)
+        params = FeedbackReliabilityParams(sensitivity=1.0, specificity=1.0)
+        full = ECRTReputation(reliability_params=params, uncertainty_mode="lower_bound").fit([episode])
+        ablated = ECRTReputation(reliability_params=params, mode="no_uncertainty").fit([episode])
+        full_score = full.score("agent-1", "biology")
+        ablated_score = ablated.score("agent-1", "biology")
+        assert ablated.decision_weight(ablated_score) == pytest.approx(ablated_score.mean)
+        assert full.decision_weight(full_score) == pytest.approx(full_score.lower_bound)
+        assert full.decision_weight(full_score) < ablated.decision_weight(ablated_score)
+
+    def test_oracle_transfer_must_be_supplied_explicitly(self):
+        episode = _make_episode(domain="biology")
+        missing = ECRTReputation(mode="oracle_ft").fit([episode])
+        with pytest.raises(ValueError, match="oracle_transfer_estimator"):
+            missing.score("agent-1", "biology")
+        supplied = ECRTReputation(
+            mode="oracle_ft", oracle_transfer_estimator=TransferEstimator(
+                tau_same=0.25)).fit([episode])
+        score = supplied.score("agent-1", "biology")
+        assert score.evidence_count == pytest.approx(0.25)
+
+    def test_invalid_uncertainty_mode_is_rejected(self):
+        with pytest.raises(ValueError, match="uncertainty_mode"):
+            ECRTReputation(uncertainty_mode="unclear")
+
     def test_unfitted_score_raises(self):
         ecrt = ECRTReputation()
         with pytest.raises(RuntimeError, match="called before fit"):
