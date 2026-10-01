@@ -43,7 +43,7 @@ experiment entry with supporting data.
 
 ### C3 — HistRepEval evaluation protocol
 - **Status:** WORKING REAL-DATA PROTOCOL; broader benchmark contribution still unvalidated.
-- **Supporting experiment:** 14-subject MMLU-Pro split manifest, four verified Ollama model digests, 18,064 raw per-question answers, ledger SHA-256 in report, paired target design, capability/attack/ablation artefacts; 183/183 repository tests pass.
+- **Supporting experiment:** 14-subject MMLU-Pro split manifest, four verified Ollama model digests, 18,064 raw per-question answers, ledger SHA-256 in report, paired target design, capability/attack/ablation artefacts; 204/204 repository tests passed on 2026-10-01.
 - **Required before a benchmark claim:** Second dataset/pool, release-ready documentation and independent rerun. Legacy `run_week2.py` simulation is excluded.
 
 ### C4 — Strategic stress-test analysis
@@ -53,7 +53,7 @@ experiment entry with supporting data.
 
 ### C5 — Qwen3 8B thinking policy improves MMLU-Pro answer accuracy
 - **Status:** SUPPORTED WITHIN THIS MODEL/BENCHMARK/PROTOCOL; not a novel CoT finding or a validation of ECRT.
-- **Supporting experiment:** Disjoint 14-subject paired screen, 280/420 thinking vs 200/420 direct (+19.05 pp, CI [14.29, 23.81]), followed by frozen unused-dev validation, 203/280 vs 137/280 (+23.57 pp, CI [17.86, 29.29]). Same model digest and task-level pairing. Thinking used about 212.6 times the output tokens and 52.7 times the summed request time on validation; 15/280 thinking responses were truncated/invalid.
+- **Supporting experiment:** Disjoint 14-subject paired screen, 280/420 thinking vs 200/420 direct (+19.05 pp, CI [14.29, 23.81]), followed by frozen unused-dev validation, 203/280 vs 137/280 (+23.57 pp, CI [17.86, 29.29]). The later 560-ID development pool gives 372/560 thinking vs 277/560 direct (+16.96 pp, stratified-question bootstrap CI [+12.86, +21.07]); all 40 invalid thinking outputs hit the 8,192-token length cap. Same model digest and task-level pairing. The two policies use different output caps, so the comparisons establish a policy/budget effect, not the isolated effect of one `think` flag. See `results/real_dev_pool_v1/capability_analysis.json` and `analyze_real_dev_capability.py`.
 - **Required before a broader claim:** Other model families and benchmarks, compute-matched baselines, and an untouched evaluation set for any newly selected routing policy.
 
 ### C6 — Candidate-blind judge improves feedback quality
@@ -63,8 +63,13 @@ experiment entry with supporting data.
 
 ### C7 — New model pool supports DART method superiority
 - **Status:** NOT SUPPORTED; prespecified pool gate failed.
-- **Supporting experiment:** Three additional real-model direct outputs on 420 paired MMLU-Pro questions (1,260 new calls). Qwen3 8B thinking 280/420, Qwen3 14B direct 226/420, Gemma2 195/420, Llama3 158/420. Oracle any-of-five 344/420, but cross-fitted subject routing 274/420. The observed engineering crossover (18/30 versus 13/30) is only one weak candidate specialty.
+- **Supporting experiment:** Three additional real-model direct outputs on 420 paired MMLU-Pro questions (1,260 new calls). Qwen3 8B thinking 280/420, Qwen3 14B direct 226/420, Gemma2 195/420, Llama3 158/420. Oracle any-of-five 344/420, but cross-fitted subject routing 274/420. The observed engineering crossover (18/30 versus 13/30) is only one weak candidate specialty. On 560 fresh development IDs, a selector requiring Qwen14 on every question reached 396/560 versus 388/560 for the simple invalid-output fallback (+8 questions; CI for accuracy difference [0, +2.86] pp), below its prespecified +12-question gate. A pre-call router reached the same 388/560 as fallback while making 172 Qwen14 calls versus 40 fallback calls. These are development outcomes, not sealed-holdout confirmation.
 - **Required before a method claim:** Distinct environment/pool with reproducible complementary expertise, learned decision gain over always-thinking, simple invalid-output fallback, routing, voting, and cost-matched published methods on independent holdout plus external benchmark. Audit/reputation ablations must add realized value.
+
+### C8 — Agent-specific gold audit protects against targeted feedback poisoning
+- **Status:** SUPPORTED ONLY FOR THE TESTED DEVELOPMENT INTERVENTION; incremental decision benefit over AuditOnly and strongest single solver NOT SUPPORTED.
+- **Supporting experiment:** On 520 fresh development questions under targeted feedback poisoning of Qwen3 0.6B, old ECRT fell from 46.25% clean to 39.78% attacked, while AuditedECRT stayed at 45.67%. Under attack AuditedECRT exceeded FixedPlusAudit by 2.61 percentage points (target-cluster CI [+0.44, +4.91]), but exceeded AuditOnly by only 0.64 points (CI [−0.32, +1.73]); Qwen3 14B direct scored 53.08% on the same questions. See `docs/analysis/repguard_method_repair_pilot_2026-09-30.md`.
+- **Required before a strong method claim:** Demonstrate added final-decision value from historical feedback beyond equal-budget gold audit and a strong single solver on a new pool and external task environment.
 
 ---
 

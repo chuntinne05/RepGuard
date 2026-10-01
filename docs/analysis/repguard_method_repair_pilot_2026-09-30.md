@@ -1,5 +1,7 @@
 # RepGuard: sửa thuật toán, đối chứng audit công bằng và pilot poisoning có mục tiêu
 
+> **Bản ghi lịch sử ngày 30/09.** Các câu nói rằng thinking 376/560, Modal đang dừng hoặc selector còn chờ kết quả phản ánh thời điểm viết, không phải trạng thái hiện tại. Pipeline đã phục hồi và hoàn tất 2.800/2.800 ngày 01/10; selector và audit đều không qua gate. Xem [`repguard_dev_pool_complete_2026-10-01.md`](repguard_dev_pool_complete_2026-10-01.md) để dùng số cuối cùng.
+
 **Ngày:** 30/09/2026. **Trạng thái cập nhật:** các replay trên ledger Week 3/420 câu đã chạy xong; bốn policy direct đã đủ 560 development ID mới. Policy thinking đã tới 376/560 rồi pipeline dừng vì Modal app bị stop từ dashboard lúc 16:04 UTC; đang chờ xác nhận có triển khai lại hay không. Chi tiết trong [`repguard_modal_stop_context_diagnostic_2026-09-30.md`](repguard_modal_stop_context_diagnostic_2026-09-30.md). Mọi kết quả replay dùng test Week 3 hoặc pool 420 đã được xem trước đây, nên là **phát triển**, không phải xác nhận trên holdout. Sealed holdout 420 ID chưa chạy.
 
 ## 1. Việc đã thực hiện và ranh giới dữ liệu
@@ -76,7 +78,7 @@ Phép `evaluate_fresh_dev_audit.py` dùng đội ba direct agent có history cũ
 | AuditedECRT theo agent | 45,67% | **45,67%** |
 | **Qwen3 14B direct đơn lẻ** | **53,08%** | **53,08%** |
 
-ECRT cũ giảm **6,47 điểm** khi bị targeted feedback attack, CI bootstrap **[−8,79; −4,24]**; AuditedECRT không đổi. Dưới attack, AuditedECRT hơn Fixed+Audit **2,61 điểm**, CI **[+0,44; +4,92]**, nhưng chỉ hơn AuditOnly **0,64 điểm**, CI **[−0,32; +1,73]**. So Qwen14 đơn lẻ, AuditedECRT kém **7,40 điểm**, CI **[−11,06; −3,94]**. Đây là replication thực trên target ID mới của cơ chế *phòng attack so ECRT cũ*, đồng thời là bằng chứng **không đạt** mục tiêu phương pháp team accuracy trên pool này. Dữ liệu vẫn là development và attack feedback theo quy tắc; chưa kiểm chứng trên holdout/external benchmark.
+ECRT cũ giảm **6,47 điểm** khi bị targeted feedback attack, CI bootstrap **[−8,79; −4,24]**; AuditedECRT không đổi. Dưới attack, AuditedECRT hơn Fixed+Audit **2,61 điểm**, CI **[+0,44; +4,91]**, nhưng chỉ hơn AuditOnly **0,64 điểm**, CI **[−0,32; +1,73]**. So Qwen14 đơn lẻ, AuditedECRT kém **7,40 điểm**, CI **[−11,06; −3,94]**. Đây là replication thực trên target ID mới của cơ chế *phòng attack so ECRT cũ*, đồng thời là bằng chứng **không đạt** mục tiêu phương pháp team accuracy trên pool này. Dữ liệu vẫn là development và attack feedback theo quy tắc; chưa kiểm chứng trên holdout/external benchmark.
 
 So sánh Qwen14 đơn lẻ được thêm vào bảng phân tích **sau khi direct ledger đã đủ**, như một baseline mô tả. Yêu cầu đối chiếu với solver đơn mạnh nhất đã có trong kế hoạch nghiên cứu trước đó, nhưng hàng và CI này không thuộc hai phép so primary của gate đã khóa ngay trước lượt development; không dùng nó để điều chỉnh phương pháp.
 
