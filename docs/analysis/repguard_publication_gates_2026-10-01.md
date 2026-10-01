@@ -1,5 +1,7 @@
 # RepGuard: hướng bài báo và các gate còn phải vượt (01/10/2026)
 
+> **Cập nhật sau hai pilot:** Context 8K và AppWorld v2 đã hoàn tất; AppWorld v3 đã dừng sau một task train theo gate scaffold. Số và chẩn đoán cuối ở [`repguard_followup_results_2026-10-01.md`](repguard_followup_results_2026-10-01.md). Các bước dưới đây là tiêu chí nghiên cứu đã đặt ra, không còn là trạng thái đang chạy.
+
 ## Chẩn đoán dựa trên dữ liệu hiện có
 
 Pool MMLU-Pro 560 câu mới đã đủ 2.800 đáp án thật. Qwen3 8B thinking đạt 372/560; quy tắc gọi Qwen3 14B khi output thinking invalid đạt 388/560 với 40 lời gọi bổ sung. Selector sau khi gọi cả hai model đạt 396/560 nhưng phải gọi Qwen14 ở cả 560 câu; router trước lời gọi đạt 388/560 với 172 lời gọi. Cả hai không qua gate đã khóa so fallback. Trên study audit 520 câu, AuditedECRT chống được can thiệp false-positive nhắm agent yếu so ECRT cũ, nhưng chưa thắng AuditOnly với CI trên 0 và vẫn kém Qwen14 đơn lẻ. Xem `repguard_dev_pool_complete_2026-10-01.md` để biết toàn bộ mẫu số, CI và giới hạn.
