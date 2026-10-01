@@ -30,4 +30,18 @@ Một v3 đã khóa trước khi gọi model trên **cùng ba task train** để
 
 **Kết quả v3 task đầu (train, cùng ID với v2):** `692c77d_2` dùng `apis.api_docs` đúng ở các bước đầu, nhưng sau đó lặp tra tài liệu/đoán tên API không tồn tại. Trajectory dừng ở **17 bước**, **9 code block duy nhất**, **8 lần duplicate bị chặn**, không gọi `complete_task`; official state-check **1/7 checks, task success = false**. Theo gate v3 đã khóa, hai task v3 còn lại **không chạy** để tránh tốn compute vào một scaffold vẫn lặp vô ích. Đây là quyết định về khả thi của local Qwen14 scaffold, không phải kết quả paired task-success hay bằng chứng phương pháp không thể hoạt động. Hướng kỹ thuật tiếp theo là kiểm tra scaffold ReAct official tương thích (prompt nhiều ví dụ, tới 100 LLM calls) hoặc dùng solver mạnh hơn trên train; cần giữ nhãn custom nếu thay đổi official config.
 
-Artefact raw và task-derived AppWorld nằm trong `results/` bị Git ignore. JSON kết quả: `results/real_dev_context_pilot_v1/analysis.json`, `results/appworld_external_v1/train_pilot_v2/evaluation.json`, `results/appworld_external_v1/train_pilot_v3/evaluation.json`.
+## 4. AppWorld train solver-capability pilot v4
+
+Qwen3 32B Q4_K_M được tải thật vào Modal volume và chạy trên L4; endpoint Ollama 0.34.4, digest `030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840`. V4 giữ scaffold v3, temperature 0, output cap 1.024, `num_ctx=4096`, 40 bước và cùng ba train ID để chẩn đoán đổi solver. Manifest protocol hash: `bffa22562140a9a932c282b09535610c6890b87fad1dd536b11d195eae60544d`. Đây vẫn là custom harness và train-visible task set.
+
+| Train ID | State-check | Bước | `complete_task` | Code duy nhất | Repeat chặn | Output token |
+|---|---:|---:|---|---:|---:|---:|
+| `692c77d_2` | 2/7, fail | 29 | Có | 24 | 5 | 3.008 |
+| `29caf6f_1` | 2/8, fail | 35 | Có | 34 | 1 | 2.545 |
+| `7d7fbf6_1` | **8/8, success** | 25 | Có | 23 | 2 | 1.631 |
+
+**Task success = 1/3.** Trên task `file_system` thành công, model dùng API ứng dụng thật thay vì import OS; đây là dấu hiệu base-agent capability có thể phục hồi bằng solver mạnh hơn. Hai task thất bại vẫn có nhiều lỗi thực thi: task Spotify dùng sai giá trị access token dẫn tới HTTP 401 khi gọi API, và task Simple Note chỉ qua 2/8 checks dù đã đánh dấu hoàn tất. Vì code nhiều bước có thể chứa lỗi dây chuyền, `complete_task=true` không được tính là thành công; official state-check mới là outcome.
+
+V4 là **smoke test n=3**, không xác nhận tỷ lệ thành công tổng quát, không cho thấy hai policy có lỗi bổ trợ (Qwen14 v2 cùng ba task là 0/3), và không đo reputation/audit. Gate tiếp theo cần một tập train lớn hơn và ít nhất hai policy mạnh với các ca *mỗi policy cứu được task mà policy kia trượt*, rồi mới xây history/feedback. Không mở dev/test để chọn model hoặc prompt từ ba task này.
+
+Artefact raw và task-derived AppWorld nằm trong `results/` bị Git ignore. JSON kết quả: `results/real_dev_context_pilot_v1/analysis.json`, `results/appworld_external_v1/train_pilot_v2/evaluation.json`, `results/appworld_external_v1/train_pilot_v3/evaluation.json`, `results/appworld_external_v1/train_pilot_v4/evaluation.json`.

@@ -71,6 +71,16 @@ experiment entry with supporting data.
 - **Supporting experiment:** On 520 fresh development questions under targeted feedback poisoning of Qwen3 0.6B, old ECRT fell from 46.25% clean to 39.78% attacked, while AuditedECRT stayed at 45.67%. Under attack AuditedECRT exceeded FixedPlusAudit by 2.61 percentage points (target-cluster CI [+0.44, +4.91]), but exceeded AuditOnly by only 0.64 points (CI [−0.32, +1.73]); Qwen3 14B direct scored 53.08% on the same questions. See `docs/analysis/repguard_method_repair_pilot_2026-09-30.md`.
 - **Required before a strong method claim:** Demonstrate added final-decision value from historical feedback beyond equal-budget gold audit and a strong single solver on a new pool and external task environment.
 
+### C9 — Doubling context fixes Qwen3 8B thinking truncation
+- **Status:** NOT SUPPORTED on the 70-question paired development diagnostic.
+- **Supporting experiment:** `num_ctx` 4096→8192 with the same Qwen3 8B digest, prompt and 8192 output-token cap gave 42→46 correct answers, but validity stayed 64/70 and length-cap cases stayed 6/70 (two invalid cases exchanged in each direction). Four accuracy rescues and zero harms give a two-sided exact discordance p=0.125; the 14-subject bootstrap CI is fragile with only four discordant outcomes. Summed request time increased by 396.96 seconds (+9.05%). See `docs/analysis/repguard_followup_results_2026-10-01.md`.
+- **Required before a broader claim:** Larger prospectively frozen sample and repeated runs to separate context effect from generation variability; the invalid-output fallback remains necessary.
+
+### C10 — Interactive AppWorld base-agent feasibility
+- **Status:** ONE TRAIN TASK SUCCESS; method and benchmark claims NOT SUPPORTED.
+- **Supporting experiment:** Custom Qwen3 14B direct scaffold v2 scored 0/3 train task success. A v3 scaffold repair on one paired train task still failed. Qwen3 32B direct v4 on Modal L4 scored 1/3 official state-check successes on the same three train IDs (checks 2/7, 2/8, 8/8); all v4 tasks called `complete_task`. These are real model/tool trajectories but tiny train-visible pilots, not official AppWorld benchmark scores. See `docs/analysis/repguard_followup_results_2026-10-01.md`.
+- **Required before an interactive method study:** More train tasks, at least two capable policies with reproducible complementary successes, independent feedback histories and equal-budget baselines; then frozen dev and sealed holdout.
+
 ---
 
 ## DO NOT CLAIM as novel

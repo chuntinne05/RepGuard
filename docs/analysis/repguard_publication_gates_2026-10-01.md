@@ -1,6 +1,6 @@
 # RepGuard: hướng bài báo và các gate còn phải vượt (01/10/2026)
 
-> **Cập nhật sau hai pilot:** Context 8K và AppWorld v2 đã hoàn tất; AppWorld v3 đã dừng sau một task train theo gate scaffold. Số và chẩn đoán cuối ở [`repguard_followup_results_2026-10-01.md`](repguard_followup_results_2026-10-01.md). Các bước dưới đây là tiêu chí nghiên cứu đã đặt ra, không còn là trạng thái đang chạy.
+> **Cập nhật sau các pilot:** Context 8K và AppWorld v2 đã hoàn tất; v3 dừng sau một task train theo gate scaffold; Qwen3 32B direct v4 đạt **1/3 task success** trên cùng ba train task. Số và chẩn đoán ở [`repguard_followup_results_2026-10-01.md`](repguard_followup_results_2026-10-01.md). Các bước dưới đây là tiêu chí nghiên cứu, không còn là trạng thái đang chạy.
 
 ## Chẩn đoán dựa trên dữ liệu hiện có
 
