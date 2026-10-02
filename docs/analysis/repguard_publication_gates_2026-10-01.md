@@ -1,6 +1,6 @@
 # RepGuard: hướng bài báo và các gate còn phải vượt (01/10/2026)
 
-> **Cập nhật 02/10/2026:** Context 8K và AppWorld v1–v6 đã hoàn tất. V4 Qwen3 32B direct đạt **1/3**, v5 thinking/budget-lớn **0/3** trên cùng ba train task; v6 trên **ba train ID mới** cho **0/3 control và 0/3 scaffold verification**. Không có rescue từ thinking hay lời nhắc verification. Số, chi phí và lỗi ở [`repguard_followup_results_2026-10-01.md`](repguard_followup_results_2026-10-01.md) và [`repguard_appworld_v6_results_2026-10-02.md`](repguard_appworld_v6_results_2026-10-02.md). Đây là gate nghiên cứu, không phải kết quả DART đã thắng.
+> **Cập nhật 02/10/2026:** Context 8K và AppWorld v1–v7 đã hoàn tất. V4 Qwen3 32B direct đạt **1/3**, v5 thinking/budget-lớn **0/3** trên cùng ba train task; v6 trên **ba train ID mới** cho **0/3 control và 0/3 scaffold verification**. V7 dùng official legacy Recoma ReAct đúng phiên bản 0.1.3 trên ba train ID tiếp theo, **0/3** (check 7/9, 1/2, 5/6). Không có bằng chứng về pool AppWorld đủ năng lực để chấm DART/HistRepEval. Số, chi phí và lỗi ở [`repguard_followup_results_2026-10-01.md`](repguard_followup_results_2026-10-01.md), [`repguard_appworld_v6_results_2026-10-02.md`](repguard_appworld_v6_results_2026-10-02.md) và [`repguard_appworld_v7_legacy_react_results_2026-10-02.md`](repguard_appworld_v7_legacy_react_results_2026-10-02.md). Đây là gate nghiên cứu, không phải kết quả DART đã thắng.
 
 ## Chẩn đoán dựa trên dữ liệu hiện có
 
@@ -26,6 +26,8 @@ Một bài **phương pháp** vẫn khả thi về mặt giả thuyết, nhưng 
 **Quyết định sau v6:** Prompt verification đơn thuần không cải thiện task success trên ba train ID mới (0/3 ở cả hai nhánh, output token 1,71×). Không tune tiếp trên ba ID đã nhìn thấy. Kiểm năng lực một official-compatible ReAct agent và model phù hợp trên train ID mới với protocol/budget khóa trước; nếu agent nền vẫn yếu thì giữ AppWorld ở vai trò feasibility study và xây HistRepEval với môi trường thứ hai khả thi hơn. Không mở sealed holdout hoặc phát biểu method superiority khi chưa qua gate năng lực.
 
 **Ranh giới phiên bản:** Audit mã nguồn 02/10/2026 xác nhận `simplified_react_code_agent` hiện tại thuộc AppWorld 0.2/Pydantic 2, còn các pilot và data bundle đang dùng AppWorld 0.1.3/Pydantic 1. Đối chứng cùng phiên bản phải dùng official legacy Recoma ReAct tại tag `v0.1.3.post1`; nếu dùng simplified agent mới thì dựng benchmark/data 0.2 riêng và không ghép điểm với v4–v6. Chi tiết tại [`appworld_official_agent_compatibility_2026-10-02.md`](appworld_official_agent_compatibility_2026-10-02.md).
+
+**Quyết định sau v7:** Legacy ReAct tương thích cũng đạt 0/3 trên ba ID train mới. Hai task có nhiều check đạt nhưng mắc lỗi xác định chính xác tập đối tượng (thao tác thừa/bỏ sót); task còn lại nhầm thuộc tính thời gian và loại thực thể khi trả lời. Theo gate đã khóa, ngừng xây pool AppWorld hiện tại để thử reputation. Muốn tiếp tục AppWorld, phải xác lập solver có task success đáng kể trên sample train mới rồi kiểm tra agent bổ trợ, hoặc dựng phiên bản 0.2 cùng data/agent phù hợp. Có thể nghiên cứu một scope verifier cho thao tác tập hợp, nhưng phải chấm trên task chưa xem và đối chứng cùng cost; ba lỗi v7 chỉ là cơ sở đặt giả thuyết.
 
 ## Thứ tự công việc và tiêu chí dừng
 

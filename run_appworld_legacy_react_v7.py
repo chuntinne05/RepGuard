@@ -12,6 +12,7 @@ import hashlib
 import json
 import os
 import sys
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -156,15 +157,25 @@ def main() -> None:
 
     calls_path = OUTPUT / "model_calls.jsonl"
     def modal_completion(**kwargs):
-        token = cached_modal_token(URL) or refresh_modal_token(URL)
-        if not token:
-            raise RuntimeError("Modal authorization token unavailable")
-        kwargs["model"] = "openai/" + MODEL
-        response = litellm.completion(
-            **kwargs, api_base=URL + "/v1", api_key="unused",
-            extra_headers={"Modal-Authorization": "Bearer " + token},
-            extra_body={"reasoning_effort": "none"}, timeout=180,
-        )
+        for auth_attempt in range(3):
+            token = cached_modal_token(URL) or refresh_modal_token(URL)
+            if not token:
+                raise RuntimeError("Modal authorization token unavailable")
+            kwargs["model"] = "openai/" + MODEL
+            try:
+                response = litellm.completion(
+                    **kwargs, api_base=URL + "/v1", api_key="unused",
+                    extra_headers={"Modal-Authorization": "Bearer " + token},
+                    extra_body={"reasoning_effort": "none"}, timeout=180,
+                )
+                break
+            except litellm.AuthenticationError:
+                if auth_attempt == 2:
+                    raise
+                # Modal flash-auth tokens are short-lived. Refresh via its CLI
+                # and retry transport only; no environment action occurred.
+                refresh_modal_token(URL)
+                time.sleep(2)
         usage = response.usage
         with calls_path.open("a") as fh:
             fh.write(json.dumps({"task_id": current_task[0],
