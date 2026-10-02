@@ -14,6 +14,7 @@ import os
 import sys
 import time
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parent
 DATA_ROOT = ROOT / "results/appworld_external_v1"
@@ -28,6 +29,31 @@ MAX_TASKS = 3
 
 def digest(value: str) -> str:
     return hashlib.sha256(value.encode()).hexdigest()
+
+
+def modal_token() -> str:
+    """Get a usable short-lived Modal flash token, including its final minute."""
+    from run_appworld_train_pilot import cached_modal_token, refresh_modal_token
+
+    cache_path = Path.home() / ".cache/modal/curl-flash-auth-tokens.json"
+    host = urlparse(URL).hostname or URL
+    for attempt in range(2):
+        token = cached_modal_token(URL) or refresh_modal_token(URL)
+        if token:
+            return token
+        # modal curl can reuse a token with <60 s remaining instead of
+        # refreshing it. It is still valid for an immediate request.
+        if cache_path.exists():
+            for key, value in json.loads(cache_path.read_text()).items():
+                if (key in host or host in key) and isinstance(value, dict):
+                    remaining = value.get("expires_at", 0) - time.time()
+                    if remaining > 5 and value.get("token"):
+                        return value["token"]
+                    if attempt == 0 and remaining > 0:
+                        time.sleep(min(10, remaining + 1))
+        if attempt == 0:
+            refresh_modal_token(URL)
+    raise RuntimeError("Modal authorization unavailable")
 
 
 def protocol() -> dict:
@@ -124,7 +150,7 @@ def main() -> None:
                           "config_build": "passed"}, indent=2))
         return
 
-    from run_appworld_train_pilot import cached_modal_token, refresh_modal_token
+    from run_appworld_train_pilot import refresh_modal_token
     import litellm
     import recoma.models.impl.lite_llm_generator as litellm_module
 
@@ -160,9 +186,7 @@ def main() -> None:
     calls_path = OUTPUT / "model_calls.jsonl"
     def modal_completion(**kwargs):
         for auth_attempt in range(3):
-            token = cached_modal_token(URL) or refresh_modal_token(URL)
-            if not token:
-                raise RuntimeError("Modal authorization token unavailable")
+            token = modal_token()
             kwargs["model"] = "openai/" + MODEL
             try:
                 response = litellm.completion(

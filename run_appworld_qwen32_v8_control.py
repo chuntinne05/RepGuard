@@ -45,11 +45,9 @@ legacy.protocol = protocol
 if __name__ == "__main__":
     if "--collect" in sys.argv:
         import httpx
-        from run_appworld_train_pilot import cached_modal_token, refresh_modal_token
+        from run_appworld_train_pilot import refresh_modal_token
 
-        token = cached_modal_token(legacy.URL) or refresh_modal_token(legacy.URL)
-        if not token:
-            raise RuntimeError("Modal authorization unavailable before v8 control")
+        token = legacy.modal_token()
         for attempt in range(4):
             response = httpx.get(
                 legacy.URL + "/api/tags",
