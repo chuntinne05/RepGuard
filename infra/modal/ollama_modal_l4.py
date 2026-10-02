@@ -147,8 +147,10 @@ def pull_model(model: str = DEFAULT_MODEL):
         "OLLAMA_MODELS": MODEL_DIR,
     },
 
-    # Shut GPU down after 5 minutes idle
-    scaledown_window=300,
+    # Qwen3 32B thinking can need >5 minutes for one response. Keep the
+    # container warm long enough and allow in-flight requests to finish.
+    scaledown_window=1200,
+    exit_grace_period=600,
 
     # Prevent accidentally creating many GPU instances
     max_containers=1,

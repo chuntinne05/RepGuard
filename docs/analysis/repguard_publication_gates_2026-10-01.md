@@ -1,6 +1,6 @@
 # RepGuard: hướng bài báo và các gate còn phải vượt (01/10/2026)
 
-> **Cập nhật sau các pilot:** Context 8K và AppWorld v2 đã hoàn tất; v3 dừng sau một task train theo gate scaffold; Qwen3 32B direct v4 đạt **1/3 task success** trên cùng ba train task. Số và chẩn đoán ở [`repguard_followup_results_2026-10-01.md`](repguard_followup_results_2026-10-01.md). Các bước dưới đây là tiêu chí nghiên cứu, không còn là trạng thái đang chạy.
+> **Cập nhật 02/10/2026:** Context 8K và AppWorld v1–v5 đã được chấm lại; Qwen3 32B direct v4 đạt **1/3**, thinking/budget-lớn v5 **0/3 task success** trên cùng ba train task. Không có thinking rescue; một task chỉ direct giải được. Số, chi phí và sự cố transport ở [`repguard_followup_results_2026-10-01.md`](repguard_followup_results_2026-10-01.md). Các bước dưới đây là gate nghiên cứu, không phải kết quả DART đã thắng.
 
 ## Chẩn đoán dựa trên dữ liệu hiện có
 
@@ -20,6 +20,8 @@ Pool MMLU-Pro 560 câu mới đã đủ 2.800 đáp án thật. Qwen3 8B thinkin
 **HistRepEval** có thể thành một protocol/benchmark về *giá trị quyết định của lịch sử reputation*, nếu hoàn thành ba phần: (1) ledger output thật, feedback provenance và can thiệp có kiểm soát; (2) nhiều môi trường/pool có bổ trợ agent rõ, gồm ít nhất một môi trường tương tác; (3) metric nối calibration với decision: số lần đổi chọn agent, rescue, harm, task success, cost, audit budget, attack degradation và CI ghép cặp. Benchmark card phải phân biệt gold audit, noisy judge feedback, feedback bị attack, và không phân phối dữ liệu AppWorld được bảo vệ.
 
 Một bài **phương pháp** vẫn khả thi về mặt giả thuyết, nhưng chưa được xác nhận. Ứng viên hợp lý là chọn audit chủ động tại nơi feedback lịch sử có khả năng đổi hành động, giữ một phần audit ngẫu nhiên để phát hiện sai lệch có mục tiêu, và chỉ dùng history khi tín hiệu còn giá trị so audit-only. Đây là phác thảo để kiểm nghiệm; không được mô tả là DART đã thắng. Phải đo trên môi trường có agent thật sự chuyên môn bổ sung và so với strong single, invalid fallback, AuditOnly, fixed+audit, router chuẩn và cost-matched solver.
+
+**Quyết định sau v5:** Dừng việc xem Qwen3 32B direct và thinking như pool bổ trợ đã được chứng minh trên AppWorld. V5 không cứu được task nào, fail task duy nhất direct giải được, và dùng 10,47× output token trên ba train ID. Sửa các lỗi có thể quan sát ở scaffold (API contract, parsing, vòng lặp xác thực/nén, kiểm tra hậu điều kiện trước `complete_task`) rồi kiểm **train ID mới** và so với direct/official ReAct cùng ngân sách. Chỉ khi có nhiều ca thành công bổ trợ mới mở lịch sử feedback và test phương pháp; nếu không, ưu tiên HistRepEval như protocol kết quả âm có giá trị. Không mở 420 sealed holdout để chữa prompt.
 
 ## Thứ tự công việc và tiêu chí dừng
 

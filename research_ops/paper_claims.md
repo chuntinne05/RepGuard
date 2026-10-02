@@ -77,9 +77,9 @@ experiment entry with supporting data.
 - **Required before a broader claim:** Larger prospectively frozen sample and repeated runs to separate context effect from generation variability; the invalid-output fallback remains necessary.
 
 ### C10 — Interactive AppWorld base-agent feasibility
-- **Status:** ONE TRAIN TASK SUCCESS; method and benchmark claims NOT SUPPORTED.
-- **Supporting experiment:** Custom Qwen3 14B direct scaffold v2 scored 0/3 train task success. A v3 scaffold repair on one paired train task still failed. Qwen3 32B direct v4 on Modal L4 scored 1/3 official state-check successes on the same three train IDs (checks 2/7, 2/8, 8/8); all v4 tasks called `complete_task`. These are real model/tool trajectories but tiny train-visible pilots, not official AppWorld benchmark scores. See `docs/analysis/repguard_followup_results_2026-10-01.md`.
-- **Required before an interactive method study:** More train tasks, at least two capable policies with reproducible complementary successes, independent feedback histories and equal-budget baselines; then frozen dev and sealed holdout.
+- **Status:** ONE TRAIN TASK SUCCESS IN DIRECT V4; THINKING V5 COMPLEMENTARITY NOT SUPPORTED; method and benchmark claims NOT SUPPORTED.
+- **Supporting experiment:** Custom Qwen3 14B direct scaffold v2 scored 0/3 train task success. A v3 scaffold repair on one paired train task still failed. Qwen3 32B direct v4 on Modal L4 scored 1/3 official state-check successes on the same three train IDs (checks 2/7, 2/8, 8/8). Qwen3 32B thinking with larger output/context budget v5 scored 0/3 (checks 2/7, 1/8, 3/8), with two shared failures and one direct-only success. V5 used 75,250 generated tokens versus 7,184 for v4 direct. Every final cell was re-evaluated in a fresh Python process; AppWorld can otherwise leak cached model state across experiment evaluations in one process. V5 task 3 was replayed from initial state after two transport interruptions, documented separately. These are real model/tool trajectories but tiny train-visible custom-harness pilots, not official AppWorld benchmark scores or an isolated think-flag ablation. See `docs/analysis/repguard_followup_results_2026-10-01.md`.
+- **Required before an interactive method study:** Repair agent API/postcondition loop on fresh train IDs; establish at least two capable policies with reproducible complementary successes, independent feedback histories and equal-budget baselines; then frozen dev and sealed holdout.
 
 ---
 

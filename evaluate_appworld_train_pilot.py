@@ -6,11 +6,32 @@ from __future__ import annotations
 import json
 import os
 import argparse
+import subprocess
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 DATA_ROOT = ROOT / "results/appworld_external_v1"
 OUTPUT = DATA_ROOT / "train_pilot_v1"
+
+
+def evaluate_isolated(task_id: str, experiment_name: str) -> dict:
+    """AppWorld's model registries persist in a process; isolate each cell."""
+    worker = (
+        "import json, os, sys\n"
+        "os.environ['APPWORLD_ROOT'] = sys.argv[1]\n"
+        "from appworld.evaluator import evaluate_task\n"
+        "tracker = evaluate_task(task_id=sys.argv[2], "
+        "experiment_name=sys.argv[3], save_report=False)\n"
+        "print(json.dumps({'success': tracker.success, "
+        "'passed_checks': tracker.pass_count, "
+        "'total_checks': tracker.num_tests}))\n"
+    )
+    completed = subprocess.run(
+        [sys.executable, "-c", worker, str(DATA_ROOT), task_id, experiment_name],
+        check=True, capture_output=True, text=True, timeout=120,
+    )
+    return json.loads(completed.stdout.strip())
 
 
 def main() -> None:
@@ -19,8 +40,6 @@ def main() -> None:
     args = parser.parse_args()
     output = args.output
     os.environ["APPWORLD_ROOT"] = str(DATA_ROOT)
-    from appworld.evaluator import evaluate_task
-
     manifest = json.loads((output / "manifest.json").read_text())
     cells: dict[str, dict[str, dict]] = {}
     policies = list(manifest.get("policies", {"qwen3_14b_direct": {}}))
@@ -33,12 +52,9 @@ def main() -> None:
             run = json.loads(path.read_text())
             if run["protocol_hash"] != manifest["protocol_hash"] or run["task_id"] != task_id:
                 raise RuntimeError(f"Incompatible run: {path}")
-            tracker = evaluate_task(task_id=task_id, experiment_name=run["experiment"],
-                                    save_report=False)
+            score = evaluate_isolated(task_id, run["experiment"])
             cells[policy][task_id] = {
-                "success": tracker.success,
-                "passed_checks": tracker.pass_count,
-                "total_checks": tracker.num_tests,
+                **score,
                 "steps": run["steps"],
                 "completed_task_api": run["completed_task_api"],
                 "input_tokens": sum(s.get("input_tokens") or 0 for s in run["trajectory"]),
