@@ -1,4 +1,4 @@
-# RepGuard follow-up: context 8K và AppWorld train pilot v2
+# RepGuard follow-up: context 8K và AppWorld train pilots
 
 **Chốt:** 01/10/2026, sau khi MMLU-Pro development pool 2.800/2.800 đã hoàn tất. Hai thí nghiệm dưới đây là chẩn đoán **development/train**, không dùng 420 sealed holdout và không tạo claim phương pháp DART.
 
@@ -45,3 +45,16 @@ Qwen3 32B Q4_K_M được tải thật vào Modal volume và chạy trên L4; en
 V4 là **smoke test n=3**, không xác nhận tỷ lệ thành công tổng quát, không cho thấy hai policy có lỗi bổ trợ (Qwen14 v2 cùng ba task là 0/3), và không đo reputation/audit. Gate tiếp theo cần một tập train lớn hơn và ít nhất hai policy mạnh với các ca *mỗi policy cứu được task mà policy kia trượt*, rồi mới xây history/feedback. Không mở dev/test để chọn model hoặc prompt từ ba task này.
 
 Artefact raw và task-derived AppWorld nằm trong `results/` bị Git ignore. JSON kết quả: `results/real_dev_context_pilot_v1/analysis.json`, `results/appworld_external_v1/train_pilot_v2/evaluation.json`, `results/appworld_external_v1/train_pilot_v3/evaluation.json`, `results/appworld_external_v1/train_pilot_v4/evaluation.json`.
+
+## 5. AppWorld v5 Qwen3 32B thinking: cập nhật đang chạy 02/10/2026
+
+V5 dùng cùng model digest, scaffold và ba train ID của v4, nhưng bật `think=true`, nâng output cap 1.024→4.096 và context 4.096→8.192. Đây là so sánh **hai chính sách suy luận/ngân sách**, không phải ablation cô lập cờ thinking. Protocol được khóa trước các lệnh gọi ở `histrepeval_appworld_v5_thinking_protocol_2026-10-02.md`. Sau task đầu, do thinking đăng nhập được vào Spotify nhưng dừng sai khi chọn API, gate cho phép chạy tiếp hai task còn lại. Bảng dưới chỉ chứa state-check đã hoàn tất:
+
+| Train ID | V4 direct | V5 thinking | Bước direct→thinking | Output token direct→thinking |
+|---|---:|---:|---:|---:|
+| `692c77d_2` | 2/7 fail | 2/7 fail | 29→17 | 3.008→16.561 |
+| `29caf6f_1` | 2/8 fail | 1/8 fail | 35→15 | 2.545→11.965 |
+
+Task thứ ba `7d7fbf6_1` đang chạy tại thời điểm cập nhật này; **không** tính nó là thành công hoặc thất bại cho v5 trước khi evaluator chạy. Attempt đầu đạt 20 tương tác AppWorld rồi hai request dài bị HTTP 500 sau khoảng 5 phút 38 giây; Modal báo server draining và thay container. Client được ngắt an toàn, log partial được giữ tại `results/appworld_external_v1/train_pilot_v5/aborted_attempt_7d7fbf6_1/`. Attempt thứ hai bắt đầu lại từ state đầu với Ollama NDJSON stream, giữ model/prompt/decoding; vì vậy nếu hoàn tất, cell thứ ba phải được báo là **replay với transport khác**. Addendum ghi trước replay ở `histrepeval_appworld_v5_transport_addendum_2026-10-02.md`.
+
+Hai task đầu không có rescue ở mức task success. V5 đầu dùng đúng token login, truy xuất được playlist nhưng kết luận sai rằng không có API để hoàn tất rồi gọi `complete_task` khi chưa giải xong. V5 thứ hai đăng nhập và đọc note thật nhưng answer cuối không qua state-check; chỉ đạt 1/8 checks. Hai failure này cho thấy reasoning dài hơn có thể đổi lỗi thao tác ban đầu nhưng không tự bảo đảm kết quả cuối, trong khi output token tăng mạnh. Số liệu thô và bảng paired ở `results/appworld_external_v1/train_pilot_v5/`, bị Git ignore; phần này sẽ được chốt lại sau task thứ ba.

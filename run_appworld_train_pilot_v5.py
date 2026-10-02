@@ -118,21 +118,41 @@ def make_messages(initial: str, history: list[dict]) -> list[dict]:
 def call_model(client, base_url: str, messages: list[dict]) -> dict:
     import httpx
 
-    payload = {"model": POLICY["model"], "messages": messages, "stream": False,
+    # Modal can drain a silent HTTP request before a 4,096-token thinking
+    # response finishes. NDJSON keeps the transport active; the Ollama
+    # model/decoding inputs and the final assembled message are unchanged.
+    payload = {"model": POLICY["model"], "messages": messages, "stream": True,
                "think": POLICY["think"], "options": {"temperature": 0, "top_p": 1,
                "num_predict": POLICY["num_predict"], "num_ctx": NUM_CTX}}
     for attempt in range(4):
-        response = client.post(base_url + "/api/chat", json=payload)
-        if response.status_code == 401 and attempt < 3:
-            token = refresh_modal_token(base_url)
-            if token:
-                client.headers["Modal-Authorization"] = "Bearer " + token
-                continue
-        if response.status_code in {429, 500, 502, 503, 504} and attempt < 3:
+        try:
+            with client.stream("POST", base_url + "/api/chat", json=payload) as response:
+                if response.status_code == 401 and attempt < 3:
+                    token = refresh_modal_token(base_url)
+                    if token:
+                        client.headers["Modal-Authorization"] = "Bearer " + token
+                        continue
+                if response.status_code in {429, 500, 502, 503, 504} and attempt < 3:
+                    time.sleep(5 * (attempt + 1))
+                    continue
+                response.raise_for_status()
+                content: list[str] = []
+                final: dict | None = None
+                for line in response.iter_lines():
+                    if not line:
+                        continue
+                    part = json.loads(line)
+                    content.append(part.get("message", {}).get("content") or "")
+                    if part.get("done"):
+                        final = part
+                if final is None:
+                    raise httpx.RemoteProtocolError("Ollama stream ended without done=true")
+                final["message"] = {"content": "".join(content)}
+                return final
+        except httpx.TransportError:
+            if attempt >= 3:
+                raise
             time.sleep(5 * (attempt + 1))
-            continue
-        response.raise_for_status()
-        return response.json()
     raise httpx.HTTPError("AppWorld v5 model request retries exhausted")
 
 
@@ -187,6 +207,7 @@ def run_task(task_id: str, client, base_url: str, protocol_hash: str) -> dict:
             "experiment": experiment, "completed_task_api": completed,
             "steps": len(history), "stopped_for_repeat_loop": stopped_for_repeat_loop,
             "stopped_for_no_code": stopped_for_no_code,
+            "transport": "ollama_ndjson_stream",
             "trajectory": history}
 
 
