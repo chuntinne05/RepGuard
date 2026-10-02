@@ -18,7 +18,9 @@ PORT = 11434
 DEFAULT_MODEL = "qwen3:32b"
 
 # GPU dùng cho app phục hồi
-GPU = "L4"
+# Prefer the established L4, but allow A10 when Modal has no L4 capacity.
+# Both have 24 GB VRAM; the model alias still fixes context to 8192.
+GPU = ["L4", "A10"]
 
 MODEL_DIR = "/models"
 

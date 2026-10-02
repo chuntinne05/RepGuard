@@ -20,8 +20,10 @@ DATA_ROOT = ROOT / "results/appworld_external_v1"
 OUTPUT = DATA_ROOT / "train_pilot_v7_legacy_react"
 SOURCE = Path("/private/tmp/repguard_appworld_official_013_src")
 MODEL = "qwen3:32b-ctx8192"
+EXPERIMENT_NAME = "repguard_train_pilot_v7_legacy_react"
 URL = "https://chuntinne05--ollama-server-repguard-l4-ollamaserver.us-east.modal.direct"
 TASK_IDS = ("afc0fce_2", "27e1026_2", "6ea6792_2")
+MAX_TASKS = 3
 
 
 def digest(value: str) -> str:
@@ -92,10 +94,10 @@ def make_config() -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--collect", action="store_true")
-    parser.add_argument("--max-tasks", type=int, default=3)
+    parser.add_argument("--max-tasks", type=int, default=MAX_TASKS)
     args = parser.parse_args()
-    if not 1 <= args.max_tasks <= 3:
-        parser.error("--max-tasks must be 1..3")
+    if not 1 <= args.max_tasks <= MAX_TASKS:
+        parser.error(f"--max-tasks must be 1..{MAX_TASKS}")
     os.environ["APPWORLD_ROOT"] = str(DATA_ROOT)
     configure_cache()
     sys.path.insert(0, str(SOURCE))
@@ -153,7 +155,7 @@ def main() -> None:
     AppWorld.init_defaults.update(
         load_ground_truth=False, timeout_seconds=60, random_seed=123,
         max_interactions=41,
-        experiment_name="repguard_train_pilot_v7_legacy_react")
+        experiment_name=EXPERIMENT_NAME)
 
     calls_path = OUTPUT / "model_calls.jsonl"
     def modal_completion(**kwargs):

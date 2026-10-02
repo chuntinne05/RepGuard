@@ -1,0 +1,14 @@
+# AppWorld v8: Qwen3-Coder 30B capability screen — frozen before task calls
+
+**Date:** 02/10/2026. V7's version-matched legacy ReAct + Qwen3 32B solved 0/3 fresh AppWorld 0.1.3 train tasks. V8 tests whether changing only the base solver to a model intended for coding/agent workflows gives a viable interactive agent. [Ollama's Qwen3-Coder model card](https://registry.ollama.com/library/qwen3-coder) describes the 30B variant; that description is a reason to test, **not evidence of AppWorld success**.
+
+## Fixed screen
+
+- **Train IDs:** `cf6abd2_2`, `771d8fc_2`, `6104387_3`, `e7a10f8_3`, `82e2fac_2`, `aa8502b_2`: positions 13–18 of the SHA-256 one-per-generator selection rule used in earlier pilots. Chosen without looking at their instructions or gold. No dev/test access.
+- **Environment/agent:** same AppWorld `0.1.3.post1` protected data bundle, same official tag `v0.1.3.post1` legacy Recoma ReAct source and gold-blind/transport adapters as v7. Separate experiment/output namespace. AppWorld state-check in a fresh evaluator process for every completed task.
+- **Model:** `qwen3-coder:30b` on Modal (L4 preferred, A10 fallback), with a context-8192 Ollama alias, temperature 0, top_p 1, max 1,024 output tokens/call, max 40 model calls and 40 environment calls/task, prompt/controller history capped at 20,000 characters. Parent digest `06c1097efce0431c2045fe7b2e5108366e43bee1b4603a7aded8f21689e90bca`; alias `qwen3-coder:30b-ctx8192` digest `b51abbfa75725b89e9bedf9f38a28b57c44a8f1a37c6429def3cc648e6c0d918`, whose `/api/show` reports `num_ctx=8192`. A short non-task completion returned `READY`. The current Modal container received an NVIDIA A10G according to its server log. Use one pinned model; no per-task prompt changes.
+- **Execution:** one task first as a technical gate, then finish all six if AppWorld/transport and GPU memory operate. Interrupted or 401-only attempts are technical failures, not task failures. Raw task data stays Git-ignored. Report task success, check counts, action/model calls, token cost and failure mechanism. Do not select best runs; one complete run per ID.
+
+## Decision rule
+
+This is a **feasibility screen**, not a paper effect estimate. If fewer than two of six tasks succeed, stop this candidate for an AppWorld reputation pool and do not move to dev/test. If at least two succeed, prospectively run Qwen3 32B with the **same legacy scaffold and same six IDs** to measure paired complementarity, then enlarge train capability testing; only if there are meaningful rescues in both directions should DART/HistRepEval history experiments be planned. Equal request caps do not equal equal realized cost, so record tokens/latency and use cost-matched comparisons before any method superiority claim. The score on six selected train tasks cannot support a population accuracy claim or guarantee a publication result.

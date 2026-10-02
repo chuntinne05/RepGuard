@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import argparse
 import subprocess
 import sys
 from pathlib import Path
@@ -28,12 +29,16 @@ def evaluate(task_id: str, experiment: str) -> dict:
 
 
 def main() -> None:
-    manifest = json.loads((OUTPUT / "manifest.json").read_text())
-    calls_path = OUTPUT / "model_calls.jsonl"
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path, default=OUTPUT)
+    args = parser.parse_args()
+    output = args.output
+    manifest = json.loads((output / "manifest.json").read_text())
+    calls_path = output / "model_calls.jsonl"
     calls = [json.loads(line) for line in calls_path.read_text().splitlines()] if calls_path.exists() else []
     cells = {}
     for task_id in manifest["task_ids"]:
-        run_path = OUTPUT / "runs" / (task_id + ".json")
+        run_path = output / "runs" / (task_id + ".json")
         if not run_path.exists():
             continue
         run = json.loads(run_path.read_text())
@@ -51,7 +56,7 @@ def main() -> None:
     result = {"protocol_hash": manifest["protocol_hash"],
               "scope": "AppWorld 0.1.3 train-only adapted legacy ReAct capability reference",
               "planned": len(manifest["task_ids"]), "completed": len(cells), "cells": cells}
-    (OUTPUT / "evaluation.json").write_text(json.dumps(result, indent=2) + "\n")
+    (output / "evaluation.json").write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps(result, indent=2))
 
 
