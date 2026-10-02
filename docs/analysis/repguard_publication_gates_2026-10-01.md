@@ -25,6 +25,8 @@ Một bài **phương pháp** vẫn khả thi về mặt giả thuyết, nhưng 
 
 **Quyết định sau v6:** Prompt verification đơn thuần không cải thiện task success trên ba train ID mới (0/3 ở cả hai nhánh, output token 1,71×). Không tune tiếp trên ba ID đã nhìn thấy. Kiểm năng lực một official-compatible ReAct agent và model phù hợp trên train ID mới với protocol/budget khóa trước; nếu agent nền vẫn yếu thì giữ AppWorld ở vai trò feasibility study và xây HistRepEval với môi trường thứ hai khả thi hơn. Không mở sealed holdout hoặc phát biểu method superiority khi chưa qua gate năng lực.
 
+**Ranh giới phiên bản:** Audit mã nguồn 02/10/2026 xác nhận `simplified_react_code_agent` hiện tại thuộc AppWorld 0.2/Pydantic 2, còn các pilot và data bundle đang dùng AppWorld 0.1.3/Pydantic 1. Đối chứng cùng phiên bản phải dùng official legacy Recoma ReAct tại tag `v0.1.3.post1`; nếu dùng simplified agent mới thì dựng benchmark/data 0.2 riêng và không ghép điểm với v4–v6. Chi tiết tại [`appworld_official_agent_compatibility_2026-10-02.md`](appworld_official_agent_compatibility_2026-10-02.md).
+
 ## Thứ tự công việc và tiêu chí dừng
 
 1. **Đóng diagnostic 8K trên 70 development ID đã chọn trước.** So ghép cặp validity/accuracy với 4K và báo output token, request time. Nếu tăng context không cứu invalid hoặc gain CI còn mơ hồ, giữ fallback invalid như baseline thực dụng; không thay ngầm protocol 560 câu.
