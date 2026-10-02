@@ -145,6 +145,7 @@ def call_model(client, base_url: str, messages: list[dict]) -> dict:
                     content.append(part.get("message", {}).get("content") or "")
                     if part.get("done"):
                         final = part
+                        break
                 if final is None:
                     raise httpx.RemoteProtocolError("Ollama stream ended without done=true")
                 final["message"] = {"content": "".join(content)}
@@ -235,7 +236,10 @@ def main() -> None:
         raise RuntimeError("OLLAMA_URL/OLLAMA_HOST missing")
     token = cached_modal_token(base_url) or refresh_modal_token(base_url)
     headers = {"Modal-Authorization": "Bearer " + token} if token else {}
-    with httpx.Client(headers=headers, timeout=600) as client:
+    # Ollama streams tokens frequently once generation starts. A bounded read
+    # timeout detects a dead Modal tunnel after laptop sleep or scale-down.
+    timeout = httpx.Timeout(connect=60, read=120, write=60, pool=60)
+    with httpx.Client(headers=headers, timeout=timeout) as client:
         for attempt in range(4):
             response = client.get(base_url + "/api/tags")
             if response.status_code == 401:
