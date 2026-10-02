@@ -1,6 +1,6 @@
 # RepGuard: hướng bài báo và các gate còn phải vượt (01/10/2026)
 
-> **Cập nhật 02/10/2026:** Context 8K và AppWorld v1–v5 đã được chấm lại; Qwen3 32B direct v4 đạt **1/3**, thinking/budget-lớn v5 **0/3 task success** trên cùng ba train task. Không có thinking rescue; một task chỉ direct giải được. Số, chi phí và sự cố transport ở [`repguard_followup_results_2026-10-01.md`](repguard_followup_results_2026-10-01.md). Các bước dưới đây là gate nghiên cứu, không phải kết quả DART đã thắng.
+> **Cập nhật 02/10/2026:** Context 8K và AppWorld v1–v6 đã hoàn tất. V4 Qwen3 32B direct đạt **1/3**, v5 thinking/budget-lớn **0/3** trên cùng ba train task; v6 trên **ba train ID mới** cho **0/3 control và 0/3 scaffold verification**. Không có rescue từ thinking hay lời nhắc verification. Số, chi phí và lỗi ở [`repguard_followup_results_2026-10-01.md`](repguard_followup_results_2026-10-01.md) và [`repguard_appworld_v6_results_2026-10-02.md`](repguard_appworld_v6_results_2026-10-02.md). Đây là gate nghiên cứu, không phải kết quả DART đã thắng.
 
 ## Chẩn đoán dựa trên dữ liệu hiện có
 
@@ -22,6 +22,8 @@ Pool MMLU-Pro 560 câu mới đã đủ 2.800 đáp án thật. Qwen3 8B thinkin
 Một bài **phương pháp** vẫn khả thi về mặt giả thuyết, nhưng chưa được xác nhận. Ứng viên hợp lý là chọn audit chủ động tại nơi feedback lịch sử có khả năng đổi hành động, giữ một phần audit ngẫu nhiên để phát hiện sai lệch có mục tiêu, và chỉ dùng history khi tín hiệu còn giá trị so audit-only. Đây là phác thảo để kiểm nghiệm; không được mô tả là DART đã thắng. Phải đo trên môi trường có agent thật sự chuyên môn bổ sung và so với strong single, invalid fallback, AuditOnly, fixed+audit, router chuẩn và cost-matched solver.
 
 **Quyết định sau v5:** Dừng việc xem Qwen3 32B direct và thinking như pool bổ trợ đã được chứng minh trên AppWorld. V5 không cứu được task nào, fail task duy nhất direct giải được, và dùng 10,47× output token trên ba train ID. Sửa các lỗi có thể quan sát ở scaffold (API contract, parsing, vòng lặp xác thực/nén, kiểm tra hậu điều kiện trước `complete_task`) rồi kiểm **train ID mới** và so với direct/official ReAct cùng ngân sách. Chỉ khi có nhiều ca thành công bổ trợ mới mở lịch sử feedback và test phương pháp; nếu không, ưu tiên HistRepEval như protocol kết quả âm có giá trị. Không mở 420 sealed holdout để chữa prompt.
+
+**Quyết định sau v6:** Prompt verification đơn thuần không cải thiện task success trên ba train ID mới (0/3 ở cả hai nhánh, output token 1,71×). Không tune tiếp trên ba ID đã nhìn thấy. Kiểm năng lực một official-compatible ReAct agent và model phù hợp trên train ID mới với protocol/budget khóa trước; nếu agent nền vẫn yếu thì giữ AppWorld ở vai trò feasibility study và xây HistRepEval với môi trường thứ hai khả thi hơn. Không mở sealed holdout hoặc phát biểu method superiority khi chưa qua gate năng lực.
 
 ## Thứ tự công việc và tiêu chí dừng
 
