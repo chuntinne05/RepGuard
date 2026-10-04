@@ -7,7 +7,7 @@
 
 **RepGuard** studies how multi-agent LLM systems should convert imperfect historical feedback into task-relevant teammate reputation. It proposes **Evidence-Calibrated Reputation Transfer (ECRT)**, which distinguishes *whether historical evidence is trustworthy* from *whether it is relevant to the current task* before allowing that evidence to influence team decisions.
 
-### Current research status (2026-10-04)
+### Current research status (2026-10-05)
 
 The AppWorld study now includes 14 historical agents on 168 tasks (56 generators),
 **2,352 completed real Qwen3-14B trajectory judgments on Modal**, and completed
@@ -21,7 +21,22 @@ See the [full-run assessment and next experiment](docs/analysis/dart_full_run_as
 [full results and diagnostics](docs/analysis/dart_followup_report_2026-10-04.md),
 and [implementation history](docs/analysis/dart_implementation_progress_2026-10-04.md).
 The original pipeline and its follow-up both completed; a failed scientific gate
-does not mean the execution failed. The test suite has **233 passing tests**.
+does not mean the execution failed.
+
+A completed **14,400-selection controlled same-audit ablation** now isolates
+proxy representation, estimator normalization, candidate restriction, and paid
+label reuse. Keeping continuous judge scores improves calibration but does not
+establish a routing gain. Pooling the exact DARTContrast construction and selection
+labels in a simple global learner improves judge-channel success from **63.90 to
+68.90/168**, still without superiority over the strong controls. All original
+predictions and uniform gold-only controls reproduce exactly. The full judge used
+**think=false**; earlier thinking solver experiments are separate.
+
+See the [root-cause investigation and next steps](docs/analysis/dart_root_causes_and_next_steps_2026-10-05.md),
+[all controlled-ablation results](docs/analysis/dart_same_audit_tables_2026-10-05.md),
+and [protocol with numerical audit amendment](docs/analysis/dart_same_audit_protocol_2026-10-05.md).
+The test suite has **236 passing tests**. No new model calls or sealed holdout
+access were needed for this forensic replay.
 
 ### Earlier evidence (2026-09-30)
 
