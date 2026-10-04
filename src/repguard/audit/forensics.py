@@ -41,9 +41,15 @@ def sampled_values(routes: np.ndarray, proxy: np.ndarray, indices: np.ndarray,
             or (routes >= proxy.shape[1]).any()):
         raise ValueError('Invalid proxy or routes')
     task, agent = np.divmod(indices, proxy.shape[1])
+    if not normalized:
+        # Match the original estimator's arithmetic order exactly. Distributing
+        # the mean over two sums can perturb tied non-baseline argmax choices.
+        corrected = proxy.copy()
+        corrected.ravel()[indices] += (labels-proxy.ravel()[indices])/q
+        return corrected[np.arange(len(proxy))[None, :], routes].mean(axis=1)
     matches = routes[:, task] == agent
     numerator = matches @ ((labels-proxy.ravel()[indices])/q)
-    denominator = matches @ (1/q) if normalized else np.full(len(routes), len(proxy))
+    denominator = matches @ (1/q)
     correction = np.divide(numerator, denominator, out=np.zeros(len(routes)), where=denominator > 0)
     return proxy[np.arange(len(proxy))[None, :], routes].mean(axis=1)+correction
 

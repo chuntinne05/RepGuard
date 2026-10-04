@@ -82,3 +82,16 @@ an independent locked evaluation and relevant external baselines.
   not a reimplementation of their confidence-bound algorithm.
 - [Active Statistical Inference](https://proceedings.mlr.press/v235/zrnic24a.html):
   calibrated predictions and active annotation alone are established prior art.
+
+## Numerical audit amendment after v1, before v2
+
+v1 reproduced all Original actions exactly. A secondary invariance check found
+ZeroHT on uniform audits gave 62.65/168 instead of the existing AuditOnly
+62.85/168 at 10%. The algebraically equivalent implementation distributed the
+mean over two sums; roundoff can break ties between non-baseline candidates
+because the original rule applies tolerance only to ties with the baseline.
+v2 keeps the original elementwise-correction-then-mean arithmetic order exactly
+and requires ZeroHT predictions on RandomHistory audits to equal AuditOnly at
+every budget/seed/task. No hyperparameter or statistical design change. Preserve
+v1 files and report any changed outputs; use v2 for conclusions. This is a
+reproducibility fix in the new ablation, not an explanation of the old DART gap.

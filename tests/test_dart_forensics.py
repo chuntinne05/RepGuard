@@ -19,7 +19,7 @@ def test_finite_population_unbiasedness_and_census_normalization():
             q = np.full(budget, budget/6)
             estimate = sampled_values(routes, proxy, ix, y.ravel()[ix], q)
             observed = np.full_like(y, np.nan); observed.ravel()[ix] = y.ravel()[ix]
-            np.testing.assert_allclose(estimate, corrected_policy_values(routes, proxy, observed, np.full_like(y, budget/6)), atol=1e-14)
+            np.testing.assert_array_equal(estimate, corrected_policy_values(routes, proxy, observed, np.full_like(y, budget/6)))
             values.append(estimate)
         np.testing.assert_allclose(np.mean(values, axis=0), truth, atol=1e-14)
     np.testing.assert_allclose(sampled_values(routes, proxy, np.arange(6), y.ravel(), np.ones(6), normalized=True), truth)

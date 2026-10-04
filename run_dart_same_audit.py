@@ -153,6 +153,8 @@ def run(output: Path, data_root: Path) -> None:
             for budget,methods in budgets.items():
                 original_values = np.array(original['predictions'][budget][design])
                 np.testing.assert_array_equal(methods['Original'],original_values)
+                if design == 'RandomHistory':
+                    np.testing.assert_array_equal(methods['ZeroHT'],original['predictions'][budget]['AuditOnly'])
                 summary = {'methods':{},'mechanism_contrasts':{}}
                 uniform = np.array(original['predictions'][budget]['UniformAuditGlobal'])
                 for method,a in methods.items():
@@ -188,7 +190,7 @@ def contrast(a: np.ndarray, b: np.ndarray, groups: list[str]) -> dict:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--output',type=Path,default=Path('results/dart_same_audit_v1'))
+    parser.add_argument('--output',type=Path,default=Path('results/dart_same_audit_v2'))
     parser.add_argument('--data-root',type=Path,default=Path('/private/tmp/repguard_appworld_data010/data'))
     args = parser.parse_args()
     run(args.output,args.data_root)
