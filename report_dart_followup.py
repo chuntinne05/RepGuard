@@ -73,7 +73,7 @@ def main():
               '1. Đối chiếu cả gain của feedback và gain do cách lấy mẫu. PairedAuditOnly/Global/KNN là control thông thường; không đổi tên một control thắng thành DART mới.',
               '2. Nếu DART hoặc PairedHistory thua learner global dùng toàn bộ ngân sách, ưu tiên kiểm tra chi phí chia dữ liệu, cách học từ toàn bộ nhãn đã trả phí, và chất lượng candidate theo instruction. Chỉ thêm acquisition phức tạp sau khi xác nhận đó là nút thắt.',
               '3. Trước vòng thuật toán tiếp theo, khóa một giả thuyết và control dùng cùng nhãn audit thực tế; báo mọi biến thể. Cần kiểm tra feature/ngữ nghĩa instruction mạnh hơn TF-IDF để tách thiếu thông tin với learner quá yếu.',
-              '4. Tái lập baseline liên quan theo đúng feedback/cost setting. CABS có true reward của arm được chọn; SELECT-LLM tính annotation theo reference query. Không âm thầm cấp thông tin khác nhau rồi so trực tiếp.',
+              '4. Tái lập baseline liên quan theo đúng feedback/cost setting. [CABS](https://arxiv.org/html/2607.09015v1) có true reward của arm được chọn; [SELECT-LLM](https://arxiv.org/html/2510.09418v2) tính annotation theo reference query. Không âm thầm cấp thông tin khác nhau rồi so trực tiếp.',
               '5. Giữ sealed MMLU và challenge chưa mở. Chỉ xác nhận độc lập sau khi phương pháp vượt control mạnh trên dev với claim và operating point đã khóa.',
               '6. Chưa có kết quả nào ở đây bảo đảm bài A/A*. HistRepEval có thể đóng góp về đo lường; claim DART superior cần vượt các gate phương pháp riêng.', '',
               '## Sự cố và provenance', '',

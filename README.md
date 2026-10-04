@@ -7,7 +7,23 @@
 
 **RepGuard** studies how multi-agent LLM systems should convert imperfect historical feedback into task-relevant teammate reputation. It proposes **Evidence-Calibrated Reputation Transfer (ECRT)**, which distinguishes *whether historical evidence is trustworthy* from *whether it is relevant to the current task* before allowing that evidence to influence team decisions.
 
-### Current research status (2026-09-30)
+### Current research status (2026-10-04)
+
+The AppWorld study now includes 14 historical agents on 168 tasks (56 generators),
+**2,352 completed real Qwen3-14B trajectory judgments on Modal**, and completed
+equal-audit-budget routing replays. At the primary 10% audit budget, DARTContrast
+with judge feedback achieves **63.90/168** mean task successes, versus **69.70**
+for UniformAuditGlobal and **71.95** for the additional PairedGlobal control.
+The DART superiority gate **fails**. These are exploratory public-data replays,
+not fresh solver runs or independent confirmation. The sealed holdout is unused.
+
+See the [full-run assessment and next experiment](docs/analysis/dart_full_run_assessment_2026-10-04.md),
+[full results and diagnostics](docs/analysis/dart_followup_report_2026-10-04.md),
+and [implementation history](docs/analysis/dart_implementation_progress_2026-10-04.md).
+The original pipeline and its follow-up both completed; a failed scientific gate
+does not mean the execution failed. The test suite has **233 passing tests**.
+
+### Earlier evidence (2026-09-30)
 
 The full real-answer rerun covers **all 14 MMLU-Pro subjects** and 18,064 answers from four Ollama models. In the prespecified `related + 25% noise` condition, ECRT's team-accuracy difference against FixedBorrow is only +0.02 percentage points (95% CI [−0.04, +0.10]); ECRT superiority is **not established**. A separate paired Qwen3 8B study found a +23.57-point thinking-policy accuracy gain on 280 unused dev questions, with about 213 times the output tokens. A new 1,260-response real-model pool study found an oracle upper reference of 344/420 but a cross-fitted subject router of 274/420 versus 280/420 for always thinking. The prespecified pool gate for DART **failed**; the new sealed holdout remains unused.
 
