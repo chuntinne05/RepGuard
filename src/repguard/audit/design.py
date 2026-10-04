@@ -106,3 +106,42 @@ def disagreement_weights(routes: np.ndarray, proxy: np.ndarray, active: np.ndarr
         frequency[np.arange(len(proxy)), route] += 1 / len(chosen)
     frequency = np.clip(frequency, 0, 1)
     return np.sqrt(frequency * (1 - frequency) * (proxy * (1 - proxy) + 0.01))
+
+
+def contrast_allocation(routes: np.ndarray, proxy: np.ndarray, budget: int) -> tuple[np.ndarray, dict]:
+    """Allocate against ALL selectable policy contrasts, retaining uniform design.
+
+    The objective is a diagonal residual-second-moment surrogate, not the true
+    pivotal-sampling variance (which also involves joint inclusion probabilities).
+    A bounded dual search proposes designs; uniform is retained if none improve
+    the objective. No safety/optimality theorem is asserted for this heuristic.
+    """
+    n, agents = proxy.shape
+    one_hot = np.eye(agents)[routes].reshape(len(routes), -1)
+    second_moment = (proxy * (1-proxy) + 0.01).ravel()
+    coefficients = []
+    for a in range(len(routes)):
+        for b in range(a + 1, len(routes)):
+            contrast = (one_hot[a] - one_hot[b])**2
+            if contrast.any():
+                coefficients.append(contrast * second_moment)
+    uniform = np.full(proxy.size, budget / proxy.size)
+    if not coefficients:
+        return uniform, {'uniform_objective': 0.0, 'selected_objective': 0.0}
+    matrix = np.array(coefficients)
+    best = uniform.copy()
+    initial = best_score = float((matrix @ (1/best)).max())
+    dual = np.full(len(matrix), 1/len(matrix))
+    for _ in range(24):
+        importance = np.sqrt(dual @ matrix)
+        candidate = inclusion_probabilities(importance, budget)
+        risks = matrix @ (1/candidate)
+        score = float(risks.max())
+        if score < best_score:
+            best, best_score = candidate, score
+        dual *= np.exp(risks / max(score, 1e-12))
+        dual /= dual.sum()
+    return best, {'uniform_objective': initial / n**2,
+                  'selected_objective': best_score / n**2,
+                  'selectable_contrasts': len(matrix), 'iterations': 24,
+                  'objective_is_exact_sampling_variance': False}

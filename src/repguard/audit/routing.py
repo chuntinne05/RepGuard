@@ -9,7 +9,8 @@ from collections.abc import Callable, Sequence
 import numpy as np
 
 from repguard.audit.design import (
-    corrected_policy_values, disagreement_weights, inclusion_probabilities, pivotal_sample,
+    contrast_allocation, corrected_policy_values, disagreement_weights,
+    inclusion_probabilities, pivotal_sample,
 )
 
 
@@ -102,7 +103,11 @@ def select_policy(
     proxy_values = proxy[np.arange(len(proxy))[None, :], routes].mean(axis=1)
     active = np.flatnonzero(proxy_values >= proxy_values.max() - 0.15)
     active = np.unique(np.append(active, baseline))
-    if method == 'DART':
+    design_diagnostics = {}
+    if method == 'DARTContrast':
+        weights = None
+        active = np.arange(len(routes))
+    elif method == 'DART':
         weights = disagreement_weights(routes, proxy, active)
     elif method == 'UncertaintyHistory':
         weights = np.sqrt(proxy * (1-proxy) + 0.01)
@@ -110,7 +115,11 @@ def select_policy(
         weights = np.ones_like(proxy)
     else:
         raise ValueError(f'Unknown audit method: {method}')
-    q = inclusion_probabilities(weights.ravel(), budget).reshape(proxy.shape)
+    if method == 'DARTContrast':
+        q, design_diagnostics = contrast_allocation(routes, proxy, budget)
+        q = q.reshape(proxy.shape)
+    else:
+        q = inclusion_probabilities(weights.ravel(), budget).reshape(proxy.shape)
     indices = pivotal_sample(q.ravel(), rng)
     labels = np.asarray(audit(indices), dtype=float)
     if labels.shape != indices.shape:
@@ -128,4 +137,4 @@ def select_policy(
             'active_candidates': active.tolist(), 'audits': len(indices),
             'effective_sample_size': float((1/q.ravel()[indices]).sum()**2 /
                                            ((1/q.ravel()[indices])**2).sum()),
-            'certified': False}
+            'design_diagnostics': design_diagnostics, 'certified': False}

@@ -22,7 +22,7 @@ from repguard.audit.routing import (
 )
 from analyze_dart_leaderboard import cluster_ci
 
-AUDIT_METHODS = ('AuditOnly', 'RandomHistory', 'UncertaintyHistory', 'DART')
+AUDIT_METHODS = ('AuditOnly', 'RandomHistory', 'UncertaintyHistory', 'DART', 'DARTContrast')
 BUDGETS = (0.05, 0.10, 0.20)
 
 
@@ -81,7 +81,7 @@ def prepare_inputs(args: argparse.Namespace) -> tuple[dict, dict, np.ndarray, np
     return frozen, matrix, y, f, texts
 
 
-def summarize(predictions: dict, ids: list[str], seeds: int) -> dict:
+def summarize(predictions: dict, ids: list[str], seeds: int, primary_method: str = 'DART') -> dict:
     groups = [generator_id(t) for t in ids]
     result = {}
     for budget, methods in predictions.items():
@@ -96,11 +96,11 @@ def summarize(predictions: dict, ids: list[str], seeds: int) -> dict:
                              'seed_max_correct': int(values.sum(axis=1).max())}
         contrasts = {}
         for name in ('AuditOnly', 'RandomHistory', 'UncertaintyHistory', 'AnchorOnly'):
-            delta = (arrays['DART'] - arrays[name]).mean(axis=0)
+            delta = (arrays[primary_method] - arrays[name]).mean(axis=0)
             contrasts[name] = {'difference': float(delta.mean()),
                               'generator_cluster_ci95': cluster_ci(delta, groups),
-                              'mean_rescues': float(((arrays['DART'] == 1) & (arrays[name] == 0)).sum(axis=1).mean()),
-                              'mean_harms': float(((arrays['DART'] == 0) & (arrays[name] == 1)).sum(axis=1).mean())}
+                              'mean_rescues': float(((arrays[primary_method] == 1) & (arrays[name] == 0)).sum(axis=1).mean()),
+                              'mean_harms': float(((arrays[primary_method] == 0) & (arrays[name] == 1)).sum(axis=1).mean())}
         result[budget] = {'methods': summary, 'DART_contrasts': contrasts}
     primary = result['0.1']['DART_contrasts']
     gate = all(primary[m]['generator_cluster_ci95'][0] > 0
@@ -108,7 +108,8 @@ def summarize(predictions: dict, ids: list[str], seeds: int) -> dict:
     return {'scope': 'exploratory grouped out-of-fold replay of official real trajectories',
             'feedback': 'actual agent completion self-report requests; not LLM judge or verified success',
             'tasks': len(ids), 'generators': len(set(groups)), 'audit_seeds': seeds,
-            'budgets': result, 'primary_budget': 0.1, 'exploratory_method_gate_pass': gate,
+            'budgets': result, 'primary_budget': 0.1, 'primary_method': primary_method,
+            'exploratory_method_gate_pass': gate,
             'deployment_certified': False, 'independent_confirmation': False,
             'cost_scope': 'equal unique historical task-agent gold labels and one chosen agent invocation per test task; no compute/USD parity claim',
             'uncertainty_scope': 'unadjusted exploratory generator bootstrap after seed averaging; not an audit-design or deployment guarantee'}
@@ -127,6 +128,7 @@ def run(args: argparse.Namespace) -> None:
                 'instructions_sha256': digest(texts),
                 'source_sha256': {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in source_files},
                 'protocol_document': 'docs/analysis/dart_first_implementation_protocol_2026-10-04.md',
+                'primary_method': args.primary_method,
                 'cost_unit': 'one trusted task-agent label', 'feedback_source': 'agent self-report request log',
                 'sealed_mmlu_holdout_read': False, 'challenge_outcomes_read': False}
     protocol['hash'] = digest(protocol)
@@ -215,7 +217,7 @@ def run(args: argparse.Namespace) -> None:
                              fold=fold, budget_fraction=fraction, seed=seed,
                              audit_policy_runs=steps * len(AUDIT_METHODS))
             print(f'fold={fold} budget={fraction} completed={steps}/{total}', flush=True)
-    report = summarize(predictions, ids, args.seeds)
+    report = summarize(predictions, ids, args.seeds, args.primary_method)
     (args.output / 'analysis.json').write_text(json.dumps(report, indent=2) + '\n')
     serial = {b: {m: v.tolist() for m, v in methods.items()} for b, methods in predictions.items()}
     (args.output / 'predictions_private.json').write_text(json.dumps({'task_ids': ids, 'predictions': serial}) + '\n')
@@ -236,6 +238,7 @@ def main() -> None:
     parser.add_argument('--capability', type=Path, default=Path('results/dart_leaderboard_v1'))
     parser.add_argument('--output', type=Path, default=Path('results/dart_audit_selfreport_v1'))
     parser.add_argument('--seeds', type=int, default=20)
+    parser.add_argument('--primary-method', choices=('DART', 'DARTContrast'), default='DART')
     args = parser.parse_args()
     if args.seeds != 20:
         parser.error('Frozen pilot requires all 20 seeds; change protocol before other research runs')
