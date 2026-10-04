@@ -9,8 +9,8 @@ với bản đầu, nhưng baseline đơn giản sử dụng toàn bộ ngân s�
 bình cao hơn. Không diễn giải việc sửa được thuật toán thành việc đã có bài báo A*.
 
 Kênh feedback đầu tiên là lời tự báo hoàn thành trong log agent. Kênh thứ hai là
-model Qwen3-14B chấm log thực tế trên Modal, đang được kiểm tra theo protocol
-đã khóa. Cả hai phục vụ cùng câu hỏi: **với ít nhãn kiểm chứng đáng tin, lịch sử
+model Qwen3-14B chấm log thực tế trên Modal, đã hoàn tất pilot 168 và đang mở
+rộng theo protocol đã khóa. Cả hai phục vụ cùng câu hỏi: **với ít nhãn kiểm chứng đáng tin, lịch sử
 phản hồi không hoàn hảo có giúp chọn agent tốt hơn cách học đơn giản hay không?**
 
 ## 2. Dữ liệu nào đã thực sự dùng?
@@ -220,3 +220,58 @@ chỉ để tìm một ô kết quả dương. Không thể bảo đảm hội n
 
 Kết quả test và snapshot inference cuối lượt được bổ sung sau khi kiểm tra
 thực tế; phần kết luận định lượng ở trên là kết quả self-report đã hoàn tất.
+
+## 10. Kết quả pilot Modal đã hoàn tất và trạng thái mở rộng
+
+Pilot đủ **168/168** kết quả thực, **168 hợp lệ**, trên 53 generator. Có 45
+trajectory thành công và 123 thất bại theo evaluator chính thức.
+
+| Chỉ số judge | Giá trị |
+|---|---:|
+| Balanced accuracy | 69,62% |
+| CI 95% theo generator | [64,06%; 75,21%] |
+| Accuracy thường | 56,55% |
+| Brier score | 0,30851 |
+| True positive / false negative | 44 / 1 |
+| True negative / false positive | 51 / 72 |
+| Log bị cắt theo protocol | 95/168 |
+| Input / output tokens ghi nhận | 505.853 / 1.466 |
+| Tổng latency lời gọi có kết quả | 797,62 giây ≈ 13,29 phút |
+
+**Gate chất lượng đã khóa: PASS**, vì balanced accuracy và CI vượt ngưỡng,
+không có lỗi định dạng. Đây chỉ là gate có tín hiệu so với chance, không phải
+gate thắng self-report hay chứng minh calibration tốt.
+
+Đối chiếu mô tả trên đúng 168 mẫu: self-report có balanced accuracy **70,33%**,
+accuracy **56,55%**, TP=45, FN=0, TN=50, FP=73. Vì vậy chưa có dấu hiệu judge
+tốt hơn self-report. Baseline luôn nói thất bại có accuracy 73,21% do lệch lớp,
+nhưng balanced accuracy chỉ 50%. Brier của xác suất judge còn kém diagnostic
+hằng số bằng prevalence của mẫu (0,19611; giá trị này dùng gold hậu nghiệm,
+không phải predictor được phép triển khai). Không dùng các quan sát này để sửa
+ngưỡng sau khi đã xem pilot.
+
+Judge bỏ sót nhiều failure: nhận gần hết success nhưng còn 72 false positive.
+Giả thuyết cần kiểm tra gồm thiếu trạng thái cuối/collateral damage trong log,
+tin lời hoàn thành của agent, và cắt log dài. Chưa xác định nhân quả từng yếu tố.
+Toàn bộ confusion counts và các chỉ số được lưu trong
+`dart_real_judge_pilot_2026-10-04.json`.
+
+Controller đã resume cùng manifest từ 168 lên full 2.352, không chạy lại pilot;
+đã xác nhận record tăng sau resume. Bước tiếp theo tự động là replay với toàn
+bộ đối chứng của v3 và xuất `dart_real_judge_result_2026-10-04.md/.json` khi đủ
+dữ liệu. **Full judge và kết quả routing với judge chưa hoàn tất tại snapshot này.**
+
+Kiểm thử: toàn suite **226 passed trong 70,44 giây**; thêm kiểm tra compile
+controller/report và `git diff --check` đều qua. Commit tích hợp pipeline:
+`c382232`, đã push `dev`. Hai ảnh slide không liên quan được giữ nguyên.
+
+Để tiếp tục đúng pipeline sau gián đoạn, từ project chạy:
+
+```bash
+caffeinate -i -s .venv/bin/python -u run_dart_judge_pipeline.py
+```
+
+Không mở instance thứ hai khi controller đang chạy; khóa hệ điều hành sẽ từ chối.
+Kiểm tra `status.json`, `pipeline_status.json` và thời gian bản ghi cuối trong
+ledger trước khi kết luận đang tiến triển. Lượt mạng retry có thể gây compute
+thêm dù ledger không đếm trùng; không coi số record là billing chính xác.
