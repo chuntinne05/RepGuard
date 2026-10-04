@@ -56,3 +56,22 @@ def test_all_audit_arms_query_same_exact_budget():
 
         result = select_policy(method, routes, proxy, 0, 6, np.random.default_rng(1), audit)
         assert result['audits'] == len(set(requests)) == 6
+def test_uniform_controls_use_exact_budget_and_ignore_unqueried_gold():
+    from repguard.audit.routing import uniform_audit_routes
+    shape = (12, 3)
+    similarity = np.eye(12)[:5]
+    gold = (np.arange(36) % 3 == 0).astype(float)
+    queried = []
+
+    def audit(indices):
+        queried.extend(indices.tolist())
+        return gold[indices]
+
+    first = uniform_audit_routes(similarity, shape, 9, np.random.default_rng(12), audit)
+    assert len(queried) == len(set(queried)) == 9
+    changed = 1 - gold
+    changed[queried] = gold[queried]
+    second = uniform_audit_routes(similarity, shape, 9, np.random.default_rng(12),
+                                  lambda i: changed[i])
+    for before, after in zip(first, second):
+        np.testing.assert_array_equal(before, after)

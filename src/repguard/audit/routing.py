@@ -78,6 +78,27 @@ def policy_bank(similarity: np.ndarray, anchors: np.ndarray) -> tuple[list[str],
     return names, np.array(routes)
 
 
+def uniform_audit_routes(
+    similarity: np.ndarray, shape: tuple[int, int], budget: int,
+    rng: np.random.Generator, audit: Callable[[np.ndarray], np.ndarray],
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Strong simple controls: use the entire budget for fitting, with no split.
+
+    Uniformly sampled historical labels train a smoothed global agent selector
+    and kNN10 router. Both controls share this audit set, each costing B labels.
+    """
+    if similarity.shape[1] != shape[0] or not 0 < budget <= np.prod(shape):
+        raise ValueError('Invalid history dimensions or audit budget')
+    indices = rng.permutation(int(np.prod(shape)))[:budget]
+    labels = np.asarray(audit(indices), dtype=float)
+    if labels.shape != indices.shape or not np.isin(labels, [0, 1]).all():
+        raise ValueError('Invalid trusted audit response')
+    observed = np.full(shape, np.nan)
+    observed.ravel()[indices] = labels
+    constant = np.full(len(similarity), int(global_means(observed).argmax()))
+    return constant, knn_routes(similarity, observed, 10), indices
+
+
 def calibrated_proxy(feedback_c: np.ndarray, anchors: np.ndarray, feedback_s: np.ndarray) -> np.ndarray:
     """Partial-pool source channels using only shared construction audit labels."""
     out = np.empty(feedback_s.shape, dtype=float)

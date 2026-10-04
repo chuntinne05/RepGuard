@@ -18,7 +18,7 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parent / 'src'))
 from repguard.audit.routing import (
     TextFeatures, calibrated_proxy, construction_selection_split, generator_id,
-    global_means, knn_routes, policy_bank, select_policy,
+    global_means, knn_routes, policy_bank, select_policy, uniform_audit_routes,
 )
 from analyze_dart_leaderboard import cluster_ci
 
@@ -95,7 +95,8 @@ def summarize(predictions: dict, ids: list[str], seeds: int, primary_method: str
                              'seed_min_correct': int(values.sum(axis=1).min()),
                              'seed_max_correct': int(values.sum(axis=1).max())}
         contrasts = {}
-        for name in ('AuditOnly', 'RandomHistory', 'UncertaintyHistory', 'AnchorOnly'):
+        for name in ('AuditOnly', 'RandomHistory', 'UncertaintyHistory', 'AnchorOnly',
+                     'UniformAuditGlobal', 'UniformAuditKNN'):
             delta = (arrays[primary_method] - arrays[name]).mean(axis=0)
             contrasts[name] = {'difference': float(delta.mean()),
                               'generator_cluster_ci95': cluster_ci(delta, groups),
@@ -104,7 +105,8 @@ def summarize(predictions: dict, ids: list[str], seeds: int, primary_method: str
         result[budget] = {'methods': summary, 'DART_contrasts': contrasts}
     primary = result['0.1']['DART_contrasts']
     gate = all(primary[m]['generator_cluster_ci95'][0] > 0
-               for m in ('AuditOnly', 'RandomHistory', 'UncertaintyHistory'))
+               for m in ('AuditOnly', 'RandomHistory', 'UncertaintyHistory',
+                         'UniformAuditGlobal', 'UniformAuditKNN'))
     return {'scope': 'exploratory grouped out-of-fold replay of official real trajectories',
             'feedback': 'actual agent completion self-report requests; not LLM judge or verified success',
             'tasks': len(ids), 'generators': len(set(groups)), 'audit_seeds': seeds,
@@ -118,7 +120,8 @@ def summarize(predictions: dict, ids: list[str], seeds: int, primary_method: str
 def run(args: argparse.Namespace) -> None:
     frozen, matrix, y, feedback, texts = prepare_inputs(args)
     ids, agents = matrix['task_ids'], matrix['agents']
-    methods = (*AUDIT_METHODS, 'AnchorOnly', 'ProxyGlobal', 'ProxyKNN',
+    methods = (*AUDIT_METHODS, 'UniformAuditGlobal', 'UniformAuditKNN',
+               'AnchorOnly', 'ProxyGlobal', 'ProxyKNN',
                'GoldTrainSingle', 'GoldTrainKNN')
     source_files = [Path(__file__), Path('src/repguard/audit/design.py'),
                     Path('src/repguard/audit/routing.py')]
@@ -129,6 +132,7 @@ def run(args: argparse.Namespace) -> None:
                 'source_sha256': {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in source_files},
                 'protocol_document': 'docs/analysis/dart_first_implementation_protocol_2026-10-04.md',
                 'primary_method': args.primary_method,
+                'baseline_amendment': 'docs/analysis/dart_full_budget_controls_2026-10-04.md',
                 'cost_unit': 'one trusted task-agent label', 'feedback_source': 'agent self-report request log',
                 'sealed_mmlu_holdout_read': False, 'challenge_outcomes_read': False}
     protocol['hash'] = digest(protocol)
@@ -182,6 +186,20 @@ def run(args: argparse.Namespace) -> None:
                 choices = {'AnchorOnly': routes_t[baseline], 'ProxyGlobal': raw_single,
                            'ProxyKNN': raw_knn, 'GoldTrainSingle': gold_single, 'GoldTrainKNN': gold_knn}
                 traces = []
+                uniform_global, uniform_knn, uniform_indices = uniform_audit_routes(
+                    all_sim, (len(train), len(agents)), budget,
+                    np.random.default_rng(44004 + seed * 100 + fold),
+                    lambda requested: y[train].ravel()[requested].copy())
+                for method, actions in [('UniformAuditGlobal', uniform_global),
+                                        ('UniformAuditKNN', uniform_knn)]:
+                    choices[method] = actions
+                    traces.append({'fold': fold, 'seed': seed, 'budget_fraction': fraction,
+                                   'method': method, 'total_audits': budget,
+                                   'training_ids': [ids[i] for i in train],
+                                   'audit_indices': uniform_indices.tolist(),
+                                   'inclusion_probability': budget / (len(train) * len(agents)),
+                                   'test_ids': [ids[i] for i in test],
+                                   'test_agent_choices': actions.tolist()})
                 for method in AUDIT_METHODS:
                     revealed = []
 
@@ -215,14 +233,14 @@ def run(args: argparse.Namespace) -> None:
                 steps += 1
                 write_status(args.output, state='running', completed=steps, total=total,
                              fold=fold, budget_fraction=fraction, seed=seed,
-                             audit_policy_runs=steps * len(AUDIT_METHODS))
+                             audit_policy_runs=steps * (len(AUDIT_METHODS) + 2))
             print(f'fold={fold} budget={fraction} completed={steps}/{total}', flush=True)
     report = summarize(predictions, ids, args.seeds, args.primary_method)
     (args.output / 'analysis.json').write_text(json.dumps(report, indent=2) + '\n')
     serial = {b: {m: v.tolist() for m, v in methods.items()} for b, methods in predictions.items()}
     (args.output / 'predictions_private.json').write_text(json.dumps({'task_ids': ids, 'predictions': serial}) + '\n')
     write_status(args.output, state='completed', completed=steps, total=total,
-                 audit_policy_runs=steps * len(AUDIT_METHODS),
+                 audit_policy_runs=steps * (len(AUDIT_METHODS) + 2),
                  method_gate_pass=report['exploratory_method_gate_pass'],
                  next_stage='real_judge_validation_required', inference_calls=0)
     for fraction, data in report['budgets'].items():
