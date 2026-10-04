@@ -101,8 +101,10 @@ def uniform_audit_routes(
 
 def calibrated_proxy(feedback_c: np.ndarray, anchors: np.ndarray, feedback_s: np.ndarray) -> np.ndarray:
     """Partial-pool source channels using only shared construction audit labels."""
+    if not np.isin(feedback_c, [0, 1, 2]).all() or not np.isin(feedback_s, [0, 1, 2]).all():
+        raise ValueError('Unknown feedback category')
     out = np.empty(feedback_s.shape, dtype=float)
-    for bit in (0, 1):
+    for bit in (0, 1, 2):
         mask = (feedback_c == bit) & np.isfinite(anchors)
         pooled = (anchors[mask].sum() + 1) / (mask.sum() + 2)
         for a in range(anchors.shape[1]):

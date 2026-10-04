@@ -21,6 +21,7 @@ from repguard.audit.routing import (
     global_means, knn_routes, policy_bank, select_policy, uniform_audit_routes,
 )
 from analyze_dart_leaderboard import cluster_ci
+from repguard.audit.feedback import judge_feedback
 
 AUDIT_METHODS = ('AuditOnly', 'RandomHistory', 'UncertaintyHistory', 'DART', 'DARTContrast')
 BUDGETS = (0.05, 0.10, 0.20)
@@ -76,6 +77,8 @@ def prepare_inputs(args: argparse.Namespace) -> tuple[dict, dict, np.ndarray, np
                          for agent in agents])
     y = np.array(matrix['success'], dtype=float)
     f = np.array(feedback, dtype=int)
+    if args.judge_dir is not None:
+        f, _ = judge_feedback(args.judge_dir, ids, agents)
     if y.shape != f.shape or not np.isin(y, [0, 1]).all():
         raise ValueError('Invalid outcome matrix')
     return frozen, matrix, y, f, texts
@@ -124,7 +127,10 @@ def run(args: argparse.Namespace) -> None:
                'AnchorOnly', 'ProxyGlobal', 'ProxyKNN',
                'GoldTrainSingle', 'GoldTrainKNN')
     source_files = [Path(__file__), Path('src/repguard/audit/design.py'),
-                    Path('src/repguard/audit/routing.py')]
+                    Path('src/repguard/audit/routing.py'), Path('src/repguard/audit/feedback.py')]
+    feedback_meta = {'source': 'agent self-report request log'}
+    if args.judge_dir is not None:
+        _, feedback_meta = judge_feedback(args.judge_dir, ids, agents)
     protocol = {'name': 'dart_observed_completion_audit_pilot_v1', 'budgets': BUDGETS,
                 'seeds': list(range(args.seeds)), 'pool_manifest_sha256': digest(frozen),
                 'outcome_matrix_sha256': digest(matrix), 'feedback_sha256': digest(feedback.tolist()),
@@ -133,7 +139,7 @@ def run(args: argparse.Namespace) -> None:
                 'protocol_document': 'docs/analysis/dart_first_implementation_protocol_2026-10-04.md',
                 'primary_method': args.primary_method,
                 'baseline_amendment': 'docs/analysis/dart_full_budget_controls_2026-10-04.md',
-                'cost_unit': 'one trusted task-agent label', 'feedback_source': 'agent self-report request log',
+                'cost_unit': 'one trusted task-agent label', 'feedback_metadata': feedback_meta,
                 'sealed_mmlu_holdout_read': False, 'challenge_outcomes_read': False}
     protocol['hash'] = digest(protocol)
     args.output.mkdir(parents=True, exist_ok=True)
@@ -143,7 +149,7 @@ def run(args: argparse.Namespace) -> None:
     manifest_path.write_text(json.dumps(protocol, indent=2) + '\n')
     (args.output / 'feedback_private.json').write_text(json.dumps({
         'task_ids': ids, 'agents': agents, 'feedback': feedback.tolist(),
-        'provenance': 'last supervisor message request status, no gold access'}, indent=2) + '\n')
+        'provenance': feedback_meta}, indent=2) + '\n')
     fold_ids = np.array([frozen['normal_outer_fold_by_generator'][generator_id(t)] for t in ids])
     predictions = {str(b): {m: np.full((args.seeds, len(ids)), np.nan) for m in methods} for b in BUDGETS}
     traces_path = args.output / 'audit_trace_private.jsonl'
@@ -168,8 +174,9 @@ def run(args: argparse.Namespace) -> None:
         all_sim = gold_encoder.transform([texts[i] for i in test]) @ gold_encoder.transform([texts[i] for i in train]).T
         gold_single = np.full(len(test), int(y[train].mean(axis=0).argmax()))
         gold_knn = knn_routes(all_sim, y[train], 10)
-        raw_single = np.full(len(test), int(feedback[train].mean(axis=0).argmax()))
-        raw_knn = knn_routes(all_sim, feedback[train].astype(float), 10)
+        raw_feedback = np.where(feedback[train] == 2, .5, feedback[train]).astype(float)
+        raw_single = np.full(len(test), int(raw_feedback.mean(axis=0).argmax()))
+        raw_knn = knn_routes(all_sim, raw_feedback, 10)
         for fraction in BUDGETS:
             budget = int(len(train) * len(agents) * fraction)
             anchor_budget = budget // 3
@@ -236,13 +243,15 @@ def run(args: argparse.Namespace) -> None:
                              audit_policy_runs=steps * (len(AUDIT_METHODS) + 2))
             print(f'fold={fold} budget={fraction} completed={steps}/{total}', flush=True)
     report = summarize(predictions, ids, args.seeds, args.primary_method)
+    report['feedback'] = feedback_meta
     (args.output / 'analysis.json').write_text(json.dumps(report, indent=2) + '\n')
     serial = {b: {m: v.tolist() for m, v in methods.items()} for b, methods in predictions.items()}
     (args.output / 'predictions_private.json').write_text(json.dumps({'task_ids': ids, 'predictions': serial}) + '\n')
     write_status(args.output, state='completed', completed=steps, total=total,
                  audit_policy_runs=steps * (len(AUDIT_METHODS) + 2),
                  method_gate_pass=report['exploratory_method_gate_pass'],
-                 next_stage='real_judge_validation_required', inference_calls=0)
+                 next_stage='review_method_gate_and_replication' if args.judge_dir else 'real_judge_validation_required',
+                 inference_calls=0)
     for fraction, data in report['budgets'].items():
         print('budget', fraction, {m: round(v['mean_correct'], 2) for m, v in data['methods'].items()})
     print('primary_gate', report['exploratory_method_gate_pass'])
@@ -257,6 +266,7 @@ def main() -> None:
     parser.add_argument('--output', type=Path, default=Path('results/dart_audit_selfreport_v1'))
     parser.add_argument('--seeds', type=int, default=20)
     parser.add_argument('--primary-method', choices=('DART', 'DARTContrast'), default='DART')
+    parser.add_argument('--judge-dir', type=Path, default=None)
     args = parser.parse_args()
     if args.seeds != 20:
         parser.error('Frozen pilot requires all 20 seeds; change protocol before other research runs')

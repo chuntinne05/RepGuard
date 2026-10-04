@@ -1,0 +1,412 @@
+{
+  "scope": "exploratory grouped out-of-fold replay of official real trajectories",
+  "feedback": "actual agent completion self-report requests; not LLM judge or verified success",
+  "tasks": 168,
+  "generators": 56,
+  "audit_seeds": 20,
+  "budgets": {
+    "0.05": {
+      "methods": {
+        "AuditOnly": {
+          "mean_correct": 57.9,
+          "mean_accuracy": 0.34464285714285714,
+          "seed_min_correct": 41,
+          "seed_max_correct": 74
+        },
+        "RandomHistory": {
+          "mean_correct": 58.7,
+          "mean_accuracy": 0.3494047619047619,
+          "seed_min_correct": 39,
+          "seed_max_correct": 77
+        },
+        "UncertaintyHistory": {
+          "mean_correct": 61.7,
+          "mean_accuracy": 0.3672619047619048,
+          "seed_min_correct": 47,
+          "seed_max_correct": 75
+        },
+        "DART": {
+          "mean_correct": 51.55,
+          "mean_accuracy": 0.3068452380952381,
+          "seed_min_correct": 32,
+          "seed_max_correct": 69
+        },
+        "DARTContrast": {
+          "mean_correct": 62.0,
+          "mean_accuracy": 0.36904761904761907,
+          "seed_min_correct": 34,
+          "seed_max_correct": 75
+        },
+        "UniformAuditGlobal": {
+          "mean_correct": 64.4,
+          "mean_accuracy": 0.38333333333333336,
+          "seed_min_correct": 50,
+          "seed_max_correct": 76
+        },
+        "UniformAuditKNN": {
+          "mean_correct": 62.2,
+          "mean_accuracy": 0.37023809523809526,
+          "seed_min_correct": 52,
+          "seed_max_correct": 73
+        },
+        "AnchorOnly": {
+          "mean_correct": 56.8,
+          "mean_accuracy": 0.3380952380952381,
+          "seed_min_correct": 36,
+          "seed_max_correct": 71
+        },
+        "ProxyGlobal": {
+          "mean_correct": 41.0,
+          "mean_accuracy": 0.24404761904761904,
+          "seed_min_correct": 41,
+          "seed_max_correct": 41
+        },
+        "ProxyKNN": {
+          "mean_correct": 45.0,
+          "mean_accuracy": 0.26785714285714285,
+          "seed_min_correct": 45,
+          "seed_max_correct": 45
+        },
+        "GoldTrainSingle": {
+          "mean_correct": 82.0,
+          "mean_accuracy": 0.4880952380952381,
+          "seed_min_correct": 82,
+          "seed_max_correct": 82
+        },
+        "GoldTrainKNN": {
+          "mean_correct": 71.0,
+          "mean_accuracy": 0.4226190476190476,
+          "seed_min_correct": 71,
+          "seed_max_correct": 71
+        }
+      },
+      "DART_contrasts": {
+        "AuditOnly": {
+          "difference": 0.024404761904761908,
+          "generator_cluster_ci95": [
+            -7.440476190472204e-06,
+            0.04851190476190476
+          ],
+          "mean_rescues": 25.3,
+          "mean_harms": 21.2
+        },
+        "RandomHistory": {
+          "difference": 0.019642857142857146,
+          "generator_cluster_ci95": [
+            -0.004761904761904762,
+            0.041666666666666664
+          ],
+          "mean_rescues": 24.6,
+          "mean_harms": 21.3
+        },
+        "UncertaintyHistory": {
+          "difference": 0.0017857142857142874,
+          "generator_cluster_ci95": [
+            -0.014285714285714285,
+            0.01755952380952381
+          ],
+          "mean_rescues": 12.45,
+          "mean_harms": 12.15
+        },
+        "AnchorOnly": {
+          "difference": 0.030952380952380953,
+          "generator_cluster_ci95": [
+            0.006540178571428574,
+            0.054166666666666675
+          ],
+          "mean_rescues": 26.3,
+          "mean_harms": 21.1
+        },
+        "UniformAuditGlobal": {
+          "difference": -0.014285714285714282,
+          "generator_cluster_ci95": [
+            -0.040773809523809525,
+            0.01220238095238095
+          ],
+          "mean_rescues": 23.0,
+          "mean_harms": 25.4
+        },
+        "UniformAuditKNN": {
+          "difference": -0.0011904761904761888,
+          "generator_cluster_ci95": [
+            -0.026785714285714284,
+            0.025595238095238095
+          ],
+          "mean_rescues": 24.2,
+          "mean_harms": 24.4
+        }
+      }
+    },
+    "0.1": {
+      "methods": {
+        "AuditOnly": {
+          "mean_correct": 62.85,
+          "mean_accuracy": 0.37410714285714286,
+          "seed_min_correct": 46,
+          "seed_max_correct": 75
+        },
+        "RandomHistory": {
+          "mean_correct": 64.4,
+          "mean_accuracy": 0.38333333333333336,
+          "seed_min_correct": 45,
+          "seed_max_correct": 73
+        },
+        "UncertaintyHistory": {
+          "mean_correct": 65.5,
+          "mean_accuracy": 0.3898809523809524,
+          "seed_min_correct": 49,
+          "seed_max_correct": 83
+        },
+        "DART": {
+          "mean_correct": 55.5,
+          "mean_accuracy": 0.33035714285714285,
+          "seed_min_correct": 40,
+          "seed_max_correct": 72
+        },
+        "DARTContrast": {
+          "mean_correct": 67.4,
+          "mean_accuracy": 0.4011904761904762,
+          "seed_min_correct": 49,
+          "seed_max_correct": 81
+        },
+        "UniformAuditGlobal": {
+          "mean_correct": 69.7,
+          "mean_accuracy": 0.4148809523809524,
+          "seed_min_correct": 57,
+          "seed_max_correct": 79
+        },
+        "UniformAuditKNN": {
+          "mean_correct": 66.35,
+          "mean_accuracy": 0.3949404761904762,
+          "seed_min_correct": 54,
+          "seed_max_correct": 79
+        },
+        "AnchorOnly": {
+          "mean_correct": 60.6,
+          "mean_accuracy": 0.3607142857142857,
+          "seed_min_correct": 41,
+          "seed_max_correct": 79
+        },
+        "ProxyGlobal": {
+          "mean_correct": 41.0,
+          "mean_accuracy": 0.24404761904761904,
+          "seed_min_correct": 41,
+          "seed_max_correct": 41
+        },
+        "ProxyKNN": {
+          "mean_correct": 45.0,
+          "mean_accuracy": 0.26785714285714285,
+          "seed_min_correct": 45,
+          "seed_max_correct": 45
+        },
+        "GoldTrainSingle": {
+          "mean_correct": 82.0,
+          "mean_accuracy": 0.4880952380952381,
+          "seed_min_correct": 82,
+          "seed_max_correct": 82
+        },
+        "GoldTrainKNN": {
+          "mean_correct": 71.0,
+          "mean_accuracy": 0.4226190476190476,
+          "seed_min_correct": 71,
+          "seed_max_correct": 71
+        }
+      },
+      "DART_contrasts": {
+        "AuditOnly": {
+          "difference": 0.027083333333333327,
+          "generator_cluster_ci95": [
+            0.0017857142857142859,
+            0.05357142857142857
+          ],
+          "mean_rescues": 25.65,
+          "mean_harms": 21.1
+        },
+        "RandomHistory": {
+          "difference": 0.017857142857142856,
+          "generator_cluster_ci95": [
+            -0.010119047619047616,
+            0.046130952380952384
+          ],
+          "mean_rescues": 22.9,
+          "mean_harms": 19.9
+        },
+        "UncertaintyHistory": {
+          "difference": 0.01130952380952381,
+          "generator_cluster_ci95": [
+            -0.004761904761904761,
+            0.02886904761904762
+          ],
+          "mean_rescues": 17.9,
+          "mean_harms": 16.0
+        },
+        "AnchorOnly": {
+          "difference": 0.04047619047619048,
+          "generator_cluster_ci95": [
+            0.011607142857142858,
+            0.06964285714285715
+          ],
+          "mean_rescues": 25.4,
+          "mean_harms": 18.6
+        },
+        "UniformAuditGlobal": {
+          "difference": -0.013690476190476192,
+          "generator_cluster_ci95": [
+            -0.041666666666666664,
+            0.014583333333333334
+          ],
+          "mean_rescues": 20.05,
+          "mean_harms": 22.35
+        },
+        "UniformAuditKNN": {
+          "difference": 0.00625,
+          "generator_cluster_ci95": [
+            -0.01845238095238095,
+            0.029464285714285714
+          ],
+          "mean_rescues": 22.6,
+          "mean_harms": 21.55
+        }
+      }
+    },
+    "0.2": {
+      "methods": {
+        "AuditOnly": {
+          "mean_correct": 65.55,
+          "mean_accuracy": 0.39017857142857143,
+          "seed_min_correct": 47,
+          "seed_max_correct": 82
+        },
+        "RandomHistory": {
+          "mean_correct": 67.55,
+          "mean_accuracy": 0.40208333333333335,
+          "seed_min_correct": 53,
+          "seed_max_correct": 81
+        },
+        "UncertaintyHistory": {
+          "mean_correct": 65.85,
+          "mean_accuracy": 0.3919642857142857,
+          "seed_min_correct": 48,
+          "seed_max_correct": 79
+        },
+        "DART": {
+          "mean_correct": 57.65,
+          "mean_accuracy": 0.3431547619047619,
+          "seed_min_correct": 40,
+          "seed_max_correct": 80
+        },
+        "DARTContrast": {
+          "mean_correct": 69.55,
+          "mean_accuracy": 0.4139880952380952,
+          "seed_min_correct": 58,
+          "seed_max_correct": 79
+        },
+        "UniformAuditGlobal": {
+          "mean_correct": 75.15,
+          "mean_accuracy": 0.4473214285714286,
+          "seed_min_correct": 61,
+          "seed_max_correct": 82
+        },
+        "UniformAuditKNN": {
+          "mean_correct": 71.55,
+          "mean_accuracy": 0.42589285714285713,
+          "seed_min_correct": 58,
+          "seed_max_correct": 81
+        },
+        "AnchorOnly": {
+          "mean_correct": 64.8,
+          "mean_accuracy": 0.38571428571428573,
+          "seed_min_correct": 51,
+          "seed_max_correct": 78
+        },
+        "ProxyGlobal": {
+          "mean_correct": 41.0,
+          "mean_accuracy": 0.24404761904761904,
+          "seed_min_correct": 41,
+          "seed_max_correct": 41
+        },
+        "ProxyKNN": {
+          "mean_correct": 45.0,
+          "mean_accuracy": 0.26785714285714285,
+          "seed_min_correct": 45,
+          "seed_max_correct": 45
+        },
+        "GoldTrainSingle": {
+          "mean_correct": 82.0,
+          "mean_accuracy": 0.4880952380952381,
+          "seed_min_correct": 82,
+          "seed_max_correct": 82
+        },
+        "GoldTrainKNN": {
+          "mean_correct": 71.0,
+          "mean_accuracy": 0.4226190476190476,
+          "seed_min_correct": 71,
+          "seed_max_correct": 71
+        }
+      },
+      "DART_contrasts": {
+        "AuditOnly": {
+          "difference": 0.023809523809523808,
+          "generator_cluster_ci95": [
+            -0.0023809523809523803,
+            0.05119047619047619
+          ],
+          "mean_rescues": 21.7,
+          "mean_harms": 17.7
+        },
+        "RandomHistory": {
+          "difference": 0.011904761904761904,
+          "generator_cluster_ci95": [
+            -0.005059523809523811,
+            0.030357142857142853
+          ],
+          "mean_rescues": 17.6,
+          "mean_harms": 15.6
+        },
+        "UncertaintyHistory": {
+          "difference": 0.02202380952380952,
+          "generator_cluster_ci95": [
+            0.00119047619047619,
+            0.04375744047619038
+          ],
+          "mean_rescues": 17.45,
+          "mean_harms": 13.75
+        },
+        "AnchorOnly": {
+          "difference": 0.028273809523809524,
+          "generator_cluster_ci95": [
+            -0.0002976190476190479,
+            0.05714285714285713
+          ],
+          "mean_rescues": 21.65,
+          "mean_harms": 16.9
+        },
+        "UniformAuditGlobal": {
+          "difference": -0.03333333333333333,
+          "generator_cluster_ci95": [
+            -0.05952380952380952,
+            -0.008928571428571428
+          ],
+          "mean_rescues": 13.9,
+          "mean_harms": 19.5
+        },
+        "UniformAuditKNN": {
+          "difference": -0.011904761904761902,
+          "generator_cluster_ci95": [
+            -0.03988095238095238,
+            0.014285714285714287
+          ],
+          "mean_rescues": 18.15,
+          "mean_harms": 20.15
+        }
+      }
+    }
+  },
+  "primary_budget": 0.1,
+  "primary_method": "DARTContrast",
+  "exploratory_method_gate_pass": false,
+  "deployment_certified": false,
+  "independent_confirmation": false,
+  "cost_scope": "equal unique historical task-agent gold labels and one chosen agent invocation per test task; no compute/USD parity claim",
+  "uncertainty_scope": "unadjusted exploratory generator bootstrap after seed averaging; not an audit-design or deployment guarantee"
+}
