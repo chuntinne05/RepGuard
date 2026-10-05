@@ -9,8 +9,8 @@
 
 ### Current research status (2026-10-05)
 
-**Latest follow-up:** 905 additional learner/evaluation cases completed on Modal
-(gain/structure, uniform history rectification, and paired history rectification).
+**Latest follow-up:** 1,205 additional learner/evaluation cases completed on Modal
+(gain/structure, uniform and paired history rectification, and adaptive baseline checks).
 At 10% gold audits, the fixed paired CFJudgeFactor candidate achieves
 **74.15/168**, versus **71.95 PairedGlobal** and **69.70 UniformAuditGlobal**.
 The exploratory difference versus PairedGlobal is +1.31 percentage points
@@ -22,6 +22,15 @@ a contextual routing gain, or a validated SOTA claim. See the
 [gain study](docs/analysis/dart_gain_v1_assessment_2026-10-05.md),
 [uniform history study](docs/analysis/dart_history_rectifier_v1_assessment_2026-10-05.md),
 and [paired history study](docs/analysis/dart_paired_history_v1_assessment_2026-10-05.md).
+
+The additional **300-case Sequential Halving check** reproduces 600 baseline
+decisions locally. At 10%, IndependentSH scores **69.70** and PairedSH **71.90**;
+the candidate's difference versus PairedSH has CI **[−0.86, +3.42]** percentage
+points, so the new stress-test gate also fails. PairedSH scores higher than the
+candidate at both 5% and 20% budgets. See the
+[complete baseline results](docs/analysis/dart_halving_v1_assessment_2026-10-05.md)
+and [next evidence plan](docs/analysis/dart_next_evidence_plan_2026-10-05.md).
+These are replays on real archived outcomes, not additional solver executions.
 
 The AppWorld study now includes 14 historical agents on 168 tasks (56 generators),
 **2,352 completed real Qwen3-14B trajectory judgments on Modal**, and completed

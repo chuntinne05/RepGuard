@@ -5,7 +5,8 @@
 Sau P0 neural không đạt, đã triển khai ba batch theo các protocol khóa trước từng
 batch: gain/structure **305 cases**, historical rectifier uniform **300 cases**,
 và historical rectifier paired **300 cases**. Cả ba đã hoàn tất trên Modal.
-Tổng **905 cases**, không đồng nghĩa 905 task độc lập hoặc 905 solver calls mới.
+Sau đó hoàn tất thêm300cases kiểm tra Sequential Halving (hai baseline/case).
+Tổng **1.205 cases**, không đồng nghĩa 1.205 task độc lập hoặc solver calls mới.
 
 Ứng viên primary tốt nhất ở vòng này là **CFJudgeFactor với paired audits**:
 **74,15/168** ở ngân sách gold 10%, so với PairedGlobal71,95 và Uniform69,70.
@@ -92,6 +93,35 @@ Kết quả gợi ý phối hợp thiết kế audit và xử lý feedback có �
 judge so với CFGold chỉ có CI lower bằng0; gain do acquisition so với uniform
 CFJudge có CI chứa0. Do đó chưa chứng minh riêng từng cơ chế đều có lợi ích chắc.
 
+### D. Kiểm tra với đối chứng phân bổ nhãn thích nghi
+
+Đã khóa code/protocol ở commit `90d4262` trước chạy và hoàn tất300cases trên
+Modal, run `3e7b59ea64ebe3767bef00b6`. Chạy lại và kiểm chứng600lần chọn agent
+từ query logs, đối chiếu đúng ngân sách và checksum. Ứng viên CFJudgeFactor không
+thay đổi theo kết quả đối chứng.
+
+| Phương pháp | 5% | 10% primary | 20% |
+|---|---:|---:|---:|
+| IndependentSH | 65,00 | 69,70 | 77,20 |
+| PairedSH | 67,00 | 71,90 | 78,95 |
+| Paired CFJudgeFactor | 64,70 | 74,15 | 77,50 |
+
+Ở10%, ứng viên hơn IndependentSH2,65điểm% (CI[+0,54;+4,94]), hơn PairedSH
+1,34điểm% (CI[−0,86;+3,42]). Gate mới yêu cầu CI dương trước cả hai vẫn FAIL.
+Ở5% và20%, PairedSH có điểm trung bình cao hơn ứng viên; các CI chênh lệch này
+cũng chứa0. Không có bằng chứng phương pháp nào thắng đều toàn bộ ngân sách.
+
+Chẩn đoán sau chạy cho thấy ở10%, SH chỉ có3nhãn/agent trong vòng loại đầu;
+IndependentSH loại hết các agent đồng hạng tốt nhất của toàn TRAIN trong29/100case,
+PairedSH trong16/100case. Ở20%, PairedSH giữ ít nhất một agent tốt nhất TRAIN đến
+cuối trong77/100case. Đây là đo lường mô tả bằng gold TRAIN sau khi hành động đã
+khóa, không phải nhãn miễn phí được đưa vào baseline. Nó cho thấy vấn đề loại
+sớm khi ít nhãn và lợi ích có thể có của việc so sánh trên cùng task.
+
+Nguồn: [Sequential Halving, Algorithm2](https://proceedings.mlr.press/v28/karnin13.pdf).
+Bản triển khai dùng archive hữu hạn không hoàn lại và chuyển phần dư budget;
+không mặc định có các bảo đảm của setting stochastic IID trong bài gốc.
+
 ## 3. Hiểu sâu hơn vì sao các bước trước chưa thắng
 
 ### Utility optimization có thể học nhiễu của sparse audit
@@ -136,7 +166,7 @@ out-of-sample proof hoặc feature nhìn thấy gold khi triển khai.
 
 ## 5. Bước tiếp theo có cơ sở
 
-1. **Đóng băng ứng viên paired CFJudgeFactor** cho vòng xác nhận, giữ raw/no-judge/
+1. **Đóng băng ứng viên paired CFJudgeFactor** cho bước nghiên cứu tiếp, giữ raw/no-judge/
    no-correction controls. Không tiếp tục chỉnh nó dựa trên cùng outer test để
    đẩy CI lower lên trên0.
 2. **Mở rộng dữ liệu và xác nhận độc lập.** Đã kiểm tra metadata của
@@ -158,28 +188,40 @@ out-of-sample proof hoặc feature nhìn thấy gold khi triển khai.
    cross-fitting, ridge và PPI riêng lẻ đều có prior art. Một phép ghép có điểm
    đẹp chưa tự đủ novelty cho hội nghị A/A*.
 
+6. Đã bổ sung kế hoạch cụ thể cho intake dữ liệu, tránh leakage, metadata agent,
+   pilot judgment và xác nhận độc lập trong
+   [kế hoạch bằng chứng tiếp theo](dart_next_evidence_plan_2026-10-05.md).
+   Chuyển từ model×scaffold AppWorld sang model-only pool cần adapter rõ ràng;
+   không tự coi đó là xác nhận nguyên trạng thuật toán. Chưa tải archive mới
+   hoặc gọi judge mới trong vòng này.
+
 ## 6. Vận hành
 
 Các jobs đã deploy rồi `.spawn()`; không cần laptop/Codex giữ vòng đời. Batch
-gain hoàn thành trong lúc Codex hết hạn mức. Cả ba có checkpoint/ledger trên
+gain hoàn thành trong lúc Codex hết hạn mức. Cả bốn có checkpoint/ledger trên
 Volume, source/input hashes và giới hạn retry/timeout. Không có job tuning vô hạn.
 
 ```bash
 .venv/bin/python run_dart_gain.py status
 .venv/bin/python run_dart_history.py status
 .venv/bin/python run_dart_paired_history.py status
+.venv/bin/python run_dart_halving.py status
 ```
 
 Thay `status` bằng `fetch` để lấy artifacts; chạy reporter tương ứng để kiểm chứng
-và tái tạo báo cáo. Đã tải và kiểm chứng đủ905cases: checksum, đúng budget/control,
+và tái tạo báo cáo. Đã tải và kiểm chứng đủ1.205cases: checksum, đúng budget/control,
 tách generator và tính lại bootstrap summaries. Nếu cần lấy bổ sung checkpoint
 paired đã hoàn tất, `fetch_dart_paired_volume.py` chỉ tải file còn thiếu, đối chiếu
-hash với ledger, tránh tải lại archive lớn. 21 targeted tests đạt,1torch test skip trên laptop; remote
+hash với ledger, tránh tải lại archive lớn. 28 targeted tests đạt,1torch test skip trên laptop; remote
 training smoke đã đạt trên Modal. Synthetic tests không trộn vào kết quả khoa học.
+Worker SH đã trả kết quả thành công, hoàn tất lúc15:34:26UTC ngày05/10/2026
+(22:34:26giờ Việt Nam). Không còn worker thực nghiệm nào của bốn batch cần chờ.
 
 ## 7. Tài liệu chi tiết
 
 - [Gain/structure: tất cả kết quả](dart_gain_v1_assessment_2026-10-05.md).
 - [History uniform: tất cả kết quả](dart_history_rectifier_v1_assessment_2026-10-05.md).
 - [History paired: tất cả kết quả](dart_paired_history_v1_assessment_2026-10-05.md).
+- [Đối chứng Sequential Halving](dart_halving_v1_assessment_2026-10-05.md).
+- [Kế hoạch bằng chứng và dữ liệu tiếp theo](dart_next_evidence_plan_2026-10-05.md).
 - Các JSON đi kèm báo cáo giữ đầy đủ số chưa làm tròn, CI và provenance.

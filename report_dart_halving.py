@@ -51,9 +51,27 @@ def main():
     for b in ('0.05', '0.1', '0.2'):
         summaries[b] = summarize([r for r in rows if r['case'].startswith(b + '_')], packet, b)
         assert summaries[b] == json.loads((root / ('analysis_' + b + '.json')).read_text())
+    # Post-hoc descriptive diagnosis only; full TRAIN gold never entered selection.
+    diagnostics = {}
+    for b in ('0.05', '0.1', '0.2'):
+        rr = [r for r in rows if r['case'].startswith(b + '_')]
+        diagnostics[b] = {}
+        for m in METHODS:
+            retention, first_counts, last_regret = [], [], []
+            for row in rr:
+                train_scores = y[folds != row['fold']].mean(0)
+                best = set(np.flatnonzero(train_scores == train_scores.max()))
+                result = row['methods'][m]
+                retention.append([bool(best & set(t['survivors'])) for t in result['rounds']])
+                first_counts.append(result['rounds'][0]['audit_stop'] // y.shape[1])
+                last_regret.append(float(train_scores.max() - train_scores[result['agent']]))
+            diagnostics[b][m] = {'full_train_best_survival_by_round': np.mean(retention, axis=0).tolist(),
+                                 'first_round_labels_per_agent_range': [min(first_counts), max(first_counts)],
+                                 'mean_full_train_regret': float(np.mean(last_regret))}
     out = ROOT / 'docs/analysis'
     artifact = {'run_id': packet['run_id'], 'status': status, 'budgets': summaries,
-                'verified_cases': 300, 'verified_method_runs': 600, 'source_sha256': packet['source_sha256']}
+                'verified_cases': 300, 'verified_method_runs': 600, 'source_sha256': packet['source_sha256'],
+                'posthoc_train_diagnostics': diagnostics}
     (out / 'dart_halving_v1_results_2026-10-05.json').write_text(json.dumps(artifact, indent=2) + '\n')
     lines = ['# Kiểm tra đối chứng Sequential Halving', '',
              f"Run `{packet['run_id']}`: **300/300 case, 600 lần chạy phương pháp**, đã kiểm chứng.", '',
@@ -72,6 +90,20 @@ def main():
     lines += ['', f"**Gate đối chứng mới: {'PASS' if summaries['0.1']['new_baseline_signal_pass'] else 'FAIL'}.**", '',
               '**Gate gốc vẫn FAIL:** CI chưa dương trước cả UniformGlobal và PairedGlobal. '
               'Không thay primary endpoint, không gọi kết quả này là xác nhận DART hoặc SOTA.', '',
+              'Ứng viên cao điểm hơn các controls trong bảng ở10%, nhưng PairedSH cao hơn '
+              'ứng viên ở cả5% và20%. Vì thế không có phương pháp thắng đều trên toàn đường '
+              'ngân sách. Không dùng điểm5% hoặc20% để chọn lại primary sau thực nghiệm.', '',
+              '## Chẩn đoán mô tả sau thực nghiệm', '',
+              'Dùng toàn bộ gold TRAIN sau khi quyết định đã khóa để xác định agent tốt nhất của '
+              'train và xem nó bị loại ở vòng nào. Đây không phải feature, target được cấp miễn phí '
+              'hay bằng chứng nhân quả; chỉ đo việc loại sớm trong dữ liệu đã quan sát.', '',
+              '| Ngân sách | Baseline | Nhãn/agent vòng đầu | Còn ít nhất một agent tốt nhất TRAIN sau vòng 1/2/3/4 |',
+              '|---|---|---|---|']
+    for b, methods in diagnostics.items():
+        for m, d in methods.items():
+            lines.append(f"| {b} | {m} | {d['first_round_labels_per_agent_range']} | " +
+                         ' / '.join(f'{100*x:.0f}%' for x in d['full_train_best_survival_by_round']) + ' |')
+    lines += ['',
               '## Kiểm chứng và giới hạn', '',
               '- Kiểm tra source/input hash, mọi checksum, đúng số nhãn độc nhất; chạy lại 600 quyết định, '
               'đồng thời dựng lại điểm và tập agent sống sót từ log nhãn trả phí.',
@@ -81,7 +113,7 @@ def main():
               'chuyển phần dư ngân sách sang vòng sau. Không tự động thừa hưởng định lý IID của bài gốc.',
               '- Baseline không cần judge; CFJudgeFactor dùng thêm 2.352 judgment lịch sử. '
               'Cùng ngân sách gold không đồng nghĩa cùng chi phí USD.',
-              '- Thắng hai baseline này không đồng nghĩa thắng mọi phương pháp liên quan. '
+              '- Kết quả với hai baseline này không đồng nghĩa thắng mọi phương pháp liên quan. '
               'Cần dữ liệu độc lập, baseline phù hợp và đóng góp thuật toán rõ trước kết luận cho bài báo.', '',
               '## Bước tiếp theo', '',
               'Giữ nguyên ứng viên và toàn bộ kết quả âm. Kiểm tra bộ dữ liệu độc lập và khả năng có '

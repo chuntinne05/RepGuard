@@ -1,0 +1,368 @@
+{
+  "run_id": "3e7b59ea64ebe3767bef00b6",
+  "status": {
+    "run_id": "3e7b59ea64ebe3767bef00b6",
+    "state": "completed_review_required",
+    "completed": 300,
+    "total": 300,
+    "updated_at": "2026-10-05T15:34:26.469712+00:00",
+    "new_baseline_signal_pass": false,
+    "primary": {
+      "IndependentSH": {
+        "mean_correct": 69.7,
+        "accuracy": 0.4148809523809524
+      },
+      "PairedSH": {
+        "mean_correct": 71.9,
+        "accuracy": 0.42797619047619045
+      },
+      "PairedGlobal": {
+        "mean_correct": 71.95,
+        "accuracy": 0.4282738095238095
+      },
+      "UniformAuditGlobal": {
+        "mean_correct": 69.7,
+        "accuracy": 0.4148809523809524
+      },
+      "TunedFactorRidge": {
+        "mean_correct": 71.6,
+        "accuracy": 0.4261904761904762
+      },
+      "FrozenPairedCFJudgeFactor": {
+        "mean_correct": 74.15,
+        "accuracy": 0.4413690476190476
+      }
+    }
+  },
+  "budgets": {
+    "0.05": {
+      "methods": {
+        "IndependentSH": {
+          "mean_correct": 65.0,
+          "accuracy": 0.3869047619047619
+        },
+        "PairedSH": {
+          "mean_correct": 67.0,
+          "accuracy": 0.39880952380952384
+        },
+        "PairedGlobal": {
+          "mean_correct": 62.15,
+          "accuracy": 0.3699404761904762
+        },
+        "UniformAuditGlobal": {
+          "mean_correct": 64.4,
+          "accuracy": 0.38333333333333336
+        },
+        "TunedFactorRidge": {
+          "mean_correct": 66.5,
+          "accuracy": 0.3958333333333333
+        },
+        "FrozenPairedCFJudgeFactor": {
+          "mean_correct": 64.7,
+          "accuracy": 0.38511904761904764
+        }
+      },
+      "candidate_contrasts": {
+        "IndependentSH": {
+          "difference": -0.0017857142857142846,
+          "ci95": [
+            -0.030059523809523803,
+            0.02410714285714286
+          ],
+          "rescues": 22.95,
+          "harms": 23.25
+        },
+        "PairedSH": {
+          "difference": -0.013690476190476189,
+          "ci95": [
+            -0.033928571428571426,
+            0.006249999999999999
+          ],
+          "rescues": 19.7,
+          "harms": 22.0
+        },
+        "PairedGlobal": {
+          "difference": 0.01517857142857143,
+          "ci95": [
+            0.0035714285714285726,
+            0.026488095238095238
+          ],
+          "rescues": 6.45,
+          "harms": 3.9
+        },
+        "UniformAuditGlobal": {
+          "difference": 0.0017857142857142859,
+          "ci95": [
+            -0.01965029761904762,
+            0.023809523809523808
+          ],
+          "rescues": 21.45,
+          "harms": 21.15
+        },
+        "TunedFactorRidge": {
+          "difference": -0.010714285714285713,
+          "ci95": [
+            -0.03511904761904762,
+            0.013392857142857142
+          ],
+          "rescues": 21.25,
+          "harms": 23.05
+        }
+      },
+      "new_baseline_signal_pass": false,
+      "scope": "Development stress test; does not replace original failed primary gate"
+    },
+    "0.1": {
+      "methods": {
+        "IndependentSH": {
+          "mean_correct": 69.7,
+          "accuracy": 0.4148809523809524
+        },
+        "PairedSH": {
+          "mean_correct": 71.9,
+          "accuracy": 0.42797619047619045
+        },
+        "PairedGlobal": {
+          "mean_correct": 71.95,
+          "accuracy": 0.4282738095238095
+        },
+        "UniformAuditGlobal": {
+          "mean_correct": 69.7,
+          "accuracy": 0.4148809523809524
+        },
+        "TunedFactorRidge": {
+          "mean_correct": 71.6,
+          "accuracy": 0.4261904761904762
+        },
+        "FrozenPairedCFJudgeFactor": {
+          "mean_correct": 74.15,
+          "accuracy": 0.4413690476190476
+        }
+      },
+      "candidate_contrasts": {
+        "IndependentSH": {
+          "difference": 0.026488095238095238,
+          "ci95": [
+            0.005357142857142856,
+            0.04940476190476191
+          ],
+          "rescues": 18.55,
+          "harms": 14.1
+        },
+        "PairedSH": {
+          "difference": 0.013392857142857142,
+          "ci95": [
+            -0.008630952380952382,
+            0.03422619047619048
+          ],
+          "rescues": 19.3,
+          "harms": 17.05
+        },
+        "PairedGlobal": {
+          "difference": 0.013095238095238096,
+          "ci95": [
+            0.0002976190476190489,
+            0.025900297619047514
+          ],
+          "rescues": 5.95,
+          "harms": 3.75
+        },
+        "UniformAuditGlobal": {
+          "difference": 0.026488095238095238,
+          "ci95": [
+            -0.00595238095238095,
+            0.05863095238095239
+          ],
+          "rescues": 23.05,
+          "harms": 18.6
+        },
+        "TunedFactorRidge": {
+          "difference": 0.015178571428571427,
+          "ci95": [
+            -0.010714285714285718,
+            0.04048363095238085
+          ],
+          "rescues": 20.2,
+          "harms": 17.65
+        }
+      },
+      "new_baseline_signal_pass": false,
+      "scope": "Development stress test; does not replace original failed primary gate"
+    },
+    "0.2": {
+      "methods": {
+        "IndependentSH": {
+          "mean_correct": 77.2,
+          "accuracy": 0.4595238095238095
+        },
+        "PairedSH": {
+          "mean_correct": 78.95,
+          "accuracy": 0.4699404761904762
+        },
+        "PairedGlobal": {
+          "mean_correct": 76.7,
+          "accuracy": 0.45654761904761904
+        },
+        "UniformAuditGlobal": {
+          "mean_correct": 75.15,
+          "accuracy": 0.4473214285714286
+        },
+        "TunedFactorRidge": {
+          "mean_correct": 75.85,
+          "accuracy": 0.45148809523809524
+        },
+        "FrozenPairedCFJudgeFactor": {
+          "mean_correct": 77.5,
+          "accuracy": 0.46130952380952384
+        }
+      },
+      "candidate_contrasts": {
+        "IndependentSH": {
+          "difference": 0.0017857142857142846,
+          "ci95": [
+            -0.013392857142857142,
+            0.016964285714285716
+          ],
+          "rescues": 11.8,
+          "harms": 11.5
+        },
+        "PairedSH": {
+          "difference": -0.008630952380952382,
+          "ci95": [
+            -0.024702380952380955,
+            0.006845238095238094
+          ],
+          "rescues": 9.8,
+          "harms": 11.25
+        },
+        "PairedGlobal": {
+          "difference": 0.004761904761904763,
+          "ci95": [
+            -0.008035714285714287,
+            0.01636904761904762
+          ],
+          "rescues": 4.0,
+          "harms": 3.2
+        },
+        "UniformAuditGlobal": {
+          "difference": 0.013988095238095235,
+          "ci95": [
+            -0.0023809523809523816,
+            0.030357142857142853
+          ],
+          "rescues": 14.15,
+          "harms": 11.8
+        },
+        "TunedFactorRidge": {
+          "difference": 0.009821428571428571,
+          "ci95": [
+            -0.00773809523809524,
+            0.02708333333333333
+          ],
+          "rescues": 13.9,
+          "harms": 12.25
+        }
+      },
+      "new_baseline_signal_pass": false,
+      "scope": "Development stress test; does not replace original failed primary gate"
+    }
+  },
+  "verified_cases": 300,
+  "verified_method_runs": 600,
+  "source_sha256": {
+    "infra/modal/halving_core.py": "499b3a1d43aa3aad78728a48e23b0616a8c32721c13ef69914e584b67977b9d1",
+    "infra/modal/halving_pipeline.py": "e160cd36b6aee51964d94ec3b13ee6e124532b91b677c3586a38d6151dadfa90",
+    "infra/modal/halving_modal.py": "1c554ad82be1aca8604eca81369952d524d1ddc4f9445e816efb957e65b62176",
+    "infra/modal/neural_core.py": "d0ea9758527012856403d5ef32d25645f9b6c35c43785edc9e18070d692690b1",
+    "infra/modal/neural_pipeline.py": "710dc6dc1e705dad323be403f2ed8f571be65de764fc21d037450ec0433aeea0",
+    "run_dart_halving.py": "5bdda5e3c9b1ed0ce76074c6abf06819c852e717f3140b96e0f96f97a60f1e64",
+    "run_dart_gain.py": "ab70c9a79125bcd8aebe0f222cb39a4ac7ad42a1b827451b571528ad986e6168",
+    "docs/analysis/dart_halving_v1_protocol_2026-10-05.md": "ce375f1965825c90f0891750b68fa91e17581983ec8bf6895a00374e8b4bfc18"
+  },
+  "posthoc_train_diagnostics": {
+    "0.05": {
+      "IndependentSH": {
+        "full_train_best_survival_by_round": [
+          0.69,
+          0.61,
+          0.45,
+          0.39
+        ],
+        "first_round_labels_per_agent_range": [
+          1,
+          1
+        ],
+        "mean_full_train_regret": 0.08216155335106048
+      },
+      "PairedSH": {
+        "full_train_best_survival_by_round": [
+          0.71,
+          0.56,
+          0.49,
+          0.37
+        ],
+        "first_round_labels_per_agent_range": [
+          1,
+          1
+        ],
+        "mean_full_train_regret": 0.06996737256771382
+      }
+    },
+    "0.1": {
+      "IndependentSH": {
+        "full_train_best_survival_by_round": [
+          0.71,
+          0.62,
+          0.51,
+          0.43
+        ],
+        "first_round_labels_per_agent_range": [
+          3,
+          3
+        ],
+        "mean_full_train_regret": 0.05350635636118855
+      },
+      "PairedSH": {
+        "full_train_best_survival_by_round": [
+          0.84,
+          0.77,
+          0.67,
+          0.5
+        ],
+        "first_round_labels_per_agent_range": [
+          3,
+          3
+        ],
+        "mean_full_train_regret": 0.04111181677749484
+      }
+    },
+    "0.2": {
+      "IndependentSH": {
+        "full_train_best_survival_by_round": [
+          0.9,
+          0.84,
+          0.76,
+          0.62
+        ],
+        "first_round_labels_per_agent_range": [
+          6,
+          7
+        ],
+        "mean_full_train_regret": 0.017075678780662133
+      },
+      "PairedSH": {
+        "full_train_best_survival_by_round": [
+          0.92,
+          0.89,
+          0.86,
+          0.77
+        ],
+        "first_round_labels_per_agent_range": [
+          6,
+          7
+        ],
+        "mean_full_train_regret": 0.01269481912368192
+      }
+    }
+  }
+}
