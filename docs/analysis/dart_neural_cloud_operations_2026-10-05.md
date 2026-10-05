@@ -1,5 +1,9 @@
 # Vận hành thực nghiệm neural DART trên Modal
 
+**Kết quả cuối 11:34:31 ngày 05/10/2026 (UTC+7): P0 hoàn tất 5/5, dừng đúng
+gate `stopped_p0_gate`; P1 không chạy.** Selected = Global = 82/168.
+Xem [báo cáo đầy đủ](dart_neural_p0_assessment_2026-10-05.md).
+
 ## Phạm vi
 
 Thực thi [protocol P0/P1](dart_neural_p0_p1_protocol_2026-10-05.md).

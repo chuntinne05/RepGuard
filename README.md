@@ -41,9 +41,12 @@ access were needed for this forensic replay.
 The [updated neural-router research proposal](docs/analysis/dart_neural_research_proposal_2026-10-05.md)
 reviews recent sparse-routing and decision-learning work and proposes a frozen
 Transformer encoder with a small task–agent learner, followed by controlled pair
-auditing. The frozen-encoder P0/P1 experiment is now implemented and submitted to
-a deployed Modal worker; pair auditing remains a later stage. This is not yet a
-validated winner. See the [locked protocol](docs/analysis/dart_neural_p0_p1_protocol_2026-10-05.md)
+auditing. The frozen-encoder P0/P1 pipeline is implemented on a deployed Modal
+worker. P0 completed all five folds: Global, MLP and Selected each achieve
+**82/168**, linear and low-rank each **81/168**. The superiority gate fails;
+P1 was not launched. Pair auditing remains a later stage. See the
+[completed neural assessment](docs/analysis/dart_neural_p0_assessment_2026-10-05.md),
+[locked protocol](docs/analysis/dart_neural_p0_p1_protocol_2026-10-05.md)
 and [cloud operation / checkpoint instructions](docs/analysis/dart_neural_cloud_operations_2026-10-05.md).
 
 ### Earlier evidence (2026-09-30)

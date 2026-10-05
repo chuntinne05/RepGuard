@@ -1,0 +1,224 @@
+{
+  "methods": {
+    "Global": {
+      "mean_correct": 82.0,
+      "accuracy": 0.4880952380952381
+    },
+    "linear": {
+      "mean_correct": 81.0,
+      "accuracy": 0.48214285714285715
+    },
+    "lowrank": {
+      "mean_correct": 81.0,
+      "accuracy": 0.48214285714285715
+    },
+    "mlp": {
+      "mean_correct": 82.0,
+      "accuracy": 0.4880952380952381
+    },
+    "Selected": {
+      "mean_correct": 82.0,
+      "accuracy": 0.4880952380952381
+    }
+  },
+  "contrasts": {
+    "Global": {
+      "Global": {
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean_rescues": 0.0,
+        "mean_harms": 0.0
+      }
+    },
+    "linear": {
+      "Global": {
+        "difference": -0.005952380952380952,
+        "ci95": [
+          -0.017857142857142856,
+          0.0
+        ],
+        "mean_rescues": 0.0,
+        "mean_harms": 1.0
+      }
+    },
+    "lowrank": {
+      "Global": {
+        "difference": -0.005952380952380952,
+        "ci95": [
+          -0.017857142857142856,
+          0.0
+        ],
+        "mean_rescues": 0.0,
+        "mean_harms": 1.0
+      }
+    },
+    "mlp": {
+      "Global": {
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean_rescues": 0.0,
+        "mean_harms": 0.0
+      }
+    },
+    "Selected": {
+      "Global": {
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean_rescues": 0.0,
+        "mean_harms": 0.0
+      }
+    }
+  },
+  "gate_pass": false,
+  "scope": "exploratory public normal; generator bootstrap after seed averaging; no independent confirmation",
+  "run_id": "32fc82877693697cb45f7d49",
+  "status": "stopped_p0_gate",
+  "source_commit": "9d1f79b",
+  "completed_at_utc": "2026-10-05T04:34:31.968126+00:00",
+  "task_count": 168,
+  "agent_count": 14,
+  "generator_count": 56,
+  "fold_summary": [
+    {
+      "fold": 0,
+      "test_tasks": 39,
+      "training_gold_labels": 1806,
+      "selected": "mlp",
+      "regularization": {
+        "linear": 0.1,
+        "lowrank": 0.01,
+        "mlp": 0.01
+      },
+      "inner_scores": {
+        "Global:0": 0.40310077519379844,
+        "linear:0.01": 0.37209302325581395,
+        "linear:0.1": 0.3875968992248062,
+        "lowrank:0.01": 0.4108527131782946,
+        "lowrank:0.1": 0.40310077519379844,
+        "mlp:0.01": 0.4263565891472868,
+        "mlp:0.1": 0.40310077519379844
+      }
+    },
+    {
+      "fold": 1,
+      "test_tasks": 24,
+      "training_gold_labels": 2016,
+      "selected": "mlp",
+      "regularization": {
+        "linear": 0.1,
+        "lowrank": 0.1,
+        "mlp": 0.01
+      },
+      "inner_scores": {
+        "Global:0": 0.4305555555555556,
+        "linear:0.01": 0.4097222222222222,
+        "linear:0.1": 0.4305555555555556,
+        "lowrank:0.01": 0.4236111111111111,
+        "lowrank:0.1": 0.4305555555555556,
+        "mlp:0.01": 0.4375,
+        "mlp:0.1": 0.4305555555555556
+      }
+    },
+    {
+      "fold": 2,
+      "test_tasks": 27,
+      "training_gold_labels": 1974,
+      "selected": "Global",
+      "regularization": {
+        "linear": 0.1,
+        "lowrank": 0.1,
+        "mlp": 0.1
+      },
+      "inner_scores": {
+        "Global:0": 0.5390070921985816,
+        "linear:0.01": 0.5035460992907801,
+        "linear:0.1": 0.524822695035461,
+        "lowrank:0.01": 0.48226950354609927,
+        "lowrank:0.1": 0.5390070921985816,
+        "mlp:0.01": 0.5035460992907801,
+        "mlp:0.1": 0.5390070921985816
+      }
+    },
+    {
+      "fold": 3,
+      "test_tasks": 33,
+      "training_gold_labels": 1890,
+      "selected": "Global",
+      "regularization": {
+        "linear": 0.01,
+        "lowrank": 0.1,
+        "mlp": 0.01
+      },
+      "inner_scores": {
+        "Global:0": 0.48148148148148145,
+        "linear:0.01": 0.48148148148148145,
+        "linear:0.1": 0.48148148148148145,
+        "lowrank:0.01": 0.4666666666666667,
+        "lowrank:0.1": 0.48148148148148145,
+        "mlp:0.01": 0.48148148148148145,
+        "mlp:0.1": 0.48148148148148145
+      }
+    },
+    {
+      "fold": 4,
+      "test_tasks": 45,
+      "training_gold_labels": 1722,
+      "selected": "Global",
+      "regularization": {
+        "linear": 0.1,
+        "lowrank": 0.1,
+        "mlp": 0.1
+      },
+      "inner_scores": {
+        "Global:0": 0.5203252032520326,
+        "linear:0.01": 0.4959349593495935,
+        "linear:0.1": 0.5203252032520326,
+        "lowrank:0.01": 0.4878048780487805,
+        "lowrank:0.1": 0.5203252032520326,
+        "mlp:0.01": 0.5121951219512195,
+        "mlp:0.1": 0.5203252032520326
+      }
+    }
+  ],
+  "switches_from_global": {
+    "Global": 0,
+    "linear": 5,
+    "lowrank": 5,
+    "mlp": 0,
+    "Selected": 0
+  },
+  "self_test": {
+    "linear": {
+      "synthetic_rescue_accuracy": 1.0,
+      "deterministic": true,
+      "constant_control_pass": true
+    },
+    "lowrank": {
+      "synthetic_rescue_accuracy": 1.0,
+      "deterministic": true,
+      "constant_control_pass": true
+    },
+    "mlp": {
+      "synthetic_rescue_accuracy": 1.0,
+      "deterministic": true,
+      "constant_control_pass": true
+    }
+  },
+  "environment": {
+    "python": "3.11.12",
+    "numpy": "1.26.4",
+    "torch": "2.5.1+cpu",
+    "transformers": "4.48.3",
+    "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+  }
+}
