@@ -32,6 +32,13 @@ def test_excluded_and_unsafe_paths():
     assert classify('bench/math500/test/model/run.json')['model'] == 'model'
 
 
+def test_verified_release_layout():
+    from routerbench_intake_v2_core import classify as release
+    assert release('bench-release/math500/test/model/run.json') == {'dataset': 'math500', 'partition': 'test', 'model': 'model'}
+    assert release('bench-release/arenahard/model/run.json')['partition'] == 'unspecified'
+    assert release('bench-release/mmlupro/test/model/run.json')['skip'] == 'excluded_mmlu'
+
+
 def test_coverage_and_unsupported_queries():
     raw = {'records': [{'prompt': 'p'}, {'origin_query': None}, {'origin_query': 'Q', 'index': 4}]}
     r = inspect_json(io.BytesIO(json.dumps(raw).encode()))
