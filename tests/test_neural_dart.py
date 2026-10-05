@@ -57,3 +57,35 @@ def test_global_exact_smoothed_tie_order():
 def test_remote_training_controls():
     from neural_smoke import smoke
     assert len(smoke()) == 3
+
+
+def test_crash_resume_skips_committed_case_and_gate_stops(tmp_path, monkeypatch):
+    """Storage/state-machine integration test; model calls deliberately stubbed."""
+    import types
+    import neural_pipeline as pipeline
+    import neural_smoke
+    monkeypatch.setitem(sys.modules, 'torch', types.SimpleNamespace(__version__='test-stub'))
+    monkeypatch.setitem(sys.modules, 'transformers', types.SimpleNamespace(__version__='test-stub'))
+    monkeypatch.setattr(pipeline, 'verify_packet', lambda p: None)
+    monkeypatch.setattr(neural_smoke, 'smoke', lambda: {'test': 'stub'})
+    monkeypatch.setattr(pipeline, 'embeddings', lambda texts, progress: (np.ones((5,2)), []))
+    calls = []
+    def crashing_route(x, obs, xt, groups, progress):
+        calls.append(tuple(groups))
+        if len(calls) == 2:
+            raise RuntimeError('injected interruption')
+        return {h:[0] for h in ('Global','linear','lowrank','mlp','Selected')}, {}
+    monkeypatch.setattr(pipeline, 'route_case', crashing_route)
+    packet = {'run_id':'test', 'texts':['x']*5, 'success':[[1,0]]*5,
+              'folds':list(range(5)), 'groups':[str(i) for i in range(5)]}
+    commits = []
+    with pytest.raises(RuntimeError, match='injected'):
+        pipeline.run(packet, tmp_path, lambda: commits.append(1))
+    assert (tmp_path/'p0_fold0_seed0.json').exists()
+    result = pipeline.run(packet, tmp_path, lambda: commits.append(1))
+    assert result['state'] == 'stopped_p0_gate'
+    assert len(calls) == 6  # one completed + one failed + four resumed cases
+    assert len(list(tmp_path.glob('p0_fold*.json'))) == 5
+    assert not list(tmp_path.glob('p1*'))
+    pipeline.run(packet, tmp_path, lambda: commits.append(1))
+    assert len(calls) == 6  # terminal invocation returns without retraining
