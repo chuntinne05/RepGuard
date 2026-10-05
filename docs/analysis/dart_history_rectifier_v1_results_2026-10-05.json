@@ -1,0 +1,873 @@
+{
+  "run_id": "52eb04e9f9e56ca65f8a968f",
+  "status": {
+    "run_id": "52eb04e9f9e56ca65f8a968f",
+    "state": "completed_review_required",
+    "completed": 300,
+    "total": 300,
+    "updated_at": "2026-10-05T14:53:12.113190+00:00",
+    "primary_signal_pass": false,
+    "primary": {
+      "UniformAuditGlobal": {
+        "mean_correct": 69.7,
+        "accuracy": 0.4148809523809524
+      },
+      "CFGoldFactor": {
+        "mean_correct": 70.3,
+        "accuracy": 0.41845238095238096
+      },
+      "CFJudgeFactor": {
+        "mean_correct": 72.0,
+        "accuracy": 0.42857142857142855
+      },
+      "RawJudgeRectifier": {
+        "mean_correct": 71.4,
+        "accuracy": 0.425
+      },
+      "JudgeImpute": {
+        "mean_correct": 72.85,
+        "accuracy": 0.4336309523809524
+      },
+      "FixedFactorRidge": {
+        "mean_correct": 71.4,
+        "accuracy": 0.425
+      },
+      "PairedGlobal": {
+        "mean_correct": 71.95,
+        "accuracy": 0.4282738095238095
+      },
+      "TunedFactorRidge": {
+        "mean_correct": 71.6,
+        "accuracy": 0.4261904761904762
+      }
+    }
+  },
+  "budgets": {
+    "0.05": {
+      "methods": {
+        "UniformAuditGlobal": {
+          "mean_correct": 64.4,
+          "accuracy": 0.38333333333333336
+        },
+        "CFGoldFactor": {
+          "mean_correct": 67.2,
+          "accuracy": 0.4
+        },
+        "CFJudgeFactor": {
+          "mean_correct": 66.5,
+          "accuracy": 0.3958333333333333
+        },
+        "RawJudgeRectifier": {
+          "mean_correct": 61.65,
+          "accuracy": 0.3669642857142857
+        },
+        "JudgeImpute": {
+          "mean_correct": 67.3,
+          "accuracy": 0.4005952380952381
+        },
+        "FixedFactorRidge": {
+          "mean_correct": 66.55,
+          "accuracy": 0.39613095238095236
+        },
+        "PairedGlobal": {
+          "mean_correct": 62.15,
+          "accuracy": 0.3699404761904762
+        },
+        "TunedFactorRidge": {
+          "mean_correct": 66.5,
+          "accuracy": 0.3958333333333333
+        }
+      },
+      "contrasts": {
+        "UniformAuditGlobal": {
+          "UniformAuditGlobal": {
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "rescues": 0.0,
+            "harms": 0.0
+          },
+          "PairedGlobal": {
+            "difference": 0.013392857142857146,
+            "ci95": [
+              -0.011912202380952381,
+              0.03898809523809523
+            ],
+            "rescues": 23.6,
+            "harms": 21.35
+          },
+          "CFGoldFactor": {
+            "difference": -0.01666666666666667,
+            "ci95": [
+              -0.028571428571428574,
+              -0.0056547619047619055
+            ],
+            "rescues": 2.95,
+            "harms": 5.75
+          },
+          "TunedFactorRidge": {
+            "difference": -0.0125,
+            "ci95": [
+              -0.023214285714285715,
+              -0.002083333333333335
+            ],
+            "rescues": 4.0,
+            "harms": 6.1
+          }
+        },
+        "CFGoldFactor": {
+          "UniformAuditGlobal": {
+            "difference": 0.01666666666666667,
+            "ci95": [
+              0.0056547619047619055,
+              0.028571428571428574
+            ],
+            "rescues": 5.75,
+            "harms": 2.95
+          },
+          "PairedGlobal": {
+            "difference": 0.030059523809523814,
+            "ci95": [
+              -7.440476190477492e-06,
+              0.061309523809523814
+            ],
+            "rescues": 25.75,
+            "harms": 20.7
+          },
+          "CFGoldFactor": {
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "rescues": 0.0,
+            "harms": 0.0
+          },
+          "TunedFactorRidge": {
+            "difference": 0.0041666666666666675,
+            "ci95": [
+              -0.004761904761904762,
+              0.013392857142857142
+            ],
+            "rescues": 6.85,
+            "harms": 6.15
+          }
+        },
+        "CFJudgeFactor": {
+          "UniformAuditGlobal": {
+            "difference": 0.0125,
+            "ci95": [
+              -0.0023809523809523816,
+              0.027380952380952377
+            ],
+            "rescues": 9.5,
+            "harms": 7.4
+          },
+          "PairedGlobal": {
+            "difference": 0.025892857142857145,
+            "ci95": [
+              -0.003571428571428569,
+              0.0556547619047619
+            ],
+            "rescues": 25.2,
+            "harms": 20.85
+          },
+          "CFGoldFactor": {
+            "difference": -0.0041666666666666675,
+            "ci95": [
+              -0.02023809523809524,
+              0.011309523809523811
+            ],
+            "rescues": 7.85,
+            "harms": 8.55
+          },
+          "TunedFactorRidge": {
+            "difference": 3.304235192336775e-19,
+            "ci95": [
+              -0.017857142857142856,
+              0.016964285714285716
+            ],
+            "rescues": 9.3,
+            "harms": 9.3
+          }
+        },
+        "RawJudgeRectifier": {
+          "UniformAuditGlobal": {
+            "difference": -0.01636904761904762,
+            "ci95": [
+              -0.02976934523809524,
+              -0.003273809523809524
+            ],
+            "rescues": 11.45,
+            "harms": 14.2
+          },
+          "PairedGlobal": {
+            "difference": -0.002976190476190476,
+            "ci95": [
+              -0.030952380952380953,
+              0.0244047619047619
+            ],
+            "rescues": 24.45,
+            "harms": 24.95
+          },
+          "CFGoldFactor": {
+            "difference": -0.033035714285714286,
+            "ci95": [
+              -0.050595238095238096,
+              -0.01755952380952381
+            ],
+            "rescues": 10.6,
+            "harms": 16.15
+          },
+          "TunedFactorRidge": {
+            "difference": -0.028869047619047617,
+            "ci95": [
+              -0.04821428571428572,
+              -0.01130952380952381
+            ],
+            "rescues": 10.8,
+            "harms": 15.65
+          }
+        },
+        "JudgeImpute": {
+          "UniformAuditGlobal": {
+            "difference": 0.017261904761904763,
+            "ci95": [
+              0.0047619047619047615,
+              0.0306547619047619
+            ],
+            "rescues": 11.25,
+            "harms": 8.35
+          },
+          "PairedGlobal": {
+            "difference": 0.030654761904761907,
+            "ci95": [
+              0.0035714285714285704,
+              0.058043154761904664
+            ],
+            "rescues": 25.1,
+            "harms": 19.95
+          },
+          "CFGoldFactor": {
+            "difference": 0.0005952380952380953,
+            "ci95": [
+              -0.01130952380952381,
+              0.01220238095238095
+            ],
+            "rescues": 10.55,
+            "harms": 10.45
+          },
+          "TunedFactorRidge": {
+            "difference": 0.004761904761904763,
+            "ci95": [
+              -0.006547619047619048,
+              0.016071428571428573
+            ],
+            "rescues": 8.4,
+            "harms": 7.6
+          }
+        },
+        "FixedFactorRidge": {
+          "UniformAuditGlobal": {
+            "difference": 0.012797619047619049,
+            "ci95": [
+              0.0020833333333333346,
+              0.02351190476190476
+            ],
+            "rescues": 5.95,
+            "harms": 3.8
+          },
+          "PairedGlobal": {
+            "difference": 0.02619047619047619,
+            "ci95": [
+              -0.0032738095238095226,
+              0.05654761904761905
+            ],
+            "rescues": 25.7,
+            "harms": 21.3
+          },
+          "CFGoldFactor": {
+            "difference": -0.00386904761904762,
+            "ci95": [
+              -0.013095238095238096,
+              0.00505952380952381
+            ],
+            "rescues": 6.0,
+            "harms": 6.65
+          },
+          "TunedFactorRidge": {
+            "difference": 0.0002976190476190477,
+            "ci95": [
+              -0.0014880952380952384,
+              0.002380952380952381
+            ],
+            "rescues": 0.2,
+            "harms": 0.15
+          }
+        }
+      },
+      "primary_signal_pass": false,
+      "scope": "adaptive public-normal exploration, no independent confirmation"
+    },
+    "0.1": {
+      "methods": {
+        "UniformAuditGlobal": {
+          "mean_correct": 69.7,
+          "accuracy": 0.4148809523809524
+        },
+        "CFGoldFactor": {
+          "mean_correct": 70.3,
+          "accuracy": 0.41845238095238096
+        },
+        "CFJudgeFactor": {
+          "mean_correct": 72.0,
+          "accuracy": 0.42857142857142855
+        },
+        "RawJudgeRectifier": {
+          "mean_correct": 71.4,
+          "accuracy": 0.425
+        },
+        "JudgeImpute": {
+          "mean_correct": 72.85,
+          "accuracy": 0.4336309523809524
+        },
+        "FixedFactorRidge": {
+          "mean_correct": 71.4,
+          "accuracy": 0.425
+        },
+        "PairedGlobal": {
+          "mean_correct": 71.95,
+          "accuracy": 0.4282738095238095
+        },
+        "TunedFactorRidge": {
+          "mean_correct": 71.6,
+          "accuracy": 0.4261904761904762
+        }
+      },
+      "contrasts": {
+        "UniformAuditGlobal": {
+          "UniformAuditGlobal": {
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "rescues": 0.0,
+            "harms": 0.0
+          },
+          "PairedGlobal": {
+            "difference": -0.01339285714285714,
+            "ci95": [
+              -0.04226190476190476,
+              0.015186011904761801
+            ],
+            "rescues": 20.2,
+            "harms": 22.45
+          },
+          "CFGoldFactor": {
+            "difference": -0.0035714285714285718,
+            "ci95": [
+              -0.01488095238095238,
+              0.008035714285714287
+            ],
+            "rescues": 3.3,
+            "harms": 3.9
+          },
+          "TunedFactorRidge": {
+            "difference": -0.01130952380952381,
+            "ci95": [
+              -0.025297619047619048,
+              0.0020833333333333346
+            ],
+            "rescues": 3.9,
+            "harms": 5.8
+          }
+        },
+        "CFGoldFactor": {
+          "UniformAuditGlobal": {
+            "difference": 0.0035714285714285718,
+            "ci95": [
+              -0.008035714285714287,
+              0.01488095238095238
+            ],
+            "rescues": 3.9,
+            "harms": 3.3
+          },
+          "PairedGlobal": {
+            "difference": -0.009821428571428573,
+            "ci95": [
+              -0.034523809523809526,
+              0.013988095238095239
+            ],
+            "rescues": 19.85,
+            "harms": 21.5
+          },
+          "CFGoldFactor": {
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "rescues": 0.0,
+            "harms": 0.0
+          },
+          "TunedFactorRidge": {
+            "difference": -0.007738095238095238,
+            "ci95": [
+              -0.01845982142857143,
+              0.0023809523809523807
+            ],
+            "rescues": 3.85,
+            "harms": 5.15
+          }
+        },
+        "CFJudgeFactor": {
+          "UniformAuditGlobal": {
+            "difference": 0.013690476190476192,
+            "ci95": [
+              -0.0008928571428571429,
+              0.02886904761904762
+            ],
+            "rescues": 8.0,
+            "harms": 5.7
+          },
+          "PairedGlobal": {
+            "difference": 0.0002976190476190519,
+            "ci95": [
+              -0.02708333333333333,
+              0.02589285714285714
+            ],
+            "rescues": 20.7,
+            "harms": 20.65
+          },
+          "CFGoldFactor": {
+            "difference": 0.01011904761904762,
+            "ci95": [
+              -0.0014880952380952374,
+              0.02172619047619048
+            ],
+            "rescues": 7.3,
+            "harms": 5.6
+          },
+          "TunedFactorRidge": {
+            "difference": 0.0023809523809523816,
+            "ci95": [
+              -0.008035714285714287,
+              0.012202380952380954
+            ],
+            "rescues": 7.65,
+            "harms": 7.25
+          }
+        },
+        "RawJudgeRectifier": {
+          "UniformAuditGlobal": {
+            "difference": 0.010119047619047623,
+            "ci95": [
+              -0.01130952380952381,
+              0.03155505952380942
+            ],
+            "rescues": 11.3,
+            "harms": 9.6
+          },
+          "PairedGlobal": {
+            "difference": -0.003273809523809524,
+            "ci95": [
+              -0.028876488095238094,
+              0.021428571428571432
+            ],
+            "rescues": 20.5,
+            "harms": 21.05
+          },
+          "CFGoldFactor": {
+            "difference": 0.006547619047619047,
+            "ci95": [
+              -0.00744047619047619,
+              0.020833333333333336
+            ],
+            "rescues": 11.85,
+            "harms": 10.75
+          },
+          "TunedFactorRidge": {
+            "difference": -0.0011904761904761908,
+            "ci95": [
+              -0.016666666666666666,
+              0.014880952380952378
+            ],
+            "rescues": 11.3,
+            "harms": 11.5
+          }
+        },
+        "JudgeImpute": {
+          "UniformAuditGlobal": {
+            "difference": 0.018749999999999996,
+            "ci95": [
+              0.004166666666666667,
+              0.033630952380952386
+            ],
+            "rescues": 7.95,
+            "harms": 4.8
+          },
+          "PairedGlobal": {
+            "difference": 0.005357142857142859,
+            "ci95": [
+              -0.01636904761904762,
+              0.026785714285714284
+            ],
+            "rescues": 20.7,
+            "harms": 19.8
+          },
+          "CFGoldFactor": {
+            "difference": 0.01517857142857143,
+            "ci95": [
+              0.005357142857142857,
+              0.025297619047619048
+            ],
+            "rescues": 8.2,
+            "harms": 5.65
+          },
+          "TunedFactorRidge": {
+            "difference": 0.007440476190476192,
+            "ci95": [
+              -0.0011904761904761906,
+              0.01636904761904762
+            ],
+            "rescues": 6.15,
+            "harms": 4.9
+          }
+        },
+        "FixedFactorRidge": {
+          "UniformAuditGlobal": {
+            "difference": 0.01011904761904762,
+            "ci95": [
+              -0.0020907738095238084,
+              0.02291666666666667
+            ],
+            "rescues": 5.25,
+            "harms": 3.55
+          },
+          "PairedGlobal": {
+            "difference": -0.0032738095238095235,
+            "ci95": [
+              -0.026785714285714284,
+              0.020238095238095236
+            ],
+            "rescues": 19.95,
+            "harms": 20.5
+          },
+          "CFGoldFactor": {
+            "difference": 0.006547619047619048,
+            "ci95": [
+              -0.0026785714285714286,
+              0.01636904761904762
+            ],
+            "rescues": 4.6,
+            "harms": 3.5
+          },
+          "TunedFactorRidge": {
+            "difference": -0.0011904761904761908,
+            "ci95": [
+              -0.0035714285714285718,
+              0.0011904761904761906
+            ],
+            "rescues": 0.35,
+            "harms": 0.55
+          }
+        }
+      },
+      "primary_signal_pass": false,
+      "scope": "adaptive public-normal exploration, no independent confirmation"
+    },
+    "0.2": {
+      "methods": {
+        "UniformAuditGlobal": {
+          "mean_correct": 75.15,
+          "accuracy": 0.4473214285714286
+        },
+        "CFGoldFactor": {
+          "mean_correct": 74.15,
+          "accuracy": 0.4413690476190476
+        },
+        "CFJudgeFactor": {
+          "mean_correct": 76.1,
+          "accuracy": 0.4529761904761905
+        },
+        "RawJudgeRectifier": {
+          "mean_correct": 76.95,
+          "accuracy": 0.45803571428571427
+        },
+        "JudgeImpute": {
+          "mean_correct": 76.85,
+          "accuracy": 0.4574404761904762
+        },
+        "FixedFactorRidge": {
+          "mean_correct": 75.5,
+          "accuracy": 0.4494047619047619
+        },
+        "PairedGlobal": {
+          "mean_correct": 76.7,
+          "accuracy": 0.45654761904761904
+        },
+        "TunedFactorRidge": {
+          "mean_correct": 75.85,
+          "accuracy": 0.45148809523809524
+        }
+      },
+      "contrasts": {
+        "UniformAuditGlobal": {
+          "UniformAuditGlobal": {
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "rescues": 0.0,
+            "harms": 0.0
+          },
+          "PairedGlobal": {
+            "difference": -0.009226190476190475,
+            "ci95": [
+              -0.02023809523809524,
+              0.001488095238095238
+            ],
+            "rescues": 13.05,
+            "harms": 14.6
+          },
+          "CFGoldFactor": {
+            "difference": 0.005952380952380952,
+            "ci95": [
+              0.0008928571428571429,
+              0.01220238095238095
+            ],
+            "rescues": 1.4,
+            "harms": 0.4
+          },
+          "TunedFactorRidge": {
+            "difference": -0.004166666666666667,
+            "ci95": [
+              -0.008630952380952382,
+              -0.00029761904761904754
+            ],
+            "rescues": 0.45,
+            "harms": 1.15
+          }
+        },
+        "CFGoldFactor": {
+          "UniformAuditGlobal": {
+            "difference": -0.005952380952380952,
+            "ci95": [
+              -0.01220238095238095,
+              -0.0008928571428571429
+            ],
+            "rescues": 0.4,
+            "harms": 1.4
+          },
+          "PairedGlobal": {
+            "difference": -0.015178571428571427,
+            "ci95": [
+              -0.029761904761904767,
+              -0.001488095238095238
+            ],
+            "rescues": 13.45,
+            "harms": 16.0
+          },
+          "CFGoldFactor": {
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "rescues": 0.0,
+            "harms": 0.0
+          },
+          "TunedFactorRidge": {
+            "difference": -0.01011904761904762,
+            "ci95": [
+              -0.017261904761904763,
+              -0.003869047619047619
+            ],
+            "rescues": 0.85,
+            "harms": 2.55
+          }
+        },
+        "CFJudgeFactor": {
+          "UniformAuditGlobal": {
+            "difference": 0.005654761904761905,
+            "ci95": [
+              -0.0002976190476190477,
+              0.011607142857142858
+            ],
+            "rescues": 4.3,
+            "harms": 3.35
+          },
+          "PairedGlobal": {
+            "difference": -0.0035714285714285704,
+            "ci95": [
+              -0.015476190476190477,
+              0.0068526785714284645
+            ],
+            "rescues": 13.9,
+            "harms": 14.5
+          },
+          "CFGoldFactor": {
+            "difference": 0.011607142857142858,
+            "ci95": [
+              0.00505952380952381,
+              0.01845238095238095
+            ],
+            "rescues": 5.0,
+            "harms": 3.05
+          },
+          "TunedFactorRidge": {
+            "difference": 0.001488095238095238,
+            "ci95": [
+              -0.004471726190476189,
+              0.00773809523809524
+            ],
+            "rescues": 4.15,
+            "harms": 3.9
+          }
+        },
+        "RawJudgeRectifier": {
+          "UniformAuditGlobal": {
+            "difference": 0.010714285714285714,
+            "ci95": [
+              -9.995311456818718e-19,
+              0.021726190476190475
+            ],
+            "rescues": 8.05,
+            "harms": 6.25
+          },
+          "PairedGlobal": {
+            "difference": 0.0014880952380952374,
+            "ci95": [
+              -0.011011904761904764,
+              0.013690476190476189
+            ],
+            "rescues": 14.3,
+            "harms": 14.05
+          },
+          "CFGoldFactor": {
+            "difference": 0.016666666666666666,
+            "ci95": [
+              0.0035714285714285718,
+              0.0306547619047619
+            ],
+            "rescues": 8.75,
+            "harms": 5.95
+          },
+          "TunedFactorRidge": {
+            "difference": 0.006547619047619047,
+            "ci95": [
+              -0.0035714285714285713,
+              0.016964285714285716
+            ],
+            "rescues": 7.25,
+            "harms": 6.15
+          }
+        },
+        "JudgeImpute": {
+          "UniformAuditGlobal": {
+            "difference": 0.01011904761904762,
+            "ci95": [
+              -0.000892857142857141,
+              0.02023809523809524
+            ],
+            "rescues": 6.15,
+            "harms": 4.45
+          },
+          "PairedGlobal": {
+            "difference": 0.0008928571428571456,
+            "ci95": [
+              -0.013095238095238094,
+              0.01488095238095238
+            ],
+            "rescues": 13.65,
+            "harms": 13.5
+          },
+          "CFGoldFactor": {
+            "difference": 0.016071428571428573,
+            "ci95": [
+              0.005357142857142858,
+              0.026488095238095238
+            ],
+            "rescues": 6.85,
+            "harms": 4.15
+          },
+          "TunedFactorRidge": {
+            "difference": 0.005952380952380952,
+            "ci95": [
+              -0.004464285714285713,
+              0.015476190476190477
+            ],
+            "rescues": 5.35,
+            "harms": 4.35
+          }
+        },
+        "FixedFactorRidge": {
+          "UniformAuditGlobal": {
+            "difference": 0.0020833333333333333,
+            "ci95": [
+              -0.00029761904761904765,
+              0.00505952380952381
+            ],
+            "rescues": 0.45,
+            "harms": 0.1
+          },
+          "PairedGlobal": {
+            "difference": -0.0071428571428571435,
+            "ci95": [
+              -0.017857142857142856,
+              0.002976190476190476
+            ],
+            "rescues": 13.25,
+            "harms": 14.45
+          },
+          "CFGoldFactor": {
+            "difference": 0.008035714285714287,
+            "ci95": [
+              0.002380952380952381,
+              0.014583333333333334
+            ],
+            "rescues": 1.85,
+            "harms": 0.5
+          },
+          "TunedFactorRidge": {
+            "difference": -0.0020833333333333333,
+            "ci95": [
+              -0.006547619047619048,
+              0.0020833333333333337
+            ],
+            "rescues": 0.5,
+            "harms": 0.85
+          }
+        }
+      },
+      "primary_signal_pass": false,
+      "scope": "adaptive public-normal exploration, no independent confirmation"
+    }
+  },
+  "verified_cases": 300,
+  "source_sha256": {
+    "infra/modal/history_core.py": "ff827d4107da8c1d10252f8059bfef9495d082af0e784579b314bff4d5297ee5",
+    "infra/modal/history_pipeline.py": "f8a6b7f5ad900aac1d0444e6e98ee4d4bc5640244e3702115dd053e912caea76",
+    "infra/modal/history_modal.py": "865725811f6773ceea4bee6d50772593cfd4f7271dcfbf5e44d656f7a7dfcbe0",
+    "infra/modal/gain_core.py": "f62f985ff49cc0b9cc918398275e97c1c435cb06870d7b7d86ca8767deac8459",
+    "infra/modal/neural_core.py": "d0ea9758527012856403d5ef32d25645f9b6c35c43785edc9e18070d692690b1",
+    "infra/modal/neural_pipeline.py": "710dc6dc1e705dad323be403f2ed8f571be65de764fc21d037450ec0433aeea0",
+    "run_dart_history.py": "2708b3507f4d1e75d6441f89f26fd7a5267c897a6e2caef5c67a534b164b7ff3",
+    "run_dart_gain.py": "ab70c9a79125bcd8aebe0f222cb39a4ac7ad42a1b827451b571528ad986e6168",
+    "src/repguard/audit/feedback.py": "95eacdf1a7da0646121b72fdde41e0034cbc3ecc74098634e76266b8a15ccc66",
+    "docs/analysis/dart_history_rectifier_v1_protocol_2026-10-05.md": "6642c41f770728ae484f9e2122170c6fa22f18da14a934570b84c8b59b6d9f8f"
+  },
+  "judge_provenance": {
+    "source": "real Modal qwen3:14b trajectory judge",
+    "manifest_sha256": "08eb70281b426899940091bd53193bb969f122c6f6bf8eff7ac442c5a0910076",
+    "ledger_sha256": "388b0f5f00ec6814bf676b46af71edb60c0a5de9cd632df0b8ad595533c9515e",
+    "records": 2352,
+    "valid": 2352,
+    "encoding": "0 negative; 1 positive at p>=0.5; 2 invalid/abstain"
+  },
+  "all_groups_isolated": true
+}

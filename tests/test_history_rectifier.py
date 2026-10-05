@@ -59,9 +59,11 @@ def test_bad_or_empty_inputs_fail_closed():
         design(agents,p+2,invalid,True)
 
 
-def test_history_pipeline_resume_and_excludes_test_feedback(tmp_path,monkeypatch):
-    import history_pipeline as pipeline
-    from history_core import METHODS
+@pytest.mark.parametrize('module_name',['history_pipeline','paired_history_pipeline'])
+def test_history_pipeline_resume_and_excludes_test_feedback(tmp_path,monkeypatch,module_name):
+    import importlib
+    pipeline=importlib.import_module(module_name)
+    METHODS=pipeline.METHODS
     monkeypatch.setattr(pipeline,'verify',lambda p:None)
     calls=[]
     def stub(observed,p,invalid,agents,groups):
@@ -76,7 +78,7 @@ def test_history_pipeline_resume_and_excludes_test_feedback(tmp_path,monkeypatch
             'judge_invalid':[[False,False]]*5}
     packet['audits']=[{'fold':f,'seed':s,'budget_fraction':b,'audit_indices':list(range(8)),
                        'test_agent_choices':[0]} for b in (.05,.1,.2) for f in range(5) for s in range(20)]
-    packet['controls']={str(b):{m:[[1.]*5]*20 for m in ('UniformAuditGlobal','PairedGlobal','TunedFactorRidge')} for b in (.05,.1,.2)}
+    packet['controls']={str(b):{m:[[1.]*5]*20 for m in ('UniformAuditGlobal','PairedGlobal','TunedFactorRidge','UniformCFJudgeFactor')} for b in (.05,.1,.2)}
     with pytest.raises(RuntimeError,match='injected'):
         pipeline.run(packet,tmp_path,lambda:None)
     assert len(list(tmp_path.glob('case_*.json')))==1
@@ -85,3 +87,13 @@ def test_history_pipeline_resume_and_excludes_test_feedback(tmp_path,monkeypatch
     assert len(calls)==301
     pipeline.run(packet,tmp_path,lambda:None)
     assert len(calls)==301
+
+
+def test_paired_wrapper_changes_only_control_name():
+    from paired_history_core import routes as paired_routes
+    _,agents,y,p,invalid,groups=data()
+    a=routes(y,p,invalid,agents,groups)
+    b=paired_routes(y,p,invalid,agents,groups)
+    for field in ('agent_choices','scores'):
+        a[field]['PairedGlobal']=a[field].pop('UniformAuditGlobal')
+    assert a==b
