@@ -38,6 +38,11 @@ and [protocol with numerical audit amendment](docs/analysis/dart_same_audit_prot
 The test suite has **236 passing tests**. No new model calls or sealed holdout
 access were needed for this forensic replay.
 
+The [updated neural-router research proposal](docs/analysis/dart_neural_research_proposal_2026-10-05.md)
+reviews recent sparse-routing and decision-learning work and proposes a frozen
+Transformer encoder with a small task–agent learner, followed by controlled pair
+auditing. This is a proposal, not a newly implemented or validated winner.
+
 ### Earlier evidence (2026-09-30)
 
 The full real-answer rerun covers **all 14 MMLU-Pro subjects** and 18,064 answers from four Ollama models. In the prespecified `related + 25% noise` condition, ECRT's team-accuracy difference against FixedBorrow is only +0.02 percentage points (95% CI [−0.04, +0.10]); ECRT superiority is **not established**. A separate paired Qwen3 8B study found a +23.57-point thinking-policy accuracy gain on 280 unused dev questions, with about 213 times the output tokens. A new 1,260-response real-model pool study found an oracle upper reference of 344/420 but a cross-fitted subject router of 274/420 versus 280/420 for always thinking. The prespecified pool gate for DART **failed**; the new sealed holdout remains unused.
