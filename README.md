@@ -9,6 +9,20 @@
 
 ### Current research status (2026-10-05)
 
+**Latest follow-up:** 905 additional learner/evaluation cases completed on Modal
+(gain/structure, uniform history rectification, and paired history rectification).
+At 10% gold audits, the fixed paired CFJudgeFactor candidate achieves
+**74.15/168**, versus **71.95 PairedGlobal** and **69.70 UniformAuditGlobal**.
+The exploratory difference versus PairedGlobal is +1.31 percentage points
+(generator-bootstrap CI **[+0.03, +2.59]**); the interval versus Uniform still
+includes zero. The prespecified gate requiring both comparisons therefore
+**fails**. This is a promising development result, not independent confirmation,
+a contextual routing gain, or a validated SOTA claim. See the
+[research synthesis and next steps](docs/analysis/dart_research_progress_2026-10-05.md),
+[gain study](docs/analysis/dart_gain_v1_assessment_2026-10-05.md),
+[uniform history study](docs/analysis/dart_history_rectifier_v1_assessment_2026-10-05.md),
+and [paired history study](docs/analysis/dart_paired_history_v1_assessment_2026-10-05.md).
+
 The AppWorld study now includes 14 historical agents on 168 tasks (56 generators),
 **2,352 completed real Qwen3-14B trajectory judgments on Modal**, and completed
 equal-audit-budget routing replays. At the primary 10% audit budget, DARTContrast
