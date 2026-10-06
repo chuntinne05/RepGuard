@@ -1,7 +1,12 @@
 """Deployed CPU orchestrator plus isolated GPU collector, independent of Codex."""
 from pathlib import Path
 import modal
-from ollama_modal_recovery import image as ollama_image
+
+# Keep the image declaration self-contained: this module is re-imported in every
+# cloud container, where unrelated local deployment modules are not mounted.
+ollama_image = (modal.Image.debian_slim(python_version='3.12')
+                .apt_install('curl', 'ca-certificates', 'zstd')
+                .run_commands('curl -fsSL https://ollama.com/install.sh | sh'))
 
 app = modal.App('repguard-routerbench-pilot-v1')
 pilot = modal.Volume.from_name('repguard-routerbench-pilot-v1', create_if_missing=True)

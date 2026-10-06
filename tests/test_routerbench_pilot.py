@@ -98,3 +98,16 @@ def test_evaluator_retains_only_preselected_record_positions(tmp_path):
             member = tarfile.TarInfo(name); member.size = len(raw); tar.addfile(member, io.BytesIO(raw))
             cases.append({'model_index': i, 'record_position': 1, 'query_sha256': 'selected'})
     assert np.array_equal(selected_gold({'members': members, 'query_ids': ['selected']}, archive, cases), [[1.] * 6])
+
+
+def test_deployment_imports_with_only_declared_cloud_files(tmp_path):
+    import shutil
+    import subprocess
+    pytest.importorskip('modal')
+    source = Path(__file__).resolve().parents[1] / 'infra/modal'
+    names = ['routerbench_pilot_modal.py', 'routerbench_pilot_core.py', 'routerbench_pilot_pipeline.py',
+             'routerbench_intake_core.py', 'routerbench_intake_pipeline.py']
+    for name in names:
+        shutil.copyfile(source / name, tmp_path / name)
+    subprocess.run([sys.executable, '-c', 'import routerbench_pilot_modal'], cwd=tmp_path,
+                   capture_output=True, text=True, check=True, timeout=30)

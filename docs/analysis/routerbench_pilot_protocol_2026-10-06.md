@@ -86,3 +86,12 @@ inference usage; unknown attempts and actual Modal billing remain separate.
 
 Sources: [official code](https://github.com/ynulihao/LLMRouterBench/tree/c77cb0506949d8f959e97967d2fefca0e8ff1b05),
 [MATH500 evaluator](https://github.com/ynulihao/LLMRouterBench/blob/c77cb0506949d8f959e97967d2fefca0e8ff1b05/evaluation/MATH500/math500.py).
+
+## Packaging amendment before any model call
+
+First submission `442db51a24b3f107551ac7b0` failed during container module import:
+the deployment imported an image declaration from a local module not mounted in
+cloud containers. No status/input/judgment checkpoint was created. Preserve its
+packet and receipt as a failed startup, cancel its function call, and make the
+identical image declaration self-contained. New source/input hash and receipt;
+query selection, model digest, prompts, budgets and scientific rules unchanged.
