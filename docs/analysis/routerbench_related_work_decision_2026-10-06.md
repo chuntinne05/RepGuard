@@ -26,6 +26,14 @@ does not register a new experiment or claim a validated method.
    (2023)](https://arxiv.org/abs/2301.09633) established the broader idea of
    combining plentiful predictions with scarce labels. Residual correction
    alone is not a novel contribution.
+4. [Li et al., *LLMRouterBench* (Findings of ACL
+   2026)](https://aclanthology.org/2026.findings-acl.1881/) already provide a
+   400K-instance, 21-dataset, 33-model routing benchmark with ten baselines.
+   They report that many routers perform similarly to a simple baseline and
+   that larger pools have diminishing returns. Our use of the earlier
+   [RouterBench archive](https://arxiv.org/abs/2403.12031) is not by itself a
+   new benchmark contribution; HistRepEval needs a distinct history/proxy
+   validity question and evidence beyond pool size.
 
 These are primary papers, not verified independent replications. This search
 is a novelty and baseline check, not a claim that either implementation works
@@ -90,7 +98,12 @@ and gold-only controls under the same gold budget and an honest total-cost
 account, across independent tasks or datasets. A global model selector based
 on historical executions is not automatically a task-contextual router: a
 contextual claim needs decisions from information available before running the
-new solver and separate evaluation. If the evidence does not support a new
-method, HistRepEval can still be developed as a measurement contribution, but
-that is a different paper claim requiring benchmark validity and broad
-coverage. No A* acceptance or superiority can be guaranteed in advance.
+new solver, separate evaluation, and comparison with relevant prompt routers
+such as [RouteLLM (ICLR
+2025)](https://proceedings.iclr.cc/paper_files/paper/2025/hash/5503a7c69d48a2f86fc00b3dc09de686-Abstract-Conference.html)
+and [R2-Router (ICML 2026)](https://proceedings.mlr.press/v306/xue26h.html).
+The global selector and a prompt router have different information and cost
+budgets, so comparisons must align those conditions. If the evidence does not
+support a new method, HistRepEval can still be developed as a measurement
+contribution, but that is a different paper claim requiring benchmark validity
+and broad coverage. No A* acceptance or superiority can be guaranteed in advance.
