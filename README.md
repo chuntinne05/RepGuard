@@ -13,10 +13,19 @@
 LLMRouterBench archive and inventoried **649 files / 467,023 metadata records**
 across 29 dataset/split combinations. 51 MMLU files were skipped before JSON
 parsing. MATH500 has 500 common questions across all 20 archived models.
-A bounded **48-question × 6-model real Qwen3-14B judge pilot** is implemented and
-submitted with fixed development selection, isolated gold-blind GPU inputs,
-checkpointed attempts, and automatic post-collection diagnostics. This is a
-feedback feasibility pilot, not a new DART superiority result. See the
+A bounded **48-question × 6-model real Qwen3-14B judge pilot completed 288/288
+judgments** at 07:40:33 Vietnam time on 2026-10-06. All responses are valid;
+local artifact verification and recomputation reproduce the cloud diagnostics.
+Cross-fitted Brier is **0.094493**, versus **0.173013** for the gold-only control.
+The pairwise residual variance ratio is **0.694670** (95% CI
+**[0.519834, 0.880492]**), approximately 30.53% lower variance. Both prespecified
+pilot gates pass. The detached worker returned successfully and stopped at the
+pilot limit; no experiment container remains running. This is feedback
+feasibility evidence, not DART routing superiority or demonstrated label savings.
+Calibration used all pilot gold through cross-fitting; a separate limited-gold,
+equal-budget study must be locked before expansion. See the
+[verified pilot results](docs/analysis/routerbench_pilot_assessment_2026-10-06.md),
+[next evidence plan](docs/analysis/routerbench_next_evidence_plan_2026-10-06.md),
 [intake assessment](docs/analysis/routerbench_intake_assessment_2026-10-06.md),
 [locked pilot protocol](docs/analysis/routerbench_pilot_protocol_2026-10-06.md),
 and [cloud operation guide](docs/analysis/routerbench_pilot_operations_2026-10-06.md).

@@ -79,9 +79,9 @@ def main():
     (out / 'routerbench_pilot_results_2026-10-06.json').write_text(json.dumps(summary, indent=2) + '\n')
     rci = result['pair_residual_variance_ratio_ci95']
     lines = ['# Pilot judge thật trên MATH500: kết quả', '',
-             f"Run `{packet['run_id']}`: **288/288 judgment** cho48câu ×6model; đã kiểm chứng artifacts và tính lại kết quả.", '',
+             f"Run `{packet['run_id']}`: **288/288 judgment** cho 48 câu × 6 model; đã kiểm chứng artifacts và tính lại kết quả.", '',
              '## Phạm vi', '',
-             'Qwen3-14B chạy thật trên Modal, think=false, context16.384. Candidate answers là '
+             'Qwen3-14B chạy thật trên Modal, think=false, context 16.384. Candidate answers là '
              'execution có sẵn trong LLMRouterBench; không gọi mới sáu solver. Đây là pilot development '
              'đánh giá feedback, chưa phải DART routing hay xác nhận thắng baseline.', '',
              '## Các con số', '',
@@ -91,8 +91,10 @@ def main():
              f"| Brier judge thô — thấp tốt hơn | {result['brier']['raw_judge']:.6f} |",
              f"| Brier hiệu chỉnh cross-fit | {result['brier']['crossfit_judge']:.6f} |",
              f"| Brier control không judge | {result['brier']['crossfit_gold_only']:.6f} |",
-             f"| Tỷ số phương sai residual / outcome differences | {result['pair_residual_variance_ratio']} |",
-             f"| CI95 tỷ số trên | {rci} |",
+             f"| Cải thiện Brier so với control không judge | {result['crossfit_brier_gain']:.6f} |",
+             f"| CI95 cải thiện Brier | [{result['crossfit_brier_gain_ci95'][0]:.6f}, {result['crossfit_brier_gain_ci95'][1]:.6f}] |",
+             f"| Tỷ số phương sai residual / outcome differences | {result['pair_residual_variance_ratio']:.6f} |",
+             f"| CI95 tỷ số trên | [{rci[0]:.6f}, {rci[1]:.6f}] |" if rci else '| CI95 tỷ số trên | Không xác định |',
              f"| Attempts đã khởi tạo | {attempts} |",
              f"| Input tokens ghi nhận | {tokens_in:,} |",
              f"| Output tokens ghi nhận | {tokens_out:,} |",
@@ -100,12 +102,22 @@ def main():
              f"| Tổng thời gian inference ghi nhận | {seconds/60:.2f} phút |", '',
              f"**Operational gate: {'PASS' if result['operational_pass'] else 'FAIL'}.**",
              f"**Expansion signal: {'PASS' if result['expansion_signal_pass'] else 'FAIL'}.**", '',
-             'Expansion yêu cầu ít nhất95% valid, tối đa50% answers bị cắt, tỷ số phương sai≤0,90 '
+             'Expansion yêu cầu ít nhất 95% valid, tối đa 50% answers bị cắt, tỷ số phương sai ≤0,90 '
              'và CI upper<1. Tiêu chí được khóa trước judgment; không sửa sau kết quả.', '',
+             '## Diễn giải', '',
+             f"Tỷ số {result['pair_residual_variance_ratio']:.4f} tương ứng giảm khoảng "
+             f"{100*(1-result['pair_residual_variance_ratio']):.2f}% phương sai trong các chênh lệch giữa model. "
+             'Feedback đã hiệu chỉnh có thông tin ngoài khả năng trung bình của từng model, '
+             'theo chẩn đoán held-out của pilot này. Brier thấp hơn nghĩa là xác suất dự báo '
+             'gần gold hơn, không phải accuracy hay số task thành công.', '',
+             'Đây là bằng chứng để thử bước tiếp với gold thưa. Chưa đo được số nhãn có thể '
+             'tiết kiệm, lợi ích chọn agent, hay lợi ích ròng sau chi phí judge. Calibration '
+             'ở pilot được học từ toàn gold của 36 câu khác trong mỗi fold; cần kiểm tra lại '
+             'khi chỉ cấp 5%, 10%, 20% nhãn và so với đối chứng cùng quyền truy cập.', '',
              '## Giới hạn và quyết định tiếp', '',
-             '- Tất cả gold của pilot được dùng cho chẩn đoán cross-fit:36câu train,12câu held-out mỗi fold. '
-             'Không gọi đây là routing với ngân sách10%.',
-             '- Bootstrap2.000lần theo question trên prediction cố định; chưa refit toàn bộ learner, '
+             '- Tất cả gold của pilot được dùng cho chẩn đoán cross-fit: 36 câu train, 12 câu held-out mỗi fold. '
+             'Không gọi đây là routing với ngân sách 10%.',
+             '- Bootstrap 2.000 lần theo question trên prediction cố định; chưa refit toàn bộ learner, '
              'chưa chứng nhận template/near-duplicate independence.',
              '- Gold là binary score của evaluator MATH500 đã lưu, không phải đáp án được người kiểm chứng lại '
              'trong pilot. Không đọc gold của các câu ngoài pilot vào analysis.',

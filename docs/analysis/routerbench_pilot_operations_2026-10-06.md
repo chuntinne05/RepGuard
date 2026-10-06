@@ -3,7 +3,7 @@
 ## Run và giới hạn
 
 - App: `repguard-routerbench-pilot-v1`.
-- Active run: `bad5a513bd5d227711eb1e0d`.
+- Completed run: `bad5a513bd5d227711eb1e0d`.
 - Detached FunctionCall: `fc-01M478WXM5842B8CFNJEW6G4X5`.
 - Pilot Volume: `repguard-routerbench-pilot-v1`.
 - Archive Volume: `repguard-routerbench-intake-checkpoints-v1`.
@@ -31,10 +31,27 @@ tính analysis. Nếu laptop sleep, không khởi chạy lại chỉ vì termina
 Một container tồn tại/Pending chưa chứng minh inference tiến triển. Kiểm tra
 ledger tăng, response có token counts/done, timestamps và model digest khớp.
 
-Snapshot ngày06/10/2026, khoảng07:18:35giờ Việt Nam: ledger đã tăng từ12 lên38
-judgments hoàn tất; state `judging`. Case37 có5.255input tokens,11output tokens,
-response hợp lệ từ `qwen3:14b`. GPU thực tế NVIDIA A10G, Ollama0.34.4, digest khớp.
-Đây là ảnh chụp tiến độ, không phải kết quả cuối; dùng các lệnh bên dưới để xem mới nhất.
+## Trạng thái cuối đã kiểm chứng
+
+Hoàn tất **288/288 judgments (100%)** lúc **07:40:33 ngày 06/10/2026 giờ Việt Nam**
+(`2026-10-06T00:40:33.062068+00:00`). State
+`completed_pilot_review_required`; FunctionCall trả kết quả thành công. Đọc trực
+tiếp Modal Volume xác nhận ledger có 288 entries; `modal container list --json`
+trả `[]`. Đây là dừng đúng giới hạn pilot, không phải worker bị kẹt.
+
+Đã tải và kiểm chứng toàn bộ 288 case artifacts; reporter tính lại calibration,
+bootstrap và usage, khớp cloud trong sai số số học đã quy định. GPU thực tế NVIDIA
+A10G, Ollama 0.34.4, model digest khớp; 288 attempts, 288 valid responses, không
+retry hay unknown usage. Ghi nhận 511.561 input tokens, 3.500 output tokens và
+443,947 giây inference cộng dồn. Đây không phải tổng wall time hoặc hóa đơn GPU.
+
+Operational gate và expansion screening signal đều PASS. Brier cross-fit
+0,094493 so với control không judge 0,173013; tỷ số phương sai residual differences
+0,694670, CI95 [0,519834; 0,880492]. Pipeline không tự mở rộng sau gate pass.
+Phải khóa study gold thưa và đối chứng cùng ngân sách trước khi submit tiếp.
+
+Snapshot lịch sử khoảng 07:18:35: ledger tăng từ 12 lên 38, state `judging`;
+case 37 có response hợp lệ. Snapshot này đã được thay bằng trạng thái cuối trên.
 
 ## Lệnh kiểm tra và kiểm chứng
 
@@ -70,10 +87,11 @@ resume/idempotence, archive integrity và container import.
 
 ## Giới hạn báo cáo
 
-288 là số judgment dự kiến, không phải288solver executions mới. Candidate outputs
+288 là số judgment đã hoàn tất, không phải288solver executions mới. Candidate outputs
 là execution từ archive. Gold là score evaluator đã lưu, chưa được pilot grade
 lại. Phân tích dùng cross-fit với toàn gold của pilot, không phải thí nghiệm
 routing gold-budget10%. Token/latency là usage ghi nhận; chưa phải hóa đơn USD.
 
 [Protocol khoa học](routerbench_pilot_protocol_2026-10-06.md) ·
-[Kết quả intake](routerbench_intake_assessment_2026-10-06.md).
+[Kết quả intake](routerbench_intake_assessment_2026-10-06.md) ·
+[Kết quả pilot đã kiểm chứng](routerbench_pilot_assessment_2026-10-06.md).
