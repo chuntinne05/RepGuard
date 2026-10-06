@@ -23,7 +23,7 @@ def near_equal(a, b):
         assert a == b, (a, b)
 
 
-def main():
+def load_verified_pilot():
     root = cli.OUTPUT / 'cloud'
     packet = json.loads((root / 'input_private.json').read_text()); verify(packet)
     status = json.loads((root / 'status.json').read_text())
@@ -73,9 +73,21 @@ def main():
                   'prompt_tokens_recorded': tokens_in, 'completion_tokens_recorded': tokens_out,
                   'unknown_usage_attempts': unknown, 'inference_seconds_recorded': seconds})
     near_equal(result, json.loads((root / 'analysis.json').read_text()))
-    out = cli.ROOT / 'docs/analysis'
     summary = {k: v for k, v in result.items() if k not in ('calibrated_predictions', 'gold_only_predictions')}
     summary.update({'environment': env, 'source_sha256': packet['source_sha256'], 'verified_cases': 288})
+    return {'packet': packet, 'gold': np.array(gold['success'], float), 'probabilities': p,
+            'invalid': invalid, 'clipped': clipped, 'summary': summary, 'result': result}
+
+
+def main():
+    verified = load_verified_pilot()
+    packet, result, summary = verified['packet'], verified['result'], verified['summary']
+    attempts = summary['usage']['attempts_started']
+    tokens_in = summary['usage']['prompt_tokens_recorded']
+    tokens_out = summary['usage']['completion_tokens_recorded']
+    unknown = summary['usage']['unknown_usage_attempts']
+    seconds = summary['usage']['inference_seconds_recorded']
+    out = cli.ROOT / 'docs/analysis'
     (out / 'routerbench_pilot_results_2026-10-06.json').write_text(json.dumps(summary, indent=2) + '\n')
     rci = result['pair_residual_variance_ratio_ci95']
     lines = ['# Pilot judge thật trên MATH500: kết quả', '',
