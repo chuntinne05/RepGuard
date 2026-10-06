@@ -53,6 +53,16 @@ groups. This does not certify template/skill independence or evaluation power.
 See the [grouping assessment](docs/analysis/routerbench_prompt_groups_v1_assessment_2026-10-06.md)
 and [sensitivity analysis](docs/analysis/routerbench_prompt_groups_v1_sensitivity_2026-10-06.md).
 
+A separate metadata-selected **gold-only development headroom diagnostic** ran
+on 200 MBPP and 200 FinQA questions across all 20 archived models. Local
+recomputation verifies **MBPP 78.0% best fixed versus 94.5% oracle** and
+**FinQA 74.0% versus 88.5% oracle**. These 16.5 and 14.5 point gaps show
+complementary archived outcomes; they do not show that a deployable router can
+predict which model succeeds. Duplicate prompt hashes were excluded before
+score access. No new LLM calls were made; the unselected questions were not
+scored by this diagnostic. See the [headroom assessment](docs/analysis/routerbench_headroom_v1_assessment_2026-10-06.md)
+and [locked protocol](docs/analysis/routerbench_headroom_v1_protocol_2026-10-06.md).
+
 ### Completed method comparisons (2026-10-05)
 
 **Latest follow-up:** 1,205 additional learner/evaluation cases completed on Modal
