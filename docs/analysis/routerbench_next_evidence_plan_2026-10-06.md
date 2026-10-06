@@ -1,5 +1,12 @@
 # Bước tiếp sau pilot MATH500 đã hoàn tất
 
+**Cập nhật sau thực hiện:** bước stress test gold thưa đã được implement, khóa
+protocol và chạy đủ 240 case /2.400 lựa chọn trên Modal; verification local khớp.
+Gate FAIL. RawJudge đạt 46/48 bằng oracle, nên không có accuracy headroom trên
+48 executions đã xem. Kế hoạch dưới đây giữ như lịch sử trước replay; không tự
+mở rộng judgment. Xem [kết quả](routerbench_sparse_gold_v1_assessment_2026-10-06.md)
+và [phân tích cùng hướng điều chỉnh](routerbench_sparse_gold_v1_interpretation_2026-10-06.md).
+
 ## Điểm xuất phát và câu hỏi còn thiếu
 
 Pilot `bad5a513bd5d227711eb1e0d` đã hoàn tất 288/288 judgment thật. Cả hai

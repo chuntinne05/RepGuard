@@ -30,6 +30,20 @@ equal-budget study must be locked before expansion. See the
 [locked pilot protocol](docs/analysis/routerbench_pilot_protocol_2026-10-06.md),
 and [cloud operation guide](docs/analysis/routerbench_pilot_operations_2026-10-06.md).
 
+**Sparse-gold follow-up completed:** the frozen CPU replay ran **240 cases /
+2,400 model selections**, with exact 11/22/44-cell budgets and full local
+recomputation. At primary 10%, CFJudgeRectifier scores **44.30/48** versus
+**42.65 UniformGlobal**, **43.70 PairedGlobal** and **44.10 PairedSH**. The
+development expansion gate **fails**. Feedback still reduces residual variance
+(ratio **0.769981**, CI **[0.622643, 0.932881]**), but **RawJudge uses zero gold
+and reaches 46/48**, equal to both the best fixed model and the per-task oracle
+on this 48-question pool. There is no accuracy headroom above that baseline on
+these fixed executions. The pipeline stopped; no new solver/judge calls were
+made. See the [verified sparse-gold results](docs/analysis/routerbench_sparse_gold_v1_assessment_2026-10-06.md),
+[component analysis and revised direction](docs/analysis/routerbench_sparse_gold_v1_interpretation_2026-10-06.md),
+[locked protocol](docs/analysis/routerbench_sparse_gold_v1_protocol_2026-10-06.md)
+and [operation guide](docs/analysis/routerbench_sparse_gold_v1_operations_2026-10-06.md).
+
 ### Completed method comparisons (2026-10-05)
 
 **Latest follow-up:** 1,205 additional learner/evaluation cases completed on Modal
