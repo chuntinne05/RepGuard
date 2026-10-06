@@ -76,6 +76,19 @@ See the [verified result](docs/analysis/routerbench_finqa_feedback_v1_assessment
 [locked protocol](docs/analysis/routerbench_finqa_feedback_v1_protocol_2026-10-06.md)
 and [operation guide](docs/analysis/routerbench_finqa_feedback_v1_operations_2026-10-06.md).
 
+**FinQA exact-answer consensus development replay completed:** a frozen rule
+was tested on 48 other questions ×20 archived model outputs, with no new LLM
+calls. Prediction coverage was 92.92%. The pairwise residual-variance ratio
+was **0.9234**, 95% CI **[0.8487, 1.0006]**: an improvement in direction
+relative to the failed judge pilot, but below the prespecified requirement of
+at most 0.90 with CI upper below 1. The expansion screen **failed**. High
+agreement still included 22 wrong cells on two questions, illustrating shared
+model errors. This remains full-gold development diagnosis, not a validated
+sparse-label method or deployable task router. See the
+[verified result](docs/analysis/routerbench_finqa_consensus_v1_assessment_2026-10-06.md),
+[failure analysis and next decision](docs/analysis/routerbench_finqa_consensus_v1_interpretation_2026-10-06.md),
+and [frozen protocol](docs/analysis/routerbench_finqa_consensus_v1_protocol_2026-10-06.md).
+
 ### Completed method comparisons (2026-10-05)
 
 **Latest follow-up:** 1,205 additional learner/evaluation cases completed on Modal
