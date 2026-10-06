@@ -65,8 +65,47 @@ def inspect(selections: dict[str, dict]):
     return result
 
 
+@app.function(image=image, volumes={'/archive': archive}, cpu=1, memory=4096, timeout=1800)
+def collect_predictions(selections: dict[str, dict]):
+    """Return only selected archived prediction strings; never parse scores."""
+    import ijson
+    import tarfile
+
+    archive.reload()
+    if len(selections) != 20 or any(len(item['positions']) != 48 for item in selections.values()):
+        raise ValueError('Expected frozen 20-model, 48-question selection')
+    result = {}
+    with tarfile.open(SOURCE, 'r|gz') as tar:
+        for member in tar:
+            if member.name not in selections:
+                continue
+            if member.name in result or not member.isfile() or member.size > 100 * 1024 * 1024:
+                raise ValueError('Duplicate or unsupported selected member')
+            wanted = set(selections[member.name]['positions'])
+            found = {}
+            position = -1
+            prediction = ''
+            with tar.extractfile(member) as stream:
+                for prefix, event, value in ijson.parse(stream):
+                    if prefix == 'records.item' and event == 'start_map':
+                        position += 1
+                        prediction = ''
+                    elif position in wanted and prefix == 'records.item.prediction' and event == 'string':
+                        prediction = value
+                    elif position in wanted and prefix == 'records.item' and event == 'end_map':
+                        if len(prediction) > 1000 or position in found:
+                            raise ValueError('Unexpected selected prediction')
+                        found[position] = prediction
+            if set(found) != wanted:
+                raise ValueError('Missing selected prediction record')
+            result[member.name] = found
+    if set(result) != set(selections):
+        raise ValueError('Missing selected member')
+    return result
+
+
 @app.local_entrypoint()
-def main():
+def main(mode: str = 'inspect'):
     root = Path(__file__).resolve().parents[2]
     packet = json.loads((root / 'results/routerbench_finqa_feedback_v1/packet_private.json').read_text())
     if packet['run_id'] != '0fad63edd346eb0591fd99e1':
@@ -74,11 +113,22 @@ def main():
     selection = {packet['members'][model]: {
         'model': model, 'positions': list(packet['positions'][model].values())}
         for model in packet['models']}
-    result = inspect.remote(selection)
-    out = root / 'results/routerbench_finqa_feedback_v1/field_audit_private.json'
-    out.write_text(json.dumps({'parent_run_id': packet['run_id'], 'members': result}, indent=2) + '\n')
-    print(json.dumps({'parent_run_id': packet['run_id'], 'member_count': len(result),
-                      'selected_records': sum(x['selected'] for x in result.values()),
-                      'prediction_present': sum(x['prediction_present'] for x in result.values()),
-                      'no_raw_box_prediction_present': sum(x['no_raw_box_prediction_present'] for x in result.values()),
-                      'private_result': str(out)}))
+    if mode == 'inspect':
+        result = inspect.remote(selection)
+        out = root / 'results/routerbench_finqa_feedback_v1/field_audit_private.json'
+        out.write_text(json.dumps({'parent_run_id': packet['run_id'], 'members': result}, indent=2) + '\n')
+        print(json.dumps({'parent_run_id': packet['run_id'], 'member_count': len(result),
+                          'selected_records': sum(x['selected'] for x in result.values()),
+                          'prediction_present': sum(x['prediction_present'] for x in result.values()),
+                          'no_raw_box_prediction_present': sum(x['no_raw_box_prediction_present'] for x in result.values()),
+                          'private_result': str(out)}))
+    elif mode == 'predictions':
+        result = collect_predictions.remote(selection)
+        out = root / 'results/routerbench_finqa_feedback_v1/predictions_private.json'
+        out.write_text(json.dumps({'parent_run_id': packet['run_id'], 'members': result}, indent=2) + '\n')
+        print(json.dumps({'parent_run_id': packet['run_id'], 'member_count': len(result),
+                          'selected_records': sum(len(x) for x in result.values()),
+                          'prediction_present': sum(bool(v.strip()) for member in result.values() for v in member.values()),
+                          'private_result': str(out)}))
+    else:
+        raise ValueError('Unknown field audit mode')
