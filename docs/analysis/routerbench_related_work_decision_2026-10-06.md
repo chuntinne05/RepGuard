@@ -11,7 +11,10 @@ does not register a new experiment or claim a validated method.
    LLM-judge scores, selectively purchased gold labels, inverse-propensity
    residual correction, confidence sequences, and adaptive attention to
    unreliable contexts and close arms. Their abstract and method already cover
-   much of a generic "judge + adaptive gold audit" contribution.
+   much of a generic "judge + adaptive gold audit" contribution. Section 6 says
+   all of their reported experiments use synthetic data, leaving room for a
+   carefully controlled real LLM-execution evaluation; this is an empirical
+   opportunity, not proof of new algorithmic novelty.
 2. [Ma et al., *Best-Arm Identification with Generative Proxy* (2026
    preprint)](https://arxiv.org/abs/2607.06879) study proxy-assisted best-arm
    identification with residual-variance certification and elimination. Their
@@ -26,7 +29,10 @@ does not register a new experiment or claim a validated method.
 
 These are primary papers, not verified independent replications. This search
 is a novelty and baseline check, not a claim that either implementation works
-on RouterBench or that our method beats it.
+on RouterBench or that our method beats it. Ao et al. formulate online arm
+sampling with observe-then-audit, whereas our current replay is a fixed
+archived question-by-model matrix. Any adapted comparator must state that
+difference and preserve its access and budget assumptions.
 
 ## Consequence for the current project
 
