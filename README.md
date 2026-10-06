@@ -44,6 +44,15 @@ made. See the [verified sparse-gold results](docs/analysis/routerbench_sparse_go
 [locked protocol](docs/analysis/routerbench_sparse_gold_v1_protocol_2026-10-06.md)
 and [operation guide](docs/analysis/routerbench_sparse_gold_v1_operations_2026-10-06.md).
 
+Prompt-only screening of the 500 common MATH500 questions also completed on
+Modal CPU. All 500 hashes were verified and independently regrouped; the
+prespecified conservative near-template rule found **500 singleton groups**,
+leaving **452 questions outside the 48 pilot questions**. A later sensitivity
+check at lower string-similarity thresholds leaves 450–452 outside pilot
+groups. This does not certify template/skill independence or evaluation power.
+See the [grouping assessment](docs/analysis/routerbench_prompt_groups_v1_assessment_2026-10-06.md)
+and [sensitivity analysis](docs/analysis/routerbench_prompt_groups_v1_sensitivity_2026-10-06.md).
+
 ### Completed method comparisons (2026-10-05)
 
 **Latest follow-up:** 1,205 additional learner/evaluation cases completed on Modal
