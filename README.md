@@ -7,7 +7,21 @@
 
 **RepGuard** studies how multi-agent LLM systems should convert imperfect historical feedback into task-relevant teammate reputation. It proposes **Evidence-Calibrated Reputation Transfer (ECRT)**, which distinguishes *whether historical evidence is trustworthy* from *whether it is relevant to the current task* before allowing that evidence to influence team decisions.
 
-### Current research status (2026-10-05)
+### Current research status (2026-10-06)
+
+**External-data follow-up:** a detached Modal intake has verified a pinned
+LLMRouterBench archive and inventoried **649 files / 467,023 metadata records**
+across 29 dataset/split combinations. 51 MMLU files were skipped before JSON
+parsing. MATH500 has 500 common questions across all 20 archived models.
+A bounded **48-question × 6-model real Qwen3-14B judge pilot** is implemented and
+submitted with fixed development selection, isolated gold-blind GPU inputs,
+checkpointed attempts, and automatic post-collection diagnostics. This is a
+feedback feasibility pilot, not a new DART superiority result. See the
+[intake assessment](docs/analysis/routerbench_intake_assessment_2026-10-06.md),
+[locked pilot protocol](docs/analysis/routerbench_pilot_protocol_2026-10-06.md),
+and [cloud operation guide](docs/analysis/routerbench_pilot_operations_2026-10-06.md).
+
+### Completed method comparisons (2026-10-05)
 
 **Latest follow-up:** 1,205 additional learner/evaluation cases completed on Modal
 (gain/structure, uniform and paired history rectification, and adaptive baseline checks).
