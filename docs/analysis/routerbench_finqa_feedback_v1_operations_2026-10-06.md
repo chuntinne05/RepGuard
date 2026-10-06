@@ -16,12 +16,14 @@ FunctionCall. CPU worker timeout24giờ, GPU4giờ, mỗi function tối đa2inf
 retries; mỗi case giữ trần2attempts qua resume. Không submit song song khi
 receipt cũ còn pending.
 
-Input preparation đã hoàn tất **960/960**, có **889/960 boxed final answers
-hoàn chỉnh (92,60%)**. GPU thực tế NVIDIA L4, digest Qwen3-14B khớp;
-`archive_mounted=false`. Ledger tăng từ **9 lên 30 case hoàn tất**; 30/30
-response hợp lệ từ `qwen3:14b`, một attempt/case, đều có output tokens.
-Đây là snapshot lúc đang chạy, không phải
-kết luận scientific hoặc xác nhận còn đang chạy ở thời điểm đọc tài liệu.
+**Trạng thái cuối:** `completed_pilot_review_required` lúc
+`2026-10-06T13:43:29.177440+00:00`. Input **960/960**, boxed answer hoàn chỉnh
+**889/960 (92,60%)**. GPU NVIDIA L4, digest Qwen3-14B khớp,
+`archive_mounted=false`. Ledger/checksum local **960/960**, response hợp lệ
+**960/960**, đúng **960 attempt**, không retry. Operational gate PASS;
+expansion screening FAIL. Pair residual-variance ratio **1,045407**,
+CI95 **[1,019379; 1,073530]**. Xem báo cáo cuối và phân tích lỗi bên dưới;
+không diễn giải snapshot 9→30 lúc đầu như trạng thái hiện tại.
 
 Các lệnh kiểm tra và tải tăng dần:
 
@@ -29,6 +31,7 @@ Các lệnh kiểm tra và tải tăng dần:
 .venv/bin/python run_routerbench_finqa_feedback.py status
 .venv/bin/python fetch_routerbench_finqa_feedback.py
 .venv/bin/python report_routerbench_finqa_feedback.py
+.venv/bin/python report_routerbench_finqa_failure.py
 ```
 
 `status.json` chỉ cập nhật mỗi10case; ledger và các case artifacts cập nhật
@@ -45,4 +48,6 @@ pilot theo protocol, kể cả gate PASS. Không mở final test hay mua thêm j
 trước protocol mới.
 
 [Protocol](routerbench_finqa_feedback_v1_protocol_2026-10-06.md) ·
-[Headroom development](routerbench_headroom_v1_assessment_2026-10-06.md)
+[Headroom development](routerbench_headroom_v1_assessment_2026-10-06.md) ·
+[Verified pilot](routerbench_finqa_feedback_v1_assessment_2026-10-06.md) ·
+[Failure analysis](routerbench_finqa_feedback_v1_interpretation_2026-10-06.md)

@@ -63,15 +63,18 @@ score access. No new LLM calls were made; the unselected questions were not
 scored by this diagnostic. See the [headroom assessment](docs/analysis/routerbench_headroom_v1_assessment_2026-10-06.md)
 and [locked protocol](docs/analysis/routerbench_headroom_v1_protocol_2026-10-06.md).
 
-**FinQA real-feedback pilot now running:** a detached Modal worker has prepared
-48 development questions ×20 archived models =960 gold-blind judge inputs.
-Its real Qwen3-14B judge runs on an L4 with the archive excluded from the GPU
-mount; early ledger entries contain valid responses. It uses the full FinQA
-problem context and extracted boxed final answer, following a text-only
-preflight. The pilot automatically stops after collection and diagnostics.
-This is a feasibility test, not a proven routing gain. See the
+**FinQA real-feedback pilot completed:** all 960 Qwen3-14B judgments across
+48 development questions and 20 archived models were verified locally.
+Operational validity passed (100% valid responses, 92.60% complete boxed
+answers), but the prespecified expansion gate **failed**: the pairwise
+residual-variance ratio is **1.0454**, 95% CI **[1.0194, 1.0735]**. Cross-fit
+Brier improved versus gold-only (0.2086 vs 0.2380), mostly reflecting
+question difficulty rather than reliable within-question model differences.
+The gate does not support a larger judgment collection or a claim of routing gain.
+See the [verified result](docs/analysis/routerbench_finqa_feedback_v1_assessment_2026-10-06.md),
+[failure analysis](docs/analysis/routerbench_finqa_feedback_v1_interpretation_2026-10-06.md),
 [locked protocol](docs/analysis/routerbench_finqa_feedback_v1_protocol_2026-10-06.md)
-and [live operation guide](docs/analysis/routerbench_finqa_feedback_v1_operations_2026-10-06.md).
+and [operation guide](docs/analysis/routerbench_finqa_feedback_v1_operations_2026-10-06.md).
 
 ### Completed method comparisons (2026-10-05)
 

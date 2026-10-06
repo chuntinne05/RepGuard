@@ -1,8 +1,10 @@
 # RouterBench: literature check and decision after the FinQA pilot
 
-Status: research note written while the fixed 960-judgment FinQA pilot is in
-progress. No pilot outcome has been inspected to change its protocol. This note
-does not register a new experiment or claim a validated method.
+Status: original research note written while the fixed 960-judgment FinQA pilot
+was in progress, before its outcome was inspected. The unchanged pilot later
+finished with expansion gate FAIL; see the
+[verified result](routerbench_finqa_feedback_v1_assessment_2026-10-06.md).
+This note does not register a new experiment or claim a validated method.
 
 ## Closest prior work
 
