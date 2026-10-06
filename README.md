@@ -63,6 +63,16 @@ score access. No new LLM calls were made; the unselected questions were not
 scored by this diagnostic. See the [headroom assessment](docs/analysis/routerbench_headroom_v1_assessment_2026-10-06.md)
 and [locked protocol](docs/analysis/routerbench_headroom_v1_protocol_2026-10-06.md).
 
+**FinQA real-feedback pilot now running:** a detached Modal worker has prepared
+48 development questions ×20 archived models =960 gold-blind judge inputs.
+Its real Qwen3-14B judge runs on an L4 with the archive excluded from the GPU
+mount; early ledger entries contain valid responses. It uses the full FinQA
+problem context and extracted boxed final answer, following a text-only
+preflight. The pilot automatically stops after collection and diagnostics.
+This is a feasibility test, not a proven routing gain. See the
+[locked protocol](docs/analysis/routerbench_finqa_feedback_v1_protocol_2026-10-06.md)
+and [live operation guide](docs/analysis/routerbench_finqa_feedback_v1_operations_2026-10-06.md).
+
 ### Completed method comparisons (2026-10-05)
 
 **Latest follow-up:** 1,205 additional learner/evaluation cases completed on Modal
