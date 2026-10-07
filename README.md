@@ -91,6 +91,9 @@ sparse-label method or deployable task router. See the
 [verified result](docs/analysis/routerbench_finqa_consensus_v1_assessment_2026-10-06.md),
 [failure analysis and next decision](docs/analysis/routerbench_finqa_consensus_v1_interpretation_2026-10-06.md),
 and [frozen protocol](docs/analysis/routerbench_finqa_consensus_v1_protocol_2026-10-06.md).
+The [conference research strategy](docs/analysis/repguard_a_conference_strategy_2026-10-07.md)
+sets the next evidence gates for a decision-value benchmark and a conditional
+paired-audit method candidate.
 
 ### Completed method comparisons (2026-10-05)
 
