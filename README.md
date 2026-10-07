@@ -62,6 +62,9 @@ predict which model succeeds. Duplicate prompt hashes were excluded before
 score access. No new LLM calls were made; the unselected questions were not
 scored by this diagnostic. See the [headroom assessment](docs/analysis/routerbench_headroom_v1_assessment_2026-10-06.md)
 and [locked protocol](docs/analysis/routerbench_headroom_v1_protocol_2026-10-06.md).
+For new split planning, use the [count erratum](docs/analysis/routerbench_headroom_count_erratum_2026-10-07.md):
+766 MBPP and 929 FinQA unique eligible questions remain outside the 200-question
+development sets; earlier 770/938 counts include excluded duplicate hashes.
 
 **FinQA real-feedback pilot completed:** all 960 Qwen3-14B judgments across
 48 development questions and 20 archived models were verified locally.
