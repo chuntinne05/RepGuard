@@ -1,0 +1,81 @@
+{
+  "scope": "Artifact/software verification; no new inference",
+  "app": "repguard-thesis-real-pilot-20261018",
+  "main_run": "359b8d464d5005b9c5d0f967",
+  "frozen_main_source_unchanged": true,
+  "main_real_responses_checksum_verified": 200,
+  "main_cloud_local_recomputation_previously_passed": true,
+  "followups": {
+    "thesis_contract_diagnostic_v1": {
+      "run_id": "63c3562513581721dae03b51",
+      "actual_responses_verified": 16,
+      "source_snapshot_hashes_valid": true,
+      "executor_recomputation_match": true,
+      "native_thinking_responses": 0
+    },
+    "thesis_contract_repair_v1": {
+      "run_id": "ac9ee7c4010badaf77620df1",
+      "actual_responses_verified": 16,
+      "source_snapshot_hashes_valid": true,
+      "executor_recomputation_match": true,
+      "native_thinking_responses": 0
+    },
+    "thesis_typed_tools_probe_v1": {
+      "run_id": "42faff35387bb3443f5a53ea",
+      "actual_responses_verified": 8,
+      "source_snapshot_hashes_valid": true,
+      "executor_recomputation_match": true,
+      "native_thinking_responses": 0
+    },
+    "thesis_typed_thinking_probe_v1": {
+      "run_id": "28b0f604f9dfcb18c244e661",
+      "actual_responses_verified": 8,
+      "source_snapshot_hashes_valid": true,
+      "executor_recomputation_match": true,
+      "native_thinking_responses": 8
+    }
+  },
+  "live_runs": [
+    {
+      "id": "live-1f674e78085a4465a005bcd6ca5479b9",
+      "contract": "schema_prompt",
+      "actual_model_calls": 1,
+      "status": "candidate_with_checks"
+    },
+    {
+      "id": "live-274164d03d50408188703aabb3eb5119",
+      "contract": "schema_prompt",
+      "actual_model_calls": 1,
+      "status": "needs_review"
+    },
+    {
+      "id": "live-35960f1760bd4f2c8becfef271ae29b8",
+      "contract": "typed_tools",
+      "actual_model_calls": 1,
+      "status": "candidate_with_checks"
+    },
+    {
+      "id": "live-92cfe3667ffb4414974c4a7be79de7e8",
+      "contract": "frozen",
+      "actual_model_calls": 2,
+      "status": "needs_review"
+    }
+  ],
+  "actual_live_model_calls": 5,
+  "typed_demo": {
+    "id": "live-35960f1760bd4f2c8becfef271ae29b8",
+    "answer": "69.064%",
+    "manual_arithmetic_match": true
+  },
+  "mock_model_calls": 0,
+  "aborted_v1_preserved_separately": true,
+  "earlier_live_failure_artifacts_preserved": true,
+  "typed_thinking_pair_same_public_messages": true,
+  "typed_thinking_comparison_has_different_output_budget": true,
+  "modal_billing_usd": null,
+  "aborted_v1_local_checkpoint": {
+    "known_completed_real_responses": 7,
+    "initiated_unresolved": 1,
+    "note": "Cancelled arithmetic-bug run; unresolved request usage unknown; never reused in v2"
+  }
+}

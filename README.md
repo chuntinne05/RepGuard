@@ -7,6 +7,61 @@
 
 **RepGuard** studies how multi-agent LLM systems should convert imperfect historical feedback into task-relevant teammate reputation. It proposes **Evidence-Calibrated Reputation Transfer (ECRT)**, which distinguishes *whether historical evidence is trustworthy* from *whether it is relevant to the current task* before allowing that evidence to influence team decisions.
 
+### Latest research update (2026-10-20)
+
+**264 new real responses completed on24 TAT-QA development contexts; both
+studies passed source/receipt/execution audits. No reputation-method win.**
+Scoped repair scores Plain19, KEEP15, E15, O16, EO15, Self1/2 15 out of24;
+scoped oracle16 fails the frozen gate. A separate whole24case adequacy and
+cross-family control adds120 responses (plus24 reused real Qwen direct outputs):
+Qwen direct/self1/self2 score19/20/20; Gemma4 26B score16/16/16. Their oracle
+union20 equals best fixed20; no history learner is fit.
+
+Post-hoc count/metadata readout diagnostics preserve original scores and
+actual generation contexts. A common inert-metadata readout gives Qwen20 and
+Gemma18, with oracle still20. Parser/contract fixes are not reputation gains.
+Four source/annotation semantic flags remain unadjudicated. All four isolated
+research apps returned to zero containers; the user's original Ollama app was
+not used or changed. No inference job is scheduled.
+
+The next *candidate experiment*, keeping the original multi-agent/reputation
+research topic, studies history from partial execution feedback (basic vs
+extended code tests). Official EvalPlus sources and32 metadata-selected MBPP+
+tasks are prepared: **zero model calls, zero program executions, no code score**.
+This is not a new-method result or an established novelty claim; prior active
+audit proposals/controls must not be rediscovered under new names.
+
+See the [current research decision](docs/analysis/repguard_research_decision_2026-10-20.md)
+and [complete cycle3 results](docs/analysis/repguard_research_cycle_03_2026-10-20.md).
+
+### Previous research update (2026-10-19)
+
+**136 new real model responses completed and independently recalculated; no
+confirmed reputation-method advantage yet.** On the same24 development reports,
+direct PoT and one/two self-reviews score17/24; reconciliation scores16/24,
+with zero rescues and one harm. Their oracle union is17, so the frozen gate
+fails and no new history controller is fit to that bank.
+
+On16new LIVE-cohort report groups, Qwen3 8B/14B both score11/16 with identical
+correctness masks. Qwen3.5 27B native4096 also scores11/16 but has4length
+truncations. A separate, post-hoc **whole16case** no-native-thinking control
+scores13/16 with no truncation, averaging11.07 Ollama evaluation seconds on
+L40S, versus37.71 for14B on L4. These are development configuration results,
+not independent confirmation, billing, or reputation gains. Semantic label
+flags remain unadjudicated; official targets were not changed.
+
+The next candidate is scoped repair with state-conditioned, audited repair
+utility; component/interaction credit and transfer must beat learned action
+selection with the same information. Claim verification and counterfactual
+credit already have close prior work. TAT-QA source/evaluator preparation is
+complete, but **no TAT-QA inference or model score exists**. Confirmation report
+IDs remain unused. All three isolated research apps returned to zero containers;
+the user's preexisting Ollama app was not used or changed.
+
+See the [current research decision](docs/analysis/repguard_research_decision_2026-10-19.md),
+[related-work gap assessment](docs/analysis/repguard_research_gap_2026-10-19.md),
+and [unproven method candidate](docs/analysis/repguard_method_candidate_2026-10-19.md).
+
 ### Current research status (2026-10-06)
 
 **External-data follow-up:** a detached Modal intake has verified a pinned

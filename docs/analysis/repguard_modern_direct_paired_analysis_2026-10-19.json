@@ -1,0 +1,22 @@
+{
+  "scope": "Exploratory paired development comparison, configuration effect NOT reputation gain or independent test",
+  "n": 16,
+  "rescues_vs14b": 2,
+  "harms_vs14b": 0,
+  "accuracy_difference_pp": 12.5,
+  "paired_bootstrap95_accuracy_pp": [
+    0.0,
+    31.25
+  ],
+  "exact_mcnemar_two_sided_p": 0.5,
+  "zero_harm_unconditional_one_sided95_upper": 0.17074972298248092,
+  "gpu_eval_cost_ratio_direct27b_over14b": 0.7165400055186426,
+  "paired_bootstrap95_cost_ratio": [
+    0.4113925313773054,
+    1.119249193657724
+  ],
+  "bootstrap_replicates": 20000,
+  "seed": 19102026,
+  "gpu_costs_exclude_load_idle_CPU_memory_audit": true,
+  "population_superiority_or_noninferiority_proven": false
+}

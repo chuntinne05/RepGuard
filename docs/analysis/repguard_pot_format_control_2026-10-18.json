@@ -1,0 +1,70 @@
+{
+  "scope": "Post-hoc uniform straight-line whitespace normalization, not a new LLM or reputation method",
+  "n": 24,
+  "new_model_calls": 0,
+  "strict_original_correct": 14,
+  "normalized_correct": 16,
+  "rescues": 2,
+  "harms": 0,
+  "normalized_programs": 2,
+  "original_primary_scores_preserved": true,
+  "source_verified": false,
+  "source_sha256": "b43556c12e1c8b479b152e9d776c54061627780bc18691a32955082f98617ad5",
+  "regenerate_training_outcomes_unchanged_by_formatter": true,
+  "same_frozen_decisions_with_uniform_formatter": {
+    "cheap": {
+      "correct": 12,
+      "n": 24,
+      "rescue_vs_normalized_direct_pot": 1,
+      "harm_vs_normalized_direct_pot": 5,
+      "harm_probability_exact_upper95": 0.3891393473598982,
+      "policy_decisions_refit": false,
+      "costs_unchanged_from_primary_replay": true
+    },
+    "direct_pot": {
+      "correct": 16,
+      "n": 24,
+      "rescue_vs_normalized_direct_pot": 0,
+      "harm_vs_normalized_direct_pot": 0,
+      "harm_probability_exact_upper95": 0.11734615615494876,
+      "policy_decisions_refit": false,
+      "costs_unchanged_from_primary_replay": true
+    },
+    "always_regenerate_with_fallback": {
+      "correct": 16,
+      "n": 24,
+      "rescue_vs_normalized_direct_pot": 0,
+      "harm_vs_normalized_direct_pot": 0,
+      "harm_probability_exact_upper95": 0.11734615615494876,
+      "policy_decisions_refit": false,
+      "costs_unchanged_from_primary_replay": true
+    },
+    "rule_guard_only": {
+      "correct": 13,
+      "n": 24,
+      "rescue_vs_normalized_direct_pot": 1,
+      "harm_vs_normalized_direct_pot": 4,
+      "harm_probability_exact_upper95": 0.34180734940411617,
+      "policy_decisions_refit": false,
+      "costs_unchanged_from_primary_replay": true
+    },
+    "oof_global_history": {
+      "correct": 16,
+      "n": 24,
+      "rescue_vs_normalized_direct_pot": 0,
+      "harm_vs_normalized_direct_pot": 0,
+      "harm_probability_exact_upper95": 0.11734615615494876,
+      "policy_decisions_refit": false,
+      "costs_unchanged_from_primary_replay": true
+    },
+    "oof_local_history": {
+      "correct": 16,
+      "n": 24,
+      "rescue_vs_normalized_direct_pot": 1,
+      "harm_vs_normalized_direct_pot": 1,
+      "harm_probability_exact_upper95": 0.18289246975564638,
+      "policy_decisions_refit": false,
+      "costs_unchanged_from_primary_replay": true
+    }
+  }
+}

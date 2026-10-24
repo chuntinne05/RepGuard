@@ -1,0 +1,406 @@
+% Biên dịch: xelatex -interaction=nonstopmode -halt-on-error repguard_research_handbook_2026-10-08.tex (hai lần)
+% Nguồn sự thật: mã/protocol/kết quả trong repository, chốt 08-10-2026.
+\documentclass[11pt,a4paper,openany]{book}
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
+\IfFontExistsTF{Arial}{\setsansfont{Arial}}{\setsansfont{TeX Gyre Heros}}
+\IfFontExistsTF{Menlo}{\setmonofont{Menlo}}{\setmonofont{DejaVu Sans Mono}}
+\usepackage{polyglossia}
+\setdefaultlanguage{vietnamese}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{geometry,booktabs,longtable,array,multicol,graphicx}
+\usepackage{fancyhdr,hyperref,xcolor,microtype}
+\geometry{left=28mm,right=25mm,top=28mm,bottom=28mm}
+\definecolor{ink}{HTML}{17324D}
+\definecolor{accent}{HTML}{0A6D79}
+\hypersetup{colorlinks=true,linkcolor=ink,urlcolor=accent,citecolor=accent,pdfauthor={RepGuard research notes},pdftitle={RepGuard: lý thuyết, thuật toán, thực nghiệm và quyết định nghiên cứu}}
+\pagestyle{fancy}\fancyhf{}\fancyhead[LE,RO]{\small\thepage}\fancyhead[LO]{\small\nouppercase{\rightmark}}\fancyhead[RE]{\small\nouppercase{\leftmark}}\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\headheight}{15pt}\setlength{\parskip}{4pt}\setlength{\parindent}{1.2em}
+\setlength{\tabcolsep}{2pt}
+\emergencystretch=4em
+\newcommand{\E}{\mathbb E}\newcommand{\Var}{\operatorname{Var}}\newcommand{\Cov}{\operatorname{Cov}}\newcommand{\Ind}{\mathbb I}\newcommand{\argmax}{\operatorname*{arg\,max}}\newcommand{\argmin}{\operatorname*{arg\,min}}
+\newcommand{\repo}[1]{\path{#1}}
+\newcommand{\status}[1]{\textbf{#1}}
+\newtheorem{example}{Ví dụ}[chapter]
+\newtheorem{claim}{Mệnh đề}[chapter]
+\title{\Huge\color{ink} RepGuard\\[6mm]\Large Từ lịch sử phản hồi không hoàn hảo đến quyết định chọn mô hình\\[12mm]\large Sổ tay lý thuyết, thuật toán, thực nghiệm và quyết định nghiên cứu}
+\author{Tài liệu nghiên cứu nội bộ, đối chiếu mã và artifact}
+\date{Chốt thông tin: 08/10/2026 (giờ Việt Nam, UTC+7)}
+\begin{document}
+\frontmatter
+\maketitle
+\chapter*{Hướng dẫn đọc và phạm vi}\addcontentsline{toc}{chapter}{Hướng dẫn đọc và phạm vi}
+Tài liệu này nhằm giúp người nghiên cứu hiểu toàn bộ tiến trình RepGuard tính đến ngày ghi trên bìa: câu hỏi gốc, giả định, công thức, mã triển khai, kết quả thực nghiệm và các quyết định đổi hướng. Đây là \emph{sổ tay nghiên cứu}, không phải bản thảo bài báo đã chứng minh hiệu quả phương pháp. Mọi con số thực nghiệm phải đọc kèm mẫu số, tập dữ liệu, ngân sách và trạng thái thăm dò hay xác nhận. Các công thức đề xuất tương lai được ghi rõ là \emph{đề xuất}, không phải mã đã chạy.
+
+Có ba mức bằng chứng: (i) \textbf{đã quan sát} từ ledger và báo cáo; (ii) \textbf{diễn giải/giả thuyết} giải thích quan sát; (iii) \textbf{hướng thử tiếp} chưa chạy. Một số chỉ số từ replay dùng solver outcome hoặc archived judge đã có; ``chạy thật'' của phương pháp thống kê không đồng nghĩa gọi lại toàn bộ solver. Các mẫu development được xem nhiều lần không trở thành confirmation độc lập nhờ bootstrap.
+
+\tableofcontents
+\listoftables
+\mainmatter
+
+\chapter{Bản đồ đề tài trong một trang}
+\section{Câu hỏi trung tâm}
+Một tổ chức có nhiều mô hình hoặc agent đã giải nhiệm vụ trong quá khứ. Lịch sử có phản hồi tự động rẻ nhưng có thể sai; chỉ một phần nhỏ kết quả được kiểm tra bằng nguồn đáng tin. Tổ chức cần chọn ai sẽ trả lời việc tiếp theo, hoặc chọn một mô hình mặc định cho một workload. Câu hỏi khoa học là: \emph{feedback lịch sử có thực sự cải thiện quyết định ở một ngân sách kiểm tra và chi phí suy luận cụ thể không?}
+
+Đề cương ban đầu hỏi cách đổi lịch sử thành \emph{reputation} theo kỹ năng. Phương pháp ECRT được thử trên MMLU-Pro. Khi thấy điểm xác suất có thể tốt hơn mà quyết định không khá hơn, nghiên cứu chuyển sang \emph{giá trị quyết định}: chọn agent, phân bổ nhãn gold, dùng proxy và hiệu chỉnh. Tên DART chỉ một họ ứng viên theo hướng này; HistRepEval là tên làm việc của giao thức đo lường. Chiến lược hiện tại là \textbf{một bài báo}, trong đó đóng góp phương pháp chỉ được khẳng định nếu vượt đối chứng mạnh trên dữ liệu độc lập. Không có kết quả nào bảo đảm nhận bài ở hội nghị hạng A/A*.
+
+\section{Ba đối tượng dễ nhầm}
+\begin{longtable}{p{31mm}p{58mm}p{63mm}}\caption{Vai trò hiện tại của ECRT, DART và HistRepEval}\label{tab:entities}\\\toprule Tên & Là gì? & Tình trạng đến 08/10/2026\\\midrule\endfirsthead\toprule Tên & Là gì? & Tình trạng\\\midrule\endhead
+ECRT & Công thức hiệu chuẩn phản hồi, chuyển bằng chứng giữa miền, tính reputation rồi gán trọng số bỏ phiếu. & Đã chạy thật; một số Brier tốt hơn trong nhiễu mạnh; endpoint team accuracy chính gần hòa FixedBorrow. Không đủ claim thắng.\\
+DART & Họ thử nghiệm dựa trên proxy lịch sử, audit gold hữu hạn, ước lượng giá trị policy và chọn agent. Sau này có CFJudgeFactor, paired audit và các đối chứng. & Các version đã chạy trên archived AppWorld; ứng viên tốt nhất trên development có point gain nhưng không qua đủ gate. Phương pháp incumbent-preserving mới đang là đề xuất.\\
+HistRepEval & Giao thức đánh giá lỗi feedback, transfer, audit, chi phí và ảnh hưởng lên quyết định. & Có prototype, mã và các study; chưa có release card hoàn chỉnh, kiểm chứng ngoài và benchmark paper.\\\bottomrule\end{longtable}
+
+\section{Hai bài toán quyết định phải tách}
+\paragraph{Chọn mặc định toàn cục từ lịch sử.} Từ một tập việc lịch sử, chọn \(a^*\in\mathcal A\) để chạy trên workload tương lai. Không cần nhìn prompt test. Đây là bài toán mà các replay AppWorld và FinQA hiện hỗ trợ trực tiếp.
+\paragraph{Router theo từng prompt.} Trên mỗi \(x\) mới, chọn \(a(x)\) \emph{trước khi chạy solver}, dùng duy nhất đặc trưng có sẵn lúc đó. Mọi output của 20 model trên câu test không được dùng miễn phí để quyết định; nếu cần gọi chúng phải tính chi phí. Oracle per-question dùng nhãn gold chỉ là trần chẩn đoán, không phải router. Hai bài toán có baseline, khả năng triển khai và claim khác nhau.
+
+\chapter{Nguồn gốc: reputation, feedback và tính chuyển giao}
+\section{Ký hiệu và cơ chế dữ liệu}
+Gọi \(a\in\mathcal A\) là agent/model, \(t\in\{1,\ldots,T\}\) là task lịch sử, \(x_t\) là thông tin có trước khi chạy task, \(y_{at}\) là câu trả lời/trajectory, \(z_{at}\in\{0,1\}\) là đúng/sai do evaluator đáng tin, \(F_{at}\) là feedback rẻ quan sát được, \(R_{at}\in\{0,1\}\) là chỉ báo có audit gold. Trên task mới \(x_*\), ta muốn chọn một hành động \(d\) tối đa hóa kỳ vọng \(U(d,z)-\lambda C(d)\). Ký hiệu ``gold'' có nghĩa nhãn evaluator theo giao thức đang dùng, không khẳng định mọi nhãn đều không thể sai.
+
+\begin{equation}\label{eq:history}H_a=\{(x_t,y_{at},F_{at},R_{at},R_{at}z_{at}):t\le T\}.
+\end{equation}
+Nếu \(R=0\), \(z\) bị che khỏi learner; trong archived replay, nhà phân tích có ma trận \(z\) để đánh giá sau khi hành động đã khóa. Đây là ranh giới chống rò nhãn.
+
+\section{Vì sao hai trục của lịch sử khác nhau}
+Một feedback đáng tin trên task không liên quan vẫn không chứng minh agent giỏi task đích. Một task rất giống nhưng feedback sai cũng không đáng tin. ECRT tách: \(p_{at}=P(z_{at}=1\mid F_{at})\) và \(\tau(x_t,x_*)\in[0,1]\). Hai trục là hai câu hỏi khác nhau; mã nhân chúng để tạo evidence weight, nhưng không chứng minh độc lập thống kê giữa chúng. Nếu evaluator bị tấn công riêng một agent, một kênh reliability toàn cục có thể bỏ sót.
+
+\section{Feedback nhiễu, thưa và chiến lược}
+\begin{itemize}
+\item \textbf{Oracle:} \(F=z\); chỉ dùng làm điều kiện kiểm soát.
+\item \textbf{Nhiễu đối xứng:} \(P(F\ne z)=\eta\). Khi \(\eta=0.5\), \(F\) không mang thông tin về \(z\) nếu giả định mô hình đúng.
+\item \textbf{Thiếu feedback:} \(P(F\text{ quan sát})=\rho\). Nếu missing phụ thuộc lỗi hoặc model, coi missing hoàn toàn ngẫu nhiên sẽ sai.
+\item \textbf{False positive có hướng:} tăng \(P(F=1\mid z=0)\). Attack cá biệt theo agent/skill khác với nhiễu đồng đều; hiệu chuẩn trên dev bình thường không thể tự phát hiện channel bị đổi sau đó.
+\end{itemize}
+MMLU-Pro cung cấp câu hỏi trắc nghiệm nhiều lựa chọn, 14 môn, tăng yêu cầu suy luận so MMLU gốc \cite{mmlupro}. AppWorld đo agent tương tác với ứng dụng và đánh giá hậu điều kiện bằng state checks \cite{appworld}. Hai môi trường kiểm tra hai dạng claim khác nhau; không gộp điểm chúng thành một con số chung.
+
+\chapter{Cơ sở xác suất và quyết định}
+\section{Đảo kênh feedback bằng Bayes}
+Đặt \(\pi=P(z=1)\), sensitivity \(s=P(F=1\mid z=1)\), specificity \(c=P(F=0\mid z=0)\). Mã \repo{ecrt.py} đếm TP/FN/TN/FP trên calibration episodes có gold; nếu mẫu denominator bằng 0, dùng fallback 0.9 cho \(s,c\), 0.5 cho \(\pi\). Bayes cho
+\begin{align}
+P(z=1\mid F=1)&=\frac{s\pi}{s\pi+(1-c)(1-\pi)},\label{eq:bayespos}\\
+P(z=1\mid F=0)&=\frac{(1-s)\pi}{(1-s)\pi+c(1-\pi)}.\label{eq:bayesneg}
+\end{align}
+Trong mã, feedback dạng số được \emph{ngưỡng hóa ở 0.5} để chọn nhánh Bayes; missing trả \((\pi,m=0)\), nên thực tế không cập nhật posterior. Đây không phải một mô hình liên tục của mọi judge score. Công thức đúng khi \(s,c,\pi\) khớp population đích, feedback không đổi cơ chế và các xác suất có thể nhận dạng trên calibration. Sự chuyển dịch theo agent, miền hoặc thời gian phá giả định đó.
+
+\begin{example}Nếu \(\pi=0.5,s=0.9,c=0.9\), feedback dương cho \(P(z=1\mid F=1)=0.9\). Nhưng nếu attacker làm false-positive rate tăng từ 0.1 lên 0.8 riêng trên task đích, xác suất thật chỉ còn \(0.9/(0.9+0.8)\approx0.529\). Một calibrator cố định vẫn cho 0.9 và gán ảnh hưởng quá lớn.\end{example}
+
+\section{Beta reputation và ``soft evidence''}
+Với Bernoulli quan sát sạch và prior \(\theta_a\sim\operatorname{Beta}(\alpha_0,\beta_0)\), posterior chuẩn là \(\alpha=\alpha_0+\sum z\), \(\beta=\beta_0+\sum(1-z)\). ECRT thay quan sát cứng bằng \(p_{at}\) và trọng số \(w_{at}=\tau_{at}m_{at}\):
+\begin{align}\label{eq:ecrt}
+\alpha_a(x_*)&=\alpha_0+\sum_t w_{at}p_{at},&
+\beta_a(x_*)&=\beta_0+\sum_t w_{at}(1-p_{at}),\\
+\mu_a(x_*)&=\frac{\alpha_a(x_*)}{\alpha_a(x_*)+\beta_a(x_*)}.\label{eq:mean}
+\end{align}
+Mã mặc định \(\alpha_0=\beta_0=1\). Với \(0<p<1\) hoặc \(0<w<1\), đây là \emph{fractional/power-likelihood pseudo-count} thuận tiện, không phải posterior Beta chuẩn của đầy đủ mô hình có nhãn ẩn và lỗi phụ thuộc. \(\alpha+\beta-2=\sum w\) là khối lượng bằng chứng tính theo prior mặc định. Không được diễn giải CI từ pseudo-posterior như bảo đảm frequentist đã chứng minh.
+
+\section{Transfer theo taxonomy thực tế trong mã}
+Mã \repo{transfer.py} dùng \(\tau=1\) cùng môn, \(0.5\) cho hai môn trong cùng cluster hoặc cross-cluster link được định nghĩa trước, và \(0\) cho không liên quan/không biết. Các cluster STEM, social, humanities, biology, health và liên kết chéo được đặt thủ công. \(\tau=0\) là \emph{quyết định thiết kế} loại evidence, không chứng minh chuyển giao thật bằng 0. Các tên môn trong báo cáo có thể khác cách viết trong mã; cần kiểm tra normalization khi tái lập.
+
+\section{Điểm thận trọng và giới hạn chính xác}
+\repo{BetaParams.lower_credible_bound} tính
+\begin{equation}\label{eq:lower}L_a=\max\left\{0,\mu_a-1.645\sqrt{\frac{\mu_a(1-\mu_a)}{\alpha_a+\beta_a}}\right\}.
+\end{equation}
+Đây là \emph{Wilson-style normal approximation} của mã, không phải quantile Beta 5\% chính xác và cũng không phải Wilson interval chuẩn. \repo{ReputationScore.confidence_adjusted} dùng \(L\) khi evidence count \(<5\), còn lại dùng \(\mu\). \repo{ECRTReputation.decision_weight} có mode chọn mean hoặc lower bound; các caller đọc trực tiếp trường score cần được kiểm tra vì mode không tự thay đổi cả hai trường. Mọi tài liệu gọi \(L\) là credible bound chứng nhận nên được đọc với giới hạn này.
+
+\section{Từ reputation sang câu trả lời của nhóm}
+Agent \(a\) đưa đáp án \(v_a\). Majority vote là \(\argmax_k\sum_a\Ind[v_a=k]\). Weighted vote dùng \(\tilde w_a\propto \max(\operatorname{score}_a,10^{-6})\):
+\begin{equation}\label{eq:vote}\widehat v=\argmax_k\sum_{a\in\mathcal A}\tilde w_a\Ind[v_a=k],\qquad
+\tilde w_a=\frac{w_a}{\sum_b w_b}.
+\end{equation}
+Nếu câu trả lời được nhiều agent cùng chọn, cân lại trọng số một ít có thể không đổi \(\widehat v\). Đây là một lý do toán học trực tiếp khiến Brier của reputation giảm mà team accuracy đứng yên: xác suất tốt hơn nhưng chưa vượt ranh giới argmax. Còn có thể do ranking agent không đổi, pool thiếu bổ trợ nhận diện được, hoặc rule gán trọng số quá yếu. Các cơ chế cần ablation riêng để tách.
+
+\section{Vì sao hiệu chuẩn gộp thường không đổi thứ hạng}
+Đây là điểm mấu chốt của thất bại Week 3, nên cần chứng minh riêng. Khi mọi agent trong một ô thí nghiệm có cùng số episode \(n\), cùng \(\tau\), cùng prior và cùng kênh \((s,c,\pi)\), đặt \(p_+=P(z=1\mid F=1)\), \(p_-=P(z=1\mid F=0)\). Với \(F\in\{0,1\}\), \(p(F)=p_-+(p_+-p_-)F\). Tổng pseudo-success của agent \(a\) là
+\begin{equation}\label{eq:rank}\alpha_a=\alpha_0+\tau\{np_-+(p_+-p_-)N_{a,+}\},\qquad N_{a,+}=\sum_{t=1}^nF_{at}.
+\end{equation}
+Vì \(\alpha_a+\beta_a=\alpha_0+\beta_0+n\tau\) giống nhau, thứ hạng mean ECRT là thứ hạng \(N_{a,+}\) nếu \(p_+>p_-\), tức kênh có thông tin cùng chiều \(s+c>1\). FixedBorrow cũng xếp theo \(N_{a,+}\). Khi feedback hoàn hảo, \(p_+=1,p_-=0\), hai posterior trùng đại số. Khi \(s+c\approx1\), chênh score bị co sát 0; sai số hiệu chuẩn có thể khiến \(p_+<p_-\) và đảo thứ hạng dù feedback thực tế gần ngẫu nhiên. Điều kiện cùng \(n,\tau\) là quan trọng: không suy định lý này cho các agent có lịch sử khác nhau.
+
+Chẩn đoán trên grid Week 3 xác nhận đúng cơ chế: trong 129 ô same/related thực sự dùng history, oracle, flip 25\% và directional false-positive mỗi chế độ giữ cùng thứ hạng ECRT/FixedBorrow ở 129/129 ô; flip 50\% chỉ còn 33/129, do nhiều ước lượng \(s+c<1\). Có 417/546 ô mỗi chế độ là unrelated với \(\tau=0\), trả prior 0,5 ở cả hai phương pháp, nên không là bằng chứng transfer tốt. Với feedback judge thật ở phép phân tích chẩn đoán khác, đáp án cuối chỉ khác 37/2.416 và 41/2.416 trên hai fold dùng \emph{cùng} test IDs; không được coi là hai confirmations. Nguồn: \repo{docs/analysis/ecrt_dart_failure_forensics_2026-09-30.md}.
+
+\section{Accuracy, Brier và giá trị quyết định}
+Với dự báo \(p_j\) cho nhãn \(z_j\), \(\mathrm{Brier}=N^{-1}\sum_j(p_j-z_j)^2\); nhỏ hơn tốt. \(\mathrm{Acc}=N^{-1}\sum_j\Ind[\hat y_j=y_j^*]\). Brier là proper scoring rule của \emph{dự báo outcome}; accuracy đo hành động thực sự. Một cải thiện Brier trung bình có thể hoàn toàn do ước lượng tốt độ khó chung của câu chứ không xếp đúng hai model trên cùng câu. Khi chi phí khác nhau, utility có thể là
+\begin{equation}\label{eq:utility}V(\pi)=\E[Y_{\pi(X)}]-\lambda\E[C_{\pi(X)}]-\gamma\Pr(\text{harm vượt ngưỡng}).\end{equation}
+\(\lambda,\gamma\) phải chốt theo ứng dụng; việc chỉ tối đa accuracy không chứng minh giá trị kinh tế. \emph{Regret} so với incumbent \(a_0\) là \(V(a_0)-V(\pi)\); so với oracle dùng gold test chỉ là trần phân tích.
+
+\chapter{ECRT: thuật toán, đối chứng và điểm yếu}
+\section{Luồng xử lý đúng theo triển khai}
+\paragraph{Thuật toán ECRT.} (1) Tách tập calibration có gold khỏi history/test. (2) Đếm confusion matrix của feedback để ước lượng \(s,c,\pi\). (3) Với mỗi agent và miền đích, duyệt history; lấy \(\tau\) từ taxonomy. (4) Nếu feedback thiếu hoặc \(\tau=0\), bỏ episode. (5) Tính \(p\) theo \eqref{eq:bayespos}--\eqref{eq:bayesneg}, cộng pseudo-count theo \eqref{eq:ecrt}. (6) Trả mean, lower approximation, evidence count. (7) Gán influence rồi bỏ phiếu theo \eqref{eq:vote}. Độ phức tạp của scoring thuần tuyến tính theo số episode của agent; hiện tại \repo{score} lọc list mỗi lần gọi nên không có cache indexing đặc biệt.
+
+\section{Ablation và baseline}
+\begin{longtable}{p{38mm}p{102mm}}\caption{Các biến thể và điều chúng kiểm tra}\label{tab:ecrtablation}\\\toprule Tên & Nghĩa\\\midrule\endfirsthead\toprule Tên & Nghĩa\\\midrule\endhead
+Uniform & Mọi agent cùng ảnh hưởng; không dùng history.\\
+GlobalBeta & Tích lũy feedback toàn miền; mẫu so cơ bản.\\
+SkillConditioned & Tích lũy riêng từng miền; không mượn cross-domain nếu không cùng skill.\\
+FixedBorrow & Control mượn evidence liên quan theo quy tắc đơn giản; là đối chứng quan trọng nhất cho lợi ích riêng của ECRT trong Week 3.\\
+ECRT-noTransfer & Đặt \(\tau=1\); xem discount miền có ích không.\\
+ECRT-noReliab & Dùng feedback thô thay Bayes inversion.\\
+ECRT-noUncert & Dùng mean thay lower approximation.\\
+ECRT-oracleF/FT & Cấp gold feedback và/hoặc oracle transfer tường minh; chỉ chẩn đoán, không triển khai.\\
+ZeroEvidenceGate & Nếu khối lượng bằng chứng dưới ngưỡng, trả mức trung tính thay vì score dễ dao động.\\\bottomrule\end{longtable}
+Đối chứng công bằng phải giữ nguyên dữ liệu, budget, câu test và câu trả lời solver. Nếu ECRT hơn SkillConditioned nhưng bằng FixedBorrow, lợi ích có thể đến từ mượn history, không chứng minh phần hiệu chuẩn Bayes mới. Một model đơn mạnh là baseline sản phẩm cần có.
+
+\section{Audited ECRT là nhánh khác, không sửa ngược Week 3}
+Mã \repo{audited.py} ước lượng kênh theo \((agent,source\ domain)\) từ gold audits rời history, dùng smoothing Jeffreys \((TP+0.5)/(P+1)\) và tương tự specificity/prior. Nó tính
+\begin{equation}\label{eq:signal}\sigma_{a,d}=\max\{0,\operatorname{WilsonLower}(s_{a,d})+\operatorname{WilsonLower}(c_{a,d})-1\},
+\end{equation}
+rồi giảm trọng số history thành \(\tau\sigma\); nhãn audit được cộng trực tiếp với \(\tau\). \(\sigma\) là \emph{heuristic thận trọng}, không phải posterior/Bayesian guarantee hay bound rủi ro. Mã bắt history và audit không trùng \((agent,task)\). Nhánh này được tách để giữ khả năng tái lập ECRT Week 3; không được cộng thành claim ECRT gốc đã có cơ chế cá biệt này.
+
+\section{Khi nào ECRT không thể nhận dạng channel}
+Nếu chỉ biết feedback, không có audit hoặc giả thiết về evaluator, các cặp \((\pi,s,c)\) khác nhau có thể sinh cùng phân phối quan sát \(F\):
+\begin{equation}P(F=1)=s\pi+(1-c)(1-\pi).\end{equation}
+Một phương trình cho ba ẩn không xác định duy nhất. Vì vậy ``hiệu chuẩn mọi lỗi feedback bằng một mạng mạnh hơn'' không thể thành bảo đảm nếu thiếu gold, nhiều kênh độc lập có giả định được kiểm tra, hoặc cấu trúc bổ sung. Audit ngẫu nhiên xác suất dương là một cách lấy khả năng nhận dạng; audit chọn lọc cần propensity/thiết kế rõ.
+
+\chapter{Thiết kế thực nghiệm, thống kê và tính liêm chính}
+\section{Các split và ranh giới thông tin}
+Lý tưởng: development chọn giả thuyết, calibration fit kênh/proxy, selection chọn policy, final holdout chỉ đánh giá một lần. Cần tách theo task ID, generator hoặc nhóm prompt gần trùng; không tính seed audit là task độc lập. Mọi feature router phải tồn tại trước quyết định test. Có ba dạng leak: gold test vào feature; dùng test để chọn method/hyperparameter rồi gọi CI là confirmatory; dùng nhiều output solver test mà không tính chi phí. Mẫu đã nhìn aggregate gold vẫn là development khi chọn hướng sau đó.
+
+\section{Hiệu số ghép cặp và bootstrap}
+Đối với hai policy A/B trên cùng \(n\) task, đặt \(D_t=Y_{t,A}-Y_{t,B}\in\{-1,0,1\}\). \(\widehat\Delta=n^{-1}\sum_tD_t\). Số \emph{rescue} là \(\#\{Y_A=1,Y_B=0\}\), \emph{harm} là \(\#\{Y_A=0,Y_B=1\}\); \(n\widehat\Delta=rescue-harm\). Bootstrap lấy lại task hoặc generator nguyên khối, giữ cặp A/B và các seed trên cùng task. Nếu nhiều phương pháp được thử trên cùng public test, CI không tự bao phủ thiên lệch do chọn ứng viên sau khi xem điểm. CI của tài liệu này phần lớn là exploratory; nhiều phép so cần familywise/FDR hoặc thứ tự kiểm định khóa trước.
+
+\section{Trần headroom khác với hiệu quả học được}
+Với \(K\) agent, best fixed theo gold test \(\max_a n^{-1}\sum_tY_{ta}\), oracle per-task \(n^{-1}\sum_t\max_aY_{ta}\). Gap dương chỉ nói có ít nhất một lời giải tốt hơn ở từng task, không nói prompt có tín hiệu để đoán agent đó. Nếu best fixed và oracle bằng nhau trên observed executions, một router thuần accuracy không có headroom trên sample đó. Ngay cả khi gap lớn, selection có thể overfit vì không có đủ task độc lập hoặc thông tin trước quyết định.
+
+\section{Chi phí đúng}\label{sec:cost}
+``Cùng 10\% gold'' chỉ bằng nhau về \emph{số nhãn audit}. Cần báo riêng \(C_{\rm history\ solver}\), \(C_{\rm proxy/judge}\), \(C_{\rm gold}\), \(C_{\rm test\ solver}\), token, latency và tiền; tách history đã có và history phải tạo mới. Nếu proxy cần 20 outputs ở test, tính đủ 20 solver calls.
+
+\chapter{Week 3 MMLU-Pro: thực nghiệm đầu tiên bằng output thật}
+\section{Sửa sai phiên bản mô phỏng và chạy lại}
+Đề cương sáu tuần bắt đầu 31/08/2026, mục tiêu ban đầu ECRT + HistRepEval, hạn bản thảo dự kiến 11/10. Một pipeline cũ dùng correctness lấy mẫu từ tỷ lệ trên audit nhỏ, chỉ 8/14 môn và có nhầm model; kết luận ``GO-B'' ngày 28/09 đã bị vô hiệu hóa. \textbf{Các bảng cũ không là bằng chứng khoa học.} Run thật ngày 29/09 dùng 12.032 câu MMLU-Pro local, split hash seed 42: 7.241 train/calibration, 2.375 dev, 2.416 test. Mỗi model giải 1.400 history (100/môn), 700 dev calibration (50/môn), 2.416 test. Bốn model, tổng \(4(1400+700+2416)=18.064\) responses; không missing/duplicate/invalid. Prompt zero-shot direct, \texttt{think=false}, temperature 0, JSON constrained; không thể so accuracy tuyệt đối với leaderboard CoT/few-shot. Sau pilot 70 câu/môn, test được mở rộng đồng đều đến toàn bộ 2.416; amendment đã lưu, CI thăm dò. Nguồn: \repo{docs/analysis/repguard_week3_real_report.md}.
+
+\begin{table}[htbp]\centering\small\caption{Năng lực trên 2.416 câu test MMLU-Pro; direct, không thinking}\label{tab:mmlu}\begin{tabular}{lrr}\toprule Model & Số đúng & Accuracy \\ \midrule Qwen3 8B & 1.154 & 47,76\% \\ Gemma2 & 1.090 & 45,12\% \\ Llama3 8B & 877 & 36,30\% \\ Qwen3 0.6B & 568 & 23,51\% \\ \bottomrule\end{tabular}\end{table}
+
+14 môn đều có trong audit năng lực. Router chọn model theo môn từ 100 history/môn đạt \(1.140/2.416=47,19\%\); Qwen3 8B cố định \(1.154/2.416=47,76\%\). Oracle biết model tốt nhất trên gold test của từng môn \(1.183/2.416=48,97\%\); oracle per-question \(1.651/2.416=68,34\%\). Chỉ physics có specialist được xác nhận theo gate: Qwen3 8B 116/254 vs Gemma2 82/254, +13,39 điểm phần trăm, CI [+7,48;+19,29]. Pool có bổ trợ cấp câu, nhưng taxonomy môn không nhận diện được đa specialist ổn định.
+
+\section[Factorial Q x T và kết luận ECRT]{Factorial Q $\times$ T và kết luận ECRT}
+Q gồm oracle, flip đối xứng 25\%, flip 50\%, false-positive 40\% trên lỗi; T gồm same, related, unrelated. Thiết kế dùng 182 cặp nguồn--đích, ba seed, chín phương pháp, tạo 19.656 hàng phân tích (không phải 19.656 solver calls mới). 13 target có đủ ba mức T; ``other'' có trong capability nhưng không trong factorial đủ mức. Bootstrap theo target subject, CI thăm dò. Ở cell chính related + 25\% noise, ECRT minus FixedBorrow team accuracy \textbf{+0,02 điểm phần trăm}, CI [\(-0,04\);\(+0,10\)]; Brier \textbf{+0,0088} (dấu dương xấu hơn), CI [\(-0,0003\);\(+0,0181\)]. ECRT hơn SkillConditioned +1,47 điểm, nhưng FixedBorrow cũng có lợi thế tương tự: không chứng minh phần mới.
+
+Ở same + 50\% noise, ECRT giảm Brier so FixedBorrow 0,0192, CI [0,0104;0,0281]; với directional false-positive giảm 0,0520, CI [0,0408;0,0617]. Team accuracy ở các điều kiện này vẫn gần bằng. Tức là \emph{calibration có tín hiệu hẹp nhưng outcome chính không thắng}. Kết luận Week 3: chạy xong thực nghiệm, gate phương pháp \status{GO-C}, cần sửa tiền đề và hướng claim; chưa xong Week 4--6 theo tiêu chí khoa học ban đầu.
+
+\section{Attack pilot và giới hạn}\label{sec:attack}
+Pilot A1/A2 dùng đáp án test của attacker bị \emph{ép sai nhờ gold}, là stress test tối đa, không phải phản hồi/dối trá tự nhiên của model. A1 budget 5 rất nhạy thứ tự history. A2 budget 100, attacker Gemma2 biology \(\to\) chemistry với false-positive feedback: ECRT mất 16,7 điểm team accuracy, FixedBorrow 11,1, SkillConditioned 8,1; trọng số attacker ECRT 36,9\% vs FixedBorrow 33,7\%. Một scenario không ước lượng được rủi ro ngoài đời, nhưng bác claim đã chống targeted poisoning. Bayes calibration học nhiễu đồng đều không bảo vệ channel riêng bị thao túng.
+
+\chapter{Thinking, judge và vì sao hướng cũ đổi}
+\section{Qwen3 8B thinking: gain lớn nhưng đắt}
+Trên 420 câu screen, direct 200/420 (47,62\%), thinking 280/420 (66,67\%). Trên 280 dev ID độc lập, direct 137/280 (48,93\%), thinking 203/280 (72,50\%), chênh +23,57 điểm, CI [17,86;29,29]. Có 79 thinking-only correct và 13 direct-only correct. Tổng output tokens trên dev: 2.734 direct và 581.165 thinking, tỷ lệ 212,6 lần; tổng request time 332,75 s và 17.525,70 s (52,7 lần). 15/280 thinking outputs bị cắt ở cap 8.192 token. So sánh đồng thời bật thinking và thay token cap; không quy toàn bộ effect chỉ cho một thành phần. MMLU-Pro gốc đã báo CoT có lợi \cite{mmlupro}; đây không phải novelty RepGuard.
+
+Ở pipeline bổ sung 560 dev tasks cho nhiều policy, thinking đạt 372/560; fallback Qwen14 chỉ trên invalid đạt 388/560 với 40 extra calls; pre-route đạt 388/560 với 172 extra calls; post-selector đạt 396/560 với 560 extra calls. Các gate utility/cost không qua. Tập MMLU sealed 420 theo protocol cũ chưa mở cho claim mới; đừng dùng nó để chọn thiết kế sau nhiều dev tries.
+
+Một phép kiểm tra pool trên đúng 420 câu screen đã chạy thêm \textbf{1.260 responses thật} của Gemma2, Llama3 8B và Qwen3 14B direct (420 cho mỗi model). Qwen3 8B thinking đạt 280/420; Qwen3 14B direct 226/420; Gemma2 195/420; Llama3 8B 158/420. Oracle any-of-five, biết gold trước, đạt 344/420 nhưng subject router cross-fit chỉ 274/420, kém luôn thinking 6 câu. Gate 0 cho DART trên pool trắc nghiệm này đã dừng; \emph{không} mở sealed holdout để tìm công thức khác trên cùng pool. Nguồn: \repo{docs/analysis/repguard_pool_gate_assessment_2026-09-30.md}.
+
+\section{Judge thấy candidate và blind judge}
+Trên 694 candidate-case duy nhất của 280 câu history, judge thấy đáp án ứng viên đúng verdict 514/694=74,06\%; blind judge 549/694=79,11\%, giảm 35 false positives (121 xuống 86), TP/FN không đổi. Nhưng blind prompt được chọn sau khi nhìn lỗi trên cùng mẫu, nên chênh này thăm dò. Baseline luôn nói ``sai'' cũng đúng 495/694=71,33\% vì lớp lỗi áp đảo. Blind judge tự giải đúng 151/280=53,93\%; khi nó giải sai có thể chấm sai hàng loạt. Feedback thật vào ECRT cho Brier cải thiện khoảng 0,0189--0,0213 ở hai điều kiện, còn team accuracy CI chứa 0. Cải thiện verdict hay Brier không bảo đảm ảnh hưởng đúng ở quyết định cuối.
+
+\section{Vì sao thử AppWorld}
+MMLU-Pro là câu hỏi độc lập với bốn model trả lời; ``multi-agent'' ở đây chủ yếu là ensemble, không phải hợp tác tương tác lâu dài. AppWorld có trajectory tool use và state evaluator, giúp kiểm tra liệu history proxy và lựa chọn agent có giá trị trong bối cảnh thực tế hơn. Các pilot solver mới v8 trên 6 task: Qwen3-Coder30B và Qwen3-32B mỗi bên 3/6, không cứu độc đáo; v9 GLM 0/6 trên task khác; v10 AppWorld 0.2 official simplified ReAct Qwen3-Coder 1/6, gate 2/6 fail. Đây là feasibility nhỏ, không trộn với archived AppWorld 0.1.0 normal 168 task. Khác version/agent scaffold/evaluator thì không so như cùng run.
+
+\chapter{DART trên archived AppWorld: từ proxy đến audit}
+\section{Ma trận dữ liệu và ngân sách}
+Archived public AppWorld 0.1.0 normal gồm 168 task thuộc 56 generator, 14 agent: \(168\times14=2.352\) binary outcomes và trajectories đã có. 5 outer folds tách generator. Retrospective best single dùng full gold \(82/168\); oracle per-task \(134/168\), là headroom chẩn đoán \(52/168\), không phải gain học được. 20 audit seeds và ngân sách 5/10/20\% của \emph{train task--agent cells} theo fold; một cặp audit hai model trên cùng task tốn \emph{hai} nhãn. Test gold chỉ mở sau khi action khóa. Chưa có hạch toán đầy đủ USD của archived solver trajectories.
+
+\section{Nguồn proxy thật}
+Self-report được trích deterministic từ \texttt{/supervisor/message} request log: trạng thái success/thiếu status thành positive, fail/failure thành negative, không có completion thành negative. Đó là lời tự báo cáo, không phải hậu điều kiện đúng. Judge Qwen3-14B \texttt{think=false} đã gọi thật 2.352 lần trên Modal để chấm log; 2.352 hợp lệ, 1.364 log bị cắt, 7.042.225 input tokens và 20.762 output tokens được ghi. Trên 2.352 cells, threshold 0.5 có TP 581, FN 9, TN 690, FP 1.072; accuracy 54,04\%, false positive rất cao. Raw Brier khoảng 0,330. Pilot 168 stratified cases ban đầu có gate channel PASS, nhưng không chứng minh downstream method; full pool làm rõ mismatch.
+
+\section{Lớp policy và ước lượng giá trị của DART đầu tiên}
+Các ứng viên ban đầu: 14 chính sách chọn agent cố định, cộng ba policy kNN với \(k=3,10,30\) trên TF--IDF word unigram/bigram của instruction; model text fit chỉ trên construction history. Construction dùng khoảng một phần ba audit anchor; selection history dùng phần còn lại. Với policy \(\pi\) đã khóa trước audit selection, proxy \(m_{ta}\) và chỉ báo audit \(A_{ta}\) có inclusion probability \(q_{ta}>0\), estimator dạng Horvitz--Thompson có control variate là
+\begin{equation}\label{eq:ppi}\widehat V(\pi)=\frac1{N_S}\sum_{t\in S}\left[m_{t,\pi(x_t)}+\frac{A_{t,\pi(x_t)}}{q_{t,\pi(x_t)}}(z_{t,\pi(x_t)}-m_{t,\pi(x_t)})\right].
+\end{equation}
+Nếu \(\pi,m\) cố định trước audit và \(\E[A\mid z,m,x]=q\), thì từng residual term có kỳ vọng \(z-m\); \(\widehat V\) không chệch theo sampling design cho policy cố định. \emph{Lấy \(\argmax\) của 17 estimator nhiễu không có tính không chệch cho giá trị của policy được chọn}; winner's curse. Fixed-size pivotal sampling không độc lập Bernoulli, nên CI IID thường sai. Estimator có thể vượt [0,1]; không kẹp như xác suất. Lý thuyết PPI và active statistical inference là nguồn động cơ, không trao tự động bảo đảm cho chính sách được chọn ở đây \cite{ppi,asi}.
+
+\section{Thiết kế acquisition trong phiên bản đầu}
+RandomHistory lấy selection audit đều; UncertaintyHistory ưu tiên heuristic residual uncertainty; DART ưu tiên nơi policy cạnh tranh bất đồng và proxy có uncertainty, giữ floor ngẫu nhiên 20\% inclusion mass. DARTContrast sửa trọng tâm sang tương phản giữa policies, nhưng vẫn dùng xấp xỉ diagonal kiểu \(m(1-m)+0.01\), chưa dùng đầy đủ covariance của outcomes cùng task hoặc joint inclusion. Mọi policy dùng cùng tổng số unique labels, song phân bổ khác nhau. Quan trọng: DART đầu tiên không có chứng chỉ safety; guard bị hoãn vì chưa có giả định/CI phù hợp.
+
+\begin{table}[htbp]\centering\small\caption{Replay AppWorld judge thật; mean task đúng/168 qua 20 seed, 10\% gold}\label{tab:dartfirst}\begin{tabular}{lr}\toprule Method & Mean correct/168\\\midrule AuditOnly & 62,85\\ RandomHistory & 64,60\\ UncertaintyHistory & 65,95\\ DART đầu tiên & 55,35\\ DARTContrast & 63,90\\ UniformAuditGlobal & 69,70\\ GoldTrainSingle (full gold diagnostic) & 82,00\\\bottomrule\end{tabular}\end{table}
+Chênh DARTContrast--UniformAuditGlobal \(-3,45\) điểm phần trăm, CI [\(-6,90\);\(+0,06\)]; gate superiority thất bại. GoldTrainSingle dùng full train labels, không thuộc nhóm equal-budget.
+
+\section{Bốn nguyên nhân thất bại được kiểm tra}
+\paragraph{(1) Proxy sai theo cách gây hại.} Judge có 1.072 FP; một trajectory nói success có thể vẫn vi phạm state checks. Lý do sâu có thể là log thiếu hậu điều kiện hoặc judge bị cue ``success'' chi phối; chưa có counterfactual đầy đủ tách hai cơ chế. Blind/readback verifier là giả thuyết cần test, không phải sửa chữa đã chứng minh.
+\paragraph{(2) Winner's curse.} Ở 10\% judge, estimated value của policy được chọn lạc quan trung bình +0,1680 trong chẩn đoán hậu kiểm; số nhãn audited khớp action policy chỉ khoảng 11,19. Thay estimator zero-proxy HT bằng self-normalized có cải thiện trong một replay, nhưng có trường hợp self-report xuống điểm; không có thuốc chữa chung.
+\paragraph{(3) C/S split dùng gold gián tiếp.} C anchor giúp xây router/proxy, không ``bỏ phí'', nhưng control Global dùng toàn nhãn có thể tận dụng chúng trực tiếp. Cùng masks judge, CSGlobal 68,90 so Original DARTContrast 63,90 và UniformAuditGlobal 69,70. Sự khác biệt này trộn thêm số nhãn và thêm coverage generator; không cô lập một nguyên nhân duy nhất. CSGlobal không sửa unequal inclusion, không thể gọi là estimator unbiased.
+\paragraph{(4) Proxy sai mục tiêu.} Giữ điểm judge liên tục giảm Brier trên S từ 0,172392 xuống 0,158111 nhưng routing gần như không tăng: cần dự báo \(z_{ta}-z_{tb}\), không chỉ độ khó của câu.
+
+\chapter{Các vòng sửa DART đã thử: phương pháp và số liệu}
+\section{Ridge, factor, text và trực tiếp tối ưu utility}
+Batch gain/structure 305 cases thử FactorRidge (chia sẻ model/scaffold), SemanticRidge với MiniLM384, TextRidge TF--IDF, DirectUtility tối ưu softmax signed utility, và Selected dùng inner CV. Ở 10\% gold: UniformAuditGlobal 69,70; FactorRidge 71,60; SemanticRidge 68,50; TextRidge 68,60; DirectUtility 65,95; Selected 67,25 (đều mean correct/168). Full-label diagnostic: Global 82 và Factor 82, semantic 74, text 76, direct utility 78, selected 77. Tối ưu trực tiếp trên sparse audited labels có thể overfit Horvitz--Thompson objective; giá trị HT training \(>1\) không phải accuracy \(>100\%\).
+
+\section{Cross-fitted history rectifier}\label{sec:rectifier}
+Mã \repo{infra/modal/history_core.py} xây \(X_{ta}\) từ identity agent, nhóm factor và, khi bật judge, thêm \(p_{ta}-0.5\), \(\Ind[p_{ta}\ge0.9]-0.5\), mean judge của task \(-0.5\), cờ invalid. Grouped inner folds theo generator; mỗi task nhận proxy từ fit không thấy gold của generator mình. Ridge có penalty cố định, lời giải
+\begin{equation}\label{eq:ridge}\hat\beta=(X_O^\top X_O+\Lambda)^{-1}X_O^\top(z_O-0.5),\quad m_{ta}=\operatorname{clip}_{[0,1]}(0.5+X_{ta}\hat\beta_{-g(t)}).
+\end{equation}
+\(O\) là các gold audit cells trong train-fold. Rectifier dùng mean proxy toàn train cộng residual chỉ trên audited cells của từng agent:
+\begin{equation}\label{eq:rect}\hat\mu_a=\frac1T\sum_tm_{ta}+\frac{\sum_{t:R_{ta}=1}(z_{ta}-m_{ta})}{n_a+2}.
+\end{equation}
+Với proxy hằng 0,5, mã đặc biệt trả đúng \repo{means(observed)} của Beta Global, gồm tie rule; công thức tổng quát có \(+2\) là shrinkage. \emph{Không có inverse-propensity factor trong \eqref{eq:rect}}; nếu audit thích nghi theo lỗi sau khi quan sát gold, không thể gọi \(\hat\mu\) unbiased. Cross-fitting tránh leakage trong fitting proxy từ cùng gold, nhưng không sửa tự động selection bias hay chứng nhận decision value.
+
+Các biến thể: CFGoldFactor bỏ judge features; CFJudgeFactor dùng judge; RawJudgeRectifier dùng raw \(p\); JudgeImpute chỉ mean proxy; FixedFactorRidge không crossfit kiểu này. Ở uniform 10\%, CFJudgeFactor đạt 72,00/168; JudgeImpute 72,85 là ablation hậu kiểm, không được đổi thành primary sau khi xem kết quả.
+
+\section{Paired audit và Sequential Halving}
+Paired mask kiểm tra đủ 14 agent trên cùng một số task và phần dư trên task khác, tổng B nhãn vẫn cố định. Khi so hai agent \(a,b\) trên cùng task, đặt \(D_t=z_{ta}-z_{tb}\). Phương sai của trung bình chênh lệch là
+\begin{equation}\label{eq:pairvar}\Var(\overline D)=\frac1n\{\Var(z_a)+\Var(z_b)-2\Cov(z_a,z_b)\}.
+\end{equation}
+Nếu task khó dễ ảnh hưởng cả hai agent, covariance dương giảm nhiễu so sánh khi ghép cặp. Dữ liệu AppWorld có covariance dương trên nhiều cặp, nhưng hiệu quả cuối cần kiểm chứng. Sequential Halving \cite{seqhalving} chia vòng, cấp một phần ngân sách cho các arm còn lại, loại nửa arm thấp nhất mỗi vòng; triển khai ở đây trên archive hữu hạn và nhãn không hoàn lại, nên định lý IID của bài gốc không chuyển nguyên xi.
+
+\begin{table}[htbp]\centering\small\caption{AppWorld mean task đúng/168 qua replay seeds; các ngân sách gold}\label{tab:rect}\begin{tabular}{lrrr}\toprule Phương pháp & 5\% & 10\% & 20\%\\\midrule UniformAuditGlobal & 64,40 & 69,70 & 75,15\\ PairedGlobal & 62,15 & 71,95 & 76,70\\ CFJudgeFactor uniform & 66,50 & 72,00 & 76,10\\ Paired CFJudgeFactor & 64,70 & 74,15 & 77,50\\ IndependentSH & 65,00 & 69,70 & 77,20\\ PairedSH & 67,00 & 71,90 & 78,95\\\bottomrule\end{tabular}\end{table}
+Ở primary 10\%, Paired CFJudgeFactor--PairedGlobal \(+1,31\) điểm phần trăm, CI [+0,03;+2,59]; so Uniform \(+2,65\), CI [\(-0,60\);+5,86]; so PairedSH \(+1,34\), CI [\(-0,86\);+3,42]. Gate đã khóa đòi thắng cả controls với CI dương: \status{FAIL}. Ở 5\% và 20\%, PairedSH có point mean cao hơn ứng viên. Tổng bốn batch gain/rectifier uniform/paired/halving 1.205 learner/evaluation cases, không phải 1.205 task mới độc lập. Dữ liệu AppWorld public normal đã được nghiên cứu thích nghi; point gain nhỏ không thể coi là confirmation.
+
+\section{Neural P0: đã train thật, không có rescue}
+P0 dùng all-MiniLM-L6-v2 frozen để embed 168 instructions thành 384 chiều, PCA tối đa 16 chiều fit từng train partition, rồi Linear, rank-2 factor hoặc MLP tanh 8 hidden units, masked BCE; 5 outer generator folds, inner CV chọn theo utility. Full-label train, 135 fits trên Modal. Global 82/168; Linear 81, low-rank 81, MLP 82, Selected 82. Selected chọn đúng \repo{react_gpt4o} mọi task test, giống Global; không có rescue. Gate dừng P1 đúng protocol. Điều này bác lợi ích của \emph{cấu hình P0 đã thử}, không chứng minh mọi mạng neural không dùng được. Muốn kiểm tra lợi thế agent tương đối cần mục tiêu \(z_{ta}-z_{t,a_0}\), feature trước quyết định và fold độc lập; mới là giả thuyết.
+
+\chapter{Kiểm tra ngoài: RouterBench, MATH500, FinQA, MBPP}
+\section{Archive và quyền dữ liệu}
+LLMRouterBench (Findings ACL 2026) đã có benchmark routing quy mô lớn và nhiều baseline \cite{llmrouterbench}. Bản intake pinned archive có 649 file, 467.023 records, 29 dataset/split. Dự án chỉ trích metadata trước pilot, giữ raw archive private; chưa xác định giấy phép gốc đủ rõ để phát hành raw derivatives. Không gọi việc dùng archive đó là HistRepEval mới. \repo{finqa/test} có 20 model, 1.138 common questions; bỏ 9 duplicate còn 1.129 unique eligible, 200 development đã chọn, \textbf{929 unique eligible} ngoài dev. \repo{mbpp/test} có 970 common, bỏ 4 duplicate còn 966, trừ 200 dev còn \textbf{766}. Số 938/770 trong vài tài liệu cũ gồm duplicate, đã được đính chính ngày 07/10; không phải số unique holdout.
+
+\section{Headroom trên 200 câu}\label{sec:headroom}
+Trên 200 development questions \(\times\)20 archived model executions/dataset: MBPP best fixed 78,0\%, oracle per-question 94,5\%, gap 16,5 điểm =33 câu; FinQA best fixed 74,0\%, oracle 88,5\%, gap 14,5 điểm =29 câu. Cả hai dùng gold để tính trần, không là router. Gap mở cơ hội nhưng không chứng minh có feature/proxy phân biệt được ai cứu từng câu.
+
+\section{MATH500: proxy có pair signal nhưng sample không có headroom}
+Pilot 48 câu \(\times\)6 model =288 Qwen3-14B judgments thật. Cross-fit Brier 0,094493 vs gold-only 0,173013; tỷ số phương sai pair residual \(0,694670\), CI [0,519834;0,880492], qua screening gate. Sparse-gold replay 240 cases/2.400 selections ở 10\% gold: CFJudgeRectifier 44,30/48, Uniform 42,65, Paired 43,70; RawJudge 46,00/48 với 0 gold. Best fixed và oracle trên sáu execution đều 46/48: \emph{không có accuracy headroom trên sample đã chọn}. Expansion gate FAIL. Kết luận này chỉ cho six-model subset, không phủ định mọi MATH500 pools.
+
+\section{FinQA judge v1: Brier đẹp, tương phản sai}\label{sec:finqajudge}
+48 development questions khác \(\times\)20 archived model outputs =960 Qwen3-14B judgment calls thật trên Modal, tất cả hợp lệ; không gọi lại solver. Raw judge Brier 0,368354; cross-fit Brier 0,208561 vs gold-only 0,237974. Tuy nhiên pair residual variance ratio \textbf{1,045407}, CI [1,019379;1,073530]: \emph{tăng} nhiễu so với không trừ proxy, trong khi gate yêu cầu \(\le0,90\) và CI upper \(<1\). Within-question correlation của judge với outcome sau trừ mean câu chỉ +0,0427; tương quan mean theo câu +0,476. Judge nắm độ khó chung hơn là khác biệt giữa model. Mean raw \(p=0,369\) so gold \(0,571\); 274 đúng bị gán \(p\le0,1\), 74 sai \(p\ge0,9\). MiMo fallback lỗi rõ nhưng bỏ MiMo ratio vẫn 1,045214: không là nguyên nhân duy nhất.
+
+\section{Phương sai của contrast là gate hợp lý hơn Brier}\label{sec:contrast}
+Với hai model \(a,b\), đặt \(Y^\Delta=Y_a-Y_b\), \(P^\Delta=P_a-P_b\). Residual \(R^\Delta=Y^\Delta-P^\Delta\) có
+\begin{equation}\label{eq:variance}\Var(R^\Delta)=\Var(Y^\Delta)+\Var(P^\Delta)-2\Cov(Y^\Delta,P^\Delta).
+\end{equation}
+Proxy giúp so sánh nếu covariance theo cặp đủ lớn so với variance tự nó thêm vào. Proxy chỉ đo difficulty \(d_t\) giống nhau cho mọi agent có \(P_{ta}=d_t+u_a\); khi trừ hai agent, \(d_t\) triệt tiêu. Vì vậy Brier chung có thể giảm mạnh mà \(P^\Delta\) không mang tín hiệu. Đây là lý giải cơ chế cho kết quả FinQA, không phải định lý rằng mọi judge LLM vô dụng.
+
+\section{FinQA consensus v1: lỗi đồng thuận chung}
+Một 48-question development subset \emph{khác} được dùng để lấy 960 trường \repo{prediction} đã lưu, không có judge/solver calls mới. NFKC/casefold/whitespace exact agreement của mỗi model với 19 model còn lại, 892/960 prediction không rỗng. Raw Brier 0,468891; cross-fit Brier 0,204689 vs gold-only 0,219816. Pair residual ratio \textbf{0,923388}, CI [0,848729;1,000613]: tín hiệu có nhưng chưa đạt \(\le0,90\) và upper \(<1\), gate FAIL. Within-question correlation +0,3551. Trong nhóm \(\ge10\) model khác đồng ý, chỉ 11/33 cells đúng; 22 sai tập trung ở hai câu. Hậu kiểm bỏ hai câu cho ratio 0,901855, vẫn trên 0,90 và không được dùng để đổi gate. 48-question subset này có best fixed 41/48 và oracle 46/48; không thay số headroom 200 câu bằng số subset. Judge v1 và consensus v1 chạy trên \emph{hai bộ câu khác nhau}, không tạo một paired difference bằng cách trừ hai ratio.
+
+\chapter{HistRepEval: thiết kế phép đo và khoảng cách tới một benchmark hoàn chỉnh}
+\section{Đối tượng đo không phải chỉ là accuracy của judge}
+HistRepEval v0.1 đặt một chuỗi nhân quả để kiểm tra: \emph{nguồn feedback} \(\to\) \emph{ước lượng đúng/sai} \(\to\) \emph{so sánh agent} \(\to\) \emph{hành động} \(\to\) \emph{utility dưới chi phí và attack}. Nếu chỉ báo verdict accuracy hoặc Brier, ta chưa biết hệ thống đổi quyết định nào. Nếu chỉ báo oracle gap, ta chưa biết tín hiệu trước quyết định có khai thác được không. Vì vậy benchmark card nháp yêu cầu báo cả confusion matrix theo agent/skill, Brier/ECE, pair residual variance, decision sensitivity, rescue/harm, cost, worst-group và regret.
+
+\section{Ma trận Q, T, sparsity, attack và cost}
+\begin{longtable}{p{31mm}p{57mm}p{63mm}}\caption{Các trục của giao thức HistRepEval và trạng thái bằng chứng}\label{tab:histrepeval}\\\toprule Trục & Điều cần thay đổi có kiểm soát & Trạng thái hiện tại\\\midrule\endfirsthead\toprule Trục & Điều kiện & Trạng thái\\\midrule\endhead
+Feedback quality \(Q\) & Oracle, symmetric noise, directional FP, judge thật đã khóa, nhiều nguồn feedback. & MMLU Q-grid có thật trên answer history; judge MMLU/AppWorld/FinQA đã chạy nhưng chưa có fresh multi-family confirmation.\\
+Transfer \(T\) & Same/related/unrelated, taxonomy công khai hoặc skill features fit từ train. & MMLU taxonomy thủ công; \(\tau=0\) ở unrelated là thiết kế cơ học, không là phát hiện vật lý.\\
+Sparsity/audit & Số history episode, gold budget, random/paired/adaptive acquisition. & AppWorld 5/10/20\% đã chạy trên public development; chưa có independent cost-matched final.\\
+Strategic behavior & Nhiều attacker, seed, history order, poisoning riêng agent/skill, generated wrong answers. & A1/A2 forced-wrong oracle là stress pilot; thiếu attack do model tạo và lặp lại rộng.\\
+Cost & Solver, judge, gold, output token, latency, GPU/USD, amortization. & Một số token/time đã ghi; chi phí archived history và billing USD chưa đầy đủ.\\\bottomrule\end{longtable}
+
+\section{Định nghĩa một record và API đánh giá}
+Task record cần ID, nguồn, split, subject/skill, prompt/options không chứa gold ở giao diện online, nhóm near-duplicate, evaluator version và license. Agent record cần model digest, scaffold, prompt hash, reasoning mode, token cap. Episode record cần raw output, feedback value, feedback source, timestamp/order, audit indicator và propensity nếu lấy mẫu không đều. Method nhận đúng history và budget được phép; xuất action trước khi test outcome được đọc, estimated value/uncertainty, tổng cost và lý do fallback. Offline evaluator mới ghép gold và tính metric.
+
+Với hai method \(A,B\), \emph{decision sensitivity} là \(S=\frac1N\sum_t\Ind[\pi_A(x_t)\ne\pi_B(x_t)]\). Trên các task switch, báo rescue và harm. Nếu \(S\) nhỏ, một cải thiện calibration lớn khó tạo accuracy lớn trừ khi switch cực kỳ chính xác. Trong chẩn đoán MMLU dùng judge feedback, ECRT và FixedBorrow đổi đáp án cuối chỉ 37 hoặc 41 trong 2.416 câu qua hai fold có cùng ID; đây là \emph{development diagnostic}, không phải hai mẫu test độc lập.
+
+\section{So LLMRouterBench và điều kiện để có đóng góp riêng}
+LLMRouterBench đã bao quát nhiều model, dataset và router \cite{llmrouterbench}. HistRepEval phải làm rõ phần khác: nguồn gốc/lỗi feedback lịch sử, audit có ngân sách, transfer, lỗi chung giữa model, giá trị quyết định ở cùng cost và attack. Chỉ đóng gói lại ma trận routing score từ archive ngoài là trùng lặp về bản chất. Một bản benchmark mạnh cần schema stable, split IDs/hash, data card/license, raw hoặc derivative được phép chia sẻ, benchmark thứ hai khác bản chất, independent rerun và script tái tạo một lệnh. Hiện card mới là \emph{draft v0.1}; \repo{results/} bị ignore và chưa có release bundle. Vì vậy sách này gọi HistRepEval là \emph{giao thức/prototype}, không là kết quả cuối đã được công bố.
+
+\chapter{Đọc nguyên nhân thất bại theo mức chứng cứ}
+\section{ECRT thua ở đâu?}
+\begin{enumerate}
+\item \textbf{Kênh feedback đơn giản/không ổn định:} Bayes inversion đúng với channel được fit; attack agent-specific và drift tạo calibration sai. A2 gợi ý lỗ hổng, chưa đo prevalence thực tế.
+\item \textbf{Transfer taxonomy thô:} nhãn môn chỉ cho oracle theo môn 48,97\% vs best fixed 47,76\%. Dù biết gold test, routing theo môn thêm rất ít; sửa transfer weight không mở ra headroom lớn ở mức này.
+\item \textbf{Chênh score không đổi hành động:} weighted vote theo đáp án; calibration có ích ở Brier nhưng ít đảo đáp án, hoặc đảo không có lợi. Đây là cơ chế trực tiếp cần đếm vote margins/action flips để lượng hóa đủ.
+\item \textbf{Đối chứng mạnh mượn evidence:} FixedBorrow nhận phần lớn lợi ích related evidence. So phương pháp mới với baseline yếu không xác nhận novelty.
+\item \textbf{Thinking baseline mạnh và đắt:} cần xác định endpoint accuracy/cost thật; direct pool không đại diện cấu hình reasoning tốt nhất.
+\end{enumerate}
+
+\section{DART thua ở đâu?}
+Proxy judge AppWorld false positive; HT value nhiều variance; chọn max nhiều policies gây optimism; split C/S và allocation khó hơn control toàn cục dùng gold; routing theo instruction không tìm được rescue; lịch sử 168 task/56 generator nhỏ so với 14 agent và nhiều tương tác. Những điều này là kết hợp quan sát và giả thuyết. Đã can thiệp trực tiếp vào C/S, proxy continuous, estimator, paired mask, neural P0; không có một nguyên nhân đơn nhất được chứng minh triệt để.
+
+\section{Vì sao các đối chứng thắng?}
+Global/PairedGlobal sử dụng toàn bộ budget cho câu hỏi đơn giản ``agent nào tốt nhất trung bình'', ít tham số; PairedSH so arm trên task chung; không phụ thuộc judge sai. RawJudge trên MATH500 đạt 46/48 vì sample không có accuracy headroom; không có nghĩa raw judge luôn mạnh. RouteLLM và R2-Router là công trình liên quan về prompt routing/quality--cost \cite{routellm,r2router}, nhưng \emph{chưa có head-to-head cùng protocol} nên không thể nói chúng đã thắng hay thua DART trong repo. Ao và cộng sự đã nghiên cứu judge biased với selective gold audit \cite{ao}; PROBE đã nghiên cứu proxy cho best-arm identification \cite{probe}. Muốn claim novelty phải so đúng assumptions, data access và cost.
+
+\chapter{Lịch sử quyết định và trạng thái tuần}\label{chap:timeline}
+\begin{longtable}{p{24mm}p{60mm}p{68mm}}\caption{Các quyết định lớn và bằng chứng dẫn tới quyết định}\label{tab:timeline}\\\toprule Giai đoạn & Quyết định & Lý do/giới hạn\\\midrule\endfirsthead\toprule Giai đoạn & Quyết định & Lý do/giới hạn\\\midrule\endhead
+31/08 & Plan 6 tuần: ECRT + HistRepEval, H1--Hn về feedback/transfer. & Nghiên cứu reputation khi outcome lịch sử không tin cậy.\\
+28--29/09 & Bỏ kết luận pipeline correctness mô phỏng; chạy lại 18.064 output thật đủ 14 môn. & Mẫu cũ 8 môn, audit nhỏ, lỗi model config; không đạt tính thực chứng.\\
+29/09 Week 3 & Hoàn tất vận hành, GO-C khoa học. & ECRT gần hòa FixedBorrow; thiếu specialist ổn định, attack A2 bất lợi.\\
+29--30/09 & Bổ sung thinking/judge; giữ Week 4--6 cũ là chưa đạt gate paper. & Thinking mạnh nhưng đắt; judge/Brier chưa tạo team outcome.\\
+Đầu 10/2026 & Thử AppWorld và DART theo audit budget. & Cần tương tác thật hơn và gắn feedback với quyết định.\\
+04/10 & DART đầu, DARTContrast và full judge hoàn tất; gate FAIL. & 63,90/168 dưới UniformGlobal 69,70 ở 10\%.\\
+05/10 & Diagnose C/S, factor, paired, SH, neural P0. & Paired CFJudgeFactor 74,15 nhưng CI vs Uniform/PairedSH chưa dương; neural selected hòa Global 82.\\
+06/10 & LLMRouterBench intake, MATH500, FinQA judge/consensus pilots. & MATH500 pair signal nhưng không headroom; FinQA headroom có, proxies không qua pair gate.\\
+07/10 & Sửa duplicate denominator và khóa chiến lược một bài decision-value. & FinQA còn 929, MBPP 766 unique eligible; cần holdout mới và matched cost.\\
+08/10 & Sổ tay hiện tại tổng hợp, chưa tự mở thêm final holdout. & Không biến review và biên soạn thành một test method mới.\\\bottomrule\end{longtable}
+``Week 3 xong'' nghĩa ledger, phân tích và báo cáo của Week 3 thật đã xong, \emph{không} có nghĩa toàn bộ đề cương sáu tuần hoàn tất. Các thư mục tên \repo{week4} hoặc \repo{week5} là tên run, không xác nhận gate khoa học của tuần đó. Đến 08/10, chưa có bằng chứng DART vượt đối chứng mạnh trên độc lập ngoài và chưa có HistRepEval release đủ chuẩn bài báo.
+
+\chapter{Hướng nghiên cứu tiếp: câu hỏi, thiết kế và điều kiện dừng}
+\section{Paper claim hợp lý nhất hiện nay}
+Một bài có trục \emph{decision value of imperfect historical feedback under limited trusted audits}. Bài gồm (i) giao thức HistRepEval đo kênh feedback, pair signal, utility, cost và harm; (ii) một method chỉ khi qua confirmatory gate; (iii) failure map giải thích vì sao calibration không đủ. Nếu method không đạt, một bài measurement vẫn cần ít nhất hai nguồn task, nhiều proxy thật, baseline mạnh, repeat độc lập, release hợp lệ và finding vượt bảng accuracy thường. Không thể dùng tên HistRepEval để thay bằng chứng.
+
+\section{Đề xuất ứng viên mới: audit theo cặp, giữ incumbent}\label{sec:proposal}
+Đây là \textbf{đề xuất chưa triển khai/kiểm chứng}. Cho incumbent \(a_0\) được chọn bằng train đã cho phép, một tập challenger nhỏ \(\mathcal C\) khóa trước, và budget \(B\) \emph{cells} gold. Dành phần \(\epsilon B\) cho random coverage xác suất dương; phần còn lại chọn task có proxy disagreement hoặc chênh gần ranh giới, audit cả incumbent và challenger trên cùng task. Một pair tốn hai cells. Dùng dữ liệu riêng để đề cử challenger và để chứng nhận switch, hoặc sequential inference hợp lệ.
+
+Đặt \(\Delta_c=\E[Y_c-Y_{a_0}]-\lambda(C_c-C_{a_0})\), proxy contrast \(m_t^\Delta=m_{tc}-m_{t,a_0}\). Với xác suất inclusion paired \(q_t>0\) đã biết, một estimator design-based cho contrast cố định là
+\begin{equation}\label{eq:pairedproposal}\hat\Delta_c=\frac1T\sum_t m_t^\Delta+\frac1T\sum_t\frac{A_t}{q_t}\big[(Y_{tc}-Y_{t,a_0})-m_t^\Delta\big]-\lambda(C_c-C_{a_0}).
+\end{equation}
+Đây là công thức \emph{mục tiêu thiết kế}, không phải method đã chạy. Khi selection thích nghi theo nhãn trước đó, cần propensity có điều kiện, martingale/sequential CI hoặc sample splitting; không được áp bootstrap IID hoặc công thức uniform một cách tùy tiện. Chỉ switch nếu lower confidence bound của \(\Delta_c\) vượt ngưỡng lợi ích thực tế \(\delta>0\) sau multiple-comparison correction; nếu không giữ incumbent. Ngưỡng, CI và cost phải đăng ký trước. Đây là quyết định bảo thủ dự kiến, chưa có bảo đảm deployment.
+
+\section{Proxy mới phải giải đúng bài toán tương phản}
+FinQA: thử verifier độc lập giải/kiểm số học từ \emph{prompt} mà không thấy candidate answer, model ID, gold; sau đó so với parsed outputs. Kiểm tra pair residual ratio \eqref{eq:variance}, coverage/abstain, bias theo model và chi phí; pilot trên development \emph{mới}, khóa prompt/token/extractor. Nếu ratio/cost gate fail, dừng và giữ gold-only track. MBPP cần proxy tương ứng thực thi/unit tests hợp lệ, không chuyển numeric parser từ FinQA. Với shared wrong answers, agreement thô không thể là chứng chỉ correctness; cần độc lập nguồn kiểm tra hoặc trusted labels.
+
+\section{Các đối chứng bắt buộc và quyền truy cập}
+So với best single chọn bằng đúng B gold train, UniformGlobal, PairedGlobal, Independent/PairedSH, conservative gold-only switch, raw/calibrated proxy, residual correction, proxy-aware audit gần Ao/PROBE khi giả định áp dụng, và thêm router prompt-only nếu claim contextual. Mọi phương pháp nhận cùng split, test information và tổng budget; báo hai đường chi phí history đã tồn tại và history cần tạo. Best fixed dùng full train gold là diagnostic, không đặt ngang budget. Không chọn method sau khi xem final outcomes.
+
+\section{Các gate theo thứ tự}
+\begin{enumerate}
+\item \textbf{Evidence hygiene:} license/provenance, duplicate/grouping, split hashes, cost ledger, primary comparison, ngưỡng thực tế; chọn nguồn độc lập.
+\item \textbf{Proxy pilot:} FinQA verifier mới phải cải thiện pair signal có ý nghĩa và đủ rẻ; không mở rộng vì chỉ Brier đẹp.
+\item \textbf{Method development:} implement incumbent audit cùng đầy đủ controls, test leakage, budget, propensities, resume; giữ tối đa một finalist.
+\item \textbf{Final confirmation:} khóa code, prompts, masks, estimand, CIs, controls và cost trước khi mở FinQA/MBPP final; report toàn bộ primary contrasts và harm. Nếu fail, không đổi gate.
+\item \textbf{Paper/release:} thêm external rerun, card, model/prompt digests, ledger checksums, reproduce scripts; quyết định method+benchmark hay measurement theo kết quả.
+\end{enumerate}
+Các quota trong strategy 07/10 (FinQA khoảng 100 pilot,100 method dev,700 final; MBPP 80/80/600) chỉ là gợi ý \emph{trước} near-duplicate grouping và license review, chưa phải split khóa. Phân bổ cuối cần căn cứ power: với 500 câu, chênh 1 điểm phần trăm thường khó chứng minh; không nên hứa kết quả mạnh nhờ chạy nhiều seed trên cùng task.
+
+\section{Điều gì đủ sức cho hội nghị mạnh?}
+Một claim có khả năng đứng vững cần: bài toán mới/khác biệt rõ so routing và best-arm prior art; kết quả decision utility vượt đối chứng mạnh tại cùng tổng cost trên ít nhất hai benchmark/pool; CI ghép cặp theo đúng unit, effect thực tiễn đủ lớn; ablation cho phần proxy/audit/switch; stress test targeted feedback và failure cases; protocol, license và artifact tái lập; lý thuyết chỉ tuyên bố trong giả định được thỏa. Tên model neural, tăng lượng compute, hoặc chọn vài cell thắng không thay thế các điều này. Không thể cam kết chắc chắn acceptance A/A*; hội nghị đánh giá novelty, correctness và impact ngoài tầm kiểm soát của một run.
+
+\appendix
+\chapter{Bảng ký hiệu nhanh}
+\begin{longtable}{p{24mm}p{127mm}}\toprule Ký hiệu & Nghĩa\\\midrule\endhead
+\(a,t,x_t\) & Agent/model, task lịch sử, đặc trưng có trước khi chạy.\\
+\(y_{at},z_{at}\) & Output/trajectory và gold binary outcome theo evaluator.\\
+\(F_{at},R_{at}\) & Feedback rẻ và chỉ báo được audit gold.\\
+\(s,c,\pi\) & Sensitivity, specificity, prior đúng của kênh feedback.\\
+\(\tau,m,w\) & Transfer weight, evidence mass hoặc proxy theo ngữ cảnh, trọng số bằng chứng.\\
+\(\alpha,\beta,\mu,L\) & Beta pseudo-counts, mean, lower approximation.\\
+\(A,q,m_{ta}\) & Chỉ báo audit, inclusion probability, proxy outcome trong DART.\\
+\(B\) & Số nhãn task--agent gold; một paired audit hai agent tốn hai.\\
+\(\Delta,\hat V\) & Contrast utility và estimated policy value.\\
+\(C,S\) & Construction history và selection history trong DART đầu tiên.\\
+CI & Khoảng tin cậy theo bootstrap được mô tả, không tự bảo vệ multiple looks.\\\bottomrule\end{longtable}
+
+\chapter{Bản đồ mã, dữ liệu và nguồn số liệu}
+\section{Tái lập nội bộ}
+\begin{longtable}{p{54mm}p{97mm}}\toprule Artifact & Vai trò\\\midrule\endhead
+\repo{src/repguard/reputation/ecrt.py} & Bayes inversion, ECRT core, variants.\\
+\repo{src/repguard/reputation/transfer.py} & Taxonomy và \(\tau\).\\
+\repo{src/repguard/reputation/baselines.py} & Beta pseudo-count, mean, lower approximation, baselines.\\
+\repo{src/repguard/reputation/aggregator.py} & Majority/weighted vote.\\
+\repo{src/repguard/reputation/audited.py} & Audited channel variant, không hồi tố Week 3.\\
+\repo{analyze_real_week3.py} & FixedBorrow comparator và phân tích Week 3.\\
+\repo{infra/modal/history_core.py} & Crossfit proxy, ridge, rectifier và variants.\\
+\repo{infra/modal/paired_history_core.py} & Adapter đổi tên paired control trên cùng logic estimator.\\
+\repo{docs/analysis/repguard_week3_real_report.md} & Số Week 3, mẫu số, CI và amendment.\\
+\repo{docs/analysis/repguard_pool_gate_assessment_2026-09-30.md} & Pool overlap, 1.260 calls và gate 0.\\
+\repo{docs/analysis/repguard_final_pipeline_assessment_2026-09-30.md} & Thinking/judge và gate đầu.\\
+\repo{docs/analysis/histrepeval_benchmark_card_draft_2026-09-30.md} & HistRepEval v0.1 và release checklist.\\
+\repo{docs/analysis/dart_research_progress_2026-10-05.md} & 1.205 cases, paired rectifier, SH.\\
+\repo{docs/analysis/dart_neural_p0_assessment_2026-10-05.md} & P0 neural và stopped gate.\\
+\repo{docs/analysis/routerbench_finqa_feedback_v1_interpretation_2026-10-06.md} & FinQA judge và pair variance.\\
+\repo{docs/analysis/routerbench_finqa_consensus_v1_interpretation_2026-10-06.md} & FinQA agreement, shared errors.\\
+\repo{docs/analysis/routerbench_headroom_count_erratum_2026-10-07.md} & 929/766 unique eligible.\\
+\repo{docs/analysis/repguard_a_conference_strategy_2026-10-07.md} & Hướng một bài và proposal gates.\\\bottomrule\end{longtable}
+Mã và báo cáo nằm trên nhánh \repo{dev}; nhiều raw ledgers nằm dưới \repo{results/} bị Git ignore. Việc push nhánh không đồng nghĩa công bố raw dữ liệu. Cần dùng manifest/checksum tương ứng mỗi run trước khi tái tính; không sửa protocol băm hash cũ chỉ để cập nhật một erratum diễn giải.
+
+\section{Cách dùng tài liệu này để lên nghiên cứu}
+Đọc Chương 2--5 để nắm bài toán và công thức; Chương 6--10 để không lặp lại các thử nghiệm đã thất bại; Chương 11 phân biệt nguyên nhân quan sát với giả thuyết; Chương 12--13 để chọn đề tài và khóa study tiếp. Khi viết proposal/paper, lấy số nguyên chưa làm tròn từ JSON gốc và đối chiếu ledger; bảng ở đây làm bản giải thích, không thay source artifact.
+
+\begin{thebibliography}{99}
+\bibitem{mmlupro} Y. Wang và cộng sự (2024). \emph{MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark}. NeurIPS Datasets and Benchmarks. \url{https://arxiv.org/abs/2406.01574}.
+\bibitem{appworld} H. Trivedi và cộng sự (2024). \emph{AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents}. ACL. \url{https://aclanthology.org/2024.acl-long.850/}.
+\bibitem{llmrouterbench} \emph{LLMRouterBench: A Massive Benchmark and Unified Framework for LLM Routing}. Findings ACL 2026. \url{https://aclanthology.org/2026.findings-acl.1881/}.
+\bibitem{routellm} \emph{RouteLLM: Learning to Route LLMs from Preference Data}. ICLR 2025. \url{https://proceedings.iclr.cc/paper_files/paper/2025/hash/5503a7c69d48a2f86fc00b3dc09de686-Abstract-Conference.html}.
+\bibitem{r2router} \emph{R2-Router: A New Paradigm for LLM Routing with Reasoning}. ICML 2026. \url{https://proceedings.mlr.press/v306/xue26h.html}.
+\bibitem{seqhalving} Z. Karnin, T. Koren, O. Somekh (2013). \emph{Almost Optimal Exploration in Multi-Armed Bandits}. ICML. \url{https://proceedings.mlr.press/v28/karnin13.html}.
+\bibitem{ppi} A. Angelopoulos và cộng sự (2023). \emph{Prediction-Powered Inference}. \url{https://arxiv.org/abs/2301.09633}.
+\bibitem{asi} T. Zrnic và E. Candès (2024). \emph{Active Statistical Inference}. ICML. \url{https://proceedings.mlr.press/v235/zrnic24a.html}.
+\bibitem{ao} Ao và cộng sự (2026). \emph{Best Arm Identification with LLM Judges and Limited Human Feedback}. \url{https://arxiv.org/abs/2601.21471}.
+\bibitem{probe} T. Ma và cộng sự (2026). \emph{Best-Arm Identification with Generative Proxy}. \url{https://arxiv.org/abs/2607.06879}.
+\bibitem{skilltrust} Y. Xia và T. Wang (2026). \emph{When Should Agent Trust Be Conditional? Characterizing and Attacking Skill-Conditional Reputation in Agent Swarms}. \url{https://arxiv.org/abs/2606.14200}.
+\end{thebibliography}
+\end{document}

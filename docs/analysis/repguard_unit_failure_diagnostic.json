@@ -1,0 +1,254 @@
+{
+  "scope": "Exploratory post-hoc diagnostic, not preregistered method result; no inference, unchanged primary scores",
+  "n": 24,
+  "modified": 10,
+  "original_correct": 6,
+  "counterfactual_correct": 12,
+  "rescues": 6,
+  "harms": 0,
+  "rows": [
+    {
+      "id": "AMT/2006/page_116.pdf-1",
+      "changed_by_source_only_rule": false,
+      "original_value": null,
+      "counterfactual_value": null,
+      "official_target": 0.29471,
+      "original_correct": false,
+      "counterfactual_correct": false
+    },
+    {
+      "id": "MAA/2015/page_56.pdf-2",
+      "changed_by_source_only_rule": false,
+      "original_value": -2.3,
+      "counterfactual_value": -2.3,
+      "official_target": 2.3,
+      "original_correct": false,
+      "counterfactual_correct": false
+    },
+    {
+      "id": "AAP/2006/page_85.pdf-3",
+      "changed_by_source_only_rule": false,
+      "original_value": 9978.0,
+      "counterfactual_value": 9978.0,
+      "official_target": 20664.0,
+      "original_correct": false,
+      "counterfactual_correct": false
+    },
+    {
+      "id": "LMT/2002/page_33.pdf-3",
+      "changed_by_source_only_rule": false,
+      "original_value": 0.05999,
+      "counterfactual_value": 0.05999,
+      "official_target": 0.05999,
+      "original_correct": true,
+      "counterfactual_correct": true
+    },
+    {
+      "id": "MAR/2005/page_52.pdf-2",
+      "changed_by_source_only_rule": false,
+      "original_value": 68.0,
+      "counterfactual_value": 68.0,
+      "official_target": 68.0,
+      "original_correct": true,
+      "counterfactual_correct": true
+    },
+    {
+      "id": "HFC/2017/page_103.pdf-1",
+      "changed_by_source_only_rule": true,
+      "original_value": 58.38422,
+      "counterfactual_value": 0.58384,
+      "official_target": 0.58384,
+      "original_correct": false,
+      "counterfactual_correct": true
+    },
+    {
+      "id": "LKQ/2009/page_77.pdf-1",
+      "changed_by_source_only_rule": true,
+      "original_value": 84.21053,
+      "counterfactual_value": 0.84211,
+      "official_target": 0.84211,
+      "original_correct": false,
+      "counterfactual_correct": true
+    },
+    {
+      "id": "ILMN/2007/page_84.pdf-1",
+      "changed_by_source_only_rule": false,
+      "original_value": 153.80241,
+      "counterfactual_value": 153.80241,
+      "official_target": 153.80241,
+      "original_correct": true,
+      "counterfactual_correct": true
+    },
+    {
+      "id": "LMT/2014/page_93.pdf-1",
+      "changed_by_source_only_rule": true,
+      "original_value": 1.82927,
+      "counterfactual_value": 0.01829,
+      "official_target": 0.13174,
+      "original_correct": false,
+      "counterfactual_correct": false
+    },
+    {
+      "id": "DISH/2002/page_94.pdf-4",
+      "changed_by_source_only_rule": false,
+      "original_value": "no",
+      "counterfactual_value": "no",
+      "official_target": "yes",
+      "original_correct": false,
+      "counterfactual_correct": false
+    },
+    {
+      "id": "WRK/2018/page_106.pdf-1",
+      "changed_by_source_only_rule": true,
+      "original_value": 118.66267,
+      "counterfactual_value": 1.18663,
+      "official_target": 0.29458,
+      "original_correct": false,
+      "counterfactual_correct": false
+    },
+    {
+      "id": "FRT/2007/page_137.pdf-1",
+      "changed_by_source_only_rule": false,
+      "original_value": 6890.0,
+      "counterfactual_value": 6890.0,
+      "official_target": 5908.0,
+      "original_correct": false,
+      "counterfactual_correct": false
+    },
+    {
+      "id": "EW/2017/page_83.pdf-2",
+      "changed_by_source_only_rule": true,
+      "original_value": 2.64317,
+      "counterfactual_value": 0.02643,
+      "official_target": 0.20705,
+      "original_correct": false,
+      "counterfactual_correct": false
+    },
+    {
+      "id": "MAS/2012/page_92.pdf-2",
+      "changed_by_source_only_rule": true,
+      "original_value": 156862.7451,
+      "counterfactual_value": 0.15686,
+      "official_target": 0.15686,
+      "original_correct": false,
+      "counterfactual_correct": true
+    },
+    {
+      "id": "HWM/2017/page_77.pdf-2",
+      "changed_by_source_only_rule": false,
+      "original_value": -1.0,
+      "counterfactual_value": -1.0,
+      "official_target": 1.0,
+      "original_correct": false,
+      "counterfactual_correct": false
+    },
+    {
+      "id": "LLY/2008/page_45.pdf-2",
+      "changed_by_source_only_rule": true,
+      "original_value": 17.41285,
+      "counterfactual_value": 0.17413,
+      "official_target": 0.17413,
+      "original_correct": false,
+      "counterfactual_correct": true
+    },
+    {
+      "id": "SYY/2014/page_16.pdf-1",
+      "changed_by_source_only_rule": false,
+      "original_value": -0.02,
+      "counterfactual_value": -0.02,
+      "official_target": -0.02,
+      "original_correct": true,
+      "counterfactual_correct": true
+    },
+    {
+      "id": "DVN/2011/page_26.pdf-3",
+      "changed_by_source_only_rule": true,
+      "original_value": 58.50705,
+      "counterfactual_value": 0.58507,
+      "official_target": 0.58507,
+      "original_correct": false,
+      "counterfactual_correct": true
+    },
+    {
+      "id": "AAPL/2006/page_93.pdf-1",
+      "changed_by_source_only_rule": false,
+      "original_value": 6.0,
+      "counterfactual_value": 6.0,
+      "official_target": 0.13043,
+      "original_correct": false,
+      "counterfactual_correct": false
+    },
+    {
+      "id": "IPG/2006/page_41.pdf-2",
+      "changed_by_source_only_rule": false,
+      "original_value": null,
+      "counterfactual_value": null,
+      "official_target": 464.1,
+      "original_correct": false,
+      "counterfactual_correct": false
+    },
+    {
+      "id": "APTV/2014/page_46.pdf-2",
+      "changed_by_source_only_rule": true,
+      "original_value": 26.35659,
+      "counterfactual_value": 0.26357,
+      "official_target": 0.26357,
+      "original_correct": false,
+      "counterfactual_correct": true
+    },
+    {
+      "id": "HOLX/2007/page_127.pdf-1",
+      "changed_by_source_only_rule": false,
+      "original_value": 0.1853,
+      "counterfactual_value": 0.1853,
+      "official_target": 0.1853,
+      "original_correct": true,
+      "counterfactual_correct": true
+    },
+    {
+      "id": "UPS/2015/page_108.pdf-1",
+      "changed_by_source_only_rule": false,
+      "original_value": -70.0,
+      "counterfactual_value": -70.0,
+      "official_target": -70.0,
+      "original_correct": true,
+      "counterfactual_correct": true
+    },
+    {
+      "id": "TFX/2014/page_44.pdf-4",
+      "changed_by_source_only_rule": true,
+      "original_value": 78.26087,
+      "counterfactual_value": 0.78261,
+      "official_target": 2.05,
+      "original_correct": false,
+      "counterfactual_correct": false
+    }
+  ],
+  "same_unit_pass_all_actions": {
+    "paired_n": 24,
+    "methods": {
+      "initial": {
+        "correct": 12,
+        "rescue_vs_normalized_initial": 0,
+        "harm_vs_normalized_initial": 0
+      },
+      "self_repair": {
+        "correct": 13,
+        "rescue_vs_normalized_initial": 1,
+        "harm_vs_normalized_initial": 0
+      },
+      "evidence_repair": {
+        "correct": 13,
+        "rescue_vs_normalized_initial": 1,
+        "harm_vs_normalized_initial": 0
+      },
+      "plan_repair": {
+        "correct": 12,
+        "rescue_vs_normalized_initial": 0,
+        "harm_vs_normalized_initial": 0
+      }
+    },
+    "oracle_union": 13,
+    "oracle_union_is_not_a_method": true
+  }
+}

@@ -1,0 +1,938 @@
+{
+  "scope": "Post-collection exploratory paired mechanism analysis, not independent confirmation",
+  "n": 24,
+  "new_model_calls": 0,
+  "comparisons": {
+    "direct_pot": {
+      "compose_only_correct": 0,
+      "baseline_only_correct": 1,
+      "net_gain_count": -1,
+      "difference_pp": -4.166666666666666,
+      "paired_bootstrap95_pp": [
+        -12.5,
+        0.0
+      ],
+      "exact_mcnemar_two_sided_p_exploratory": 1.0,
+      "confirmatory_claim": false
+    },
+    "self_review_1": {
+      "compose_only_correct": 0,
+      "baseline_only_correct": 1,
+      "net_gain_count": -1,
+      "difference_pp": -4.166666666666666,
+      "paired_bootstrap95_pp": [
+        -12.5,
+        0.0
+      ],
+      "exact_mcnemar_two_sided_p_exploratory": 1.0,
+      "confirmatory_claim": false
+    },
+    "self_review_2": {
+      "compose_only_correct": 0,
+      "baseline_only_correct": 1,
+      "net_gain_count": -1,
+      "difference_pp": -4.166666666666666,
+      "paired_bootstrap95_pp": [
+        -12.5,
+        0.0
+      ],
+      "exact_mcnemar_two_sided_p_exploratory": 1.0,
+      "confirmatory_claim": false
+    }
+  },
+  "compose_rescues_beyond_both_parents": 0,
+  "compose_rescues_beyond_both_self_reviews": 0,
+  "gate_for_history_learning": false,
+  "bootstrap_replicates": 20000,
+  "seed": 19102026,
+  "rows": [
+    {
+      "id": "ILMN/2007/page_84.pdf-1",
+      "official_target": 153.80241,
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": true
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 153.80241,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 153.80241,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 153.80241,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 153.80241,
+        "self_review_1": 153.80241,
+        "self_review_2": 153.80241,
+        "compose": 153.80241
+      },
+      "cheap_dsl_correct": true,
+      "cheap_dsl_value": 153.80241,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "APTV/2014/page_46.pdf-2",
+      "official_target": 0.26357,
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": true
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 0.26357,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 0.26357,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 0.26357,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 0.26357,
+        "self_review_1": 0.26357,
+        "self_review_2": 0.26357,
+        "compose": 0.26357
+      },
+      "cheap_dsl_correct": true,
+      "cheap_dsl_value": 0.26357,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "FRT/2007/page_137.pdf-1",
+      "official_target": 5908.0,
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": false
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 5908,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 5908,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 6890,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 5908,
+        "self_review_1": 5908,
+        "self_review_2": 5908,
+        "compose": 6890
+      },
+      "cheap_dsl_correct": false,
+      "cheap_dsl_value": 6890.0,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "DVN/2011/page_26.pdf-3",
+      "official_target": 0.58507,
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": true
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 0.58507,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 0.58507,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 0.58507,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 0.58507,
+        "self_review_1": 0.58507,
+        "self_review_2": 0.58507,
+        "compose": 0.58507
+      },
+      "cheap_dsl_correct": true,
+      "cheap_dsl_value": 0.58507,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "LMT/2014/page_93.pdf-1",
+      "official_target": 0.13174,
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": true
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 0.13174,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 0.13174,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 0.13174,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 0.13174,
+        "self_review_1": 0.13174,
+        "self_review_2": 0.13174,
+        "compose": 0.13174
+      },
+      "cheap_dsl_correct": false,
+      "cheap_dsl_value": 0.01829,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "DISH/2002/page_94.pdf-4",
+      "official_target": "yes",
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": true
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": "yes",
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": "yes",
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": "yes",
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": "yes",
+        "self_review_1": "yes",
+        "self_review_2": "yes",
+        "compose": "yes"
+      },
+      "cheap_dsl_correct": false,
+      "cheap_dsl_value": "no",
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "AMT/2006/page_116.pdf-1",
+      "official_target": 0.29471,
+      "outcomes": {
+        "direct_pot": false,
+        "self_review_1": false,
+        "self_review_2": false,
+        "compose": false
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 0.34871,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 0.34871,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 0.34871,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 0.34871,
+        "self_review_1": 0.34871,
+        "self_review_2": 0.34871,
+        "compose": 0.34871
+      },
+      "cheap_dsl_correct": false,
+      "cheap_dsl_value": null,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "IPG/2006/page_41.pdf-2",
+      "official_target": 464.1,
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": true
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 464.1,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 464.1,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 464.1,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 464.1,
+        "self_review_1": 464.1,
+        "self_review_2": 464.1,
+        "compose": 464.1
+      },
+      "cheap_dsl_correct": false,
+      "cheap_dsl_value": null,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "WRK/2018/page_106.pdf-1",
+      "official_target": 0.29458,
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": true
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": false,
+          "value": null,
+          "accepted": false
+        },
+        "self_review_2": {
+          "executable": false,
+          "value": null,
+          "accepted": false
+        },
+        "compose": {
+          "executable": false,
+          "value": null,
+          "accepted": false
+        }
+      },
+      "values": {
+        "direct_pot": 0.29458,
+        "self_review_1": 0.29458,
+        "self_review_2": 0.29458,
+        "compose": 0.29458
+      },
+      "cheap_dsl_correct": false,
+      "cheap_dsl_value": 1.18663,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "HFC/2017/page_103.pdf-1",
+      "official_target": 0.58384,
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": true
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 0.58384,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 0.58384,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 0.58384,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 0.58384,
+        "self_review_1": 0.58384,
+        "self_review_2": 0.58384,
+        "compose": 0.58384
+      },
+      "cheap_dsl_correct": true,
+      "cheap_dsl_value": 0.58384,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "UPS/2015/page_108.pdf-1",
+      "official_target": -70.0,
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": true
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": -70,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": -70,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": -70,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": -70,
+        "self_review_1": -70,
+        "self_review_2": -70,
+        "compose": -70
+      },
+      "cheap_dsl_correct": true,
+      "cheap_dsl_value": -70.0,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "AAPL/2006/page_93.pdf-1",
+      "official_target": 0.13043,
+      "outcomes": {
+        "direct_pot": false,
+        "self_review_1": false,
+        "self_review_2": false,
+        "compose": false
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 6,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 6,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 6,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 6,
+        "self_review_1": 6,
+        "self_review_2": 6,
+        "compose": 6
+      },
+      "cheap_dsl_correct": false,
+      "cheap_dsl_value": 6.0,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "AAP/2006/page_85.pdf-3",
+      "official_target": 20664.0,
+      "outcomes": {
+        "direct_pot": false,
+        "self_review_1": false,
+        "self_review_2": false,
+        "compose": false
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 9978,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 9978,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 9978,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 9978,
+        "self_review_1": 9978,
+        "self_review_2": 9978,
+        "compose": 9978
+      },
+      "cheap_dsl_correct": false,
+      "cheap_dsl_value": 9978.0,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "MAA/2015/page_56.pdf-2",
+      "official_target": 2.3,
+      "outcomes": {
+        "direct_pot": false,
+        "self_review_1": false,
+        "self_review_2": false,
+        "compose": false
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 0.023,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 0.023,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 0.023,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 0.023,
+        "self_review_1": 0.023,
+        "self_review_2": 0.023,
+        "compose": 0.023
+      },
+      "cheap_dsl_correct": false,
+      "cheap_dsl_value": -2.3,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "TFX/2014/page_44.pdf-4",
+      "official_target": 2.05,
+      "outcomes": {
+        "direct_pot": false,
+        "self_review_1": false,
+        "self_review_2": false,
+        "compose": false
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 0.78261,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 0.78261,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 0.78261,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 0.78261,
+        "self_review_1": 0.78261,
+        "self_review_2": 0.78261,
+        "compose": 0.78261
+      },
+      "cheap_dsl_correct": false,
+      "cheap_dsl_value": 0.78261,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "SYY/2014/page_16.pdf-1",
+      "official_target": -0.02,
+      "outcomes": {
+        "direct_pot": false,
+        "self_review_1": false,
+        "self_review_2": false,
+        "compose": false
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": -0.03175,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": -0.03175,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": -0.03175,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": -0.03175,
+        "self_review_1": -0.03175,
+        "self_review_2": -0.03175,
+        "compose": -0.03175
+      },
+      "cheap_dsl_correct": true,
+      "cheap_dsl_value": -0.02,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "LLY/2008/page_45.pdf-2",
+      "official_target": 0.17413,
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": true
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 0.17413,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 0.17413,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 0.17413,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 0.17413,
+        "self_review_1": 0.17413,
+        "self_review_2": 0.17413,
+        "compose": 0.17413
+      },
+      "cheap_dsl_correct": true,
+      "cheap_dsl_value": 0.17413,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "MAS/2012/page_92.pdf-2",
+      "official_target": 0.15686,
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": true
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 0.15686,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 0.15686,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 0.15686,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 0.15686,
+        "self_review_1": 0.15686,
+        "self_review_2": 0.15686,
+        "compose": 0.15686
+      },
+      "cheap_dsl_correct": true,
+      "cheap_dsl_value": 0.15686,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "EW/2017/page_83.pdf-2",
+      "official_target": 0.20705,
+      "outcomes": {
+        "direct_pot": false,
+        "self_review_1": false,
+        "self_review_2": false,
+        "compose": false
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 0.18062,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 0.18062,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 0.02643,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 0.18062,
+        "self_review_1": 0.18062,
+        "self_review_2": 0.18062,
+        "compose": 0.02643
+      },
+      "cheap_dsl_correct": false,
+      "cheap_dsl_value": 0.02643,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "LMT/2002/page_33.pdf-3",
+      "official_target": 0.05999,
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": true
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 0.05999,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 0.05999,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 0.05999,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 0.05999,
+        "self_review_1": 0.05999,
+        "self_review_2": 0.05999,
+        "compose": 0.05999
+      },
+      "cheap_dsl_correct": true,
+      "cheap_dsl_value": 0.05999,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "MAR/2005/page_52.pdf-2",
+      "official_target": 68.0,
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": true
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 68,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 68,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 68,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 68,
+        "self_review_1": 68,
+        "self_review_2": 68,
+        "compose": 68
+      },
+      "cheap_dsl_correct": true,
+      "cheap_dsl_value": 68.0,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "HOLX/2007/page_127.pdf-1",
+      "official_target": 0.1853,
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": true
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 0.1853,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 0.1853,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 0.1853,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 0.1853,
+        "self_review_1": 0.1853,
+        "self_review_2": 0.1853,
+        "compose": 0.1853
+      },
+      "cheap_dsl_correct": true,
+      "cheap_dsl_value": 0.1853,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "HWM/2017/page_77.pdf-2",
+      "official_target": 1.0,
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": true
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 1,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 1,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 1,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 1,
+        "self_review_1": 1,
+        "self_review_2": 1,
+        "compose": 1
+      },
+      "cheap_dsl_correct": false,
+      "cheap_dsl_value": -1.0,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    },
+    {
+      "id": "LKQ/2009/page_77.pdf-1",
+      "official_target": 0.84211,
+      "outcomes": {
+        "direct_pot": true,
+        "self_review_1": true,
+        "self_review_2": true,
+        "compose": true
+      },
+      "raw": {
+        "self_review_1": {
+          "executable": true,
+          "value": 0.84211,
+          "accepted": true
+        },
+        "self_review_2": {
+          "executable": true,
+          "value": 0.84211,
+          "accepted": true
+        },
+        "compose": {
+          "executable": true,
+          "value": 0.84211,
+          "accepted": true
+        }
+      },
+      "values": {
+        "direct_pot": 0.84211,
+        "self_review_1": 0.84211,
+        "self_review_2": 0.84211,
+        "compose": 0.84211
+      },
+      "cheap_dsl_correct": true,
+      "cheap_dsl_value": 0.84211,
+      "compose_correct_beyond_both_parents": false,
+      "compose_correct_beyond_both_self_reviews": false
+    }
+  ]
+}

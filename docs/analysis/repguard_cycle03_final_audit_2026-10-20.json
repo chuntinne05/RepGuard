@@ -1,0 +1,42 @@
+{
+  "audit": "PASS",
+  "utc": "2026-10-20T01:44:59Z",
+  "new_real_responses": 264,
+  "unique_questions": 24,
+  "input_tokens": 572340,
+  "output_tokens": 59841,
+  "mock_calls": 0,
+  "unresolved_current_two_studies": 0,
+  "length_stops": 0,
+  "primary_scores_unchanged": true,
+  "independent_recompute": {
+    "scoped": {
+      "official_metric_totals_reproduced": {
+        "plain": 19.0,
+        "initial": 15.0,
+        "evidence": 15.0,
+        "operation": 16.0,
+        "combined": 15.0,
+        "self1": 15.0,
+        "self2": 15.0
+      },
+      "run_id": "746ca756961393ace1ad8c57",
+      "source_hashes_verified_by_prepare": true
+    },
+    "crossfamily": {
+      "official_metric_totals_reproduced": {
+        "qwen_plain": 19.0,
+        "qwen_self1": 20.0,
+        "qwen_self2": 20.0,
+        "gemma_plain": 16.0,
+        "gemma_self1": 16.0,
+        "gemma_self2": 16.0
+      },
+      "run_id": "d11908329d5b94f303c191c7",
+      "source_hashes_verified_by_prepare": true
+    }
+  },
+  "history_learner_fitted": false,
+  "reputation_superiority_claim": false,
+  "semantic_human_adjudications": 0
+}

@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-20T01:36:55Z",
+  "scope": "Four research apps ONLY; user's original Ollama app not used or changed.",
+  "apps": [
+    {
+      "app_id": "ap-H1QBQza7gdGhq4UhD8FZoe",
+      "containers": [],
+      "exit_code": 0
+    },
+    {
+      "app_id": "ap-oxSrIRlGvzvy6zOfdvHV5R",
+      "containers": [],
+      "exit_code": 0
+    },
+    {
+      "app_id": "ap-MMiCt8dXwoMLlUfE9xCpMK",
+      "containers": [],
+      "exit_code": 0
+    },
+    {
+      "app_id": "ap-oSAgWp63MKFwq6yqPhe1VM",
+      "containers": [],
+      "exit_code": 0
+    }
+  ],
+  "active_collectors": 0,
+  "completed_new_real_calls": 264,
+  "model_weights_persisted": true,
+  "billing_verified": false
+}

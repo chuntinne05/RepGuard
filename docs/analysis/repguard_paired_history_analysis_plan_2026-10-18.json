@@ -1,0 +1,29 @@
+{
+  "scope": "Exploratory pre-analysis after inspecting cheap development outputs, before opening newly collected PoT outputs. NOT preregistration before all model generation and NOT independent confirmation.",
+  "new_inference_calls": 0,
+  "max_repairs": 1,
+  "dataset": "Same24development reports as causal v1",
+  "cheap": "Real initial DSL plus the fixed post-hoc source-only unit surgery, mechanically executed",
+  "regenerate": "Real independent native-PoT output; if invalid, retain cheap; no gold-based acceptance",
+  "guard": "Regenerate if cheap hard_pass false or final program has no valid evidence dependency; available equally to rule/history controls",
+  "controls": [
+    "cheap",
+    "direct_pot",
+    "always_regenerate_with_fallback",
+    "rule_guard_only",
+    "oof_global_history",
+    "oof_local_history"
+  ],
+  "gate": "Fit history only if regenerate rescues at least3cheap errors; otherwise record lack of signal",
+  "folds": "3, report-separated SHA256 causal-repair-fold, unchanged from earlier proposed learner",
+  "learner": "Exclude guard-forced cases from discretionary training; global net-gain sum/(n+4); local tuple(question skill,source family,one/multi-step) shrinks to global with prior6; regenerate iff gain>0.05; no hyperparameter tuning",
+  "gold": "Full supervised paired labels shared with all history controls, not a10%audit result; case label excluded from its fold training",
+  "cost": "All responses collected for research; policy serving replay counts cheap+selected calls, plus measured Ollama prompt_eval_duration+eval_duration. Compute-time proxy, not USD billing or live latency.",
+  "uncertainty": "20,000 paired report bootstraps, seed18102026; one-sided exact95%harm upper bound; 2ppNI margin cannot be established merely by bootstrapzero difference on24cases",
+  "known_limits": "Cheap unit surgery and feature design used prior development outcomes; this OOF remains exploratory; source/semantic correctness and final prototype not established",
+  "registered_epoch": 1792304592.3213282,
+  "source_sha256": "4eaf96cfee5774edc43af853cbc1454521b6714e20dafc866a13c675c590f31e",
+  "helper_sha256": {
+    "repguard_unit_failure_diagnostic.py": "381dcd983ffe35d6c2260295d2adbe48e33d91550542d621e787bb163c1ab474"
+  }
+}

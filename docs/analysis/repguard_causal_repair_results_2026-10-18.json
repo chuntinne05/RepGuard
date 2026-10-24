@@ -1,0 +1,68 @@
+{
+  "run_id": "31ea9478aa9d2696ef401e46",
+  "scope": "Development mechanism experiment; NOT final confirmation or novelty proof",
+  "actual_new_calls": 112,
+  "mock_calls": 0,
+  "independently_recomputed_responses": 112,
+  "input_tokens": 474653,
+  "output_tokens": 23017,
+  "request_wall_seconds": 1334.205792494,
+  "diagnostic": {
+    "initial": {
+      "n": 8,
+      "hard_pass": 8,
+      "correct": 3
+    },
+    "oracle_evidence": {
+      "n": 8,
+      "hard_pass": 6,
+      "correct": 3
+    }
+  },
+  "fresh": {
+    "initial": {
+      "correct": 6,
+      "n": 24,
+      "rescue": 0,
+      "harm": 0,
+      "accepted_edits": 22,
+      "mean_serving_tokens": 4407.166666666667
+    },
+    "self_repair": {
+      "correct": 6,
+      "n": 24,
+      "rescue": 0,
+      "harm": 0,
+      "accepted_edits": 23,
+      "mean_serving_tokens": 9020.541666666666
+    },
+    "evidence_repair": {
+      "correct": 6,
+      "n": 24,
+      "rescue": 0,
+      "harm": 0,
+      "accepted_edits": 22,
+      "mean_serving_tokens": 9078.083333333334
+    },
+    "plan_repair": {
+      "correct": 6,
+      "n": 24,
+      "rescue": 0,
+      "harm": 0,
+      "accepted_edits": 21,
+      "mean_serving_tokens": 9063.708333333334
+    }
+  },
+  "initial_gate": {
+    "initial_correct": 6,
+    "n": 24,
+    "gate_pass": true
+  },
+  "headroom_gate": {
+    "oracle_union_correct": 6,
+    "best_fixed_correct": 6,
+    "union_rescues": 0,
+    "gate_pass": false,
+    "oracle_is_not_a_method": true
+  }
+}

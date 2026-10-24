@@ -1,0 +1,10 @@
+{
+  "scope": "Software check on preserved actual live response; NO new inference",
+  "original_live_id": "live-1f674e78085a4465a005bcd6ca5479b9",
+  "original_untrusted_display_value": "6906.39%",
+  "review_required_with_new_guard": true,
+  "reason": [
+    "percentage_scale_requires_review: explicit x100 plus percent display"
+  ],
+  "original_artifact_changed": false
+}
