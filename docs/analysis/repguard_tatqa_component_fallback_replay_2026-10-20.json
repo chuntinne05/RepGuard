@@ -1,0 +1,179 @@
+{
+  "scope": "Post-hoc all24 receiver replay of real model patches. Not new inference, independent confirmation, or learned reputation gain.",
+  "run_id": "746ca756961393ace1ad8c57",
+  "new_model_calls": 0,
+  "fixed_rule": "Try registered joint; if rejected choose valid permitted O, else E, else KEEP. Targets used only after selection for scoring.",
+  "correct": 16,
+  "n": 24,
+  "rows": [
+    {
+      "id": "3a302dbd-03bf-444b-8f1f-dcf7607e2665",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": false,
+      "value": 28.0,
+      "scale": "percent"
+    },
+    {
+      "id": "28958656-bd4d-417e-8c1e-3f07488a45aa",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": false,
+      "value": null,
+      "scale": "thousand"
+    },
+    {
+      "id": "2cc3d001-3758-41f6-9608-b034ea56c464",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": true,
+      "value": -1.5,
+      "scale": "percent"
+    },
+    {
+      "id": "6349e186-e6e7-40bf-98da-6a7592ea798c",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": true,
+      "value": 72.5,
+      "scale": "million"
+    },
+    {
+      "id": "7d8beb14-2862-4b15-9102-145f245a78b3",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": false,
+      "value": 95.70534,
+      "scale": "percent"
+    },
+    {
+      "id": "03c81011-5165-439a-ac47-4ec9cc33e967",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": true,
+      "value": 0.33122,
+      "scale": ""
+    },
+    {
+      "id": "457ddbe2-9555-4eba-a91c-89a3cdc32054",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": true,
+      "value": 36355.0,
+      "scale": "thousand"
+    },
+    {
+      "id": "2817d850-d1d8-4851-b2b1-6bb98aa7d1c1",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": true,
+      "value": 13.21555,
+      "scale": "percent"
+    },
+    {
+      "id": "bc43b597-d752-448b-924d-21543a3880ec",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": true,
+      "value": 23.2476,
+      "scale": "percent"
+    },
+    {
+      "id": "ad442ff4-97f8-404c-a802-55f1643e2583",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": true,
+      "value": 5384.0,
+      "scale": "million"
+    },
+    {
+      "id": "c4328c5f-8793-49a9-9a4d-b0be3930dbfa",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": true,
+      "value": 0.0,
+      "scale": "percent"
+    },
+    {
+      "id": "6acd42cd-49ad-480e-9b6d-8ddc8e15fe0c",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": true,
+      "value": -79.0,
+      "scale": "million"
+    },
+    {
+      "id": "b432b2c4-d9c6-4e7d-90ef-b128d5fa5728",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": true,
+      "value": 148.0,
+      "scale": "million"
+    },
+    {
+      "id": "8dc98f36-0579-49bc-83b5-be5a74d41908",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": true,
+      "value": 2.26582,
+      "scale": "percent"
+    },
+    {
+      "id": "2ba67b9a-9cf8-466f-81cc-b3cf0e3bec49",
+      "chosen_by_mechanical_rule": "operation",
+      "correct": true,
+      "value": 63.0,
+      "scale": "thousand"
+    },
+    {
+      "id": "de92ddd9-a57d-4b3f-8995-02e309da9ee5",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": true,
+      "value": -77.87894,
+      "scale": "percent"
+    },
+    {
+      "id": "e76f2a50-9981-4c74-8969-b2e1e9013519",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": true,
+      "value": -10.0,
+      "scale": "million"
+    },
+    {
+      "id": "28042ec5-d6a5-40e2-8c61-6ba2fb1194b5",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": false,
+      "value": null,
+      "scale": "thousand"
+    },
+    {
+      "id": "8b992296-0080-45ab-ace2-de7777b6d118",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": true,
+      "value": 655.0,
+      "scale": "thousand"
+    },
+    {
+      "id": "e1280d98-5529-4dd6-83c2-29460e38a76d",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": false,
+      "value": null,
+      "scale": ""
+    },
+    {
+      "id": "918c1037-ee49-4906-93d5-1517bfb17825",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": false,
+      "value": null,
+      "scale": "thousand"
+    },
+    {
+      "id": "8456e6cd-3a12-4508-83a6-38d3de604bee",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": true,
+      "value": 0.0,
+      "scale": ""
+    },
+    {
+      "id": "cca3062d-1636-446e-8dee-b19424e29c8d",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": false,
+      "value": null,
+      "scale": "million"
+    },
+    {
+      "id": "07799e79-f4e9-443c-8651-94d27c8553a1",
+      "chosen_by_mechanical_rule": "registered_joint",
+      "correct": false,
+      "value": -79.0,
+      "scale": "million"
+    }
+  ],
+  "primary_scores_unchanged": true
+}

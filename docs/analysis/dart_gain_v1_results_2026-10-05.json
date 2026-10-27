@@ -1,0 +1,701 @@
+{
+  "run_id": "834f51cc00d1f3b8e9766c0a",
+  "status": {
+    "run_id": "834f51cc00d1f3b8e9766c0a",
+    "state": "completed_review_required",
+    "completed": 305,
+    "total": 305,
+    "updated_at": "2026-10-05T05:41:05.209175+00:00",
+    "primary_signal_pass": false,
+    "primary": {
+      "Global": {
+        "mean_correct": 69.7,
+        "accuracy": 0.4148809523809524
+      },
+      "FactorRidge": {
+        "mean_correct": 71.6,
+        "accuracy": 0.4261904761904762
+      },
+      "SemanticRidge": {
+        "mean_correct": 68.5,
+        "accuracy": 0.40773809523809523
+      },
+      "TextRidge": {
+        "mean_correct": 68.6,
+        "accuracy": 0.4083333333333333
+      },
+      "DirectUtility": {
+        "mean_correct": 65.95,
+        "accuracy": 0.3925595238095238
+      },
+      "Selected": {
+        "mean_correct": 67.25,
+        "accuracy": 0.40029761904761907
+      },
+      "UniformAuditGlobal": {
+        "mean_correct": 69.7,
+        "accuracy": 0.4148809523809524
+      },
+      "PairedGlobal": {
+        "mean_correct": 71.95,
+        "accuracy": 0.4282738095238095
+      }
+    }
+  },
+  "r0": {
+    "methods": {
+      "Global": {
+        "mean_correct": 82.0,
+        "accuracy": 0.4880952380952381
+      },
+      "FactorRidge": {
+        "mean_correct": 82.0,
+        "accuracy": 0.4880952380952381
+      },
+      "SemanticRidge": {
+        "mean_correct": 74.0,
+        "accuracy": 0.44047619047619047
+      },
+      "TextRidge": {
+        "mean_correct": 76.0,
+        "accuracy": 0.4523809523809524
+      },
+      "DirectUtility": {
+        "mean_correct": 78.0,
+        "accuracy": 0.4642857142857143
+      },
+      "Selected": {
+        "mean_correct": 77.0,
+        "accuracy": 0.4583333333333333
+      }
+    },
+    "contrasts": {
+      "Global": {
+        "Global": {
+          "difference": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "rescues": 0.0,
+          "harms": 0.0
+        }
+      },
+      "FactorRidge": {
+        "Global": {
+          "difference": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "rescues": 0.0,
+          "harms": 0.0
+        }
+      },
+      "SemanticRidge": {
+        "Global": {
+          "difference": -0.047619047619047616,
+          "ci95": [
+            -0.10714285714285714,
+            0.0
+          ],
+          "rescues": 2.0,
+          "harms": 10.0
+        }
+      },
+      "TextRidge": {
+        "Global": {
+          "difference": -0.03571428571428571,
+          "ci95": [
+            -0.07142857142857142,
+            -0.005952380952380952
+          ],
+          "rescues": 0.0,
+          "harms": 6.0
+        }
+      },
+      "DirectUtility": {
+        "Global": {
+          "difference": -0.023809523809523808,
+          "ci95": [
+            -0.06547619047619048,
+            0.011904761904761904
+          ],
+          "rescues": 2.0,
+          "harms": 6.0
+        }
+      },
+      "Selected": {
+        "Global": {
+          "difference": -0.02976190476190476,
+          "ci95": [
+            -0.07142857142857142,
+            0.005952380952380952
+          ],
+          "rescues": 1.0,
+          "harms": 6.0
+        }
+      }
+    },
+    "switches_from_global": {
+      "Global": 0.0,
+      "FactorRidge": 0.0,
+      "SemanticRidge": 59.0,
+      "TextRidge": 26.0,
+      "DirectUtility": 34.0,
+      "Selected": 27.0
+    },
+    "primary_signal_pass": false,
+    "scope": "adaptive public-normal development, not independent confirmation"
+  },
+  "r1": {
+    "0.05": {
+      "methods": {
+        "Global": {
+          "mean_correct": 64.4,
+          "accuracy": 0.38333333333333336
+        },
+        "FactorRidge": {
+          "mean_correct": 66.5,
+          "accuracy": 0.3958333333333333
+        },
+        "SemanticRidge": {
+          "mean_correct": 64.75,
+          "accuracy": 0.3854166666666667
+        },
+        "TextRidge": {
+          "mean_correct": 65.55,
+          "accuracy": 0.39017857142857143
+        },
+        "DirectUtility": {
+          "mean_correct": 64.6,
+          "accuracy": 0.38452380952380955
+        },
+        "Selected": {
+          "mean_correct": 64.95,
+          "accuracy": 0.38660714285714287
+        },
+        "UniformAuditGlobal": {
+          "mean_correct": 64.4,
+          "accuracy": 0.38333333333333336
+        },
+        "PairedGlobal": {
+          "mean_correct": 62.15,
+          "accuracy": 0.3699404761904762
+        }
+      },
+      "contrasts": {
+        "Global": {
+          "UniformAuditGlobal": {
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "rescues": 0.0,
+            "harms": 0.0
+          },
+          "PairedGlobal": {
+            "difference": 0.013392857142857146,
+            "ci95": [
+              -0.011912202380952381,
+              0.03898809523809523
+            ],
+            "rescues": 23.6,
+            "harms": 21.35
+          }
+        },
+        "FactorRidge": {
+          "UniformAuditGlobal": {
+            "difference": 0.0125,
+            "ci95": [
+              0.002083333333333335,
+              0.023214285714285715
+            ],
+            "rescues": 6.1,
+            "harms": 4.0
+          },
+          "PairedGlobal": {
+            "difference": 0.02589285714285714,
+            "ci95": [
+              -0.003273809523809525,
+              0.05566220238095227
+            ],
+            "rescues": 25.65,
+            "harms": 21.3
+          }
+        },
+        "SemanticRidge": {
+          "UniformAuditGlobal": {
+            "difference": 0.0020833333333333324,
+            "ci95": [
+              -0.013690476190476189,
+              0.018452380952380956
+            ],
+            "rescues": 10.5,
+            "harms": 10.15
+          },
+          "PairedGlobal": {
+            "difference": 0.015476190476190477,
+            "ci95": [
+              -0.014293154761904764,
+              0.044642857142857144
+            ],
+            "rescues": 25.2,
+            "harms": 22.6
+          }
+        },
+        "TextRidge": {
+          "UniformAuditGlobal": {
+            "difference": 0.006845238095238094,
+            "ci95": [
+              -0.00505952380952381,
+              0.01904761904761905
+            ],
+            "rescues": 6.25,
+            "harms": 5.1
+          },
+          "PairedGlobal": {
+            "difference": 0.020238095238095236,
+            "ci95": [
+              -0.010119047619047618,
+              0.049404761904761896
+            ],
+            "rescues": 26.0,
+            "harms": 22.6
+          }
+        },
+        "DirectUtility": {
+          "UniformAuditGlobal": {
+            "difference": 0.0011904761904761908,
+            "ci95": [
+              -0.012797619047619047,
+              0.01517857142857143
+            ],
+            "rescues": 12.7,
+            "harms": 12.5
+          },
+          "PairedGlobal": {
+            "difference": 0.014583333333333334,
+            "ci95": [
+              -0.012499999999999997,
+              0.04047619047619048
+            ],
+            "rescues": 24.95,
+            "harms": 22.5
+          }
+        },
+        "Selected": {
+          "UniformAuditGlobal": {
+            "difference": 0.0032738095238095248,
+            "ci95": [
+              -0.006845238095238094,
+              0.013690476190476192
+            ],
+            "rescues": 5.4,
+            "harms": 4.85
+          },
+          "PairedGlobal": {
+            "difference": 0.016666666666666666,
+            "ci95": [
+              -0.00744047619047619,
+              0.04107142857142857
+            ],
+            "rescues": 24.75,
+            "harms": 21.95
+          }
+        }
+      },
+      "switches_from_global": {
+        "Global": 0.0,
+        "FactorRidge": 27.15,
+        "SemanticRidge": 62.6,
+        "TextRidge": 32.3,
+        "DirectUtility": 71.4,
+        "Selected": 33.9
+      },
+      "primary_signal_pass": false,
+      "scope": "adaptive public-normal development, not independent confirmation"
+    },
+    "0.1": {
+      "methods": {
+        "Global": {
+          "mean_correct": 69.7,
+          "accuracy": 0.4148809523809524
+        },
+        "FactorRidge": {
+          "mean_correct": 71.6,
+          "accuracy": 0.4261904761904762
+        },
+        "SemanticRidge": {
+          "mean_correct": 68.5,
+          "accuracy": 0.40773809523809523
+        },
+        "TextRidge": {
+          "mean_correct": 68.6,
+          "accuracy": 0.4083333333333333
+        },
+        "DirectUtility": {
+          "mean_correct": 65.95,
+          "accuracy": 0.3925595238095238
+        },
+        "Selected": {
+          "mean_correct": 67.25,
+          "accuracy": 0.40029761904761907
+        },
+        "UniformAuditGlobal": {
+          "mean_correct": 69.7,
+          "accuracy": 0.4148809523809524
+        },
+        "PairedGlobal": {
+          "mean_correct": 71.95,
+          "accuracy": 0.4282738095238095
+        }
+      },
+      "contrasts": {
+        "Global": {
+          "UniformAuditGlobal": {
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "rescues": 0.0,
+            "harms": 0.0
+          },
+          "PairedGlobal": {
+            "difference": -0.01339285714285714,
+            "ci95": [
+              -0.04226190476190476,
+              0.015186011904761801
+            ],
+            "rescues": 20.2,
+            "harms": 22.45
+          }
+        },
+        "FactorRidge": {
+          "UniformAuditGlobal": {
+            "difference": 0.01130952380952381,
+            "ci95": [
+              -0.0020833333333333346,
+              0.025297619047619048
+            ],
+            "rescues": 5.8,
+            "harms": 3.9
+          },
+          "PairedGlobal": {
+            "difference": -0.0020833333333333337,
+            "ci95": [
+              -0.02530505952380952,
+              0.020833333333333332
+            ],
+            "rescues": 20.0,
+            "harms": 20.35
+          }
+        },
+        "SemanticRidge": {
+          "UniformAuditGlobal": {
+            "difference": -0.007142857142857147,
+            "ci95": [
+              -0.02708333333333333,
+              0.013690476190476187
+            ],
+            "rescues": 9.5,
+            "harms": 10.7
+          },
+          "PairedGlobal": {
+            "difference": -0.020535714285714286,
+            "ci95": [
+              -0.05029761904761904,
+              0.007738095238095233
+            ],
+            "rescues": 19.85,
+            "harms": 23.3
+          }
+        },
+        "TextRidge": {
+          "UniformAuditGlobal": {
+            "difference": -0.006547619047619048,
+            "ci95": [
+              -0.02142857142857143,
+              0.008333333333333335
+            ],
+            "rescues": 5.9,
+            "harms": 7.0
+          },
+          "PairedGlobal": {
+            "difference": -0.019940476190476186,
+            "ci95": [
+              -0.04703125,
+              0.005357142857142859
+            ],
+            "rescues": 20.25,
+            "harms": 23.6
+          }
+        },
+        "DirectUtility": {
+          "UniformAuditGlobal": {
+            "difference": -0.02232142857142857,
+            "ci95": [
+              -0.04821428571428571,
+              0.0035714285714285718
+            ],
+            "rescues": 13.4,
+            "harms": 17.15
+          },
+          "PairedGlobal": {
+            "difference": -0.03571428571428571,
+            "ci95": [
+              -0.06904761904761905,
+              -0.0023809523809523816
+            ],
+            "rescues": 18.85,
+            "harms": 24.85
+          }
+        },
+        "Selected": {
+          "UniformAuditGlobal": {
+            "difference": -0.014583333333333334,
+            "ci95": [
+              -0.03571428571428571,
+              0.006257440476190369
+            ],
+            "rescues": 9.85,
+            "harms": 12.3
+          },
+          "PairedGlobal": {
+            "difference": -0.027976190476190477,
+            "ci95": [
+              -0.05505952380952381,
+              -0.0020833333333333337
+            ],
+            "rescues": 19.2,
+            "harms": 23.9
+          }
+        }
+      },
+      "switches_from_global": {
+        "Global": 0.0,
+        "FactorRidge": 29.85,
+        "SemanticRidge": 57.75,
+        "TextRidge": 35.15,
+        "DirectUtility": 86.75,
+        "Selected": 60.95
+      },
+      "primary_signal_pass": false,
+      "scope": "adaptive public-normal development, not independent confirmation"
+    },
+    "0.2": {
+      "methods": {
+        "Global": {
+          "mean_correct": 75.15,
+          "accuracy": 0.4473214285714286
+        },
+        "FactorRidge": {
+          "mean_correct": 75.85,
+          "accuracy": 0.45148809523809524
+        },
+        "SemanticRidge": {
+          "mean_correct": 73.65,
+          "accuracy": 0.43839285714285714
+        },
+        "TextRidge": {
+          "mean_correct": 74.8,
+          "accuracy": 0.4452380952380952
+        },
+        "DirectUtility": {
+          "mean_correct": 69.45,
+          "accuracy": 0.4133928571428571
+        },
+        "Selected": {
+          "mean_correct": 73.3,
+          "accuracy": 0.4363095238095238
+        },
+        "UniformAuditGlobal": {
+          "mean_correct": 75.15,
+          "accuracy": 0.4473214285714286
+        },
+        "PairedGlobal": {
+          "mean_correct": 76.7,
+          "accuracy": 0.45654761904761904
+        }
+      },
+      "contrasts": {
+        "Global": {
+          "UniformAuditGlobal": {
+            "difference": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "rescues": 0.0,
+            "harms": 0.0
+          },
+          "PairedGlobal": {
+            "difference": -0.009226190476190475,
+            "ci95": [
+              -0.02023809523809524,
+              0.001488095238095238
+            ],
+            "rescues": 13.05,
+            "harms": 14.6
+          }
+        },
+        "FactorRidge": {
+          "UniformAuditGlobal": {
+            "difference": 0.004166666666666667,
+            "ci95": [
+              0.00029761904761904754,
+              0.008630952380952382
+            ],
+            "rescues": 1.15,
+            "harms": 0.45
+          },
+          "PairedGlobal": {
+            "difference": -0.005059523809523809,
+            "ci95": [
+              -0.01636904761904762,
+              0.005654761904761905
+            ],
+            "rescues": 13.0,
+            "harms": 13.85
+          }
+        },
+        "SemanticRidge": {
+          "UniformAuditGlobal": {
+            "difference": -0.00892857142857143,
+            "ci95": [
+              -0.023809523809523808,
+              0.005357142857142856
+            ],
+            "rescues": 7.5,
+            "harms": 9.0
+          },
+          "PairedGlobal": {
+            "difference": -0.018154761904761903,
+            "ci95": [
+              -0.03571428571428571,
+              -0.001488095238095239
+            ],
+            "rescues": 14.0,
+            "harms": 17.05
+          }
+        },
+        "TextRidge": {
+          "UniformAuditGlobal": {
+            "difference": -0.0020833333333333324,
+            "ci95": [
+              -0.01666666666666667,
+              0.0125
+            ],
+            "rescues": 6.35,
+            "harms": 6.7
+          },
+          "PairedGlobal": {
+            "difference": -0.011309523809523811,
+            "ci95": [
+              -0.02946428571428571,
+              0.006249999999999999
+            ],
+            "rescues": 14.15,
+            "harms": 16.05
+          }
+        },
+        "DirectUtility": {
+          "UniformAuditGlobal": {
+            "difference": -0.03392857142857143,
+            "ci95": [
+              -0.06279761904761905,
+              -0.0056547619047619055
+            ],
+            "rescues": 13.1,
+            "harms": 18.8
+          },
+          "PairedGlobal": {
+            "difference": -0.043154761904761904,
+            "ci95": [
+              -0.07261904761904761,
+              -0.013690476190476189
+            ],
+            "rescues": 14.2,
+            "harms": 21.45
+          }
+        },
+        "Selected": {
+          "UniformAuditGlobal": {
+            "difference": -0.011011904761904761,
+            "ci95": [
+              -0.02946428571428571,
+              0.007738095238095238
+            ],
+            "rescues": 7.4,
+            "harms": 9.25
+          },
+          "PairedGlobal": {
+            "difference": -0.02023809523809524,
+            "ci95": [
+              -0.04136904761904762,
+              0.0005952380952380951
+            ],
+            "rescues": 14.4,
+            "harms": 17.8
+          }
+        }
+      },
+      "switches_from_global": {
+        "Global": 0.0,
+        "FactorRidge": 4.05,
+        "SemanticRidge": 52.1,
+        "TextRidge": 35.75,
+        "DirectUtility": 96.15,
+        "Selected": 49.55
+      },
+      "primary_signal_pass": false,
+      "scope": "adaptive public-normal development, not independent confirmation"
+    }
+  },
+  "selection_counts": {
+    "0.05": {
+      "FactorRidge": 23,
+      "SemanticRidge": 21,
+      "Global": 30,
+      "DirectUtility": 20,
+      "TextRidge": 6
+    },
+    "0.1": {
+      "DirectUtility": 32,
+      "Global": 23,
+      "SemanticRidge": 25,
+      "FactorRidge": 11,
+      "TextRidge": 9
+    },
+    "0.2": {
+      "SemanticRidge": 20,
+      "DirectUtility": 22,
+      "FactorRidge": 9,
+      "Global": 26,
+      "TextRidge": 23
+    }
+  },
+  "source_sha256": {
+    "infra/modal/gain_core.py": "f62f985ff49cc0b9cc918398275e97c1c435cb06870d7b7d86ca8767deac8459",
+    "infra/modal/gain_pipeline.py": "d009f212e363483904f371594e3a62c275e1c1f64f92b9bb4043e49caa3c43df",
+    "infra/modal/gain_modal.py": "a31b3a7e2e4e1a6375de6c7c90b9e69da47e5d20aaa1df69f930b7b8346566d3",
+    "infra/modal/neural_core.py": "d0ea9758527012856403d5ef32d25645f9b6c35c43785edc9e18070d692690b1",
+    "infra/modal/neural_pipeline.py": "710dc6dc1e705dad323be403f2ed8f571be65de764fc21d037450ec0433aeea0",
+    "run_dart_gain.py": "ab70c9a79125bcd8aebe0f222cb39a4ac7ad42a1b827451b571528ad986e6168",
+    "docs/analysis/dart_gain_v1_protocol_2026-10-05.md": "97b2a1b41ae59bb08c4956eab0d2bf06b67d7ecc2c1f7834f971c00f612f3779"
+  },
+  "parent_run_id": "32fc82877693697cb45f7d49",
+  "verification": {
+    "case_checksums": 305,
+    "uniform_controls": 300,
+    "inner_outer_group_isolation": true,
+    "all_summaries_recomputed": true
+  },
+  "self_test": {
+    "synthetic_rescue_accuracy": 1.0,
+    "deterministic": true,
+    "constant_control": true
+  }
+}

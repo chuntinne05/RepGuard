@@ -1,0 +1,2030 @@
+{
+  "scope": "Reserved future IDs only; not a run, not outcome analysis, not official FinQA test split",
+  "dataset": "FinQA public TRAIN at pinned revision0f16e2867befa6840783e58be38c9efb9229d742",
+  "dataset_sha256": "49f237eb9779b569473b26b08048867d04635a7cc39ad6a7a5664c55bb428db6",
+  "total_train_report_keys": 741,
+  "previous_live_reports_excluded": 124,
+  "archive_hash_count": 200,
+  "archive_matched_reports_excluded": 0,
+  "union_seen_reports_excluded": 124,
+  "eligible_report_count": 617,
+  "selection": "SHA256 report and question with fixed20261019 salts; one question per company/year report; no outcome-based selection",
+  "splits": {
+    "confirmation": [
+      {
+        "id": "APTV/2013/page_48.pdf-2",
+        "report": "APTV/2013",
+        "question_sha256": "34272ac34381e6bb0785a95ed8f18fb8c89a3d715f8c142d81e0c6c77207cc66"
+      },
+      {
+        "id": "JKHY/2016/page_61.pdf-1",
+        "report": "JKHY/2016",
+        "question_sha256": "c0ffa2f91be8e3b67a43c569d22d6498e0c4567a63f91baf9fe14bfc570548bd"
+      },
+      {
+        "id": "SNPS/2006/page_67.pdf-4",
+        "report": "SNPS/2006",
+        "question_sha256": "c02f0273bf37ee63e964cd6f4d030aad2731790af282a40aa111bdeb5838cd02"
+      },
+      {
+        "id": "D/2002/page_39.pdf-3",
+        "report": "D/2002",
+        "question_sha256": "e0894c477556ec532240c828f9aede906bbfa17ff809c1c4da9187a933d70d45"
+      },
+      {
+        "id": "IPG/2016/page_24.pdf-2",
+        "report": "IPG/2016",
+        "question_sha256": "b137f6585003c765428af88ad09ac3a85029e63893c5bc9b64a2e687bc5283ee"
+      },
+      {
+        "id": "RCL/2018/page_38.pdf-1",
+        "report": "RCL/2018",
+        "question_sha256": "f13fe7cc15bcb028ab079489c147fb4d9e96e4936f7bb8ecf3b9aab1234f1f8b"
+      },
+      {
+        "id": "APD/2016/page_117.pdf-1",
+        "report": "APD/2016",
+        "question_sha256": "eaffbe9f31d788f8611174d2c1b17aba0158bcef86bbbcdcc8c5ba33cad4a981"
+      },
+      {
+        "id": "AAPL/2012/page_64.pdf-2",
+        "report": "AAPL/2012",
+        "question_sha256": "dbbb337af9f8c9e3bc9ef386755653c8bf456ce6f4f3bab482f13f55f356edc4"
+      },
+      {
+        "id": "RE/2013/page_109.pdf-4",
+        "report": "RE/2013",
+        "question_sha256": "ca2e74c7efbde7cac185e53e80a5154178c6adbf42c60679e3fdca390cdddc4e"
+      },
+      {
+        "id": "ADI/2007/page_82.pdf-2",
+        "report": "ADI/2007",
+        "question_sha256": "57039512d06937170afd603eafbf931fb3b76a574795abfbf291cf7292ae46f4"
+      },
+      {
+        "id": "SYY/2006/page_68.pdf-1",
+        "report": "SYY/2006",
+        "question_sha256": "dbe9b2aaf3af7faca0b51e4bd45f16ec982ed5c266b61b5e81a8aecfa8c7da69"
+      },
+      {
+        "id": "PM/2018/page_108.pdf-2",
+        "report": "PM/2018",
+        "question_sha256": "eadfee9d90876958825102f2e397744a0119cff246fe5e4305626baad2c067f2"
+      },
+      {
+        "id": "SNA/2012/page_84.pdf-2",
+        "report": "SNA/2012",
+        "question_sha256": "8d5cdfee14b262199633eb7631b2e94544ba3141edc427e1163710b4a7eaab7c"
+      },
+      {
+        "id": "BLK/2009/page_98.pdf-3",
+        "report": "BLK/2009",
+        "question_sha256": "3390f2350eebfeffa94ab80df9ffcdb24c2b81392eb76908bedfeb64aca6b6e5"
+      },
+      {
+        "id": "UNP/2014/page_24.pdf-4",
+        "report": "UNP/2014",
+        "question_sha256": "f92706ecb88de2e947152048de3c63bd41582aedcdda7053fff464297bd429d3"
+      },
+      {
+        "id": "ILMN/2006/page_92.pdf-2",
+        "report": "ILMN/2006",
+        "question_sha256": "e18c3940322e5f499eeee7adee83a1dae83f00bc7a635801573a4db42fc117e7"
+      },
+      {
+        "id": "MSI/2016/page_88.pdf-2",
+        "report": "MSI/2016",
+        "question_sha256": "42e7cd51717ad26421d61d4d303b3463acf2eaaf718064da0a5ac975db18cea0"
+      },
+      {
+        "id": "AMAT/2017/page_33.pdf-3",
+        "report": "AMAT/2017",
+        "question_sha256": "4989b5e4b8d3794ede74598915b99f0496a86094b154041c87fb426b40c4c07a"
+      },
+      {
+        "id": "AAPL/2014/page_78.pdf-2",
+        "report": "AAPL/2014",
+        "question_sha256": "8b6f9af0f5731e9387e54c9174f999e5991748fa855c04562210b51b31e6753d"
+      },
+      {
+        "id": "CDNS/2016/page_76.pdf-2",
+        "report": "CDNS/2016",
+        "question_sha256": "dba7393cb4d3f4e0af863f9698e4808a79a238f19241bde36a44e3a908f255bb"
+      },
+      {
+        "id": "IP/2015/page_83.pdf-2",
+        "report": "IP/2015",
+        "question_sha256": "503646928535af544c4fce073b4558173a3beeefaac852605e7be225a362795c"
+      },
+      {
+        "id": "SNPS/2017/page_99.pdf-1",
+        "report": "SNPS/2017",
+        "question_sha256": "2755cbea5f682fc8bc3257938c06e90223005073de362424b9e980f521b1386b"
+      },
+      {
+        "id": "STT/2011/page_94.pdf-3",
+        "report": "STT/2011",
+        "question_sha256": "a344622f82c987837b44bacde7ba20b69c8e19d6968cbbb791c4d26cee56fdcc"
+      },
+      {
+        "id": "EMR/2018/page_55.pdf-4",
+        "report": "EMR/2018",
+        "question_sha256": "e3c132b004757690ec91a22460a1cfc0ea2aeef5aa09af9169d4388750aacd9c"
+      },
+      {
+        "id": "V/2008/page_165.pdf-2",
+        "report": "V/2008",
+        "question_sha256": "3b817e57672e187e26758cd8f9cd33a26fc36519213674dd0b00c96001884305"
+      },
+      {
+        "id": "NWS/2016/page_148.pdf-1",
+        "report": "NWS/2016",
+        "question_sha256": "7554a82ecb7712b371f654612bf8343dc5610b26c934e30338829087c2953be7"
+      },
+      {
+        "id": "HII/2018/page_124.pdf-3",
+        "report": "HII/2018",
+        "question_sha256": "eb48228c658fbcdf18d3766e402195d14c1ea41204076892832ff3417e6f69eb"
+      },
+      {
+        "id": "APD/2013/page_44.pdf-2",
+        "report": "APD/2013",
+        "question_sha256": "7f4581213b7db1500e951df1b45a1a51a1171d84ed3ac4f8226941189afaa2a6"
+      },
+      {
+        "id": "RE/2016/page_40.pdf-2",
+        "report": "RE/2016",
+        "question_sha256": "97e304b4d6929c1160a87df140542fc94d9ae43d1dd19471f9c4c3c70900f31b"
+      },
+      {
+        "id": "TXN/2017/page_55.pdf-1",
+        "report": "TXN/2017",
+        "question_sha256": "ab24e5f73e829423e3948092f5b34d10272bcbbba81df22f6fdada8dd6c1e110"
+      },
+      {
+        "id": "IPG/2014/page_36.pdf-3",
+        "report": "IPG/2014",
+        "question_sha256": "8ce3eff7992f474ef2148abf36aa706ed1056bbc2af0910a02e5170b9d14051f"
+      },
+      {
+        "id": "JPM/2009/page_55.pdf-1",
+        "report": "JPM/2009",
+        "question_sha256": "de7393ee5a50c83bc138a6a3bf9822553e1c3a480e7d0c9b29e846ba9f9672e6"
+      },
+      {
+        "id": "CNC/2005/page_39.pdf-4",
+        "report": "CNC/2005",
+        "question_sha256": "3bc523dfd989ab7b00a3cea57d3713bbf6951ce0886b54230d624fcf6996f9c7"
+      },
+      {
+        "id": "ALXN/2016/page_89.pdf-2",
+        "report": "ALXN/2016",
+        "question_sha256": "a63444485e9e064c00bc7143de54521746bff765bb78d10adea867fc1fbc396f"
+      },
+      {
+        "id": "ADBE/2014/page_70.pdf-4",
+        "report": "ADBE/2014",
+        "question_sha256": "279689209c1c2e14b78d02ecaa1696718ec0b550ab7e88aefea4bdd92846705e"
+      },
+      {
+        "id": "KIM/2006/page_67.pdf-1",
+        "report": "KIM/2006",
+        "question_sha256": "5a4dce8eb10ced27365664cf4fdd8e32d2759a7992e9d5aa1a970ddb7004bf83"
+      },
+      {
+        "id": "FTV/2017/page_17.pdf-2",
+        "report": "FTV/2017",
+        "question_sha256": "c129d5fe7209d117163195eaab7b90c45981001bcfdd5cfd800231186bebcf95"
+      },
+      {
+        "id": "MAS/2013/page_27.pdf-2",
+        "report": "MAS/2013",
+        "question_sha256": "e46b025e3b6448b42255d62c6c27dbbcda9a6833fae98c6a6c69ef3a59ee0490"
+      },
+      {
+        "id": "SNPS/2013/page_61.pdf-1",
+        "report": "SNPS/2013",
+        "question_sha256": "92eaa5fc146951c70cd8b603323d63a24a316cf54d91a59fa5fa4d9241bb6088"
+      },
+      {
+        "id": "MMM/2007/page_58.pdf-1",
+        "report": "MMM/2007",
+        "question_sha256": "f24e4bcf0bf43d46d39c098d6aa3ed170be849ef838ed9b0cd2e42d1700cf8b0"
+      },
+      {
+        "id": "DISCA/2011/page_35.pdf-1",
+        "report": "DISCA/2011",
+        "question_sha256": "9bac215d527e22d76aa420ebd815dc56a80a4e9ea276f940ef23e81c70e4f26c"
+      },
+      {
+        "id": "UPS/2017/page_111.pdf-4",
+        "report": "UPS/2017",
+        "question_sha256": "e06187bc354c9d649b07ecc6a69e9369e6ae3bc10cbcccc1d4d6dcd1970fc49d"
+      },
+      {
+        "id": "JPM/2017/page_145.pdf-1",
+        "report": "JPM/2017",
+        "question_sha256": "5574044d88a2034e57057ab9cc1db2beeec059a24ba08d811b4f2dcba2c1507c"
+      },
+      {
+        "id": "APTV/2018/page_36.pdf-1",
+        "report": "APTV/2018",
+        "question_sha256": "62dd52bc0b8fdb62eb8121dc0b71507ec6a940ab6e3e4496da714d9bed8070f7"
+      },
+      {
+        "id": "TROW/2008/page_23.pdf-3",
+        "report": "TROW/2008",
+        "question_sha256": "c804aaefc381820f38ba35d03dfeb7e084b94472d8105309068f1b337fae1ea7"
+      },
+      {
+        "id": "MSI/2005/page_64.pdf-1",
+        "report": "MSI/2005",
+        "question_sha256": "982ae98908b84545599596a296da48343576dda421ef1a0007c4aa7110578926"
+      },
+      {
+        "id": "HII/2014/page_133.pdf-2",
+        "report": "HII/2014",
+        "question_sha256": "12680f21eb1a4d823aa04fbc5dac7a8e118767ebff6aa4a27381354232285ee2"
+      },
+      {
+        "id": "STT/2012/page_42.pdf-3",
+        "report": "STT/2012",
+        "question_sha256": "8136ff3b00d9afabeb2bfc764c1065b2d9559120618c1496e24bc0bdc2db73e3"
+      },
+      {
+        "id": "HUM/2007/page_18.pdf-1",
+        "report": "HUM/2007",
+        "question_sha256": "d96d1db879ff38eef94bf866590db0b5fb329396aff08db0d3ac25b78515bc56"
+      },
+      {
+        "id": "CE/2010/page_134.pdf-1",
+        "report": "CE/2010",
+        "question_sha256": "e19f35e925cfacb9fd03cd5334641ef538f8812597ebdde34f54019ef2b1d590"
+      },
+      {
+        "id": "GS/2012/page_129.pdf-3",
+        "report": "GS/2012",
+        "question_sha256": "a7c86db1129b90aeee80d0869448b0b23b00e669a2fb905d094772d0b5415f99"
+      },
+      {
+        "id": "RL/2015/page_9.pdf-1",
+        "report": "RL/2015",
+        "question_sha256": "f01b95ebf5a6c0b385442408128c6a7d465f34de42ce6a174c31d2c84a50ebb4"
+      },
+      {
+        "id": "HIG/2011/page_195.pdf-3",
+        "report": "HIG/2011",
+        "question_sha256": "710d932459b3a10e189176ec1a250863cdc5a2b268dd5ddac2f94b913e2c8763"
+      },
+      {
+        "id": "KIM/2009/page_145.pdf-1",
+        "report": "KIM/2009",
+        "question_sha256": "b5115e1cbfcabe346dacc589e7c7be4e20c266096126f3c960dc0f64341bec34"
+      },
+      {
+        "id": "EL/2013/page_137.pdf-1",
+        "report": "EL/2013",
+        "question_sha256": "0951de8714595e30c8688d15bc35ac899a407abd58e5cc13c528c3c52cb00d0c"
+      },
+      {
+        "id": "ADBE/2011/page_116.pdf-3",
+        "report": "ADBE/2011",
+        "question_sha256": "b1c7025042e5e714c30f933a199eb4013f4cbe37becee9ac447098b2033d45d8"
+      },
+      {
+        "id": "RCL/2008/page_19.pdf-1",
+        "report": "RCL/2008",
+        "question_sha256": "ecb8fa1b131c54e7dfcb566fbaa9a38bcc034ce3113e81a90b791743eeade6db"
+      },
+      {
+        "id": "AAPL/2018/page_23.pdf-3",
+        "report": "AAPL/2018",
+        "question_sha256": "a2d2e2207c1799de37a60e800b5cb86118735c4956f4839d892fbcdbff30f16b"
+      },
+      {
+        "id": "BLK/2008/page_75.pdf-1",
+        "report": "BLK/2008",
+        "question_sha256": "944cf9a8006e1917fdcf89a754aab068f597623758f6a2b5a16a38ca468f1afb"
+      },
+      {
+        "id": "RSG/2018/page_139.pdf-2",
+        "report": "RSG/2018",
+        "question_sha256": "da862e1a719370847223d8e8e4cefb367698764a4fcaeeb56f643444e4b3f1ec"
+      },
+      {
+        "id": "ETFC/2007/page_116.pdf-3",
+        "report": "ETFC/2007",
+        "question_sha256": "f2a890dbf1d44061b4e7d8de8c784fd0c6b3dac186bdd9a56d40255a87db1a68"
+      },
+      {
+        "id": "IPG/2009/page_89.pdf-3",
+        "report": "IPG/2009",
+        "question_sha256": "e427ae7d4e11d15ae8da2a28bcad03e033108ba1ec04aa73dbd6cb9c0d854c51"
+      },
+      {
+        "id": "INTC/2018/page_50.pdf-2",
+        "report": "INTC/2018",
+        "question_sha256": "268b96bb1eeddec61cbfd6c1dc5531bfc1a8931f12fb7c4c520e123673a92440"
+      },
+      {
+        "id": "STT/2014/page_69.pdf-3",
+        "report": "STT/2014",
+        "question_sha256": "ef74ce81cd44a8bd5ee7ab8335516ebdc4e4b5105a39c1c9943ef6e52f12b6e6"
+      },
+      {
+        "id": "ETFC/2011/page_23.pdf-1",
+        "report": "ETFC/2011",
+        "question_sha256": "593d193163e648083ca07a9f01141047ce148b022ceddbd3882cd4fd0d61d223"
+      },
+      {
+        "id": "ABMD/2015/page_93.pdf-3",
+        "report": "ABMD/2015",
+        "question_sha256": "4dda59992947d2635dec942b6ae33493fcfb3a0109e782783f1c3b4aecd8f19d"
+      },
+      {
+        "id": "CMCSA/2004/page_30.pdf-4",
+        "report": "CMCSA/2004",
+        "question_sha256": "dac13ef20cafc80145fa4912b0200fb54ef16186047436e4219c6a5e504d0236"
+      },
+      {
+        "id": "NKE/2015/page_37.pdf-4",
+        "report": "NKE/2015",
+        "question_sha256": "78510b6e9a47d1aab4f725cd79be57f2bd810d196b657680ddd67ffcc5b107a6"
+      },
+      {
+        "id": "UNP/2013/page_78.pdf-1",
+        "report": "UNP/2013",
+        "question_sha256": "d1651afb6b4c194e9ed3d8987bd715ef5b3c3cbe94740912edcaa77a1dd8869f"
+      },
+      {
+        "id": "GS/2018/page_165.pdf-4",
+        "report": "GS/2018",
+        "question_sha256": "e611256288d29c1f59f45d1df7a6d1a72f2777e4b736e1b8f30102b7f812674e"
+      },
+      {
+        "id": "IP/2007/page_32.pdf-3",
+        "report": "IP/2007",
+        "question_sha256": "53ee140428b53d803ad77ea8a2ac35a2805bf822259322485271fbb9838cf6f3"
+      },
+      {
+        "id": "GPN/2017/page_30.pdf-2",
+        "report": "GPN/2017",
+        "question_sha256": "32d40e30fccd41d2ac1a08636856d7490668305d82799a308b7a52d36a311b02"
+      },
+      {
+        "id": "FIS/2017/page_92.pdf-4",
+        "report": "FIS/2017",
+        "question_sha256": "3d9a19586d2afe454de39a85e3a8cfe28ff0c02282916b1888a47e08a9528b23"
+      },
+      {
+        "id": "HOLX/2011/page_142.pdf-3",
+        "report": "HOLX/2011",
+        "question_sha256": "ddaa2b1e251f09b10c652ccdd23a479be8e785ced1e5c7fe61069db06b84367a"
+      },
+      {
+        "id": "EXPD/2017/page_30.pdf-2",
+        "report": "EXPD/2017",
+        "question_sha256": "f750d8171f3545aa13b23558ec2751b6de3d1ff707cad3b76a8acc9c34669a9a"
+      },
+      {
+        "id": "ETR/2002/page_266.pdf-1",
+        "report": "ETR/2002",
+        "question_sha256": "83e9e28b7867f1f4d44cf29ee04dd8bbb1d454d564e1fb32c0e2b3b9539e03ff"
+      },
+      {
+        "id": "AAPL/2008/page_76.pdf-2",
+        "report": "AAPL/2008",
+        "question_sha256": "1b8e58ee3ff027cbe339159a72b923b5371cc959e7fedac869033e798370b710"
+      },
+      {
+        "id": "RCL/2006/page_37.pdf-2",
+        "report": "RCL/2006",
+        "question_sha256": "e3ac5e2b32a37d6b912b6df9a1dae3c3d38306d65b350ff8918d1e3839c627e4"
+      },
+      {
+        "id": "MRO/2003/page_65.pdf-2",
+        "report": "MRO/2003",
+        "question_sha256": "2e2713edcb75c37669a6b4d53ea09601f3f48c45afdc9e14eb33e910173d1b83"
+      },
+      {
+        "id": "NKE/2009/page_81.pdf-1",
+        "report": "NKE/2009",
+        "question_sha256": "34754f7ebbb0eeee853272088bbb42d942ca473ba0c2925151ccf644995159b4"
+      },
+      {
+        "id": "RCL/2016/page_37.pdf-1",
+        "report": "RCL/2016",
+        "question_sha256": "f560d81a3d33e4b55949e6c99738872ce7905aa65c4cdeb2b421f362b06f7190"
+      },
+      {
+        "id": "MS/2013/page_240.pdf-2",
+        "report": "MS/2013",
+        "question_sha256": "2858d3b36a3c3a039faa364e3bd13713d34e2755570d9846a21bee802322fa44"
+      },
+      {
+        "id": "CE/2009/page_35.pdf-1",
+        "report": "CE/2009",
+        "question_sha256": "134c222481fd4cf1587047d9ece0011272dce8ef48b960fbad7fa73bcb8f5d04"
+      },
+      {
+        "id": "AES/2012/page_223.pdf-1",
+        "report": "AES/2012",
+        "question_sha256": "a201fc153e60fe251d885edd932300daea294ebdcaa7ac8744109072308d9bb5"
+      },
+      {
+        "id": "UPS/2013/page_56.pdf-3",
+        "report": "UPS/2013",
+        "question_sha256": "168e259e8dc54874ece0ec58bb0af39d35052dddd7f6652aca5828b9ed147072"
+      },
+      {
+        "id": "GPN/2016/page_69.pdf-2",
+        "report": "GPN/2016",
+        "question_sha256": "6198f6e5553e7bd5dba1b5b9a083ef9496094a37e79867776901f44f2d66db3e"
+      },
+      {
+        "id": "PNC/2014/page_110.pdf-2",
+        "report": "PNC/2014",
+        "question_sha256": "5af4fe0a7787d89e07815ca4ad1a6ec1f50659682b2819e41bf2de55e46d464a"
+      },
+      {
+        "id": "APD/2017/page_37.pdf-2",
+        "report": "APD/2017",
+        "question_sha256": "9e44e142e4e18a2f80633abe99bbafd251aabf3983b7702b070dfc9259ec0952"
+      },
+      {
+        "id": "CAT/2017/page_136.pdf-3",
+        "report": "CAT/2017",
+        "question_sha256": "84e489f65fea44aaa6b3d48cbbf2da22952ba170afbb25866fbaccd6dc40d4dc"
+      },
+      {
+        "id": "RSG/2012/page_124.pdf-2",
+        "report": "RSG/2012",
+        "question_sha256": "0c35f8497da0a3257257b0af53565e8f15fce54c3ac6a8662352ca51d6be612d"
+      },
+      {
+        "id": "RE/2010/page_138.pdf-1",
+        "report": "RE/2010",
+        "question_sha256": "33844d0a3aca48336ef10eeb10f1c99dc9d1aa7b7ec8a276b07784e27c914660"
+      },
+      {
+        "id": "RL/2010/page_11.pdf-2",
+        "report": "RL/2010",
+        "question_sha256": "4983565805df5be5f87e857252cf361d75c6ce9690dcb229081509c71c9d7927"
+      },
+      {
+        "id": "VLO/2011/page_25.pdf-2",
+        "report": "VLO/2011",
+        "question_sha256": "97b47486c5c51636ea3ccc747057f5a5cb19b8cc952d537d95b77c92cb97bea4"
+      },
+      {
+        "id": "RE/2015/page_148.pdf-2",
+        "report": "RE/2015",
+        "question_sha256": "519207f9d5db5bb515f146540da3fd85f7173509f63b22cefe8cbda27b93608a"
+      },
+      {
+        "id": "MAS/2018/page_73.pdf-1",
+        "report": "MAS/2018",
+        "question_sha256": "4cc6c4cd62f7a40bd95b895fdd558ba0f61f0bd86de74ccfd60d424bcc6833f1"
+      },
+      {
+        "id": "HUM/2005/page_18.pdf-4",
+        "report": "HUM/2005",
+        "question_sha256": "a6abac4ecb32e40d48c1c87cb7c33fee8f38f1c4d40f8b661408502f5ecfe40d"
+      },
+      {
+        "id": "AWK/2017/page_136.pdf-2",
+        "report": "AWK/2017",
+        "question_sha256": "f0be8cc382280e3f2ad87f7deb937fc6a23dcf835823c0b006ac3df78823d8a9"
+      },
+      {
+        "id": "DVN/2014/page_112.pdf-2",
+        "report": "DVN/2014",
+        "question_sha256": "4542ded2448a974fe532e679f422528cfed1ca76badd952a914ebc5fab67428f"
+      },
+      {
+        "id": "RSG/2005/page_55.pdf-1",
+        "report": "RSG/2005",
+        "question_sha256": "a5f56b6b1d2b601274930af27514221f0dd3533f2d53cabaefc5eb0995210ef1"
+      },
+      {
+        "id": "SPGI/2018/page_54.pdf-1",
+        "report": "SPGI/2018",
+        "question_sha256": "c7214d6882a83f955951a0dc8573f857cc2afb7e9c3577d39b7e8e6e482a7232"
+      },
+      {
+        "id": "JKHY/2015/page_20.pdf-2",
+        "report": "JKHY/2015",
+        "question_sha256": "5c66fbdc6040b3317da8ff0f4131b8057f42b55af3fdaad24e9c8913ae62dc6c"
+      },
+      {
+        "id": "HII/2013/page_127.pdf-4",
+        "report": "HII/2013",
+        "question_sha256": "d36ad570bcc242c28d2b2c8ead3449771be1e00506dea7e59bb561b8fd56f5f6"
+      },
+      {
+        "id": "AAP/2016/page_96.pdf-1",
+        "report": "AAP/2016",
+        "question_sha256": "7aa7e38f252c6fc5bbbd208e4fa9689d8d70469de5b995fb17d9b756fbecfb34"
+      },
+      {
+        "id": "EW/2013/page_83.pdf-2",
+        "report": "EW/2013",
+        "question_sha256": "7402bbb4c2754c970aa9b401091fa09c7b04743e7570a19725b1a8b6a4772cdd"
+      },
+      {
+        "id": "JKHY/2017/page_61.pdf-2",
+        "report": "JKHY/2017",
+        "question_sha256": "4a23d5455fc2a34b2b98180538338f633fe49797b23a48901cc0bce74b419148"
+      },
+      {
+        "id": "IP/2014/page_65.pdf-1",
+        "report": "IP/2014",
+        "question_sha256": "4bda666ba2c86a92c56b1f79459d60fc20d57bae23a5caebcd01519e31dc2c08"
+      },
+      {
+        "id": "SYY/2011/page_35.pdf-2",
+        "report": "SYY/2011",
+        "question_sha256": "46ec8244f97bf3e8d47d51126966cd15390b1e3aa716103edcb3d07c6ed101f0"
+      },
+      {
+        "id": "DG/2009/page_87.pdf-2",
+        "report": "DG/2009",
+        "question_sha256": "46cb1aed5da3c23e64f84d043e667e531b2bf3009861afe1640c20b30cd467f7"
+      },
+      {
+        "id": "ZBH/2003/page_42.pdf-2",
+        "report": "ZBH/2003",
+        "question_sha256": "64f7c9eeb81913f4ba7edcce727d774dcfa131fb82fe58b18db506d514e2ee56"
+      },
+      {
+        "id": "GIS/2014/page_25.pdf-2",
+        "report": "GIS/2014",
+        "question_sha256": "e726e7ab5c5ce1139672b2c2c6ec33336cf19fe4094bd3f865c347bffb86a96c"
+      },
+      {
+        "id": "ZBH/2017/page_50.pdf-1",
+        "report": "ZBH/2017",
+        "question_sha256": "e73b8f450e70b64e92598ac735659413524f2e3390695ae7b05e114d114f9e9c"
+      },
+      {
+        "id": "IP/2018/page_50.pdf-2",
+        "report": "IP/2018",
+        "question_sha256": "d800898a9990d413ab0c862d06348f46c2e137206b81e2a03e90518ef6bdc46b"
+      },
+      {
+        "id": "JKHY/2008/page_30.pdf-5",
+        "report": "JKHY/2008",
+        "question_sha256": "cc4d7a3a0f45f5c1a216b400e2c067a61dca5f964e4cc657752a048108680883"
+      },
+      {
+        "id": "INTC/2013/page_71.pdf-1",
+        "report": "INTC/2013",
+        "question_sha256": "20a750a1cbdffcf2b934d1794fbed111b49a24343e77e37aa6a1356738ac5663"
+      },
+      {
+        "id": "TSCO/2017/page_73.pdf-1",
+        "report": "TSCO/2017",
+        "question_sha256": "75f1e528b3ec3a66989571be0148d354f23c0913bff14c3850ee3c59e7d2e5b9"
+      },
+      {
+        "id": "HIG/2016/page_250.pdf-2",
+        "report": "HIG/2016",
+        "question_sha256": "03f4a6b4a6e3fd5771f890fde63b94f43163dff8a6bffd4772ad0161ebfd4438"
+      },
+      {
+        "id": "MRO/2013/page_49.pdf-1",
+        "report": "MRO/2013",
+        "question_sha256": "2e4ad3e35cc9637a0c767cb49b59558c9a6d349e2879e7d861b64337508869bf"
+      },
+      {
+        "id": "RCL/2013/page_18.pdf-2",
+        "report": "RCL/2013",
+        "question_sha256": "f2ddce8590b67d13819f8d2862ad53ff5317b8fa5d4e5fc0ff63254fe685b2d8"
+      },
+      {
+        "id": "AAL/2018/page_13.pdf-2",
+        "report": "AAL/2018",
+        "question_sha256": "38e5b2a98918f9077f4d9351005c2dbbe8cbc42dee022efadd22f709523ddf95"
+      },
+      {
+        "id": "PPG/2003/page_45.pdf-2",
+        "report": "PPG/2003",
+        "question_sha256": "b4a8b5e72c3756a374cbc47cf089c042d84fa0a70f0ac61ce07f42cb0fd4d505"
+      },
+      {
+        "id": "HOLX/2009/page_153.pdf-4",
+        "report": "HOLX/2009",
+        "question_sha256": "2c6f378a4c41fe9c447e16823d7c0218ca3ce7e84455d92de76ba0a4acc7b648"
+      },
+      {
+        "id": "PKG/2018/page_66.pdf-2",
+        "report": "PKG/2018",
+        "question_sha256": "2f8e0438d5559657d74e384bd0cf1e734c4128abf5f809c7ad2349ad5662939d"
+      },
+      {
+        "id": "L/2008/page_120.pdf-2",
+        "report": "L/2008",
+        "question_sha256": "b2a1c40df2810ef51b58cfd4a2c0dcb2c63022039e1c083cc8bb7727016f1b67"
+      },
+      {
+        "id": "IPG/2012/page_44.pdf-2",
+        "report": "IPG/2012",
+        "question_sha256": "553316359ed6b97a4da7332a24b88bc9355cf16772204e3b65196a7e83d51d7a"
+      },
+      {
+        "id": "CNC/2006/page_37.pdf-1",
+        "report": "CNC/2006",
+        "question_sha256": "07c7a48444112e6de0b590f771ce82c7f92cd379d3b8fd93ec089cdd6a29ce2f"
+      },
+      {
+        "id": "LMT/2010/page_24.pdf-1",
+        "report": "LMT/2010",
+        "question_sha256": "679c5f2b01177cdb70cef61a7d6a215a442dcebd2d9d91eb2ce091f8857501c3"
+      },
+      {
+        "id": "AAPL/2010/page_43.pdf-2",
+        "report": "AAPL/2010",
+        "question_sha256": "54782637a74acb80adec115534a05afabd7d3038428d007cfd770eacb4a12b9a"
+      },
+      {
+        "id": "C/2009/page_41.pdf-2",
+        "report": "C/2009",
+        "question_sha256": "bbc72b43ee131bc23b5f865c10f952a341a64dddcd881444553467526ab1b3df"
+      },
+      {
+        "id": "PNC/2018/page_45.pdf-3",
+        "report": "PNC/2018",
+        "question_sha256": "51652956d920ac9f2ace497eae15e5859a0f793cfef70be30a48d106a363ddee"
+      },
+      {
+        "id": "RCL/2012/page_80.pdf-3",
+        "report": "RCL/2012",
+        "question_sha256": "78c5ec26c11a277db32ee358b05db2c7e0eb7dc2be2734216b10d4d8b94bf1d3"
+      },
+      {
+        "id": "MSI/2013/page_87.pdf-1",
+        "report": "MSI/2013",
+        "question_sha256": "bdc8d9de2bbe1eaff18f559e4b94225c90a120e4c02149577068a2f0655b1aa7"
+      },
+      {
+        "id": "VLO/2018/page_99.pdf-1",
+        "report": "VLO/2018",
+        "question_sha256": "1752adc829cedc41c6b7e7c98629758c9dfc2d03df4e663b75e27b2c578f315c"
+      },
+      {
+        "id": "MRO/2009/page_137.pdf-3",
+        "report": "MRO/2009",
+        "question_sha256": "da9f11c3ad219f238cc746a85ddbcb8daaa046033dd90c2c58dae3645a968b83"
+      },
+      {
+        "id": "DRE/2010/page_41.pdf-1",
+        "report": "DRE/2010",
+        "question_sha256": "b38a2edf5e307684487ee8217dc3938239cd32135b03d709860b19a92381079a"
+      },
+      {
+        "id": "MAS/2010/page_29.pdf-2",
+        "report": "MAS/2010",
+        "question_sha256": "51dc1f8ac148fab17aeb84f1b2dbd2918e6a965fac901c25a250d7b5607d8820"
+      },
+      {
+        "id": "IP/2005/page_31.pdf-3",
+        "report": "IP/2005",
+        "question_sha256": "e550e6661f6cccd2c76d64d623422d2d702d40a929493edeba9cafb8e3bc1620"
+      },
+      {
+        "id": "INTC/2016/page_100.pdf-1",
+        "report": "INTC/2016",
+        "question_sha256": "fdb86b8c1c69babbb9001a5e8994eb495aac009a8cf8ef60220081cc7074c9df"
+      },
+      {
+        "id": "BLK/2012/page_32.pdf-3",
+        "report": "BLK/2012",
+        "question_sha256": "8c6724d8fc5cd17fe84c9572e0aa61e3bcfb10fc8dc9602d7ed4c110af1af6f5"
+      },
+      {
+        "id": "HOLX/2006/page_103.pdf-1",
+        "report": "HOLX/2006",
+        "question_sha256": "323c38142ecfea4072838c2014dd33fd9b048b2183a6bffd0a8a9e6462bdd2fc"
+      },
+      {
+        "id": "UPS/2009/page_84.pdf-2",
+        "report": "UPS/2009",
+        "question_sha256": "f0b77614bac99352ef7446e5be80fb28ddc42f15003ea47c6323deb3b9de9da6"
+      },
+      {
+        "id": "PNC/2011/page_183.pdf-6",
+        "report": "PNC/2011",
+        "question_sha256": "3f2f3d4991b1f7ad371bb9f6203d8968f9adf4b10696727b446361468c7f73ad"
+      },
+      {
+        "id": "SLG/2013/page_133.pdf-3",
+        "report": "SLG/2013",
+        "question_sha256": "3b88ab90a2f5d0bef62ea20f2a661ee0e417d237e7950a92ce6c00077cd53ac7"
+      },
+      {
+        "id": "ADBE/2018/page_54.pdf-3",
+        "report": "ADBE/2018",
+        "question_sha256": "b0d8e5fdd016ba2760b9c3f066262a629c024a01b807e9c2e840253da446e65b"
+      },
+      {
+        "id": "FIS/2007/page_52.pdf-1",
+        "report": "FIS/2007",
+        "question_sha256": "18b5a9b5ea39ad675bae27f52b579c8553650714f6f6d95d11230f1cc1a6684c"
+      },
+      {
+        "id": "NCLH/2018/page_69.pdf-1",
+        "report": "NCLH/2018",
+        "question_sha256": "f20933dd37f4a71225e69b70539e1ca229adcaf13562f35feee6dbab3cd01dc6"
+      },
+      {
+        "id": "AMT/2005/page_84.pdf-2",
+        "report": "AMT/2005",
+        "question_sha256": "db8b10bc177458cbbc8f8fa06f18687b1d159efaccb5b00dac6edbca2acf9f13"
+      },
+      {
+        "id": "C/2015/page_46.pdf-1",
+        "report": "C/2015",
+        "question_sha256": "545a5773c4969027e6b8e31b18c8b78dd6e9e9e94c3b838fe675450bf3858acd"
+      },
+      {
+        "id": "RE/2006/page_31.pdf-3",
+        "report": "RE/2006",
+        "question_sha256": "2f0c33393290ca40e96a34821962e0282e6a3c252b932d04e87a838f08b05569"
+      },
+      {
+        "id": "APD/2014/page_36.pdf-1",
+        "report": "APD/2014",
+        "question_sha256": "f1bbd977a53365abef56e30496f88b48362b45010917f292b53cc46ff440ba8d"
+      },
+      {
+        "id": "AON/2013/page_32.pdf-1",
+        "report": "AON/2013",
+        "question_sha256": "96378bf107546932fecbc94976d3a05ce83245b6f98121d8030d5c4270c456b2"
+      }
+    ],
+    "calibration": [
+      {
+        "id": "HUM/2018/page_46.pdf-4",
+        "report": "HUM/2018",
+        "question_sha256": "d6a7da3f04dbec58069b8e4894f595a57573cd17b8e44a4363ac668345e9a79f"
+      },
+      {
+        "id": "ALLE/2015/page_81.pdf-1",
+        "report": "ALLE/2015",
+        "question_sha256": "95ff7763adbf9bb4d2782ac9c4dbc28b8c13bde2306a6dc1ae7adb2eda6c710d"
+      },
+      {
+        "id": "BKR/2018/page_105.pdf-2",
+        "report": "BKR/2018",
+        "question_sha256": "0244f50c2c95bafbae0fa3aa9f517a627a96849321bae43f60ffdf910d4637b1"
+      },
+      {
+        "id": "HIG/2014/page_126.pdf-1",
+        "report": "HIG/2014",
+        "question_sha256": "7ce0736d9220c134cf696c713533ef654544a41ac6eb2f957b403f1055d1d9a3"
+      },
+      {
+        "id": "APD/2019/page_108.pdf-2",
+        "report": "APD/2019",
+        "question_sha256": "f72d6421238e2ef6641b3c4ceefacd4fc5ee32925ccd043934fc263d8845c75b"
+      },
+      {
+        "id": "PPG/2018/page_20.pdf-1",
+        "report": "PPG/2018",
+        "question_sha256": "f4f7dbd753eb3fe8cc9dab990dccf707fc439ceaec506ee9008025d232177e05"
+      },
+      {
+        "id": "BLK/2010/page_46.pdf-2",
+        "report": "BLK/2010",
+        "question_sha256": "0d90adda5c5454ba9f70eb4caa9ec10d822839876be75e28d1bf648bafc38ced"
+      },
+      {
+        "id": "AMT/2015/page_50.pdf-3",
+        "report": "AMT/2015",
+        "question_sha256": "5b69862d0bd1d599d0747fe2140aa969900a03a5176220fb5f65afd244d0f5a9"
+      },
+      {
+        "id": "DISCA/2018/page_39.pdf-2",
+        "report": "DISCA/2018",
+        "question_sha256": "ec4879f793793653541e0cf1debe853961f4c1314661c885a85f68d8b732f961"
+      },
+      {
+        "id": "MS/2017/page_57.pdf-2",
+        "report": "MS/2017",
+        "question_sha256": "95d37cf405ea01810ccf9b87bbad639bd331c5dbaa9debc051abe4b0156ad4e9"
+      },
+      {
+        "id": "SLB/2011/page_41.pdf-1",
+        "report": "SLB/2011",
+        "question_sha256": "466419a249228815003f89365c743f853c51806c8a37a9d7c1e2f357da3677a9"
+      },
+      {
+        "id": "BKNG/2018/page_34.pdf-1",
+        "report": "BKNG/2018",
+        "question_sha256": "ef66b2da40ea8d38efeafd416790c86d23faa3b6d491ff871a4fd01b41df4963"
+      },
+      {
+        "id": "CDW/2013/page_103.pdf-3",
+        "report": "CDW/2013",
+        "question_sha256": "1bba4c3653d48a833d07e8a98efbe3e046bb06cdb88a0072329c04bdfda9c5e9"
+      },
+      {
+        "id": "HST/2007/page_62.pdf-1",
+        "report": "HST/2007",
+        "question_sha256": "05007ff9b9f3f4b40ede644e5ff4b342491ec2c910b21fa38d6b7c61e699acc0"
+      },
+      {
+        "id": "ECL/2017/page_85.pdf-4",
+        "report": "ECL/2017",
+        "question_sha256": "269c1d3fabd3cc1919bbb9bf572eba13d32a15f050bb90fe804e5b6b4aa9b461"
+      },
+      {
+        "id": "GS/2013/page_47.pdf-1",
+        "report": "GS/2013",
+        "question_sha256": "b4e1c445efe2dfe5f0ca6238355e4ad2a3fece1545e10744a3d7ceee0b7bb937"
+      },
+      {
+        "id": "CME/2017/page_99.pdf-6",
+        "report": "CME/2017",
+        "question_sha256": "3b924f0a5f258d4a1a9350a0ccc2cda66f2b484e4a54cc9b43e0d93041772e61"
+      },
+      {
+        "id": "V/2012/page_28.pdf-2",
+        "report": "V/2012",
+        "question_sha256": "ab201239213ebd1f6939dd9f8dab940dcba98cefe13d0a1d80a60b1f11d2eea7"
+      },
+      {
+        "id": "VRTX/2006/page_101.pdf-1",
+        "report": "VRTX/2006",
+        "question_sha256": "932227c3b60f657114a4613a40de237255092020147b32cf40d6483dc505541d"
+      },
+      {
+        "id": "VNO/2012/page_190.pdf-2",
+        "report": "VNO/2012",
+        "question_sha256": "b69800c727d6fdfd0a558b2327c365ac0dd7af484aafb45f0642efefc1736deb"
+      },
+      {
+        "id": "GPN/2010/page_92.pdf-1",
+        "report": "GPN/2010",
+        "question_sha256": "a702bea4942fa3f6d633d8a6f1bcbe212281799c57e2e266db57e7d897605ea2"
+      },
+      {
+        "id": "HUM/2016/page_133.pdf-2",
+        "report": "HUM/2016",
+        "question_sha256": "e2c5d09f1cb76dfb18d89e9b1a412ca5e147fc68715838d58d6ec355b0d67fb4"
+      },
+      {
+        "id": "SLB/2006/page_45.pdf-3",
+        "report": "SLB/2006",
+        "question_sha256": "f43dc77331cf45bca7c8ce53d566a74015351f9173c38ee4a8e87c805c138608"
+      },
+      {
+        "id": "LMT/2013/page_45.pdf-3",
+        "report": "LMT/2013",
+        "question_sha256": "086cb4138ba289b91f1ecc4303679d9df27ec3b83edebe8beb49e2837c366b0e"
+      },
+      {
+        "id": "RCL/2017/page_38.pdf-1",
+        "report": "RCL/2017",
+        "question_sha256": "fe87376d519dc9ea85eae620a1a77cb67f811c54e93a4382c730ea8465eb814a"
+      },
+      {
+        "id": "CDNS/2006/page_42.pdf-2",
+        "report": "CDNS/2006",
+        "question_sha256": "4d1a6264a59dd8bf44478237105960682c185ce4eafda6d7f8e5be4a013eb16b"
+      },
+      {
+        "id": "V/2013/page_110.pdf-1",
+        "report": "V/2013",
+        "question_sha256": "d86900d996620a010d0cc7ca1b42bbe3b1ef926a20f2e18734bf35249aec5c39"
+      },
+      {
+        "id": "JPM/2015/page_92.pdf-3",
+        "report": "JPM/2015",
+        "question_sha256": "85085e7c2d339cd667500bf13c1dc29749e246d81f01c5cf41da0469b4f8ae16"
+      },
+      {
+        "id": "TROW/2009/page_24.pdf-4",
+        "report": "TROW/2009",
+        "question_sha256": "612730531e5944ce9927805f4218c8ac87e41908d15727b9a6a7dc247df4cd5e"
+      },
+      {
+        "id": "ABMD/2018/page_112.pdf-4",
+        "report": "ABMD/2018",
+        "question_sha256": "482a6103351bf451a1afd5d0af200a7b3ae6246459ae2e68741209ad9e6413ba"
+      },
+      {
+        "id": "HWM/2016/page_53.pdf-1",
+        "report": "HWM/2016",
+        "question_sha256": "456f3ac96a78fa2040b01d4fc404c50d76d5b82cfa698e174c2963589f47bcf0"
+      },
+      {
+        "id": "CB/2008/page_216.pdf-2",
+        "report": "CB/2008",
+        "question_sha256": "74cbdfcb00152b18035355fa9b0076609ad98f7377ea716abc65126dc9dd2929"
+      },
+      {
+        "id": "AMAT/2014/page_37.pdf-3",
+        "report": "AMAT/2014",
+        "question_sha256": "7c454ba913e0e7f62253caa8e1a40e6cced4517fd4c2c64adca262fbb6178e43"
+      },
+      {
+        "id": "LMT/2015/page_55.pdf-3",
+        "report": "LMT/2015",
+        "question_sha256": "5dcaa66cfa79336d8c1fcd08ae2dce95bd93a4f1f97dfb55078e10c23e8b40a4"
+      },
+      {
+        "id": "CB/2009/page_220.pdf-1",
+        "report": "CB/2009",
+        "question_sha256": "c3d1534968176f2e366e6b344efbf420a3f3bc4e0151705800966dd6dd2f644f"
+      },
+      {
+        "id": "HUM/2017/page_45.pdf-3",
+        "report": "HUM/2017",
+        "question_sha256": "585bcdc9b2bbdd363ff5ce2f8dd0528ae6a6b10a8900c415e03000b897c7996e"
+      },
+      {
+        "id": "RE/2012/page_31.pdf-2",
+        "report": "RE/2012",
+        "question_sha256": "b895f08f9ac3452c21c77069f366f5b50f59581a0dbec5ed03bd7483690a05e7"
+      },
+      {
+        "id": "PPG/2015/page_40.pdf-4",
+        "report": "PPG/2015",
+        "question_sha256": "aa7a94370d8a8de313e44a95957eb1fdfda76a0d43481783fae52cacf308faca"
+      },
+      {
+        "id": "HUM/2004/page_78.pdf-2",
+        "report": "HUM/2004",
+        "question_sha256": "4267117ad7bbc3c7ebdba970ae4cc1f76b0435ced0a121deb2f0bdd93541bc0d"
+      },
+      {
+        "id": "CME/2012/page_42.pdf-1",
+        "report": "CME/2012",
+        "question_sha256": "d257d15caab042b19237e1edc911a5c3f26dc83523f128465c7b913b476ad93d"
+      },
+      {
+        "id": "RL/2016/page_9.pdf-1",
+        "report": "RL/2016",
+        "question_sha256": "1fc442e640c756faaa0d3b25fa9f9d1d7ff1c0c28c655e52fddf6904c1e8951d"
+      },
+      {
+        "id": "IP/2009/page_25.pdf-2",
+        "report": "IP/2009",
+        "question_sha256": "f02cd312a12c0003e7fbb07639ede7cc8ac027d7f23133e5f366b50fcf2b07f7"
+      },
+      {
+        "id": "SNPS/2009/page_59.pdf-1",
+        "report": "SNPS/2009",
+        "question_sha256": "5fc23595d3d725500af38744485806a05714402684cfabf7fca27890be929fd5"
+      },
+      {
+        "id": "MSI/2018/page_32.pdf-1",
+        "report": "MSI/2018",
+        "question_sha256": "aab096aa7d4ac04bececd2b7db8e948cc9c07c32beb1816e1bb5d1d459c8fe2f"
+      },
+      {
+        "id": "WMT/2018/page_15.pdf-1",
+        "report": "WMT/2018",
+        "question_sha256": "185a4ea1fdc75de5382114f8a2577ef88c5aeba4fcb759d5178c792134cb76db"
+      },
+      {
+        "id": "IP/2016/page_52.pdf-1",
+        "report": "IP/2016",
+        "question_sha256": "c996d4b0c90578299f3e3fb0e38343f60d55ef340a7ccc4b2353f6872c2f9eed"
+      },
+      {
+        "id": "AWK/2018/page_141.pdf-2",
+        "report": "AWK/2018",
+        "question_sha256": "520805048f8e8afbfc6d3833dc162d49bed12ab974dc018422f5e7e22ff4ee2f"
+      },
+      {
+        "id": "EL/2009/page_112.pdf-2",
+        "report": "EL/2009",
+        "question_sha256": "3dcd59ba2e110effe92271fbc6468fb2df8ed7cc54ea1f0fb285a6defc0bec60"
+      },
+      {
+        "id": "IPG/2003/page_89.pdf-2",
+        "report": "IPG/2003",
+        "question_sha256": "d68b32b20eb699713d479574d69450ce414fe5cdcda720af2297c235828539ce"
+      },
+      {
+        "id": "ABC/2005/page_40.pdf-1",
+        "report": "ABC/2005",
+        "question_sha256": "8f9490de47d2580eec913c0ead36f7e385dc477fed4143a7b536d7f9f5a3da34"
+      }
+    ],
+    "development": [
+      {
+        "id": "MSI/2007/page_102.pdf-2",
+        "report": "MSI/2007",
+        "question_sha256": "495389de996a5f2243f06c695252931e1fd873812e593473154dfa14445cdf5d"
+      },
+      {
+        "id": "HOLX/2008/page_128.pdf-1",
+        "report": "HOLX/2008",
+        "question_sha256": "7281c4b11afffbd134d7e7c6edce824d8825613f76763a136bb42246a53414f8"
+      },
+      {
+        "id": "AMAT/2013/page_35.pdf-1",
+        "report": "AMAT/2013",
+        "question_sha256": "3a47b37f2082550ee98c93aa724f7c2b3b68549a8cf3b4e255a40d48a39bd65b"
+      },
+      {
+        "id": "APD/2018/page_54.pdf-2",
+        "report": "APD/2018",
+        "question_sha256": "9c48955a34fe320a4e1795a8c36c1ea4a4d5bda7ee229924f014a68c4fe68e06"
+      },
+      {
+        "id": "FBHS/2017/page_48.pdf-2",
+        "report": "FBHS/2017",
+        "question_sha256": "e92ca7a7f4095f7b372de1ca97bc74b53a5219337e04d5b0bd935f406f77ee28"
+      },
+      {
+        "id": "ANSS/2008/page_85.pdf-2",
+        "report": "ANSS/2008",
+        "question_sha256": "93823f2bfd3c075c768fc565908aa6c922a24ebdc839568ce562986da9021f4d"
+      },
+      {
+        "id": "PPG/2010/page_45.pdf-3",
+        "report": "PPG/2010",
+        "question_sha256": "edc92107b8799a9da76cc22f3f2fdb876154b301bf2bc3f2d4205f56d79f2aeb"
+      },
+      {
+        "id": "EW/2004/page_51.pdf-1",
+        "report": "EW/2004",
+        "question_sha256": "243ce87be636235c9136e3b08c497b0d417da57ca51c82f4155e55ae5c4b55ae"
+      },
+      {
+        "id": "STT/2007/page_65.pdf-4",
+        "report": "STT/2007",
+        "question_sha256": "11392367e6203b5265ccf5b9d3bd86a0ecae866d22ac3efe806515ae1a40afa5"
+      },
+      {
+        "id": "CAT/2018/page_38.pdf-3",
+        "report": "CAT/2018",
+        "question_sha256": "f5b267bd5e6faed03be0e2063902548d48b572b5555300a0cf1b4fcb8ebf631e"
+      },
+      {
+        "id": "SLG/2012/page_87.pdf-2",
+        "report": "SLG/2012",
+        "question_sha256": "fbbac8f53b62d516d4d385055275e441ee9ef3d642470516cf761c48bddc9814"
+      },
+      {
+        "id": "FRT/2006/page_133.pdf-2",
+        "report": "FRT/2006",
+        "question_sha256": "1f2b7eaeec36b5843cbe6dfcef044310bc26525e875ccbbadde944c412c75ec2"
+      },
+      {
+        "id": "AOS/2010/page_23.pdf-1",
+        "report": "AOS/2010",
+        "question_sha256": "9db0a96017e752eeb916baf68407e2ac7cac70b683a1ad8ab4f0ba5b1733633a"
+      },
+      {
+        "id": "TMUS/2016/page_32.pdf-2",
+        "report": "TMUS/2016",
+        "question_sha256": "811c51c3b3bc65967488d71cccf7e018262d54dea50f9210de07cbb5c297402f"
+      },
+      {
+        "id": "IQV/2018/page_106.pdf-1",
+        "report": "IQV/2018",
+        "question_sha256": "f9163c777d7e95181117c585f9f9a53ff8accb9505d89d523570176c86e73463"
+      },
+      {
+        "id": "SNPS/2003/page_39.pdf-1",
+        "report": "SNPS/2003",
+        "question_sha256": "e4f414022745be94af3ed400611bae0545d52584cccec32b35db255d8bb88742"
+      },
+      {
+        "id": "JPM/2018/page_150.pdf-3",
+        "report": "JPM/2018",
+        "question_sha256": "d8eb1e668a28a9e012e4c0ad1908d0f9fa122aaec7ab467ee44a5844fd002e08"
+      },
+      {
+        "id": "UNP/2015/page_76.pdf-3",
+        "report": "UNP/2015",
+        "question_sha256": "8319d8f4274276a86efd89ed6d67860ef37453094605806f94a961030aa04269"
+      },
+      {
+        "id": "MKTX/2009/page_79.pdf-2",
+        "report": "MKTX/2009",
+        "question_sha256": "7772d3fcfadaad211edc0ec8c73261c1e6a058a7d4c2ee3270283af900c676b4"
+      },
+      {
+        "id": "UA/2009/page_63.pdf-2",
+        "report": "UA/2009",
+        "question_sha256": "d97cf29a74a9ee6ce403a5e89ebeff8a1e4a99740ca83ca9777a111e9aff2fb9"
+      },
+      {
+        "id": "SWKS/2010/page_105.pdf-1",
+        "report": "SWKS/2010",
+        "question_sha256": "8db3d1eed85c4cf05eb1a8af648202bd9ded3a4c88ef8464871a8500dd598141"
+      },
+      {
+        "id": "DRE/2012/page_34.pdf-1",
+        "report": "DRE/2012",
+        "question_sha256": "aed843a25355280811881b62d0893a59efb6e3a57c69b282ac01a559bda7a560"
+      },
+      {
+        "id": "CDW/2015/page_53.pdf-2",
+        "report": "CDW/2015",
+        "question_sha256": "8fa2ca1921dc2d8d429603fc7870204b192162b9919fa1b2993b30785afb370e"
+      },
+      {
+        "id": "BLK/2015/page_35.pdf-1",
+        "report": "BLK/2015",
+        "question_sha256": "f2e0cd78c63bf5845440ab5aeecb816dbc2eef3a38024da943168693af6c0d80"
+      },
+      {
+        "id": "L/2007/page_213.pdf-3",
+        "report": "L/2007",
+        "question_sha256": "5ae2c004765ad388a1c002d9247b0b26df8d5c180512f2534cb6ef4eb609d4d6"
+      },
+      {
+        "id": "AES/2010/page_225.pdf-4",
+        "report": "AES/2010",
+        "question_sha256": "7b6b4d0ce43d0d06d92a36a3b02c30612b18b16d5429bdd36bf4120f2b770411"
+      },
+      {
+        "id": "KHC/2017/page_21.pdf-1",
+        "report": "KHC/2017",
+        "question_sha256": "4eb33c6659ff9f191dc55012d4fc3bff76f532d484c6b1792ced6595f610c9ac"
+      },
+      {
+        "id": "HII/2015/page_124.pdf-1",
+        "report": "HII/2015",
+        "question_sha256": "db88a25432de4be200c5f511aeaee263fdea369ff4369fe653ca2770206e262c"
+      },
+      {
+        "id": "PNC/2012/page_96.pdf-2",
+        "report": "PNC/2012",
+        "question_sha256": "c843e9514ae52ecbf13c8a905dc2e458ce84d3843f61ad571bdf92c4079b619d"
+      },
+      {
+        "id": "ADBE/1999/page_33.pdf-1",
+        "report": "ADBE/1999",
+        "question_sha256": "c741c298126324e3b401ff62f085776cf294b099ff6b287f0451d7d011e2aa16"
+      },
+      {
+        "id": "IP/2012/page_58.pdf-3",
+        "report": "IP/2012",
+        "question_sha256": "b55d0018258524acad8b385332391f3ca007172023705f8de2584ef14d7ea202"
+      },
+      {
+        "id": "EOG/2018/page_98.pdf-1",
+        "report": "EOG/2018",
+        "question_sha256": "def5fd195a56ffe5e4d7225565e7460de9f3063cdb5b61a4778eef014832abe7"
+      },
+      {
+        "id": "PPG/2013/page_76.pdf-1",
+        "report": "PPG/2013",
+        "question_sha256": "a5a6743c6d3136920854b23d3f7f2efa4cbed5a0922c25179e2f2d09bd73b619"
+      },
+      {
+        "id": "HUM/2010/page_101.pdf-2",
+        "report": "HUM/2010",
+        "question_sha256": "075facf1f7be1c8e1a57cba8ac6b087f3c0d16a4289f7df82a8e7030f8526cd7"
+      },
+      {
+        "id": "CE/2007/page_125.pdf-1",
+        "report": "CE/2007",
+        "question_sha256": "da935db559435e2ee3010d85a64cbedd88438ea0538ee429c0fb7aa8897a9ef2"
+      },
+      {
+        "id": "AAP/2007/page_83.pdf-2",
+        "report": "AAP/2007",
+        "question_sha256": "3810e63e6a5fc7f1acff64ea83be1f1c6442161f69d50b127a54fb3196a5d8d4"
+      },
+      {
+        "id": "ORLY/2017/page_30.pdf-4",
+        "report": "ORLY/2017",
+        "question_sha256": "a8b1672a3ceca2dccba0ba1cad6b2d5e116f62b22dc5b51396236f07aa5a0d79"
+      },
+      {
+        "id": "ABMD/2011/page_33.pdf-1",
+        "report": "ABMD/2011",
+        "question_sha256": "37cf2fbaa3f7309827cb502938cd090fdd90483fd960fba3b14ae26b1997a741"
+      },
+      {
+        "id": "GRMN/2007/page_76.pdf-1",
+        "report": "GRMN/2007",
+        "question_sha256": "4ea5028f35a39333fcf8cb597382725797662300204ec01973efba1d297ff3cf"
+      },
+      {
+        "id": "MS/2015/page_200.pdf-2",
+        "report": "MS/2015",
+        "question_sha256": "7de14dac0d2760e287f52a4a9cfa04bacdabd9de16b09a77673c935e8c2daf88"
+      },
+      {
+        "id": "HIG/2013/page_212.pdf-1",
+        "report": "HIG/2013",
+        "question_sha256": "14f2b84fcc291e178b95599105e6d52677459b96c16d95148b8aea16cb15bb86"
+      },
+      {
+        "id": "NCLH/2016/page_84.pdf-1",
+        "report": "NCLH/2016",
+        "question_sha256": "471ebda760be9869282d45422287f8f1169675c329e6fb52818f92d75473c0ce"
+      },
+      {
+        "id": "LMT/2007/page_37.pdf-4",
+        "report": "LMT/2007",
+        "question_sha256": "adfeddda74baf287e959608550bd79d005a573f1e0adcc6136b666df31db909b"
+      },
+      {
+        "id": "HIG/2012/page_132.pdf-1",
+        "report": "HIG/2012",
+        "question_sha256": "56a294741d2376643bdbd82ee3704f9198b96d4df223c8a0f840c3649b3bf075"
+      },
+      {
+        "id": "AWK/2013/page_12.pdf-1",
+        "report": "AWK/2013",
+        "question_sha256": "df88ccca5a5c5b087771f4c67333639e926341e451272d4021bd72a18bdb8cbf"
+      },
+      {
+        "id": "ADI/2019/page_71.pdf-1",
+        "report": "ADI/2019",
+        "question_sha256": "565a8ab760835a5b69cece92648b8dfcb2c74aa29ff0f2fedd9d5324a969c3bd"
+      },
+      {
+        "id": "MSI/2006/page_39.pdf-1",
+        "report": "MSI/2006",
+        "question_sha256": "d718449e95eeb296d891c9396aba8bfd26779e76f723da857b8dfef9066503ae"
+      },
+      {
+        "id": "CE/2016/page_88.pdf-1",
+        "report": "CE/2016",
+        "question_sha256": "0c7a86f74a418990f9bfdc5c9eb19a09029d73580bf05719df3bf79d99c04569"
+      },
+      {
+        "id": "RE/2017/page_41.pdf-1",
+        "report": "RE/2017",
+        "question_sha256": "cbf7a0dfbb948868189c8f2b0b6b2baa6ee1596ef9d5152b0a2b7bacea2ab106"
+      },
+      {
+        "id": "AAL/2014/page_80.pdf-3",
+        "report": "AAL/2014",
+        "question_sha256": "d033b00c87ee7b76e8dbab7aa7747bbfd958ddcacca4c4ed65525f2b57d49c33"
+      },
+      {
+        "id": "C/2008/page_105.pdf-4",
+        "report": "C/2008",
+        "question_sha256": "8f210f6c92855327ff1938697ce0e53640d08c733b6eb9c39b944cbf3b203bbf"
+      },
+      {
+        "id": "AAL/2016/page_37.pdf-1",
+        "report": "AAL/2016",
+        "question_sha256": "e8fe06182f0812f79b3e68af68595f679770a8820015d90ba4cf7cd8f7198627"
+      },
+      {
+        "id": "UAA/2017/page_86.pdf-2",
+        "report": "UAA/2017",
+        "question_sha256": "f3d0e1cd098fbc1f5e77ce574c3bff58f5c1183cd4c4e5f1e8b489e574512815"
+      },
+      {
+        "id": "UNP/2006/page_55.pdf-2",
+        "report": "UNP/2006",
+        "question_sha256": "1b52ffb23f770f790cfac09a2b34cc8dbdcf43b1582fbda5ba4b30afc329eae9"
+      },
+      {
+        "id": "FIS/2012/page_30.pdf-2",
+        "report": "FIS/2012",
+        "question_sha256": "f25b61491696ee0384558270fa4281f80c8b1fca5ca884cff5d9f61e47e9d3ea"
+      },
+      {
+        "id": "PKG/2006/page_27.pdf-1",
+        "report": "PKG/2006",
+        "question_sha256": "caccc682d30cfe132481fe5a9f35dea1965f3994926d22e93320eda7c8ecc800"
+      },
+      {
+        "id": "NCLH/2017/page_57.pdf-2",
+        "report": "NCLH/2017",
+        "question_sha256": "02fdc38fea1f6821572e48d3af679487a9f6288bceb4fb2f804bba158bcd57e6"
+      },
+      {
+        "id": "AON/2014/page_45.pdf-3",
+        "report": "AON/2014",
+        "question_sha256": "3c5c446966c56ac93af0d984f552a0f811a18f0bd989568fc2d9c780b32f3e0e"
+      },
+      {
+        "id": "SNA/2007/page_47.pdf-1",
+        "report": "SNA/2007",
+        "question_sha256": "7e79124144ca392dbbeb9d4945252305914b1a55017c4fe1b944b14f4c7be973"
+      },
+      {
+        "id": "CAG/2007/page_42.pdf-1",
+        "report": "CAG/2007",
+        "question_sha256": "a7dd97ff3f22fbe5f6b15dae708bf4e59579ae15dfdeb224625a8c8fea8fa904"
+      },
+      {
+        "id": "ANSS/2014/page_57.pdf-2",
+        "report": "ANSS/2014",
+        "question_sha256": "3bd7bf6d07f5cd6d781dc5d340271eb4efea7e52d205690b65069d858a36ad19"
+      },
+      {
+        "id": "PKG/2009/page_63.pdf-3",
+        "report": "PKG/2009",
+        "question_sha256": "21f118d625643fa555f71881b7057d6e85c9b28f192ad9cb63fc40f25048df6c"
+      },
+      {
+        "id": "ALLE/2018/page_121.pdf-2",
+        "report": "ALLE/2018",
+        "question_sha256": "a6737a5ac729d4ffba5e63d177237d4727705ea4735d9a483eaddfa9ffeeb237"
+      },
+      {
+        "id": "CDW/2017/page_80.pdf-2",
+        "report": "CDW/2017",
+        "question_sha256": "0cc7a14066835c8c12ab72f847f5cf56e9e2216c5714d8d1db5e78d736914159"
+      },
+      {
+        "id": "VLO/2013/page_24.pdf-2",
+        "report": "VLO/2013",
+        "question_sha256": "f24477b3f6082215793f1f9ff9358fa4588fd8c5ca377f3a2422ccb0f7ea9e61"
+      },
+      {
+        "id": "VNO/2010/page_88.pdf-1",
+        "report": "VNO/2010",
+        "question_sha256": "b1315bdaa8711fb82a18418be5066b4541230c069c9615ea140bcea5bbe629f0"
+      },
+      {
+        "id": "AMT/2016/page_57.pdf-3",
+        "report": "AMT/2016",
+        "question_sha256": "c080791c765cb85c878e22a68aeb5c98ea8dc74a13534f8459355dc6cfd029f2"
+      },
+      {
+        "id": "NWS/2019/page_120.pdf-1",
+        "report": "NWS/2019",
+        "question_sha256": "62359e8389b399fa24986720cc4b62947302a3bae0cfe36cb7f17aa9318490f6"
+      },
+      {
+        "id": "PPG/2006/page_21.pdf-2",
+        "report": "PPG/2006",
+        "question_sha256": "1f6ae72aa84f9d79a7d847a397bf99af76ed47f6a520859b42f3b62b48a0442f"
+      },
+      {
+        "id": "BLK/2014/page_33.pdf-4",
+        "report": "BLK/2014",
+        "question_sha256": "961b743016550f90862ec45ef8bc68cc99adbd7e99e2ba3147eb3929bc2a491d"
+      },
+      {
+        "id": "OKE/2012/page_91.pdf-2",
+        "report": "OKE/2012",
+        "question_sha256": "df1367f417f63afe88de5eb53a0b2439db9f829c1f858ff7d35791d788a169d1"
+      },
+      {
+        "id": "AAPL/2017/page_23.pdf-1",
+        "report": "AAPL/2017",
+        "question_sha256": "0ea9169e26a7913abc0fbde42f59cd5b4794a08ec92134f2ee8ca8d338d59735"
+      },
+      {
+        "id": "AON/2010/page_100.pdf-3",
+        "report": "AON/2010",
+        "question_sha256": "66e343301c4d4d1b024ba60c2ab1f3eafc81d866ef41f4234ab26ee86f4e783a"
+      },
+      {
+        "id": "RSG/2008/page_114.pdf-2",
+        "report": "RSG/2008",
+        "question_sha256": "7202910ab8a15f86116a790032847d6a936e8224b78686a46c07644eff73ab8d"
+      },
+      {
+        "id": "GPN/2008/page_39.pdf-3",
+        "report": "GPN/2008",
+        "question_sha256": "663e4f3044ae65c6cdfd6bafc228b645fef7cf8ef14c333408b0dae2a84eefb2"
+      },
+      {
+        "id": "AWK/2014/page_122.pdf-2",
+        "report": "AWK/2014",
+        "question_sha256": "7c25456cb7550ff81cb9ef41f7d009b77abbc5b4a6373447f9b7af6abf2cd438"
+      },
+      {
+        "id": "AMT/2003/page_92.pdf-4",
+        "report": "AMT/2003",
+        "question_sha256": "fc5ffd316e377f4f9dd4990c176a3c368a6194e31385d210661ca7fc99086270"
+      },
+      {
+        "id": "RCL/2014/page_16.pdf-4",
+        "report": "RCL/2014",
+        "question_sha256": "75d4ea5f0c6336bfd1bdbf5861e131b7621471fca86673750e0c7d6647ddd6a6"
+      },
+      {
+        "id": "RL/2008/page_21.pdf-1",
+        "report": "RL/2008",
+        "question_sha256": "3e8f91623305741bc5371eeacfd3bfae694cab659759ee809347f438ec5a5812"
+      },
+      {
+        "id": "JKHY/2009/page_28.pdf-4",
+        "report": "JKHY/2009",
+        "question_sha256": "80f4955181430bd51c2526c1bc19285b9229c071c7f1b9e403d06a82b67fbcb7"
+      },
+      {
+        "id": "GRMN/2008/page_84.pdf-1",
+        "report": "GRMN/2008",
+        "question_sha256": "f8fa7ff72853602c7081b30559ce4381028a0f4b5f2d6ab73941be724e13b98d"
+      },
+      {
+        "id": "AAL/2017/page_10.pdf-1",
+        "report": "AAL/2017",
+        "question_sha256": "f48e0d0e097aef5962d10ba9b57623f3ee3aa43ba83e5748739df6e95bfcfe38"
+      },
+      {
+        "id": "RCL/2009/page_90.pdf-3",
+        "report": "RCL/2009",
+        "question_sha256": "81554b148880988a43e223fc2d0bf6bb5ea5660c56a9fb483aac9cb443a7a14c"
+      },
+      {
+        "id": "STT/2017/page_101.pdf-2",
+        "report": "STT/2017",
+        "question_sha256": "5e269b79441fbb7bd7701bcfb40e5c6760c7afc3e71824a0cbe8c6b778a75303"
+      },
+      {
+        "id": "BDX/2017/page_32.pdf-3",
+        "report": "BDX/2017",
+        "question_sha256": "2ab5b3216bb6d6206b03f1ca6a810776123e6ce2b23f4f52b22d8f2b1ac6cc0a"
+      },
+      {
+        "id": "PNC/2016/page_44.pdf-1",
+        "report": "PNC/2016",
+        "question_sha256": "ecf2d8017b1b388fe1f3ab9b3fa6307e41ac13d914a8ebda3932c46ed00e949a"
+      },
+      {
+        "id": "MMM/2015/page_50.pdf-2",
+        "report": "MMM/2015",
+        "question_sha256": "352e18d690484cb4c09196dc204b0e75030a405c2755362d2384a56160859d22"
+      },
+      {
+        "id": "MRO/2018/page_111.pdf-1",
+        "report": "MRO/2018",
+        "question_sha256": "b45a84791daedfe7039f2283477fd6a60257fd3bc1d94e20e582e7ed20eb66d0"
+      },
+      {
+        "id": "ILMN/2003/page_79.pdf-1",
+        "report": "ILMN/2003",
+        "question_sha256": "6be64b67589601c3248219d4d20170684c019c8471effbe2ab4da8b3d0c48873"
+      },
+      {
+        "id": "RCL/2005/page_40.pdf-2",
+        "report": "RCL/2005",
+        "question_sha256": "b5408f1d9c9f1ec75c0da95af656ef0586da4a2ad184a5c9dd10464602cc4e77"
+      },
+      {
+        "id": "VLO/2012/page_27.pdf-3",
+        "report": "VLO/2012",
+        "question_sha256": "df2aa6b6163e340c16108a839cedd09106be0142a312e741b29af7de09e42709"
+      },
+      {
+        "id": "PKG/2012/page_13.pdf-1",
+        "report": "PKG/2012",
+        "question_sha256": "dbe0aa27e45677042f598e619cd16817489eee72fa67809f1a839bfcb74fac43"
+      },
+      {
+        "id": "UPS/2016/page_34.pdf-2",
+        "report": "UPS/2016",
+        "question_sha256": "5de0fb043e4a0dc4e5127e7343c3ffedec6f1346ddc2e8969c9ceee4a4580658"
+      },
+      {
+        "id": "AES/2011/page_216.pdf-2",
+        "report": "AES/2011",
+        "question_sha256": "97e10e7dcf251bf263fda208ad05c95670813b3450fbf109e48a4e2d3f74ecc6"
+      },
+      {
+        "id": "PPG/2012/page_76.pdf-4",
+        "report": "PPG/2012",
+        "question_sha256": "554a106dd7ec4cf3ff902109831b459e8768aa7776ba1468d130c875a2a1c980"
+      },
+      {
+        "id": "STZ/2005/page_57.pdf-2",
+        "report": "STZ/2005",
+        "question_sha256": "05b622d19296d64d1c0eeeea666f7929f80977b16a821686bab9ffd103a2066e"
+      },
+      {
+        "id": "AAP/2013/page_68.pdf-3",
+        "report": "AAP/2013",
+        "question_sha256": "232f06f5c12805fd4ee7533c0a1597eb06105e9e3f0b23ab07a2722e01bb5d26"
+      },
+      {
+        "id": "VLO/2016/page_23.pdf-2",
+        "report": "VLO/2016",
+        "question_sha256": "c588b2f6f345405cc5c463e862ebf212bec72a39b82d0ac7f2c7a31900d6c2d3"
+      },
+      {
+        "id": "ORLY/2015/page_28.pdf-1",
+        "report": "ORLY/2015",
+        "question_sha256": "79b98e6ffaa6c69248ce0e70d6c9f01481cff7dbd96ffe43a43557d134913a15"
+      },
+      {
+        "id": "ETR/2004/page_335.pdf-4",
+        "report": "ETR/2004",
+        "question_sha256": "0e3fcc25b91e42be26ace8bf0e1a81a821b6015b8fcd7691984bd6a4fbc6275c"
+      },
+      {
+        "id": "BLK/2016/page_120.pdf-3",
+        "report": "BLK/2016",
+        "question_sha256": "caf6c0ba57551aed471fe1205c04dcce7401a970d5f432e1e5ee95a394a38e96"
+      },
+      {
+        "id": "PKG/2013/page_83.pdf-1",
+        "report": "PKG/2013",
+        "question_sha256": "530e4f536e007fc3a10247ca9df0660d05d620f4785567755045847f2f798bee"
+      },
+      {
+        "id": "PM/2014/page_112.pdf-4",
+        "report": "PM/2014",
+        "question_sha256": "268fc970bae3e09820e2701c2a20e548b79e10b7a6656f5476b0a419b18144b2"
+      },
+      {
+        "id": "MRO/2007/page_79.pdf-2",
+        "report": "MRO/2007",
+        "question_sha256": "29fa3bdcef61674ebca1cc238abf87c45b687be83418d9b454c15350b78a809c"
+      },
+      {
+        "id": "TFX/2006/page_50.pdf-2",
+        "report": "TFX/2006",
+        "question_sha256": "0434f2f031685f4eb52d3171713144cd9d7beb2a66a690441ec2028d1c8254c7"
+      },
+      {
+        "id": "VNO/2007/page_192.pdf-1",
+        "report": "VNO/2007",
+        "question_sha256": "41b5bea392851a5fa2e193ee866c3670934588aef8fc26a062c9f0cc7bd0a229"
+      },
+      {
+        "id": "ILMN/2008/page_77.pdf-2",
+        "report": "ILMN/2008",
+        "question_sha256": "d1e4b451650fa88350f799804d02a6cd21d3371d3d274014f0fccd20d69d9f45"
+      },
+      {
+        "id": "K/2013/page_27.pdf-2",
+        "report": "K/2013",
+        "question_sha256": "c4b325995645cae686b88f6a73a6ec8a758daadc72c8fdcc770695845c30d681"
+      },
+      {
+        "id": "DVN/2017/page_31.pdf-1",
+        "report": "DVN/2017",
+        "question_sha256": "e2623df9ec44d9203fd26a706ade00435092b5c60a53566559625ee629567621"
+      },
+      {
+        "id": "ETR/2017/page_422.pdf-1",
+        "report": "ETR/2017",
+        "question_sha256": "8c5d8a0f4aeb582af4deec594328b178acd546843a602d40bcbeaa1b1c463102"
+      },
+      {
+        "id": "FRT/2011/page_115.pdf-2",
+        "report": "FRT/2011",
+        "question_sha256": "2db4b71e2b463d5f57a9701d51ae5de47fdb3929469e0479882e238b860f32e8"
+      },
+      {
+        "id": "AON/2018/page_90.pdf-4",
+        "report": "AON/2018",
+        "question_sha256": "624ab6af92c45aa0a9bf2ab9c23b4bbc21ae5f7317d3805a382f61c7149dafb1"
+      },
+      {
+        "id": "AAP/2011/page_16.pdf-1",
+        "report": "AAP/2011",
+        "question_sha256": "3bfbbbddd8b6afc38429aceef1d6aa82ce73b482f23536c7ed61ecd12bc57cc0"
+      },
+      {
+        "id": "AAPL/2004/page_83.pdf-1",
+        "report": "AAPL/2004",
+        "question_sha256": "a28d6ce54daf7697f9984d67b7bbb7208f24e24efaf3290dac8149c09f11b4cc"
+      },
+      {
+        "id": "JKHY/2019/page_17.pdf-3",
+        "report": "JKHY/2019",
+        "question_sha256": "6414f0ca74deb6aa091ffdbc24bee16d37afc5322fa528e45b23077645d29a30"
+      },
+      {
+        "id": "MA/2009/page_115.pdf-1",
+        "report": "MA/2009",
+        "question_sha256": "86d3c0c6af1314617498291725fcadf0dae1f03433db8bd07ef04b0f6bc21caf"
+      },
+      {
+        "id": "VNO/2011/page_177.pdf-1",
+        "report": "VNO/2011",
+        "question_sha256": "2c35a4151f34348ab770b46ec1ad7adc139e41f6f13964019d84bf8311faafd3"
+      },
+      {
+        "id": "TFX/2018/page_74.pdf-3",
+        "report": "TFX/2018",
+        "question_sha256": "92fffb91ff64b95836d36fa8e0c2b79376b47a390d934ba4eed37c7b621b5c08"
+      },
+      {
+        "id": "DVN/2004/page_50.pdf-1",
+        "report": "DVN/2004",
+        "question_sha256": "653516cb2aee967d4085c758894478d204abe46000ffeba189274d3d1a776837"
+      },
+      {
+        "id": "CE/2006/page_124.pdf-1",
+        "report": "CE/2006",
+        "question_sha256": "390d4f507f4618e0261388a7e7acc300427a563b379d97b29cbf630299ec5ef3"
+      },
+      {
+        "id": "V/2019/page_49.pdf-2",
+        "report": "V/2019",
+        "question_sha256": "6df73a38b1a6ca576584cf5f7d19bf5aad3e047ce1ee3ab5a09b458cc1acc974"
+      },
+      {
+        "id": "ALXN/2007/page_96.pdf-1",
+        "report": "ALXN/2007",
+        "question_sha256": "4b737f15799b819a5718a187a50bdf52a864885a05936cd8e6c6473377612ae0"
+      },
+      {
+        "id": "DISH/2015/page_142.pdf-2",
+        "report": "DISH/2015",
+        "question_sha256": "d5c9fb1c5a5a455a4897372145dc48fb44a15aa80a4ffc40c8b5d91c244c6564"
+      },
+      {
+        "id": "ECL/2016/page_64.pdf-1",
+        "report": "ECL/2016",
+        "question_sha256": "b82d5fd8ae2d1d709ac3ad8485364ff8de8d7ea0cef8b9ecb7fdc843f093d228"
+      },
+      {
+        "id": "AMT/2014/page_157.pdf-3",
+        "report": "AMT/2014",
+        "question_sha256": "9fd409fbd13630e210b3258a3d107b989da574f6ac84a4de90e57619af06f435"
+      },
+      {
+        "id": "AAPL/2011/page_38.pdf-1",
+        "report": "AAPL/2011",
+        "question_sha256": "66afdb7f340ff8a6a4e4100c2be8ed73cab7a94c32b9e2da3ebfec9b4c88f036"
+      },
+      {
+        "id": "RL/2013/page_13.pdf-2",
+        "report": "RL/2013",
+        "question_sha256": "551be1be62abbd60dc4dda98c3f6f2e3583d32100ba2bf50124554df92c92509"
+      },
+      {
+        "id": "RL/2009/page_22.pdf-2",
+        "report": "RL/2009",
+        "question_sha256": "092d1bce1c3e344f834484a6de307f3948ee0051a60aadd912eaacd8376bcc8a"
+      },
+      {
+        "id": "GIS/2015/page_38.pdf-1",
+        "report": "GIS/2015",
+        "question_sha256": "097803dc00c30d36bc743a441e40b4f8076db1df7b8b95ab6c10ffa676a17b5d"
+      },
+      {
+        "id": "MMM/2005/page_36.pdf-1",
+        "report": "MMM/2005",
+        "question_sha256": "1dd1ab0e9270068495297cf47a2d923a48f4da135985067e380565881e64571b"
+      },
+      {
+        "id": "ANET/2015/page_155.pdf-2",
+        "report": "ANET/2015",
+        "question_sha256": "599d013d81b3a9550fc1d67cae8ce0c8f5e3413dfbc047e283a7a79f14bda6fa"
+      },
+      {
+        "id": "BDX/2009/page_81.pdf-4",
+        "report": "BDX/2009",
+        "question_sha256": "79591300ece5d915623d3fb6bb65d4111db3a0682c9e189011c7976cc1c00631"
+      },
+      {
+        "id": "ADBE/2009/page_98.pdf-1",
+        "report": "ADBE/2009",
+        "question_sha256": "2e42be38964970860d9965a7735a265461b72ecf274a1802e0a00373be70361f"
+      },
+      {
+        "id": "DISCA/2012/page_54.pdf-3",
+        "report": "DISCA/2012",
+        "question_sha256": "2f1884bba28d2a8a641efbe20f951ed205a9799c6cf2d47056a4b922ab94bc47"
+      },
+      {
+        "id": "UA/2005/page_33.pdf-2",
+        "report": "UA/2005",
+        "question_sha256": "dc3c3e7e2429fe8fc8021a6e07a7af0c5bb77d5210bbade78c81a775eec85994"
+      },
+      {
+        "id": "UNP/2010/page_27.pdf-2",
+        "report": "UNP/2010",
+        "question_sha256": "ae82ed474b293325ea4da4d4941ef76cdfee370689e498467e2d7756134afb5e"
+      },
+      {
+        "id": "PNC/2009/page_31.pdf-4",
+        "report": "PNC/2009",
+        "question_sha256": "89c918c7549a3050836d97fa8b82b56a017e434fb7e6539810d1ac68f7ea3dc4"
+      },
+      {
+        "id": "CAG/2010/page_42.pdf-1",
+        "report": "CAG/2010",
+        "question_sha256": "e7181b8d2f1ef5c33c057a54f27bcb1a02dd284ac2f35cd798a436c90adcad27"
+      },
+      {
+        "id": "PKG/2005/page_73.pdf-2",
+        "report": "PKG/2005",
+        "question_sha256": "c1f101d52ec563615bd9ad627a9d1f7b1f9d69b85ec9dbbeeaaaae8033c8f294"
+      },
+      {
+        "id": "VNO/2005/page_69.pdf-2",
+        "report": "VNO/2005",
+        "question_sha256": "8da772058ea448492f31228c1efa07bc66cf7174f22cd02888130da5b45c2910"
+      },
+      {
+        "id": "PM/2015/page_103.pdf-3",
+        "report": "PM/2015",
+        "question_sha256": "be01c2919235adb604cdbe25b565154cd3e3db642b69172097026eb0377dd9dc"
+      },
+      {
+        "id": "MKTX/2005/page_40.pdf-1",
+        "report": "MKTX/2005",
+        "question_sha256": "26916cdf8667e4170533e67d7d4e90b9e23031b65b8462b1a19de4714299df16"
+      },
+      {
+        "id": "RSG/2017/page_14.pdf-1",
+        "report": "RSG/2017",
+        "question_sha256": "9d1960d7d7c971cb795965c42021927fd64406ed3cd0bcb9c4282bc6b2784020"
+      },
+      {
+        "id": "ABMD/2008/page_87.pdf-3",
+        "report": "ABMD/2008",
+        "question_sha256": "01440adf1416ecbe00a3ffdf28a3a617e45f2fcec383a15289ce84d2807df3e9"
+      },
+      {
+        "id": "ETR/2009/page_141.pdf-3",
+        "report": "ETR/2009",
+        "question_sha256": "04571e53797342bf1e4fa8d6672441ed6a5803b4288d2af4a8cca254a8f90fad"
+      },
+      {
+        "id": "DVN/2013/page_78.pdf-3",
+        "report": "DVN/2013",
+        "question_sha256": "fb3df700239b484023075e34c2af58d6a99ec0ab9cc629e590ce282c34100ff5"
+      },
+      {
+        "id": "CNC/2003/page_41.pdf-1",
+        "report": "CNC/2003",
+        "question_sha256": "4d49fb780f8fb5db2b63447cc0a212b157b85eb18491f19d1f5f9110d27df8de"
+      },
+      {
+        "id": "VTR/2007/page_48.pdf-2",
+        "report": "VTR/2007",
+        "question_sha256": "c8b10f0dd94c22d678d74bde6458e0e93b97f02054a3c188fe7231fe7a292e6a"
+      },
+      {
+        "id": "ECL/2015/page_70.pdf-1",
+        "report": "ECL/2015",
+        "question_sha256": "399d11e081fb836b7f11bebb1fdb455b9b14ff12f7fba49170f14d532f9587c1"
+      },
+      {
+        "id": "ANET/2017/page_157.pdf-1",
+        "report": "ANET/2017",
+        "question_sha256": "15e8bd8ebc8a474e6dd8a95fc05a3a1bd490099f77a44e8570440e9d68c0af16"
+      },
+      {
+        "id": "JPM/2013/page_104.pdf-2",
+        "report": "JPM/2013",
+        "question_sha256": "572dd8c9df84ae25cee114f576feadb45276288f476837317ee1c0682c12ecda"
+      },
+      {
+        "id": "GIS/2018/page_43.pdf-3",
+        "report": "GIS/2018",
+        "question_sha256": "25d03766089df1801a161d8ea26a3db9c8d38fda587a4251f2c2481f7558f705"
+      },
+      {
+        "id": "PPG/2011/page_28.pdf-1",
+        "report": "PPG/2011",
+        "question_sha256": "3c51b9c0045c86a9c97b1aa7d66ed696aceceabff09a98513a065fc4b7cf115c"
+      },
+      {
+        "id": "IQV/2016/page_79.pdf-3",
+        "report": "IQV/2016",
+        "question_sha256": "5da8c9e00c4c4d394021f3e11e86fe56945f0676e94b41d9733392eaeef365f7"
+      },
+      {
+        "id": "GS/2016/page_81.pdf-1",
+        "report": "GS/2016",
+        "question_sha256": "a6ab8640c73a79c0348e764bcdc51d6cdc5d6a362b49f3b960f6bdfbfaafe2e0"
+      },
+      {
+        "id": "JPM/2014/page_293.pdf-4",
+        "report": "JPM/2014",
+        "question_sha256": "fc581b9ac7fd050187a8ebda4c5639c6b90b3c847c53c7386c03aaf737faa6ce"
+      },
+      {
+        "id": "ALLE/2016/page_116.pdf-2",
+        "report": "ALLE/2016",
+        "question_sha256": "c0f4c4fe85f6327925b9793fa462d438f77b579ab401f94db1e088854998490e"
+      },
+      {
+        "id": "RSG/2013/page_92.pdf-1",
+        "report": "RSG/2013",
+        "question_sha256": "020f61404efcd437cf313d7c8f5f37484fe3fc62ecb0be15f5fde5e02f05fe1e"
+      },
+      {
+        "id": "TMUS/2018/page_35.pdf-1",
+        "report": "TMUS/2018",
+        "question_sha256": "9ac7f86f43bede79993982c4cdacf7d343cec931a326761256fdf962d8b0d5fe"
+      },
+      {
+        "id": "BLL/2006/page_45.pdf-2",
+        "report": "BLL/2006",
+        "question_sha256": "6df33f840ff144942b1e4c2cfbba68c2f4877e3decee04ff609efb6b4f48ad73"
+      },
+      {
+        "id": "SWKS/2007/page_93.pdf-1",
+        "report": "SWKS/2007",
+        "question_sha256": "f9cd635ba17a505105f375e60e6ce0660a9e08ba37db7938e7306bc14005870e"
+      },
+      {
+        "id": "FIS/2006/page_98.pdf-2",
+        "report": "FIS/2006",
+        "question_sha256": "6168dcc509d1f6ca08737d396b4b95aa99e75217367fdef91c61138ad1d61520"
+      },
+      {
+        "id": "OKE/2007/page_51.pdf-1",
+        "report": "OKE/2007",
+        "question_sha256": "35ed9d6cc8381ff7be12352963cea86de62e7a7ffb8039aaf471b3802db25590"
+      },
+      {
+        "id": "FRT/2004/page_53.pdf-1",
+        "report": "FRT/2004",
+        "question_sha256": "fa68b7b3cf765cfd129886c358f040153ef5fbf96c3d8a1e50f4e808a0c15dfe"
+      },
+      {
+        "id": "HWM/2018/page_110.pdf-1",
+        "report": "HWM/2018",
+        "question_sha256": "ad52c8c60611164b2a9a09d5d404f2b356fd342c73daa3e9d25a20678d60a7ea"
+      },
+      {
+        "id": "UNP/2017/page_74.pdf-3",
+        "report": "UNP/2017",
+        "question_sha256": "cb3a0c8e7a0298bd0d68342fed00c201bdd271207d46103c1777ce0a1e89e52d"
+      },
+      {
+        "id": "SLG/2017/page_114.pdf-6",
+        "report": "SLG/2017",
+        "question_sha256": "f2c2843ef883acbbbf5ed83a5ce3423ecd14b9af0946a777586747d32051c0c3"
+      },
+      {
+        "id": "STT/2008/page_109.pdf-4",
+        "report": "STT/2008",
+        "question_sha256": "a32900e9832dd3fa088b803949295bb9e79e360daa2dfb8eea844c677974ff4d"
+      },
+      {
+        "id": "HUM/2012/page_109.pdf-2",
+        "report": "HUM/2012",
+        "question_sha256": "af5f28e33ce5ec72cc9c9b177f2b45f31e1b8f89e22760ab33043132aff1d141"
+      },
+      {
+        "id": "IPG/2015/page_38.pdf-1",
+        "report": "IPG/2015",
+        "question_sha256": "41ccce3d6e4d09d24eab9c65a3e067dd7cc227e33716c0ab23eac84e54e2a132"
+      },
+      {
+        "id": "SNA/2018/page_33.pdf-1",
+        "report": "SNA/2018",
+        "question_sha256": "aef488b91153dc5b330de132044cacbf2a4ff096296e768bda40751498b9dffc"
+      },
+      {
+        "id": "LKQ/2010/page_72.pdf-3",
+        "report": "LKQ/2010",
+        "question_sha256": "eb518a8e4b9c6007fde532bf18fc61237673eee3039dd40862a2de5757160c04"
+      },
+      {
+        "id": "AMT/2008/page_34.pdf-2",
+        "report": "AMT/2008",
+        "question_sha256": "d37b156c0232afa56ff09d05fc0ed27f04fd799f3ebe831f4265ca3f15e03572"
+      },
+      {
+        "id": "LLY/2018/page_99.pdf-2",
+        "report": "LLY/2018",
+        "question_sha256": "4814c9673f7d9745f58aea49a4a87f0b3949ad71f6880bfb6698d483d19bbbf5"
+      },
+      {
+        "id": "ADI/2009/page_90.pdf-3",
+        "report": "ADI/2009",
+        "question_sha256": "f71b5bd85c9bda8a6aa6c9f3e994d74feee4fc43f6fcb60643044230272cf424"
+      },
+      {
+        "id": "IPG/2007/page_97.pdf-3",
+        "report": "IPG/2007",
+        "question_sha256": "eebdf5933ed0fc031b974a0c6eb625e1087141ed4d375d94f2bdca805dc9c44a"
+      },
+      {
+        "id": "HOLX/2004/page_87.pdf-1",
+        "report": "HOLX/2004",
+        "question_sha256": "d37ddd389e2f3db3a14b711ec52370eda68fa4f9991e9bbf33de9e647791f3f4"
+      },
+      {
+        "id": "STT/2013/page_54.pdf-3",
+        "report": "STT/2013",
+        "question_sha256": "912a3eff87daeec88ef6465bb60db7cba7b985096bca69eb5132128b58939f6d"
+      },
+      {
+        "id": "DVN/2010/page_70.pdf-1",
+        "report": "DVN/2010",
+        "question_sha256": "65308f80a62c403a05595606889aba6b7549285c088bb950f4d9e0c811ab2c8f"
+      },
+      {
+        "id": "EL/2014/page_70.pdf-2",
+        "report": "EL/2014",
+        "question_sha256": "b00fee1b6ab0eff474af0e6d80ae7ab62a828bfefbd715f50f0f99611356556a"
+      },
+      {
+        "id": "HIG/2004/page_81.pdf-1",
+        "report": "HIG/2004",
+        "question_sha256": "f5ccab9caba7b19f86dc3e63b4164d3c7eb53bc934842f40c0c8f99eee6d94d7"
+      },
+      {
+        "id": "LKQ/2016/page_48.pdf-4",
+        "report": "LKQ/2016",
+        "question_sha256": "68adfd27612664b2d542b23e65444280e6e2a24fb578bc2695c39b60a46ed790"
+      },
+      {
+        "id": "AON/2009/page_54.pdf-2",
+        "report": "AON/2009",
+        "question_sha256": "f68199af161e595d1710a67123d12c8c7b706ec98d196a3d92bc3b7a44395bbe"
+      },
+      {
+        "id": "PPG/2005/page_20.pdf-2",
+        "report": "PPG/2005",
+        "question_sha256": "9c66bdc63d77ca40453efc6a657385c1c2a7e58bc12764fd7568bddbd03a6d64"
+      },
+      {
+        "id": "HIG/2008/page_113.pdf-1",
+        "report": "HIG/2008",
+        "question_sha256": "83888610d5d4378c38280dbf8262a58d185f5274b6bb081a896c7179914381fd"
+      },
+      {
+        "id": "MAS/2017/page_37.pdf-3",
+        "report": "MAS/2017",
+        "question_sha256": "0be2932da9106f18631511cfdd79f583cf282c03a64310a0c22685fdc1730ef0"
+      },
+      {
+        "id": "GPN/2013/page_98.pdf-3",
+        "report": "GPN/2013",
+        "question_sha256": "f698375da570066be31a9573b4d3e9931719a83d1743c182cfa39c34d3a31bb8"
+      },
+      {
+        "id": "KIM/2014/page_130.pdf-1",
+        "report": "KIM/2014",
+        "question_sha256": "1ec044b0fe2338fa85aa1374cf12f3f45cc7c57eeedcd9ca52854631c9df6742"
+      },
+      {
+        "id": "ADBE/2012/page_102.pdf-2",
+        "report": "ADBE/2012",
+        "question_sha256": "8e13a594ebb6f71e6df106b7ff210aed5896ada7decb6356a5ca73751af8715c"
+      },
+      {
+        "id": "AAPL/2015/page_56.pdf-4",
+        "report": "AAPL/2015",
+        "question_sha256": "af95ec3e05a0c863ea7a2057125813310822f6c640344d2c91ae9b4337aee506"
+      },
+      {
+        "id": "AES/2018/page_168.pdf-2",
+        "report": "AES/2018",
+        "question_sha256": "82b7b22ee00edf3e48a0d3b14537ee2e65e0a36c535d1895db19e1ced8824fec"
+      },
+      {
+        "id": "SNPS/2012/page_61.pdf-2",
+        "report": "SNPS/2012",
+        "question_sha256": "87146d203cd57b680a94350841620bacabb69e89315da6a4840c90e5ebcd9b13"
+      },
+      {
+        "id": "PNC/2008/page_62.pdf-2",
+        "report": "PNC/2008",
+        "question_sha256": "7c52635622a8dba7779e82f4405b9035c847e23dcfec78847f3e0e7a2f3f9847"
+      },
+      {
+        "id": "GS/2014/page_44.pdf-2",
+        "report": "GS/2014",
+        "question_sha256": "a38b148b84a6bfbb3863a7a82b34ba5bfce600eaf96a5ef183b05ca1c4cf8e0b"
+      },
+      {
+        "id": "MA/2018/page_34.pdf-1",
+        "report": "MA/2018",
+        "question_sha256": "fd7da16d4727cb3ac81629b40e4b9bc0f13e6110d490c1674c68f2356dafb696"
+      },
+      {
+        "id": "CDNS/2012/page_31.pdf-1",
+        "report": "CDNS/2012",
+        "question_sha256": "46bf15e3b69ece72614b394ad6aaf349335605576699c0867e5d6d4d9aee194d"
+      },
+      {
+        "id": "SLB/2010/page_90.pdf-3",
+        "report": "SLB/2010",
+        "question_sha256": "91ca11769bbe9fedf0afd84264a271574153ec3c0b09a2e4899b2b65f9278881"
+      },
+      {
+        "id": "MA/2008/page_116.pdf-2",
+        "report": "MA/2008",
+        "question_sha256": "1b461f3f99e4b124b725b000c850e5d2ede559705c03ede4ed0354aaef018efe"
+      },
+      {
+        "id": "DISCA/2009/page_149.pdf-1",
+        "report": "DISCA/2009",
+        "question_sha256": "092c00d9a58acb27cce68b4f8cd71e6179369790c3fc1df13317b71b71dbca7d"
+      },
+      {
+        "id": "ZBH/2002/page_46.pdf-2",
+        "report": "ZBH/2002",
+        "question_sha256": "e2054b54d2de2ba73df28a722d9f7f917d6f9e7f1f2d612b5fc3afc702c16b5c"
+      }
+    ]
+  },
+  "annotations_extracted": false,
+  "new_model_calls": 0,
+  "confirmation_locked": true,
+  "forbidden_use": "Do not run confirmation cases for prompt/method/model selection. Freeze final method, comparator, scoring and statistical plan before any confirmation inference.",
+  "known_limits": [
+    "Public TRAIN reports may be in model pretraining; this is a held-out report split for method research, not contamination-free benchmark evidence",
+    "Company/year filename is the report grouping key, not issuer-disjointness",
+    "150cases are a reservation, not a claim of statistical power. Size may need expansion before opening outcomes based on independently planned effect/margin.",
+    "Dataset raw JSON includes annotations, but this reservation code only accesses ID/filename/question and does not extract selected outcomes."
+  ]
+}

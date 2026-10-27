@@ -7,6 +7,220 @@
 
 **RepGuard** studies how multi-agent LLM systems should convert imperfect historical feedback into task-relevant teammate reputation. It proposes **Evidence-Calibrated Reputation Transfer (ECRT)**, which distinguishes *whether historical evidence is trustworthy* from *whether it is relevant to the current task* before allowing that evidence to influence team decisions.
 
+### Latest research update (2026-10-20)
+
+**264 new real responses completed on24 TAT-QA development contexts; both
+studies passed source/receipt/execution audits. No reputation-method win.**
+Scoped repair scores Plain19, KEEP15, E15, O16, EO15, Self1/2 15 out of24;
+scoped oracle16 fails the frozen gate. A separate whole24case adequacy and
+cross-family control adds120 responses (plus24 reused real Qwen direct outputs):
+Qwen direct/self1/self2 score19/20/20; Gemma4 26B score16/16/16. Their oracle
+union20 equals best fixed20; no history learner is fit.
+
+Post-hoc count/metadata readout diagnostics preserve original scores and
+actual generation contexts. A common inert-metadata readout gives Qwen20 and
+Gemma18, with oracle still20. Parser/contract fixes are not reputation gains.
+Four source/annotation semantic flags remain unadjudicated. All four isolated
+research apps returned to zero containers; the user's original Ollama app was
+not used or changed. No inference job is scheduled.
+
+The next *candidate experiment*, keeping the original multi-agent/reputation
+research topic, studies history from partial execution feedback (basic vs
+extended code tests). Official EvalPlus sources and32 metadata-selected MBPP+
+tasks are prepared: **zero model calls, zero program executions, no code score**.
+This is not a new-method result or an established novelty claim; prior active
+audit proposals/controls must not be rediscovered under new names.
+
+See the [current research decision](docs/analysis/repguard_research_decision_2026-10-20.md)
+and [complete cycle3 results](docs/analysis/repguard_research_cycle_03_2026-10-20.md).
+
+### Previous research update (2026-10-19)
+
+**136 new real model responses completed and independently recalculated; no
+confirmed reputation-method advantage yet.** On the same24 development reports,
+direct PoT and one/two self-reviews score17/24; reconciliation scores16/24,
+with zero rescues and one harm. Their oracle union is17, so the frozen gate
+fails and no new history controller is fit to that bank.
+
+On16new LIVE-cohort report groups, Qwen3 8B/14B both score11/16 with identical
+correctness masks. Qwen3.5 27B native4096 also scores11/16 but has4length
+truncations. A separate, post-hoc **whole16case** no-native-thinking control
+scores13/16 with no truncation, averaging11.07 Ollama evaluation seconds on
+L40S, versus37.71 for14B on L4. These are development configuration results,
+not independent confirmation, billing, or reputation gains. Semantic label
+flags remain unadjudicated; official targets were not changed.
+
+The next candidate is scoped repair with state-conditioned, audited repair
+utility; component/interaction credit and transfer must beat learned action
+selection with the same information. Claim verification and counterfactual
+credit already have close prior work. TAT-QA source/evaluator preparation is
+complete, but **no TAT-QA inference or model score exists**. Confirmation report
+IDs remain unused. All three isolated research apps returned to zero containers;
+the user's preexisting Ollama app was not used or changed.
+
+See the [current research decision](docs/analysis/repguard_research_decision_2026-10-19.md),
+[related-work gap assessment](docs/analysis/repguard_research_gap_2026-10-19.md),
+and [unproven method candidate](docs/analysis/repguard_method_candidate_2026-10-19.md).
+
+### Current research status (2026-10-06)
+
+**External-data follow-up:** a detached Modal intake has verified a pinned
+LLMRouterBench archive and inventoried **649 files / 467,023 metadata records**
+across 29 dataset/split combinations. 51 MMLU files were skipped before JSON
+parsing. MATH500 has 500 common questions across all 20 archived models.
+A bounded **48-question × 6-model real Qwen3-14B judge pilot completed 288/288
+judgments** at 07:40:33 Vietnam time on 2026-10-06. All responses are valid;
+local artifact verification and recomputation reproduce the cloud diagnostics.
+Cross-fitted Brier is **0.094493**, versus **0.173013** for the gold-only control.
+The pairwise residual variance ratio is **0.694670** (95% CI
+**[0.519834, 0.880492]**), approximately 30.53% lower variance. Both prespecified
+pilot gates pass. The detached worker returned successfully and stopped at the
+pilot limit; no experiment container remains running. This is feedback
+feasibility evidence, not DART routing superiority or demonstrated label savings.
+Calibration used all pilot gold through cross-fitting; a separate limited-gold,
+equal-budget study must be locked before expansion. See the
+[verified pilot results](docs/analysis/routerbench_pilot_assessment_2026-10-06.md),
+[next evidence plan](docs/analysis/routerbench_next_evidence_plan_2026-10-06.md),
+[intake assessment](docs/analysis/routerbench_intake_assessment_2026-10-06.md),
+[locked pilot protocol](docs/analysis/routerbench_pilot_protocol_2026-10-06.md),
+and [cloud operation guide](docs/analysis/routerbench_pilot_operations_2026-10-06.md).
+
+**Sparse-gold follow-up completed:** the frozen CPU replay ran **240 cases /
+2,400 model selections**, with exact 11/22/44-cell budgets and full local
+recomputation. At primary 10%, CFJudgeRectifier scores **44.30/48** versus
+**42.65 UniformGlobal**, **43.70 PairedGlobal** and **44.10 PairedSH**. The
+development expansion gate **fails**. Feedback still reduces residual variance
+(ratio **0.769981**, CI **[0.622643, 0.932881]**), but **RawJudge uses zero gold
+and reaches 46/48**, equal to both the best fixed model and the per-task oracle
+on this 48-question pool. There is no accuracy headroom above that baseline on
+these fixed executions. The pipeline stopped; no new solver/judge calls were
+made. See the [verified sparse-gold results](docs/analysis/routerbench_sparse_gold_v1_assessment_2026-10-06.md),
+[component analysis and revised direction](docs/analysis/routerbench_sparse_gold_v1_interpretation_2026-10-06.md),
+[locked protocol](docs/analysis/routerbench_sparse_gold_v1_protocol_2026-10-06.md)
+and [operation guide](docs/analysis/routerbench_sparse_gold_v1_operations_2026-10-06.md).
+
+Prompt-only screening of the 500 common MATH500 questions also completed on
+Modal CPU. All 500 hashes were verified and independently regrouped; the
+prespecified conservative near-template rule found **500 singleton groups**,
+leaving **452 questions outside the 48 pilot questions**. A later sensitivity
+check at lower string-similarity thresholds leaves 450–452 outside pilot
+groups. This does not certify template/skill independence or evaluation power.
+See the [grouping assessment](docs/analysis/routerbench_prompt_groups_v1_assessment_2026-10-06.md)
+and [sensitivity analysis](docs/analysis/routerbench_prompt_groups_v1_sensitivity_2026-10-06.md).
+
+A separate metadata-selected **gold-only development headroom diagnostic** ran
+on 200 MBPP and 200 FinQA questions across all 20 archived models. Local
+recomputation verifies **MBPP 78.0% best fixed versus 94.5% oracle** and
+**FinQA 74.0% versus 88.5% oracle**. These 16.5 and 14.5 point gaps show
+complementary archived outcomes; they do not show that a deployable router can
+predict which model succeeds. Duplicate prompt hashes were excluded before
+score access. No new LLM calls were made; the unselected questions were not
+scored by this diagnostic. See the [headroom assessment](docs/analysis/routerbench_headroom_v1_assessment_2026-10-06.md)
+and [locked protocol](docs/analysis/routerbench_headroom_v1_protocol_2026-10-06.md).
+For new split planning, use the [count erratum](docs/analysis/routerbench_headroom_count_erratum_2026-10-07.md):
+766 MBPP and 929 FinQA unique eligible questions remain outside the 200-question
+development sets; earlier 770/938 counts include excluded duplicate hashes.
+
+**FinQA real-feedback pilot completed:** all 960 Qwen3-14B judgments across
+48 development questions and 20 archived models were verified locally.
+Operational validity passed (100% valid responses, 92.60% complete boxed
+answers), but the prespecified expansion gate **failed**: the pairwise
+residual-variance ratio is **1.0454**, 95% CI **[1.0194, 1.0735]**. Cross-fit
+Brier improved versus gold-only (0.2086 vs 0.2380), mostly reflecting
+question difficulty rather than reliable within-question model differences.
+The gate does not support a larger judgment collection or a claim of routing gain.
+See the [verified result](docs/analysis/routerbench_finqa_feedback_v1_assessment_2026-10-06.md),
+[failure analysis](docs/analysis/routerbench_finqa_feedback_v1_interpretation_2026-10-06.md),
+[locked protocol](docs/analysis/routerbench_finqa_feedback_v1_protocol_2026-10-06.md)
+and [operation guide](docs/analysis/routerbench_finqa_feedback_v1_operations_2026-10-06.md).
+
+**FinQA exact-answer consensus development replay completed:** a frozen rule
+was tested on 48 other questions ×20 archived model outputs, with no new LLM
+calls. Prediction coverage was 92.92%. The pairwise residual-variance ratio
+was **0.9234**, 95% CI **[0.8487, 1.0006]**: an improvement in direction
+relative to the failed judge pilot, but below the prespecified requirement of
+at most 0.90 with CI upper below 1. The expansion screen **failed**. High
+agreement still included 22 wrong cells on two questions, illustrating shared
+model errors. This remains full-gold development diagnosis, not a validated
+sparse-label method or deployable task router. See the
+[verified result](docs/analysis/routerbench_finqa_consensus_v1_assessment_2026-10-06.md),
+[failure analysis and next decision](docs/analysis/routerbench_finqa_consensus_v1_interpretation_2026-10-06.md),
+and [frozen protocol](docs/analysis/routerbench_finqa_consensus_v1_protocol_2026-10-06.md).
+The [conference research strategy](docs/analysis/repguard_a_conference_strategy_2026-10-07.md)
+sets the next evidence gates for a decision-value benchmark and a conditional
+paired-audit method candidate.
+
+### Completed method comparisons (2026-10-05)
+
+**Latest follow-up:** 1,205 additional learner/evaluation cases completed on Modal
+(gain/structure, uniform and paired history rectification, and adaptive baseline checks).
+At 10% gold audits, the fixed paired CFJudgeFactor candidate achieves
+**74.15/168**, versus **71.95 PairedGlobal** and **69.70 UniformAuditGlobal**.
+The exploratory difference versus PairedGlobal is +1.31 percentage points
+(generator-bootstrap CI **[+0.03, +2.59]**); the interval versus Uniform still
+includes zero. The prespecified gate requiring both comparisons therefore
+**fails**. This is a promising development result, not independent confirmation,
+a contextual routing gain, or a validated SOTA claim. See the
+[research synthesis and next steps](docs/analysis/dart_research_progress_2026-10-05.md),
+[gain study](docs/analysis/dart_gain_v1_assessment_2026-10-05.md),
+[uniform history study](docs/analysis/dart_history_rectifier_v1_assessment_2026-10-05.md),
+and [paired history study](docs/analysis/dart_paired_history_v1_assessment_2026-10-05.md).
+
+The additional **300-case Sequential Halving check** reproduces 600 baseline
+decisions locally. At 10%, IndependentSH scores **69.70** and PairedSH **71.90**;
+the candidate's difference versus PairedSH has CI **[−0.86, +3.42]** percentage
+points, so the new stress-test gate also fails. PairedSH scores higher than the
+candidate at both 5% and 20% budgets. See the
+[complete baseline results](docs/analysis/dart_halving_v1_assessment_2026-10-05.md)
+and [next evidence plan](docs/analysis/dart_next_evidence_plan_2026-10-05.md).
+These are replays on real archived outcomes, not additional solver executions.
+
+The AppWorld study now includes 14 historical agents on 168 tasks (56 generators),
+**2,352 completed real Qwen3-14B trajectory judgments on Modal**, and completed
+equal-audit-budget routing replays. At the primary 10% audit budget, DARTContrast
+with judge feedback achieves **63.90/168** mean task successes, versus **69.70**
+for UniformAuditGlobal and **71.95** for the additional PairedGlobal control.
+The DART superiority gate **fails**. These are exploratory public-data replays,
+not fresh solver runs or independent confirmation. The sealed holdout is unused.
+
+See the [full-run assessment and next experiment](docs/analysis/dart_full_run_assessment_2026-10-04.md),
+[full results and diagnostics](docs/analysis/dart_followup_report_2026-10-04.md),
+and [implementation history](docs/analysis/dart_implementation_progress_2026-10-04.md).
+The original pipeline and its follow-up both completed; a failed scientific gate
+does not mean the execution failed.
+
+A completed **14,400-selection controlled same-audit ablation** now isolates
+proxy representation, estimator normalization, candidate restriction, and paid
+label reuse. Keeping continuous judge scores improves calibration but does not
+establish a routing gain. Pooling the exact DARTContrast construction and selection
+labels in a simple global learner improves judge-channel success from **63.90 to
+68.90/168**, still without superiority over the strong controls. All original
+predictions and uniform gold-only controls reproduce exactly. The full judge used
+**think=false**; earlier thinking solver experiments are separate.
+
+See the [root-cause investigation and next steps](docs/analysis/dart_root_causes_and_next_steps_2026-10-05.md),
+[all controlled-ablation results](docs/analysis/dart_same_audit_tables_2026-10-05.md),
+and [protocol with numerical audit amendment](docs/analysis/dart_same_audit_protocol_2026-10-05.md).
+The test suite has **236 passing tests**. No new model calls or sealed holdout
+access were needed for this forensic replay.
+
+The [updated neural-router research proposal](docs/analysis/dart_neural_research_proposal_2026-10-05.md)
+reviews recent sparse-routing and decision-learning work and proposes a frozen
+Transformer encoder with a small task–agent learner, followed by controlled pair
+auditing. The frozen-encoder P0/P1 pipeline is implemented on a deployed Modal
+worker. P0 completed all five folds: Global, MLP and Selected each achieve
+**82/168**, linear and low-rank each **81/168**. The superiority gate fails;
+P1 was not launched. Pair auditing remains a later stage. See the
+[completed neural assessment](docs/analysis/dart_neural_p0_assessment_2026-10-05.md),
+[locked protocol](docs/analysis/dart_neural_p0_p1_protocol_2026-10-05.md)
+and [cloud operation / checkpoint instructions](docs/analysis/dart_neural_cloud_operations_2026-10-05.md).
+
+### Earlier evidence (2026-09-30)
+
+The full real-answer rerun covers **all 14 MMLU-Pro subjects** and 18,064 answers from four Ollama models. In the prespecified `related + 25% noise` condition, ECRT's team-accuracy difference against FixedBorrow is only +0.02 percentage points (95% CI [−0.04, +0.10]); ECRT superiority is **not established**. A separate paired Qwen3 8B study found a +23.57-point thinking-policy accuracy gain on 280 unused dev questions, with about 213 times the output tokens. A new 1,260-response real-model pool study found an oracle upper reference of 344/420 but a cross-fitted subject router of 274/420 versus 280/420 for always thinking. The prespecified pool gate for DART **failed**; the new sealed holdout remains unused.
+
+See the [full evidence audit](docs/analysis/repguard_final_pipeline_assessment_2026-09-30.md), the [pool gate assessment](docs/analysis/repguard_pool_gate_assessment_2026-09-30.md), the [next study protocol](docs/analysis/repguard_next_study_registered_plan_2026-09-30.md), and the [HistRepEval benchmark card draft](docs/analysis/histrepeval_benchmark_card_draft_2026-09-30.md). DART remains a conditional method hypothesis, not a validated result.
+
 ### Key Research Questions
 
 1. How do feedback sparsity, noise, and evaluator error affect learned reputation calibration?
@@ -60,10 +274,20 @@ python -m repguard.harness.runner --config configs/default.yaml --dry-run
 ```
 
 This will:
-1. Download MMLU-Pro from HuggingFace (or use cached data)
+1. Generate deterministic synthetic tasks (the mock provider does not measure real model capability)
 2. Create deterministic Train/Calibration, Dev, and Test splits
 3. Evaluate sample tasks using the MockProvider
 4. Output accuracy metrics and per-domain breakdown
+
+### Local Model Capability Audit
+
+RepGuard can compare Ollama models installed on the same machine using the real MMLU-Pro benchmark. The **example config** evaluates 80 shared train/calibration questions per model across eight subjects; the completed study described above uses a separate 14-subject protocol. The example writes a capability matrix and a heterogeneity-gate decision.
+
+```bash
+python -m repguard.audit.capability_audit --config configs/capability_audit.ollama.yaml
+```
+
+The Ollama server must be running at `http://127.0.0.1:11434`; update `base_url` in the config if it uses another address. MMLU-Pro is downloaded and cached under `./data` on the first run. Results are saved under `./results/capability_audit_ollama`; reruns reuse each model's cached responses.
 
 ## Architecture
 
@@ -72,6 +296,8 @@ src/repguard/
 ├── config.py           # Pydantic configuration schema
 ├── seed.py             # Deterministic seed management
 ├── logging_.py         # Structured experiment logger
+├── audit/
+│   └── capability_audit.py # Multi-model benchmark and heterogeneity gate
 ├── data/
 │   ├── models.py       # Core data models (GT isolation enforced)
 │   ├── mmlu_pro.py     # MMLU-Pro download, parse, cache
@@ -80,7 +306,8 @@ src/repguard/
 │   ├── base.py         # LLMProvider protocol
 │   ├── mock.py         # Deterministic mock (dry-run)
 │   ├── openai_.py      # OpenAI provider
-│   └── anthropic_.py   # Anthropic provider
+│   ├── anthropic_.py   # Anthropic provider
+│   └── ollama_.py      # Local Ollama provider
 ├── harness/
 │   ├── prompts.py      # MC prompt formatting
 │   ├── parser.py       # Answer extraction

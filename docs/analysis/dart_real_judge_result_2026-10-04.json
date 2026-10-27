@@ -1,0 +1,452 @@
+{
+  "updated_at": "2026-10-04T15:26:22.165874+00:00",
+  "pilot_quality": {
+    "scope": "judge quality pilot, not routing or method superiority",
+    "protocol_hash": "ecd2e4cad72939a6c74f58949c46fe41237bc041f5faf7c949892bf8f9c60478",
+    "pilot_rows_sha256": "37dc2c6cd1ff17ab2d24b66e64c2715788d01ea4990b802644a74df4049af9ea",
+    "rows": 168,
+    "valid": 168,
+    "generators": 53,
+    "positive_labels": 45,
+    "negative_labels": 123,
+    "balanced_accuracy": 0.6962059620596206,
+    "balanced_accuracy_generator_ci95": [
+      0.6405573094061962,
+      0.7521376811594203
+    ],
+    "accuracy": 0.5654761904761905,
+    "brier_score": 0.30851190476190476,
+    "clipped_records": 95,
+    "prompt_tokens": 505853,
+    "output_tokens": 1466,
+    "sum_call_latency_s": 797.6232870430686,
+    "gate_pass": true,
+    "next_stage": "collect_full_frozen_matrix",
+    "no_routing_superiority_claim": true
+  },
+  "completed_judge_records": 2352,
+  "valid_judge_records": 2352,
+  "prompt_tokens": 7042225,
+  "output_tokens": 20762,
+  "sum_call_latency_s": 10318.566730695311,
+  "clipped_records": 1364,
+  "routing_analysis": {
+    "scope": "exploratory grouped out-of-fold replay of official real trajectories",
+    "feedback": {
+      "source": "real Modal qwen3:14b trajectory judge",
+      "manifest_sha256": "08eb70281b426899940091bd53193bb969f122c6f6bf8eff7ac442c5a0910076",
+      "ledger_sha256": "388b0f5f00ec6814bf676b46af71edb60c0a5de9cd632df0b8ad595533c9515e",
+      "records": 2352,
+      "valid": 2352,
+      "encoding": "0 negative; 1 positive at p>=0.5; 2 invalid/abstain"
+    },
+    "tasks": 168,
+    "generators": 56,
+    "audit_seeds": 20,
+    "budgets": {
+      "0.05": {
+        "methods": {
+          "AuditOnly": {
+            "mean_correct": 57.9,
+            "mean_accuracy": 0.34464285714285714,
+            "seed_min_correct": 41,
+            "seed_max_correct": 74
+          },
+          "RandomHistory": {
+            "mean_correct": 61.6,
+            "mean_accuracy": 0.36666666666666664,
+            "seed_min_correct": 50,
+            "seed_max_correct": 80
+          },
+          "UncertaintyHistory": {
+            "mean_correct": 60.05,
+            "mean_accuracy": 0.3574404761904762,
+            "seed_min_correct": 46,
+            "seed_max_correct": 75
+          },
+          "DART": {
+            "mean_correct": 55.05,
+            "mean_accuracy": 0.32767857142857143,
+            "seed_min_correct": 28,
+            "seed_max_correct": 75
+          },
+          "DARTContrast": {
+            "mean_correct": 61.25,
+            "mean_accuracy": 0.3645833333333333,
+            "seed_min_correct": 48,
+            "seed_max_correct": 75
+          },
+          "UniformAuditGlobal": {
+            "mean_correct": 64.4,
+            "mean_accuracy": 0.38333333333333336,
+            "seed_min_correct": 50,
+            "seed_max_correct": 76
+          },
+          "UniformAuditKNN": {
+            "mean_correct": 62.2,
+            "mean_accuracy": 0.37023809523809526,
+            "seed_min_correct": 52,
+            "seed_max_correct": 73
+          },
+          "AnchorOnly": {
+            "mean_correct": 56.8,
+            "mean_accuracy": 0.3380952380952381,
+            "seed_min_correct": 36,
+            "seed_max_correct": 71
+          },
+          "ProxyGlobal": {
+            "mean_correct": 53.0,
+            "mean_accuracy": 0.31547619047619047,
+            "seed_min_correct": 53,
+            "seed_max_correct": 53
+          },
+          "ProxyKNN": {
+            "mean_correct": 53.0,
+            "mean_accuracy": 0.31547619047619047,
+            "seed_min_correct": 53,
+            "seed_max_correct": 53
+          },
+          "GoldTrainSingle": {
+            "mean_correct": 82.0,
+            "mean_accuracy": 0.4880952380952381,
+            "seed_min_correct": 82,
+            "seed_max_correct": 82
+          },
+          "GoldTrainKNN": {
+            "mean_correct": 71.0,
+            "mean_accuracy": 0.4226190476190476,
+            "seed_min_correct": 71,
+            "seed_max_correct": 71
+          }
+        },
+        "DART_contrasts": {
+          "AuditOnly": {
+            "difference": 0.01994047619047619,
+            "generator_cluster_ci95": [
+              -0.008928571428571428,
+              0.05
+            ],
+            "mean_rescues": 26.3,
+            "mean_harms": 22.95
+          },
+          "RandomHistory": {
+            "difference": -0.002083333333333335,
+            "generator_cluster_ci95": [
+              -0.03214285714285715,
+              0.027976190476190477
+            ],
+            "mean_rescues": 23.25,
+            "mean_harms": 23.6
+          },
+          "UncertaintyHistory": {
+            "difference": 0.007142857142857143,
+            "generator_cluster_ci95": [
+              -0.010126488095238095,
+              0.024702380952380955
+            ],
+            "mean_rescues": 13.05,
+            "mean_harms": 11.85
+          },
+          "AnchorOnly": {
+            "difference": 0.026488095238095238,
+            "generator_cluster_ci95": [
+              0.006249999999999996,
+              0.047619047619047616
+            ],
+            "mean_rescues": 25.2,
+            "mean_harms": 20.75
+          },
+          "UniformAuditGlobal": {
+            "difference": -0.018749999999999996,
+            "generator_cluster_ci95": [
+              -0.04107142857142857,
+              0.004464285714285716
+            ],
+            "mean_rescues": 22.0,
+            "mean_harms": 25.15
+          },
+          "UniformAuditKNN": {
+            "difference": -0.005654761904761904,
+            "generator_cluster_ci95": [
+              -0.03125744047619048,
+              0.02023809523809524
+            ],
+            "mean_rescues": 22.6,
+            "mean_harms": 23.55
+          }
+        }
+      },
+      "0.1": {
+        "methods": {
+          "AuditOnly": {
+            "mean_correct": 62.85,
+            "mean_accuracy": 0.37410714285714286,
+            "seed_min_correct": 46,
+            "seed_max_correct": 75
+          },
+          "RandomHistory": {
+            "mean_correct": 64.6,
+            "mean_accuracy": 0.38452380952380955,
+            "seed_min_correct": 46,
+            "seed_max_correct": 72
+          },
+          "UncertaintyHistory": {
+            "mean_correct": 65.95,
+            "mean_accuracy": 0.3925595238095238,
+            "seed_min_correct": 51,
+            "seed_max_correct": 75
+          },
+          "DART": {
+            "mean_correct": 55.35,
+            "mean_accuracy": 0.3294642857142857,
+            "seed_min_correct": 46,
+            "seed_max_correct": 74
+          },
+          "DARTContrast": {
+            "mean_correct": 63.9,
+            "mean_accuracy": 0.38035714285714284,
+            "seed_min_correct": 52,
+            "seed_max_correct": 81
+          },
+          "UniformAuditGlobal": {
+            "mean_correct": 69.7,
+            "mean_accuracy": 0.4148809523809524,
+            "seed_min_correct": 57,
+            "seed_max_correct": 79
+          },
+          "UniformAuditKNN": {
+            "mean_correct": 66.35,
+            "mean_accuracy": 0.3949404761904762,
+            "seed_min_correct": 54,
+            "seed_max_correct": 79
+          },
+          "AnchorOnly": {
+            "mean_correct": 60.6,
+            "mean_accuracy": 0.3607142857142857,
+            "seed_min_correct": 41,
+            "seed_max_correct": 79
+          },
+          "ProxyGlobal": {
+            "mean_correct": 53.0,
+            "mean_accuracy": 0.31547619047619047,
+            "seed_min_correct": 53,
+            "seed_max_correct": 53
+          },
+          "ProxyKNN": {
+            "mean_correct": 53.0,
+            "mean_accuracy": 0.31547619047619047,
+            "seed_min_correct": 53,
+            "seed_max_correct": 53
+          },
+          "GoldTrainSingle": {
+            "mean_correct": 82.0,
+            "mean_accuracy": 0.4880952380952381,
+            "seed_min_correct": 82,
+            "seed_max_correct": 82
+          },
+          "GoldTrainKNN": {
+            "mean_correct": 71.0,
+            "mean_accuracy": 0.4226190476190476,
+            "seed_min_correct": 71,
+            "seed_max_correct": 71
+          }
+        },
+        "DART_contrasts": {
+          "AuditOnly": {
+            "difference": 0.006250000000000003,
+            "generator_cluster_ci95": [
+              -0.022916666666666665,
+              0.03511904761904761
+            ],
+            "mean_rescues": 23.45,
+            "mean_harms": 22.4
+          },
+          "RandomHistory": {
+            "difference": -0.0041666666666666675,
+            "generator_cluster_ci95": [
+              -0.036011904761904766,
+              0.027678571428571424
+            ],
+            "mean_rescues": 21.95,
+            "mean_harms": 22.65
+          },
+          "UncertaintyHistory": {
+            "difference": -0.012202380952380954,
+            "generator_cluster_ci95": [
+              -0.029166666666666667,
+              0.004166666666666666
+            ],
+            "mean_rescues": 14.6,
+            "mean_harms": 16.65
+          },
+          "AnchorOnly": {
+            "difference": 0.019642857142857142,
+            "generator_cluster_ci95": [
+              -0.01488839285714286,
+              0.05357142857142857
+            ],
+            "mean_rescues": 23.2,
+            "mean_harms": 19.9
+          },
+          "UniformAuditGlobal": {
+            "difference": -0.03452380952380952,
+            "generator_cluster_ci95": [
+              -0.06904761904761905,
+              0.0005952380952380971
+            ],
+            "mean_rescues": 22.4,
+            "mean_harms": 28.2
+          },
+          "UniformAuditKNN": {
+            "difference": -0.014583333333333332,
+            "generator_cluster_ci95": [
+              -0.047619047619047616,
+              0.01755952380952381
+            ],
+            "mean_rescues": 23.95,
+            "mean_harms": 26.4
+          }
+        }
+      },
+      "0.2": {
+        "methods": {
+          "AuditOnly": {
+            "mean_correct": 65.55,
+            "mean_accuracy": 0.39017857142857143,
+            "seed_min_correct": 47,
+            "seed_max_correct": 82
+          },
+          "RandomHistory": {
+            "mean_correct": 67.65,
+            "mean_accuracy": 0.40267857142857144,
+            "seed_min_correct": 59,
+            "seed_max_correct": 81
+          },
+          "UncertaintyHistory": {
+            "mean_correct": 67.25,
+            "mean_accuracy": 0.40029761904761907,
+            "seed_min_correct": 55,
+            "seed_max_correct": 79
+          },
+          "DART": {
+            "mean_correct": 57.5,
+            "mean_accuracy": 0.34226190476190477,
+            "seed_min_correct": 35,
+            "seed_max_correct": 73
+          },
+          "DARTContrast": {
+            "mean_correct": 68.35,
+            "mean_accuracy": 0.4068452380952381,
+            "seed_min_correct": 51,
+            "seed_max_correct": 79
+          },
+          "UniformAuditGlobal": {
+            "mean_correct": 75.15,
+            "mean_accuracy": 0.4473214285714286,
+            "seed_min_correct": 61,
+            "seed_max_correct": 82
+          },
+          "UniformAuditKNN": {
+            "mean_correct": 71.55,
+            "mean_accuracy": 0.42589285714285713,
+            "seed_min_correct": 58,
+            "seed_max_correct": 81
+          },
+          "AnchorOnly": {
+            "mean_correct": 64.8,
+            "mean_accuracy": 0.38571428571428573,
+            "seed_min_correct": 51,
+            "seed_max_correct": 78
+          },
+          "ProxyGlobal": {
+            "mean_correct": 53.0,
+            "mean_accuracy": 0.31547619047619047,
+            "seed_min_correct": 53,
+            "seed_max_correct": 53
+          },
+          "ProxyKNN": {
+            "mean_correct": 53.0,
+            "mean_accuracy": 0.31547619047619047,
+            "seed_min_correct": 53,
+            "seed_max_correct": 53
+          },
+          "GoldTrainSingle": {
+            "mean_correct": 82.0,
+            "mean_accuracy": 0.4880952380952381,
+            "seed_min_correct": 82,
+            "seed_max_correct": 82
+          },
+          "GoldTrainKNN": {
+            "mean_correct": 71.0,
+            "mean_accuracy": 0.4226190476190476,
+            "seed_min_correct": 71,
+            "seed_max_correct": 71
+          }
+        },
+        "DART_contrasts": {
+          "AuditOnly": {
+            "difference": 0.01666666666666667,
+            "generator_cluster_ci95": [
+              -0.00029761904761904656,
+              0.03392857142857143
+            ],
+            "mean_rescues": 21.5,
+            "mean_harms": 18.7
+          },
+          "RandomHistory": {
+            "difference": 0.0041666666666666675,
+            "generator_cluster_ci95": [
+              -0.009821428571428573,
+              0.018154761904761906
+            ],
+            "mean_rescues": 19.25,
+            "mean_harms": 18.55
+          },
+          "UncertaintyHistory": {
+            "difference": 0.006547619047619047,
+            "generator_cluster_ci95": [
+              -0.015178571428571427,
+              0.029166666666666657
+            ],
+            "mean_rescues": 16.2,
+            "mean_harms": 15.1
+          },
+          "AnchorOnly": {
+            "difference": 0.02113095238095238,
+            "generator_cluster_ci95": [
+              -0.010416666666666666,
+              0.05267857142857143
+            ],
+            "mean_rescues": 22.45,
+            "mean_harms": 18.9
+          },
+          "UniformAuditGlobal": {
+            "difference": -0.04047619047619048,
+            "generator_cluster_ci95": [
+              -0.07589285714285714,
+              -0.006540178571428679
+            ],
+            "mean_rescues": 15.85,
+            "mean_harms": 22.65
+          },
+          "UniformAuditKNN": {
+            "difference": -0.019047619047619046,
+            "generator_cluster_ci95": [
+              -0.05029761904761904,
+              0.009821428571428573
+            ],
+            "mean_rescues": 20.15,
+            "mean_harms": 23.35
+          }
+        }
+      }
+    },
+    "primary_budget": 0.1,
+    "primary_method": "DARTContrast",
+    "exploratory_method_gate_pass": false,
+    "deployment_certified": false,
+    "independent_confirmation": false,
+    "cost_scope": "equal unique historical task-agent gold labels and one chosen agent invocation per test task; no compute/USD parity claim",
+    "uncertainty_scope": "unadjusted exploratory generator bootstrap after seed averaging; not an audit-design or deployment guarantee"
+  }
+}

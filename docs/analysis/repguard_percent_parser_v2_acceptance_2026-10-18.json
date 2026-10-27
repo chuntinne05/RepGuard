@@ -1,0 +1,70 @@
+{
+  "scope": "Eight actual source tokens, deterministic software checks only; no new model calls; not retroactively applied to study v1",
+  "passed": 8,
+  "rows": [
+    {
+      "id": "MMM/2013/page_26.pdf-2",
+      "source": "T1C4",
+      "token": "( 0.3 )",
+      "suffix": " % (  % )",
+      "issue": "printed percent sign after closing parenthesis not included in catalogue value",
+      "fixed_value": -0.003
+    },
+    {
+      "id": "MMM/2013/page_26.pdf-2",
+      "source": "T1C5",
+      "token": "( 0.6 )",
+      "suffix": " % (  % )",
+      "issue": "printed percent sign after closing parenthesis not included in catalogue value",
+      "fixed_value": -0.006
+    },
+    {
+      "id": "MMM/2013/page_26.pdf-2",
+      "source": "T4C4",
+      "token": "( 0.1 )",
+      "suffix": " % (  % )",
+      "issue": "printed percent sign after closing parenthesis not included in catalogue value",
+      "fixed_value": -0.001
+    },
+    {
+      "id": "MAA/2015/page_56.pdf-2",
+      "source": "T1C4",
+      "token": "( 3.5 )",
+      "suffix": " % (  % )",
+      "issue": "printed percent sign after closing parenthesis not included in catalogue value",
+      "fixed_value": -0.035
+    },
+    {
+      "id": "MAA/2015/page_56.pdf-2",
+      "source": "T2C4",
+      "token": "( 1.2 )",
+      "suffix": " % (  % )",
+      "issue": "printed percent sign after closing parenthesis not included in catalogue value",
+      "fixed_value": -0.012
+    },
+    {
+      "id": "MAA/2015/page_56.pdf-2",
+      "source": "T3C4",
+      "token": "( 2.7 )",
+      "suffix": " % (  % )",
+      "issue": "printed percent sign after closing parenthesis not included in catalogue value",
+      "fixed_value": -0.027000000000000003
+    },
+    {
+      "id": "MAA/2015/page_56.pdf-2",
+      "source": "T4C4",
+      "token": "( 0.4 )",
+      "suffix": " % (  % )",
+      "issue": "printed percent sign after closing parenthesis not included in catalogue value",
+      "fixed_value": -0.004
+    },
+    {
+      "id": "MAA/2015/page_56.pdf-2",
+      "source": "T5C4",
+      "token": "( 2.4 )",
+      "suffix": " % (  % )",
+      "issue": "printed percent sign after closing parenthesis not included in catalogue value",
+      "fixed_value": -0.024
+    }
+  ]
+}

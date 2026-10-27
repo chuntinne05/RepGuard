@@ -1,0 +1,184 @@
+{
+  "run_id": "359b8d464d5005b9c5d0f967",
+  "scope": "Post-evaluation software/data audit; frozen pilot gate unchanged",
+  "official_reference_programs_checked": 100,
+  "stored_gold_reference_disagreements": 0,
+  "numeric_binding_issues": 0,
+  "resolution_endpoints": {
+    "AlwaysA": {
+      "candidate_correct": 0,
+      "automatically_approved_correct": 0,
+      "total_questions": 20,
+      "approved": 0,
+      "note": "Candidate accuracy must not be represented as automatic-resolution accuracy"
+    },
+    "AlwaysB": {
+      "candidate_correct": 1,
+      "automatically_approved_correct": 1,
+      "total_questions": 20,
+      "approved": 1,
+      "note": "Candidate accuracy must not be represented as automatic-resolution accuracy"
+    },
+    "GlobalGold": {
+      "candidate_correct": 0,
+      "automatically_approved_correct": 0,
+      "total_questions": 20,
+      "approved": 0,
+      "note": "Candidate accuracy must not be represented as automatic-resolution accuracy"
+    },
+    "SkillGold": {
+      "candidate_correct": 0,
+      "automatically_approved_correct": 0,
+      "total_questions": 20,
+      "approved": 0,
+      "note": "Candidate accuracy must not be represented as automatic-resolution accuracy"
+    },
+    "RawFeedbackSkill": {
+      "candidate_correct": 0,
+      "automatically_approved_correct": 0,
+      "total_questions": 20,
+      "approved": 0,
+      "note": "Candidate accuracy must not be represented as automatic-resolution accuracy"
+    },
+    "FixedCascade": {
+      "candidate_correct": 1,
+      "automatically_approved_correct": 1,
+      "total_questions": 20,
+      "approved": 1,
+      "note": "Candidate accuracy must not be represented as automatic-resolution accuracy"
+    },
+    "EvidenceOnly": {
+      "candidate_correct": 1,
+      "automatically_approved_correct": 1,
+      "total_questions": 20,
+      "approved": 1,
+      "note": "Candidate accuracy must not be represented as automatic-resolution accuracy"
+    },
+    "RepGuard": {
+      "candidate_correct": 1,
+      "automatically_approved_correct": 1,
+      "total_questions": 20,
+      "approved": 1,
+      "note": "Candidate accuracy must not be represented as automatic-resolution accuracy"
+    }
+  },
+  "partition_diagnostics": {
+    "history": {
+      "questions": 60,
+      "agents": {
+        "A": {
+          "correct": 4,
+          "source_bound_executable": 4,
+          "errors": {
+            "agent_abstained": 55,
+            "unbound_operand": 2
+          }
+        },
+        "B": {
+          "correct": 1,
+          "source_bound_executable": 1,
+          "errors": {
+            "agent_abstained": 58,
+            "Operand is not a numeric token": 1
+          }
+        }
+      },
+      "either_agent_correct": 5,
+      "only_A_correct": 4,
+      "only_B_correct": 1,
+      "oracle_notice": "Post-hoc diagnostic upper bound, unavailable to a serving router"
+    },
+    "calibration": {
+      "questions": 10,
+      "agents": {
+        "A": {
+          "correct": 0,
+          "source_bound_executable": 0,
+          "errors": {
+            "agent_abstained": 10
+          }
+        },
+        "B": {
+          "correct": 1,
+          "source_bound_executable": 1,
+          "errors": {
+            "agent_abstained": 9
+          }
+        }
+      },
+      "either_agent_correct": 1,
+      "only_A_correct": 0,
+      "only_B_correct": 1,
+      "oracle_notice": "Post-hoc diagnostic upper bound, unavailable to a serving router"
+    },
+    "validation": {
+      "questions": 10,
+      "agents": {
+        "A": {
+          "correct": 0,
+          "source_bound_executable": 0,
+          "errors": {
+            "agent_abstained": 10
+          }
+        },
+        "B": {
+          "correct": 1,
+          "source_bound_executable": 1,
+          "errors": {
+            "agent_abstained": 9
+          }
+        }
+      },
+      "either_agent_correct": 1,
+      "only_A_correct": 0,
+      "only_B_correct": 1,
+      "oracle_notice": "Post-hoc diagnostic upper bound, unavailable to a serving router"
+    },
+    "screen": {
+      "questions": 20,
+      "agents": {
+        "A": {
+          "correct": 0,
+          "source_bound_executable": 0,
+          "errors": {
+            "agent_abstained": 20
+          }
+        },
+        "B": {
+          "correct": 1,
+          "source_bound_executable": 1,
+          "errors": {
+            "agent_abstained": 18,
+            "'c2'": 1
+          }
+        }
+      },
+      "either_agent_correct": 1,
+      "only_A_correct": 0,
+      "only_B_correct": 1,
+      "oracle_notice": "Post-hoc diagnostic upper bound, unavailable to a serving router"
+    }
+  },
+  "collection_usage": {
+    "total_observed_tokens": 411256,
+    "sum_observed_request_seconds": 610.5199557520007,
+    "modal_billing_usd": null,
+    "note": "200 actual counterfactual requests; does not equal policy serving cost or billed GPU wall"
+  },
+  "learner_fits": {
+    "EvidenceOnly": {
+      "model_kind": "logistic",
+      "initial_loss": 20.860856044618572,
+      "final_loss": 9.851751593357042,
+      "iterations": 7,
+      "threshold": 0.2
+    },
+    "RepGuard": {
+      "model_kind": "logistic",
+      "initial_loss": 20.860856044618572,
+      "final_loss": 9.836091311324354,
+      "iterations": 7,
+      "threshold": 0.2
+    }
+  }
+}

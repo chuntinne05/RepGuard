@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "run_id": "fab742ee6d4e2f4850857dec",
+  "model": "qwen3.5:27b",
+  "model_digest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+  "real_completed_responses": 16,
+  "mock_calls": 0,
+  "native_thinking_nonempty": 16,
+  "correct": 11,
+  "n": 16,
+  "valid": 12,
+  "input_tokens": 25769,
+  "output_tokens": 41940,
+  "length_stops": 4,
+  "same16cases_and_same_prompt_verified": true,
+  "pinned_source_weights_and_timestamps_verified": true,
+  "arithmetic_and_scores_recomputed": true,
+  "primary_seven_files_unchanged": true,
+  "separate_new_app_and_model_volume": true,
+  "independent_final_test": false,
+  "gpu_comparison_not_cost_matched": true,
+  "reputation_superiority_claim": false
+}

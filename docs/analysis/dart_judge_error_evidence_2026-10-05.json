@@ -1,0 +1,43 @@
+{
+  "scope": "posthoc full-data diagnostics; not causal estimates of model reasoning",
+  "think": false,
+  "num_predict": 128,
+  "counts": {
+    "verified_cases": 2352,
+    "false_positives": 1072,
+    "false_positives_unclipped": 512,
+    "fp_with_answer_mismatch": 348,
+    "fp_only_answer_mismatch": 173,
+    "fp_with_other_failed_checks": 899,
+    "high_confidence_fp": 595,
+    "high_confidence_unclipped_fp": 391,
+    "false_positives_clipped": 560
+  },
+  "confidence_bins": {
+    "[0,.5)": {
+      "n": 699,
+      "successes": 9,
+      "mean_probability": 0.0005722460658082976,
+      "actual_success_rate": 0.012875536480686695
+    },
+    "[.5,.9)": {
+      "n": 560,
+      "successes": 83,
+      "mean_probability": 0.6079464285714288,
+      "actual_success_rate": 0.14821428571428572
+    },
+    "[.9,1]": {
+      "n": 1093,
+      "successes": 498,
+      "mean_probability": 0.9898902104300084,
+      "actual_success_rate": 0.4556267154620311
+    }
+  },
+  "failed_check_labels_counts": {
+    "no_op_fail": 3526,
+    "no_op_pass": 21
+  },
+  "examples_selection": "First three SHA256(agent:task) among p>=.9, false-positive, unclipped cases; raw cases private",
+  "all_prompt_hashes_verified": true,
+  "source_sha256": "8e1c7c49d11e6b86cee5ee41fa9ceb8aed12e0d4c5df4d028158ea795993dd1a"
+}

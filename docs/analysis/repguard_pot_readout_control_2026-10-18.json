@@ -1,0 +1,69 @@
+{
+  "scope": "Post-hoc deterministic output-format/readout control, not reputation or a new model",
+  "n": 24,
+  "new_model_calls": 0,
+  "strict_original_correct": 14,
+  "whitespace_control_correct": 16,
+  "robust_direct_pot_correct": 17,
+  "readout_rewritten": 1,
+  "primary_scores_preserved": true,
+  "source_verified": false,
+  "discretionary_training_targets_unchanged": true,
+  "same_frozen_decisions": {
+    "cheap": {
+      "correct": 12,
+      "n": 24,
+      "rescue_vs_robust_direct_pot": 1,
+      "harm_vs_robust_direct_pot": 6,
+      "harm_probability_exact_upper95": 0.43469137890101084,
+      "mean_ollama_eval_seconds": 11.238181916583335,
+      "mean_model_calls": 1.0
+    },
+    "direct_pot": {
+      "correct": 17,
+      "n": 24,
+      "rescue_vs_robust_direct_pot": 0,
+      "harm_vs_robust_direct_pot": 0,
+      "harm_probability_exact_upper95": 0.11734615615494876,
+      "mean_ollama_eval_seconds": 47.065939291666666,
+      "mean_model_calls": 1.0
+    },
+    "always_regenerate_with_fallback": {
+      "correct": 17,
+      "n": 24,
+      "rescue_vs_robust_direct_pot": 0,
+      "harm_vs_robust_direct_pot": 0,
+      "harm_probability_exact_upper95": 0.11734615615494876,
+      "mean_ollama_eval_seconds": 58.30412120825,
+      "mean_model_calls": 2.0
+    },
+    "rule_guard_only": {
+      "correct": 14,
+      "n": 24,
+      "rescue_vs_robust_direct_pot": 1,
+      "harm_vs_robust_direct_pot": 4,
+      "harm_probability_exact_upper95": 0.34180734940411617,
+      "mean_ollama_eval_seconds": 18.298790541583333,
+      "mean_model_calls": 1.125
+    },
+    "oof_global_history": {
+      "correct": 17,
+      "n": 24,
+      "rescue_vs_robust_direct_pot": 0,
+      "harm_vs_robust_direct_pot": 0,
+      "harm_probability_exact_upper95": 0.11734615615494876,
+      "mean_ollama_eval_seconds": 58.30412120825,
+      "mean_model_calls": 2.0
+    },
+    "oof_local_history": {
+      "correct": 17,
+      "n": 24,
+      "rescue_vs_robust_direct_pot": 1,
+      "harm_vs_robust_direct_pot": 1,
+      "harm_probability_exact_upper95": 0.18289246975564638,
+      "mean_ollama_eval_seconds": 53.455143374916666,
+      "mean_model_calls": 1.9166666666666667
+    }
+  },
+  "source_sha256": "24c67b7d71e2e1cce6b51a55bac0839d0f4218403c1345f37830204dba6c8ad3"
+}

@@ -1,0 +1,241 @@
+{
+  "scope": "Exploratory replay/upper-bound analysis on actual cached responses, NOT a live learned policy or superiority test",
+  "n": 16,
+  "new_model_calls": 0,
+  "methods": {
+    "direct14b": {
+      "correct": 11,
+      "calls": 16,
+      "gpu_eval_cost_proxy_usd": 0.133944324929778,
+      "rescue_vs_modern": 0,
+      "harm_vs_modern": 0,
+      "mean_calls": 1.0,
+      "gpu_eval_cost_proxy_relative_to_direct27b": 0.2022452605118793
+    },
+    "direct27b": {
+      "correct": 11,
+      "calls": 16,
+      "gpu_eval_cost_proxy_usd": 0.6622865949529161,
+      "rescue_vs_modern": 0,
+      "harm_vs_modern": 0,
+      "mean_calls": 1.0,
+      "gpu_eval_cost_proxy_relative_to_direct27b": 1.0
+    },
+    "invalid_only_regenerate": {
+      "correct": 11,
+      "calls": 18,
+      "gpu_eval_cost_proxy_usd": 0.25849265937977794,
+      "rescue_vs_modern": 0,
+      "harm_vs_modern": 0,
+      "mean_calls": 1.125,
+      "gpu_eval_cost_proxy_relative_to_direct27b": 0.3903033238928155
+    },
+    "oracle_keep_or_regenerate_DIAGNOSTIC": {
+      "correct": 11,
+      "calls": 16,
+      "gpu_eval_cost_proxy_usd": 0.133944324929778,
+      "rescue_vs_modern": 0,
+      "harm_vs_modern": 0,
+      "mean_calls": 1.0,
+      "gpu_eval_cost_proxy_relative_to_direct27b": 0.2022452605118793
+    }
+  },
+  "rows": [
+    {
+      "id": "MSI/2007/page_102.pdf-2",
+      "small_correct": true,
+      "modern_correct": true,
+      "small_valid": true,
+      "modern_valid": true,
+      "rule_calls_modern": false,
+      "oracle_calls_modern_GOLD_ONLY": false,
+      "gpu_eval_cost_proxy_small": 0.011513026782,
+      "gpu_eval_cost_proxy_modern": 0.06434548445199999
+    },
+    {
+      "id": "HOLX/2008/page_128.pdf-1",
+      "small_correct": true,
+      "modern_correct": true,
+      "small_valid": true,
+      "modern_valid": true,
+      "rule_calls_modern": false,
+      "oracle_calls_modern_GOLD_ONLY": false,
+      "gpu_eval_cost_proxy_small": 0.007039204416,
+      "gpu_eval_cost_proxy_modern": 0.020334031887999995
+    },
+    {
+      "id": "AMAT/2013/page_35.pdf-1",
+      "small_correct": false,
+      "modern_correct": false,
+      "small_valid": false,
+      "modern_valid": false,
+      "rule_calls_modern": true,
+      "oracle_calls_modern_GOLD_ONLY": false,
+      "gpu_eval_cost_proxy_small": 0.008179217706,
+      "gpu_eval_cost_proxy_modern": 0.062791070186
+    },
+    {
+      "id": "APD/2018/page_54.pdf-2",
+      "small_correct": false,
+      "modern_correct": false,
+      "small_valid": false,
+      "modern_valid": false,
+      "rule_calls_modern": true,
+      "oracle_calls_modern_GOLD_ONLY": false,
+      "gpu_eval_cost_proxy_small": 0.0037193820060000002,
+      "gpu_eval_cost_proxy_modern": 0.06175726426399999
+    },
+    {
+      "id": "FBHS/2017/page_48.pdf-2",
+      "small_correct": true,
+      "modern_correct": true,
+      "small_valid": true,
+      "modern_valid": true,
+      "rule_calls_modern": false,
+      "oracle_calls_modern_GOLD_ONLY": false,
+      "gpu_eval_cost_proxy_small": 0.008065850963999999,
+      "gpu_eval_cost_proxy_modern": 0.045963940356
+    },
+    {
+      "id": "ANSS/2008/page_85.pdf-2",
+      "small_correct": true,
+      "modern_correct": true,
+      "small_valid": true,
+      "modern_valid": true,
+      "rule_calls_modern": false,
+      "oracle_calls_modern_GOLD_ONLY": false,
+      "gpu_eval_cost_proxy_small": 0.005706843,
+      "gpu_eval_cost_proxy_modern": 0.027433748966
+    },
+    {
+      "id": "PPG/2010/page_45.pdf-3",
+      "small_correct": true,
+      "modern_correct": true,
+      "small_valid": true,
+      "modern_valid": true,
+      "rule_calls_modern": false,
+      "oracle_calls_modern_GOLD_ONLY": false,
+      "gpu_eval_cost_proxy_small": 0.010171879938,
+      "gpu_eval_cost_proxy_modern": 0.017761860862
+    },
+    {
+      "id": "EW/2004/page_51.pdf-1",
+      "small_correct": true,
+      "modern_correct": true,
+      "small_valid": true,
+      "modern_valid": true,
+      "rule_calls_modern": false,
+      "oracle_calls_modern_GOLD_ONLY": false,
+      "gpu_eval_cost_proxy_small": 0.00619419405,
+      "gpu_eval_cost_proxy_modern": 0.028208790538
+    },
+    {
+      "id": "STT/2007/page_65.pdf-4",
+      "small_correct": true,
+      "modern_correct": true,
+      "small_valid": true,
+      "modern_valid": true,
+      "rule_calls_modern": false,
+      "oracle_calls_modern_GOLD_ONLY": false,
+      "gpu_eval_cost_proxy_small": 0.0034143639959999996,
+      "gpu_eval_cost_proxy_modern": 0.046410139146
+    },
+    {
+      "id": "CAT/2018/page_38.pdf-3",
+      "small_correct": true,
+      "modern_correct": true,
+      "small_valid": true,
+      "modern_valid": true,
+      "rule_calls_modern": false,
+      "oracle_calls_modern_GOLD_ONLY": false,
+      "gpu_eval_cost_proxy_small": 0.005187027558,
+      "gpu_eval_cost_proxy_modern": 0.023126301525999995
+    },
+    {
+      "id": "SLG/2012/page_87.pdf-2",
+      "small_correct": false,
+      "modern_correct": false,
+      "small_valid": true,
+      "modern_valid": false,
+      "rule_calls_modern": false,
+      "oracle_calls_modern_GOLD_ONLY": false,
+      "gpu_eval_cost_proxy_small": 0.013116710382,
+      "gpu_eval_cost_proxy_modern": 0.06246712708399999
+    },
+    {
+      "id": "FRT/2006/page_133.pdf-2",
+      "small_correct": false,
+      "modern_correct": false,
+      "small_valid": true,
+      "modern_valid": false,
+      "rule_calls_modern": false,
+      "oracle_calls_modern_GOLD_ONLY": false,
+      "gpu_eval_cost_proxy_small": 0.019878031182,
+      "gpu_eval_cost_proxy_modern": 0.06141613542545799
+    },
+    {
+      "id": "AOS/2010/page_23.pdf-1",
+      "small_correct": true,
+      "modern_correct": true,
+      "small_valid": true,
+      "modern_valid": true,
+      "rule_calls_modern": false,
+      "oracle_calls_modern_GOLD_ONLY": false,
+      "gpu_eval_cost_proxy_small": 0.005548084361999999,
+      "gpu_eval_cost_proxy_modern": 0.016523654815458
+    },
+    {
+      "id": "TMUS/2016/page_32.pdf-2",
+      "small_correct": true,
+      "modern_correct": true,
+      "small_valid": true,
+      "modern_valid": true,
+      "rule_calls_modern": false,
+      "oracle_calls_modern_GOLD_ONLY": false,
+      "gpu_eval_cost_proxy_small": 0.004606584360000001,
+      "gpu_eval_cost_proxy_modern": 0.03573254565199999
+    },
+    {
+      "id": "IQV/2018/page_106.pdf-1",
+      "small_correct": true,
+      "modern_correct": true,
+      "small_valid": true,
+      "modern_valid": true,
+      "rule_calls_modern": false,
+      "oracle_calls_modern_GOLD_ONLY": false,
+      "gpu_eval_cost_proxy_small": 0.014963147873778001,
+      "gpu_eval_cost_proxy_modern": 0.045400595312
+    },
+    {
+      "id": "SNPS/2003/page_39.pdf-1",
+      "small_correct": false,
+      "modern_correct": false,
+      "small_valid": true,
+      "modern_valid": true,
+      "rule_calls_modern": false,
+      "oracle_calls_modern_GOLD_ONLY": false,
+      "gpu_eval_cost_proxy_small": 0.0066407763540000005,
+      "gpu_eval_cost_proxy_modern": 0.04261390448
+    }
+  ],
+  "pricing_source": "https://modal.com/pricing",
+  "pricing_as_of": "2026-10-19",
+  "GPU_rates_per_second_usd": {
+    "L4": 0.000222,
+    "L40S": 0.000542
+  },
+  "excluded_costs": [
+    "model load",
+    "container startup/idle",
+    "CPU",
+    "memory",
+    "storage",
+    "evaluation/audits",
+    "cold model reload and batching effects"
+  ],
+  "rule_uses_gold": false,
+  "oracle_uses_gold": true,
+  "learned_reputation_implemented": false,
+  "noninferiority_demonstrated": false,
+  "interpretation": "Oracle bound only quantifies potential; a deployable controller must choose using public state/history and beat the rule/learned controls on new reports. If rule already explains gains, do not credit reputation."
+}

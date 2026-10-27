@@ -1,0 +1,209 @@
+{
+  "run_id": "359b8d464d5005b9c5d0f967",
+  "scope": "100-question real development pilot; 20-question screen, NOT final confirmation",
+  "collection_calls": 200,
+  "mock_calls": 0,
+  "partitions": {
+    "history": 60,
+    "calibration": 10,
+    "validation": 10,
+    "screen": 20
+  },
+  "methods": {
+    "AlwaysA": {
+      "correct": 0,
+      "questions": 20,
+      "accuracy": 0.0,
+      "coverage": 0.0,
+      "approved_accuracy": null,
+      "wrong_approved": 0,
+      "mean_tokens": 1901.95,
+      "mean_observed_request_seconds": 1.4651891069499925,
+      "model_calls": 20
+    },
+    "AlwaysB": {
+      "correct": 1,
+      "questions": 20,
+      "accuracy": 0.05,
+      "coverage": 0.05,
+      "approved_accuracy": 1.0,
+      "wrong_approved": 0,
+      "mean_tokens": 1927.75,
+      "mean_observed_request_seconds": 3.059570897599997,
+      "model_calls": 20
+    },
+    "GlobalGold": {
+      "correct": 0,
+      "questions": 20,
+      "accuracy": 0.0,
+      "coverage": 0.0,
+      "approved_accuracy": null,
+      "wrong_approved": 0,
+      "mean_tokens": 1901.95,
+      "mean_observed_request_seconds": 1.4651891069499925,
+      "model_calls": 20
+    },
+    "SkillGold": {
+      "correct": 0,
+      "questions": 20,
+      "accuracy": 0.0,
+      "coverage": 0.0,
+      "approved_accuracy": null,
+      "wrong_approved": 0,
+      "mean_tokens": 1901.95,
+      "mean_observed_request_seconds": 1.4651891069499925,
+      "model_calls": 20
+    },
+    "RawFeedbackSkill": {
+      "correct": 0,
+      "questions": 20,
+      "accuracy": 0.0,
+      "coverage": 0.0,
+      "approved_accuracy": null,
+      "wrong_approved": 0,
+      "mean_tokens": 1901.95,
+      "mean_observed_request_seconds": 1.4651891069499925,
+      "model_calls": 20
+    },
+    "FixedCascade": {
+      "correct": 1,
+      "questions": 20,
+      "accuracy": 0.05,
+      "coverage": 0.05,
+      "approved_accuracy": 1.0,
+      "wrong_approved": 0,
+      "mean_tokens": 3829.7,
+      "mean_observed_request_seconds": 4.524760004549989,
+      "model_calls": 40
+    },
+    "EvidenceOnly": {
+      "correct": 1,
+      "questions": 20,
+      "accuracy": 0.05,
+      "coverage": 0.05,
+      "approved_accuracy": 1.0,
+      "wrong_approved": 0,
+      "mean_tokens": 3829.7,
+      "mean_observed_request_seconds": 4.524760004549989,
+      "model_calls": 40
+    },
+    "RepGuard": {
+      "correct": 1,
+      "questions": 20,
+      "accuracy": 0.05,
+      "coverage": 0.05,
+      "approved_accuracy": 1.0,
+      "wrong_approved": 0,
+      "mean_tokens": 3829.7,
+      "mean_observed_request_seconds": 4.524760004549989,
+      "model_calls": 40
+    }
+  },
+  "primary_contrasts": {
+    "AlwaysB": {
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "rescues": 0,
+      "harms": 0
+    },
+    "FixedCascade": {
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "rescues": 0,
+      "harms": 0
+    },
+    "EvidenceOnly": {
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "rescues": 0,
+      "harms": 0
+    },
+    "SkillGold": {
+      "difference": 0.05,
+      "ci95": [
+        0.0,
+        0.15
+      ],
+      "rescues": 1,
+      "harms": 0
+    }
+  },
+  "pilot_signal_pass": false,
+  "limitations": [
+    "Only 20 screen questions; intervals are very imprecise and exploratory",
+    "Full supervised history gold is available equally to all methods; NOT a 10% audit claim",
+    "Code/source consistency is not proof of semantic correctness",
+    "Same-family agents; model-block execution order affects cold-load latency",
+    "Tokens and recorded request time are not total Modal billing or dollar parity",
+    "Response collection includes counterfactual calls for evaluating all policies"
+  ],
+  "verification": {
+    "real_responses_verified": 200,
+    "attempts_started": 201,
+    "cloud_local_recomputation_match": true,
+    "environment": {
+      "app": "repguard-thesis-real-pilot-20261018",
+      "gpu": "NVIDIA L4, 23034 MiB, 610.57.04",
+      "ollama_version": "0.40.6",
+      "model_digests": {
+        "qwen3:8b": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+        "qwen3:14b": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8"
+      },
+      "evaluation_volume_mounted": false,
+      "flash_attention": true,
+      "kv_cache_type": "q8_0",
+      "think": false,
+      "loaded_models": {
+        "qwen3:14b": {
+          "name": "qwen3:14b",
+          "model": "qwen3:14b",
+          "size": 10590177197,
+          "digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "14.8B",
+            "quantization_level": "Q4_K_M"
+          },
+          "expires_at": "2026-10-18T04:07:17.521472986Z",
+          "size_vram": 10590177197,
+          "context_length": 16384,
+          "runner": "llamacpp"
+        },
+        "qwen3:8b": {
+          "name": "qwen3:8b",
+          "model": "qwen3:8b",
+          "size": 6404586864,
+          "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "8.2B",
+            "quantization_level": "Q4_K_M"
+          },
+          "expires_at": "2026-10-18T04:07:57.889460314Z",
+          "size_vram": 6404586864,
+          "context_length": 16384,
+          "runner": "llamacpp"
+        }
+      }
+    }
+  }
+}

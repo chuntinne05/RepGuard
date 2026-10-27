@@ -1,0 +1,43 @@
+agent,domain,accuracy,n_tasks,n_correct,ci_lower,ci_upper,total_cost_usd
+gemma2-latest,biology,0.7706,436,336,0.7317,0.8096,0.0
+gemma2-latest,business,0.3333,468,156,0.2916,0.3782,0.0
+gemma2-latest,chemistry,0.3028,667,202,0.2661,0.3358,0.0
+gemma2-latest,computer science,0.3786,243,92,0.3188,0.4384,0.0
+gemma2-latest,economics,0.5833,492,287,0.5376,0.626,0.0
+gemma2-latest,engineering,0.3791,575,218,0.3426,0.4209,0.0
+gemma2-latest,health,0.544,500,272,0.498,0.585,0.0
+gemma2-latest,history,0.4775,222,106,0.4099,0.545,0.0
+gemma2-latest,law,0.3456,677,234,0.3087,0.3833,0.0
+gemma2-latest,math,0.3139,825,259,0.2842,0.343,0.0
+gemma2-latest,other,0.4516,558,252,0.4086,0.4928,0.0
+gemma2-latest,philosophy,0.4548,299,136,0.4013,0.5101,0.0
+gemma2-latest,physics,0.329,778,256,0.2956,0.3638,0.0
+gemma2-latest,psychology,0.6647,501,333,0.6267,0.7076,0.0
+qwen3-8b,biology,0.7638,436,333,0.7248,0.804,0.0
+qwen3-8b,business,0.3718,468,174,0.3333,0.4209,0.0
+qwen3-8b,chemistry,0.3373,667,225,0.3058,0.3748,0.0
+qwen3-8b,computer science,0.465,243,113,0.4033,0.5309,0.0
+qwen3-8b,economics,0.5894,492,290,0.5407,0.6341,0.0
+qwen3-8b,engineering,0.433,575,249,0.3913,0.4713,0.0
+qwen3-8b,health,0.56,500,280,0.515,0.598,0.0
+qwen3-8b,history,0.4865,222,108,0.4234,0.5586,0.0
+qwen3-8b,law,0.3486,677,236,0.3124,0.3811,0.0
+qwen3-8b,math,0.3709,825,306,0.3358,0.4024,0.0
+qwen3-8b,other,0.4606,558,257,0.4166,0.5027,0.0
+qwen3-8b,philosophy,0.4548,299,136,0.3913,0.5084,0.0
+qwen3-8b,physics,0.3612,778,281,0.3245,0.401,0.0
+qwen3-8b,psychology,0.6387,501,320,0.6008,0.6826,0.0
+llama3-8b,biology,0.6491,436,283,0.5997,0.6881,0.0
+llama3-8b,business,0.3248,468,152,0.2842,0.3675,0.0
+llama3-8b,chemistry,0.2354,667,157,0.2031,0.2699,0.0
+llama3-8b,computer science,0.321,243,78,0.2634,0.3827,0.0
+llama3-8b,economics,0.4756,492,234,0.4298,0.5214,0.0
+llama3-8b,engineering,0.3078,575,177,0.2721,0.3453,0.0
+llama3-8b,health,0.468,500,234,0.4249,0.51,0.0
+llama3-8b,history,0.4009,222,89,0.3423,0.4685,0.0
+llama3-8b,law,0.257,677,174,0.2245,0.2918,0.0
+llama3-8b,math,0.2036,825,168,0.1751,0.2339,0.0
+llama3-8b,other,0.3602,558,201,0.3181,0.3988,0.0
+llama3-8b,philosophy,0.3144,299,94,0.2642,0.3663,0.0
+llama3-8b,physics,0.2519,778,196,0.2198,0.2841,0.0
+llama3-8b,psychology,0.5549,501,278,0.517,0.5988,0.0

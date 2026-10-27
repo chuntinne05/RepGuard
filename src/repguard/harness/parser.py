@@ -102,14 +102,34 @@ def parse_response(
     # Determine valid answer letters based on num_options
     valid_letters = {chr(ord("A") + i) for i in range(min(num_options, 10))}
 
-    # Try each pattern in order
+    # Strip any <think>...</think> reasoning blocks from reasoning models
+    cleaned = re.sub(r"<think>.*?</think>", "", response_text, flags=re.DOTALL).strip()
+    if not cleaned:
+        cleaned = response_text.strip()
+
+    # Strip markdown bolding like **A** -> A
+    cleaned = re.sub(r"\*\*([A-Za-z])\*\*", r"\1", cleaned)
+
+    # Fast path: check if the cleaned text is directly a single letter or (letter)
+    direct_match = re.match(r"^\s*\(?([A-Ja-j])\)?[\.\:\s]*$", cleaned)
+    if direct_match:
+        letter = direct_match.group(1).upper()
+        if letter in valid_letters:
+            return ParseResult(
+                answer=letter,
+                confidence=1.0,
+                method="single_letter",
+                raw_response=response_text,
+            )
+
+    # Try each pattern in order on cleaned text
     for name, pattern, group_idx in _PATTERNS:
-        match = pattern.search(response_text)
+        match = pattern.search(cleaned)
         if match:
             letter = match.group(group_idx).upper()
             if letter in valid_letters:
                 # Higher confidence for more specific patterns
-                confidence = 1.0 if name in ("the_answer_is", "answer_colon") else 0.8
+                confidence = 1.0 if name in ("the_answer_is", "answer_colon", "single_letter") else 0.8
                 return ParseResult(
                     answer=letter,
                     confidence=confidence,

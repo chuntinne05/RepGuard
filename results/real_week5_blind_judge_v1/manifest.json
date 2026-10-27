@@ -1,0 +1,1729 @@
+{
+  "created_at": "2026-09-29T11:51:14.893065+00:00",
+  "protocol_hash": "2b9fe8eb449d78c8cdb79334f6f6112f921efa1b4ef09fd6a2adea18aad0a6eb",
+  "name": "week5_modal_candidate_blind_judge_v1",
+  "dataset_id": "TIGER-Lab/MMLU-Pro",
+  "dataset_task_id_sha256": "30f0aa8131e595db378dbd9f1dca33aae2f2d8fee9b48d6b1faeb3c4283444b2",
+  "split_seed": 42,
+  "source_judge_protocol_hash": "aea88c2c99be006561040acf1a243c4f08cbf0bd9146c27020df1557408a4f48",
+  "judge_model_id": "qwen3:14b",
+  "judge_model_digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+  "ollama_version": "0.34.4",
+  "think": false,
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "max_output_tokens": 256,
+  "prompt_version": "candidate_blind_mcq_choice_v1",
+  "selected_history_ids": {
+    "biology": [
+      "mmlu_pro_3020",
+      "mmlu_pro_3099",
+      "mmlu_pro_3471",
+      "mmlu_pro_3202",
+      "mmlu_pro_3445",
+      "mmlu_pro_2830",
+      "mmlu_pro_3015",
+      "mmlu_pro_3464",
+      "mmlu_pro_2919",
+      "mmlu_pro_3339",
+      "mmlu_pro_3181",
+      "mmlu_pro_3129",
+      "mmlu_pro_3191",
+      "mmlu_pro_2993",
+      "mmlu_pro_2878",
+      "mmlu_pro_2872",
+      "mmlu_pro_3297",
+      "mmlu_pro_3186",
+      "mmlu_pro_3081",
+      "mmlu_pro_2846"
+    ],
+    "business": [
+      "mmlu_pro_110",
+      "mmlu_pro_256",
+      "mmlu_pro_121",
+      "mmlu_pro_686",
+      "mmlu_pro_175",
+      "mmlu_pro_850",
+      "mmlu_pro_438",
+      "mmlu_pro_617",
+      "mmlu_pro_462",
+      "mmlu_pro_405",
+      "mmlu_pro_722",
+      "mmlu_pro_790",
+      "mmlu_pro_326",
+      "mmlu_pro_298",
+      "mmlu_pro_811",
+      "mmlu_pro_557",
+      "mmlu_pro_554",
+      "mmlu_pro_349",
+      "mmlu_pro_441",
+      "mmlu_pro_135"
+    ],
+    "chemistry": [
+      "mmlu_pro_4600",
+      "mmlu_pro_3585",
+      "mmlu_pro_4587",
+      "mmlu_pro_4248",
+      "mmlu_pro_4610",
+      "mmlu_pro_3586",
+      "mmlu_pro_4652",
+      "mmlu_pro_3736",
+      "mmlu_pro_3644",
+      "mmlu_pro_4046",
+      "mmlu_pro_4435",
+      "mmlu_pro_4091",
+      "mmlu_pro_3565",
+      "mmlu_pro_3551",
+      "mmlu_pro_4460",
+      "mmlu_pro_4583",
+      "mmlu_pro_4039",
+      "mmlu_pro_3847",
+      "mmlu_pro_3862",
+      "mmlu_pro_3818"
+    ],
+    "computer science": [
+      "mmlu_pro_10531",
+      "mmlu_pro_10498",
+      "mmlu_pro_10725",
+      "mmlu_pro_10580",
+      "mmlu_pro_10551",
+      "mmlu_pro_10572",
+      "mmlu_pro_10461",
+      "mmlu_pro_10361",
+      "mmlu_pro_10674",
+      "mmlu_pro_10616",
+      "mmlu_pro_10590",
+      "mmlu_pro_10612",
+      "mmlu_pro_10476",
+      "mmlu_pro_10387",
+      "mmlu_pro_10385",
+      "mmlu_pro_10584",
+      "mmlu_pro_10462",
+      "mmlu_pro_10473",
+      "mmlu_pro_10696",
+      "mmlu_pro_10505"
+    ],
+    "economics": [
+      "mmlu_pro_7132",
+      "mmlu_pro_7486",
+      "mmlu_pro_7609",
+      "mmlu_pro_6829",
+      "mmlu_pro_7458",
+      "mmlu_pro_6975",
+      "mmlu_pro_7102",
+      "mmlu_pro_7351",
+      "mmlu_pro_7641",
+      "mmlu_pro_7534",
+      "mmlu_pro_7387",
+      "mmlu_pro_7046",
+      "mmlu_pro_7455",
+      "mmlu_pro_7336",
+      "mmlu_pro_7464",
+      "mmlu_pro_6927",
+      "mmlu_pro_7311",
+      "mmlu_pro_7213",
+      "mmlu_pro_7648",
+      "mmlu_pro_6951"
+    ],
+    "engineering": [
+      "mmlu_pro_11492",
+      "mmlu_pro_11909",
+      "mmlu_pro_11917",
+      "mmlu_pro_11328",
+      "mmlu_pro_11991",
+      "mmlu_pro_11327",
+      "mmlu_pro_11746",
+      "mmlu_pro_11630",
+      "mmlu_pro_11848",
+      "mmlu_pro_11557",
+      "mmlu_pro_11353",
+      "mmlu_pro_12062",
+      "mmlu_pro_11803",
+      "mmlu_pro_11890",
+      "mmlu_pro_11958",
+      "mmlu_pro_11588",
+      "mmlu_pro_11758",
+      "mmlu_pro_11399",
+      "mmlu_pro_11380",
+      "mmlu_pro_11969"
+    ],
+    "health": [
+      "mmlu_pro_6314",
+      "mmlu_pro_6309",
+      "mmlu_pro_6531",
+      "mmlu_pro_6119",
+      "mmlu_pro_6433",
+      "mmlu_pro_6598",
+      "mmlu_pro_6112",
+      "mmlu_pro_6150",
+      "mmlu_pro_6530",
+      "mmlu_pro_6052",
+      "mmlu_pro_6577",
+      "mmlu_pro_6617",
+      "mmlu_pro_6063",
+      "mmlu_pro_6426",
+      "mmlu_pro_6818",
+      "mmlu_pro_6476",
+      "mmlu_pro_6263",
+      "mmlu_pro_6418",
+      "mmlu_pro_6450",
+      "mmlu_pro_6144"
+    ],
+    "history": [
+      "mmlu_pro_4890",
+      "mmlu_pro_5043",
+      "mmlu_pro_4774",
+      "mmlu_pro_4963",
+      "mmlu_pro_4726",
+      "mmlu_pro_5024",
+      "mmlu_pro_5022",
+      "mmlu_pro_5009",
+      "mmlu_pro_4745",
+      "mmlu_pro_4938",
+      "mmlu_pro_4670",
+      "mmlu_pro_4891",
+      "mmlu_pro_4705",
+      "mmlu_pro_4943",
+      "mmlu_pro_5058",
+      "mmlu_pro_4824",
+      "mmlu_pro_4986",
+      "mmlu_pro_4756",
+      "mmlu_pro_4763",
+      "mmlu_pro_5037"
+    ],
+    "law": [
+      "mmlu_pro_1914",
+      "mmlu_pro_1330",
+      "mmlu_pro_1382",
+      "mmlu_pro_1814",
+      "mmlu_pro_925",
+      "mmlu_pro_1806",
+      "mmlu_pro_1089",
+      "mmlu_pro_1106",
+      "mmlu_pro_1667",
+      "mmlu_pro_1546",
+      "mmlu_pro_1676",
+      "mmlu_pro_1861",
+      "mmlu_pro_898",
+      "mmlu_pro_1073",
+      "mmlu_pro_1083",
+      "mmlu_pro_1680",
+      "mmlu_pro_956",
+      "mmlu_pro_1800",
+      "mmlu_pro_1439",
+      "mmlu_pro_1121"
+    ],
+    "math": [
+      "mmlu_pro_8341",
+      "mmlu_pro_7996",
+      "mmlu_pro_8747",
+      "mmlu_pro_8479",
+      "mmlu_pro_7712",
+      "mmlu_pro_8122",
+      "mmlu_pro_8332",
+      "mmlu_pro_8626",
+      "mmlu_pro_8451",
+      "mmlu_pro_8069",
+      "mmlu_pro_8917",
+      "mmlu_pro_8621",
+      "mmlu_pro_7857",
+      "mmlu_pro_8390",
+      "mmlu_pro_8947",
+      "mmlu_pro_8913",
+      "mmlu_pro_7968",
+      "mmlu_pro_7688",
+      "mmlu_pro_8802",
+      "mmlu_pro_7737"
+    ],
+    "other": [
+      "mmlu_pro_5305",
+      "mmlu_pro_5510",
+      "mmlu_pro_5581",
+      "mmlu_pro_5368",
+      "mmlu_pro_5752",
+      "mmlu_pro_5907",
+      "mmlu_pro_5846",
+      "mmlu_pro_5407",
+      "mmlu_pro_5607",
+      "mmlu_pro_5256",
+      "mmlu_pro_5892",
+      "mmlu_pro_5148",
+      "mmlu_pro_5312",
+      "mmlu_pro_5440",
+      "mmlu_pro_5086",
+      "mmlu_pro_5521",
+      "mmlu_pro_5668",
+      "mmlu_pro_5936",
+      "mmlu_pro_5820",
+      "mmlu_pro_5512"
+    ],
+    "philosophy": [
+      "mmlu_pro_10927",
+      "mmlu_pro_10796",
+      "mmlu_pro_11227",
+      "mmlu_pro_10905",
+      "mmlu_pro_11168",
+      "mmlu_pro_10798",
+      "mmlu_pro_11068",
+      "mmlu_pro_10987",
+      "mmlu_pro_10825",
+      "mmlu_pro_11260",
+      "mmlu_pro_11280",
+      "mmlu_pro_10964",
+      "mmlu_pro_11120",
+      "mmlu_pro_11092",
+      "mmlu_pro_10842",
+      "mmlu_pro_10910",
+      "mmlu_pro_10892",
+      "mmlu_pro_10947",
+      "mmlu_pro_11149",
+      "mmlu_pro_11197"
+    ],
+    "physics": [
+      "mmlu_pro_9547",
+      "mmlu_pro_9715",
+      "mmlu_pro_9649",
+      "mmlu_pro_9129",
+      "mmlu_pro_9566",
+      "mmlu_pro_9889",
+      "mmlu_pro_10116",
+      "mmlu_pro_9090",
+      "mmlu_pro_9388",
+      "mmlu_pro_9128",
+      "mmlu_pro_9927",
+      "mmlu_pro_9142",
+      "mmlu_pro_9497",
+      "mmlu_pro_9258",
+      "mmlu_pro_9110",
+      "mmlu_pro_9289",
+      "mmlu_pro_9745",
+      "mmlu_pro_9201",
+      "mmlu_pro_9635",
+      "mmlu_pro_9694"
+    ],
+    "psychology": [
+      "mmlu_pro_2592",
+      "mmlu_pro_2503",
+      "mmlu_pro_2144",
+      "mmlu_pro_2384",
+      "mmlu_pro_2504",
+      "mmlu_pro_2664",
+      "mmlu_pro_2205",
+      "mmlu_pro_2758",
+      "mmlu_pro_2173",
+      "mmlu_pro_2284",
+      "mmlu_pro_2364",
+      "mmlu_pro_2176",
+      "mmlu_pro_2310",
+      "mmlu_pro_2475",
+      "mmlu_pro_2660",
+      "mmlu_pro_2318",
+      "mmlu_pro_2412",
+      "mmlu_pro_2669",
+      "mmlu_pro_2419",
+      "mmlu_pro_2140"
+    ]
+  },
+  "candidate_blind_cases": [
+    {
+      "task_id": "mmlu_pro_3020",
+      "subject": "biology",
+      "prompt_hash": "b1572f1288ce8caa6031d18345ddd26ac850b02128a9478eba30b611ac9f9549"
+    },
+    {
+      "task_id": "mmlu_pro_3099",
+      "subject": "biology",
+      "prompt_hash": "68fc14272694586fda09b7636f675bd6a76e097d187bffec742c10ea44e75040"
+    },
+    {
+      "task_id": "mmlu_pro_3471",
+      "subject": "biology",
+      "prompt_hash": "d657448d7f8d45110203d502ae4468e84862dbf3c7a8fb9d7fcf070bc403e8cd"
+    },
+    {
+      "task_id": "mmlu_pro_3202",
+      "subject": "biology",
+      "prompt_hash": "f9981e68ed49d0d0823700d5b40d3ececa98fc894ba63270b21c5bec8c91ad61"
+    },
+    {
+      "task_id": "mmlu_pro_3445",
+      "subject": "biology",
+      "prompt_hash": "299413ce41044bb0e8796aa5ca829e9ee246acd0828067047f1e0b61e3ce9722"
+    },
+    {
+      "task_id": "mmlu_pro_2830",
+      "subject": "biology",
+      "prompt_hash": "1f5cfdb62cc7931cb836d68c54891195caaea3bd7ab972f8fd160228a82ff227"
+    },
+    {
+      "task_id": "mmlu_pro_3015",
+      "subject": "biology",
+      "prompt_hash": "f4c2b69098f9cf06e65753e9449e2b9d8bc2cb1b1d66f32e4d113efe74fe3026"
+    },
+    {
+      "task_id": "mmlu_pro_3464",
+      "subject": "biology",
+      "prompt_hash": "4c7337d8500034cd2abe03920b3a025ae8f3a5524bf55155b7c679d4581f9703"
+    },
+    {
+      "task_id": "mmlu_pro_2919",
+      "subject": "biology",
+      "prompt_hash": "57529c23d9d5fdeab98422c8d2a55c97786709c8c3cb5463ed63f729cf54635f"
+    },
+    {
+      "task_id": "mmlu_pro_3339",
+      "subject": "biology",
+      "prompt_hash": "03b692937cfcfaac5310d2f36f3a39142572c76dc4889f62c687837c99f6ed19"
+    },
+    {
+      "task_id": "mmlu_pro_3181",
+      "subject": "biology",
+      "prompt_hash": "c1326339adf1339deba7ada887e08abed4ff41514b0e4bd684407395408de16b"
+    },
+    {
+      "task_id": "mmlu_pro_3129",
+      "subject": "biology",
+      "prompt_hash": "9e2ab5e64ea50cf6f8aec717941a909b63bdb950b1896496884832b650cb617a"
+    },
+    {
+      "task_id": "mmlu_pro_3191",
+      "subject": "biology",
+      "prompt_hash": "9389aa6d089c4f1ded824c56187e9944e9472d6e7da60986688a8cee36b031db"
+    },
+    {
+      "task_id": "mmlu_pro_2993",
+      "subject": "biology",
+      "prompt_hash": "03f68675abad0a3fa95bd1be5c7b3b6afa0cdb5e515f2a24bb8e8da8ca1c90d0"
+    },
+    {
+      "task_id": "mmlu_pro_2878",
+      "subject": "biology",
+      "prompt_hash": "9b9e41f6542eb0816c360537b2e03f5aebcdf10e6c3f679783e11292f54be669"
+    },
+    {
+      "task_id": "mmlu_pro_2872",
+      "subject": "biology",
+      "prompt_hash": "d2733bac52d1c7adb2e3b1d66b228a604ee250bea240f3afc6f70b42ed23e5c2"
+    },
+    {
+      "task_id": "mmlu_pro_3297",
+      "subject": "biology",
+      "prompt_hash": "e0072d52a14c56096f6806cb3f646d6e6e5f20930dd139c654ed48b48a8df041"
+    },
+    {
+      "task_id": "mmlu_pro_3186",
+      "subject": "biology",
+      "prompt_hash": "7795c75aa35e7bbe54112f85cd48fdb1a69eaf2263ded51bdac3f5a524d45fdd"
+    },
+    {
+      "task_id": "mmlu_pro_3081",
+      "subject": "biology",
+      "prompt_hash": "e5a22c89fbf8f9e02c9edb4262a2d3e08d028407de369e2286106001b782af8c"
+    },
+    {
+      "task_id": "mmlu_pro_2846",
+      "subject": "biology",
+      "prompt_hash": "6b990f968b4ca29e0ff90d31ecda01e77f0c3884f36f29023d6dfae350966a99"
+    },
+    {
+      "task_id": "mmlu_pro_110",
+      "subject": "business",
+      "prompt_hash": "fd3e677ee96b0ca1e5e56f3fc4db05e92e4b55137af34721a6857feaca619d49"
+    },
+    {
+      "task_id": "mmlu_pro_256",
+      "subject": "business",
+      "prompt_hash": "1111fb7f625a38c7368d4d6e6770ba6dd7f0cbd0fb615bb77003439c1318ed0b"
+    },
+    {
+      "task_id": "mmlu_pro_121",
+      "subject": "business",
+      "prompt_hash": "8be5c1bf7260b9fba05484f6eca5e4daf3facaec43fbd11b66bbb3deef8c441f"
+    },
+    {
+      "task_id": "mmlu_pro_686",
+      "subject": "business",
+      "prompt_hash": "ca6249f6993956476811591bb82fef4dad87fc838f0819d7b6bc174ac8134f58"
+    },
+    {
+      "task_id": "mmlu_pro_175",
+      "subject": "business",
+      "prompt_hash": "3c90ba09714ce3f1c1477c1b6b0ef76407a7aba51ac6688714785c8a589a80bc"
+    },
+    {
+      "task_id": "mmlu_pro_850",
+      "subject": "business",
+      "prompt_hash": "68f0e15bfafb1b97590280e7a83de444c60ffe8e44867bdf33c05bfe2e22e0ba"
+    },
+    {
+      "task_id": "mmlu_pro_438",
+      "subject": "business",
+      "prompt_hash": "27a8dcb1910b4f7bdf76c5a057ef74636a1de30299296984cfc78a733e3c0620"
+    },
+    {
+      "task_id": "mmlu_pro_617",
+      "subject": "business",
+      "prompt_hash": "7a2db9a27c0c34c58426c178df3665d77c0ecdde17434d3193eb3719fdc59d4d"
+    },
+    {
+      "task_id": "mmlu_pro_462",
+      "subject": "business",
+      "prompt_hash": "43386514082cdfd0dfcf8f2d0434f6329510cedb57432648948d3635c4053f8b"
+    },
+    {
+      "task_id": "mmlu_pro_405",
+      "subject": "business",
+      "prompt_hash": "2d577acabc42e22f56e9ae1b4aced35efbd52c5b3619f860bc2ce5cfb9126ec4"
+    },
+    {
+      "task_id": "mmlu_pro_722",
+      "subject": "business",
+      "prompt_hash": "f62a887e748726f19705983df10745a11727d7ad8e9658f2dd8d0b152793b245"
+    },
+    {
+      "task_id": "mmlu_pro_790",
+      "subject": "business",
+      "prompt_hash": "cf34714d9a59f658831042dd0b2892d7e84fcb2f475fc84cdd51ed71cce56a9b"
+    },
+    {
+      "task_id": "mmlu_pro_326",
+      "subject": "business",
+      "prompt_hash": "756e5f37a0a42e1c9bf82418591b767fa4878de866dc429f4715416f5e809379"
+    },
+    {
+      "task_id": "mmlu_pro_298",
+      "subject": "business",
+      "prompt_hash": "5285f83bf6d3da4beb20332b9e704b5c71c5d9fd7e428b95e44f563aa23feead"
+    },
+    {
+      "task_id": "mmlu_pro_811",
+      "subject": "business",
+      "prompt_hash": "14318003377a6eee3a5e364f291fb1a1a5fb0f23eca103723a81842380448cec"
+    },
+    {
+      "task_id": "mmlu_pro_557",
+      "subject": "business",
+      "prompt_hash": "a4d744499a642c92a03e8d3d1fcc53bbd361af52a5fbca45b891f5e38d3991c5"
+    },
+    {
+      "task_id": "mmlu_pro_554",
+      "subject": "business",
+      "prompt_hash": "8ea8a5cf720da15e775126b1405c7bd340fdc367bb5803627022dff61e6693e5"
+    },
+    {
+      "task_id": "mmlu_pro_349",
+      "subject": "business",
+      "prompt_hash": "b09a51bdc7b6906a782157ed64545e5094a3f996f1d7741a1d541cf09189671f"
+    },
+    {
+      "task_id": "mmlu_pro_441",
+      "subject": "business",
+      "prompt_hash": "b5b499fbc40549489d38fb1fb4bb0743317b2f880e3d3a8b19d3fe82ab55dc8f"
+    },
+    {
+      "task_id": "mmlu_pro_135",
+      "subject": "business",
+      "prompt_hash": "975d2545f1734890b89285f3e56576b611834b093ba40dd5e600ba4d41c52fdc"
+    },
+    {
+      "task_id": "mmlu_pro_4600",
+      "subject": "chemistry",
+      "prompt_hash": "615cc95bdb01299e203998439620959c5bf475f380460d8a1d1c09833e2d7a8a"
+    },
+    {
+      "task_id": "mmlu_pro_3585",
+      "subject": "chemistry",
+      "prompt_hash": "a02c0c93106188505f62e789a88527f912f9363f541b4c3f73706c1177a369fe"
+    },
+    {
+      "task_id": "mmlu_pro_4587",
+      "subject": "chemistry",
+      "prompt_hash": "e0cda59f6c3cdf72b5efd821502edfa8ac0fcf3214820798f81bc24a0257ac1b"
+    },
+    {
+      "task_id": "mmlu_pro_4248",
+      "subject": "chemistry",
+      "prompt_hash": "5d6e776898cdd33d07af7cb2254daf150043804ca8046ff9943c7734bc2873a7"
+    },
+    {
+      "task_id": "mmlu_pro_4610",
+      "subject": "chemistry",
+      "prompt_hash": "f465da533fdb291b6dfcdd1473e515ac4e1aeefca2a23156cb41a72e2b4a9184"
+    },
+    {
+      "task_id": "mmlu_pro_3586",
+      "subject": "chemistry",
+      "prompt_hash": "de8354cf3b8f676f84eedffa5273ecff3c4de963117767ad13f6ca6986163dbe"
+    },
+    {
+      "task_id": "mmlu_pro_4652",
+      "subject": "chemistry",
+      "prompt_hash": "873601f579357a4171f61503455d0cc71817ad5df83e23ef3c59682cb4eaca2b"
+    },
+    {
+      "task_id": "mmlu_pro_3736",
+      "subject": "chemistry",
+      "prompt_hash": "b9a964d93c7ac3b2a1545fbaf8218ec63893410fb1231f0be19c54ed8b0a5aba"
+    },
+    {
+      "task_id": "mmlu_pro_3644",
+      "subject": "chemistry",
+      "prompt_hash": "89a052f8d2e456c99a4e7e185a61e8a579576fb0ce59a87532c5a6d27b790fc7"
+    },
+    {
+      "task_id": "mmlu_pro_4046",
+      "subject": "chemistry",
+      "prompt_hash": "3c7c30d09341cd857c948a135126ffba940768f2db48840fb829c2e29bd19bb6"
+    },
+    {
+      "task_id": "mmlu_pro_4435",
+      "subject": "chemistry",
+      "prompt_hash": "bb3ed24f590ba34db76e0648619f331c4cc170ad8c5869e76d1f07ff47f31736"
+    },
+    {
+      "task_id": "mmlu_pro_4091",
+      "subject": "chemistry",
+      "prompt_hash": "04e56ba7108678742387502f567ba0534c4a2313f5efce44ef17911fce99f7d6"
+    },
+    {
+      "task_id": "mmlu_pro_3565",
+      "subject": "chemistry",
+      "prompt_hash": "1d88c246aae3685f2fb006a5b2e6786e09ef5e21343748963fb91f0c2d83eb24"
+    },
+    {
+      "task_id": "mmlu_pro_3551",
+      "subject": "chemistry",
+      "prompt_hash": "185263a2afd211de05067176d7369dda72436e7a2a7334cf488f0b344dc8075e"
+    },
+    {
+      "task_id": "mmlu_pro_4460",
+      "subject": "chemistry",
+      "prompt_hash": "1b62c5ecc8227697fb65c3b86b15fa43e4c93945e6bd74baff0a01aa7b64a33e"
+    },
+    {
+      "task_id": "mmlu_pro_4583",
+      "subject": "chemistry",
+      "prompt_hash": "351e3bb61898abd2f2646edc4e6fa117899dfb78d9e163d5f4bf735515846a88"
+    },
+    {
+      "task_id": "mmlu_pro_4039",
+      "subject": "chemistry",
+      "prompt_hash": "265d8ae7f6dd515541f825c5fdc563f67004fe593f9e1fc140aeae70dcd250e2"
+    },
+    {
+      "task_id": "mmlu_pro_3847",
+      "subject": "chemistry",
+      "prompt_hash": "8d7a1498beb7b8efd4cba79677b4969bd40bada77f8ba8a24c90d7c99554e650"
+    },
+    {
+      "task_id": "mmlu_pro_3862",
+      "subject": "chemistry",
+      "prompt_hash": "612869ea86a07557ff43ef7d3375c089f3bb8334c77008e207db2cab492d02d3"
+    },
+    {
+      "task_id": "mmlu_pro_3818",
+      "subject": "chemistry",
+      "prompt_hash": "f10b13f7aa8d64f4101f423ad239c77ef415076b130856203315bc9bcfcc58fb"
+    },
+    {
+      "task_id": "mmlu_pro_10531",
+      "subject": "computer science",
+      "prompt_hash": "7eb46dc74e091cd1fd4a589549296a5060d76600b26d321217c96aa519912ee0"
+    },
+    {
+      "task_id": "mmlu_pro_10498",
+      "subject": "computer science",
+      "prompt_hash": "3cadd0661484f9791845c44ca6eea7a84c8cc24e58cb364497a4fb889a8d23d8"
+    },
+    {
+      "task_id": "mmlu_pro_10725",
+      "subject": "computer science",
+      "prompt_hash": "d00aa3d984bab1b8aedf06fdc3d723297c8417c14a390453c011d750f225c5a6"
+    },
+    {
+      "task_id": "mmlu_pro_10580",
+      "subject": "computer science",
+      "prompt_hash": "98b9833479f635bc35ab23a22e1397895a6e3304a5f2d5e3ea1d455aeb98c6a8"
+    },
+    {
+      "task_id": "mmlu_pro_10551",
+      "subject": "computer science",
+      "prompt_hash": "b875f90c950de61a5a93ea7ff9e0d449e23f06402368e7447fcfc578b79329fd"
+    },
+    {
+      "task_id": "mmlu_pro_10572",
+      "subject": "computer science",
+      "prompt_hash": "505f12f59d30445efe9cb59f9abaad41e2b93fde4b350dce57fe1ff60c9fca2e"
+    },
+    {
+      "task_id": "mmlu_pro_10461",
+      "subject": "computer science",
+      "prompt_hash": "4e036e5030cdb9c563554f067703b974f7e1dfef8f2532cab04ac9d876aae435"
+    },
+    {
+      "task_id": "mmlu_pro_10361",
+      "subject": "computer science",
+      "prompt_hash": "3256e3d0c78cf3aeed9a6fc599f31b350b5ccbdeefb02d8e6c382a9f3d1e16a8"
+    },
+    {
+      "task_id": "mmlu_pro_10674",
+      "subject": "computer science",
+      "prompt_hash": "e90136a744ffc87739a0acf9c2a78f1d7bcf0f7cc74d456b24f12b1fb3f50cc8"
+    },
+    {
+      "task_id": "mmlu_pro_10616",
+      "subject": "computer science",
+      "prompt_hash": "3ea0a4cd394d3acb4ef503c7dd0667db5668429380a6c05371e1cb0d980dc00a"
+    },
+    {
+      "task_id": "mmlu_pro_10590",
+      "subject": "computer science",
+      "prompt_hash": "b7674a49edbaabaeb543d6732b6830656bad4b7ab40928501927239443ccd079"
+    },
+    {
+      "task_id": "mmlu_pro_10612",
+      "subject": "computer science",
+      "prompt_hash": "250a1465e0f83ef6cd5d7fa5373e5bbaa02f0b42c8cc94c3796e3210d3a06f2c"
+    },
+    {
+      "task_id": "mmlu_pro_10476",
+      "subject": "computer science",
+      "prompt_hash": "31b454bcf47c71ae33d43ea4bba215650308a4e5a3709b6d302b25cb69869d12"
+    },
+    {
+      "task_id": "mmlu_pro_10387",
+      "subject": "computer science",
+      "prompt_hash": "8dd8b1b3fb761c7ad496f4f562a31613ec32218952106a0acef37b3ef8f1d342"
+    },
+    {
+      "task_id": "mmlu_pro_10385",
+      "subject": "computer science",
+      "prompt_hash": "deebd98bf155f43267c75564a4090e889c7958c7293ea604f602b2f7e95ffb96"
+    },
+    {
+      "task_id": "mmlu_pro_10584",
+      "subject": "computer science",
+      "prompt_hash": "92e613ad3829cd3fd09ff711b867bd122958f1b7e05fcfc221ac2e8b90ecd1c5"
+    },
+    {
+      "task_id": "mmlu_pro_10462",
+      "subject": "computer science",
+      "prompt_hash": "2b13ceacd2e98ac429d233a4cd90ca335cf19d186a83cb18caa3a940b234fd3f"
+    },
+    {
+      "task_id": "mmlu_pro_10473",
+      "subject": "computer science",
+      "prompt_hash": "3317da6722788cbb1a628e77336db7d13b47a81b63f932b5a9857f7a70d41053"
+    },
+    {
+      "task_id": "mmlu_pro_10696",
+      "subject": "computer science",
+      "prompt_hash": "d2648093a45e627651765a356e796858df2cfeb52c63684ed4bc65217534f0af"
+    },
+    {
+      "task_id": "mmlu_pro_10505",
+      "subject": "computer science",
+      "prompt_hash": "0aecb99592208cdc76c96a031b48fe2633a5cfe6f5a0404fdbbe70cdef780510"
+    },
+    {
+      "task_id": "mmlu_pro_7132",
+      "subject": "economics",
+      "prompt_hash": "1c73e6fabc4da958cddf323123029047f34a7fe019c558231d8de0327b4fc81c"
+    },
+    {
+      "task_id": "mmlu_pro_7486",
+      "subject": "economics",
+      "prompt_hash": "87eaf5e9536c3953794b636ee75629db1e0b2948bcaf383aecdbb3cc0e696507"
+    },
+    {
+      "task_id": "mmlu_pro_7609",
+      "subject": "economics",
+      "prompt_hash": "3c5293f46d2b8f04b6dfd4e4fcb3a3a5f3d7abbe107671593baf31a41b3cfefb"
+    },
+    {
+      "task_id": "mmlu_pro_6829",
+      "subject": "economics",
+      "prompt_hash": "88c0444a4da0bb2acfc3d4b081d326b1bd7f80728f96a18fc97355e2cbefbf4c"
+    },
+    {
+      "task_id": "mmlu_pro_7458",
+      "subject": "economics",
+      "prompt_hash": "bb2e97b8d8c269976846b86161b5a46fcca56bb2d57a07be934e2e4b2dbe208c"
+    },
+    {
+      "task_id": "mmlu_pro_6975",
+      "subject": "economics",
+      "prompt_hash": "ecc648643e21a542d7951add198c198e0d23b6e7e7c135cf7efeb004c3202c7c"
+    },
+    {
+      "task_id": "mmlu_pro_7102",
+      "subject": "economics",
+      "prompt_hash": "5daa2affc9ce8f238a56fe1038666f9bfe668b3405235112708b7a663accc43b"
+    },
+    {
+      "task_id": "mmlu_pro_7351",
+      "subject": "economics",
+      "prompt_hash": "79d9d5906add60a7b4b0a157a55b6fbd5e214eebfc0f4f1b5ea8a7f92208104f"
+    },
+    {
+      "task_id": "mmlu_pro_7641",
+      "subject": "economics",
+      "prompt_hash": "c93cc277968d497265ec5564dd2b3dfbb00be1476984238cb9428a26e3f5e85e"
+    },
+    {
+      "task_id": "mmlu_pro_7534",
+      "subject": "economics",
+      "prompt_hash": "089b1b65cc95ac9328fbb3332a92fb65c85d543d7dbbcdeb99726bfa0a93f9ed"
+    },
+    {
+      "task_id": "mmlu_pro_7387",
+      "subject": "economics",
+      "prompt_hash": "7306127f425f8a9de51f8b94132aa0a86fb300612a50ac76ea7ecc7535d75fe1"
+    },
+    {
+      "task_id": "mmlu_pro_7046",
+      "subject": "economics",
+      "prompt_hash": "7bc84075ecc7c622a932ec0d4f47834cb117b93c84bcf645fe93385d71da1e9d"
+    },
+    {
+      "task_id": "mmlu_pro_7455",
+      "subject": "economics",
+      "prompt_hash": "fed8af3b4cf461659bb0f5614802a16584623ef35026f8f2a75a84e0de57c538"
+    },
+    {
+      "task_id": "mmlu_pro_7336",
+      "subject": "economics",
+      "prompt_hash": "b000f9d0fe97fd914aa6d25faf43ebca077a9fc3186d4199d878528fdc0f3b4d"
+    },
+    {
+      "task_id": "mmlu_pro_7464",
+      "subject": "economics",
+      "prompt_hash": "cb82687486c288fb8bbe5e7a388d723e51b7482fa56c703c0ac8bfe5ff040deb"
+    },
+    {
+      "task_id": "mmlu_pro_6927",
+      "subject": "economics",
+      "prompt_hash": "a903cd27a35610a51ac34dad01fd49b20c4182282667b384582fda6b7ce93c6c"
+    },
+    {
+      "task_id": "mmlu_pro_7311",
+      "subject": "economics",
+      "prompt_hash": "2d2f2dc1a836f25b0fa7abc26fdd37df4da989250bb1fba9d84365d488a4d4f2"
+    },
+    {
+      "task_id": "mmlu_pro_7213",
+      "subject": "economics",
+      "prompt_hash": "850e0bab9443b6e7fcba35063a0a0ab9b7ec31a45d604599383a01f625632beb"
+    },
+    {
+      "task_id": "mmlu_pro_7648",
+      "subject": "economics",
+      "prompt_hash": "fe39291494946415781a0cb3160f9776fbd6f350553cb50cfc7e376c40e64745"
+    },
+    {
+      "task_id": "mmlu_pro_6951",
+      "subject": "economics",
+      "prompt_hash": "53e178b35ae88d05afa93a15cbf3d82631092b5104a782d504498e95ffa26c77"
+    },
+    {
+      "task_id": "mmlu_pro_11492",
+      "subject": "engineering",
+      "prompt_hash": "3b4b86d66e4ed537c9e5290ac4edf5e691fffbdaad67d6c83f8fca22a197a8fe"
+    },
+    {
+      "task_id": "mmlu_pro_11909",
+      "subject": "engineering",
+      "prompt_hash": "381c4ed70c91d52de7f8e75e72e4157620a16e39c1b52cdf4f92f4b30c4aa74a"
+    },
+    {
+      "task_id": "mmlu_pro_11917",
+      "subject": "engineering",
+      "prompt_hash": "81a3c1669007d57871da1d8fb36d317b191096303f7088ca99aedc0008a3a429"
+    },
+    {
+      "task_id": "mmlu_pro_11328",
+      "subject": "engineering",
+      "prompt_hash": "137868f1ef7e65d6b12690446b7824fd61f59320492737b7636754a89775ef77"
+    },
+    {
+      "task_id": "mmlu_pro_11991",
+      "subject": "engineering",
+      "prompt_hash": "7da3aff52de1eb1830d56770b5c7c7108ff977251d97a54377bb43ddfb8b9624"
+    },
+    {
+      "task_id": "mmlu_pro_11327",
+      "subject": "engineering",
+      "prompt_hash": "c1003270b57e809a88e86031e7152d433376dffc1bc59f1a3fa26dd3d10110f9"
+    },
+    {
+      "task_id": "mmlu_pro_11746",
+      "subject": "engineering",
+      "prompt_hash": "42d640246aef6e6d995719b948ecca060207d3fe2dd36986470de0d4e1567c52"
+    },
+    {
+      "task_id": "mmlu_pro_11630",
+      "subject": "engineering",
+      "prompt_hash": "c17849ac432461080c528d1b70b25be036e71077f75466bf73941d93d97c6325"
+    },
+    {
+      "task_id": "mmlu_pro_11848",
+      "subject": "engineering",
+      "prompt_hash": "37d553d3a06f0cf0f501e2eada3e54eb198f6f55b3b90dd11d5d3c5ddc2a0563"
+    },
+    {
+      "task_id": "mmlu_pro_11557",
+      "subject": "engineering",
+      "prompt_hash": "b0acca3ab1dc65b7e8f9c83acc54aa9a7c5b3aa420aaffe57d9e3338c1552d7e"
+    },
+    {
+      "task_id": "mmlu_pro_11353",
+      "subject": "engineering",
+      "prompt_hash": "c34146e873260e14aafe8430c2e02804c9157bea75e77e415b420db1c56cc3ee"
+    },
+    {
+      "task_id": "mmlu_pro_12062",
+      "subject": "engineering",
+      "prompt_hash": "cd49ca53fd94788ad81dace276c64c66595eb64616737632a9a6c5a0e38c89a6"
+    },
+    {
+      "task_id": "mmlu_pro_11803",
+      "subject": "engineering",
+      "prompt_hash": "5a79523f398c556578fb420c858627bb01c3e512e9e607b31aa42d483b46dda3"
+    },
+    {
+      "task_id": "mmlu_pro_11890",
+      "subject": "engineering",
+      "prompt_hash": "1f9076ea843fb9efbbbc0f5936a0d2774de9f3483006bce6cd73844daa3d4f1e"
+    },
+    {
+      "task_id": "mmlu_pro_11958",
+      "subject": "engineering",
+      "prompt_hash": "de79f7ef324ff5c9c24722cb4bca388fc71ad75226fb18891fa40d80c582fdaa"
+    },
+    {
+      "task_id": "mmlu_pro_11588",
+      "subject": "engineering",
+      "prompt_hash": "a395292c9bd95f711ad14888400eb0b12e42a9d14ee966cd9cd8aeeb8a2a3647"
+    },
+    {
+      "task_id": "mmlu_pro_11758",
+      "subject": "engineering",
+      "prompt_hash": "325497c939e983d0b32391695b047a40ebf430144fc24aa2132635091fc2fd88"
+    },
+    {
+      "task_id": "mmlu_pro_11399",
+      "subject": "engineering",
+      "prompt_hash": "486685d67ef32030692aa8ec27eb307d5edb75056c7a6a59d8fc13d3aded566b"
+    },
+    {
+      "task_id": "mmlu_pro_11380",
+      "subject": "engineering",
+      "prompt_hash": "63a313dc4069ab2c9e1327d39c613377d6ee39a4b76dbc9e47961a6a8482c61b"
+    },
+    {
+      "task_id": "mmlu_pro_11969",
+      "subject": "engineering",
+      "prompt_hash": "0d6b3566d6d8c35dd7c306bdaa4c3f47c8344cb504898254100190827413a82f"
+    },
+    {
+      "task_id": "mmlu_pro_6314",
+      "subject": "health",
+      "prompt_hash": "9a0209f0f2760babbd3b17bcd5560d5d8315fbb34074e3b3ed2f4c8008f95c5d"
+    },
+    {
+      "task_id": "mmlu_pro_6309",
+      "subject": "health",
+      "prompt_hash": "5a5c58d7c692a30aa2524d0180cf58d3c483c6380548422eb8f429d3a8fdb9a5"
+    },
+    {
+      "task_id": "mmlu_pro_6531",
+      "subject": "health",
+      "prompt_hash": "a99f8d7bf8d1caa8b7458e65b75220f8b1d8be84ebf72112cb3c5eab523d25dc"
+    },
+    {
+      "task_id": "mmlu_pro_6119",
+      "subject": "health",
+      "prompt_hash": "608ad9af16849f5ef8f421d804189566226323e973611f7391ae32732010d81e"
+    },
+    {
+      "task_id": "mmlu_pro_6433",
+      "subject": "health",
+      "prompt_hash": "c1246d8427e975216308dfd006e83957f65633050ed9475c89aa653938483454"
+    },
+    {
+      "task_id": "mmlu_pro_6598",
+      "subject": "health",
+      "prompt_hash": "984aad204a31d099dbd31279773eb2ea44996da678293532d6e94cdf85c32e44"
+    },
+    {
+      "task_id": "mmlu_pro_6112",
+      "subject": "health",
+      "prompt_hash": "28176e2002e2c5b83032c9c4fd104bcf1b3e8ba53de2f241aa55a803550259ac"
+    },
+    {
+      "task_id": "mmlu_pro_6150",
+      "subject": "health",
+      "prompt_hash": "51b5edd6608613ae4527a703641e814307788798aab8d462b3b3612142137c89"
+    },
+    {
+      "task_id": "mmlu_pro_6530",
+      "subject": "health",
+      "prompt_hash": "839f3d8ed87e6b5673f902851eb3f6f8524488da86cfb586eaa0803dfb9df3e7"
+    },
+    {
+      "task_id": "mmlu_pro_6052",
+      "subject": "health",
+      "prompt_hash": "1aa8583800fa24be9f37aa12c310f47693c3054d8b399f4ef27a2eb1e5d90c6b"
+    },
+    {
+      "task_id": "mmlu_pro_6577",
+      "subject": "health",
+      "prompt_hash": "c0512fdd0b733082b61ac9e0707fb1a0fc6c8e8b364208083394cd8d18ab5f11"
+    },
+    {
+      "task_id": "mmlu_pro_6617",
+      "subject": "health",
+      "prompt_hash": "72fd96652f733c6d30ef4e28e8e52d5b4064adf3a8f92bc727edb3f119a849c0"
+    },
+    {
+      "task_id": "mmlu_pro_6063",
+      "subject": "health",
+      "prompt_hash": "0ba24e79f4dba28b52656a05706c4c0bb3607910f3806cf6ac95f77f7eb83552"
+    },
+    {
+      "task_id": "mmlu_pro_6426",
+      "subject": "health",
+      "prompt_hash": "b4783847a1b590f54c83f299a7d41ecdfd527efe12fb566d3513a1ea1c5c5ad1"
+    },
+    {
+      "task_id": "mmlu_pro_6818",
+      "subject": "health",
+      "prompt_hash": "830b3ee4a5a6b03e243e9d0470bb46ab4b7ac6e69742c3acebc2b8ea1b51b3c8"
+    },
+    {
+      "task_id": "mmlu_pro_6476",
+      "subject": "health",
+      "prompt_hash": "317c880c634d907d70457d074b3738df9e8d0afdf7aa15b0de1effd781d44e4e"
+    },
+    {
+      "task_id": "mmlu_pro_6263",
+      "subject": "health",
+      "prompt_hash": "07a194e03a0bf4ada845535a9a0669b864050922d703d79ed1d39f369e88ebda"
+    },
+    {
+      "task_id": "mmlu_pro_6418",
+      "subject": "health",
+      "prompt_hash": "a4469e2393dc76dca20d97290715c562cf7f0302d9885fe7ad4d6315886fc5ec"
+    },
+    {
+      "task_id": "mmlu_pro_6450",
+      "subject": "health",
+      "prompt_hash": "700400843a10ddcfa82e462656dc588c3c22cf4dc77aa2bce9f05e5147d72eb0"
+    },
+    {
+      "task_id": "mmlu_pro_6144",
+      "subject": "health",
+      "prompt_hash": "7890b673f130430e566b174f476e8cd2128c97ae368cdf48ce5bb9cbd3bf296d"
+    },
+    {
+      "task_id": "mmlu_pro_4890",
+      "subject": "history",
+      "prompt_hash": "4e66ec4bf33135a1077baf24753b18ec2467677ab9a47bc44879fed0187db5de"
+    },
+    {
+      "task_id": "mmlu_pro_5043",
+      "subject": "history",
+      "prompt_hash": "66594064a28601b65fb6b5b717b1c6bdcee8bee7b871dc7d5ea48626b07d10a5"
+    },
+    {
+      "task_id": "mmlu_pro_4774",
+      "subject": "history",
+      "prompt_hash": "3124fb4fd704f1aa430f45c5bf9f31f286e0409cd4dbd66633e3f130018012a8"
+    },
+    {
+      "task_id": "mmlu_pro_4963",
+      "subject": "history",
+      "prompt_hash": "c14dcd6b1049a404361a5fb4fc3ccb2aaf173330386cc008906b5358811ed744"
+    },
+    {
+      "task_id": "mmlu_pro_4726",
+      "subject": "history",
+      "prompt_hash": "5d9ebada2e194cd0ac629755fd13e616e7fdad7f0e4e107c3b8731b38a669fa7"
+    },
+    {
+      "task_id": "mmlu_pro_5024",
+      "subject": "history",
+      "prompt_hash": "3a159042103ba9029995ac6e5ad004490872acd634b7b3ad4c0156653d0d6166"
+    },
+    {
+      "task_id": "mmlu_pro_5022",
+      "subject": "history",
+      "prompt_hash": "92b01fd03fbb515355739691975ef8491028f79fda302563ecbe86af82fea20e"
+    },
+    {
+      "task_id": "mmlu_pro_5009",
+      "subject": "history",
+      "prompt_hash": "621187fdae0fddca645533dce43c8346cf33187c5540ad53dbda561a2f080f81"
+    },
+    {
+      "task_id": "mmlu_pro_4745",
+      "subject": "history",
+      "prompt_hash": "cdbe25547db40c175b6cddea968deae1b1a7e0663773a28c6cab45837be6ac3f"
+    },
+    {
+      "task_id": "mmlu_pro_4938",
+      "subject": "history",
+      "prompt_hash": "5eb0d1f8a24bb4de9895ef95c18331b69bf2a3d7e3b02c8135f4a9c399017049"
+    },
+    {
+      "task_id": "mmlu_pro_4670",
+      "subject": "history",
+      "prompt_hash": "0eda004d11caf1a438d8f3607d25d73b96f446e1586e7c340e4a50e48aeb5ca0"
+    },
+    {
+      "task_id": "mmlu_pro_4891",
+      "subject": "history",
+      "prompt_hash": "aafd2f8b677cc844292686b8b6ba65abd2a9acbac5c349ff187071059e1bca30"
+    },
+    {
+      "task_id": "mmlu_pro_4705",
+      "subject": "history",
+      "prompt_hash": "88b94951fb6c405e01f1d6545fdbd1763363626c3351448e09e821d765124970"
+    },
+    {
+      "task_id": "mmlu_pro_4943",
+      "subject": "history",
+      "prompt_hash": "86643de7d1c53d215fbee67f73bc613bb0381d5868f807254c18d13779842754"
+    },
+    {
+      "task_id": "mmlu_pro_5058",
+      "subject": "history",
+      "prompt_hash": "cad5e4fdead2df792ae4071446a5ca85eb90f625d609680ae863b1b932bf61bd"
+    },
+    {
+      "task_id": "mmlu_pro_4824",
+      "subject": "history",
+      "prompt_hash": "af34956abf515b73bfd3309f66ca82c59a11016a03c9c450c3b3f85c6be70c1c"
+    },
+    {
+      "task_id": "mmlu_pro_4986",
+      "subject": "history",
+      "prompt_hash": "f6bc1e1459761567ca7d67b3d0f1ec98d7673fb2f8c51d371c8d1bab4dcf3992"
+    },
+    {
+      "task_id": "mmlu_pro_4756",
+      "subject": "history",
+      "prompt_hash": "d8b456ea1cc8ff24fb6efaad66deac755c5d687c3292072df16309941bea57ec"
+    },
+    {
+      "task_id": "mmlu_pro_4763",
+      "subject": "history",
+      "prompt_hash": "49f1b734782b63f0668d0f8283144d88290aaee4c5a000022fc88648a8d45324"
+    },
+    {
+      "task_id": "mmlu_pro_5037",
+      "subject": "history",
+      "prompt_hash": "937d4a70c18c2eaa77bc1f5655eb12a20e7022e291c8ac21e9ec277ad3f032bb"
+    },
+    {
+      "task_id": "mmlu_pro_1914",
+      "subject": "law",
+      "prompt_hash": "bd080270cf33c2b2ae67d6762788a4ce2bc9e73ebd9ac56f7f80aebd08750a6a"
+    },
+    {
+      "task_id": "mmlu_pro_1330",
+      "subject": "law",
+      "prompt_hash": "03238c9b2fa622ff16361718578e93a70b68827de07c7894cded017b116192b5"
+    },
+    {
+      "task_id": "mmlu_pro_1382",
+      "subject": "law",
+      "prompt_hash": "5e8df8c5fe4865d3ebccbd044d57c89cbb71a247ecca0348d36242b16580dd11"
+    },
+    {
+      "task_id": "mmlu_pro_1814",
+      "subject": "law",
+      "prompt_hash": "b5aa9a0fcdbc80f6a72fcd685290b0c855d7df90a829e693dac73c033bfa68e0"
+    },
+    {
+      "task_id": "mmlu_pro_925",
+      "subject": "law",
+      "prompt_hash": "70f7121482dbdd8ec4e62612d37d8abbfa365a747c64e1d7d4bb8f4006a7522f"
+    },
+    {
+      "task_id": "mmlu_pro_1806",
+      "subject": "law",
+      "prompt_hash": "8288493a0734fa034b2a6af153bd5505e1c75c9be5ca80815534d20a0e0b15db"
+    },
+    {
+      "task_id": "mmlu_pro_1089",
+      "subject": "law",
+      "prompt_hash": "859df933597749abe998c5ed552b5cacdc7e43e682864394769476452cd685b3"
+    },
+    {
+      "task_id": "mmlu_pro_1106",
+      "subject": "law",
+      "prompt_hash": "3d468e452287ec19ca1ca2bafbb1a117d2e7b48d97276690eff1a888886d5c16"
+    },
+    {
+      "task_id": "mmlu_pro_1667",
+      "subject": "law",
+      "prompt_hash": "634d2e0f1f42a5b1582bc39685e6ff2ae5e3231fd515ca12d7d7cb23a4c16727"
+    },
+    {
+      "task_id": "mmlu_pro_1546",
+      "subject": "law",
+      "prompt_hash": "9fc9c579db27c58dc486ddcc9762b0dd75c846c8f54504158d8d147ac32f2a9d"
+    },
+    {
+      "task_id": "mmlu_pro_1676",
+      "subject": "law",
+      "prompt_hash": "ad6c2280ff19b0781c7fb1aae966d8fd9b0d7da264b408e51d8146bc0089e733"
+    },
+    {
+      "task_id": "mmlu_pro_1861",
+      "subject": "law",
+      "prompt_hash": "bb091b3345d6f95d79c413e52acc11e87c134ba0e96d897f1cfdf72174ffeea6"
+    },
+    {
+      "task_id": "mmlu_pro_898",
+      "subject": "law",
+      "prompt_hash": "fc3e7fa17fa1f76930dcbc551db9e0f37e77248817ef1935b516d2f723c9ee51"
+    },
+    {
+      "task_id": "mmlu_pro_1073",
+      "subject": "law",
+      "prompt_hash": "d4b3da98740a25d31359e3c30d7de45b7a6dfca1bf6bcbe3f235d01bafe4ea78"
+    },
+    {
+      "task_id": "mmlu_pro_1083",
+      "subject": "law",
+      "prompt_hash": "aa31b0a4f9c7522a2229e0be9ef089ba3c2d1ae1ed83452db01fd7cddb62868f"
+    },
+    {
+      "task_id": "mmlu_pro_1680",
+      "subject": "law",
+      "prompt_hash": "8b0c509aa03bf96d40029edb6cb110be08a177ba2e6b803a4b04075a097701ba"
+    },
+    {
+      "task_id": "mmlu_pro_956",
+      "subject": "law",
+      "prompt_hash": "5986db1b80178b6adb669f90e36e7858026550ddd0f485c98c484b48e2a3bfff"
+    },
+    {
+      "task_id": "mmlu_pro_1800",
+      "subject": "law",
+      "prompt_hash": "8f6096f792ca1916c98c8ac64d3d806f084803e068e19cd42cbd7ab39c8de48c"
+    },
+    {
+      "task_id": "mmlu_pro_1439",
+      "subject": "law",
+      "prompt_hash": "712464ee91b60ba3a428f9bedf2783da16cc8081dc40ab5396552e587a55f551"
+    },
+    {
+      "task_id": "mmlu_pro_1121",
+      "subject": "law",
+      "prompt_hash": "c470ccde9288f45d26a7e792dab5095c6ad4899d6b54cd131002ddeffab4d362"
+    },
+    {
+      "task_id": "mmlu_pro_8341",
+      "subject": "math",
+      "prompt_hash": "6180a4a97d370052ec1b07f4216d868f02bbde9b6bef04952ab2b80330286774"
+    },
+    {
+      "task_id": "mmlu_pro_7996",
+      "subject": "math",
+      "prompt_hash": "9c4f9e345c6fa925d5ddce82b54846001a7e30ad6699a304bb11a7fb221e273c"
+    },
+    {
+      "task_id": "mmlu_pro_8747",
+      "subject": "math",
+      "prompt_hash": "658599b4861df8c1a0934bda6154ea3a57d4328b51645beabcf2c9df5bcb8ece"
+    },
+    {
+      "task_id": "mmlu_pro_8479",
+      "subject": "math",
+      "prompt_hash": "3215db4ac913fd143313ecfae6865b98859c5ee2ee235a83c7291b6605e24278"
+    },
+    {
+      "task_id": "mmlu_pro_7712",
+      "subject": "math",
+      "prompt_hash": "60559c319a2edc3d597b6927209ad6007f3149417193c1a8dfe2e7c7da31b657"
+    },
+    {
+      "task_id": "mmlu_pro_8122",
+      "subject": "math",
+      "prompt_hash": "83d86cab08155fc4992b3d3fbeb5f190f9d6afa0a2e0d11ee82d6b94b0869b81"
+    },
+    {
+      "task_id": "mmlu_pro_8332",
+      "subject": "math",
+      "prompt_hash": "f7f9c5079ed6609c7f60b072401fe0a0d29cdaf38caac2e57e28179cddb128b6"
+    },
+    {
+      "task_id": "mmlu_pro_8626",
+      "subject": "math",
+      "prompt_hash": "4e5e65d7aba5ea6b65e1fdd2934edd038c1ca138416fb82c0aec159dd4182fb5"
+    },
+    {
+      "task_id": "mmlu_pro_8451",
+      "subject": "math",
+      "prompt_hash": "26e7794bcb418db98778971be54bce9396de0408bbc55931f7da110230bc548a"
+    },
+    {
+      "task_id": "mmlu_pro_8069",
+      "subject": "math",
+      "prompt_hash": "a029f86009d539d754a8fc343b8968d77787f73d7e37149708a873c2d1b31f51"
+    },
+    {
+      "task_id": "mmlu_pro_8917",
+      "subject": "math",
+      "prompt_hash": "9e71908897a4e4614315c269a47f6f921317227ddfda59931d26a819ccd9c935"
+    },
+    {
+      "task_id": "mmlu_pro_8621",
+      "subject": "math",
+      "prompt_hash": "ec99b83ba866308745168c4c64b6f63f81ee45c6502e949950a7ec9d6d495fce"
+    },
+    {
+      "task_id": "mmlu_pro_7857",
+      "subject": "math",
+      "prompt_hash": "216f50a53ee43fd52e750043a8f68f85da41fc83b2e086baa3e6cb0a2c0ad24f"
+    },
+    {
+      "task_id": "mmlu_pro_8390",
+      "subject": "math",
+      "prompt_hash": "1561474d13068014590a4fdb3efd3c4576b84a656f84dceedafe8e8dce89fc14"
+    },
+    {
+      "task_id": "mmlu_pro_8947",
+      "subject": "math",
+      "prompt_hash": "4c12c30bb13cb8ad52c76f165c429b4ca536a89dcb34433659b7a65ab8335764"
+    },
+    {
+      "task_id": "mmlu_pro_8913",
+      "subject": "math",
+      "prompt_hash": "858922507f228809b785e8dfa83d62a46f1f7475e272f2d672b55d893d41d01e"
+    },
+    {
+      "task_id": "mmlu_pro_7968",
+      "subject": "math",
+      "prompt_hash": "1ca7adfad6b1f707bd17db3bea456ba405444100722b7419c40db7427f83435f"
+    },
+    {
+      "task_id": "mmlu_pro_7688",
+      "subject": "math",
+      "prompt_hash": "db0e46119e6b2755e947e063c78b59889ef301c06f1c251bcb1239b4217b5c74"
+    },
+    {
+      "task_id": "mmlu_pro_8802",
+      "subject": "math",
+      "prompt_hash": "5c63e4667d330cb0a0f33ee9d5e491ef3e326fdc7c9b9eabdac186c175c0ec32"
+    },
+    {
+      "task_id": "mmlu_pro_7737",
+      "subject": "math",
+      "prompt_hash": "72aedf65c797f3a2326563e0a3d62e5763c47c30c303aebc89bd6944d1dd19f5"
+    },
+    {
+      "task_id": "mmlu_pro_5305",
+      "subject": "other",
+      "prompt_hash": "1f6d51e8cd9c112b92daa537e1208cd2f0ebb89a89376f55d6b72851360fec82"
+    },
+    {
+      "task_id": "mmlu_pro_5510",
+      "subject": "other",
+      "prompt_hash": "d8ee32f898ca909ff51b25b1e6e832b309afef001b8d4d863f96bf9e7683851f"
+    },
+    {
+      "task_id": "mmlu_pro_5581",
+      "subject": "other",
+      "prompt_hash": "b0c483242097518d6cd362549e999ecb7027611af2971ada0cb2354fb4ac33a6"
+    },
+    {
+      "task_id": "mmlu_pro_5368",
+      "subject": "other",
+      "prompt_hash": "a31213b53c93f1c8f42dd4ef284cac9208711a267fdc3697c7e680bffcc27b54"
+    },
+    {
+      "task_id": "mmlu_pro_5752",
+      "subject": "other",
+      "prompt_hash": "49e8481b260b0e42249395a06af8bb0cc6c5244f794498871a4d636fe64be1b6"
+    },
+    {
+      "task_id": "mmlu_pro_5907",
+      "subject": "other",
+      "prompt_hash": "b05f05a569b02b800fa4431833929b41ffe27f301d75273c064b025041cf766c"
+    },
+    {
+      "task_id": "mmlu_pro_5846",
+      "subject": "other",
+      "prompt_hash": "4e7a3c784e638e5bb494c5ae38d086a0a2d30874579da07a469333bd1ba3b5d1"
+    },
+    {
+      "task_id": "mmlu_pro_5407",
+      "subject": "other",
+      "prompt_hash": "ff82d1af083939e02fa0eb5a5f5c5b70f15c01b1eef4e7fd5d27182c670b4f15"
+    },
+    {
+      "task_id": "mmlu_pro_5607",
+      "subject": "other",
+      "prompt_hash": "ec4e73d1ff7f35c16980abee9228533ef0c55cd0a6fc7f72a9e4873bb4838c3b"
+    },
+    {
+      "task_id": "mmlu_pro_5256",
+      "subject": "other",
+      "prompt_hash": "6398218ff326b3742f4a96bdea13503bf3741c82f6779fa5c4ce4039a5d6a52f"
+    },
+    {
+      "task_id": "mmlu_pro_5892",
+      "subject": "other",
+      "prompt_hash": "d6a6af5cee75a99fd668296fe7a5427e1d9c24b68c6e7889ea35276d0159c670"
+    },
+    {
+      "task_id": "mmlu_pro_5148",
+      "subject": "other",
+      "prompt_hash": "cdcd474773b282e85c6a43f00ea400cddf0485d0587eff91e6006f56f3df8ad6"
+    },
+    {
+      "task_id": "mmlu_pro_5312",
+      "subject": "other",
+      "prompt_hash": "8f61c16964c12e630e9441c1caa6867a6291bfdf50056b45426739ee0c8c7048"
+    },
+    {
+      "task_id": "mmlu_pro_5440",
+      "subject": "other",
+      "prompt_hash": "29770c6fdde10b1d2d063f1b6a158a57e71a3209c29bc7dd4dbc812f5da9acb4"
+    },
+    {
+      "task_id": "mmlu_pro_5086",
+      "subject": "other",
+      "prompt_hash": "d7db615c6e9934014df494146e6ea27b8339c8df1feb5886a6cb02fbf7ef9286"
+    },
+    {
+      "task_id": "mmlu_pro_5521",
+      "subject": "other",
+      "prompt_hash": "2bc140b30f80c9bee00be70d1b02e839c4bc1a4c9dc9fe5ba770c2ef7182316a"
+    },
+    {
+      "task_id": "mmlu_pro_5668",
+      "subject": "other",
+      "prompt_hash": "0fb6b0e1697bf00b80d21a7303618ddaf16a2b805b7598fb1636f5b3ad01a9c8"
+    },
+    {
+      "task_id": "mmlu_pro_5936",
+      "subject": "other",
+      "prompt_hash": "4d087923e68c221a42d24b10129a39d13cd22795da1806daffa6fac1dfebf0ce"
+    },
+    {
+      "task_id": "mmlu_pro_5820",
+      "subject": "other",
+      "prompt_hash": "5d43d888ba6b900e76ea37cc0a209d1b0daec32594492831401f8aaa4451d1c2"
+    },
+    {
+      "task_id": "mmlu_pro_5512",
+      "subject": "other",
+      "prompt_hash": "6dbcf01338339c3358ce36848b23e7101c9270f17a8d3e05fcf27651da319078"
+    },
+    {
+      "task_id": "mmlu_pro_10927",
+      "subject": "philosophy",
+      "prompt_hash": "65cecb3529450284d40aec6012f562d8247793280f946b9351182cdaa0102aed"
+    },
+    {
+      "task_id": "mmlu_pro_10796",
+      "subject": "philosophy",
+      "prompt_hash": "1767d54880fcc1b59e9bbd3a25e3bdb5f7762fb1f8c8903dc777d9c11bf5ba88"
+    },
+    {
+      "task_id": "mmlu_pro_11227",
+      "subject": "philosophy",
+      "prompt_hash": "122a537e93f8c33389df9d86944c14383879172b8e39c411e0735c89d007baf3"
+    },
+    {
+      "task_id": "mmlu_pro_10905",
+      "subject": "philosophy",
+      "prompt_hash": "53e164a9f0120a1f4363d50e6026b33d40fefc70dcc1790c3f08647c9e371b04"
+    },
+    {
+      "task_id": "mmlu_pro_11168",
+      "subject": "philosophy",
+      "prompt_hash": "9b03f3c74b67c9ca43eb91e12267a871248cc22df05f8bec8392a94a3a280b14"
+    },
+    {
+      "task_id": "mmlu_pro_10798",
+      "subject": "philosophy",
+      "prompt_hash": "1c83b6beb2aab58821b348c0483846891d476ae7a6c363554ad03ea94f02effa"
+    },
+    {
+      "task_id": "mmlu_pro_11068",
+      "subject": "philosophy",
+      "prompt_hash": "6b62edfa50ced0b2e2a316d40841b4630f399f298f5b0eede49c66a7d169de82"
+    },
+    {
+      "task_id": "mmlu_pro_10987",
+      "subject": "philosophy",
+      "prompt_hash": "b7bd2ce73841d6f9b96d9b7f0626856d541656c8df76906e7e7973a378b75bdb"
+    },
+    {
+      "task_id": "mmlu_pro_10825",
+      "subject": "philosophy",
+      "prompt_hash": "a27d57f3394467eaebcf08376c46008456f629edd6e7b16323440fc95d23065f"
+    },
+    {
+      "task_id": "mmlu_pro_11260",
+      "subject": "philosophy",
+      "prompt_hash": "440e000188f710fbf3c9f8096af5081e80cea442e49bde55bc2a041974149d58"
+    },
+    {
+      "task_id": "mmlu_pro_11280",
+      "subject": "philosophy",
+      "prompt_hash": "4aae043dc3439fa0193af65bb6e65beb0807c18d02fdaff299dd4c3cfb28e904"
+    },
+    {
+      "task_id": "mmlu_pro_10964",
+      "subject": "philosophy",
+      "prompt_hash": "c5e6ceafd053bf1d0d65578fe0c68e289e88c871d1924e049c5a241dcd512df6"
+    },
+    {
+      "task_id": "mmlu_pro_11120",
+      "subject": "philosophy",
+      "prompt_hash": "c4e35af90fb4d15e4c9307046a85cdb63f83b3a1b0c09d7628faf67f41bfaec5"
+    },
+    {
+      "task_id": "mmlu_pro_11092",
+      "subject": "philosophy",
+      "prompt_hash": "af5a8c2bf602ba7188b63f7a3f3a1185489369c02d99f86124da8a77db1a6d10"
+    },
+    {
+      "task_id": "mmlu_pro_10842",
+      "subject": "philosophy",
+      "prompt_hash": "676815f8a9df304643d462f4a65e3b9f51d67746d2aad24a9696e4e37300f719"
+    },
+    {
+      "task_id": "mmlu_pro_10910",
+      "subject": "philosophy",
+      "prompt_hash": "85ba5729270146a9a6e01288e4c8577c419c90484416fa5fbaaba9a11c78bcc0"
+    },
+    {
+      "task_id": "mmlu_pro_10892",
+      "subject": "philosophy",
+      "prompt_hash": "346cf6eaef138cde2ff1057305bf51ab896060a5ae142ef4ac465c3b94077278"
+    },
+    {
+      "task_id": "mmlu_pro_10947",
+      "subject": "philosophy",
+      "prompt_hash": "2eca8ca29819dbafbcf6a39e50bbed9d0e612738ee4086af376860cbeddb36df"
+    },
+    {
+      "task_id": "mmlu_pro_11149",
+      "subject": "philosophy",
+      "prompt_hash": "e49d836a68caa1474c1065f97d0c471295b47d06a203394ec23165f1fed02fac"
+    },
+    {
+      "task_id": "mmlu_pro_11197",
+      "subject": "philosophy",
+      "prompt_hash": "adbb5b27b18d446906ad841c627168679cbdee2c530d42fababbc077e96ce638"
+    },
+    {
+      "task_id": "mmlu_pro_9547",
+      "subject": "physics",
+      "prompt_hash": "6864c6133cf024540abd89ce39004d7f3e784de8d379fea7d347472c775b03c8"
+    },
+    {
+      "task_id": "mmlu_pro_9715",
+      "subject": "physics",
+      "prompt_hash": "262e0e7e9a968b88637a6710ceda94d82ebb74f61eef48875eca23070dd706b9"
+    },
+    {
+      "task_id": "mmlu_pro_9649",
+      "subject": "physics",
+      "prompt_hash": "06cd21b6eb03a73dd4cf7ad29da66c76a4fcac145dd99ecef858a1b4d77d6127"
+    },
+    {
+      "task_id": "mmlu_pro_9129",
+      "subject": "physics",
+      "prompt_hash": "e79931ba406924a7f4cf20886af5cece977b87fde9726c2f82f8e6f0fc59bf56"
+    },
+    {
+      "task_id": "mmlu_pro_9566",
+      "subject": "physics",
+      "prompt_hash": "b3b52ffa0cdb14fb56b959ac7a2bff478563b0eeaac5fa887e46ffbac63e682d"
+    },
+    {
+      "task_id": "mmlu_pro_9889",
+      "subject": "physics",
+      "prompt_hash": "d703a85ba7699601b7f22900388723b68d03c06ecdb373adb92711aa82b9dcc8"
+    },
+    {
+      "task_id": "mmlu_pro_10116",
+      "subject": "physics",
+      "prompt_hash": "ed668cfbbee7319f47eb2bae9e79b13fd42e90eb58cfcc06deb024a94ef5fe46"
+    },
+    {
+      "task_id": "mmlu_pro_9090",
+      "subject": "physics",
+      "prompt_hash": "87919bcf0100b9a6a6a7fb6aa3af0fbf109a1931a5fef83aa8e183e46f9493fb"
+    },
+    {
+      "task_id": "mmlu_pro_9388",
+      "subject": "physics",
+      "prompt_hash": "f92c102739f121fb50ee3bd6ca18d1c9cd6b23ca5f7998faa40a004eb011b64a"
+    },
+    {
+      "task_id": "mmlu_pro_9128",
+      "subject": "physics",
+      "prompt_hash": "50303957f67fc8a88baab5b48deb29f2ffb58563eb725d9031cb87334f045833"
+    },
+    {
+      "task_id": "mmlu_pro_9927",
+      "subject": "physics",
+      "prompt_hash": "970e88506b9b0660d82d32875e97b666a4feb11b46b1722fe29f1b8975eec325"
+    },
+    {
+      "task_id": "mmlu_pro_9142",
+      "subject": "physics",
+      "prompt_hash": "521a84417b4e81340acfb7ef81089b3945dabe2ccd17ed007f110a961879ffd9"
+    },
+    {
+      "task_id": "mmlu_pro_9497",
+      "subject": "physics",
+      "prompt_hash": "68bb45ae01e6494bbe82bc22842ad92886bf4fc6c4c7fe7da74299ef427c0b34"
+    },
+    {
+      "task_id": "mmlu_pro_9258",
+      "subject": "physics",
+      "prompt_hash": "42fa8bcfba5ccd17e49ff2da94bc8caef22cf5967abd8ac0ac453b67c75f7bf4"
+    },
+    {
+      "task_id": "mmlu_pro_9110",
+      "subject": "physics",
+      "prompt_hash": "f6bc795bb3adda7e5d632b1a3fa3b11d51f3c29faaa39852b46f7dddea6ab19d"
+    },
+    {
+      "task_id": "mmlu_pro_9289",
+      "subject": "physics",
+      "prompt_hash": "e1557e504cb4ba984712f0d96eacac7cd8fabadacf6e0d16ceb1aa0dc6b51dc6"
+    },
+    {
+      "task_id": "mmlu_pro_9745",
+      "subject": "physics",
+      "prompt_hash": "24c760a7895c6e660e831ffb536b1f83ce8ee077f4cd10136220725a3d5c76bf"
+    },
+    {
+      "task_id": "mmlu_pro_9201",
+      "subject": "physics",
+      "prompt_hash": "dbfe1d272ece96f10ffcad5769c10762e07ed3809713a2840edd035b8aa38730"
+    },
+    {
+      "task_id": "mmlu_pro_9635",
+      "subject": "physics",
+      "prompt_hash": "556fbd3dbba23019be9dcdf1295a55c8dbc8f6b5b940b2472efd4753e52f6695"
+    },
+    {
+      "task_id": "mmlu_pro_9694",
+      "subject": "physics",
+      "prompt_hash": "74e110b10b23488d253ce67cdd98845714f9656b6cd19a8d81c6e809d64ee9fb"
+    },
+    {
+      "task_id": "mmlu_pro_2592",
+      "subject": "psychology",
+      "prompt_hash": "e5c86245a2d05c407c67ffebc4da9158391b7162426661a09a99b9c3123397f6"
+    },
+    {
+      "task_id": "mmlu_pro_2503",
+      "subject": "psychology",
+      "prompt_hash": "a8f9c5ae3c395563440c560356943b2990f55e78096917e0e145745fb814c9a7"
+    },
+    {
+      "task_id": "mmlu_pro_2144",
+      "subject": "psychology",
+      "prompt_hash": "2e73928478a2a36cbc59fabbd638696ccc8541c886ffdf01b80977b201b4d762"
+    },
+    {
+      "task_id": "mmlu_pro_2384",
+      "subject": "psychology",
+      "prompt_hash": "75b8eeacde186518d05e488e8f9e781a4383f466167de9e0276a049074ba51c7"
+    },
+    {
+      "task_id": "mmlu_pro_2504",
+      "subject": "psychology",
+      "prompt_hash": "221ea1859b1ecc6e3d3603528f99ba9db59ae53298fc039d8a7c1d83f45a050a"
+    },
+    {
+      "task_id": "mmlu_pro_2664",
+      "subject": "psychology",
+      "prompt_hash": "34164a75be5aab4194617be517a18629f658762cd2a53bc0a47528c9f2aab5be"
+    },
+    {
+      "task_id": "mmlu_pro_2205",
+      "subject": "psychology",
+      "prompt_hash": "485063f7975014a0c6308101668825fb6e5569c2d1f8e5a1f1b4c533ba18e2a3"
+    },
+    {
+      "task_id": "mmlu_pro_2758",
+      "subject": "psychology",
+      "prompt_hash": "af397fd13b4aafe7d5d4ab333fa1104c032d1e0cfe952fa965fe1d2b59189729"
+    },
+    {
+      "task_id": "mmlu_pro_2173",
+      "subject": "psychology",
+      "prompt_hash": "826a9ab265dc42f9596f2e0cea618ca912e96a1a4cf58a7451ea211e8a61f5d8"
+    },
+    {
+      "task_id": "mmlu_pro_2284",
+      "subject": "psychology",
+      "prompt_hash": "addc9550df2aef964ac4c9714a0f22bba4abff95d86f5ec0796a6650da447952"
+    },
+    {
+      "task_id": "mmlu_pro_2364",
+      "subject": "psychology",
+      "prompt_hash": "83ae2d71bf82b21a65acee793b4d7fa00c69cc69162effdf2a17dd2530703759"
+    },
+    {
+      "task_id": "mmlu_pro_2176",
+      "subject": "psychology",
+      "prompt_hash": "0ad44e297fc0d29bbb0b2e6834aff788ee79efae9c7c6803d8d14ae6930dd36f"
+    },
+    {
+      "task_id": "mmlu_pro_2310",
+      "subject": "psychology",
+      "prompt_hash": "11f6aeb8ff1e3dda8f2269455142c9041dc0a658287c0d3684d945c1c6129739"
+    },
+    {
+      "task_id": "mmlu_pro_2475",
+      "subject": "psychology",
+      "prompt_hash": "857f16ab6a0ef2a2f758021259d0b054a138302945cac7cfade5aca06ffd17c4"
+    },
+    {
+      "task_id": "mmlu_pro_2660",
+      "subject": "psychology",
+      "prompt_hash": "373b67b7eb8e3426caf9ac71e5555ca2fc049fff417314b5bf664af22bc8f2c5"
+    },
+    {
+      "task_id": "mmlu_pro_2318",
+      "subject": "psychology",
+      "prompt_hash": "2af527fb3764679bb27609ddd641c761b6b0ccf017b8269602a2f58c4b5618e9"
+    },
+    {
+      "task_id": "mmlu_pro_2412",
+      "subject": "psychology",
+      "prompt_hash": "7f8ee0abe95ef48ab4e1cd4227e0460ab9476f7d99a0dbbbdd85a59438df25c8"
+    },
+    {
+      "task_id": "mmlu_pro_2669",
+      "subject": "psychology",
+      "prompt_hash": "594e1eb636edd39a27b482575985bb1d8584d9c8ea22e678923175ba658d8b05"
+    },
+    {
+      "task_id": "mmlu_pro_2419",
+      "subject": "psychology",
+      "prompt_hash": "c7ddb9378157f63111cdc51fc131a7f52a48777c6bde2c14b6f509690ba420c2"
+    },
+    {
+      "task_id": "mmlu_pro_2140",
+      "subject": "psychology",
+      "prompt_hash": "a3c0d735619344866557a2680208f8d703a333129b25319083dbe81ac7e230b3"
+    }
+  ]
+}

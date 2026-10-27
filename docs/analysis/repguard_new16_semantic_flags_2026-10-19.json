@@ -1,0 +1,43 @@
+{
+  "scope": "Post-collection flags among five shared official errors, not unbiased dataset error-rate estimation or confirmed adjudication",
+  "n_shared_official_errors": 5,
+  "n_flagged_for_semantic_review": 4,
+  "items": [
+    {
+      "id": "AMAT/2013/page_35.pdf-1",
+      "kind": "entity_subset_scope",
+      "question_metric": "warehouse locations",
+      "source_metric": "offices, plants and/or warehouse locations",
+      "source": "pre_text79",
+      "reference": "21/78",
+      "reason_for_review": "Source gives the geographical breakdown of all offices/plants/warehouses, not a warehouse-only subset.14B refuses on this distinction."
+    },
+    {
+      "id": "APD/2018/page_54.pdf-2",
+      "kind": "stock_vs_flow",
+      "question_metric": "final cash/cash-equivalents balance2016",
+      "source_metric": "cash flows from operating/investing/financing2016",
+      "reference": "2258.8\u2212864.8\u2212860.2=533.8",
+      "reason_for_review": "Reference computes net cash flow. The supplied context lacks2016opening balance; the only explicit balance is2018.14B refuses."
+    },
+    {
+      "id": "FRT/2006/page_133.pdf-2",
+      "kind": "signed_flow_vs_deduction_magnitude",
+      "reference": "mean positive1390,15244,12807",
+      "model14b": "mean signed\u22121390,\u221215244,\u221212807",
+      "reason_for_review": "Question asks deductions; table stores negative flow. Magnitude and signed average conventions differ. Not a confirmed erroneous label."
+    },
+    {
+      "id": "SNPS/2003/page_39.pdf-1",
+      "kind": "signed_change_vs_decrease_magnitude",
+      "reference": "(2403\u22123677)/3677=\u2212.34648",
+      "model14b": "(3677\u22122403)/3677=+.34648",
+      "reason_for_review": "Question says percentage decrease; magnitude versus signed change differs. Not a confirmed erroneous label."
+    }
+  ],
+  "official_scores_changed": false,
+  "independent_human_reviews_completed": 0,
+  "claim_that_all_failures_are_bad_labels": false,
+  "primary_gate_still": "FAIL",
+  "action": "Use both independent source-only review packets; keep FinQA official metric separate from human semantic interpretation. No gold-target changes to improve scores."
+}

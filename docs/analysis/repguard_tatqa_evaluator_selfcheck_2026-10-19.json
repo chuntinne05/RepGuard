@@ -1,0 +1,22 @@
+{
+  "scope": "Software-only validation of original evaluator, NOT model performance or TATQA benchmark score",
+  "model_calls": 0,
+  "official_evaluator_source_sha256": "2aeeac479f89f8c76300af1cc0e8d098eb86af84bc386b38b6ab4af484a6dea8",
+  "gold_identity_roundtrips": 64,
+  "gold_identity_em_f1_scale": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "real_zero_case_id": "e925d7ab-a48c-497f-9f00-29005b315ca2",
+  "zero_string_list_interface_pass": true,
+  "scalar_numeric_zero_treated_missing_by_official_interface": true,
+  "dependency_versions": {
+    "scipy": "1.16.2",
+    "numpy": "2.4.6",
+    "pandas": "3.0.6"
+  },
+  "scipy_wheel_sha256": "87eb178db04ece7c698220d523c170125dbffebb7af0345e66c3554f6f60c173",
+  "scipy_location": "/tmp/repguard_tatqa_eval_deps, isolated from project environment",
+  "semantic_labels_independently_audited": false
+}

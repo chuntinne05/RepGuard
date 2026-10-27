@@ -1,0 +1,59 @@
+{
+  "scope": "8 HISTORY questions, typed native-thinking feasibility; NOT independent evaluation",
+  "parent_run": "359b8d464d5005b9c5d0f967",
+  "case_ids": [
+    "CCI/2004/page_32.pdf-2",
+    "SLB/2003/page_57.pdf-1",
+    "DISCA/2017/page_41.pdf-1",
+    "DRE/2016/page_59.pdf-2",
+    "MMM/2013/page_26.pdf-2",
+    "ORLY/2016/page_29.pdf-3",
+    "UPS/2010/page_33.pdf-4",
+    "MO/2016/page_10.pdf-4"
+  ],
+  "agent": "B",
+  "model": "qwen3:14b",
+  "max_new_model_calls": 8,
+  "think": true,
+  "num_predict": 4096,
+  "screen_used": false,
+  "quality_retries": false,
+  "numeric_targets": "Unchanged FinQA exe_ans,5 decimals; no factor100 matching",
+  "known_limit": "History includes semantic/unit ambiguity; typed outputs do not establish reputation gain",
+  "source_sha256": {
+    "typed_tools.py": "fa0e4c79f84d181d2c2db8b270a2bfda8a2f5a80206f099e2a84efd750131872",
+    "live_app.py": "c2073500424d86952c5e0f4cfe191c17a30e6f3e97b501749a3a818dc6193c52",
+    "thinking_probe.py": "417dd2488b28a74cd4bfa0ea50d10bf29eb4bba10021e6d5e3e1c020da0a71c6",
+    "core.py": "f72180eb8284e1bd232f593fbc2ef85d5606c5661b27300ce275469f5d8c8b99",
+    "source_checks.py": "81c7c92134fd1ffff7e0745ef3191480fa1a117c76c70137621c46c64c297b06"
+  },
+  "catalogue_entries": [
+    31,
+    58,
+    166,
+    57,
+    107,
+    47,
+    60,
+    86
+  ],
+  "serialized_prompt_chars": [
+    9109,
+    11652,
+    24647,
+    12730,
+    17829,
+    8808,
+    10587,
+    17071
+  ],
+  "run_id": "28b0f604f9dfcb18c244e661",
+  "actual_new_model_calls": 8,
+  "mock_model_calls": 0,
+  "responses_with_native_thinking": 8,
+  "source_bound_executable": 7,
+  "candidate_correct": 2,
+  "checked_and_correct": 2,
+  "input_tokens": 41247,
+  "output_tokens": 11110
+}

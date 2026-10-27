@@ -1,1 +1,27 @@
 timestamp,experiment_name,config_hash,git_commit,seed,model_id,provider,dataset_split,num_tasks,metric_accuracy,metric_notes
+2026-09-28T02:39:01.346195+00:00,capability_audit_gemini-flash,,,42,gemini-flash,,train_calibration,24,0.5,audit; gate=FAIL; spread=0.417
+2026-09-28T02:39:01.346195+00:00,capability_audit_mock-baseline,,,42,mock-baseline,,train_calibration,24,0.0833,audit; gate=FAIL; spread=0.417
+2026-09-28T13:00:00.000000+00:00,capability_audit_qwen3-8b,267956b,,42,qwen3:14b,ollama,train_calibration,40,0.5125,run2; gate=PASS; spread=0.2875; best_domains=biology+cs+history+economics+law+psychology
+2026-09-28T13:00:00.000000+00:00,capability_audit_gemma2,267956b,,42,gemma2,ollama,train_calibration,40,0.5000,run2; gate=PASS; spread=0.2875; best_domains=math+physics+economics+law
+2026-09-28T13:00:00.000000+00:00,capability_audit_llama3-8b,267956b,,42,llama3:8b,ollama,train_calibration,40,0.3875,run2; gate=PASS; spread=0.2875; role=generalist_baseline
+2026-09-28T13:00:00.000000+00:00,capability_audit_qwen3-0.6b,267956b,,42,qwen3:0.6b,ollama,train_calibration,40,0.2250,run2; gate=PASS; spread=0.2875; role=weak_agent_adversarial_test
+2026-09-28T14:31:02.873633+00:00,capability_audit_qwen3-8b,,,42,qwen3-8b,,train_calibration,40,0.55,audit; gate=PASS; spread=0.325
+2026-09-28T14:31:02.873633+00:00,capability_audit_gemma2,,,42,gemma2,,train_calibration,40,0.425,audit; gate=PASS; spread=0.325
+2026-09-28T14:31:02.873633+00:00,capability_audit_llama3-8b,,,42,llama3-8b,,train_calibration,40,0.25,audit; gate=PASS; spread=0.325
+2026-09-28T14:31:02.873633+00:00,capability_audit_qwen3-0.6b,,,42,qwen3-0.6b,,train_calibration,40,0.225,audit; gate=PASS; spread=0.325
+2026-09-28T14:36:21.713298+00:00,week2_baseline_uniform,histrepsim,,42,4-agent-pool,histrepeval,train_calibration,160,0.485,baseline comparison; ECE=0.175
+2026-09-28T14:36:21.713298+00:00,week2_baseline_globalbeta,histrepsim,,42,4-agent-pool,histrepeval,train_calibration,160,0.545,baseline comparison; ECE=0.140
+2026-09-28T14:36:21.713298+00:00,week2_baseline_skillconditioned,histrepsim,,42,4-agent-pool,histrepeval,train_calibration,160,0.48,baseline comparison; ECE=0.067
+2026-09-28T14:36:21.713298+00:00,week2_baseline_zeroevidencegate,histrepsim,,42,4-agent-pool,histrepeval,train_calibration,160,0.575,baseline comparison; ECE=0.067
+2026-09-28T14:36:21.713298+00:00,week2_baseline_oracle,histrepsim,,42,4-agent-pool,histrepeval,train_calibration,160,0.54,baseline comparison; ECE=0.067
+2026-09-28T14:36:21.713298+00:00,week2_task_mismatch_demo,histrepsim,,42,4-agent-pool,histrepeval,train_calibration,50,0.16,task-mismatch; GlobalBeta=0.16 vs SkillCond=0.16; verified=PASS
+2026-09-29T03:57:30.754484+00:00,week3_real_fulltest_qwen3-8b,8225f06e297f,,42,qwen3:8b,modal_ollama,test,2416,0.47764901,real JSON-schema direct answers; 14 subjects; ledger SHA256 1c69cd9d49f3b2c97bf20868e246c5b524492a0f28f9b0095170fa1dded9fd4e
+2026-09-29T03:57:30.754484+00:00,week3_real_fulltest_gemma2,8225f06e297f,,42,gemma2:latest,modal_ollama,test,2416,0.45115894,real JSON-schema direct answers; 14 subjects; ledger SHA256 1c69cd9d49f3b2c97bf20868e246c5b524492a0f28f9b0095170fa1dded9fd4e
+2026-09-29T03:57:30.754484+00:00,week3_real_fulltest_llama3-8b,8225f06e297f,,42,llama3:8b,modal_ollama,test,2416,0.36299669,real JSON-schema direct answers; 14 subjects; ledger SHA256 1c69cd9d49f3b2c97bf20868e246c5b524492a0f28f9b0095170fa1dded9fd4e
+2026-09-29T03:57:30.754484+00:00,week3_real_fulltest_qwen3-0.6b,8225f06e297f,,42,qwen3:0.6b,modal_ollama,test,2416,0.23509934,real JSON-schema direct answers; 14 subjects; ledger SHA256 1c69cd9d49f3b2c97bf20868e246c5b524492a0f28f9b0095170fa1dded9fd4e
+2026-09-29T03:57:30.754484+00:00,week3_real_qt_ecrt_related_noisy025,8225f06e297f,,"42,123,456",4-model-pool,real_answers_plus_controlled_feedback,train_calibration+dev_to_test,2416,0.49291822,"13 target subjects; 182 source-target pairs; 19656 grid rows; ECRT-FixedBorrow +0.02 pp CI [-0.04,+0.10] pp"
+2026-09-29T03:57:30.754484+00:00,week3_real_attack_a1_poison_budget5,8225f06e297f,,42,qwen3-8b,real_answers_plus_forced_wrong_intervention,dev_selected_test_evaluated,171,0.0,controlled oracle wrong-answer intervention; pilot only; not spontaneous attack
+2026-09-29T03:57:30.754484+00:00,week3_real_attack_a2_poison_budget100,8225f06e297f,,42,gemma2,real_answers_plus_forced_wrong_intervention,dev_selected_test_evaluated,234,0.20512820512820512,controlled oracle wrong-answer intervention; pilot only; not spontaneous attack
+2026-09-28T14:57:11.159983+00:00,capability_audit_gemma2-latest,,,42,gemma2:latest,ollama,train_calibration,7241,0.4521,audit; gate=PASS; spread=0.1084; 14 domains; selected 3-model pool
+2026-09-28T14:57:11.159983+00:00,capability_audit_qwen3-8b,,,42,qwen3:8b,ollama,train_calibration,7241,0.4744,audit; gate=PASS; spread=0.1084; 14 domains; selected 3-model pool
+2026-09-28T14:57:11.159983+00:00,capability_audit_llama3-8b,,,42,llama3:8b,ollama,train_calibration,7241,0.3660,audit; gate=PASS; spread=0.1084; 14 domains; selected 3-model pool

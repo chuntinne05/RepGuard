@@ -1,0 +1,63 @@
+{
+  "scope": "8 repeatedly seen HISTORY questions, competence diagnostics only; not confirmation",
+  "parent_run": "31ea9478aa9d2696ef401e46",
+  "case_ids": [
+    "CCI/2004/page_32.pdf-2",
+    "SLB/2003/page_57.pdf-1",
+    "DISCA/2017/page_41.pdf-1",
+    "DRE/2016/page_59.pdf-2",
+    "MMM/2013/page_26.pdf-2",
+    "ORLY/2016/page_29.pdf-3",
+    "UPS/2010/page_33.pdf-4",
+    "MO/2016/page_10.pdf-4"
+  ],
+  "arms": [
+    "dsl_native",
+    "numeric_native",
+    "numeric_raw_native"
+  ],
+  "max_new_calls": 24,
+  "thinking": true,
+  "num_predict": 4096,
+  "num_ctx": 16384,
+  "model": "qwen3:14b",
+  "same_public_evidence": true,
+  "quality_retries": false,
+  "comparison": "DSL native vs nonthinking same DSL has different generation cap. Numeric native vs DSL native changes output contract/instructions with same data. Numeric raw native vs numeric native has identical system/output contract but changes serialization (raw matrix vs catalogue). Not cost matched by input tokens.",
+  "scoring": "Unchanged FinQA exe_ans round5, no factor100 oracle. Numeric arm has no source-verification claim.",
+  "source_sha256": {
+    "competence_tools.py": "292b13d8f141124b8880cb0e3f6abdc3f3e3d2975f79785c04fddd442350104d",
+    "competence_probe.py": "59c76d61173688761f063154281cec42bfadc9227d01a29345a0156f647a2b19",
+    "live_app.py": "d32bdd5d8d4f23fb343d406b6941efc0e3d6149a63f3e05a0be1e0434be4ff46",
+    "causal_tools.py": "35a1f243aafb9b090a553d85c836acf646c27df7f052a155059ffdf4c7183e27",
+    "typed_tools.py": "fa0e4c79f84d181d2c2db8b270a2bfda8a2f5a80206f099e2a84efd750131872",
+    "source_checks.py": "81c7c92134fd1ffff7e0745ef3191480fa1a117c76c70137621c46c64c297b06",
+    "core.py": "f72180eb8284e1bd232f593fbc2ef85d5606c5661b27300ce275469f5d8c8b99"
+  },
+  "run_id": "f4516dea762cfc6ced506c95",
+  "actual_new_calls": 24,
+  "mock_calls": 0,
+  "input_tokens": 91945,
+  "output_tokens": 33574,
+  "native_thinking_nonempty": 24,
+  "results": {
+    "dsl_native": {
+      "n": 8,
+      "valid": 7,
+      "correct": 3,
+      "source_verified": true
+    },
+    "numeric_native": {
+      "n": 8,
+      "valid": 6,
+      "correct": 1,
+      "source_verified": false
+    },
+    "numeric_raw_native": {
+      "n": 8,
+      "valid": 7,
+      "correct": 1,
+      "source_verified": false
+    }
+  }
+}
