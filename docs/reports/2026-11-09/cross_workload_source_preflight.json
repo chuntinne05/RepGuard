@@ -1,0 +1,63 @@
+{
+  "scope": "Source/schema availability and optionally bounded partial input inspection only; no model generation, gold answer, benchmark config or model output inspected.",
+  "dataspace": {
+    "code_revision": "6491caa4c70cc06cacb6103ba73cefb00746abfe",
+    "dataset_revision": "96be19257d7aa251dbce4771d46a26fc36f6dc52",
+    "task_metadata_sha256": "2afa196004c19e4b0e04f1689762f6a224beecfe6f3b02f99c7e3e1d09fa1474",
+    "tasks": 410,
+    "public_reference_tasks": 60,
+    "withheld_reference_tasks": 350,
+    "unique_question_strings": 410,
+    "modality_task_counts": {
+      "csv": 410,
+      "json": 398,
+      "sqlite": 402,
+      "markdown": 385,
+      "pdf": 384,
+      "video": 189
+    },
+    "median_workspace_bytes": 31263013.5,
+    "public_reference_no_video_tasks": 32,
+    "inspection_candidate_ids": [
+      "task_269",
+      "task_391",
+      "task_380",
+      "task_371",
+      "task_44",
+      "task_35"
+    ],
+    "archive_bytes_from_metadata": 2878651222,
+    "full_archive_downloaded_or_verified": false,
+    "partial_workspace_inspection": {
+      "candidate_workspaces": 6,
+      "input_files_read": 12,
+      "range_bytes_downloaded": 3980118,
+      "member_crc_checked": true,
+      "full_archive_sha256_verified": false,
+      "complete_workspace_or_oracle_validated": false
+    },
+    "scorer_source_inspected": true,
+    "scorer_executed": false,
+    "scorer_notes": [
+      "Task-specific types/precision/percent convention frozen",
+      "Complete-table equality with column alignment and row multiplicities",
+      "Does not itself establish that agent reasoning or attribution is sound"
+    ],
+    "grouping_limit": "Task metadata lacks source content hashes/lineage; task-level random split cannot certify source-disjoint transfer.",
+    "next": "Inspect selected workspaces, grouping and question/config semantics before freezing any new inference protocol."
+  },
+  "dab": {
+    "code_revision": "3ce514f0a601569ab2ac3569542152423794a461",
+    "readme_reported_queries": 54,
+    "readme_reported_datasets": 12,
+    "readme_reported_domains": 9,
+    "downloaded": "README and Git tree only",
+    "database_assets_validated": false,
+    "license_confirmed": false,
+    "next": "Resolve dataset-specific terms, manifests, database dependencies and per-query validators before use."
+  },
+  "mm_enterprise": {
+    "source": "https://mlv.kaist.ac.kr/MMEnterprise-Bench/",
+    "availability": "Official project page currently says dataset/evaluation toolkit coming soon; not ready for local experiments."
+  }
+}

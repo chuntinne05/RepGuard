@@ -1,0 +1,41 @@
+{
+  "review_date": "2026-10-27",
+  "presentation_date": "2026-10-28",
+  "git_branch": "dev",
+  "git_revision": "27b4bc7fe505387dae2eb1658bcecf895fbf409c",
+  "canva_url": "https://www.canva.com/design/DAHZNqV57vA/_lRn_fiY1M11YCo8PHAhlg/edit",
+  "canva_saved_indicator_verified": true,
+  "canva_total_pages": 32,
+  "hidden_canva_pages": [
+    3,
+    15,
+    22,
+    23,
+    25,
+    32
+  ],
+  "exported_pages": 26,
+  "speaker_notes_pages": 24,
+  "notes_pages_with_external_source_urls": 6,
+  "visual_review": "All 26 pages rendered and inspected; six text/layout refinements rechecked; final CI point correction re-rendered and inspected. Final PDF differs from immediately preceding reviewed PDF only on page 22.",
+  "pptx_opened_in_powerpoint": false,
+  "pptx_native_chart_parts": 0,
+  "primary_authoring_surface": "Canva",
+  "experimental_new_llm_calls": 0,
+  "new_confirmation_outcomes_opened": 0,
+  "live_cloud_query": false,
+  "canva_ai_trial_quota_exhausted": true,
+  "source_experiment_files_modified": false,
+  "outputs": [
+    {
+      "path": "output/pdf/RepGuard_Literature_Review_Progress_2026-10-28.pdf",
+      "bytes": 4627074,
+      "sha256": "bcc6bc3f9db6843544b2003670ff961280a6aaa09eeca97ca147cd575e29d8ef"
+    },
+    {
+      "path": "output/presentations/RepGuard_Literature_Review_Progress_2026-10-28.pptx",
+      "bytes": 5184503,
+      "sha256": "3345539c4ed989b145d5e31fea296a43838eb27580199e092a491911b20987e3"
+    }
+  ]
+}

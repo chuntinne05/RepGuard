@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-11-09T15:53:10.753565+00:00",
+  "kind": "Post-check engineering snapshot;not a prospective scientific registration",
+  "source_hashes": {
+    "src/repguard/verification/relational.py": "e8458845fd91c9041d0b668010d4c3fe14f3e46e3a59dcf2e3ef7a46d7a6124a",
+    "src/repguard/verification/query_cli.py": "b56f30eafb14cad96bcb576b2bd7fa8b2ed043c9bdad39b24baf26767d99c684",
+    "experiments/relational_v5/tools.py": "e75b094d256cb5f6318982ab4e8c99963e74b90cd92d64ec6f26702f6fac4134",
+    "experiments/relational_v5/__init__.py": "7d163babc26b2ce384cea09bcf52e3e6fe882e99fb422d8b754d2ccce51a6939",
+    "tests/test_relational_obligations.py": "e50bb1aa720fd054662a48b12e69e9862550b77dce64de85ec3b6a477f75eb93",
+    "tests/test_relational_workspace_tools.py": "8acc8d77377eaeaa86f10e51079ea11b4ad8486d3b30ec894282aa232eac75d2",
+    "research_ops/relational_v5_development.py": "1c6403b7d488d09cb4e8aef09bb3532bb18592e72f5e0c8bbea3f1fd2c2398b0",
+    "research_ops/relational_v5_execute.py": "686ac3e30ba92171a7e69af6ce111c2d6f98590aac91753dfc19039b377fc0ef",
+    "research_ops/relational_v5_source_intake.py": "6023ed1fd8a1c5ec513473fd5c98ec61412601e49dec20d9e1684bf51fc7c3b0",
+    "research_ops/requirements-query-audit.txt": "123197ed79103ffc1ab5d7b252a3da3d2d921a6abd9e17c24fd6a07d20da440b"
+  },
+  "new_model_calls": 0,
+  "new_tests_passed": 29,
+  "scoped_regression_passed": 87,
+  "human_labels_added": 0,
+  "external_metadata_split": {
+    "reserved_confirmation": 92,
+    "validation": 67,
+    "development": 45
+  }
+}

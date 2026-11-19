@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-11-09T13:19:02.424723+00:00",
+  "scope": "Engineering functionality only, not external cross-domain validation or method superiority.",
+  "synthetic_cases": 38,
+  "synthetic_workload_families": 4,
+  "real_recorded_artifact_claims": 5,
+  "controlled_mutations_over_real_artifacts": 2,
+  "all_expected_engineering_outcomes_observed": true,
+  "new_model_calls": 0,
+  "new_human_annotations": 0,
+  "semantics_boundary": "Facts scoped/admitted and contracts approved by caller in these examples. Does not validate that NL parsing, metadata or original experiments are correct."
+}

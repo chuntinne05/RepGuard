@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-11-09T14:02:17.959126+00:00",
+  "original_source_check": "5of6match,task391column_count4vs5",
+  "amended_task": "task_391",
+  "amendment": "Explicitly request record date followed by four amounts. Gold values unchanged.",
+  "amended_source_check": {
+    "task_id": "task_391",
+    "passed": true,
+    "score": 1,
+    "order_sensitive": false,
+    "gold_column_count": 5,
+    "prediction_column_count": 5,
+    "gold_row_count": 1,
+    "prediction_row_count": 1,
+    "column_mapping": [
+      {
+        "gold_index": 0,
+        "prediction_index": 0
+      },
+      {
+        "gold_index": 1,
+        "prediction_index": 1
+      },
+      {
+        "gold_index": 2,
+        "prediction_index": 2
+      },
+      {
+        "gold_index": 3,
+        "prediction_index": 3
+      },
+      {
+        "gold_index": 4,
+        "prediction_index": 4
+      }
+    ],
+    "error_code": null,
+    "error": null
+  },
+  "all_source_checks_pass_after_declared_amendment": true,
+  "source_gate_scope": "GO for engineering tool-readiness only; not semantic adjudication or scientific expansion.",
+  "human_adjudications": 0,
+  "corpus_model_calls_before_amendment": 0,
+  "public_packet_sha256": "c9a4b0bc27d471b71c51381ba0362441ea0fbaff6dffb4485bb8b027ddea404c",
+  "public_packet_contains_gold": false
+}

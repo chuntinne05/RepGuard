@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-11",
+  "format": "Markdown",
+  "spoken_language": "Vietnamese",
+  "ordered_image_numbers": [
+    1,
+    2,
+    6,
+    7,
+    3,
+    4,
+    5,
+    8,
+    9,
+    10
+  ],
+  "full_text_whitespace_word_count": 3020,
+  "checks": {
+    "ten_slide_coverage": "PASS",
+    "agenda_order": "PASS",
+    "model_response_total": 1265,
+    "native_workflow_scores": "PASS",
+    "percentages_and_percentage_point_difference": "PASS",
+    "technical_terms_explained_in_context": "PASS",
+    "linked_files": "PASS"
+  },
+  "editorial_review": "Style analysis based on supplied sample; no sample latency/Hz/training claims imported. Main script distinguishes implemented component, grading qualification, pilot model results and proposed intervention. No user study or novel-method result claimed.",
+  "source_sha256": {
+    "/Users/trinhtrantrungtin/Downloads/technical_presentation_transcripts.txt": "2d2449509a0732bd6c6fd67dec28b5e0f25c2a0a86f71661548db9250f5a5161",
+    "docs/reports/2026-11-09/VERIFICATION_CYCLE01_RESULTS_VA_QUYET_DINH.md": "ae75f4098d2129745682f2825bb22553b27c7b98766d77ffe77cc91cb74f668f",
+    "docs/reports/2026-11-09/ARQA_CYCLE02_RESULTS_VA_QUYET_DINH.md": "a98ebf1eff604bfee23afbef4fa8520060af6ca288f187eacb1398a76b5a08fc",
+    "docs/reports/2026-11-09/RELATIONAL_V5_RESULTS_VA_QUYET_DINH.md": "0958e9db01c905f44ab56373cee5ecd169da1ab1de5577548795c06953f12aae",
+    "docs/reports/2026-11-09/WORKSPACE_V4_RESULTS_VA_PATH_TIEP.md": "b325214673e3c47ad71d85a573b933797981be72d6d3d5e47ab95015c1a7cf97",
+    "docs/reports/2026-11-10/specbridge_v6_offline_results.json": "00500d9680bdf536dd7145a7406a53005f128aba10cfd97bef40e354d19200dd",
+    "results/specbridge_v6/qualification_readout.json": "90fc69933567dc5041a4de17ae54cfd0b2897aa40e94cc1ada3063b472eccbfd"
+  },
+  "transcript_sha256": "68db44c03718b57ab473771318a5004e43c4cb9c680cf413604e7079e2b66198"
+}

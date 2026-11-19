@@ -1,0 +1,97 @@
+{
+  "updated_utc": "2026-11-09T16:13:18.143630+00:00",
+  "current_stage": "specbridge_v6_native_readiness_launching",
+  "active_plan_id": "c1a873e7e660944f6b542767",
+  "completed_plan_id": "3af22795afdac39d725c3351",
+  "active_study_containers": null,
+  "new_inference_scheduled": true,
+  "cycle01_scientific_gate": "FAIL_preserved",
+  "cycle02_scientific_gate": "FAIL_stop_scale_and_history",
+  "cycle02_calls": 288,
+  "cycle02_primary": {
+    "delta": 0.020833333333333332,
+    "ci95": [
+      -0.041666666666666664,
+      0.08333333333333333
+    ]
+  },
+  "history_learning": "not_opened",
+  "confirmed_research_novelty": false,
+  "human_annotations_completed": 0,
+  "users_recruited": 0,
+  "next": [
+    "Qualify native SpecBridge scorer dependencies/reference/negative controls on45development tasks only",
+    "Profile supported operator/ambiguity coverage without silently dropping unsupported cases",
+    "Prepare strongsingle,samechecker,and neutral/shuffled feedback controls before new model registration",
+    "Keep source/schema reserve sealed for policy confirmation;report choice-template dependence",
+    "Independent source contract reviews and5-8actual reporting user discovery;nohistory"
+  ],
+  "primary_report": "docs/reports/2026-11-09/SPECBRIDGE_V6_PROTOCOL.md",
+  "current_working_direction": "Preserving task constraints and evidence across multi-agent analytical/reporting handoffs; novelty and effectiveness not established",
+  "new_kernel_tests_passed": 25,
+  "new_model_calls_in_extension": 113,
+  "engine_capability": "Conditional structured numeric/status verification; no automatic NL interpretation or source admission",
+  "external_source_status": "DataSpace6completeworkspaces96inputs12offlinegoldconfigs_fullarchiveSHAverified;onequestionamended;source_onlypreflight5of6original_6afteramendment",
+  "active_study_app": null,
+  "workspace_v4_prefix_real_responses": 42,
+  "workspace_v4_prefix_status": "interrupted_first2tasks42calls_preserved_diagnostic_only",
+  "workspace_v4_tool_and_audit_tests_passed": 33,
+  "previous_completed_plan_id": "deaee6167f9609bd2f045f46",
+  "workspace_v4_real_responses": 113,
+  "workspace_v4_trajectories": 36,
+  "workspace_v4_recovery_status": "remaining4tasks71calls_completed_receipt_audit_PASS",
+  "workspace_v4_scientific_primary": null,
+  "workspace_v4_scientific_expansion_gate": "NOT_OPENED",
+  "workspace_v4_strict_relation_matches": {
+    "A": 1,
+    "B": 1,
+    "AA": 2,
+    "BB": 1,
+    "AB": 2,
+    "BA": 2
+  },
+  "workspace_v4_length_stops": 10,
+  "workspace_v4_tool_or_schema_errors": 13,
+  "workspace_v4_semantic_measurement_flags": "task371abbreviation_ambiguous;task44extraIDcolumn;posthoc_no_score_changes",
+  "workspace_v4_apps_stopped_zero_tasks": true,
+  "workspace_v4_service_probes": {
+    "count": 2,
+    "first": "HTTPError_status_not_recorded_generation_outcome_unknown",
+    "second": "HTTP429_quota0",
+    "corpus_sent": false
+  },
+  "strategy_report": "docs/reports/2026-11-09/RESEARCH_STRATEGY_V5_VA_CONTRIBUTIONS.md",
+  "relational_v5_new_model_calls": 0,
+  "relational_v5_new_tests_passed": 29,
+  "relational_v5_scoped_regression_passed": 87,
+  "relational_v5_old_trajectories_replayed": 36,
+  "relational_v5_sql_reexecutions": 20,
+  "relational_v5_output_bytes_reproduced": 20,
+  "relational_v5_contract_authority": "development_only_no_independent_approval",
+  "relational_v5_business_accuracy_measured": false,
+  "external_specbridge": {
+    "revision": "a51be850a113a6b7c0ada57ad3c7806c6c3f25a4",
+    "upstream_accepted_tasks": 204,
+    "databases": 12,
+    "split_counts": {
+      "reserved_confirmation": 92,
+      "validation": 67,
+      "development": 45
+    },
+    "development_databases_downloaded": 3,
+    "reserved_db_downloaded": false,
+    "cached_model_outputs_downloaded": false,
+    "native_scorer_executed": false,
+    "model_calls": 0,
+    "not_a_registered_confirmation": true
+  },
+  "specbridge_v6_qualification": {
+    "references": 90,
+    "own_matches": 90,
+    "opposite_rejected": 90,
+    "controls_pass": true,
+    "native_sqlite": "3.42.0",
+    "system_engine_grading_disagreements": 2
+  },
+  "specbridge_v6_frontier_probe": "Gemini3.8Flash_synthetic_timeout_unknown_outcome_no_retry"
+}

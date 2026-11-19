@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-11-09T13:31:34.430265+00:00",
+  "kind": "Post-check engineering snapshot, not prospective model-study registration",
+  "source_hashes": {
+    "src/repguard/verification/models.py": "04ebabfa8338ef4626a9e5b9ca7340c8df33426f7a019a5680f9f88265e06050",
+    "src/repguard/verification/handoff.py": "d96eeb8d7c69e689bfd29ce9b675ed3f321819eb976ec8b5fe0f470e6a19b65c",
+    "src/repguard/verification/__init__.py": "805880813dbffcdc47a0a8243666b442b1ab4b37a72a71678edbcd55c2a375a5",
+    "src/repguard/verification/engine.py": "836d44ab1fb057355aa92e5dfecea3e0a1440074e3730775402fa0fc001e0677",
+    "src/repguard/verification/__main__.py": "1d24721b99c4e8080537660e05532dff70bd14e0fd140d166a14b6a5ae4343f1",
+    "src/repguard/verification/adapters.py": "bc91e2efa7a5aa9c5c1eda2d9b4d097857a57d94505e507fe2e12c4e21f01067",
+    "tests/test_verification_contracts.py": "94edfc0bbe4d5164a7b60d9486bea13e9f75b4b725af4e60e3fd81773c9de649",
+    "research_ops/general_verification_demo.py": "c6fde3ea10e1b83246c49793963135de6948bb54fa56515e549e36c52bda7f06",
+    "research_ops/intake_cross_workload_sources.py": "eba4a8f6891901767ed2d24c3f410e8feefb7d81ba70819da118783ce2f22602",
+    "research_ops/inspect_dataspace_workspace.py": "7787a63241985e7e620c94a9f5872caf917a56cba15a7d67ee2c1d0008870916"
+  },
+  "new_model_calls": 0,
+  "kernel_tests_passed": 25,
+  "old_experiments_unchanged": true
+}

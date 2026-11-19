@@ -1,0 +1,26 @@
+{
+  "audit": "PASS",
+  "run_id": "d11908329d5b94f303c191c7",
+  "stats": {
+    "new_completed": 120,
+    "cached_real_qwen_direct": 24,
+    "unresolved": 0,
+    "native_thinking_nonempty": 0,
+    "length_stops": 0,
+    "new_input_tokens": 251208,
+    "new_output_tokens": 24511,
+    "raw_invalid": {
+      "qwen_self1": 1,
+      "qwen_self2": 1,
+      "gemma_plain": 4,
+      "gemma_self1": 4,
+      "gemma_self2": 4
+    }
+  },
+  "source_files_verified": 12,
+  "earliest_new_response_utc": "2026-10-20T01:22:30.325678+00:00",
+  "latest_new_response_utc": "2026-10-20T01:33:28.078606+00:00",
+  "no_new_inference_in_audit": true,
+  "private_annotation_fields_in_prompts": false,
+  "human_semantic_audit": false
+}

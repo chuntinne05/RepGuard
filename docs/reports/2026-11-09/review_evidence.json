@@ -1,0 +1,99 @@
+{
+  "review_date": "2026-11-09",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "head_observed": "27b4bc7",
+  "scope": "Research review and selected critical implementation paths; not a full code audit or full raw-ledger replay.",
+  "new_model_calls": 0,
+  "generated_program_executions": 0,
+  "sealed_confirmation_outcomes_opened": false,
+  "live_cloud_status_queried": false,
+  "test_suite_run_today": false,
+  "latest_test_record_read": {
+    "date": "2026-10-27",
+    "passed": 308,
+    "skipped": 1,
+    "source": "docs/reports/2026-10-27/verification_2026-10-27.json"
+  },
+  "inventory_today": {
+    "src/repguard": {
+      "files": 41,
+      "lines": 8280
+    },
+    "thesis_pilot": {
+      "files": 42,
+      "lines": 3739
+    },
+    "tests": {
+      "files": 45,
+      "lines": 4101
+    },
+    "docs/analysis": {
+      "markdown_files": 128
+    }
+  },
+  "cycle03_saved_artifacts_readback": {
+    "scope": "Saved result summaries were read and compared with saved final audit and 27 October recomputation record. No scorer or generated program was executed today.",
+    "new_calls": 264,
+    "reused_calls_not_double_counted": 24,
+    "unique_contexts": 24,
+    "input_tokens": 572340,
+    "output_tokens": 59841,
+    "scoped_scores": {
+      "plain": 19,
+      "initial": 15,
+      "evidence": 15,
+      "operation": 16,
+      "combined": 15,
+      "self1": 15,
+      "self2": 15
+    },
+    "crossfamily_scores": {
+      "qwen_plain": 19,
+      "qwen_self1": 20,
+      "qwen_self2": 20,
+      "gemma_plain": 16,
+      "gemma_self1": 16,
+      "gemma_self2": 16
+    },
+    "scoped_oracle": 16,
+    "crossfamily_oracle": 20,
+    "both_headroom_gates_failed": true,
+    "human_semantic_adjudications": 0,
+    "sources": [
+      "results/thesis_tatqa_scoped_repair_v1/summary.json",
+      "results/thesis_tatqa_crossfamily_v1/summary.json",
+      "docs/analysis/repguard_cycle03_final_audit_2026-10-20.json",
+      "docs/reports/2026-10-27/verification_2026-10-27.json"
+    ]
+  },
+  "evalplus": {
+    "selected_tasks": 32,
+    "model_calls_in_preparation_record": 0,
+    "program_executions_in_preparation_record": 0,
+    "benchmark_score": null,
+    "source": "results/thesis_evalplus_source_v1/source_contract_audit.json",
+    "limitation": "Source preparation only; full-suite pass would remain benchmark-scoped, not a proof of semantics."
+  },
+  "literature": {
+    "entries": 32,
+    "inventory": "LITERATURE_VA_RESEARCH_GAP.md",
+    "primary_sources_only_for_substantive_claims": true,
+    "external_author_results_reproduced": false,
+    "exhaustive_systematic_review": false,
+    "reading_depth": "Targeted full-text setup/method/results/limitations for nearest work; abstract and official metadata for some adjacent benchmarks."
+  },
+  "user_constraints": {
+    "retain_multi_agent": true,
+    "scope_open": true,
+    "time_and_model_budget_not_hard_constraints": true,
+    "financial_domain": "Recommendation made in this report, not a user-imposed constraint."
+  },
+  "changes": "New review documents only. No original study source, score, prompt, protocol or sealed split modified.",
+  "document_checks_today": {
+    "saved_summary_consistency": "PASS",
+    "json_parse": "PASS",
+    "markdown_local_links": "PASS",
+    "code_fences": "PASS",
+    "scope": "No test suite, scorer or generated-program execution."
+  }
+}

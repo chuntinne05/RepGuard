@@ -1,0 +1,84 @@
+{
+  "library": "Matplotlib",
+  "library_version": "3.11.2",
+  "format": "PNG",
+  "size": [
+    3200,
+    1800
+  ],
+  "aspect_ratio": "16:9",
+  "language": "English",
+  "sources": {
+    "docs/reports/2026-11-09/verification_v1_summary.json": "bf6bd192f0f95314e2717a69e8fae775871b2037267dad6070ce4836e5a95ce8",
+    "docs/reports/2026-11-09/arqa_v2_results.json": "d22e6ae4a9a6b5c7aae06b5aff6c002bc7dfc0a00e5bf39a9cb0cda8c3041078",
+    "docs/reports/2026-11-10/specbridge_v6_offline_results.json": "00500d9680bdf536dd7145a7406a53005f128aba10cfd97bef40e354d19200dd"
+  },
+  "slide03": {
+    "balanced_cross_minus_self_pp": [
+      2.083333333333334,
+      2.083333333333333
+    ],
+    "cluster_bootstrap95_pp": [
+      [
+        -0.4166666666666667,
+        4.593749999999849
+      ],
+      [
+        -4.166666666666666,
+        8.333333333333332
+      ]
+    ],
+    "pooled_effect": false
+  },
+  "slide08": {
+    "workflows": [
+      "A",
+      "B",
+      "AA",
+      "BB",
+      "AB",
+      "BA"
+    ],
+    "correct": [
+      18,
+      19,
+      21,
+      21,
+      19,
+      20
+    ],
+    "denominators": [
+      24,
+      24,
+      24,
+      24,
+      24,
+      24
+    ],
+    "cross_minus_self_pp": -6.25,
+    "scope": "Development pilot;12tasks/24dependent variants/3databases; not V5 checker efficacy"
+  },
+  "outputs": [
+    {
+      "file": "slide_03_cross_model_vs_self_review_EN.png",
+      "size": [
+        3200,
+        1800
+      ],
+      "sha256": "12c10997de6beab5a5131855285ddd8a303f99dc6d0b4ada60f076317e556f78"
+    },
+    {
+      "file": "slide_08_latest_sql_pilot_EN.png",
+      "size": [
+        3200,
+        1800
+      ],
+      "sha256": "51a21fa29103d21f3f1414fb3690e018b4d115ccdb629c89a840bdbdc835d593"
+    }
+  ],
+  "checks": {
+    "text_within_canvas": "PASS",
+    "png_size": "PASS",
+    "source_values": "PASS"
+  }
+}

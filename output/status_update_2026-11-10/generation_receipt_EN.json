@@ -1,0 +1,2343 @@
+{
+  "language": "English; personal names preserved",
+  "size": [
+    2560,
+    1440
+  ],
+  "slide_count": 10,
+  "design": "Same reference background, palette, Latin Modern Sans, header and footer as the Vietnamese images",
+  "content_source": {
+    "path": "output/status_update_2026-11-10/SLIDE_CONTENT_EN.md",
+    "sha256": "6018205715cbb60c422df6f2a9834eade15284bc38d2cff3019408c025febfa5"
+  },
+  "chart_source": {
+    "path": "output/status_update_2026-11-10/charts_en/chart_sources_and_checks.json",
+    "sha256": "aff27487628ce4ca98bd442cfda5bcabc8f42f717712bd557d808e28218c7167"
+  },
+  "outputs": [
+    {
+      "file": "slides_en/01_agenda_EN.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "fdae89a47217ae49b0bf896cf315f6ddc1103ba8fb954930f28b2b1be4280a46"
+    },
+    {
+      "file": "slides_en/02_progress_since_last_report_EN.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "c828cc0ec7b4943d4d0425ab4dd37ead70358128cf79f7bae5e2337e2bdd70e2"
+    },
+    {
+      "file": "slides_en/03_cross_model_vs_self_review_EN.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "1cc2e7173354eb946e3732766a4ba59448cd263325ea52448acc37667917db6b"
+    },
+    {
+      "file": "slides_en/04_real_data_workspaces_EN.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "66362a81bedb795761c16a9f75b9c652d8935db4f422e8ae617cce5cb812d6d0"
+    },
+    {
+      "file": "slides_en/05_three_error_types_EN.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "affaf3f3db7064c5598b781974cbd915f212e91ce7d98f33c578d293bfbc956c"
+    },
+    {
+      "file": "slides_en/06_verification_and_handoff_EN.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "67db000c4c27df730a9873a0579f0df668c3c7ef0a5d228ca665c3c57f8bce40"
+    },
+    {
+      "file": "slides_en/07_evaluation_on_new_databases_EN.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "ade883cffe2894b28a15529923dbf4a8772c2d674ece89bb6933bd708871be69"
+    },
+    {
+      "file": "slides_en/08_latest_sql_pilot_EN.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "b5667ca2ba2d785e76434ed74c009c3a7b02904395348ce9c8f9d256b8b8231f"
+    },
+    {
+      "file": "slides_en/09_research_question_EN.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "7fd4fd6ba4b3325097ff823d18e5bbdeb1f506cf169a0890a0fc3de2430fa6dd"
+    },
+    {
+      "file": "slides_en/10_next_steps_tin_trung_EN.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "673d5bb97281b90a22c19f7b3cfc8270e1f63c1af9fba87f2950785494324062"
+    }
+  ],
+  "text_layout": [
+    {
+      "slide": 1,
+      "text": "Agenda",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        144.43,
+        63.08
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "RepGuard · Progress Update",
+      "size": 13,
+      "box": [
+        550.87,
+        696.0,
+        729.13,
+        714.6
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "10 Nov 2026",
+      "size": 13,
+      "box": [
+        935.13,
+        696.0,
+        1011.54,
+        714.6
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "1 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Update Since the 27–28 October Report",
+      "size": 25,
+      "box": [
+        78,
+        120.0,
+        542.93,
+        155.77
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "From experimental results to the research question and next validation steps.",
+      "size": 23,
+      "box": [
+        78,
+        160.0,
+        819.61,
+        193.65
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "1",
+      "size": 18,
+      "box": [
+        87.05,
+        268.0,
+        96.95,
+        293.76
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Completed Work",
+      "size": 27,
+      "box": [
+        127,
+        265.0,
+        337.14,
+        303.64
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Four evaluation settings; a new verification layer.",
+      "size": 22,
+      "box": [
+        127,
+        309.0,
+        579.65,
+        341.19
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "2",
+      "size": 18,
+      "box": [
+        87.05,
+        421.0,
+        96.95,
+        446.76
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Results and Lessons Learned",
+      "size": 27,
+      "box": [
+        127,
+        418.0,
+        481.19,
+        456.64
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Cross-model review, data errors and grading",
+      "size": 22,
+      "box": [
+        127,
+        462.0,
+        532.55,
+        494.19
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "limitations.",
+      "size": 22,
+      "box": [
+        127,
+        489.94,
+        228.88,
+        522.13
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "3",
+      "size": 18,
+      "box": [
+        685.05,
+        268.0,
+        694.95,
+        293.76
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Research Direction",
+      "size": 27,
+      "box": [
+        725,
+        265.0,
+        958.66,
+        303.64
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Existing foundations and evidence still needed.",
+      "size": 22,
+      "box": [
+        725,
+        309.0,
+        1152.83,
+        341.19
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "4",
+      "size": 18,
+      "box": [
+        685.05,
+        421.0,
+        694.95,
+        446.76
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Next Steps",
+      "size": 27,
+      "box": [
+        725,
+        418.0,
+        862.3,
+        456.64
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Tasks for Tín and Trung; conditions for",
+      "size": 22,
+      "box": [
+        725,
+        462.0,
+        1092.73,
+        494.19
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "proceeding.",
+      "size": 22,
+      "box": [
+        725,
+        489.94,
+        829.32,
+        522.13
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Reporting period: from the late-October update through 10 November 2026.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        512.23,
+        673.48
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Progress Since the Previous Report",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        592.75,
+        63.08
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "RepGuard · Progress Update",
+      "size": 13,
+      "box": [
+        550.87,
+        696.0,
+        729.13,
+        714.6
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "10 Nov 2026",
+      "size": 13,
+      "box": [
+        935.13,
+        696.0,
+        1011.54,
+        714.6
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "2 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "1,265",
+      "size": 53,
+      "box": [
+        75,
+        112.0,
+        207.82,
+        187.84
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "new model responses · 4 evaluation settings",
+      "size": 28,
+      "box": [
+        265,
+        128.0,
+        844.04,
+        168.07
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "720",
+      "size": 43,
+      "box": [
+        75,
+        280.0,
+        145.95,
+        341.53
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Evidence Sufficiency",
+      "size": 23,
+      "box": [
+        75,
+        350.0,
+        288.99,
+        382.91
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "120 pairs · 24 groups",
+      "size": 18,
+      "box": [
+        75,
+        427.0,
+        242.96,
+        453.33
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "288",
+      "size": 43,
+      "box": [
+        365,
+        280.0,
+        435.95,
+        341.53
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Financial Report QA",
+      "size": 23,
+      "box": [
+        365,
+        350.0,
+        581.25,
+        382.91
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "24 questions · 2 prompt profiles",
+      "size": 18,
+      "box": [
+        365,
+        427.0,
+        613.49,
+        453.33
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "113",
+      "size": 43,
+      "box": [
+        655,
+        280.0,
+        725.95,
+        341.53
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Data Workspace",
+      "size": 23,
+      "box": [
+        655,
+        350.0,
+        830.15,
+        382.91
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "6 tasks · 36 trajectories",
+      "size": 18,
+      "box": [
+        655,
+        427.0,
+        840.67,
+        453.33
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "144",
+      "size": 43,
+      "box": [
+        945,
+        280.0,
+        1015.95,
+        341.53
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "SQL with Specified",
+      "size": 23,
+      "box": [
+        945,
+        350.0,
+        1146.87,
+        382.91
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Interpretations",
+      "size": 23,
+      "box": [
+        945,
+        379.21,
+        1100.13,
+        412.12
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "12 tasks · 24 cases",
+      "size": 18,
+      "box": [
+        945,
+        427.0,
+        1095.16,
+        453.33
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Parallel Development",
+      "size": 23,
+      "box": [
+        76,
+        483.0,
+        301.33,
+        515.91
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Constraint and source verification + evidence for agent handoffs",
+      "size": 28,
+      "box": [
+        76,
+        522.0,
+        907.01,
+        562.07
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "New focus: explicitly verify requirements, data and evidence status.",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        790.48,
+        624.91
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Responses are not independent tasks. Excludes the previous 18,064 MMLU-Pro responses and 560 repair responses.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        741.42,
+        673.48
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "First Two Studies: Cross-Model Advantage Is Unclear",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        889.16,
+        63.08
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "RepGuard · Progress Update",
+      "size": 13,
+      "box": [
+        550.87,
+        696.0,
+        729.13,
+        714.6
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "10 Nov 2026",
+      "size": 13,
+      "box": [
+        935.13,
+        696.0,
+        1011.54,
+        714.6
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "3 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Cross-Model Review − Self-Review",
+      "size": 29,
+      "box": [
+        75,
+        107.0,
+        544.22,
+        148.5
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Balanced average across both directions · percentage points · 95% confidence intervals",
+      "size": 21,
+      "box": [
+        75,
+        151.0,
+        857.44,
+        181.72
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Both intervals include zero; reputation learning remains on hold.",
+      "size": 23,
+      "box": [
+        79,
+        607.0,
+        758.81,
+        639.91
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Source: cycle01 and ARQA cycle02, 9 Nov. Separate studies; no pooled effect. Financial Report QA uses the checklist contrast.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        812.25,
+        673.48
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Real Data Workspaces: Measure Task Completion Too",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        910.06,
+        63.08
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "RepGuard · Progress Update",
+      "size": 13,
+      "box": [
+        550.87,
+        696.0,
+        729.13,
+        714.6
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "10 Nov 2026",
+      "size": 13,
+      "box": [
+        935.13,
+        696.0,
+        1011.54,
+        714.6
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "4 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "113 responses",
+      "size": 39,
+      "box": [
+        75,
+        112.0,
+        322.61,
+        167.81
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "6 tasks · 36 trajectories · CSV / JSON / SQLite / PDF",
+      "size": 23,
+      "box": [
+        460,
+        126.0,
+        1077.6,
+        158.91
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Output outcomes across all 36 trajectories",
+      "size": 24,
+      "box": [
+        75,
+        200.0,
+        542.83,
+        234.34
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "9",
+      "size": 32,
+      "box": [
+        207.45,
+        271.0,
+        225.05,
+        316.79
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "14",
+      "size": 32,
+      "box": [
+        559.62,
+        271.0,
+        594.82,
+        316.79
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "13",
+      "size": 32,
+      "box": [
+        983.37,
+        271.0,
+        1018.57,
+        316.79
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Match the reference",
+      "size": 24,
+      "box": [
+        75,
+        365.0,
+        299.18,
+        399.34
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Correct under strict",
+      "size": 22,
+      "box": [
+        75,
+        418.0,
+        255.51,
+        450.19
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "relation matching.",
+      "size": 22,
+      "box": [
+        75,
+        445.94,
+        241.91,
+        478.13
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Table produced, no match",
+      "size": 24,
+      "box": [
+        460,
+        365.0,
+        750.78,
+        399.34
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Distinguish content, interpretation",
+      "size": 22,
+      "box": [
+        460,
+        418.0,
+        776.14,
+        450.19
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "and output-shape errors.",
+      "size": 22,
+      "box": [
+        460,
+        445.94,
+        685.72,
+        478.13
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "No final table",
+      "size": 24,
+      "box": [
+        845,
+        365.0,
+        995.46,
+        399.34
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Source discovery, budget or",
+      "size": 22,
+      "box": [
+        845,
+        418.0,
+        1099.52,
+        450.19
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "output-length issues remain.",
+      "size": 22,
+      "box": [
+        845,
+        445.94,
+        1104.47,
+        478.13
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Distinguish “unfinished” from “output produced but requirements not met.”",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        885.17,
+        624.91
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Adapted DataSpace tasks; diagnostic results from two collection blocks affected by interruptions. Not an official confirmatory score.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        840.12,
+        673.48
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Three Error Types to Distinguish",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        555.58,
+        63.08
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "RepGuard · Progress Update",
+      "size": 13,
+      "box": [
+        550.87,
+        696.0,
+        729.13,
+        714.6
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "10 Nov 2026",
+      "size": 13,
+      "box": [
+        935.13,
+        696.0,
+        1011.54,
+        714.6
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "5 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "1",
+      "size": 18,
+      "box": [
+        80.05,
+        121.0,
+        89.95,
+        146.76
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Wrong Attribute",
+      "size": 24,
+      "box": [
+        113,
+        119.0,
+        296.48,
+        153.34
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "2",
+      "size": 18,
+      "box": [
+        475.05,
+        121.0,
+        484.95,
+        146.76
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Unresolved Interpretation",
+      "size": 24,
+      "box": [
+        508,
+        119.0,
+        788.75,
+        153.34
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "3",
+      "size": 18,
+      "box": [
+        870.05,
+        121.0,
+        879.95,
+        146.76
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Extra Output Column",
+      "size": 24,
+      "box": [
+        903,
+        119.0,
+        1142.04,
+        153.34
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Fund manager nationality",
+      "size": 23,
+      "box": [
+        75,
+        202.0,
+        344.95,
+        234.91
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Person name / fund name",
+      "size": 22,
+      "box": [
+        90,
+        271.0,
+        355.85,
+        302.48
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Used as a proxy for nationality",
+      "size": 19,
+      "box": [
+        84,
+        339.0,
+        328.47,
+        366.8
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Nationality + correct join",
+      "size": 22,
+      "box": [
+        90,
+        440.0,
+        350.22,
+        471.48
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Verify the field and the join.",
+      "size": 20,
+      "box": [
+        75,
+        520.0,
+        311.58,
+        549.26
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "“Fund abbreviation”",
+      "size": 23,
+      "box": [
+        470,
+        202.0,
+        683.92,
+        234.91
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "SecuAbbr",
+      "size": 22,
+      "box": [
+        485,
+        283.0,
+        581.78,
+        314.48
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "or",
+      "size": 22,
+      "box": [
+        625.74,
+        349.0,
+        644.26,
+        381.19
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "ChiNameAbbr",
+      "size": 22,
+      "box": [
+        485,
+        409.0,
+        626.77,
+        440.48
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Interpretation needs adjudication.",
+      "size": 20,
+      "box": [
+        470,
+        500.0,
+        750.66,
+        529.26
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Correct names; extra ID",
+      "size": 23,
+      "box": [
+        865,
+        202.0,
+        1121.01,
+        234.91
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Procedure name",
+      "size": 20,
+      "box": [
+        880,
+        280.0,
+        1029.22,
+        308.62
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "ID",
+      "size": 20,
+      "box": [
+        1083,
+        280.0,
+        1105.5,
+        308.62
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Strict relation: no match",
+      "size": 20,
+      "box": [
+        865,
+        468.0,
+        1091.7,
+        496.62
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Keep the original score.",
+      "size": 20,
+      "box": [
+        865,
+        509.0,
+        1062.36,
+        538.26
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Correctness requires clear requirements and evidence tied to the right sources.",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        909.3,
+        624.91
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Tasks 380 / 371 / 44; development analysis, no independent semantic adjudication. Gold references are not revised to fit model outputs.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        867.62,
+        673.48
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Verification and Handoff Layer Implemented",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        739.99,
+        63.08
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "RepGuard · Progress Update",
+      "size": 13,
+      "box": [
+        550.87,
+        696.0,
+        729.13,
+        714.6
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "10 Nov 2026",
+      "size": 13,
+      "box": [
+        935.13,
+        696.0,
+        1011.54,
+        714.6
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "6 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Host-Managed Constraints + Source Catalog",
+      "size": 27,
+      "box": [
+        75,
+        110.0,
+        638.19,
+        148.64
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Verification layer implemented; the diagram shows its integration flow with agents.",
+      "size": 21,
+      "box": [
+        75,
+        153.0,
+        805.42,
+        183.72
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "SQL Generator",
+      "size": 22,
+      "box": [
+        90,
+        225.0,
+        241.62,
+        256.48
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Actual draft",
+      "size": 19,
+      "box": [
+        90,
+        265.0,
+        185.93,
+        292.8
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Verification Layer",
+      "size": 22,
+      "box": [
+        390,
+        225.0,
+        568.31,
+        256.48
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Query + source",
+      "size": 19,
+      "box": [
+        390,
+        265.0,
+        514.91,
+        292.8
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Reviewer Agent",
+      "size": 22,
+      "box": [
+        690,
+        225.0,
+        849.15,
+        256.48
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Receives evidence",
+      "size": 19,
+      "box": [
+        690,
+        265.0,
+        829.61,
+        292.8
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Re-execution",
+      "size": 22,
+      "box": [
+        990,
+        225.0,
+        1120.33,
+        256.48
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Output artifact",
+      "size": 19,
+      "box": [
+        990,
+        265.0,
+        1110.78,
+        292.8
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Met",
+      "size": 19,
+      "box": [
+        448.52,
+        354.0,
+        484.48,
+        381.19
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Violated",
+      "size": 19,
+      "box": [
+        613.44,
+        354.0,
+        685.56,
+        381.19
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Unresolved",
+      "size": 19,
+      "box": [
+        784.92,
+        354.0,
+        880.08,
+        381.19
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "29",
+      "size": 42,
+      "box": [
+        75,
+        461.0,
+        121.2,
+        521.1
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "New tests",
+      "size": 23,
+      "box": [
+        75,
+        521.0,
+        169.3,
+        554.65
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "87",
+      "size": 42,
+      "box": [
+        470,
+        461.0,
+        516.2,
+        521.1
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Scoped tests passed",
+      "size": 23,
+      "box": [
+        470,
+        521.0,
+        660.92,
+        554.65
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "20/20",
+      "size": 42,
+      "box": [
+        865,
+        461.0,
+        980.5,
+        521.1
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Byte-identical SQL replays",
+      "size": 23,
+      "box": [
+        865,
+        521.0,
+        1120.62,
+        554.65
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Reproducible component implemented; error-correction gains need a separate experiment.",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        1029.5,
+        624.91
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "V5 supports a SQL subset; development contracts need independent review. Reproducing 20/20 outputs does not mean 20/20 correct answers.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        904.75,
+        673.48
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Evaluation Setup for New Databases",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        615.22,
+        63.08
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "RepGuard · Progress Update",
+      "size": 13,
+      "box": [
+        550.87,
+        696.0,
+        729.13,
+        714.6
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "10 Nov 2026",
+      "size": 13,
+      "box": [
+        935.13,
+        696.0,
+        1011.54,
+        714.6
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "7 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "204 tasks · 12 databases",
+      "size": 34,
+      "box": [
+        75,
+        111.0,
+        477.36,
+        159.65
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Pinned SpecBridge revision · split by database",
+      "size": 21,
+      "box": [
+        75,
+        163.0,
+        491.35,
+        193.72
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "45",
+      "size": 28,
+      "box": [
+        184.23,
+        237.0,
+        215.03,
+        277.07
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "67",
+      "size": 28,
+      "box": [
+        494.43,
+        237.0,
+        525.23,
+        277.07
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "92",
+      "size": 28,
+      "box": [
+        934.8,
+        237.0,
+        965.6,
+        277.07
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Development",
+      "size": 23,
+      "box": [
+        75,
+        306.0,
+        213.6,
+        338.91
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "45 tasks · opened",
+      "size": 21,
+      "box": [
+        75,
+        344.0,
+        239.07,
+        374.72
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Validation",
+      "size": 23,
+      "box": [
+        415,
+        306.0,
+        521.42,
+        338.91
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "67 tasks · not yet evaluated",
+      "size": 21,
+      "box": [
+        415,
+        344.0,
+        669.71,
+        374.72
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Reserved",
+      "size": 23,
+      "box": [
+        795,
+        306.0,
+        889.09,
+        338.91
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "92 tasks · not yet evaluated",
+      "size": 21,
+      "box": [
+        795,
+        344.0,
+        1049.71,
+        374.72
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "90/90",
+      "size": 42,
+      "box": [
+        75,
+        425.0,
+        190.5,
+        485.1
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Reference SQL queries passed grader qualification",
+      "size": 25,
+      "box": [
+        280,
+        431.0,
+        853.72,
+        466.77
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Controls rejected: wrong interpretation / extra row / missing output.",
+      "size": 20,
+      "box": [
+        280,
+        476.0,
+        858.92,
+        505.26
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Pin grader and engine: 1 task’s score changed between SQLite 3.42 and 3.51.",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        902.51,
+        624.91
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Qualification checks the grader. 74/90 reference queries contain CTEs or multiple query scopes, not fully covered by the current V5 checker.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        889.99,
+        673.48
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Latest SQL Pilot: Self-Review Scored Higher",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        744.55,
+        63.08
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "RepGuard · Progress Update",
+      "size": 13,
+      "box": [
+        550.87,
+        696.0,
+        729.13,
+        714.6
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "10 Nov 2026",
+      "size": 13,
+      "box": [
+        935.13,
+        696.0,
+        1011.54,
+        714.6
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "8 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "12 tasks × 2 specified interpretations = 24 cases",
+      "size": 27,
+      "box": [
+        75,
+        107.0,
+        686.39,
+        145.64
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "3 development databases · 144 model responses · audit PASS",
+      "size": 21,
+      "box": [
+        75,
+        151.0,
+        637.36,
+        181.72
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Cross-model review − self-review: −6.25 percentage points, averaged across both directions.",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        1057.86,
+        624.91
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Development only; no held-out confirmation or V5 checker test. A=Qwen; B=Gemma. Variants depend on 12 tasks; same call cap is not equal cost.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        937.83,
+        673.48
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Research Question for Further Validation",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        685.43,
+        63.08
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "RepGuard · Progress Update",
+      "size": 13,
+      "box": [
+        550.87,
+        696.0,
+        729.13,
+        714.6
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "10 Nov 2026",
+      "size": 13,
+      "box": [
+        935.13,
+        696.0,
+        1011.54,
+        714.6
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "9 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Do verified handoffs improve correction accuracy",
+      "size": 29,
+      "box": [
+        82,
+        128.0,
+        733.19,
+        169.5
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "with the same sources, tools and budget?",
+      "size": 29,
+      "box": [
+        82,
+        169.0,
+        635.81,
+        210.5
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Existing Foundations",
+      "size": 27,
+      "box": [
+        80,
+        259.0,
+        337.04,
+        297.64
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "• Source-traceable error bank",
+      "size": 23,
+      "box": [
+        80,
+        311.0,
+        370.72,
+        344.65
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "• Verifier + reproducible execution logs",
+      "size": 23,
+      "box": [
+        80,
+        352.4,
+        467.67,
+        386.05
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Isolating the Added Benefit",
+      "size": 27,
+      "box": [
+        658,
+        259.0,
+        1000.12,
+        297.64
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "• Self-review / neutral recheck",
+      "size": 23,
+      "box": [
+        658,
+        311.0,
+        959.9,
+        344.65
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "• Correct / shuffled diagnostic feedback",
+      "size": 23,
+      "box": [
+        658,
+        352.4,
+        1050.54,
+        386.05
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "• Same checker; new-source validation",
+      "size": 23,
+      "box": [
+        658,
+        393.8,
+        1035.87,
+        427.45
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Measure",
+      "size": 23,
+      "box": [
+        80,
+        503.0,
+        169.24,
+        535.91
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Correct completion · rescues/harms · false stops · coverage · total cost",
+      "size": 23,
+      "box": [
+        270,
+        503.0,
+        997.24,
+        536.65
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Target contributions: adjudicated error bank + tooling + controlled evidence.",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        902.42,
+        624.91
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Contracts/handoffs have close prior work. Novelty not established; strong baselines, independent adjudication and user evaluation remain missing.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        920.62,
+        673.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Next Steps and Task Allocation",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        535.84,
+        63.08
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "RepGuard · Progress Update",
+      "size": 13,
+      "box": [
+        550.87,
+        696.0,
+        729.13,
+        714.6
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "10 Nov 2026",
+      "size": 13,
+      "box": [
+        935.13,
+        696.0,
+        1011.54,
+        714.6
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "10 / 10",
+      "size": 13,
+      "box": [
+        1209.71,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Proposed task allocation · priorities depend on readiness",
+      "size": 23,
+      "box": [
+        75,
+        108.0,
+        626.89,
+        141.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Tín",
+      "size": 30,
+      "box": [
+        95,
+        169.0,
+        141.5,
+        211.93
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Trung",
+      "size": 30,
+      "box": [
+        690,
+        169.0,
+        773.31,
+        211.93
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "01",
+      "size": 22,
+      "box": [
+        85,
+        244.0,
+        109.2,
+        275.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Measure / extend SQL coverage",
+      "size": 23,
+      "box": [
+        133,
+        244.0,
+        443.78,
+        277.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "02",
+      "size": 22,
+      "box": [
+        85,
+        312.0,
+        109.2,
+        343.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Strong baselines + same tools/checker",
+      "size": 23,
+      "box": [
+        133,
+        312.0,
+        506.57,
+        345.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "03",
+      "size": 22,
+      "box": [
+        85,
+        380.0,
+        109.2,
+        411.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Harness + token / timing logs",
+      "size": 23,
+      "box": [
+        133,
+        380.0,
+        427.03,
+        413.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "01",
+      "size": 22,
+      "box": [
+        680,
+        244.0,
+        704.2,
+        275.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Source-only review + rubric",
+      "size": 23,
+      "box": [
+        728,
+        244.0,
+        995.81,
+        277.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "02",
+      "size": 22,
+      "box": [
+        680,
+        312.0,
+        704.2,
+        343.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Compare contributions with prior work",
+      "size": 23,
+      "box": [
+        728,
+        312.0,
+        1101.52,
+        345.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "03",
+      "size": 22,
+      "box": [
+        680,
+        380.0,
+        704.2,
+        411.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Find workflow + recruit pilot users",
+      "size": 23,
+      "box": [
+        728,
+        380.0,
+        1064.74,
+        413.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Deliverables: coverage + reproducible baselines",
+      "size": 20,
+      "box": [
+        85,
+        468.0,
+        518.98,
+        496.62
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Deliverables: review forms + pilot workflow",
+      "size": 20,
+      "box": [
+        680,
+        468.0,
+        1080.46,
+        496.62
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Joint Work",
+      "size": 22,
+      "box": [
+        75,
+        548.0,
+        188.28,
+        579.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Peer review → freeze protocol → test mechanism → held-out sources",
+      "size": 23,
+      "box": [
+        300,
+        548.0,
+        972.36,
+        581.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Next: clear evaluation requirements and strong controls before scaling up.",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        860.24,
+        624.91
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "No user participants yet. Held-out-source evaluation follows mechanism freeze and readiness checks.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        652.26,
+        673.48
+      ]
+    }
+  ],
+  "checks": {
+    "text_within_canvas": "PASS",
+    "glyph_coverage": "PASS",
+    "footer_separation": "PASS",
+    "Vietnamese_words_except_names": "NONE"
+  },
+  "original_Vietnamese_images_modified": false
+}

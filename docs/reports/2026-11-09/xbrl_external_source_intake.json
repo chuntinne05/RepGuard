@@ -1,0 +1,35 @@
+{
+  "repo": "bethelhall/XBRLFiling",
+  "revision": "1c1d5b8ff198942e7197c5b0beb9df959c3ecedc",
+  "scope": "Metadata/card/license only. No task file, gold outcomes or model predictions downloaded. Counts below are dataset-card claims, not independently audited task counts.",
+  "license_card": "cc-by-nc-4.0",
+  "reported_questions": 600,
+  "reported_companies": 28,
+  "reported_filings": 86,
+  "provided_evidence_only": true,
+  "raw_xbrl_and_retrieval_corpus_in_release": false,
+  "reported_caveat": "29 rows have nonzero stored operand residual; max USD2million; original tolerance=max(USD1million,0.5%parent), not exact equality.",
+  "files": [
+    {
+      "path": "LICENSE.md",
+      "bytes": 19729,
+      "sha256": "a7cffb26a7f006d9cb99e0bf1bd859116ebe75e5474c947c94a653afe6f7a643"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 1523,
+      "sha256": "d47742734434f4b61ee6762ca0b613650f72ca135df660fbf9dbf21bf54e455f"
+    },
+    {
+      "path": "metadata/manifest.json",
+      "bytes": 1306,
+      "sha256": "2faa904150bda02c6d5fdbaa8bc7cfdf1c73fae537eabe44d302c0141e97d5d2"
+    },
+    {
+      "path": "metadata/filings.jsonl",
+      "bytes": 24422,
+      "sha256": "7bc5416ea227d60fbc581c151cc80ad2dc81b03262939506d83ddad4107652e2"
+    }
+  ],
+  "next_gate": "Inspect/recompute source oracle and group split before any external inference; compact release alone cannot reproduce full VeriFin fact-binding/retrieval pipeline."
+}

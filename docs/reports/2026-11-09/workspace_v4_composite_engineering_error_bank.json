@@ -1,0 +1,1829 @@
+{
+  "created_utc": "2026-11-09T14:35:12.820032+00:00",
+  "scope": "Composite engineering diagnostic: interrupted first2 + numeric-binding-amended remaining4. NOT completion of original six-task plan, official-original benchmark score or confirmation.",
+  "blocks": [
+    {
+      "plan_id": "6a325835a376d02f1440fadf",
+      "tasks": [
+        "task_269",
+        "task_391"
+      ],
+      "study_complete": false,
+      "actual_corpus_model_calls": 42
+    },
+    {
+      "plan_id": "3af22795afdac39d725c3351",
+      "tasks": [
+        "task_380",
+        "task_371",
+        "task_44",
+        "task_35"
+      ],
+      "study_complete": true,
+      "actual_corpus_model_calls": 71
+    }
+  ],
+  "input_amended_tasks": [
+    "task_391"
+  ],
+  "actual_corpus_model_calls": 113,
+  "actual_input_tokens": 892602,
+  "actual_output_tokens": 29769,
+  "length_stops": 10,
+  "observable_counts": {
+    "no_final_artifact": 13,
+    "reference_relation_match": 9,
+    "final_relation_mismatch": 14
+  },
+  "tool_or_schema_errors": 13,
+  "workflows": {
+    "A": {
+      "reference_relation_matches": 1,
+      "tasks": 6,
+      "policy_cost_including_parent": {
+        "model_calls": 34,
+        "input_tokens": 108837,
+        "output_tokens": 3311,
+        "terminal_serving_seconds": 253.85785728099998
+      }
+    },
+    "B": {
+      "reference_relation_matches": 1,
+      "tasks": 6,
+      "policy_cost_including_parent": {
+        "model_calls": 33,
+        "input_tokens": 126113,
+        "output_tokens": 13481,
+        "terminal_serving_seconds": 364.70399894799993
+      }
+    },
+    "AA": {
+      "reference_relation_matches": 2,
+      "tasks": 6,
+      "policy_cost_including_parent": {
+        "model_calls": 43,
+        "input_tokens": 207743,
+        "output_tokens": 4480,
+        "terminal_serving_seconds": 313.95113279699996
+      }
+    },
+    "BB": {
+      "reference_relation_matches": 1,
+      "tasks": 6,
+      "policy_cost_including_parent": {
+        "model_calls": 46,
+        "input_tokens": 352993,
+        "output_tokens": 19575,
+        "terminal_serving_seconds": 433.165415397
+      }
+    },
+    "AB": {
+      "reference_relation_matches": 2,
+      "tasks": 6,
+      "policy_cost_including_parent": {
+        "model_calls": 43,
+        "input_tokens": 211369,
+        "output_tokens": 4217,
+        "terminal_serving_seconds": 270.550044229
+      }
+    },
+    "BA": {
+      "reference_relation_matches": 2,
+      "tasks": 6,
+      "policy_cost_including_parent": {
+        "model_calls": 48,
+        "input_tokens": 355447,
+        "output_tokens": 18289,
+        "terminal_serving_seconds": 533.714888067
+      }
+    }
+  },
+  "tasks": [
+    {
+      "task_id": "task_269",
+      "workflow": "A",
+      "input_amended": false,
+      "state": "call_cap",
+      "official_relation_result": {
+        "task_id": "task_269",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 3,
+        "prediction_column_count": 0,
+        "gold_row_count": 2,
+        "prediction_row_count": 0,
+        "column_mapping": null,
+        "error_code": "missing_prediction",
+        "error": "Missing prediction CSV: results/workspace_v4/runs/6a325835a376d02f1440fadf/trajectories/task_269/A/prediction.csv"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": null,
+      "policy_cost_including_parent": {
+        "model_calls": 8,
+        "input_tokens": 23122,
+        "output_tokens": 272,
+        "terminal_serving_seconds": 91.15727748799999
+      },
+      "terminal_new_calls": 8,
+      "plan_id": "6a325835a376d02f1440fadf",
+      "adapter_block": "interrupted_prefix_original_binding",
+      "observable_category": "no_final_artifact",
+      "trajectory_sha256": "44a1ce54bc0913c7b079f1f4c31ad023bd6d6697a10bc19b520e109e3e2abe9a",
+      "tool_counts": {
+        "schema": 3,
+        "query": 5
+      },
+      "zero_row_queries": 3,
+      "successful_artifacts_created_or_reused": 5,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_269",
+      "workflow": "B",
+      "input_amended": false,
+      "state": "call_cap",
+      "official_relation_result": {
+        "task_id": "task_269",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 3,
+        "prediction_column_count": 0,
+        "gold_row_count": 2,
+        "prediction_row_count": 0,
+        "column_mapping": null,
+        "error_code": "missing_prediction",
+        "error": "Missing prediction CSV: results/workspace_v4/runs/6a325835a376d02f1440fadf/trajectories/task_269/B/prediction.csv"
+      },
+      "tool_or_schema_errors": 2,
+      "final_origin": null,
+      "policy_cost_including_parent": {
+        "model_calls": 8,
+        "input_tokens": 20306,
+        "output_tokens": 298,
+        "terminal_serving_seconds": 135.172513896
+      },
+      "terminal_new_calls": 8,
+      "plan_id": "6a325835a376d02f1440fadf",
+      "adapter_block": "interrupted_prefix_original_binding",
+      "observable_category": "no_final_artifact",
+      "trajectory_sha256": "90e9d1d6fbb0be8fabf30ab3c1283cf36a455f1ae4e2f9d436a0a71f90ae8e61",
+      "tool_counts": {
+        "invalid_action": 2,
+        "schema": 1,
+        "query": 5
+      },
+      "zero_row_queries": 3,
+      "successful_artifacts_created_or_reused": 5,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [
+        {
+          "tool_or_schema_error": "OperationalError:no such column: code"
+        },
+        {
+          "tool_or_schema_error": "DatabaseError:access to sqlite_master.name is prohibited"
+        }
+      ],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_269",
+      "workflow": "AA",
+      "input_amended": false,
+      "state": "call_cap",
+      "official_relation_result": {
+        "task_id": "task_269",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 3,
+        "prediction_column_count": 0,
+        "gold_row_count": 2,
+        "prediction_row_count": 0,
+        "column_mapping": null,
+        "error_code": "missing_prediction",
+        "error": "Missing prediction CSV: results/workspace_v4/runs/6a325835a376d02f1440fadf/trajectories/task_269/AA/prediction.csv"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": null,
+      "policy_cost_including_parent": {
+        "model_calls": 12,
+        "input_tokens": 64909,
+        "output_tokens": 426,
+        "terminal_serving_seconds": 100.01933512599999
+      },
+      "terminal_new_calls": 4,
+      "plan_id": "6a325835a376d02f1440fadf",
+      "adapter_block": "interrupted_prefix_original_binding",
+      "observable_category": "no_final_artifact",
+      "trajectory_sha256": "deef313f7c81d407e79d842009bf152360b520328f200cea4da996cc1792dbf2",
+      "tool_counts": {
+        "query": 3,
+        "schema": 1
+      },
+      "zero_row_queries": 2,
+      "successful_artifacts_created_or_reused": 8,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_269",
+      "workflow": "BB",
+      "input_amended": false,
+      "state": "call_cap",
+      "official_relation_result": {
+        "task_id": "task_269",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 3,
+        "prediction_column_count": 0,
+        "gold_row_count": 2,
+        "prediction_row_count": 0,
+        "column_mapping": null,
+        "error_code": "missing_prediction",
+        "error": "Missing prediction CSV: results/workspace_v4/runs/6a325835a376d02f1440fadf/trajectories/task_269/BB/prediction.csv"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": null,
+      "policy_cost_including_parent": {
+        "model_calls": 12,
+        "input_tokens": 63928,
+        "output_tokens": 531,
+        "terminal_serving_seconds": 138.896123452
+      },
+      "terminal_new_calls": 4,
+      "plan_id": "6a325835a376d02f1440fadf",
+      "adapter_block": "interrupted_prefix_original_binding",
+      "observable_category": "no_final_artifact",
+      "trajectory_sha256": "b7914abce2e8b378cc7cc3342026c75ac3eecb51556736a4180e1dd5974090de",
+      "tool_counts": {
+        "query": 4
+      },
+      "zero_row_queries": 2,
+      "successful_artifacts_created_or_reused": 8,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_269",
+      "workflow": "AB",
+      "input_amended": false,
+      "state": "call_cap",
+      "official_relation_result": {
+        "task_id": "task_269",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 3,
+        "prediction_column_count": 0,
+        "gold_row_count": 2,
+        "prediction_row_count": 0,
+        "column_mapping": null,
+        "error_code": "missing_prediction",
+        "error": "Missing prediction CSV: results/workspace_v4/runs/6a325835a376d02f1440fadf/trajectories/task_269/AB/prediction.csv"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": null,
+      "policy_cost_including_parent": {
+        "model_calls": 12,
+        "input_tokens": 64707,
+        "output_tokens": 409,
+        "terminal_serving_seconds": 94.03925473999999
+      },
+      "terminal_new_calls": 4,
+      "plan_id": "6a325835a376d02f1440fadf",
+      "adapter_block": "interrupted_prefix_original_binding",
+      "observable_category": "no_final_artifact",
+      "trajectory_sha256": "e8abe71e6f60ba12bb5a7c8a06d6bc002fb61139af5833d3938fed51dc85f35e",
+      "tool_counts": {
+        "search": 4
+      },
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 5,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_269",
+      "workflow": "BA",
+      "input_amended": false,
+      "state": "call_cap",
+      "official_relation_result": {
+        "task_id": "task_269",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 3,
+        "prediction_column_count": 0,
+        "gold_row_count": 2,
+        "prediction_row_count": 0,
+        "column_mapping": null,
+        "error_code": "missing_prediction",
+        "error": "Missing prediction CSV: results/workspace_v4/runs/6a325835a376d02f1440fadf/trajectories/task_269/BA/prediction.csv"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": null,
+      "policy_cost_including_parent": {
+        "model_calls": 12,
+        "input_tokens": 61919,
+        "output_tokens": 417,
+        "terminal_serving_seconds": 143.016580939
+      },
+      "terminal_new_calls": 4,
+      "plan_id": "6a325835a376d02f1440fadf",
+      "adapter_block": "interrupted_prefix_original_binding",
+      "observable_category": "no_final_artifact",
+      "trajectory_sha256": "a44fbd20cfd7e605ab07cc2432ff5b0ca9be376ff2aef46652784876949462a2",
+      "tool_counts": {
+        "query": 3,
+        "schema": 1
+      },
+      "zero_row_queries": 1,
+      "successful_artifacts_created_or_reused": 8,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_391",
+      "workflow": "A",
+      "input_amended": true,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_391",
+        "passed": true,
+        "score": 1,
+        "order_sensitive": false,
+        "gold_column_count": 5,
+        "prediction_column_count": 5,
+        "gold_row_count": 1,
+        "prediction_row_count": 1,
+        "column_mapping": [
+          {
+            "gold_index": 0,
+            "prediction_index": 0
+          },
+          {
+            "gold_index": 1,
+            "prediction_index": 1
+          },
+          {
+            "gold_index": 2,
+            "prediction_index": 4
+          },
+          {
+            "gold_index": 3,
+            "prediction_index": 2
+          },
+          {
+            "gold_index": 4,
+            "prediction_index": 3
+          }
+        ],
+        "error_code": null,
+        "error": null
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 3,
+        "input_tokens": 4428,
+        "output_tokens": 260,
+        "terminal_serving_seconds": 8.445533819
+      },
+      "terminal_new_calls": 3,
+      "plan_id": "6a325835a376d02f1440fadf",
+      "adapter_block": "interrupted_prefix_original_binding",
+      "observable_category": "reference_relation_match",
+      "trajectory_sha256": "7a23d70569b5c716a0304932489be2006ccc60f5f8d0816db20d34084db5be23",
+      "tool_counts": {
+        "schema": 1,
+        "query": 1
+      },
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_391",
+      "workflow": "B",
+      "input_amended": true,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_391",
+        "passed": true,
+        "score": 1,
+        "order_sensitive": false,
+        "gold_column_count": 5,
+        "prediction_column_count": 5,
+        "gold_row_count": 1,
+        "prediction_row_count": 1,
+        "column_mapping": [
+          {
+            "gold_index": 0,
+            "prediction_index": 0
+          },
+          {
+            "gold_index": 1,
+            "prediction_index": 1
+          },
+          {
+            "gold_index": 2,
+            "prediction_index": 2
+          },
+          {
+            "gold_index": 3,
+            "prediction_index": 3
+          },
+          {
+            "gold_index": 4,
+            "prediction_index": 4
+          }
+        ],
+        "error_code": null,
+        "error": null
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 3,
+        "input_tokens": 4871,
+        "output_tokens": 238,
+        "terminal_serving_seconds": 2.457430422
+      },
+      "terminal_new_calls": 3,
+      "plan_id": "6a325835a376d02f1440fadf",
+      "adapter_block": "interrupted_prefix_original_binding",
+      "observable_category": "reference_relation_match",
+      "trajectory_sha256": "258b134402c8a00eb4b33ddaf1355fb7294cfe253b077fcbb62bfd942f97b531",
+      "tool_counts": {
+        "schema": 1,
+        "query": 1
+      },
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_391",
+      "workflow": "AA",
+      "input_amended": true,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_391",
+        "passed": true,
+        "score": 1,
+        "order_sensitive": false,
+        "gold_column_count": 5,
+        "prediction_column_count": 5,
+        "gold_row_count": 1,
+        "prediction_row_count": 1,
+        "column_mapping": [
+          {
+            "gold_index": 0,
+            "prediction_index": 0
+          },
+          {
+            "gold_index": 1,
+            "prediction_index": 1
+          },
+          {
+            "gold_index": 2,
+            "prediction_index": 4
+          },
+          {
+            "gold_index": 3,
+            "prediction_index": 2
+          },
+          {
+            "gold_index": 4,
+            "prediction_index": 3
+          }
+        ],
+        "error_code": null,
+        "error": null
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 4,
+        "input_tokens": 9276,
+        "output_tokens": 440,
+        "terminal_serving_seconds": 15.285735647
+      },
+      "terminal_new_calls": 1,
+      "plan_id": "6a325835a376d02f1440fadf",
+      "adapter_block": "interrupted_prefix_original_binding",
+      "observable_category": "reference_relation_match",
+      "trajectory_sha256": "d7c0519353b21fe659293b0358e62ca9ca7a8fff5fc1185cc10ad34edcc77844",
+      "tool_counts": {},
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": true,
+      "review_without_new_tool_observations": true,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_391",
+      "workflow": "BB",
+      "input_amended": true,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_391",
+        "passed": true,
+        "score": 1,
+        "order_sensitive": false,
+        "gold_column_count": 5,
+        "prediction_column_count": 5,
+        "gold_row_count": 1,
+        "prediction_row_count": 1,
+        "column_mapping": [
+          {
+            "gold_index": 0,
+            "prediction_index": 0
+          },
+          {
+            "gold_index": 1,
+            "prediction_index": 1
+          },
+          {
+            "gold_index": 2,
+            "prediction_index": 2
+          },
+          {
+            "gold_index": 3,
+            "prediction_index": 3
+          },
+          {
+            "gold_index": 4,
+            "prediction_index": 4
+          }
+        ],
+        "error_code": null,
+        "error": null
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 4,
+        "input_tokens": 10099,
+        "output_tokens": 387,
+        "terminal_serving_seconds": 4.072133459
+      },
+      "terminal_new_calls": 1,
+      "plan_id": "6a325835a376d02f1440fadf",
+      "adapter_block": "interrupted_prefix_original_binding",
+      "observable_category": "reference_relation_match",
+      "trajectory_sha256": "e9e99bd187ee0944de5b13c9a9797cf3f02cda446946440028586de1ea6f2298",
+      "tool_counts": {},
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": true,
+      "review_without_new_tool_observations": true,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_391",
+      "workflow": "AB",
+      "input_amended": true,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_391",
+        "passed": true,
+        "score": 1,
+        "order_sensitive": false,
+        "gold_column_count": 5,
+        "prediction_column_count": 5,
+        "gold_row_count": 1,
+        "prediction_row_count": 1,
+        "column_mapping": [
+          {
+            "gold_index": 0,
+            "prediction_index": 0
+          },
+          {
+            "gold_index": 1,
+            "prediction_index": 1
+          },
+          {
+            "gold_index": 2,
+            "prediction_index": 4
+          },
+          {
+            "gold_index": 3,
+            "prediction_index": 2
+          },
+          {
+            "gold_index": 4,
+            "prediction_index": 3
+          }
+        ],
+        "error_code": null,
+        "error": null
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 4,
+        "input_tokens": 9779,
+        "output_tokens": 427,
+        "terminal_serving_seconds": 10.372917721
+      },
+      "terminal_new_calls": 1,
+      "plan_id": "6a325835a376d02f1440fadf",
+      "adapter_block": "interrupted_prefix_original_binding",
+      "observable_category": "reference_relation_match",
+      "trajectory_sha256": "0ce809242297239c75b4585d9392af4ac9633c1b5b387be4bc666da7f1240ffa",
+      "tool_counts": {},
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": true,
+      "review_without_new_tool_observations": true,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_391",
+      "workflow": "BA",
+      "input_amended": true,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_391",
+        "passed": true,
+        "score": 1,
+        "order_sensitive": false,
+        "gold_column_count": 5,
+        "prediction_column_count": 5,
+        "gold_row_count": 1,
+        "prediction_row_count": 1,
+        "column_mapping": [
+          {
+            "gold_index": 0,
+            "prediction_index": 0
+          },
+          {
+            "gold_index": 1,
+            "prediction_index": 1
+          },
+          {
+            "gold_index": 2,
+            "prediction_index": 2
+          },
+          {
+            "gold_index": 3,
+            "prediction_index": 3
+          },
+          {
+            "gold_index": 4,
+            "prediction_index": 4
+          }
+        ],
+        "error_code": null,
+        "error": null
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 4,
+        "input_tokens": 9612,
+        "output_tokens": 386,
+        "terminal_serving_seconds": 8.348158176
+      },
+      "terminal_new_calls": 1,
+      "plan_id": "6a325835a376d02f1440fadf",
+      "adapter_block": "interrupted_prefix_original_binding",
+      "observable_category": "reference_relation_match",
+      "trajectory_sha256": "a1cb60cf7718ef6178f1aa1033568736febaffa9dd5272a50810a396f50e70da",
+      "tool_counts": {},
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": true,
+      "review_without_new_tool_observations": true,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_380",
+      "workflow": "A",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_380",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 1,
+        "prediction_column_count": 1,
+        "gold_row_count": 1,
+        "prediction_row_count": 187,
+        "column_mapping": null,
+        "error_code": "row_count_mismatch",
+        "error": "Expected 1 data rows; received 187"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 4,
+        "input_tokens": 13178,
+        "output_tokens": 1738,
+        "terminal_serving_seconds": 115.537509253
+      },
+      "terminal_new_calls": 4,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "final_relation_mismatch",
+      "trajectory_sha256": "f8c2bb631a6a17ef559c4876f23f2ee6a2df0942204c6864c83e2e41ad5ebe3a",
+      "tool_counts": {
+        "schema": 1,
+        "query": 2
+      },
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 2,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_380",
+      "workflow": "B",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_380",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 1,
+        "prediction_column_count": 1,
+        "gold_row_count": 1,
+        "prediction_row_count": 1643,
+        "column_mapping": null,
+        "error_code": "row_count_mismatch",
+        "error": "Expected 1 data rows; received 1643"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 3,
+        "input_tokens": 5507,
+        "output_tokens": 137,
+        "terminal_serving_seconds": 121.017656838
+      },
+      "terminal_new_calls": 3,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "final_relation_mismatch",
+      "trajectory_sha256": "61526ed26aa455a1c6be5453d6248c3b5143a796e50f7db7c6bc07eaefe8c99e",
+      "tool_counts": {
+        "schema": 1,
+        "query": 1
+      },
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_380",
+      "workflow": "AA",
+      "input_amended": false,
+      "state": "abstained",
+      "official_relation_result": {
+        "task_id": "task_380",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 1,
+        "prediction_column_count": 0,
+        "gold_row_count": 1,
+        "prediction_row_count": 0,
+        "column_mapping": null,
+        "error_code": "missing_prediction",
+        "error": "Missing prediction CSV: results/workspace_v4/runs/3af22795afdac39d725c3351/trajectories/task_380/AA/prediction.csv"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": null,
+      "policy_cost_including_parent": {
+        "model_calls": 5,
+        "input_tokens": 26054,
+        "output_tokens": 2045,
+        "terminal_serving_seconds": 129.258516389
+      },
+      "terminal_new_calls": 1,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "no_final_artifact",
+      "trajectory_sha256": "0bc50e91cf53dfb911a23cdf63130bf8acd3670ebbf71fe476dff9a184d61ee8",
+      "tool_counts": {},
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 2,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": true,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_380",
+      "workflow": "BB",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_380",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 1,
+        "prediction_column_count": 1,
+        "gold_row_count": 1,
+        "prediction_row_count": 1643,
+        "column_mapping": null,
+        "error_code": "row_count_mismatch",
+        "error": "Expected 1 data rows; received 1643"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 4,
+        "input_tokens": 10712,
+        "output_tokens": 206,
+        "terminal_serving_seconds": 121.98984537499999
+      },
+      "terminal_new_calls": 1,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "final_relation_mismatch",
+      "trajectory_sha256": "8633995656d0d33b9d40e1529d8ca71c49fe94089cc0f4dcb2ce58bd87cd4f13",
+      "tool_counts": {},
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": true,
+      "review_without_new_tool_observations": true,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_380",
+      "workflow": "AB",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_380",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 1,
+        "prediction_column_count": 1,
+        "gold_row_count": 1,
+        "prediction_row_count": 187,
+        "column_mapping": null,
+        "error_code": "row_count_mismatch",
+        "error": "Expected 1 data rows; received 187"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 5,
+        "input_tokens": 26683,
+        "output_tokens": 1851,
+        "terminal_serving_seconds": 117.980883209
+      },
+      "terminal_new_calls": 1,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "final_relation_mismatch",
+      "trajectory_sha256": "2a9e971b46ed979132b847f519cda2c6cdfbec5b558ae712f1e45b13de1e93d9",
+      "tool_counts": {},
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 2,
+      "final_retains_parent_bytes": true,
+      "review_without_new_tool_observations": true,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_380",
+      "workflow": "BA",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_380",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 1,
+        "prediction_column_count": 1,
+        "gold_row_count": 1,
+        "prediction_row_count": 80,
+        "column_mapping": null,
+        "error_code": "row_count_mismatch",
+        "error": "Expected 1 data rows; received 80"
+      },
+      "tool_or_schema_errors": 1,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 6,
+        "input_tokens": 28169,
+        "output_tokens": 3974,
+        "terminal_serving_seconds": 232.297010501
+      },
+      "terminal_new_calls": 3,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "final_relation_mismatch",
+      "trajectory_sha256": "b1d71a262b60c3947d35ce6ad6b8e0163ba752d6b984916258e7a561b3b29974",
+      "tool_counts": {
+        "invalid_action": 1,
+        "query": 1
+      },
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 2,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [
+        {
+          "tool_or_schema_error": "JSONDecodeError:Unterminated string starting at: line 1 column 31 (char 30)"
+        }
+      ],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_371",
+      "workflow": "A",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_371",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 2,
+        "prediction_column_count": 2,
+        "gold_row_count": 12962,
+        "prediction_row_count": 12962,
+        "column_mapping": null,
+        "error_code": "relation_mismatch",
+        "error": "Prediction does not equal the gold unordered row multiset"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 3,
+        "input_tokens": 5595,
+        "output_tokens": 159,
+        "terminal_serving_seconds": 6.01908124
+      },
+      "terminal_new_calls": 3,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "final_relation_mismatch",
+      "trajectory_sha256": "f2985f75915190e61e9e2f41d32a6b58e9a26097f433cfd267028d3fb21084ed",
+      "tool_counts": {
+        "schema": 1,
+        "query": 1
+      },
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_371",
+      "workflow": "B",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_371",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 2,
+        "prediction_column_count": 2,
+        "gold_row_count": 12962,
+        "prediction_row_count": 12962,
+        "column_mapping": null,
+        "error_code": "relation_mismatch",
+        "error": "Prediction does not equal the gold unordered row multiset"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 3,
+        "input_tokens": 5850,
+        "output_tokens": 169,
+        "terminal_serving_seconds": 2.032784781
+      },
+      "terminal_new_calls": 3,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "final_relation_mismatch",
+      "trajectory_sha256": "95414fef422673f05963b7b1575e48a2cf1735b46eed9ea9cb812629b904b04e",
+      "tool_counts": {
+        "schema": 1,
+        "query": 1
+      },
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_371",
+      "workflow": "AA",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_371",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 2,
+        "prediction_column_count": 2,
+        "gold_row_count": 12962,
+        "prediction_row_count": 12962,
+        "column_mapping": null,
+        "error_code": "relation_mismatch",
+        "error": "Prediction does not equal the gold unordered row multiset"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 4,
+        "input_tokens": 11572,
+        "output_tokens": 257,
+        "terminal_serving_seconds": 10.75887329
+      },
+      "terminal_new_calls": 1,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "final_relation_mismatch",
+      "trajectory_sha256": "54f87c056320a9c0ddfca2f3ebf9129dfb934f054949e4ddb5b70350e9e0ebcf",
+      "tool_counts": {},
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": true,
+      "review_without_new_tool_observations": true,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_371",
+      "workflow": "BB",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_371",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 2,
+        "prediction_column_count": 2,
+        "gold_row_count": 12962,
+        "prediction_row_count": 12962,
+        "column_mapping": null,
+        "error_code": "relation_mismatch",
+        "error": "Prediction does not equal the gold unordered row multiset"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 4,
+        "input_tokens": 11901,
+        "output_tokens": 286,
+        "terminal_serving_seconds": 3.66491689
+      },
+      "terminal_new_calls": 1,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "final_relation_mismatch",
+      "trajectory_sha256": "5dc3983a99f225c525cbf63fcf69f6fbcd72a39d12538208bbbed8daa2fbd63d",
+      "tool_counts": {},
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": true,
+      "review_without_new_tool_observations": true,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_371",
+      "workflow": "AB",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_371",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 2,
+        "prediction_column_count": 2,
+        "gold_row_count": 12962,
+        "prediction_row_count": 12962,
+        "column_mapping": null,
+        "error_code": "relation_mismatch",
+        "error": "Prediction does not equal the gold unordered row multiset"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 4,
+        "input_tokens": 11877,
+        "output_tokens": 257,
+        "terminal_serving_seconds": 7.5759387600000005
+      },
+      "terminal_new_calls": 1,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "final_relation_mismatch",
+      "trajectory_sha256": "eba88736804d5207a0c42df690c4ae9a7c666506f672fbe2fd1f4a28f9ded74e",
+      "tool_counts": {},
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": true,
+      "review_without_new_tool_observations": true,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_371",
+      "workflow": "BA",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_371",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": false,
+        "gold_column_count": 2,
+        "prediction_column_count": 2,
+        "gold_row_count": 12962,
+        "prediction_row_count": 12962,
+        "column_mapping": null,
+        "error_code": "relation_mismatch",
+        "error": "Prediction does not equal the gold unordered row multiset"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 4,
+        "input_tokens": 11604,
+        "output_tokens": 301,
+        "terminal_serving_seconds": 7.958757087
+      },
+      "terminal_new_calls": 1,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "final_relation_mismatch",
+      "trajectory_sha256": "28d1374749f054ca8af1911b1556619c27d3d7ea184ab95859c4bb7c187d9aa1",
+      "tool_counts": {},
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": true,
+      "review_without_new_tool_observations": true,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_44",
+      "workflow": "A",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_44",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": true,
+        "gold_column_count": 1,
+        "prediction_column_count": 2,
+        "gold_row_count": 4,
+        "prediction_row_count": 4,
+        "column_mapping": null,
+        "error_code": "column_count_mismatch",
+        "error": "Expected 1 columns; received 2"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 8,
+        "input_tokens": 14699,
+        "output_tokens": 470,
+        "terminal_serving_seconds": 15.313158187
+      },
+      "terminal_new_calls": 8,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "final_relation_mismatch",
+      "trajectory_sha256": "eace63b622e2ef0425a3f740d3e45df137424418fb7d083f88418773542826ff",
+      "tool_counts": {
+        "schema": 1,
+        "query": 5,
+        "search": 1
+      },
+      "zero_row_queries": 2,
+      "successful_artifacts_created_or_reused": 5,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_44",
+      "workflow": "B",
+      "input_amended": false,
+      "state": "call_cap",
+      "official_relation_result": {
+        "task_id": "task_44",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": true,
+        "gold_column_count": 1,
+        "prediction_column_count": 0,
+        "gold_row_count": 4,
+        "prediction_row_count": 0,
+        "column_mapping": null,
+        "error_code": "missing_prediction",
+        "error": "Missing prediction CSV: results/workspace_v4/runs/3af22795afdac39d725c3351/trajectories/task_44/B/prediction.csv"
+      },
+      "tool_or_schema_errors": 7,
+      "final_origin": null,
+      "policy_cost_including_parent": {
+        "model_calls": 8,
+        "input_tokens": 38767,
+        "output_tokens": 12339,
+        "terminal_serving_seconds": 99.583901398
+      },
+      "terminal_new_calls": 8,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "no_final_artifact",
+      "trajectory_sha256": "7d453d079001c2a9d7c37ea18db0f6bbbd071ffdd828ab94ac3171ef6b690748",
+      "tool_counts": {
+        "invalid_action": 7,
+        "schema": 1
+      },
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 0,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [
+        {
+          "tool_or_schema_error": "OperationalError:no such column: patient_id"
+        },
+        {
+          "tool_or_schema_error": "JSONDecodeError:Unterminated string starting at: line 1 column 35 (char 34)"
+        },
+        {
+          "tool_or_schema_error": "JSONDecodeError:Unterminated string starting at: line 1 column 35 (char 34)"
+        },
+        {
+          "tool_or_schema_error": "JSONDecodeError:Unterminated string starting at: line 1 column 35 (char 34)"
+        },
+        {
+          "tool_or_schema_error": "JSONDecodeError:Unterminated string starting at: line 1 column 35 (char 34)"
+        },
+        {
+          "tool_or_schema_error": "JSONDecodeError:Unterminated string starting at: line 1 column 35 (char 34)"
+        },
+        {
+          "tool_or_schema_error": "JSONDecodeError:Unterminated string starting at: line 1 column 35 (char 34)"
+        }
+      ],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_44",
+      "workflow": "AA",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_44",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": true,
+        "gold_column_count": 1,
+        "prediction_column_count": 2,
+        "gold_row_count": 4,
+        "prediction_row_count": 4,
+        "column_mapping": null,
+        "error_code": "column_count_mismatch",
+        "error": "Expected 1 columns; received 2"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 9,
+        "input_tokens": 21832,
+        "output_tokens": 648,
+        "terminal_serving_seconds": 23.299519387
+      },
+      "terminal_new_calls": 1,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "final_relation_mismatch",
+      "trajectory_sha256": "9d312db099d9561dbff07628cc8e52c0bccb59adc094962c6bba00f8b8e0f9ae",
+      "tool_counts": {},
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 5,
+      "final_retains_parent_bytes": true,
+      "review_without_new_tool_observations": true,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_44",
+      "workflow": "BB",
+      "input_amended": false,
+      "state": "token_cap",
+      "official_relation_result": {
+        "task_id": "task_44",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": true,
+        "gold_column_count": 1,
+        "prediction_column_count": 0,
+        "gold_row_count": 4,
+        "prediction_row_count": 0,
+        "column_mapping": null,
+        "error_code": "missing_prediction",
+        "error": "Missing prediction CSV: results/workspace_v4/runs/3af22795afdac39d725c3351/trajectories/task_44/BB/prediction.csv"
+      },
+      "tool_or_schema_errors": 3,
+      "final_origin": null,
+      "policy_cost_including_parent": {
+        "model_calls": 11,
+        "input_tokens": 126868,
+        "output_tokens": 17744,
+        "terminal_serving_seconds": 155.28463334
+      },
+      "terminal_new_calls": 3,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "no_final_artifact",
+      "trajectory_sha256": "7f247e6eafc262273290f4724ade14185550bdf92af6e47cb9e4951f844196db",
+      "tool_counts": {
+        "invalid_action": 3
+      },
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 0,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [
+        {
+          "tool_or_schema_error": "JSONDecodeError:Unterminated string starting at: line 1 column 35 (char 34)"
+        },
+        {
+          "tool_or_schema_error": "JSONDecodeError:Unterminated string starting at: line 1 column 35 (char 34)"
+        },
+        {
+          "tool_or_schema_error": "JSONDecodeError:Unterminated string starting at: line 1 column 35 (char 34)"
+        }
+      ],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_44",
+      "workflow": "AB",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_44",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": true,
+        "gold_column_count": 1,
+        "prediction_column_count": 2,
+        "gold_row_count": 4,
+        "prediction_row_count": 4,
+        "column_mapping": null,
+        "error_code": "column_count_mismatch",
+        "error": "Expected 1 columns; received 2"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "query",
+      "policy_cost_including_parent": {
+        "model_calls": 9,
+        "input_tokens": 21962,
+        "output_tokens": 635,
+        "terminal_serving_seconds": 17.752027802
+      },
+      "terminal_new_calls": 1,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "final_relation_mismatch",
+      "trajectory_sha256": "a36d21ee64b3a5a9f22fc5ef4ef740e71c8d433615bf1681f24b392a640b977a",
+      "tool_counts": {},
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 5,
+      "final_retains_parent_bytes": true,
+      "review_without_new_tool_observations": true,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_44",
+      "workflow": "BA",
+      "input_amended": false,
+      "state": "token_cap",
+      "official_relation_result": {
+        "task_id": "task_44",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": true,
+        "gold_column_count": 1,
+        "prediction_column_count": 0,
+        "gold_row_count": 4,
+        "prediction_row_count": 0,
+        "column_mapping": null,
+        "error_code": "missing_prediction",
+        "error": "Missing prediction CSV: results/workspace_v4/runs/3af22795afdac39d725c3351/trajectories/task_44/BA/prediction.csv"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": null,
+      "policy_cost_including_parent": {
+        "model_calls": 11,
+        "input_tokens": 121200,
+        "output_tokens": 12483,
+        "terminal_serving_seconds": 115.148106829
+      },
+      "terminal_new_calls": 3,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "no_final_artifact",
+      "trajectory_sha256": "3985f3edc73d671f05c4a05b80ff7d783587b3d0e00cffb2db52cfd919477844",
+      "tool_counts": {
+        "query": 2,
+        "search": 1
+      },
+      "zero_row_queries": 1,
+      "successful_artifacts_created_or_reused": 2,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_35",
+      "workflow": "A",
+      "input_amended": false,
+      "state": "call_cap",
+      "official_relation_result": {
+        "task_id": "task_35",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": true,
+        "gold_column_count": 3,
+        "prediction_column_count": 0,
+        "gold_row_count": 3,
+        "prediction_row_count": 0,
+        "column_mapping": null,
+        "error_code": "missing_prediction",
+        "error": "Missing prediction CSV: results/workspace_v4/runs/3af22795afdac39d725c3351/trajectories/task_35/A/prediction.csv"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": null,
+      "policy_cost_including_parent": {
+        "model_calls": 8,
+        "input_tokens": 47815,
+        "output_tokens": 412,
+        "terminal_serving_seconds": 17.385297294
+      },
+      "terminal_new_calls": 8,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "no_final_artifact",
+      "trajectory_sha256": "96506c84e399e2f440de22f32109f6a865581151110de88fe0fdfb73c9daceb6",
+      "tool_counts": {
+        "read": 4,
+        "search": 3,
+        "save_table": 1
+      },
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_35",
+      "workflow": "B",
+      "input_amended": false,
+      "state": "call_cap",
+      "official_relation_result": {
+        "task_id": "task_35",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": true,
+        "gold_column_count": 3,
+        "prediction_column_count": 0,
+        "gold_row_count": 3,
+        "prediction_row_count": 0,
+        "column_mapping": null,
+        "error_code": "missing_prediction",
+        "error": "Missing prediction CSV: results/workspace_v4/runs/3af22795afdac39d725c3351/trajectories/task_35/B/prediction.csv"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": null,
+      "policy_cost_including_parent": {
+        "model_calls": 8,
+        "input_tokens": 50812,
+        "output_tokens": 300,
+        "terminal_serving_seconds": 4.439711613
+      },
+      "terminal_new_calls": 8,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "no_final_artifact",
+      "trajectory_sha256": "718f143c2036eeec8910eec3329c74a9a5e4740fe6a1439852f3a234f3a088b9",
+      "tool_counts": {
+        "read": 6,
+        "search": 2
+      },
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 0,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_35",
+      "workflow": "AA",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_35",
+        "passed": true,
+        "score": 1,
+        "order_sensitive": true,
+        "gold_column_count": 3,
+        "prediction_column_count": 3,
+        "gold_row_count": 3,
+        "prediction_row_count": 3,
+        "column_mapping": [
+          {
+            "gold_index": 0,
+            "prediction_index": 0
+          },
+          {
+            "gold_index": 1,
+            "prediction_index": 1
+          },
+          {
+            "gold_index": 2,
+            "prediction_index": 2
+          }
+        ],
+        "error_code": null,
+        "error": null
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "agent_asserted_table",
+      "policy_cost_including_parent": {
+        "model_calls": 9,
+        "input_tokens": 74100,
+        "output_tokens": 664,
+        "terminal_serving_seconds": 35.329152958
+      },
+      "terminal_new_calls": 1,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "reference_relation_match",
+      "trajectory_sha256": "44b767e2808b88dbe866bb2049bc867a23e6e3ea095ac7b7584b26963923b740",
+      "tool_counts": {},
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": true,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_35",
+      "workflow": "BB",
+      "input_amended": false,
+      "state": "token_cap",
+      "official_relation_result": {
+        "task_id": "task_35",
+        "passed": false,
+        "score": 0,
+        "order_sensitive": true,
+        "gold_column_count": 3,
+        "prediction_column_count": 0,
+        "gold_row_count": 3,
+        "prediction_row_count": 0,
+        "column_mapping": null,
+        "error_code": "missing_prediction",
+        "error": "Missing prediction CSV: results/workspace_v4/runs/3af22795afdac39d725c3351/trajectories/task_35/BB/prediction.csv"
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": null,
+      "policy_cost_including_parent": {
+        "model_calls": 11,
+        "input_tokens": 129485,
+        "output_tokens": 421,
+        "terminal_serving_seconds": 9.257762881
+      },
+      "terminal_new_calls": 3,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "no_final_artifact",
+      "trajectory_sha256": "00dab9db269c20a29ab01ed635ae88090e653d85bd927b340955b4e3d296aa7d",
+      "tool_counts": {
+        "read": 3
+      },
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 0,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_35",
+      "workflow": "AB",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_35",
+        "passed": true,
+        "score": 1,
+        "order_sensitive": true,
+        "gold_column_count": 3,
+        "prediction_column_count": 3,
+        "gold_row_count": 3,
+        "prediction_row_count": 3,
+        "column_mapping": [
+          {
+            "gold_index": 0,
+            "prediction_index": 0
+          },
+          {
+            "gold_index": 1,
+            "prediction_index": 1
+          },
+          {
+            "gold_index": 2,
+            "prediction_index": 2
+          }
+        ],
+        "error_code": null,
+        "error": null
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "agent_asserted_table",
+      "policy_cost_including_parent": {
+        "model_calls": 9,
+        "input_tokens": 76361,
+        "output_tokens": 638,
+        "terminal_serving_seconds": 22.829021997
+      },
+      "terminal_new_calls": 1,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "reference_relation_match",
+      "trajectory_sha256": "26f7ed81aa8fba6418ae804600186a7909d2cef1dd2ca4c3edf9c9c6dffb9902",
+      "tool_counts": {},
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": true,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    },
+    {
+      "task_id": "task_35",
+      "workflow": "BA",
+      "input_amended": false,
+      "state": "finished",
+      "official_relation_result": {
+        "task_id": "task_35",
+        "passed": true,
+        "score": 1,
+        "order_sensitive": true,
+        "gold_column_count": 3,
+        "prediction_column_count": 3,
+        "gold_row_count": 3,
+        "prediction_row_count": 3,
+        "column_mapping": [
+          {
+            "gold_index": 0,
+            "prediction_index": 0
+          },
+          {
+            "gold_index": 1,
+            "prediction_index": 1
+          },
+          {
+            "gold_index": 2,
+            "prediction_index": 2
+          }
+        ],
+        "error_code": null,
+        "error": null
+      },
+      "tool_or_schema_errors": 0,
+      "final_origin": "agent_asserted_table",
+      "policy_cost_including_parent": {
+        "model_calls": 11,
+        "input_tokens": 122943,
+        "output_tokens": 728,
+        "terminal_serving_seconds": 26.946274535
+      },
+      "terminal_new_calls": 3,
+      "plan_id": "3af22795afdac39d725c3351",
+      "adapter_block": "recovery_python_numeric_binding",
+      "observable_category": "reference_relation_match",
+      "trajectory_sha256": "3d630f22624188784f355062d2cdb442797c21f03552a80be73aeb27d123693f",
+      "tool_counts": {
+        "read": 1,
+        "save_table": 1
+      },
+      "zero_row_queries": 0,
+      "successful_artifacts_created_or_reused": 1,
+      "final_retains_parent_bytes": false,
+      "review_without_new_tool_observations": false,
+      "tool_errors": [],
+      "semantic_error_annotation": null,
+      "independent_human_review_completed": false
+    }
+  ],
+  "scientific_primary_effect": null,
+  "scientific_expansion_gate": "NOT_OPENED",
+  "history_fitted": false,
+  "human_annotations_completed": 0,
+  "observables_are_not_causal_or_semantic_failure_labels": true,
+  "source_score_files": [
+    {
+      "path": "results/workspace_v4/interrupted_prefix_diagnostic_v2.json",
+      "sha256": "81d05d2b699e69ac6b88541d1423c91ca8368b6f476bf0faef4cb89faa40f21a"
+    },
+    {
+      "path": "results/workspace_v4/recovery3_offline_results.json",
+      "sha256": "83f0236bd0fd2c4c1ffc7a3c9ee810d74f1fbc9563ec9e8d3fc2c19eb1027458"
+    }
+  ],
+  "error_bank_source_sha256": "b37ccf18158259baafbd5bf4a5d4738c2f28ae6dd1e25451a19d98d1100f4da0"
+}

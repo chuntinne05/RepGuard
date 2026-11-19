@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-11-09T14:36:21.089024+00:00",
+  "purpose": "Post-hoc measurement/semantic flags; NOT corrected primary scores or independent human labels",
+  "human_adjudications": 0,
+  "model_calls": 0,
+  "task_371": {
+    "flag": "fund abbreviation not explicit between SecuAbbr and ChiNameAbbr",
+    "source_rows": 12962,
+    "different_abbreviation_rows": 12787,
+    "model_selected": "ChiNameAbbr",
+    "published_reference_selected": "SecuAbbr",
+    "status": "requires_independent_source_only_review;do_not_automatically_call_wrong_business_answer"
+  },
+  "task_44": {
+    "flag": "returned requested procedures with an extra treatmentid output column",
+    "diagnostics": [
+      {
+        "workflow": "A",
+        "original_score_preserved": 0,
+        "original_prediction_sha256": "efdfba669182790978b16a8df25b67072f302479edcbe4bf8de19ef357500a7e",
+        "posthoc_operation": "Remove treatmentid output column only; preserve all procedure cells and row order",
+        "posthoc_projected_sha256": "39f01008558378ec7a5f2e12ecd6d806fa9ae002fb38520bf0f3aecce5a660bc",
+        "posthoc_relation_match": true
+      },
+      {
+        "workflow": "AA",
+        "original_score_preserved": 0,
+        "original_prediction_sha256": "efdfba669182790978b16a8df25b67072f302479edcbe4bf8de19ef357500a7e",
+        "posthoc_operation": "Remove treatmentid output column only; preserve all procedure cells and row order",
+        "posthoc_projected_sha256": "39f01008558378ec7a5f2e12ecd6d806fa9ae002fb38520bf0f3aecce5a660bc",
+        "posthoc_relation_match": true
+      },
+      {
+        "workflow": "AB",
+        "original_score_preserved": 0,
+        "original_prediction_sha256": "efdfba669182790978b16a8df25b67072f302479edcbe4bf8de19ef357500a7e",
+        "posthoc_operation": "Remove treatmentid output column only; preserve all procedure cells and row order",
+        "posthoc_projected_sha256": "39f01008558378ec7a5f2e12ecd6d806fa9ae002fb38520bf0f3aecce5a660bc",
+        "posthoc_relation_match": true
+      }
+    ],
+    "status": "strict_table_output_failure;not_evidence_the_procedure_values_were_wrong"
+  },
+  "frozen_scores_changed": false
+}

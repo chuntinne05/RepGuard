@@ -1,0 +1,29 @@
+{
+  "audit": "PASS",
+  "run_id": "746ca756961393ace1ad8c57",
+  "real_responses": {
+    "completed": 144,
+    "unresolved": 0,
+    "length_stops": 0,
+    "input_tokens": 321132,
+    "output_tokens": 35330,
+    "scoped_permission_violations": {
+      "evidence": 2,
+      "operation": 1
+    },
+    "raw_invalid_by_action": {
+      "plain": 2,
+      "initial": 6,
+      "evidence": 5,
+      "operation": 5,
+      "self1": 6,
+      "self2": 6
+    }
+  },
+  "frozen_sources_verified": 9,
+  "original_primary_sources_unchanged": true,
+  "earliest_response_utc": "2026-10-20T01:00:49.667513+00:00",
+  "latest_response_utc": "2026-10-20T01:19:55.640202+00:00",
+  "privacy": "Public allowlists verified; remote API only mounts research weights volume. No gold annotations passed.",
+  "note": "Deterministic software replay of REAL model outputs, not new inference or a semantic-label audit."
+}

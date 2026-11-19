@@ -248,3 +248,45 @@ Build HistRepEval v0.1 + implement mandatory reputation baselines.
 - [x] Go/No-Go decision documented
 
 -> **WEEK 3 COMPLETE. PROCEED TO WEEK 4 (ECRT FULL ABLATION + MAIN TABLE).**
+
+
+---
+
+## 2026-11-09 — Prospective verification cycle 01
+
+Historical GO-B entries above are not the current scientific verdict; see the real rerun and the 2026-11-09 review.
+
+- New protocol written before generation: docs/reports/2026-11-09/EXECUTION_PLAN_V1.md.
+- Registered plan: 1a97e7cca4367a1fe81c9417; metadata-only pilot24groups/120pairs; cap720.
+- Source DG-evidence750 pinned to dc65e18a0a3e40e13c461c05b55103379db1fd8e; exact duplicate grouping147groups; public/private packets separated.
+- Two synthetic API attempts: Gemma valid, Gemini timeout with unknown generation outcome. No blind retry; predefined Modal fallback used.
+- New isolated Modal app, readonly existing research weights, no gold volume to inference; real Qwen/Gemma generations.
+- Completed720/720 terminal responses,0transport errors. Original pilot app containers observed empty after completion. Offline audit/scoring pending at this log entry.
+- Thirteen research-harness tests passed. No history learner fitted and no method-superiority claim yet.
+- User discovery: no participant group available yet; recruitment kit prepared,0interviews conducted.
+
+### Cycle01 offline result
+
+720response checksums/prompts/parents/model digests audited PASS. Scores A/B/AA/BB/AB/BA=91/85/93/85/96/87 out of120. Primary cross-minus-self=+2.0833pp, claim-clusterCI[-0.4167,+4.5938], below locked3pp floor: FAIL.719/720parse-valid,0length stops. Oracle105 is diagnostic only. No history learner fitted. See docs/reports/2026-11-09/VERIFICATION_CYCLE01_RESULTS_VA_QUYET_DINH.md and NEXT_STUDY_AFTER_CYCLE01.md.
+
+##2026-11-09 — ARQA source audit and prospectively registered cycle02
+
+Pinned official scorer/source inspected, no upstream model results read. Source audit561/623 arithmetic pass explicit binding/rounding;62 exclusions include schema/interpreter limits and are not automatically gold errors. Selected24connected source groups by hash without model outcomes. Registered plan`deaee6167f9609bd2f045f46` before inference,12arms/item, cap288. Isolated app`ap-NyOvggLu1E0hHsy61ZXiMl`, read-only weights, no gold GPU mount.11tests passed. Separate source-receipt final-dependency diagnostic added after registration,5tests pass; does not alter frozen primary. No human annotations or discovery participants;24blank source-only review forms prepared. Outcome pending.
+
+###Cycle02completed,09/11/2026
+
+288/288real responses finished07:33:10UTC. Frozen primary checklist cross-self+2.083pp CI[-4.167,+8.333]pp, interaction0, rescues2/harms1, rescuegroups2. GateFAIL; no scaling/history.274/288schema-valid,1lengthstop,0transport. Receipt/source/prompt/parent/attempt auditsPASS; originalv1 source hashes still match. App finished07:34:28UTC; subsequent container list[]. Post-hoc whole24measurement flags:4question-production measure mismatches;10published-vs-strict precision;1repeated-row scope;2emptyunit;1segments/group scope;2numeric-header layout. Flags are not human gold corrections. Checklist abstention on production vs sales was counted incorrect, so numeric/unit score is not validated task truth. Frozen scores untouched; source-only human review remains0completed;0users recruited. Source receipt prototype16newtests total across two files passed (11+5), not whole repo suite. XBRLFiling card/license/filing metadata pinned; no tasks or model outcomes downloaded. Next action is task/oracle adjudication and actualworkflow discovery before new inference.
+
+##2026-11-09 — cross-workload extension requested and implemented
+
+Working direction broadened from annual-report QA to evidence-grounded verification/revision for multi-agent analytical and reporting workflows; official thesis title unchanged. Read primary ProvenanceGuard, Beyond fabrication, MMEnterprise, DataSpace, DAB and AgentWebBench sources at stated depths; generic provenance/contracts/checkers are not novelty. New src/repguard/verification has strict candidate/contract separation, caller-owned source admission, scope/unit/conflict/validity checks, JSON/CSV adapters, conditional receipts and one reviewer callback.25kernel tests pass; previous scoped regression39pass before last CSV additions.38synthetic engineering cases +5real recordedartifactclaims +2controlledmutations exercised, no new model calls/human labels or superiority claim. DataSpace pinned source+HF manifest:410tasks,60publicreferences; partialZIPinputinspection6candidates/12files via3,980,118rangebytes; no gold/config/output read, no scorer or task code executed, fullarchiveSHA notverified. DAB README/tree only, database/license gate unresolved. Priorv1/v2 sources and scores preserved; no new cloud inference scheduled. Current plan:docs/reports/2026-11-09/DINH_HUONG_MO_RONG_VA_KE_HOACH_V3.md.
+
+
+##2026-11-09 — workspace_v4 engineering pilot completed with explicit interruptions
+
+Full pinned DataSpace archive2,878,651,222bytes/SHAverified;96inputs12offlineevaluationfiles. Source reconstruction frozen before gold5/6;task391date-output amendment before inference gives6/6engineeringreadiness, not semantic adjudication. Initial Modal source-inclusion guard stopped planc83c5fa198c76cce65a9c5d4 before corpuscalls. Packaging2plan6a325835a376d02f1440fadf isolated runtime passed,42responses/12trajectories on first2tasks then STOP before task380inference:1ULP SQLite text-toREAL differences. Prefix sources/results preserved. Recovery3plan3af22795afdac39d725c3351 registered before outcome scoring, Pythonnumericbinding and all4adapterchecks before inference;71newresponses/24trajectories;no prior task regenerated. Both offline receipt auditsPASS;original6taskstudy remains interrupted, no pooledscientificprimary. Composite engineering masks A/B/AA/BB/AB/BA=1/1/2/1/2/2of6;9matches14mismatches13nofinal;13toolerrors10lengthstops. All3rescuesononePDFtask,selfQwenalsosucceeds;no methodwin/history/transferclaim. Posthoc task371SecuAbbr/ChiNameAbbr ambiguity and task44extraIDcolumn flags recorded separately;originalscoresunchanged.33v4tools/trajectory/audittestsPASS;25kernel+5receipt scoped regressionPASS;notfullsuite.2syntheticGemini4probes separate(firstHTTPErrorunknownstatus,second429quota0);frontierbaselineabsent.0independenthumanlabels0users0interviews;12blanksource-onlyforms. Read closer primary ICR/ARIA/VeriMAP/VerifyMAS/diagnosticcontracts/ToxicBench/SEMV/harnessverification papers; genericverification,scopedrepair and sourcebinding notnovel. All4intake/pilotappsstopped0tasks verified2026-11-09T14:35:18.317509+00:00;unrelatedappsuntouched. Latest:docs/reports/2026-11-09/WORKSPACE_V4_RESULTS_VA_PATH_TIEP.md.
+
+
+##2026-11-09 — relational_v5 research/implementation and external preparation
+
+Read primary SpecBridge(Nov3), changing-business-semanticsSQL(Oct30), TraceIntegrity, SemanticAgent, Maat, MustMaybev2 and verification-status-laundering sources at documented depths. Generic contracts/ambiguity/operatorvalidation/statuspreservation have close prior art; no novelty guarantee. New relational.py uses host-owned source/operator obligations, explicit unresolved and separate release status; handoff re-computes receipts rather than trusting hashes/status. Source-only schema_search/query_audit wrapper+CLI implemented outside frozen v4;29newtests87scopedregressionPASS. Posthoc ALL36v4trajectories:13nofinal,20SQL,3asserted;26interpretationreceipts17violated9unresolved,ALLneeds_review asdeveloper-only;not27humanlabels or methodaccuracy.20actualSQLreexecutions20byte-identical tooldoutputs;0newmodelcalls0humanlabels0users. PinnedSpecBridgea51be850a113a6b7c0ada57ad3c7806c6c3f25a4;307records204upstreamaccepted12DB;metadata-byDBsplit45dev67val92reserve;onlyalien/chinook/financialdevDBdownloadedGitSHA/SHA256/quickcheckPASS;publicprompt/privateevaluationseparate;no cachedmodeloutputs;nativegradernotexecuted. CodeMIT/dataCCBYSA4.0 per upstreamDATA_LICENSE. DAB manifest/downloader inspected but licenses/nativeassetqualification unresolved. NoGPU launched; scientific/history gatesnotopened. Latest strategy:docs/reports/2026-11-09/RESEARCH_STRATEGY_V5_VA_CONTRIBUTIONS.md.

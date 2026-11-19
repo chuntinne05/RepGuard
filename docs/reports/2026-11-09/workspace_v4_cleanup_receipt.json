@@ -1,0 +1,39 @@
+{
+  "checked_utc": "2026-11-09T14:35:18.317509+00:00",
+  "apps": [
+    {
+      "app_id": "ap-lPZqlWFErGrT9KOYgCl8jM",
+      "description": "repguard-workspace-v4-pilot-20261109",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-11-09 21:19:54+07:00",
+      "stopped_at": "2026-11-09 21:34:44+07:00"
+    },
+    {
+      "app_id": "ap-pniE5GsCV9BuWKCVcxYhZu",
+      "description": "repguard-workspace-v4-pilot-20261109",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-11-09 21:11:57+07:00",
+      "stopped_at": "2026-11-09 21:18:37+07:00"
+    },
+    {
+      "app_id": "ap-KTItFFeus4WbSgWP1m81tk",
+      "description": "repguard-workspace-v4-pilot-20261109",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-11-09 21:07:28+07:00",
+      "stopped_at": "2026-11-09 21:09:38+07:00"
+    },
+    {
+      "app_id": "ap-q5ySbSLCnHCvm7KWJsqcei",
+      "description": "repguard-workspace-v4-source-intake-20261109",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-11-09 20:42:30+07:00",
+      "stopped_at": "2026-11-09 20:45:05+07:00"
+    }
+  ],
+  "all_stopped_zero_tasks": true,
+  "unrelated_apps_modified": false
+}

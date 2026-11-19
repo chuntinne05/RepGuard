@@ -1,0 +1,166 @@
+{
+  "created_utc": "2026-11-09T13:58:35.764489+00:00",
+  "scope": "Source-only analyst reconstruction and evaluator checks, NOT model performance, independent human adjudication or proof all interpretations are unique.",
+  "tasks": [
+    {
+      "task_id": "task_269",
+      "passed": true,
+      "score": 1,
+      "order_sensitive": false,
+      "gold_column_count": 3,
+      "prediction_column_count": 3,
+      "gold_row_count": 2,
+      "prediction_row_count": 2,
+      "column_mapping": [
+        {
+          "gold_index": 0,
+          "prediction_index": 0
+        },
+        {
+          "gold_index": 1,
+          "prediction_index": 1
+        },
+        {
+          "gold_index": 2,
+          "prediction_index": 2
+        }
+      ],
+      "error_code": null,
+      "error": null
+    },
+    {
+      "task_id": "task_391",
+      "passed": false,
+      "score": 0,
+      "order_sensitive": false,
+      "gold_column_count": 5,
+      "prediction_column_count": 4,
+      "gold_row_count": 1,
+      "prediction_row_count": 1,
+      "column_mapping": null,
+      "error_code": "column_count_mismatch",
+      "error": "Expected 5 columns; received 4"
+    },
+    {
+      "task_id": "task_380",
+      "passed": true,
+      "score": 1,
+      "order_sensitive": false,
+      "gold_column_count": 1,
+      "prediction_column_count": 1,
+      "gold_row_count": 1,
+      "prediction_row_count": 1,
+      "column_mapping": [
+        {
+          "gold_index": 0,
+          "prediction_index": 0
+        }
+      ],
+      "error_code": null,
+      "error": null
+    },
+    {
+      "task_id": "task_371",
+      "passed": true,
+      "score": 1,
+      "order_sensitive": false,
+      "gold_column_count": 2,
+      "prediction_column_count": 2,
+      "gold_row_count": 12962,
+      "prediction_row_count": 12962,
+      "column_mapping": [
+        {
+          "gold_index": 0,
+          "prediction_index": 0
+        },
+        {
+          "gold_index": 1,
+          "prediction_index": 1
+        }
+      ],
+      "error_code": null,
+      "error": null
+    },
+    {
+      "task_id": "task_44",
+      "passed": true,
+      "score": 1,
+      "order_sensitive": true,
+      "gold_column_count": 1,
+      "prediction_column_count": 1,
+      "gold_row_count": 4,
+      "prediction_row_count": 4,
+      "column_mapping": [
+        {
+          "gold_index": 0,
+          "prediction_index": 0
+        }
+      ],
+      "error_code": null,
+      "error": null
+    },
+    {
+      "task_id": "task_35",
+      "passed": true,
+      "score": 1,
+      "order_sensitive": true,
+      "gold_column_count": 3,
+      "prediction_column_count": 3,
+      "gold_row_count": 3,
+      "prediction_row_count": 3,
+      "column_mapping": [
+        {
+          "gold_index": 0,
+          "prediction_index": 0
+        },
+        {
+          "gold_index": 1,
+          "prediction_index": 1
+        },
+        {
+          "gold_index": 2,
+          "prediction_index": 2
+        }
+      ],
+      "error_code": null,
+      "error": null
+    }
+  ],
+  "source_reconstructions_matching_official": 5,
+  "scorer_controls": [
+    {
+      "task_id": "task_269",
+      "gold_self_match": true,
+      "extra_row_rejected": true
+    },
+    {
+      "task_id": "task_391",
+      "gold_self_match": true,
+      "extra_row_rejected": true
+    },
+    {
+      "task_id": "task_380",
+      "gold_self_match": true,
+      "extra_row_rejected": true
+    },
+    {
+      "task_id": "task_371",
+      "gold_self_match": true,
+      "extra_row_rejected": true
+    },
+    {
+      "task_id": "task_44",
+      "gold_self_match": true,
+      "extra_row_rejected": true
+    },
+    {
+      "task_id": "task_35",
+      "gold_self_match": true,
+      "extra_row_rejected": true
+    }
+  ],
+  "all_scorer_controls_pass": true,
+  "model_calls": 0,
+  "new_human_annotations": 0,
+  "go_for_tool_readiness_only": false
+}

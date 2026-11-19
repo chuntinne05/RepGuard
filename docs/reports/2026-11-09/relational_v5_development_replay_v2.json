@@ -1,0 +1,2022 @@
+{
+  "created_utc": "2026-11-09T15:40:44.550771+00:00",
+  "scope": "POSTHOC_DEVELOPMENT; v4 model outcomes were already inspected; NOT preregistration or held-out evaluation",
+  "new_model_calls": 0,
+  "human_annotations": 0,
+  "oracle_access_in_replay": false,
+  "source_plan_sha256": "c60413de7fa8f7cc056834d306adf8712c4cbf8a2f035284213269036a67a333",
+  "observed_trajectories": 36,
+  "artifact_types": {
+    "no_final_artifact": 13,
+    "sql_artifact": 20,
+    "non_sql_assertion": 3
+  },
+  "sql_receipts": 26,
+  "obligation_status_counts_over_interpretations_not_independent_tasks": {
+    "unresolved": 9,
+    "violated": 17
+  },
+  "release_status_counts": {
+    "needs_review": 26
+  },
+  "schema_discovery_example": {
+    "hits": [
+      {
+        "table": "mf_personalinfo",
+        "column": "Nationality",
+        "source": "db/sub_db.sqlite",
+        "source_table": "mf_personalinfo",
+        "source_sha256": "0d4585eaf2f22a716f50de7844c02d04e4a9e6b8ed8e770ccb52c7ae8a9ee925"
+      }
+    ],
+    "truncated": false,
+    "total_metadata_matches": 1,
+    "semantic_mapping_verified": false,
+    "catalog_sha256": "b6633c686a3614398ea0003ca80e70029b4e91f9d2e7fb37e9cabe8052b0ecea"
+  },
+  "observations": [
+    {
+      "task_id": "task_269",
+      "workflow": "A",
+      "kind": "no_final_artifact",
+      "trajectory_sha256": "44a1ce54bc0913c7b079f1f4c31ad023bd6d6697a10bc19b520e109e3e2abe9a",
+      "query_receipts": [],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_269",
+      "workflow": "B",
+      "kind": "no_final_artifact",
+      "trajectory_sha256": "90e9d1d6fbb0be8fabf30ab3c1283cf36a455f1ae4e2f9d436a0a71f90ae8e61",
+      "query_receipts": [],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_269",
+      "workflow": "AA",
+      "kind": "no_final_artifact",
+      "trajectory_sha256": "deef313f7c81d407e79d842009bf152360b520328f200cea4da996cc1792dbf2",
+      "query_receipts": [],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_269",
+      "workflow": "BB",
+      "kind": "no_final_artifact",
+      "trajectory_sha256": "b7914abce2e8b378cc7cc3342026c75ac3eecb51556736a4180e1dd5974090de",
+      "query_receipts": [],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_269",
+      "workflow": "AB",
+      "kind": "no_final_artifact",
+      "trajectory_sha256": "e8abe71e6f60ba12bb5a7c8a06d6bc002fb61139af5833d3938fed51dc85f35e",
+      "query_receipts": [],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_269",
+      "workflow": "BA",
+      "kind": "no_final_artifact",
+      "trajectory_sha256": "a44fbd20cfd7e605ab07cc2432ff5b0ca9be376ff2aef46652784876949462a2",
+      "query_receipts": [],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_391",
+      "workflow": "A",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "7a23d70569b5c716a0304932489be2006ccc60f5f8d0816db20d34084db5be23",
+      "query_receipts": [
+        {
+          "contract_sha256": "385d859b73629d4f2d935aec2f61ce3659e2b4a1b93473b6e0f562d21e01ee3d",
+          "catalog_sha256": "8c88a9fa93e551b0eaaf585faca5f60a8eaa48f3ffbdf13731fb812ad9809c0c",
+          "sql_sha256": "9a05c3ff90b2b1484634912c23eea933972c547a90c49199e4f0e2ef47012a84",
+          "contract_id": "task_391",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('其他存款性公司资产负债表', '截止日期')), ('column', ('其他存款性公司资产负债表', '总资产')), ('column', ('其他存款性公司资产负债表', '总负债')), ('column', ('其他存款性公司资产负债表', '国外净资产')), ('column', ('其他存款性公司资产负债表', '国外负债'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "met",
+              "detail": "Required mandatory field predicates: [(('其他存款性公司资产负债表', '总资产'), 'gt', ('number', '5E+7'))]"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "Latest-row selection and date meaning not verified by this bounded checker"
+            }
+          ],
+          "obligation_status": "unresolved",
+          "release_status": "needs_review",
+          "source_roots": [
+            "341a0b8901dd6d6b3a8cb9c25ebbf0ca5c13571313aae5aa38586c1affd9bc34"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_391",
+      "workflow": "B",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "258b134402c8a00eb4b33ddaf1355fb7294cfe253b077fcbb62bfd942f97b531",
+      "query_receipts": [
+        {
+          "contract_sha256": "385d859b73629d4f2d935aec2f61ce3659e2b4a1b93473b6e0f562d21e01ee3d",
+          "catalog_sha256": "8c88a9fa93e551b0eaaf585faca5f60a8eaa48f3ffbdf13731fb812ad9809c0c",
+          "sql_sha256": "8247ab65b53e248eb8d062eb60b230bfe9fb573f9cb5f500b3ee2850d089dea6",
+          "contract_id": "task_391",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('其他存款性公司资产负债表', '截止日期')), ('column', ('其他存款性公司资产负债表', '总资产')), ('column', ('其他存款性公司资产负债表', '总负债')), ('column', ('其他存款性公司资产负债表', '国外净资产')), ('column', ('其他存款性公司资产负债表', '国外负债'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "met",
+              "detail": "Required mandatory field predicates: [(('其他存款性公司资产负债表', '总资产'), 'gt', ('number', '5E+7'))]"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "Latest-row selection and date meaning not verified by this bounded checker"
+            }
+          ],
+          "obligation_status": "unresolved",
+          "release_status": "needs_review",
+          "source_roots": [
+            "341a0b8901dd6d6b3a8cb9c25ebbf0ca5c13571313aae5aa38586c1affd9bc34"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_391",
+      "workflow": "AA",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "d7c0519353b21fe659293b0358e62ca9ca7a8fff5fc1185cc10ad34edcc77844",
+      "query_receipts": [
+        {
+          "contract_sha256": "385d859b73629d4f2d935aec2f61ce3659e2b4a1b93473b6e0f562d21e01ee3d",
+          "catalog_sha256": "8c88a9fa93e551b0eaaf585faca5f60a8eaa48f3ffbdf13731fb812ad9809c0c",
+          "sql_sha256": "9a05c3ff90b2b1484634912c23eea933972c547a90c49199e4f0e2ef47012a84",
+          "contract_id": "task_391",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('其他存款性公司资产负债表', '截止日期')), ('column', ('其他存款性公司资产负债表', '总资产')), ('column', ('其他存款性公司资产负债表', '总负债')), ('column', ('其他存款性公司资产负债表', '国外净资产')), ('column', ('其他存款性公司资产负债表', '国外负债'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "met",
+              "detail": "Required mandatory field predicates: [(('其他存款性公司资产负债表', '总资产'), 'gt', ('number', '5E+7'))]"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "Latest-row selection and date meaning not verified by this bounded checker"
+            }
+          ],
+          "obligation_status": "unresolved",
+          "release_status": "needs_review",
+          "source_roots": [
+            "341a0b8901dd6d6b3a8cb9c25ebbf0ca5c13571313aae5aa38586c1affd9bc34"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_391",
+      "workflow": "BB",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "e9e99bd187ee0944de5b13c9a9797cf3f02cda446946440028586de1ea6f2298",
+      "query_receipts": [
+        {
+          "contract_sha256": "385d859b73629d4f2d935aec2f61ce3659e2b4a1b93473b6e0f562d21e01ee3d",
+          "catalog_sha256": "8c88a9fa93e551b0eaaf585faca5f60a8eaa48f3ffbdf13731fb812ad9809c0c",
+          "sql_sha256": "8247ab65b53e248eb8d062eb60b230bfe9fb573f9cb5f500b3ee2850d089dea6",
+          "contract_id": "task_391",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('其他存款性公司资产负债表', '截止日期')), ('column', ('其他存款性公司资产负债表', '总资产')), ('column', ('其他存款性公司资产负债表', '总负债')), ('column', ('其他存款性公司资产负债表', '国外净资产')), ('column', ('其他存款性公司资产负债表', '国外负债'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "met",
+              "detail": "Required mandatory field predicates: [(('其他存款性公司资产负债表', '总资产'), 'gt', ('number', '5E+7'))]"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "Latest-row selection and date meaning not verified by this bounded checker"
+            }
+          ],
+          "obligation_status": "unresolved",
+          "release_status": "needs_review",
+          "source_roots": [
+            "341a0b8901dd6d6b3a8cb9c25ebbf0ca5c13571313aae5aa38586c1affd9bc34"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_391",
+      "workflow": "AB",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "0ce809242297239c75b4585d9392af4ac9633c1b5b387be4bc666da7f1240ffa",
+      "query_receipts": [
+        {
+          "contract_sha256": "385d859b73629d4f2d935aec2f61ce3659e2b4a1b93473b6e0f562d21e01ee3d",
+          "catalog_sha256": "8c88a9fa93e551b0eaaf585faca5f60a8eaa48f3ffbdf13731fb812ad9809c0c",
+          "sql_sha256": "9a05c3ff90b2b1484634912c23eea933972c547a90c49199e4f0e2ef47012a84",
+          "contract_id": "task_391",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('其他存款性公司资产负债表', '截止日期')), ('column', ('其他存款性公司资产负债表', '总资产')), ('column', ('其他存款性公司资产负债表', '总负债')), ('column', ('其他存款性公司资产负债表', '国外净资产')), ('column', ('其他存款性公司资产负债表', '国外负债'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "met",
+              "detail": "Required mandatory field predicates: [(('其他存款性公司资产负债表', '总资产'), 'gt', ('number', '5E+7'))]"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "Latest-row selection and date meaning not verified by this bounded checker"
+            }
+          ],
+          "obligation_status": "unresolved",
+          "release_status": "needs_review",
+          "source_roots": [
+            "341a0b8901dd6d6b3a8cb9c25ebbf0ca5c13571313aae5aa38586c1affd9bc34"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_391",
+      "workflow": "BA",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "a1cb60cf7718ef6178f1aa1033568736febaffa9dd5272a50810a396f50e70da",
+      "query_receipts": [
+        {
+          "contract_sha256": "385d859b73629d4f2d935aec2f61ce3659e2b4a1b93473b6e0f562d21e01ee3d",
+          "catalog_sha256": "8c88a9fa93e551b0eaaf585faca5f60a8eaa48f3ffbdf13731fb812ad9809c0c",
+          "sql_sha256": "8247ab65b53e248eb8d062eb60b230bfe9fb573f9cb5f500b3ee2850d089dea6",
+          "contract_id": "task_391",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('其他存款性公司资产负债表', '截止日期')), ('column', ('其他存款性公司资产负债表', '总资产')), ('column', ('其他存款性公司资产负债表', '总负债')), ('column', ('其他存款性公司资产负债表', '国外净资产')), ('column', ('其他存款性公司资产负债表', '国外负债'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "met",
+              "detail": "Required mandatory field predicates: [(('其他存款性公司资产负债表', '总资产'), 'gt', ('number', '5E+7'))]"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "Latest-row selection and date meaning not verified by this bounded checker"
+            }
+          ],
+          "obligation_status": "unresolved",
+          "release_status": "needs_review",
+          "source_roots": [
+            "341a0b8901dd6d6b3a8cb9c25ebbf0ca5c13571313aae5aa38586c1affd9bc34"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_380",
+      "workflow": "A",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "f8c2bb631a6a17ef559c4876f23f2ee6a2df0942204c6864c83e2e41ad5ebe3a",
+      "query_receipts": [
+        {
+          "contract_sha256": "392df37ed3604db4774cffa5c8d4ad1791e30f66b1235ba5464c60ce7a554f15",
+          "catalog_sha256": "b6633c686a3614398ea0003ca80e70029b4e91f9d2e7fb37e9cabe8052b0ecea",
+          "sql_sha256": "1c4c8d8ec6ddab56202a9a58bf1455a2b683825118551db67c7ca15173fbb6ec",
+          "contract_id": "task_380",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_fundmanagernew', 'name'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "violated",
+              "detail": "Required mandatory field predicates: [(('mf_personalinfo', 'nationality'), 'ne', ('text', '')), (('mf_personalinfo', 'nationality'), 'ne', ('text', '中国')), (('mf_personalinfo', 'nationality'), 'not_null', ('null', None))]"
+            },
+            {
+              "id": "join_bindings",
+              "status": "violated",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "f69f838fcb2098da0918ebd9400a2f990ab7f335268e8460dac4182bb94b4fee"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_380",
+      "workflow": "B",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "61526ed26aa455a1c6be5453d6248c3b5143a796e50f7db7c6bc07eaefe8c99e",
+      "query_receipts": [
+        {
+          "contract_sha256": "392df37ed3604db4774cffa5c8d4ad1791e30f66b1235ba5464c60ce7a554f15",
+          "catalog_sha256": "b6633c686a3614398ea0003ca80e70029b4e91f9d2e7fb37e9cabe8052b0ecea",
+          "sql_sha256": "063d3693de92e430aa4ed79733d8bd57442140e6ae13ce81592231e3ae052066",
+          "contract_id": "task_380",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_fundmanagernew', 'name'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "violated",
+              "detail": "Required mandatory field predicates: [(('mf_personalinfo', 'nationality'), 'ne', ('text', '')), (('mf_personalinfo', 'nationality'), 'ne', ('text', '中国')), (('mf_personalinfo', 'nationality'), 'not_null', ('null', None))]"
+            },
+            {
+              "id": "join_bindings",
+              "status": "violated",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "violated",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "f69f838fcb2098da0918ebd9400a2f990ab7f335268e8460dac4182bb94b4fee"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_380",
+      "workflow": "AA",
+      "kind": "no_final_artifact",
+      "trajectory_sha256": "0bc50e91cf53dfb911a23cdf63130bf8acd3670ebbf71fe476dff9a184d61ee8",
+      "query_receipts": [],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_380",
+      "workflow": "BB",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "8633995656d0d33b9d40e1529d8ca71c49fe94089cc0f4dcb2ce58bd87cd4f13",
+      "query_receipts": [
+        {
+          "contract_sha256": "392df37ed3604db4774cffa5c8d4ad1791e30f66b1235ba5464c60ce7a554f15",
+          "catalog_sha256": "b6633c686a3614398ea0003ca80e70029b4e91f9d2e7fb37e9cabe8052b0ecea",
+          "sql_sha256": "063d3693de92e430aa4ed79733d8bd57442140e6ae13ce81592231e3ae052066",
+          "contract_id": "task_380",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_fundmanagernew', 'name'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "violated",
+              "detail": "Required mandatory field predicates: [(('mf_personalinfo', 'nationality'), 'ne', ('text', '')), (('mf_personalinfo', 'nationality'), 'ne', ('text', '中国')), (('mf_personalinfo', 'nationality'), 'not_null', ('null', None))]"
+            },
+            {
+              "id": "join_bindings",
+              "status": "violated",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "violated",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "f69f838fcb2098da0918ebd9400a2f990ab7f335268e8460dac4182bb94b4fee"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_380",
+      "workflow": "AB",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "2a9e971b46ed979132b847f519cda2c6cdfbec5b558ae712f1e45b13de1e93d9",
+      "query_receipts": [
+        {
+          "contract_sha256": "392df37ed3604db4774cffa5c8d4ad1791e30f66b1235ba5464c60ce7a554f15",
+          "catalog_sha256": "b6633c686a3614398ea0003ca80e70029b4e91f9d2e7fb37e9cabe8052b0ecea",
+          "sql_sha256": "1c4c8d8ec6ddab56202a9a58bf1455a2b683825118551db67c7ca15173fbb6ec",
+          "contract_id": "task_380",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_fundmanagernew', 'name'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "violated",
+              "detail": "Required mandatory field predicates: [(('mf_personalinfo', 'nationality'), 'ne', ('text', '')), (('mf_personalinfo', 'nationality'), 'ne', ('text', '中国')), (('mf_personalinfo', 'nationality'), 'not_null', ('null', None))]"
+            },
+            {
+              "id": "join_bindings",
+              "status": "violated",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "f69f838fcb2098da0918ebd9400a2f990ab7f335268e8460dac4182bb94b4fee"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_380",
+      "workflow": "BA",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "b1d71a262b60c3947d35ce6ad6b8e0163ba752d6b984916258e7a561b3b29974",
+      "query_receipts": [
+        {
+          "contract_sha256": "392df37ed3604db4774cffa5c8d4ad1791e30f66b1235ba5464c60ce7a554f15",
+          "catalog_sha256": "b6633c686a3614398ea0003ca80e70029b4e91f9d2e7fb37e9cabe8052b0ecea",
+          "sql_sha256": "5828da0c03284370ff7c1d10e756c8e7f23f387c34aa49dff8dbb00e5266a0d8",
+          "contract_id": "task_380",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_fundmanagernew', 'name'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "violated",
+              "detail": "Required mandatory field predicates: [(('mf_personalinfo', 'nationality'), 'ne', ('text', '')), (('mf_personalinfo', 'nationality'), 'ne', ('text', '中国')), (('mf_personalinfo', 'nationality'), 'not_null', ('null', None))]"
+            },
+            {
+              "id": "join_bindings",
+              "status": "violated",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "f69f838fcb2098da0918ebd9400a2f990ab7f335268e8460dac4182bb94b4fee"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_371",
+      "workflow": "A",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "f2985f75915190e61e9e2f41d32a6b58e9a26097f433cfd267028d3fb21084ed",
+      "query_receipts": [
+        {
+          "contract_sha256": "fa226126454f763fd5ad5e53ccd91611df9f66fe10cb3664f32cb5b28d170bdc",
+          "catalog_sha256": "d7c4769f449f737ff8295a54f7b8d5c6f23f4a614f685389a1f3ef091b67e91e",
+          "sql_sha256": "996a582ce2c162dae89c9eca19d3bbf82cf9ca7edce2eafc32883f8c66d607aa",
+          "contract_id": "task_371",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "violated",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_netvalueperformancehis', 'secuabbr')), ('column', ('mf_netvalueperformancehis', 'rrsincestart'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "violated",
+              "detail": "Required mandatory field predicates: []"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "violated",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "SecuAbbr versus ChiNameAbbr is not independently adjudicated"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "191f4b16994501c293ced573676dac952375e326c0787952714631a2895abb37"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        },
+        {
+          "contract_sha256": "9006d4d31e91ae4d5ae9c672b006bcc694a421e145857e3b71d5bda4d5dab35a",
+          "catalog_sha256": "d7c4769f449f737ff8295a54f7b8d5c6f23f4a614f685389a1f3ef091b67e91e",
+          "sql_sha256": "996a582ce2c162dae89c9eca19d3bbf82cf9ca7edce2eafc32883f8c66d607aa",
+          "contract_id": "task_371",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_netvalueperformancehis', 'chinameabbr')), ('column', ('mf_netvalueperformancehis', 'rrsincestart'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "violated",
+              "detail": "Required mandatory field predicates: []"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "violated",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "SecuAbbr versus ChiNameAbbr is not independently adjudicated"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "191f4b16994501c293ced573676dac952375e326c0787952714631a2895abb37"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_371",
+      "workflow": "B",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "95414fef422673f05963b7b1575e48a2cf1735b46eed9ea9cb812629b904b04e",
+      "query_receipts": [
+        {
+          "contract_sha256": "fa226126454f763fd5ad5e53ccd91611df9f66fe10cb3664f32cb5b28d170bdc",
+          "catalog_sha256": "d7c4769f449f737ff8295a54f7b8d5c6f23f4a614f685389a1f3ef091b67e91e",
+          "sql_sha256": "99216a8f9ce5ed1fd4e9a3312196e6b81e835db25609c9a1ff09b71728f056ff",
+          "contract_id": "task_371",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "violated",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_netvalueperformancehis', 'secuabbr')), ('column', ('mf_netvalueperformancehis', 'rrsincestart'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "met",
+              "detail": "Required mandatory field predicates: []"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "SecuAbbr versus ChiNameAbbr is not independently adjudicated"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "191f4b16994501c293ced573676dac952375e326c0787952714631a2895abb37"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        },
+        {
+          "contract_sha256": "9006d4d31e91ae4d5ae9c672b006bcc694a421e145857e3b71d5bda4d5dab35a",
+          "catalog_sha256": "d7c4769f449f737ff8295a54f7b8d5c6f23f4a614f685389a1f3ef091b67e91e",
+          "sql_sha256": "99216a8f9ce5ed1fd4e9a3312196e6b81e835db25609c9a1ff09b71728f056ff",
+          "contract_id": "task_371",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_netvalueperformancehis', 'chinameabbr')), ('column', ('mf_netvalueperformancehis', 'rrsincestart'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "met",
+              "detail": "Required mandatory field predicates: []"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "SecuAbbr versus ChiNameAbbr is not independently adjudicated"
+            }
+          ],
+          "obligation_status": "unresolved",
+          "release_status": "needs_review",
+          "source_roots": [
+            "191f4b16994501c293ced573676dac952375e326c0787952714631a2895abb37"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_371",
+      "workflow": "AA",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "54f87c056320a9c0ddfca2f3ebf9129dfb934f054949e4ddb5b70350e9e0ebcf",
+      "query_receipts": [
+        {
+          "contract_sha256": "fa226126454f763fd5ad5e53ccd91611df9f66fe10cb3664f32cb5b28d170bdc",
+          "catalog_sha256": "d7c4769f449f737ff8295a54f7b8d5c6f23f4a614f685389a1f3ef091b67e91e",
+          "sql_sha256": "996a582ce2c162dae89c9eca19d3bbf82cf9ca7edce2eafc32883f8c66d607aa",
+          "contract_id": "task_371",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "violated",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_netvalueperformancehis', 'secuabbr')), ('column', ('mf_netvalueperformancehis', 'rrsincestart'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "violated",
+              "detail": "Required mandatory field predicates: []"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "violated",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "SecuAbbr versus ChiNameAbbr is not independently adjudicated"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "191f4b16994501c293ced573676dac952375e326c0787952714631a2895abb37"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        },
+        {
+          "contract_sha256": "9006d4d31e91ae4d5ae9c672b006bcc694a421e145857e3b71d5bda4d5dab35a",
+          "catalog_sha256": "d7c4769f449f737ff8295a54f7b8d5c6f23f4a614f685389a1f3ef091b67e91e",
+          "sql_sha256": "996a582ce2c162dae89c9eca19d3bbf82cf9ca7edce2eafc32883f8c66d607aa",
+          "contract_id": "task_371",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_netvalueperformancehis', 'chinameabbr')), ('column', ('mf_netvalueperformancehis', 'rrsincestart'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "violated",
+              "detail": "Required mandatory field predicates: []"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "violated",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "SecuAbbr versus ChiNameAbbr is not independently adjudicated"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "191f4b16994501c293ced573676dac952375e326c0787952714631a2895abb37"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_371",
+      "workflow": "BB",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "5dc3983a99f225c525cbf63fcf69f6fbcd72a39d12538208bbbed8daa2fbd63d",
+      "query_receipts": [
+        {
+          "contract_sha256": "fa226126454f763fd5ad5e53ccd91611df9f66fe10cb3664f32cb5b28d170bdc",
+          "catalog_sha256": "d7c4769f449f737ff8295a54f7b8d5c6f23f4a614f685389a1f3ef091b67e91e",
+          "sql_sha256": "99216a8f9ce5ed1fd4e9a3312196e6b81e835db25609c9a1ff09b71728f056ff",
+          "contract_id": "task_371",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "violated",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_netvalueperformancehis', 'secuabbr')), ('column', ('mf_netvalueperformancehis', 'rrsincestart'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "met",
+              "detail": "Required mandatory field predicates: []"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "SecuAbbr versus ChiNameAbbr is not independently adjudicated"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "191f4b16994501c293ced573676dac952375e326c0787952714631a2895abb37"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        },
+        {
+          "contract_sha256": "9006d4d31e91ae4d5ae9c672b006bcc694a421e145857e3b71d5bda4d5dab35a",
+          "catalog_sha256": "d7c4769f449f737ff8295a54f7b8d5c6f23f4a614f685389a1f3ef091b67e91e",
+          "sql_sha256": "99216a8f9ce5ed1fd4e9a3312196e6b81e835db25609c9a1ff09b71728f056ff",
+          "contract_id": "task_371",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_netvalueperformancehis', 'chinameabbr')), ('column', ('mf_netvalueperformancehis', 'rrsincestart'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "met",
+              "detail": "Required mandatory field predicates: []"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "SecuAbbr versus ChiNameAbbr is not independently adjudicated"
+            }
+          ],
+          "obligation_status": "unresolved",
+          "release_status": "needs_review",
+          "source_roots": [
+            "191f4b16994501c293ced573676dac952375e326c0787952714631a2895abb37"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_371",
+      "workflow": "AB",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "eba88736804d5207a0c42df690c4ae9a7c666506f672fbe2fd1f4a28f9ded74e",
+      "query_receipts": [
+        {
+          "contract_sha256": "fa226126454f763fd5ad5e53ccd91611df9f66fe10cb3664f32cb5b28d170bdc",
+          "catalog_sha256": "d7c4769f449f737ff8295a54f7b8d5c6f23f4a614f685389a1f3ef091b67e91e",
+          "sql_sha256": "996a582ce2c162dae89c9eca19d3bbf82cf9ca7edce2eafc32883f8c66d607aa",
+          "contract_id": "task_371",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "violated",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_netvalueperformancehis', 'secuabbr')), ('column', ('mf_netvalueperformancehis', 'rrsincestart'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "violated",
+              "detail": "Required mandatory field predicates: []"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "violated",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "SecuAbbr versus ChiNameAbbr is not independently adjudicated"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "191f4b16994501c293ced573676dac952375e326c0787952714631a2895abb37"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        },
+        {
+          "contract_sha256": "9006d4d31e91ae4d5ae9c672b006bcc694a421e145857e3b71d5bda4d5dab35a",
+          "catalog_sha256": "d7c4769f449f737ff8295a54f7b8d5c6f23f4a614f685389a1f3ef091b67e91e",
+          "sql_sha256": "996a582ce2c162dae89c9eca19d3bbf82cf9ca7edce2eafc32883f8c66d607aa",
+          "contract_id": "task_371",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_netvalueperformancehis', 'chinameabbr')), ('column', ('mf_netvalueperformancehis', 'rrsincestart'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "violated",
+              "detail": "Required mandatory field predicates: []"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "violated",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "SecuAbbr versus ChiNameAbbr is not independently adjudicated"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "191f4b16994501c293ced573676dac952375e326c0787952714631a2895abb37"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_371",
+      "workflow": "BA",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "28d1374749f054ca8af1911b1556619c27d3d7ea184ab95859c4bb7c187d9aa1",
+      "query_receipts": [
+        {
+          "contract_sha256": "fa226126454f763fd5ad5e53ccd91611df9f66fe10cb3664f32cb5b28d170bdc",
+          "catalog_sha256": "d7c4769f449f737ff8295a54f7b8d5c6f23f4a614f685389a1f3ef091b67e91e",
+          "sql_sha256": "99216a8f9ce5ed1fd4e9a3312196e6b81e835db25609c9a1ff09b71728f056ff",
+          "contract_id": "task_371",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "violated",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_netvalueperformancehis', 'secuabbr')), ('column', ('mf_netvalueperformancehis', 'rrsincestart'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "met",
+              "detail": "Required mandatory field predicates: []"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "SecuAbbr versus ChiNameAbbr is not independently adjudicated"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "191f4b16994501c293ced573676dac952375e326c0787952714631a2895abb37"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        },
+        {
+          "contract_sha256": "9006d4d31e91ae4d5ae9c672b006bcc694a421e145857e3b71d5bda4d5dab35a",
+          "catalog_sha256": "d7c4769f449f737ff8295a54f7b8d5c6f23f4a614f685389a1f3ef091b67e91e",
+          "sql_sha256": "99216a8f9ce5ed1fd4e9a3312196e6b81e835db25609c9a1ff09b71728f056ff",
+          "contract_id": "task_371",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "met",
+              "detail": "Expected explicit source/operator outputs: [('column', ('mf_netvalueperformancehis', 'chinameabbr')), ('column', ('mf_netvalueperformancehis', 'rrsincestart'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "met",
+              "detail": "Required mandatory field predicates: []"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "SecuAbbr versus ChiNameAbbr is not independently adjudicated"
+            }
+          ],
+          "obligation_status": "unresolved",
+          "release_status": "needs_review",
+          "source_roots": [
+            "191f4b16994501c293ced573676dac952375e326c0787952714631a2895abb37"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_44",
+      "workflow": "A",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "eace63b622e2ef0425a3f740d3e45df137424418fb7d083f88418773542826ff",
+      "query_receipts": [
+        {
+          "contract_sha256": "224a23c85433a8109a48d05834664099c08f468edd6947dfdcf5bfbea173462a",
+          "catalog_sha256": "3d3a230d2e182713d8e27ce9aad2ec2f21bf6be8708348cd232791148d42fb0a",
+          "sql_sha256": "9d3a99a3c2ba368621fe453e0b0dbb869687bc71942018a9cc7394c9c11ffab0",
+          "contract_id": "task_44",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "violated",
+              "detail": "Expected explicit source/operator outputs: [('column', ('treatment', 'treatmentname'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "met",
+              "detail": "Required mandatory field predicates: [(('treatment', 'patientunitstayid'), 'eq', ('number', '2602861'))]"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "Patient ID mapping and latest timestamp need separate source-bound verification"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "f542291d234372222303aed40537a277c0a93225cffe4a3a6e8bee7b17f9baa2"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_44",
+      "workflow": "B",
+      "kind": "no_final_artifact",
+      "trajectory_sha256": "7d453d079001c2a9d7c37ea18db0f6bbbd071ffdd828ab94ac3171ef6b690748",
+      "query_receipts": [],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_44",
+      "workflow": "AA",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "9d312db099d9561dbff07628cc8e52c0bccb59adc094962c6bba00f8b8e0f9ae",
+      "query_receipts": [
+        {
+          "contract_sha256": "224a23c85433a8109a48d05834664099c08f468edd6947dfdcf5bfbea173462a",
+          "catalog_sha256": "3d3a230d2e182713d8e27ce9aad2ec2f21bf6be8708348cd232791148d42fb0a",
+          "sql_sha256": "9d3a99a3c2ba368621fe453e0b0dbb869687bc71942018a9cc7394c9c11ffab0",
+          "contract_id": "task_44",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "violated",
+              "detail": "Expected explicit source/operator outputs: [('column', ('treatment', 'treatmentname'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "met",
+              "detail": "Required mandatory field predicates: [(('treatment', 'patientunitstayid'), 'eq', ('number', '2602861'))]"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "Patient ID mapping and latest timestamp need separate source-bound verification"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "f542291d234372222303aed40537a277c0a93225cffe4a3a6e8bee7b17f9baa2"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_44",
+      "workflow": "BB",
+      "kind": "no_final_artifact",
+      "trajectory_sha256": "7f247e6eafc262273290f4724ade14185550bdf92af6e47cb9e4951f844196db",
+      "query_receipts": [],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_44",
+      "workflow": "AB",
+      "kind": "sql_artifact",
+      "trajectory_sha256": "a36d21ee64b3a5a9f22fc5ef4ef740e71c8d433615bf1681f24b392a640b977a",
+      "query_receipts": [
+        {
+          "contract_sha256": "224a23c85433a8109a48d05834664099c08f468edd6947dfdcf5bfbea173462a",
+          "catalog_sha256": "3d3a230d2e182713d8e27ce9aad2ec2f21bf6be8708348cd232791148d42fb0a",
+          "sql_sha256": "9d3a99a3c2ba368621fe453e0b0dbb869687bc71942018a9cc7394c9c11ffab0",
+          "contract_id": "task_44",
+          "authority_ref": "Developer-authored source/task interpretation, NOT independent human adjudication",
+          "approval": "development_only",
+          "checks": [
+            {
+              "id": "source_bindings",
+              "status": "met",
+              "detail": "All checked identifiers resolve in caller-owned catalog"
+            },
+            {
+              "id": "output_bindings",
+              "status": "violated",
+              "detail": "Expected explicit source/operator outputs: [('column', ('treatment', 'treatmentname'))]"
+            },
+            {
+              "id": "filter_bindings",
+              "status": "met",
+              "detail": "Required mandatory field predicates: [(('treatment', 'patientunitstayid'), 'eq', ('number', '2602861'))]"
+            },
+            {
+              "id": "join_bindings",
+              "status": "met",
+              "detail": "Only the declared equality join relationships are checked; cardinality semantics not certified"
+            },
+            {
+              "id": "grouping",
+              "status": "met",
+              "detail": "Grouping key obligations"
+            },
+            {
+              "id": "ordering",
+              "status": "met",
+              "detail": "Requested ordering, if specified"
+            },
+            {
+              "id": "multiplicity",
+              "status": "met",
+              "detail": "DISTINCT presence only; join multiplicity not certified"
+            },
+            {
+              "id": "limit",
+              "status": "met",
+              "detail": "No silent LIMIT when full output is required"
+            },
+            {
+              "id": "task_interpretation",
+              "status": "unresolved",
+              "detail": "Patient ID mapping and latest timestamp need separate source-bound verification"
+            }
+          ],
+          "obligation_status": "violated",
+          "release_status": "needs_review",
+          "source_roots": [
+            "f542291d234372222303aed40537a277c0a93225cffe4a3a6e8bee7b17f9baa2"
+          ],
+          "checker_version": "relational_obligations_v1",
+          "parser_version": "30.30.0",
+          "execution_verified": false,
+          "semantic_truth_certified": false,
+          "assurance": "Conditional structural obligations only; no NL/SQL-equivalence, row completeness, live-data or business-truth certificate."
+        }
+      ],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_44",
+      "workflow": "BA",
+      "kind": "no_final_artifact",
+      "trajectory_sha256": "3985f3edc73d671f05c4a05b80ff7d783587b3d0e00cffb2db52cfd919477844",
+      "query_receipts": [],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_35",
+      "workflow": "A",
+      "kind": "no_final_artifact",
+      "trajectory_sha256": "96506c84e399e2f440de22f32109f6a865581151110de88fe0fdfb73c9daceb6",
+      "query_receipts": [],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_35",
+      "workflow": "B",
+      "kind": "no_final_artifact",
+      "trajectory_sha256": "718f143c2036eeec8910eec3329c74a9a5e4740fe6a1439852f3a234f3a088b9",
+      "query_receipts": [],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_35",
+      "workflow": "AA",
+      "kind": "non_sql_assertion",
+      "trajectory_sha256": "44b767e2808b88dbe866bb2049bc867a23e6e3ea095ac7b7584b26963923b740",
+      "query_receipts": [],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_35",
+      "workflow": "BB",
+      "kind": "no_final_artifact",
+      "trajectory_sha256": "00dab9db269c20a29ab01ed635ae88090e653d85bd927b340955b4e3d296aa7d",
+      "query_receipts": [],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_35",
+      "workflow": "AB",
+      "kind": "non_sql_assertion",
+      "trajectory_sha256": "26f7ed81aa8fba6418ae804600186a7909d2cef1dd2ca4c3edf9c9c6dffb9902",
+      "query_receipts": [],
+      "deployment_release_claim": false
+    },
+    {
+      "task_id": "task_35",
+      "workflow": "BA",
+      "kind": "non_sql_assertion",
+      "trajectory_sha256": "3d630f22624188784f355062d2cdb442797c21f03552a80be73aeb27d123693f",
+      "query_receipts": [],
+      "deployment_release_claim": false
+    }
+  ],
+  "scientific_gate": "NOT_OPENED",
+  "history_fitted": false,
+  "known_limitations": [
+    "Posthoc developer contracts",
+    "No independent semantic labels",
+    "Flat SELECT subset only",
+    "No universal SQL equivalence or NL/PDF verification",
+    "No measured human/product/transfer utility",
+    "No gold values required by checker; contract formation cost still external"
+  ]
+}

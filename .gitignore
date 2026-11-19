@@ -43,6 +43,7 @@ outputs/
 results/
 logs/*.jsonl
 wandb/
+tmp/
 
 # ----- Type Checking & Linting -----
 .mypy_cache/

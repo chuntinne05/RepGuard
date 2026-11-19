@@ -1,13 +1,91 @@
-# RepGuard: Evidence-Calibrated Reputation Transfer under Imperfect Feedback in Multi-Agent LLM Systems
+# RepGuard: Evidence-Grounded Verification in Multi-Agent Workflows
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://python.org)
 
 ## Overview
 
-**RepGuard** studies how multi-agent LLM systems should convert imperfect historical feedback into task-relevant teammate reputation. It proposes **Evidence-Calibrated Reputation Transfer (ECRT)**, which distinguishes *whether historical evidence is trustworthy* from *whether it is relevant to the current task* before allowing that evidence to influence team decisions.
+**RepGuard** studies evidence-grounded verification and revision in multi-agent
+analytical workflows. The current development direction covers structured
+numerical claims and execution states in data analysis, research reporting and
+financial reporting. Cross-workload effectiveness and user benefit remain unproven.
 
-### Latest research update (2026-10-20)
+The original ECRT/DART reputation research, frozen experiments and negative
+results are retained. History learning remains gated on demonstrated action
+utility. The working direction is not a newly approved thesis title or a claim
+of a novel general verification method.
+
+### Latest research update (2026-11-09)
+
+**Relational v5 development:** [source/operator obligations and handoff re-audits](src/repguard/verification/RELATIONAL.md)
+are implemented with29new tests and87scoped regression tests passing.
+All36old v4trajectories were included in post-hoc development analysis;
+all20final SQL queries were re-executed, reproducing20/20historical output bytes.
+This is reproducibility, not20correct tasks or a new method win. No new model
+calls or human labels were added. External SpecBridge preparation separates
+204upstream-accepted tasks across12databases into45development/67validation/
+92reserved tasks; only3development DBs downloaded, no cached model outputs or
+new benchmark score. See [V5 strategy and contribution targets](docs/reports/2026-11-09/RESEARCH_STRATEGY_V5_VA_CONTRIBUTIONS.md)
+and [implementation results/limits](docs/reports/2026-11-09/RELATIONAL_V5_RESULTS_VA_QUYET_DINH.md).
+
+**Workspace engineering pilot completed:**113 real model calls produced36
+trajectories across6DataSpace development tasks (one question amended).
+The composite diagnostic scores A/B/AA/BB/AB/BA are1/1/2/1/2/2 out of6;
+all three rescues occur on one PDF task and self-Qwen also succeeds.
+The original six-task run was interrupted after42calls by a cross-SQLite
+numeric parsing mismatch; a registered adapter recovery completed the remaining
+four tasks in71calls without regenerating earlier answers. No pooled scientific
+primary, method win, transfer confirmation or history learning is claimed.
+Receipt audits pass;33tools/trajectory/offline-audit tests pass.13trajectories
+lack a final artifact,14submitted tables fail strict relation scoring, and
+post-hoc column/abbreviation flags require semantic review. All four apps from
+this intake/pilot are stopped/0tasks. See the [results and next path](docs/reports/2026-11-09/WORKSPACE_V4_RESULTS_VA_PATH_TIEP.md),
+[primary-source literature review](docs/reports/2026-11-09/WORKSPACE_V4_LITERATURE_VA_RESEARCH_QUESTION.md)
+and [protocol/amendments](docs/reports/2026-11-09/WORKSPACE_V4_PROTOCOL_VA_RESEARCH_UPDATE.md).
+Independent human annotations and recruited users remain0; the strong frontier
+single-agent baseline is missing because the tested Gemini endpoint has quota0.
+
+**Cross-workload implementation:** a new [structured verification core](src/repguard/verification/README.md)
+checks caller-approved scope, explicit unit conversions, source conflicts and
+validity, with JSON/CSV adapters and one optional reviewer callback. **25new
+kernel tests pass.**38synthetic cases,5recorded claims from real artifacts and
+2controlled mutations exercise functionality; these are not model/benchmark
+accuracy results. No model calls or user validation were added in that earlier
+kernel step; the workspace pilot above is separate and does not establish
+the kernel's research effectiveness. See the [working direction and staged plan](docs/reports/2026-11-09/DINH_HUONG_MO_RONG_VA_KE_HOACH_V3.md).
+
+
+**Follow-up completed:** ARQA cycle02 collected **288 real responses on24
+connected source groups**. Checklist cross-vs-self is **+2.08pp,95%CI
+[-4.17,+8.33]pp**; its frozen expansion gate fails. Receipt/source/parent and
+attempt audits pass;274/288schema-valid,1length stop,0transport errors.
+Source/rounding/unit/scope flags prevent treating this as a validated business
+accuracy conclusion. **No scale/history learning is opened; no study container
+remains running.** See [cycle02 results](docs/reports/2026-11-09/ARQA_CYCLE02_RESULTS_VA_QUYET_DINH.md),
+[oracle findings and next path](docs/reports/2026-11-09/ARQA_CYCLE02_ORACLE_VA_PATH_TIEP.md)
+and [local source receipt + human review](docs/reports/2026-11-09/SOURCE_RECEIPT_VA_HUMAN_REVIEW.md).
+There are0human annotations and0recruited users; discovery and semantic review
+are the next prerequisites. A checker passing arithmetic does not certify meaning.
+
+A prospectively registered standalone evidence-sufficiency pilot completed
+**720 real Qwen/Gemma responses on120 pairs/24 claim groups**. Source, prompt,
+parent-response, model-digest and GPU receipt audits pass;719/720 responses are
+parse-valid and none are length-stopped. The balanced cross-family versus
+self-review contrast is **+2.08 percentage points**, claim-cluster95% CI
+**[−0.42,+4.59]**, below the frozen3-point gate: **scientific FAIL**.
+No history learner was fitted. Qwen→Gemma scores96/120 versus93/120 Qwen
+self-review, but this development result is not a method-superiority claim.
+
+The source contains expert-labelled financial/economic claim–passage pairs,
+not enterprise annual-report verification or joint-evidence truth labels.
+Product/user discovery remains unvalidated. Raw outputs and frozen source are
+retained under ignored `results/verification_v1/`; the original study sources
+and scores are preserved. The bounded pilot app completed and its containers
+were observed empty. See the [cycle01 results and decision](docs/reports/2026-11-09/VERIFICATION_CYCLE01_RESULTS_VA_QUYET_DINH.md),
+[registered protocol](docs/reports/2026-11-09/registered_verification_v1.json),
+and [next-study plan](docs/reports/2026-11-09/NEXT_STUDY_AFTER_CYCLE01.md).
+
+### Previous research update (2026-10-20)
 
 **264 new real responses completed on24 TAT-QA development contexts; both
 studies passed source/receipt/execution audits. No reputation-method win.**

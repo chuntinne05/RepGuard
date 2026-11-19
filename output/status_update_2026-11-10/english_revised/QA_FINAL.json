@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "images": 10,
+  "dimensions": [
+    2560,
+    1440
+  ],
+  "palette": "Every pixel checked: blue hue or achromatic; no green, purple or orange accents",
+  "visual_review": "All10slides inspected individually; final slide spacing revised and re-inspected",
+  "small_caveat_footnotes": "Removed",
+  "minimum_main_prose_size": 23,
+  "chart_values": "Unchanged from original primary results",
+  "zip_integrity": "PASS",
+  "image_hashes": "PASS",
+  "prior_versions_unchanged": true
+}

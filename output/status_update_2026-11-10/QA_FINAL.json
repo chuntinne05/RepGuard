@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "slide_count": 10,
+  "each_image": [
+    2560,
+    1440
+  ],
+  "zip_crc": "PASS",
+  "local_markdown_links": "PASS",
+  "image_hashes": "PASS",
+  "font_glyph_coverage": "PASS",
+  "body_text_before_footer": "PASS",
+  "visual_review": "All10slides reviewed individually; all23reference pages reviewed in contact sheet; reference page3 inspected at larger size",
+  "design": "Reference navy header, three-part footer, Latin Modern Sans, white canvas and cyan triangular background retained; unrelated logos omitted",
+  "content": "Prior Oct28 work excluded from1265 new responses; qualification/replay not called accuracy; V6 development status and missing efficacy/independent reviews explicit",
+  "new_model_calls_for_report": 0
+}
