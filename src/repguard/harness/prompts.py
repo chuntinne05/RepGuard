@@ -111,8 +111,7 @@ def _build_direct_prompt(question: str, options_text: str, num_options: int) -> 
         f"Select the correct answer from the options below.\n\n"
         f"Question: {question}\n\n"
         f"{options_text}\n\n"
-        f"Answer with ONLY the letter of the correct option (A-{max_letter}). "
-        f"Do not include any explanation.\n\n"
+        f"Return only the letter of the correct answer.\n\n"
         f"Answer:"
     )
 

@@ -1,0 +1,37 @@
+{
+  "scope": "This research round only; previous calls/aborted runs not included",
+  "passed": true,
+  "actual_responses_recomputed": 160,
+  "causal_study": 112,
+  "competence_diagnostics": 24,
+  "pot_control": 24,
+  "mock_inference": 0,
+  "unresolved_initiated_calls": 0,
+  "frozen_primary_seven_unchanged": true,
+  "fresh_report_count": 24,
+  "previous100_report_overlap": 0,
+  "prompt_hashes_and_local_execution_match": true,
+  "OOF_profiles_current_case_exclusion_and_replay_recomputed": true,
+  "format_control_recomputed": true,
+  "final_variable_readout_control_recomputed": true,
+  "robust_single_agent_correct": 17,
+  "input_tokens": 600180,
+  "output_tokens": 82290,
+  "done_reason_counts": {
+    "length": 2,
+    "stop": 158
+  },
+  "manifest_sha256": "92d8b63b534ac75d0b05e23bf63fa88b593b39ca18edd4de38a7a9d26999aca6",
+  "causal_scores": {
+    "evidence_repair": 6,
+    "initial": 6,
+    "plan_repair": 6,
+    "self_repair": 6
+  },
+  "competence_scores": {
+    "dsl_native": 3,
+    "numeric_native": 1,
+    "numeric_raw_native": 1
+  },
+  "pot_correct": 14
+}

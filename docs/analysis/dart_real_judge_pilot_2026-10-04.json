@@ -1,0 +1,45 @@
+{
+  "scope": "judge quality pilot, not routing or method superiority",
+  "protocol_hash": "ecd2e4cad72939a6c74f58949c46fe41237bc041f5faf7c949892bf8f9c60478",
+  "pilot_rows_sha256": "37dc2c6cd1ff17ab2d24b66e64c2715788d01ea4990b802644a74df4049af9ea",
+  "rows": 168,
+  "valid": 168,
+  "generators": 53,
+  "positive_labels": 45,
+  "negative_labels": 123,
+  "balanced_accuracy": 0.6962059620596206,
+  "balanced_accuracy_generator_ci95": [
+    0.6405573094061962,
+    0.7521376811594203
+  ],
+  "accuracy": 0.5654761904761905,
+  "brier_score": 0.30851190476190476,
+  "clipped_records": 95,
+  "prompt_tokens": 505853,
+  "output_tokens": 1466,
+  "sum_call_latency_s": 797.6232870430686,
+  "gate_pass": true,
+  "next_stage": "collect_full_frozen_matrix",
+  "no_routing_superiority_claim": true,
+  "additional_descriptive_diagnostics": {
+    "judge": {
+      "true_positive": 44,
+      "false_positive": 72,
+      "true_negative": 51,
+      "false_negative": 1,
+      "balanced_accuracy": 0.6962059620596206,
+      "accuracy": 0.5654761904761905
+    },
+    "self_report": {
+      "true_positive": 45,
+      "false_positive": 73,
+      "true_negative": 50,
+      "false_negative": 0,
+      "balanced_accuracy": 0.7032520325203252,
+      "accuracy": 0.5654761904761905
+    },
+    "all_failure_accuracy": 0.7321428571428571,
+    "label_prevalence_constant_brier_diagnostic": 0.19610969387755106,
+    "scope": "descriptive only; same preselected 168 records; no new tuning or routing claim"
+  }
+}

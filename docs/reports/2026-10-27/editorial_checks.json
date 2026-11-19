@@ -1,0 +1,29 @@
+{
+  "local_markdown_links_pass": true,
+  "reference_count": 49,
+  "primary_source_domains": [
+    "aclanthology.org",
+    "arxiv.org",
+    "proceedings.iclr.cc",
+    "proceedings.mlr.press",
+    "proceedings.neurips.cc",
+    "proceedings.nips.cc",
+    "www.mn.uio.no"
+  ],
+  "slide_count": 22,
+  "qa_question_count": 22,
+  "documents": [
+    {
+      "name": "REPGUARD_LITERATURE_REVIEW_VA_BAO_CAO_TIEN_DO.md",
+      "characters": 111416,
+      "whitespace_words": 18474,
+      "sha256": "e527246b0781d0211ab5b4c1980791e66e7b9ec4fc2df2ac5ed9edea703f1711"
+    },
+    {
+      "name": "SLIDE_OUTLINE_VA_CAU_HOI_BAO_VE.md",
+      "characters": 22720,
+      "whitespace_words": 3880,
+      "sha256": "c03fcecb4a589b927459c7f9e2b5f440d819423a30bead84b304a5f1acbfe1b4"
+    }
+  ]
+}

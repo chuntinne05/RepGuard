@@ -1,0 +1,412 @@
+{
+  "scope": "Source-only checks on24 actual initial outputs; no inference; no retroactive v1 score edits",
+  "n": 24,
+  "rows": [
+    {
+      "id": "SYY/2014/page_16.pdf-1",
+      "integrity": {
+        "errors": [],
+        "warnings": [],
+        "final_source_dependencies": [
+          "T1C2@0",
+          "T1C3@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "LMT/2002/page_33.pdf-3",
+      "integrity": {
+        "errors": [],
+        "warnings": [],
+        "final_source_dependencies": [
+          "T1C1@0",
+          "T2C1@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "HOLX/2007/page_127.pdf-1",
+      "integrity": {
+        "errors": [],
+        "warnings": [],
+        "final_source_dependencies": [
+          "T6C1@0",
+          "T7C1@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "MAS/2012/page_92.pdf-2",
+      "integrity": {
+        "errors": [],
+        "warnings": [
+          "possible_duplicate_percent_or_scale_conversion"
+        ],
+        "final_source_dependencies": [
+          "T6C1@0",
+          "T6C2@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "IPG/2006/page_41.pdf-2",
+      "integrity": {
+        "errors": [
+          "forward_or_invalid_step_reference"
+        ],
+        "warnings": [],
+        "final_source_dependencies": [],
+        "used_steps": []
+      }
+    },
+    {
+      "id": "LKQ/2009/page_77.pdf-1",
+      "integrity": {
+        "errors": [],
+        "warnings": [
+          "possible_duplicate_percent_or_scale_conversion"
+        ],
+        "final_source_dependencies": [
+          "Q0@1",
+          "Q0@2"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "HWM/2017/page_77.pdf-2",
+      "integrity": {
+        "errors": [
+          "result_has_no_evidence_dependency"
+        ],
+        "warnings": [
+          "source_lookups_unused_by_result"
+        ],
+        "final_source_dependencies": [],
+        "used_steps": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "MAR/2005/page_52.pdf-2",
+      "integrity": {
+        "errors": [],
+        "warnings": [],
+        "final_source_dependencies": [
+          "T1C3@0",
+          "T1C4@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "FRT/2007/page_137.pdf-1",
+      "integrity": {
+        "errors": [],
+        "warnings": [],
+        "final_source_dependencies": [
+          "T4C1@0",
+          "T7C1@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "AAP/2006/page_85.pdf-3",
+      "integrity": {
+        "errors": [],
+        "warnings": [],
+        "final_source_dependencies": [
+          "P6@0"
+        ],
+        "used_steps": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "EW/2017/page_83.pdf-2",
+      "integrity": {
+        "errors": [],
+        "warnings": [
+          "possible_duplicate_percent_or_scale_conversion"
+        ],
+        "final_source_dependencies": [
+          "P7@0",
+          "T0C1@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "ILMN/2007/page_84.pdf-1",
+      "integrity": {
+        "errors": [],
+        "warnings": [],
+        "final_source_dependencies": [
+          "T11C1@0",
+          "T11C2@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "LMT/2014/page_93.pdf-1",
+      "integrity": {
+        "errors": [],
+        "warnings": [
+          "possible_duplicate_percent_or_scale_conversion"
+        ],
+        "final_source_dependencies": [
+          "P0@5",
+          "P0@7"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "WRK/2018/page_106.pdf-1",
+      "integrity": {
+        "errors": [],
+        "warnings": [
+          "possible_duplicate_percent_or_scale_conversion"
+        ],
+        "final_source_dependencies": [
+          "T1C1@0",
+          "T1C3@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "LLY/2008/page_45.pdf-2",
+      "integrity": {
+        "errors": [],
+        "warnings": [
+          "possible_duplicate_percent_or_scale_conversion"
+        ],
+        "final_source_dependencies": [
+          "T2C1@0",
+          "T8C1@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "DVN/2011/page_26.pdf-3",
+      "integrity": {
+        "errors": [],
+        "warnings": [
+          "possible_duplicate_percent_or_scale_conversion"
+        ],
+        "final_source_dependencies": [
+          "T1C1@0",
+          "T4C1@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "AAPL/2006/page_93.pdf-1",
+      "integrity": {
+        "errors": [],
+        "warnings": [],
+        "final_source_dependencies": [
+          "T4C1@0",
+          "T4C2@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "APTV/2014/page_46.pdf-2",
+      "integrity": {
+        "errors": [],
+        "warnings": [
+          "possible_duplicate_percent_or_scale_conversion"
+        ],
+        "final_source_dependencies": [
+          "T5C3@0",
+          "T5C5@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "HFC/2017/page_103.pdf-1",
+      "integrity": {
+        "errors": [],
+        "warnings": [
+          "possible_duplicate_percent_or_scale_conversion"
+        ],
+        "final_source_dependencies": [
+          "T6C1@0",
+          "T7C1@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "TFX/2014/page_44.pdf-4",
+      "integrity": {
+        "errors": [],
+        "warnings": [
+          "possible_duplicate_percent_or_scale_conversion"
+        ],
+        "final_source_dependencies": [
+          "T2C2@0",
+          "T2C6@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "DISH/2002/page_94.pdf-4",
+      "integrity": {
+        "errors": [],
+        "warnings": [],
+        "final_source_dependencies": [
+          "Q1@3",
+          "T6C1@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "UPS/2015/page_108.pdf-1",
+      "integrity": {
+        "errors": [],
+        "warnings": [],
+        "final_source_dependencies": [
+          "T5C1@0",
+          "T5C2@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "MAA/2015/page_56.pdf-2",
+      "integrity": {
+        "errors": [],
+        "warnings": [],
+        "final_source_dependencies": [
+          "T1C4@0",
+          "T2C4@0"
+        ],
+        "used_steps": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "AMT/2006/page_116.pdf-1",
+      "integrity": {
+        "errors": [
+          "no_answer_program"
+        ],
+        "warnings": [],
+        "final_source_dependencies": [],
+        "used_steps": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "scope": "Development semantic flag; not independent adjudication or primary relabel",
+  "case_id": "WRK/2018/page_106.pdf-1",
+  "question": "by what percent did the balance of deferred tax assets increase between 2016 and 2018?",
+  "source_pre_text_index": 7,
+  "source_description": "the following table represents a summary of the valuation allowances against deferred tax assets for fiscal 2018 , 2017 and 2016 ( in millions ) : .",
+  "question_metric": "deferred tax assets",
+  "table_metric": "valuation allowances against deferred tax assets",
+  "observation": "Both new self-review calls explicitly abstain because the table describes valuation allowances, while the official target uses the balance-row arithmetic. Mechanical-invalid/abstention fallback retains previous PoT output. Official score preserved.",
+  "research_implication": "Source-reference existence and agreement with benchmark target do not certify metric identity. Do not penalize honest semantic refusal as model incapacity without human adjudication.",
+  "independent_human_reviews_completed": 0,
+  "source_file_sha256": "9fa7edfe390db17295b16c82db8af95a72831ac9deb317eee095a2bd8df059dd"
+}

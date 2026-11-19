@@ -1,0 +1,135 @@
+{
+  "scope": "Exploratory pre-analysis after inspecting cheap development outputs, before opening newly collected PoT outputs. NOT preregistration before all model generation and NOT independent confirmation.",
+  "history_fit_gate": {
+    "pass": true,
+    "regen_rescues": 5,
+    "regen_harms": 1
+  },
+  "real_responses_used": 48,
+  "new_model_calls": 0,
+  "current_case_gold_excluded_from_OOF_training": true,
+  "methods": {
+    "cheap": {
+      "correct": 12,
+      "n": 24,
+      "mean_model_calls": 1.0,
+      "mean_ollama_eval_seconds": 11.238181916583335,
+      "accuracy_diff_vs_direct_pot": -0.08333333333333333,
+      "paired_bootstrap_diff_ci95": [
+        -0.2916666666666667,
+        0.125
+      ],
+      "rescue_vs_direct_pot": 3,
+      "harm_vs_direct_pot": 5,
+      "harm_probability_exact_upper95": 0.3891393473598982,
+      "compute_ratio_vs_direct_pot": 0.23877526053268694,
+      "paired_compute_ratio_ci95": [
+        0.19615756173101104,
+        0.3007851302592378
+      ]
+    },
+    "direct_pot": {
+      "correct": 14,
+      "n": 24,
+      "mean_model_calls": 1.0,
+      "mean_ollama_eval_seconds": 47.065939291666666,
+      "accuracy_diff_vs_direct_pot": 0.0,
+      "paired_bootstrap_diff_ci95": [
+        0.0,
+        0.0
+      ],
+      "rescue_vs_direct_pot": 0,
+      "harm_vs_direct_pot": 0,
+      "harm_probability_exact_upper95": 0.11734615615494876,
+      "compute_ratio_vs_direct_pot": 1.0,
+      "paired_compute_ratio_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "always_regenerate_with_fallback": {
+      "correct": 16,
+      "n": 24,
+      "mean_model_calls": 2.0,
+      "mean_ollama_eval_seconds": 58.30412120825,
+      "accuracy_diff_vs_direct_pot": 0.08333333333333333,
+      "paired_bootstrap_diff_ci95": [
+        0.0,
+        0.20833333333333334
+      ],
+      "rescue_vs_direct_pot": 2,
+      "harm_vs_direct_pot": 0,
+      "harm_probability_exact_upper95": 0.11734615615494876,
+      "compute_ratio_vs_direct_pot": 1.238775260532687,
+      "paired_compute_ratio_ci95": [
+        1.196157561731011,
+        1.3007851302592375
+      ]
+    },
+    "rule_guard_only": {
+      "correct": 13,
+      "n": 24,
+      "mean_model_calls": 1.125,
+      "mean_ollama_eval_seconds": 18.298790541583333,
+      "accuracy_diff_vs_direct_pot": -0.041666666666666664,
+      "paired_bootstrap_diff_ci95": [
+        -0.25,
+        0.16666666666666666
+      ],
+      "rescue_vs_direct_pot": 3,
+      "harm_vs_direct_pot": 4,
+      "harm_probability_exact_upper95": 0.34180734940411617,
+      "compute_ratio_vs_direct_pot": 0.38879051001587583,
+      "paired_compute_ratio_ci95": [
+        0.23601677110625938,
+        0.5896285486086467
+      ]
+    },
+    "oof_global_history": {
+      "correct": 16,
+      "n": 24,
+      "mean_model_calls": 2.0,
+      "mean_ollama_eval_seconds": 58.30412120825,
+      "accuracy_diff_vs_direct_pot": 0.08333333333333333,
+      "paired_bootstrap_diff_ci95": [
+        0.0,
+        0.20833333333333334
+      ],
+      "rescue_vs_direct_pot": 2,
+      "harm_vs_direct_pot": 0,
+      "harm_probability_exact_upper95": 0.11734615615494876,
+      "compute_ratio_vs_direct_pot": 1.238775260532687,
+      "paired_compute_ratio_ci95": [
+        1.196157561731011,
+        1.3007851302592375
+      ]
+    },
+    "oof_local_history": {
+      "correct": 16,
+      "n": 24,
+      "mean_model_calls": 1.9166666666666667,
+      "mean_ollama_eval_seconds": 53.455143374916666,
+      "accuracy_diff_vs_direct_pot": 0.08333333333333333,
+      "paired_bootstrap_diff_ci95": [
+        -0.08333333333333333,
+        0.25
+      ],
+      "rescue_vs_direct_pot": 3,
+      "harm_vs_direct_pot": 1,
+      "harm_probability_exact_upper95": 0.18289246975564638,
+      "compute_ratio_vs_direct_pot": 1.1357500600095587,
+      "paired_compute_ratio_ci95": [
+        0.9619315862671085,
+        1.2726140839712716
+      ]
+    }
+  },
+  "independent_confirmation": false,
+  "live_policy_tested": false,
+  "ni_margin": 0.02,
+  "zero_harm_upper95_at_n24": 0.11734615615494876,
+  "source_sha256": "4eaf96cfee5774edc43af853cbc1454521b6714e20dafc866a13c675c590f31e",
+  "helper_sha256": {
+    "repguard_unit_failure_diagnostic.py": "381dcd983ffe35d6c2260295d2adbe48e33d91550542d621e787bb163c1ab474"
+  }
+}

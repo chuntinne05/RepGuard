@@ -1,0 +1,240 @@
+{
+  "plan_id": "deaee6167f9609bd2f045f46",
+  "receipt_audit": "PASS",
+  "calls": 288,
+  "metrics": {
+    "standard/A": {
+      "correct": 16,
+      "n": 24,
+      "numeric_correct": 18,
+      "valid": 24,
+      "binding_filter_accepted": 24,
+      "wrong_among_binding_accepted": 8,
+      "binding_filter_risk": 0.3333333333333333,
+      "terminal_input_tokens": 29398,
+      "terminal_output_tokens": 5903,
+      "mean_terminal_serving_seconds": 10.662863942333333,
+      "workflow_calls_per_item": 1,
+      "workflow_input_tokens": 29398,
+      "workflow_output_tokens": 5903,
+      "mean_workflow_serving_seconds": 10.662863942333333
+    },
+    "standard/B": {
+      "correct": 13,
+      "n": 24,
+      "numeric_correct": 14,
+      "valid": 21,
+      "binding_filter_accepted": 14,
+      "wrong_among_binding_accepted": 2,
+      "binding_filter_risk": 0.14285714285714285,
+      "terminal_input_tokens": 30633,
+      "terminal_output_tokens": 8689,
+      "mean_terminal_serving_seconds": 8.438559128750004,
+      "workflow_calls_per_item": 1,
+      "workflow_input_tokens": 30633,
+      "workflow_output_tokens": 8689,
+      "mean_workflow_serving_seconds": 8.438559128750004
+    },
+    "standard/AA": {
+      "correct": 15,
+      "n": 24,
+      "numeric_correct": 17,
+      "valid": 24,
+      "binding_filter_accepted": 23,
+      "wrong_among_binding_accepted": 8,
+      "binding_filter_risk": 0.34782608695652173,
+      "terminal_input_tokens": 36230,
+      "terminal_output_tokens": 5691,
+      "mean_terminal_serving_seconds": 7.388687927541667,
+      "workflow_calls_per_item": 2,
+      "workflow_input_tokens": 65628,
+      "workflow_output_tokens": 11594,
+      "mean_workflow_serving_seconds": 18.051551869874995
+    },
+    "standard/BB": {
+      "correct": 16,
+      "n": 24,
+      "numeric_correct": 17,
+      "valid": 21,
+      "binding_filter_accepted": 18,
+      "wrong_among_binding_accepted": 2,
+      "binding_filter_risk": 0.1111111111111111,
+      "terminal_input_tokens": 40358,
+      "terminal_output_tokens": 6131,
+      "mean_terminal_serving_seconds": 2.301577090291667,
+      "workflow_calls_per_item": 2,
+      "workflow_input_tokens": 70991,
+      "workflow_output_tokens": 14820,
+      "mean_workflow_serving_seconds": 10.740136219041672
+    },
+    "standard/AB": {
+      "correct": 16,
+      "n": 24,
+      "numeric_correct": 18,
+      "valid": 24,
+      "binding_filter_accepted": 22,
+      "wrong_among_binding_accepted": 7,
+      "binding_filter_risk": 0.3181818181818182,
+      "terminal_input_tokens": 37562,
+      "terminal_output_tokens": 5359,
+      "mean_terminal_serving_seconds": 2.321294549958334,
+      "workflow_calls_per_item": 2,
+      "workflow_input_tokens": 66960,
+      "workflow_output_tokens": 11262,
+      "mean_workflow_serving_seconds": 12.984158492291664
+    },
+    "standard/BA": {
+      "correct": 16,
+      "n": 24,
+      "numeric_correct": 17,
+      "valid": 22,
+      "binding_filter_accepted": 19,
+      "wrong_among_binding_accepted": 3,
+      "binding_filter_risk": 0.15789473684210525,
+      "terminal_input_tokens": 38875,
+      "terminal_output_tokens": 6972,
+      "mean_terminal_serving_seconds": 8.8601573695,
+      "workflow_calls_per_item": 2,
+      "workflow_input_tokens": 69508,
+      "workflow_output_tokens": 15661,
+      "mean_workflow_serving_seconds": 17.29871649825
+    },
+    "checklist/A": {
+      "correct": 15,
+      "n": 24,
+      "numeric_correct": 16,
+      "valid": 24,
+      "binding_filter_accepted": 21,
+      "wrong_among_binding_accepted": 6,
+      "binding_filter_risk": 0.2857142857142857,
+      "terminal_input_tokens": 31270,
+      "terminal_output_tokens": 6435,
+      "mean_terminal_serving_seconds": 8.051003566208333,
+      "workflow_calls_per_item": 1,
+      "workflow_input_tokens": 31270,
+      "workflow_output_tokens": 6435,
+      "mean_workflow_serving_seconds": 8.051003566208333
+    },
+    "checklist/B": {
+      "correct": 13,
+      "n": 24,
+      "numeric_correct": 14,
+      "valid": 22,
+      "binding_filter_accepted": 15,
+      "wrong_among_binding_accepted": 2,
+      "binding_filter_risk": 0.13333333333333333,
+      "terminal_input_tokens": 32529,
+      "terminal_output_tokens": 7583,
+      "mean_terminal_serving_seconds": 2.9194298947499995,
+      "workflow_calls_per_item": 1,
+      "workflow_input_tokens": 32529,
+      "workflow_output_tokens": 7583,
+      "mean_workflow_serving_seconds": 2.9194298947499995
+    },
+    "checklist/AA": {
+      "correct": 14,
+      "n": 24,
+      "numeric_correct": 14,
+      "valid": 24,
+      "binding_filter_accepted": 19,
+      "wrong_among_binding_accepted": 5,
+      "binding_filter_risk": 0.2631578947368421,
+      "terminal_input_tokens": 38626,
+      "terminal_output_tokens": 6415,
+      "mean_terminal_serving_seconds": 8.209938359541667,
+      "workflow_calls_per_item": 2,
+      "workflow_input_tokens": 69896,
+      "workflow_output_tokens": 12850,
+      "mean_workflow_serving_seconds": 16.26094192575
+    },
+    "checklist/BB": {
+      "correct": 16,
+      "n": 24,
+      "numeric_correct": 17,
+      "valid": 22,
+      "binding_filter_accepted": 19,
+      "wrong_among_binding_accepted": 3,
+      "binding_filter_risk": 0.15789473684210525,
+      "terminal_input_tokens": 41142,
+      "terminal_output_tokens": 5873,
+      "mean_terminal_serving_seconds": 2.3439608864583334,
+      "workflow_calls_per_item": 2,
+      "workflow_input_tokens": 73671,
+      "workflow_output_tokens": 13456,
+      "mean_workflow_serving_seconds": 5.263390781208334
+    },
+    "checklist/AB": {
+      "correct": 15,
+      "n": 24,
+      "numeric_correct": 16,
+      "valid": 24,
+      "binding_filter_accepted": 21,
+      "wrong_among_binding_accepted": 6,
+      "binding_filter_risk": 0.2857142857142857,
+      "terminal_input_tokens": 39976,
+      "terminal_output_tokens": 5881,
+      "mean_terminal_serving_seconds": 2.2184121640833334,
+      "workflow_calls_per_item": 2,
+      "workflow_input_tokens": 71246,
+      "workflow_output_tokens": 12316,
+      "mean_workflow_serving_seconds": 10.269415730291666
+    },
+    "checklist/BA": {
+      "correct": 16,
+      "n": 24,
+      "numeric_correct": 17,
+      "valid": 22,
+      "binding_filter_accepted": 20,
+      "wrong_among_binding_accepted": 4,
+      "binding_filter_risk": 0.2,
+      "terminal_input_tokens": 39655,
+      "terminal_output_tokens": 6738,
+      "mean_terminal_serving_seconds": 8.61135727375,
+      "workflow_calls_per_item": 2,
+      "workflow_input_tokens": 72184,
+      "workflow_output_tokens": 14321,
+      "mean_workflow_serving_seconds": 11.530787168499998
+    }
+  },
+  "contrasts": {
+    "standard": {
+      "delta": 0.020833333333333332,
+      "ci95": [
+        -0.041666666666666664,
+        0.10416666666666667
+      ]
+    },
+    "checklist": {
+      "delta": 0.020833333333333332,
+      "ci95": [
+        -0.041666666666666664,
+        0.08333333333333333
+      ]
+    },
+    "interaction": {
+      "delta": 0.0,
+      "ci95": [
+        -0.10416666666666667,
+        0.10416666666666667
+      ]
+    }
+  },
+  "checklist_cross_rescues": 2,
+  "checklist_cross_harms": 1,
+  "checklist_rescue_groups": 2,
+  "schema_validity": 0.9513888888888888,
+  "scientific_gate": "FAIL_stop_scale_and_history",
+  "length_stops": 1,
+  "tokens_actual_terminal_total": {
+    "input": 436254,
+    "output": 77670
+  },
+  "limits": [
+    "24 connected source groups, one QA each; not powered confirmation",
+    "source/table oracle supplied; no retrieval",
+    "one issuer, two quantized families",
+    "no human semantic adjudication",
+    "binding filter is not semantic verification",
+    "terminal tokens differ; same caps are not equal realized cost"
+  ]
+}

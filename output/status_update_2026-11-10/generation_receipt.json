@@ -1,0 +1,2756 @@
+{
+  "created_utc": "2026-11-10T02:04:11.221173+00:00",
+  "output_format": "10 standalone PNG images; no title slide; no PPTX/PDF export",
+  "size": [
+    2560,
+    1440
+  ],
+  "aspect_ratio": "16:9",
+  "design_reference": {
+    "path": "/Users/trinhtrantrungtin/Downloads/DACN_27_10_Group8.pdf",
+    "sha256": "b499d88f89e5a2f2b598c81833edfce32b9cd5a342b7a8b0217a661d17314aa6",
+    "pages_inspected": 23,
+    "use": "Layout, Latin Modern Sans, palette and decorative background only; unrelated logos covered and no research content copied"
+  },
+  "fonts": {
+    "R": {
+      "path": "/usr/local/texlive/2025basic/texmf-dist/fonts/opentype/public/lm/lmsans10-regular.otf",
+      "sha256": "d431b786b9b603662718e79cfe9b441f47a8b0b3e854dde89d5acb3ed7cfd682"
+    },
+    "B": {
+      "path": "/usr/local/texlive/2025basic/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf",
+      "sha256": "a597b710326c1a8a2c7238d808e5d38711638a72a32383478db4829d63afd687"
+    },
+    "I": {
+      "path": "/usr/local/texlive/2025basic/texmf-dist/fonts/opentype/public/lm/lmsans10-oblique.otf",
+      "sha256": "1b38b36efc21f9d3f34edf6a13f9d71f59c41f824e790f5d3ee5ba5b4936f377"
+    }
+  },
+  "sources": {
+    "docs/reports/2026-10-27/PRESENTATION_HANDOFF.md": "248acf7c9f484cac3cc948581b0ebb50806e295bb8040fe295b3a4cf1fc54fc1",
+    "docs/reports/2026-11-09/VERIFICATION_CYCLE01_RESULTS_VA_QUYET_DINH.md": "ae75f4098d2129745682f2825bb22553b27c7b98766d77ffe77cc91cb74f668f",
+    "docs/reports/2026-11-09/ARQA_CYCLE02_RESULTS_VA_QUYET_DINH.md": "a98ebf1eff604bfee23afbef4fa8520060af6ca288f187eacb1398a76b5a08fc",
+    "docs/reports/2026-11-09/WORKSPACE_V4_RESULTS_VA_PATH_TIEP.md": "b325214673e3c47ad71d85a573b933797981be72d6d3d5e47ab95015c1a7cf97",
+    "docs/reports/2026-11-09/RELATIONAL_V5_RESULTS_VA_QUYET_DINH.md": "0958e9db01c905f44ab56373cee5ecd169da1ab1de5577548795c06953f12aae",
+    "docs/reports/2026-11-09/RESEARCH_STRATEGY_V5_VA_CONTRIBUTIONS.md": "ae6fd1ff0bfe844d645919eb866335fddbc9bac78b32237465af228722a3d442",
+    "results/specbridge_v6/offline_results.json": "00500d9680bdf536dd7145a7406a53005f128aba10cfd97bef40e354d19200dd",
+    "results/specbridge_v6/registered_plan.json": "8637d3ddc72129f8dcb53cdc8411a09d741e4c35b25b0738965e7907792b8c7f",
+    "results/specbridge_v6/qualification_readout.json": "90fc69933567dc5041a4de17ae54cfd0b2897aa40e94cc1ada3063b472eccbfd",
+    "docs/reports/2026-11-10/BAO_CAO_TIEN_DO_GUI_GVHD.md": "a4e967b8a08641d5e9e45a16d6123819466962db8d23d20276f0676a93955349",
+    "docs/reports/2026-11-10/LOI_TRINH_BAY_10_SLIDE.md": "f6c98111d857c5e3e2948e56e4cfad6b0e3fc6c38d40512d78cd320e8981af99",
+    "docs/reports/2026-11-10/specbridge_v6_offline_results.json": "00500d9680bdf536dd7145a7406a53005f128aba10cfd97bef40e354d19200dd"
+  },
+  "outputs": [
+    {
+      "file": "slides/01_agenda.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "32b294ee702bfd3d35deae7820b9c3fec6eb666eda82b7a4cd0cb5b81b52de50"
+    },
+    {
+      "file": "slides/02_tien_do_moi.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "fb8142cab0f8bd431ac5b1399e5f48a269335330bf75289a28013810be8fe3c3"
+    },
+    {
+      "file": "slides/03_kiem_cheo_va_tu_kiem.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "3140a625363c56a12debf6626b6af3a85bc73d0ef4e6d3708070f448fe73a77c"
+    },
+    {
+      "file": "slides/04_workspace_that.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "69e660967425b77c39658a429be67e66dc339cd9b77d7e9e1cbcca577fb08f6d"
+    },
+    {
+      "file": "slides/05_ba_kieu_loi.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "dba6083859f86c5b117036dec322ecff67487dec9bf417f2b9e513d1447b57de"
+    },
+    {
+      "file": "slides/06_lop_kiem_chung.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "bab4eba82460cfa07e912b637aa0a52bd1b2a76f611776489eb4e071095d147a"
+    },
+    {
+      "file": "slides/07_chuan_bi_danh_gia.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "40f9f4c9fc9e9c8e5962fadb52550dd32798196dc448e25db1a577fde1bd1f30"
+    },
+    {
+      "file": "slides/08_ket_qua_sql_moi_nhat.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "17f215d42b0b7636940bca89a1aeaf737d1deb6b760a7fa7b799c9414a4e5a48"
+    },
+    {
+      "file": "slides/09_huong_nghien_cuu.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "538f3b881446771b54c5a1e70034e9d1b28f78eee46286de4b31207b34127e57"
+    },
+    {
+      "file": "slides/10_phan_cong_tin_trung.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "2810a94048545ac51eb0c0f12e266fef93121a782f38d7189aac6682720ada41"
+    }
+  ],
+  "automated_checks": {
+    "canvas_bounds": "PASS",
+    "unbreakable_text_overflow": "PASS",
+    "slide_count": 10,
+    "incremental_model_response_sum": 1265,
+    "font_glyph_coverage": "PASS",
+    "native_v6_values_match_offline_results": true,
+    "raw_experiment_files_modified": false
+  },
+  "text_layout": [
+    {
+      "slide": 1,
+      "text": "Nội dung báo cáo",
+      "size": 36,
+      "box": [
+        24,
+        13.0,
+        316.82,
+        64.52
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "RepGuard · Cập nhật tiến độ",
+      "size": 13,
+      "box": [
+        549.64,
+        696.0,
+        730.36,
+        714.6
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "10/11/2026",
+      "size": 13,
+      "box": [
+        937.58,
+        696.0,
+        1009.08,
+        714.6
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "1 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Cập nhật sau báo cáo 27–28/10",
+      "size": 25,
+      "box": [
+        78,
+        120.0,
+        447.58,
+        155.77
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Từ kết quả thực nghiệm đến câu hỏi nghiên cứu và bước xác nhận tiếp theo.",
+      "size": 23,
+      "box": [
+        78,
+        160.0,
+        821.98,
+        193.65
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "1",
+      "size": 18,
+      "box": [
+        87.05,
+        268.0,
+        96.95,
+        293.76
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Tiến độ đã hoàn tất",
+      "size": 27,
+      "box": [
+        127,
+        265.0,
+        376.91,
+        303.64
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Bốn bối cảnh đánh giá; hệ thống kiểm chứng mới.",
+      "size": 22,
+      "box": [
+        127,
+        309.0,
+        590.78,
+        341.19
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "2",
+      "size": 18,
+      "box": [
+        87.05,
+        421.0,
+        96.95,
+        446.76
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Kết quả và bài học",
+      "size": 27,
+      "box": [
+        127,
+        418.0,
+        363.55,
+        456.64
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Kiểm chéo, lỗi dữ liệu và giới hạn phép chấm.",
+      "size": 22,
+      "box": [
+        127,
+        462.0,
+        551.01,
+        494.19
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "3",
+      "size": 18,
+      "box": [
+        685.05,
+        268.0,
+        694.95,
+        293.76
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Hướng nghiên cứu",
+      "size": 27,
+      "box": [
+        725,
+        265.0,
+        954.04,
+        303.64
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Phần đã có và bằng chứng còn cần bổ sung.",
+      "size": 22,
+      "box": [
+        725,
+        309.0,
+        1136.11,
+        341.19
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "4",
+      "size": 18,
+      "box": [
+        685.05,
+        421.0,
+        694.95,
+        446.76
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Kế hoạch tiếp theo",
+      "size": 27,
+      "box": [
+        725,
+        418.0,
+        963.14,
+        456.64
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Phân công Tín và Trung; điều kiện chạy tiếp.",
+      "size": 22,
+      "box": [
+        725,
+        462.0,
+        1146.1,
+        494.19
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Kỳ báo cáo: sau bản cập nhật cuối tháng 10 đến 10/11/2026.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        429.91,
+        673.48
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Tiến độ mới kể từ báo cáo trước",
+      "size": 36,
+      "box": [
+        24,
+        13.0,
+        568.28,
+        64.52
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "RepGuard · Cập nhật tiến độ",
+      "size": 13,
+      "box": [
+        549.64,
+        696.0,
+        730.36,
+        714.6
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "10/11/2026",
+      "size": 13,
+      "box": [
+        937.58,
+        696.0,
+        1009.08,
+        714.6
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "2 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "1.265",
+      "size": 53,
+      "box": [
+        75,
+        112.0,
+        207.82,
+        187.84
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "phản hồi mô hình mới · 4 bối cảnh đánh giá",
+      "size": 28,
+      "box": [
+        265,
+        128.0,
+        845.22,
+        168.07
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "720",
+      "size": 43,
+      "box": [
+        75,
+        280.0,
+        145.95,
+        341.53
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Kiểm bằng chứng",
+      "size": 24,
+      "box": [
+        75,
+        346.0,
+        269.69,
+        380.34
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "120 cặp · 24 nhóm",
+      "size": 19,
+      "box": [
+        75,
+        386.0,
+        234.22,
+        413.8
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "288",
+      "size": 43,
+      "box": [
+        365,
+        280.0,
+        435.95,
+        341.53
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Hỏi đáp báo cáo",
+      "size": 24,
+      "box": [
+        365,
+        346.0,
+        546.15,
+        380.34
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "24 câu · 2 profiles",
+      "size": 19,
+      "box": [
+        365,
+        386.0,
+        517.42,
+        413.8
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "113",
+      "size": 43,
+      "box": [
+        655,
+        280.0,
+        725.95,
+        341.53
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Workspace dữ liệu",
+      "size": 24,
+      "box": [
+        655,
+        346.0,
+        859.02,
+        380.34
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "6 task · 36 trajectory",
+      "size": 19,
+      "box": [
+        655,
+        386.0,
+        832.21,
+        413.8
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "144",
+      "size": 43,
+      "box": [
+        945,
+        280.0,
+        1015.95,
+        341.53
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "SQL có chỉ định",
+      "size": 24,
+      "box": [
+        945,
+        346.0,
+        1121.9,
+        380.34
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "12 task · 24 trường hợp",
+      "size": 19,
+      "box": [
+        945,
+        386.0,
+        1143.65,
+        413.8
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Phát triển song song",
+      "size": 23,
+      "box": [
+        76,
+        464.0,
+        295.97,
+        496.91
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Lớp kiểm ràng buộc + nguồn + bằng chứng bàn giao",
+      "size": 30,
+      "box": [
+        76,
+        505.0,
+        816.97,
+        547.93
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Trọng tâm mới: kiểm rõ yêu cầu, dữ liệu và trạng thái bằng chứng.",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        794.02,
+        624.91
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Số phản hồi không đồng nghĩa số task độc lập. Không tính lại 18.064 phản hồi MMLU-Pro và 560 phản hồi repair cũ.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        758.97,
+        673.48
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Hai vòng đầu: lợi thế kiểm chéo chưa rõ",
+      "size": 36,
+      "box": [
+        24,
+        13.0,
+        692.09,
+        64.52
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "RepGuard · Cập nhật tiến độ",
+      "size": 13,
+      "box": [
+        549.64,
+        696.0,
+        730.36,
+        714.6
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "10/11/2026",
+      "size": 13,
+      "box": [
+        937.58,
+        696.0,
+        1009.08,
+        714.6
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "3 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Chênh lệch kiểm chéo − tự kiểm",
+      "size": 29,
+      "box": [
+        75,
+        113.0,
+        516.93,
+        154.5
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Trung bình cân bằng hai hướng · điểm phần trăm · CI 95%",
+      "size": 20,
+      "box": [
+        75,
+        160.0,
+        593.5,
+        189.26
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "-5",
+      "size": 19,
+      "box": [
+        442.09,
+        506.0,
+        457.91,
+        533.8
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "0",
+      "size": 19,
+      "box": [
+        628.58,
+        506.0,
+        638.08,
+        533.8
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "+5",
+      "size": 19,
+      "box": [
+        804.53,
+        506.0,
+        828.81,
+        533.8
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "+10",
+      "size": 19,
+      "box": [
+        983.11,
+        506.0,
+        1016.89,
+        533.8
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Kiểm bằng chứng",
+      "size": 25,
+      "box": [
+        80,
+        264.0,
+        282.8,
+        299.77
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "120 cặp / 24 nhóm",
+      "size": 20,
+      "box": [
+        80,
+        307.0,
+        242.04,
+        336.26
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "+2,08",
+      "size": 29,
+      "box": [
+        1030,
+        265.0,
+        1111.55,
+        306.5
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "[−0,42; +4,59]",
+      "size": 18,
+      "box": [
+        1030,
+        307.0,
+        1143.42,
+        333.33
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Hỏi đáp báo cáo",
+      "size": 25,
+      "box": [
+        80,
+        394.0,
+        268.7,
+        429.77
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "24 câu / 24 nhóm",
+      "size": 20,
+      "box": [
+        80,
+        437.0,
+        232.04,
+        466.26
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "+2,08",
+      "size": 29,
+      "box": [
+        1030,
+        395.0,
+        1111.55,
+        436.5
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "[−4,17; +8,33]",
+      "size": 18,
+      "box": [
+        1030,
+        437.0,
+        1143.42,
+        463.33
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "← Tự kiểm tốt hơn",
+      "size": 18,
+      "box": [
+        459,
+        546.0,
+        608.02,
+        572.33
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Kiểm chéo tốt hơn →",
+      "size": 18,
+      "box": [
+        790,
+        546.0,
+        954.95,
+        572.33
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Cả hai khoảng tin cậy đi qua 0; chưa mở rộng học reputation.",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        735.99,
+        624.91
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Nguồn: cycle01 và ARQA cycle02, 09/11. Hai nghiên cứu riêng; không gộp để suy ra một hiệu quả chung.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        689.74,
+        673.48
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Workspace thật: cần đo cả việc hoàn thành",
+      "size": 36,
+      "box": [
+        24,
+        13.0,
+        745.22,
+        64.52
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "RepGuard · Cập nhật tiến độ",
+      "size": 13,
+      "box": [
+        549.64,
+        696.0,
+        730.36,
+        714.6
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "10/11/2026",
+      "size": 13,
+      "box": [
+        937.58,
+        696.0,
+        1009.08,
+        714.6
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "4 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "113 phản hồi",
+      "size": 39,
+      "box": [
+        75,
+        112.0,
+        307.4,
+        167.81
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "6 task · 36 trajectory · CSV / JSON / SQLite / PDF",
+      "size": 23,
+      "box": [
+        460,
+        126.0,
+        1052.04,
+        158.91
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Kết quả đầu ra trên toàn bộ 36 trajectory",
+      "size": 24,
+      "box": [
+        75,
+        200.0,
+        538.63,
+        234.34
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "9",
+      "size": 32,
+      "box": [
+        207.45,
+        271.0,
+        225.05,
+        316.79
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "14",
+      "size": 32,
+      "box": [
+        559.62,
+        271.0,
+        594.82,
+        316.79
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "13",
+      "size": 32,
+      "box": [
+        983.37,
+        271.0,
+        1018.57,
+        316.79
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Khớp reference",
+      "size": 24,
+      "box": [
+        75,
+        365.0,
+        242.45,
+        399.34
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Đúng theo phép chấm",
+      "size": 22,
+      "box": [
+        75,
+        418.0,
+        279.78,
+        450.19
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "strict relation.",
+      "size": 22,
+      "box": [
+        75,
+        445.94,
+        204.01,
+        478.13
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Có bảng, chưa khớp",
+      "size": 24,
+      "box": [
+        460,
+        365.0,
+        682.17,
+        399.34
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Cần phân loại lỗi nội dung,",
+      "size": 22,
+      "box": [
+        460,
+        418.0,
+        709.83,
+        450.19
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "cách hiểu và hình dạng.",
+      "size": 22,
+      "box": [
+        460,
+        445.94,
+        679.12,
+        478.13
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Chưa có bảng cuối",
+      "size": 24,
+      "box": [
+        845,
+        365.0,
+        1051.5,
+        399.34
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Tìm nguồn, budget hoặc",
+      "size": 22,
+      "box": [
+        845,
+        418.0,
+        1072.48,
+        450.19
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "độ dài đầu ra còn vướng.",
+      "size": 22,
+      "box": [
+        845,
+        445.94,
+        1076.4,
+        478.13
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Tách “chưa hoàn tất” khỏi “có đầu ra nhưng chưa đúng yêu cầu”.",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        786.8,
+        624.91
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "DataSpace đã thích nghi; tổng hợp chẩn đoán từ 2 block có gián đoạn. Không phải score xác nhận chính thức.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        717.67,
+        673.48
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Ba kiểu lỗi cần được tách riêng",
+      "size": 36,
+      "box": [
+        24,
+        13.0,
+        542.65,
+        64.52
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "RepGuard · Cập nhật tiến độ",
+      "size": 13,
+      "box": [
+        549.64,
+        696.0,
+        730.36,
+        714.6
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "10/11/2026",
+      "size": 13,
+      "box": [
+        937.58,
+        696.0,
+        1009.08,
+        714.6
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "5 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "1",
+      "size": 18,
+      "box": [
+        80.05,
+        121.0,
+        89.95,
+        146.76
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Sai thuộc tính",
+      "size": 26,
+      "box": [
+        113,
+        119.0,
+        281.3,
+        156.21
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "2",
+      "size": 18,
+      "box": [
+        475.05,
+        121.0,
+        484.95,
+        146.76
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Cách hiểu còn mở",
+      "size": 26,
+      "box": [
+        508,
+        119.0,
+        723.41,
+        156.21
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "3",
+      "size": 18,
+      "box": [
+        870.05,
+        121.0,
+        879.95,
+        146.76
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Thừa cột đầu ra",
+      "size": 26,
+      "box": [
+        903,
+        119.0,
+        1098.75,
+        156.21
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Quốc tịch người quản lý",
+      "size": 23,
+      "box": [
+        75,
+        202.0,
+        329.73,
+        234.91
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Tên người / tên quỹ",
+      "size": 22,
+      "box": [
+        90,
+        271.0,
+        298.12,
+        302.48
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Đã được dùng làm proxy",
+      "size": 19,
+      "box": [
+        84,
+        339.0,
+        281.33,
+        366.8
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Nationality + đúng join",
+      "size": 22,
+      "box": [
+        90,
+        440.0,
+        329.23,
+        471.48
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Cần kiểm trường và liên kết.",
+      "size": 20,
+      "box": [
+        75,
+        520.0,
+        314.7,
+        549.26
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "“Fund abbreviation”",
+      "size": 23,
+      "box": [
+        470,
+        202.0,
+        683.92,
+        234.91
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "SecuAbbr",
+      "size": 22,
+      "box": [
+        485,
+        283.0,
+        581.78,
+        314.48
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "hay",
+      "size": 22,
+      "box": [
+        618.95,
+        349.0,
+        651.05,
+        381.19
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "ChiNameAbbr",
+      "size": 22,
+      "box": [
+        485,
+        409.0,
+        626.77,
+        440.48
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Cần thẩm định cách hiểu.",
+      "size": 20,
+      "box": [
+        470,
+        500.0,
+        685.86,
+        529.26
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Chuỗi tên đúng, dư ID",
+      "size": 23,
+      "box": [
+        865,
+        202.0,
+        1104.71,
+        234.91
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Tên thủ tục",
+      "size": 20,
+      "box": [
+        880,
+        280.0,
+        990.38,
+        308.62
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "ID",
+      "size": 20,
+      "box": [
+        1083,
+        280.0,
+        1105.5,
+        308.62
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Strict relation: không khớp",
+      "size": 20,
+      "box": [
+        865,
+        468.0,
+        1111.68,
+        496.62
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Giữ nguyên điểm gốc.",
+      "size": 20,
+      "box": [
+        865,
+        509.0,
+        1047.42,
+        538.26
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Kiểm tính đúng đòi hỏi yêu cầu rõ và bằng chứng gắn đúng nguồn.",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        790.85,
+        624.91
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Task 380 / 371 / 44; phân tích phát triển, chưa có thẩm định ngữ nghĩa độc lập. Không sửa gold theo model.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        715.13,
+        673.48
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Đã xây lớp kiểm chứng và bàn giao",
+      "size": 36,
+      "box": [
+        24,
+        13.0,
+        610.12,
+        64.52
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "RepGuard · Cập nhật tiến độ",
+      "size": 13,
+      "box": [
+        549.64,
+        696.0,
+        730.36,
+        714.6
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "10/11/2026",
+      "size": 13,
+      "box": [
+        937.58,
+        696.0,
+        1009.08,
+        714.6
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "6 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Ràng buộc do hệ thống quản lý + catalog nguồn",
+      "size": 27,
+      "box": [
+        75,
+        110.0,
+        682.88,
+        148.64
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Đã có lớp kiểm; sơ đồ dưới là luồng tích hợp với tác tử.",
+      "size": 21,
+      "box": [
+        75,
+        153.0,
+        567.09,
+        183.72
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Tác tử tạo SQL",
+      "size": 22,
+      "box": [
+        90,
+        225.0,
+        251.46,
+        256.48
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Bản nháp thực tế",
+      "size": 19,
+      "box": [
+        90,
+        265.0,
+        229.97,
+        292.8
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Lớp kiểm",
+      "size": 22,
+      "box": [
+        390,
+        225.0,
+        482.93,
+        256.48
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Query + nguồn",
+      "size": 19,
+      "box": [
+        390,
+        265.0,
+        513.41,
+        292.8
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Tác tử phản biện",
+      "size": 22,
+      "box": [
+        690,
+        225.0,
+        865.36,
+        256.48
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Nhận bằng chứng",
+      "size": 19,
+      "box": [
+        690,
+        265.0,
+        831.09,
+        292.8
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Thực thi lại",
+      "size": 22,
+      "box": [
+        990,
+        225.0,
+        1108.73,
+        256.48
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Artifact đầu ra",
+      "size": 19,
+      "box": [
+        990,
+        265.0,
+        1107.9,
+        292.8
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Đạt",
+      "size": 19,
+      "box": [
+        450.13,
+        354.0,
+        482.87,
+        381.19
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Vi phạm",
+      "size": 19,
+      "box": [
+        612.74,
+        354.0,
+        686.26,
+        381.19
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Chưa đủ căn cứ",
+      "size": 19,
+      "box": [
+        762.96,
+        354.0,
+        902.04,
+        381.19
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "29",
+      "size": 42,
+      "box": [
+        75,
+        461.0,
+        121.2,
+        521.1
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "tests mới",
+      "size": 23,
+      "box": [
+        75,
+        521.0,
+        162.35,
+        554.65
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "87",
+      "size": 42,
+      "box": [
+        470,
+        461.0,
+        516.2,
+        521.1
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "scoped tests đạt",
+      "size": 23,
+      "box": [
+        470,
+        521.0,
+        625.53,
+        554.65
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "20/20",
+      "size": 42,
+      "box": [
+        865,
+        461.0,
+        980.5,
+        521.1
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "SQL tái lập bytes",
+      "size": 23,
+      "box": [
+        865,
+        521.0,
+        1033.29,
+        554.65
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Đã có component tái lập; hiệu quả sửa lỗi còn cần thực nghiệm riêng.",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        821.81,
+        624.91
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "V5: SQL subset; contract phát triển cần thẩm định độc lập. 20/20 tái lập không đồng nghĩa 20/20 đáp án đúng.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        728.36,
+        673.48
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Nền đánh giá trên database mới",
+      "size": 36,
+      "box": [
+        24,
+        13.0,
+        556.62,
+        64.52
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "RepGuard · Cập nhật tiến độ",
+      "size": 13,
+      "box": [
+        549.64,
+        696.0,
+        730.36,
+        714.6
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "10/11/2026",
+      "size": 13,
+      "box": [
+        937.58,
+        696.0,
+        1009.08,
+        714.6
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "7 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "204 task · 12 database",
+      "size": 34,
+      "box": [
+        75,
+        111.0,
+        448.66,
+        159.65
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Nguồn SpecBridge đã pin · chia theo database",
+      "size": 21,
+      "box": [
+        75,
+        163.0,
+        494.16,
+        193.72
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "45",
+      "size": 28,
+      "box": [
+        184.23,
+        237.0,
+        215.03,
+        277.07
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "67",
+      "size": 28,
+      "box": [
+        494.43,
+        237.0,
+        525.23,
+        277.07
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "92",
+      "size": 28,
+      "box": [
+        934.8,
+        237.0,
+        965.6,
+        277.07
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Development",
+      "size": 23,
+      "box": [
+        75,
+        306.0,
+        213.6,
+        338.91
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "45 task · đã mở",
+      "size": 21,
+      "box": [
+        75,
+        344.0,
+        224.44,
+        374.72
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Validation",
+      "size": 23,
+      "box": [
+        415,
+        306.0,
+        521.42,
+        338.91
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "67 task · chưa chạy",
+      "size": 21,
+      "box": [
+        415,
+        344.0,
+        597.97,
+        374.72
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Reserved",
+      "size": 23,
+      "box": [
+        795,
+        306.0,
+        889.09,
+        338.91
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "92 task · chưa chạy",
+      "size": 21,
+      "box": [
+        795,
+        344.0,
+        977.97,
+        374.72
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "90/90",
+      "size": 42,
+      "box": [
+        75,
+        425.0,
+        190.5,
+        485.1
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Reference SQL qua qualification",
+      "size": 25,
+      "box": [
+        280,
+        431.0,
+        649.37,
+        466.77
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Kiểm soát: sai cách hiểu / thêm hàng / thiếu đầu ra đều bị loại.",
+      "size": 20,
+      "box": [
+        280,
+        476.0,
+        821.2,
+        505.26
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Khóa cả bộ chấm và engine: 1 task đổi kết quả giữa SQLite 3.42 và 3.51.",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        860.95,
+        624.91
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Qualification là kiểm tra bộ chấm. 74/90 reference có CTE/nhiều scope, vượt độ phủ đầy đủ hiện tại của checker V5.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        757.78,
+        673.48
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Pilot SQL mới nhất: tự kiểm đạt cao hơn",
+      "size": 36,
+      "box": [
+        24,
+        13.0,
+        709.37,
+        64.52
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "RepGuard · Cập nhật tiến độ",
+      "size": 13,
+      "box": [
+        549.64,
+        696.0,
+        730.36,
+        714.6
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "10/11/2026",
+      "size": 13,
+      "box": [
+        937.58,
+        696.0,
+        1009.08,
+        714.6
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "8 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "12 task × 2 cách hiểu chỉ định = 24 trường hợp",
+      "size": 27,
+      "box": [
+        75,
+        107.0,
+        677.37,
+        145.64
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "3 database development · 144 phản hồi · audit PASS",
+      "size": 21,
+      "box": [
+        75,
+        151.0,
+        563.82,
+        181.72
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "0",
+      "size": 16,
+      "box": [
+        93.0,
+        486.0,
+        101.0,
+        509.41
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "6",
+      "size": 16,
+      "box": [
+        93.0,
+        421.0,
+        101.0,
+        444.41
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "12",
+      "size": 16,
+      "box": [
+        85.0,
+        356.0,
+        101.0,
+        379.41
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "18",
+      "size": 16,
+      "box": [
+        85.0,
+        291.0,
+        101.0,
+        314.41
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "24",
+      "size": 16,
+      "box": [
+        85.0,
+        226.0,
+        101.0,
+        249.41
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "18/24",
+      "size": 22,
+      "box": [
+        147.75,
+        259.0,
+        208.25,
+        290.48
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "A",
+      "size": 20,
+      "box": [
+        170.67,
+        511.0,
+        185.33,
+        539.62
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "19/24",
+      "size": 22,
+      "box": [
+        272.75,
+        248.17,
+        333.25,
+        279.65
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "B",
+      "size": 20,
+      "box": [
+        295.67,
+        511.0,
+        310.33,
+        539.62
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "21/24",
+      "size": 22,
+      "box": [
+        397.75,
+        226.5,
+        458.25,
+        257.98
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "AA",
+      "size": 20,
+      "box": [
+        413.34,
+        511.0,
+        442.66,
+        539.62
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "21/24",
+      "size": 22,
+      "box": [
+        522.75,
+        226.5,
+        583.25,
+        257.98
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "BB",
+      "size": 20,
+      "box": [
+        538.34,
+        511.0,
+        567.66,
+        539.62
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "19/24",
+      "size": 22,
+      "box": [
+        647.75,
+        248.17,
+        708.25,
+        279.65
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "AB",
+      "size": 20,
+      "box": [
+        663.34,
+        511.0,
+        692.66,
+        539.62
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "20/24",
+      "size": 22,
+      "box": [
+        772.75,
+        237.33,
+        833.25,
+        268.82
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "BA",
+      "size": 20,
+      "box": [
+        788.34,
+        511.0,
+        817.66,
+        539.62
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Trực tiếp",
+      "size": 20,
+      "box": [
+        196.85,
+        550.0,
+        283.15,
+        578.62
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Tự kiểm",
+      "size": 20,
+      "box": [
+        451.13,
+        550.0,
+        528.87,
+        578.62
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Kiểm chéo",
+      "size": 20,
+      "box": [
+        691.24,
+        550.0,
+        788.76,
+        578.62
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "−6,25",
+      "size": 45,
+      "box": [
+        945,
+        262.0,
+        1071.54,
+        326.39
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "điểm phần trăm",
+      "size": 23,
+      "box": [
+        945,
+        322.0,
+        1098.41,
+        355.65
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Kiểm chéo − tự kiểm",
+      "size": 20,
+      "box": [
+        945,
+        375.0,
+        1126.14,
+        404.26
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Trung bình hai hướng",
+      "size": 20,
+      "box": [
+        945,
+        400.4,
+        1128.22,
+        429.66
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Kết quả development; chưa xác nhận trên nguồn giữ lại, chưa thử checker V5.",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        915.14,
+        624.91
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "A=Qwen; B=Gemma. 24 biến thể phụ thuộc theo 12 task. Cùng trần 2 calls chưa đồng nghĩa cùng chi phí thực.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        729.13,
+        673.48
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Câu hỏi nghiên cứu cần xác nhận tiếp",
+      "size": 36,
+      "box": [
+        24,
+        13.0,
+        651.34,
+        64.52
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "RepGuard · Cập nhật tiến độ",
+      "size": 13,
+      "box": [
+        549.64,
+        696.0,
+        730.36,
+        714.6
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "10/11/2026",
+      "size": 13,
+      "box": [
+        937.58,
+        696.0,
+        1009.08,
+        714.6
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "9 / 10",
+      "size": 13,
+      "box": [
+        1216.86,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Bàn giao có kiểm chứng có giúp sửa đúng hơn,",
+      "size": 29,
+      "box": [
+        82,
+        128.0,
+        712.37,
+        169.5
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "khi cùng nguồn, công cụ và ngân sách?",
+      "size": 29,
+      "box": [
+        82,
+        169.0,
+        607.04,
+        210.5
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Đã có nền tảng",
+      "size": 27,
+      "box": [
+        80,
+        259.0,
+        272.56,
+        297.64
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "• Bộ lỗi có thể truy về nguồn",
+      "size": 23,
+      "box": [
+        80,
+        311.0,
+        371.11,
+        344.65
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "• Lớp kiểm + log thực thi tái lập",
+      "size": 23,
+      "box": [
+        80,
+        352.4,
+        408.56,
+        386.05
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Cần chứng minh phần lợi ích riêng",
+      "size": 27,
+      "box": [
+        658,
+        259.0,
+        1085.81,
+        297.64
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "• Tự kiểm / phản hồi trung tính",
+      "size": 23,
+      "box": [
+        658,
+        311.0,
+        979.06,
+        344.65
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "• Diagnostic đúng / xáo trộn",
+      "size": 23,
+      "box": [
+        658,
+        352.4,
+        946.47,
+        386.05
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "• Cùng checker; xác nhận nguồn mới",
+      "size": 23,
+      "box": [
+        658,
+        393.8,
+        1022.62,
+        427.45
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Đo kết quả",
+      "size": 23,
+      "box": [
+        80,
+        503.0,
+        198.93,
+        535.91
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Đúng việc · sửa/hại · dừng sai · coverage · tổng chi phí",
+      "size": 23,
+      "box": [
+        270,
+        503.0,
+        850.64,
+        536.65
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Contribution mục tiêu: bộ lỗi đã thẩm định + công cụ + bằng chứng có đối chứng.",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        964.68,
+        624.91
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Contracts/handoff đã có prior gần. Novelty chưa chốt; còn thiếu baseline mạnh, thẩm định độc lập và người dùng.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        739.6,
+        673.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Phân công công việc tiếp theo",
+      "size": 36,
+      "box": [
+        24,
+        13.0,
+        527.96,
+        64.52
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Tín & Trung",
+      "size": 13,
+      "box": [
+        175.04,
+        696.0,
+        251.63,
+        714.6
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "RepGuard · Cập nhật tiến độ",
+      "size": 13,
+      "box": [
+        549.64,
+        696.0,
+        730.36,
+        714.6
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "10/11/2026",
+      "size": 13,
+      "box": [
+        937.58,
+        696.0,
+        1009.08,
+        714.6
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "10 / 10",
+      "size": 13,
+      "box": [
+        1209.71,
+        696.0,
+        1255.0,
+        714.6
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Phân công đề xuất · ưu tiên theo điều kiện sẵn sàng",
+      "size": 23,
+      "box": [
+        75,
+        108.0,
+        591.33,
+        141.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Tín",
+      "size": 30,
+      "box": [
+        95,
+        169.0,
+        141.5,
+        211.93
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Trung",
+      "size": 30,
+      "box": [
+        690,
+        169.0,
+        773.31,
+        211.93
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "01",
+      "size": 22,
+      "box": [
+        85,
+        244.0,
+        109.2,
+        275.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Đo / mở rộng SQL coverage",
+      "size": 23,
+      "box": [
+        133,
+        244.0,
+        408.77,
+        277.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "02",
+      "size": 22,
+      "box": [
+        85,
+        312.0,
+        109.2,
+        343.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Baseline mạnh + cùng tools/checker",
+      "size": 23,
+      "box": [
+        133,
+        312.0,
+        487.61,
+        345.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "03",
+      "size": 22,
+      "box": [
+        85,
+        380.0,
+        109.2,
+        411.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Harness và log tokens / thời gian",
+      "size": 23,
+      "box": [
+        133,
+        380.0,
+        454.66,
+        413.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "01",
+      "size": 22,
+      "box": [
+        680,
+        244.0,
+        704.2,
+        275.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Source-only review + rubric",
+      "size": 23,
+      "box": [
+        728,
+        244.0,
+        995.81,
+        277.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "02",
+      "size": 22,
+      "box": [
+        680,
+        312.0,
+        704.2,
+        343.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Đối chiếu contribution với prior",
+      "size": 23,
+      "box": [
+        728,
+        312.0,
+        1030.4,
+        345.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "03",
+      "size": 22,
+      "box": [
+        680,
+        380.0,
+        704.2,
+        411.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Tìm workflow và người dùng pilot",
+      "size": 23,
+      "box": [
+        728,
+        380.0,
+        1056.21,
+        413.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Đầu ra: coverage + bảng baseline tái lập",
+      "size": 20,
+      "box": [
+        85,
+        468.0,
+        461.86,
+        496.62
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Đầu ra: phiếu review + workflow pilot",
+      "size": 20,
+      "box": [
+        680,
+        468.0,
+        1031.9,
+        496.62
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Cùng thực hiện",
+      "size": 22,
+      "box": [
+        75,
+        548.0,
+        230.63,
+        579.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Review chéo → khóa protocol → thử cơ chế → nguồn giữ lại",
+      "size": 23,
+      "box": [
+        300,
+        548.0,
+        892.76,
+        581.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Đợt tới cần bộ đánh giá rõ nghĩa và đối chứng đủ mạnh trước khi mở rộng.",
+      "size": 23,
+      "box": [
+        79,
+        592.0,
+        878.99,
+        624.91
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Chưa có người dùng tham gia. Thời điểm mở tập giữ lại phụ thuộc việc khóa cơ chế và hoàn tất kiểm tra sẵn sàng.",
+      "size": 14,
+      "box": [
+        65,
+        653.0,
+        745.53,
+        673.48
+      ]
+    }
+  ]
+}

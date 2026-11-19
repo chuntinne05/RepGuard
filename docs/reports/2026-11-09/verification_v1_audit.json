@@ -1,0 +1,17 @@
+{
+  "audit": "PASS",
+  "plan_id": "1a97e7cca4367a1fe81c9417",
+  "records_verified": 720,
+  "prompt_and_parent_lineage_verified": true,
+  "weights_digests_verified": true,
+  "read_only_weights_and_no_eval_mount_verified": true,
+  "local_sources_match_registration": true,
+  "new_model_calls": 0,
+  "invalid": 1,
+  "length_stops": 0,
+  "native_thinking_outputs": 0,
+  "limitations": [
+    "Receipts do not adjudicate semantic gold labels.",
+    "Local source hashes and prompt receipts are checked; this is not formal verification of the remote runtime."
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "scope": "Post-hoc saved-response diagnostics; no change to registered score/gate.",
+  "plan_id": "1a97e7cca4367a1fe81c9417",
+  "gold_counts": {
+    "3": 7,
+    "0": 56,
+    "1": 41,
+    "2": 16
+  },
+  "workflows": {
+    "A": {
+      "correct_recomputed": 91,
+      "confusion_rows_gold_cols_0_1_2_3_invalid": [
+        [
+          51,
+          4,
+          1,
+          0,
+          0
+        ],
+        [
+          9,
+          27,
+          1,
+          4,
+          0
+        ],
+        [
+          0,
+          6,
+          8,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          5,
+          0
+        ]
+      ],
+      "supported_approvals": 10,
+      "false_supported_approvals": 2,
+      "false_supported_approval_risk": 0.2,
+      "supported_approval_coverage": 0.08333333333333333,
+      "quote_grounded_sufficient": 10,
+      "serving_calls_including_reused_initial": 120,
+      "serving_input_tokens": 73571,
+      "serving_output_tokens": 14477,
+      "mean_serving_request_seconds": 3.9947350119916702,
+      "mean_ollama_eval_seconds": 2.9566639749999992
+    },
+    "B": {
+      "correct_recomputed": 85,
+      "confusion_rows_gold_cols_0_1_2_3_invalid": [
+        [
+          54,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          19,
+          18,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          11,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          1,
+          2,
+          1
+        ]
+      ],
+      "supported_approvals": 17,
+      "false_supported_approvals": 6,
+      "false_supported_approval_risk": 0.35294117647058826,
+      "supported_approval_coverage": 0.14166666666666666,
+      "quote_grounded_sufficient": 16,
+      "serving_calls_including_reused_initial": 120,
+      "serving_input_tokens": 73497,
+      "serving_output_tokens": 10976,
+      "mean_serving_request_seconds": 2.100995804716665,
+      "mean_ollama_eval_seconds": 0.7375231416333333
+    },
+    "AA": {
+      "correct_recomputed": 93,
+      "confusion_rows_gold_cols_0_1_2_3_invalid": [
+        [
+          53,
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          9,
+          31,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          10,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          4,
+          0
+        ]
+      ],
+      "supported_approvals": 6,
+      "false_supported_approvals": 1,
+      "false_supported_approval_risk": 0.16666666666666666,
+      "supported_approval_coverage": 0.05,
+      "quote_grounded_sufficient": 6,
+      "serving_calls_including_reused_initial": 240,
+      "serving_input_tokens": 172671,
+      "serving_output_tokens": 29498,
+      "mean_serving_request_seconds": 8.377617229216664,
+      "mean_ollama_eval_seconds": 6.074286933333337
+    },
+    "BB": {
+      "correct_recomputed": 85,
+      "confusion_rows_gold_cols_0_1_2_3_invalid": [
+        [
+          54,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          19,
+          19,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          7,
+          9,
+          0,
+          0
+        ],
+        [
+          1,
+          3,
+          0,
+          3,
+          0
+        ]
+      ],
+      "supported_approvals": 12,
+      "false_supported_approvals": 3,
+      "false_supported_approval_risk": 0.25,
+      "supported_approval_coverage": 0.1,
+      "quote_grounded_sufficient": 13,
+      "serving_calls_including_reused_initial": 240,
+      "serving_input_tokens": 168632,
+      "serving_output_tokens": 23321,
+      "mean_serving_request_seconds": 4.227859606533318,
+      "mean_ollama_eval_seconds": 1.5492590332833331
+    },
+    "AB": {
+      "correct_recomputed": 96,
+      "confusion_rows_gold_cols_0_1_2_3_invalid": [
+        [
+          52,
+          3,
+          1,
+          0,
+          0
+        ],
+        [
+          10,
+          29,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          6,
+          10,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          5,
+          0
+        ]
+      ],
+      "supported_approvals": 12,
+      "false_supported_approvals": 2,
+      "false_supported_approval_risk": 0.16666666666666666,
+      "supported_approval_coverage": 0.1,
+      "quote_grounded_sufficient": 12,
+      "serving_calls_including_reused_initial": 240,
+      "serving_input_tokens": 172425,
+      "serving_output_tokens": 28957,
+      "mean_serving_request_seconds": 5.117321560025015,
+      "mean_ollama_eval_seconds": 3.8251193249666646
+    },
+    "BA": {
+      "correct_recomputed": 87,
+      "confusion_rows_gold_cols_0_1_2_3_invalid": [
+        [
+          55,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          17,
+          23,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          9,
+          6,
+          1,
+          0
+        ],
+        [
+          1,
+          3,
+          0,
+          3,
+          0
+        ]
+      ],
+      "supported_approvals": 7,
+      "false_supported_approvals": 1,
+      "false_supported_approval_risk": 0.14285714285714285,
+      "supported_approval_coverage": 0.058333333333333334,
+      "quote_grounded_sufficient": 6,
+      "serving_calls_including_reused_initial": 240,
+      "serving_input_tokens": 168925,
+      "serving_output_tokens": 24921,
+      "mean_serving_request_seconds": 5.437852411816666,
+      "mean_ollama_eval_seconds": 3.6233522832749983
+    }
+  },
+  "errors_private_packet": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/results/verification_v1/runs/1a97e7cca4367a1fe81c9417/errors_private.json",
+  "new_inference_calls": 0,
+  "human_reviews_completed": 0
+}

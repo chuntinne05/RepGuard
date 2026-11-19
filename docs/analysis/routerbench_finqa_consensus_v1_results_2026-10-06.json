@@ -1,0 +1,44 @@
+{
+  "run_id": "5f793e80665eb1d900b97026",
+  "questions": 48,
+  "models": 20,
+  "cells": 960,
+  "prediction_coverage": 0.9291666666666667,
+  "brier": {
+    "raw_agreement": 0.4688913896583564,
+    "crossfit_agreement": 0.20468876822555515,
+    "crossfit_gold_only": 0.21981586130401234
+  },
+  "pair_residual_variance_ratio": 0.9233883680585773,
+  "pair_residual_variance_ratio_ci95": [
+    0.8487292923886524,
+    1.000612665433285
+  ],
+  "raw_agreement_pair_ratio": 0.9454788922530476,
+  "operational_pass": true,
+  "expansion_signal_pass": false,
+  "scope": "New 48-question development feedback diagnostic; full gold in cross-fit, no sparse-gold routing",
+  "uncertainty": "Question bootstrap of fixed cross-fit predictions; no refit or independent confirmation",
+  "source_sha256": {
+    "infra/modal/routerbench_finqa_consensus_core.py": "d7a126990dd8513c28be6f5143436ad7153697e8b6adbd9390926addd38aff06",
+    "infra/modal/routerbench_finqa_consensus_pipeline.py": "8b6c208f2e38d7869336eb8f30e667121a476ba4ca57ceb1ffda81cc84f4d847",
+    "infra/modal/routerbench_finqa_consensus_modal.py": "7f212626e369917b2976ff59f5a2a4e2272c3af3808f34462d6f1f6feb4407a5",
+    "infra/modal/routerbench_finqa_feedback_core.py": "e84bbd096c4a011690ba400697738c4706df9d4802c0a605695f61299a4dd830",
+    "infra/modal/routerbench_intake_core.py": "e4c890b55a2317cf1ebae1328493f5f253a9406cad4e5de7a1d68c3a83d389c4",
+    "run_routerbench_finqa_consensus.py": "1f0554d913211b10ff2c4f1caaf8f4224492cc3860735a892a2e6a0f950a9579",
+    "report_routerbench_finqa_consensus.py": "abd76e14430a8b11491d789bddd310ea36179f32ed9fdf45406f194d46a1d0b2",
+    "docs/analysis/routerbench_finqa_consensus_v1_protocol_2026-10-06.md": "cbb4b391283c501a64824096aec85cb44f91fd7ba0df4788b7f02ab20b773792"
+  },
+  "verified_prediction_cells": 960,
+  "new_solver_calls": 0,
+  "new_judge_calls": 0,
+  "descriptive": {
+    "fixed_model_gold_success_range": [
+      5,
+      41
+    ],
+    "per_question_oracle_success": 46,
+    "raw_agreement_top_model": "Qwen3-8B",
+    "raw_agreement_top_model_gold_success": 41
+  }
+}

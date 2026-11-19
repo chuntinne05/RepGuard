@@ -1,0 +1,3233 @@
+{
+  "created_utc": "2026-11-09T16:05:40.691204+00:00",
+  "scope": "ALL45development tasks only; no validation/reserve execution",
+  "upstream_revision": "a51be850a113a6b7c0ada57ad3c7806c6c3f25a4",
+  "grade_loading": {
+    "module_sha256": {
+      "results/relational_v5/source_intake/SpecBridge/native_scorer/specbridge/pd/spec/render.py": "941642673be85e434bef85415ffe0c9f87db0c978a4169da8cac0f8f8d3d7ce0",
+      "results/relational_v5/source_intake/SpecBridge/benchmark/score.py": "7e2bdbbe38d8555e390df8ee4e7ef1a8cef4223ea0432d96f048999db22f2ed5"
+    },
+    "functions": [
+      {
+        "name": "grade",
+        "source_sha256": "203885ac1504ba4d5482658964ba019277d4215fc7c400eaa627cea35e588128"
+      },
+      {
+        "name": "_t",
+        "source_sha256": "9ae743ff97bdf2cfd00a4241ef6fe44012e71864d1791f09ed20a0d525d1fefe"
+      },
+      {
+        "name": "matches",
+        "source_sha256": "f9ee5537601a05e89f45698182852fc52277200f0081397a62370af9efd09128"
+      }
+    ],
+    "loading": "Unmodified AST of upstream grade/_t/matches only; generator/package code not imported"
+  },
+  "native_engine": {
+    "package": "sqlean.py==0.21.5.3",
+    "sqlite": "3.42.0"
+  },
+  "system_sqlite": "3.51.0",
+  "development_tasks": 45,
+  "reference_queries": 90,
+  "own_reference_matches": 90,
+  "opposite_reference_rejected": 90,
+  "controls": [
+    {
+      "id": "06934ae88f",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "06934ae88f",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "07335c94bb",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "07335c94bb",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "0f4fb81d6a",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "0f4fb81d6a",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "0fb0f319ce",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "0fb0f319ce",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "10cf8f1547",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "10cf8f1547",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "11c73410e6",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "11c73410e6",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "1486e0d33f",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "1486e0d33f",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "1adc54e3cf",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "1adc54e3cf",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "1c7e18597b",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "1c7e18597b",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "252b8028e7",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "252b8028e7",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "31caaab8c7",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "31caaab8c7",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "4432585c37",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "4432585c37",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "53afca1d49",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "53afca1d49",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "55907567ca",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "55907567ca",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "57706f39b2",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "57706f39b2",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "5a20154d84",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "5a20154d84",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "5e80a4dead",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "5e80a4dead",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "65e2e1cfdd",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "65e2e1cfdd",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "6c21dc4586",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "6c21dc4586",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "6c4f216d01",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "6c4f216d01",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "6f949de77e",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "6f949de77e",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "70ea90e305",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "70ea90e305",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "76d3120235",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "76d3120235",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "7c4a89c45b",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "7c4a89c45b",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "8a55588ad2",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "8a55588ad2",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "8ff14b4a90",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "8ff14b4a90",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "9149a88808",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "9149a88808",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "9bb5ac76bd",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "9bb5ac76bd",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "9d0419e2cc",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "9d0419e2cc",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "9fe5c73bb8",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "9fe5c73bb8",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "a42de66df9",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "a42de66df9",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "a65deca8fc",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "a65deca8fc",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "bbce981d7b",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "bbce981d7b",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "c4495596b4",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "c4495596b4",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "c7d3136268",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "c7d3136268",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "cc6a148eaf",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "cc6a148eaf",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "cde68b2348",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "cde68b2348",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "d31fb48995",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "d31fb48995",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "da10959f8c",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "da10959f8c",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "e7b2c8e815",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "e7b2c8e815",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "ecf2814a02",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "ecf2814a02",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "ee6b268047",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "ee6b268047",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "f6a08cfdf0",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "f6a08cfdf0",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "f8b3cab9d0",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "f8b3cab9d0",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "fc09eb5c8c",
+      "reading": "A",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    },
+    {
+      "id": "fc09eb5c8c",
+      "reading": "B",
+      "extra_row_rejected": true,
+      "missing_output_rejected": true
+    }
+  ],
+  "all_reference_checks_pass": true,
+  "all_control_checks_pass": true,
+  "all_interpretations_distinguishable": true,
+  "engine_grading_differences": [
+    {
+      "id": "1486e0d33f",
+      "reading": "A",
+      "system_state": "ok",
+      "system_matches": [],
+      "native_matches": [
+        "A"
+      ]
+    },
+    {
+      "id": "1486e0d33f",
+      "reading": "B",
+      "system_state": "ok",
+      "system_matches": [],
+      "native_matches": [
+        "B"
+      ]
+    }
+  ],
+  "native_profile": {
+    "select_scopes": 90,
+    "cte": 74,
+    "subquery": 10,
+    "window": 3,
+    "outer_join": 1,
+    "group": 84,
+    "having": 0,
+    "distinct": 0,
+    "limit": 29,
+    "arithmetic": 82,
+    "case": 6,
+    "or": 0,
+    "joins": 74
+  },
+  "profile_is_not_semantic_contract_coverage": true,
+  "references": [
+    {
+      "id": "06934ae88f",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.004444333026185632,
+      "error": null,
+      "features": {
+        "select_scopes": 1,
+        "cte": false,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": false,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": false,
+        "case": false,
+        "or": false,
+        "joins": 0
+      }
+    },
+    {
+      "id": "06934ae88f",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0003489160444587469,
+      "error": null,
+      "features": {
+        "select_scopes": 1,
+        "cte": false,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": false,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": false,
+        "case": false,
+        "or": false,
+        "joins": 0
+      }
+    },
+    {
+      "id": "07335c94bb",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0008967919275164604,
+      "error": null,
+      "features": {
+        "select_scopes": 4,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "07335c94bb",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0010506659746170044,
+      "error": null,
+      "features": {
+        "select_scopes": 4,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "0f4fb81d6a",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0004713749513030052,
+      "error": null,
+      "features": {
+        "select_scopes": 6,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "0f4fb81d6a",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.00041741703171283007,
+      "error": null,
+      "features": {
+        "select_scopes": 6,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "0fb0f319ce",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.0014907500008121133,
+      "error": null,
+      "features": {
+        "select_scopes": 5,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 4
+      }
+    },
+    {
+      "id": "0fb0f319ce",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 11,
+      "seconds": 0.001867417013272643,
+      "error": null,
+      "features": {
+        "select_scopes": 6,
+        "cte": true,
+        "subquery": true,
+        "window": true,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 4
+      }
+    },
+    {
+      "id": "10cf8f1547",
+      "database": "alien",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0005956250242888927,
+      "error": null,
+      "features": {
+        "select_scopes": 6,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "10cf8f1547",
+      "database": "alien",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0006550840334966779,
+      "error": null,
+      "features": {
+        "select_scopes": 6,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "11c73410e6",
+      "database": "alien",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0009927080245688558,
+      "error": null,
+      "features": {
+        "select_scopes": 6,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 3
+      }
+    },
+    {
+      "id": "11c73410e6",
+      "database": "alien",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.001449375064112246,
+      "error": null,
+      "features": {
+        "select_scopes": 7,
+        "cte": true,
+        "subquery": true,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 3
+      }
+    },
+    {
+      "id": "1486e0d33f",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 5,
+      "seconds": 0.0006284170085564256,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "1486e0d33f",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 5,
+      "seconds": 0.0007446249946951866,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "1adc54e3cf",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0013365830527618527,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "1adc54e3cf",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0015440830029547215,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "1c7e18597b",
+      "database": "alien",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.0009444579482078552,
+      "error": null,
+      "features": {
+        "select_scopes": 5,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "1c7e18597b",
+      "database": "alien",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 32,
+      "seconds": 0.0010182500118389726,
+      "error": null,
+      "features": {
+        "select_scopes": 6,
+        "cte": true,
+        "subquery": true,
+        "window": true,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "252b8028e7",
+      "database": "financial",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.15543325000908226,
+      "error": null,
+      "features": {
+        "select_scopes": 1,
+        "cte": false,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": false,
+        "case": false,
+        "or": false,
+        "joins": 0
+      }
+    },
+    {
+      "id": "252b8028e7",
+      "database": "financial",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.13762074999976903,
+      "error": null,
+      "features": {
+        "select_scopes": 1,
+        "cte": false,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": false,
+        "case": false,
+        "or": false,
+        "joins": 0
+      }
+    },
+    {
+      "id": "31caaab8c7",
+      "database": "financial",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.0014435420744121075,
+      "error": null,
+      "features": {
+        "select_scopes": 5,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "31caaab8c7",
+      "database": "financial",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 12,
+      "seconds": 0.0013795840786769986,
+      "error": null,
+      "features": {
+        "select_scopes": 7,
+        "cte": true,
+        "subquery": true,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 3
+      }
+    },
+    {
+      "id": "4432585c37",
+      "database": "alien",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 3,
+      "seconds": 0.0006199999479576945,
+      "error": null,
+      "features": {
+        "select_scopes": 1,
+        "cte": false,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": false,
+        "case": false,
+        "or": false,
+        "joins": 0
+      }
+    },
+    {
+      "id": "4432585c37",
+      "database": "alien",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 3,
+      "seconds": 0.0006470000371336937,
+      "error": null,
+      "features": {
+        "select_scopes": 1,
+        "cte": false,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": false,
+        "case": false,
+        "or": false,
+        "joins": 0
+      }
+    },
+    {
+      "id": "53afca1d49",
+      "database": "financial",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.001309292041696608,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "53afca1d49",
+      "database": "financial",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 12,
+      "seconds": 0.0013207909651100636,
+      "error": null,
+      "features": {
+        "select_scopes": 4,
+        "cte": true,
+        "subquery": true,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "55907567ca",
+      "database": "alien",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0011449590092524886,
+      "error": null,
+      "features": {
+        "select_scopes": 6,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "55907567ca",
+      "database": "alien",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0011040420504286885,
+      "error": null,
+      "features": {
+        "select_scopes": 6,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "57706f39b2",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0009208330884575844,
+      "error": null,
+      "features": {
+        "select_scopes": 4,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "57706f39b2",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0008959579281508923,
+      "error": null,
+      "features": {
+        "select_scopes": 4,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "5a20154d84",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 5,
+      "seconds": 0.001550000044517219,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "5a20154d84",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 5,
+      "seconds": 0.001499583013355732,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "5e80a4dead",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0014902499970048666,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "5e80a4dead",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0014806250110268593,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "65e2e1cfdd",
+      "database": "alien",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.0009900419972836971,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "65e2e1cfdd",
+      "database": "alien",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 32,
+      "seconds": 0.001012749969959259,
+      "error": null,
+      "features": {
+        "select_scopes": 4,
+        "cte": true,
+        "subquery": true,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "6c21dc4586",
+      "database": "alien",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 4,
+      "seconds": 0.0017310000257566571,
+      "error": null,
+      "features": {
+        "select_scopes": 4,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "6c21dc4586",
+      "database": "alien",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 4,
+      "seconds": 0.0016839999007061124,
+      "error": null,
+      "features": {
+        "select_scopes": 4,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "6c4f216d01",
+      "database": "financial",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.003933832980692387,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 3
+      }
+    },
+    {
+      "id": "6c4f216d01",
+      "database": "financial",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 62,
+      "seconds": 0.004030124982818961,
+      "error": null,
+      "features": {
+        "select_scopes": 4,
+        "cte": true,
+        "subquery": true,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 3
+      }
+    },
+    {
+      "id": "6f949de77e",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0015816250815987587,
+      "error": null,
+      "features": {
+        "select_scopes": 4,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "6f949de77e",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0014725839719176292,
+      "error": null,
+      "features": {
+        "select_scopes": 4,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "70ea90e305",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 4,
+      "seconds": 0.0004154170164838433,
+      "error": null,
+      "features": {
+        "select_scopes": 5,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "70ea90e305",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 3,
+      "seconds": 0.00040020805317908525,
+      "error": null,
+      "features": {
+        "select_scopes": 5,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "76d3120235",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 4,
+      "seconds": 0.0008024170529097319,
+      "error": null,
+      "features": {
+        "select_scopes": 1,
+        "cte": false,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "76d3120235",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 4,
+      "seconds": 0.0007706669857725501,
+      "error": null,
+      "features": {
+        "select_scopes": 1,
+        "cte": false,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "7c4a89c45b",
+      "database": "alien",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 2,
+      "seconds": 0.0009150831028819084,
+      "error": null,
+      "features": {
+        "select_scopes": 5,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "7c4a89c45b",
+      "database": "alien",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 2,
+      "seconds": 0.0007751249941065907,
+      "error": null,
+      "features": {
+        "select_scopes": 5,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "8a55588ad2",
+      "database": "financial",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.00081362493801862,
+      "error": null,
+      "features": {
+        "select_scopes": 1,
+        "cte": false,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": false,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": false,
+        "case": false,
+        "or": false,
+        "joins": 0
+      }
+    },
+    {
+      "id": "8a55588ad2",
+      "database": "financial",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.000608332920819521,
+      "error": null,
+      "features": {
+        "select_scopes": 1,
+        "cte": false,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": false,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": false,
+        "case": false,
+        "or": false,
+        "joins": 0
+      }
+    },
+    {
+      "id": "8ff14b4a90",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0008745410013943911,
+      "error": null,
+      "features": {
+        "select_scopes": 2,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "8ff14b4a90",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0008074169745668769,
+      "error": null,
+      "features": {
+        "select_scopes": 2,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "9149a88808",
+      "database": "financial",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 3,
+      "seconds": 0.0013813750119879842,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "9149a88808",
+      "database": "financial",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 3,
+      "seconds": 0.0014356250176206231,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "9bb5ac76bd",
+      "database": "alien",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 3,
+      "seconds": 0.0020936669316142797,
+      "error": null,
+      "features": {
+        "select_scopes": 4,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 3
+      }
+    },
+    {
+      "id": "9bb5ac76bd",
+      "database": "alien",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 3,
+      "seconds": 0.002519875066354871,
+      "error": null,
+      "features": {
+        "select_scopes": 4,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 5
+      }
+    },
+    {
+      "id": "9d0419e2cc",
+      "database": "financial",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.0024277910124510527,
+      "error": null,
+      "features": {
+        "select_scopes": 5,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 3
+      }
+    },
+    {
+      "id": "9d0419e2cc",
+      "database": "financial",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 11,
+      "seconds": 0.002303249901160598,
+      "error": null,
+      "features": {
+        "select_scopes": 7,
+        "cte": true,
+        "subquery": true,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 4
+      }
+    },
+    {
+      "id": "9fe5c73bb8",
+      "database": "alien",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0011677909642457962,
+      "error": null,
+      "features": {
+        "select_scopes": 6,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "9fe5c73bb8",
+      "database": "alien",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0010661660926416516,
+      "error": null,
+      "features": {
+        "select_scopes": 6,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "a42de66df9",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0006895000115036964,
+      "error": null,
+      "features": {
+        "select_scopes": 1,
+        "cte": false,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": false,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 0
+      }
+    },
+    {
+      "id": "a42de66df9",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0006547500379383564,
+      "error": null,
+      "features": {
+        "select_scopes": 1,
+        "cte": false,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": false,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 0
+      }
+    },
+    {
+      "id": "a65deca8fc",
+      "database": "financial",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 5,
+      "seconds": 0.20602308306843042,
+      "error": null,
+      "features": {
+        "select_scopes": 1,
+        "cte": false,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": true,
+        "or": false,
+        "joins": 0
+      }
+    },
+    {
+      "id": "a65deca8fc",
+      "database": "financial",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 5,
+      "seconds": 0.20285612507723272,
+      "error": null,
+      "features": {
+        "select_scopes": 1,
+        "cte": false,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": true,
+        "or": false,
+        "joins": 0
+      }
+    },
+    {
+      "id": "bbce981d7b",
+      "database": "financial",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.002853624988347292,
+      "error": null,
+      "features": {
+        "select_scopes": 6,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "bbce981d7b",
+      "database": "financial",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0041288339998573065,
+      "error": null,
+      "features": {
+        "select_scopes": 6,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": true,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 3
+      }
+    },
+    {
+      "id": "c4495596b4",
+      "database": "financial",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.0027035409584641457,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 3
+      }
+    },
+    {
+      "id": "c4495596b4",
+      "database": "financial",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.0027106250636279583,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 3
+      }
+    },
+    {
+      "id": "c7d3136268",
+      "database": "financial",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.17795329203363508,
+      "error": null,
+      "features": {
+        "select_scopes": 2,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": true,
+        "or": false,
+        "joins": 0
+      }
+    },
+    {
+      "id": "c7d3136268",
+      "database": "financial",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.1747673749923706,
+      "error": null,
+      "features": {
+        "select_scopes": 2,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": true,
+        "or": false,
+        "joins": 0
+      }
+    },
+    {
+      "id": "cc6a148eaf",
+      "database": "financial",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.23975566704757512,
+      "error": null,
+      "features": {
+        "select_scopes": 1,
+        "cte": false,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": true,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "cc6a148eaf",
+      "database": "financial",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.23491854197345674,
+      "error": null,
+      "features": {
+        "select_scopes": 1,
+        "cte": false,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": true,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "cde68b2348",
+      "database": "alien",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0024283750681206584,
+      "error": null,
+      "features": {
+        "select_scopes": 4,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "cde68b2348",
+      "database": "alien",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0009553750278428197,
+      "error": null,
+      "features": {
+        "select_scopes": 4,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "d31fb48995",
+      "database": "alien",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0011957079404965043,
+      "error": null,
+      "features": {
+        "select_scopes": 6,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "d31fb48995",
+      "database": "alien",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0010722499573603272,
+      "error": null,
+      "features": {
+        "select_scopes": 6,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "da10959f8c",
+      "database": "alien",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.0010073749581351876,
+      "error": null,
+      "features": {
+        "select_scopes": 5,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "da10959f8c",
+      "database": "alien",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 32,
+      "seconds": 0.001771082985214889,
+      "error": null,
+      "features": {
+        "select_scopes": 6,
+        "cte": true,
+        "subquery": true,
+        "window": true,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "e7b2c8e815",
+      "database": "alien",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.0009619579650461674,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "e7b2c8e815",
+      "database": "alien",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.0008779580239206553,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "ecf2814a02",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0007951250299811363,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "ecf2814a02",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.000758624984882772,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "ee6b268047",
+      "database": "alien",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.0009561659535393119,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "ee6b268047",
+      "database": "alien",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 51,
+      "seconds": 0.0009889169596135616,
+      "error": null,
+      "features": {
+        "select_scopes": 4,
+        "cte": true,
+        "subquery": true,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "f6a08cfdf0",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0005853750044479966,
+      "error": null,
+      "features": {
+        "select_scopes": 2,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 0
+      }
+    },
+    {
+      "id": "f6a08cfdf0",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 1,
+      "seconds": 0.0005642910255119205,
+      "error": null,
+      "features": {
+        "select_scopes": 2,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 0
+      }
+    },
+    {
+      "id": "f8b3cab9d0",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 4,
+      "seconds": 0.0007769999792799354,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "f8b3cab9d0",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 4,
+      "seconds": 0.0007923329249024391,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": false,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 2
+      }
+    },
+    {
+      "id": "fc09eb5c8c",
+      "database": "chinook_1",
+      "reading": "A",
+      "state": "ok",
+      "native_matches": [
+        "A"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.0009619999909773469,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    },
+    {
+      "id": "fc09eb5c8c",
+      "database": "chinook_1",
+      "reading": "B",
+      "state": "ok",
+      "native_matches": [
+        "B"
+      ],
+      "own_match": true,
+      "opposite_rejected": true,
+      "rows": 10,
+      "seconds": 0.0008935839869081974,
+      "error": null,
+      "features": {
+        "select_scopes": 3,
+        "cte": true,
+        "subquery": false,
+        "window": false,
+        "outer_join": false,
+        "group": true,
+        "having": false,
+        "distinct": false,
+        "limit": true,
+        "arithmetic": true,
+        "case": false,
+        "or": false,
+        "joins": 1
+      }
+    }
+  ],
+  "new_model_calls": 0,
+  "new_human_annotations": 0,
+  "go_for_bounded_development_baseline": true,
+  "scientific_expansion_gate": "NOT_OPENED",
+  "qualification_source_sha256": "654d86c83abbc280b7b4d70aa0804ecc9ebec9139733d7180f6071c25043bdca"
+}

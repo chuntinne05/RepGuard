@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "real_completed_responses": 72,
+  "distinct_development_reports": 24,
+  "primary_seven_files_unchanged": true,
+  "registered_before_new_responses": true,
+  "source_and_parent_hashes_verified": true,
+  "prompts_and_public_field_whitelists_verified": true,
+  "arithmetic_reexecuted": true,
+  "mechanical_fallback_chain_verified": true,
+  "outcomes_and_deployment_compute_recalculated": true,
+  "gate_recalculated": true,
+  "mock_calls": 0,
+  "independent_test": false,
+  "limitation": "Verification of records/arithmetic is not independent human semantic adjudication or provider billing verification.",
+  "methods": {
+    "direct_pot": {
+      "correct": 17,
+      "output_tokens": 25699,
+      "input_tokens": 33582,
+      "ollama_eval_seconds": 1129.582543
+    },
+    "self_review_1": {
+      "correct": 17,
+      "output_tokens": 41803,
+      "input_tokens": 74394,
+      "ollama_eval_seconds": 1835.436760999
+    },
+    "self_review_2": {
+      "correct": 17,
+      "output_tokens": 57712,
+      "input_tokens": 115181,
+      "ollama_eval_seconds": 2480.595292998
+    },
+    "compose": {
+      "correct": 16,
+      "output_tokens": 47557,
+      "input_tokens": 183716,
+      "ollama_eval_seconds": 2093.377215998
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "correlations": {
+    "model_means": -0.6149815529593095,
+    "model_means_excluding_MiMo": 0.10147557182326931,
+    "pooled_raw_probability_and_gold": 0.30202469066674903,
+    "question_means": 0.47609136895974496,
+    "within_question_demeaned": 0.04274253143169115
+  },
+  "extraction_modes": {
+    "complete_boxed": 889,
+    "tail_fallback": 71
+  },
+  "field_audit": {
+    "no_raw_box_prediction_present": 0,
+    "prediction_has_boxed": 0,
+    "prediction_present": 888,
+    "prediction_same_as_raw": 0,
+    "raw_has_boxed": 896,
+    "selected": 960
+  },
+  "gold_success_fraction": 0.5708333333333333,
+  "judgments": 960,
+  "mimo_fallback": {
+    "count": 39,
+    "false_high_p_ge_0_9": 15,
+    "gold_successes": 1,
+    "judge_mean": 0.6135897435897436
+  },
+  "models": 20,
+  "pair_decomposition": {
+    "covariance_sum": -0.5534557385966823,
+    "outcome_variance_sum": 41.87943262411348,
+    "pairs": 190,
+    "predicted_variance_sum": 0.7947112623307087,
+    "residual_variance_ratio": 1.0454070798091268
+  },
+  "pair_ratio_excluding_MiMo": 1.0452139208007232,
+  "parent_run_id": "0fad63edd346eb0591fd99e1",
+  "posthoc_best_fixed_reference": {
+    "gold_successes_on_48": 34,
+    "model": "Intern-S1-mini"
+  },
+  "posthoc_feature_ablations": {
+    "full": {
+      "brier": 0.20856080602000063,
+      "features": [
+        "raw_p",
+        "high_p",
+        "question_mean"
+      ],
+      "pair_residual_variance_ratio": 1.045407079809127
+    },
+    "gold_only": {
+      "brier": 0.2379740837191358,
+      "features": [
+        "model_identity"
+      ],
+      "pair_residual_variance_ratio": 1.037099915325995
+    },
+    "question_mean_only": {
+      "brier": 0.2074148690838199,
+      "features": [
+        "question_mean"
+      ],
+      "pair_residual_variance_ratio": 1.0362932208752509
+    },
+    "raw_p_and_threshold": {
+      "brier": 0.21231255171708033,
+      "features": [
+        "raw_p",
+        "high_p"
+      ],
+      "pair_residual_variance_ratio": 1.067620670857731
+    },
+    "raw_p_only": {
+      "brier": 0.2120906150332892,
+      "features": [
+        "raw_p"
+      ],
+      "pair_residual_variance_ratio": 1.065865815586348
+    }
+  },
+  "posthoc_question_oracle_successes_on_48": 42,
+  "questions": 48,
+  "raw_judge_distinct_values": {
+    "0.0": 591,
+    "0.2": 2,
+    "0.3": 2,
+    "0.5": 14,
+    "0.7": 2,
+    "0.8": 8,
+    "0.95": 48,
+    "0.99": 3,
+    "1.0": 290
+  },
+  "raw_judge_false_high_p_ge_0_9": 74,
+  "raw_judge_false_low_p_le_0_1": 274,
+  "raw_judge_global_reference": {
+    "gold_successes_on_48": 7,
+    "model": "MiMo-7B-RL-0530"
+  },
+  "raw_judge_mean": 0.36913541666666666,
+  "raw_judge_threshold_accuracy": 0.6177083333333333,
+  "scope": "Post-hoc descriptive development diagnosis; frozen gate unchanged"
+}

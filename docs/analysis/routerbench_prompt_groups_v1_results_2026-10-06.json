@@ -1,0 +1,29 @@
+{
+  "run_id": "45bde622445084fb20c4d095",
+  "total_questions": 500,
+  "total_groups": 500,
+  "multi_question_groups": 0,
+  "largest_group": 1,
+  "pilot_questions": 48,
+  "pilot_touched_groups": 48,
+  "pilot_touched_questions": 48,
+  "remaining_groups": 452,
+  "remaining_questions": 452,
+  "linked_edge_count": 0,
+  "review_edge_count": 0,
+  "linked_edges_in_private_artifact": 0,
+  "review_edges_in_private_artifact": 0,
+  "archive_sha256": "b79f8cde1a6f029c2efa663a3a3b6f7748defb22341fe59f328cebef6648c8f1",
+  "parent_pilot_run_id": "bad5a513bd5d227711eb1e0d",
+  "source_sha256": {
+    "infra/modal/routerbench_prompt_groups_core.py": "c9d256fad3667a27e923423079a029259e4c3e261832a0768daf81942e5505d3",
+    "infra/modal/routerbench_prompt_groups_pipeline.py": "d84f8bb105ac922998d5220fed91ae6b7a791834dbf2f9a536f0092ee7603cf2",
+    "infra/modal/routerbench_prompt_groups_modal.py": "e71606c0c071a265bf6a565fc72fdcd87adb659437347de36d964a034bd406ee",
+    "run_routerbench_prompt_groups.py": "ede9b2c6730ea9a7b8115b3fc3717a32f4b2209524b9badf062236cfba759059",
+    "report_routerbench_prompt_groups.py": "d35f9939aa4c1f9bdf8448ce31c4d0001e412d8fb77f879476213d456084bc82",
+    "tests/test_routerbench_prompt_groups.py": "22f2bbed8743005089649134cd6f41fb65646476b360aabb1e69933ee19b0d8e",
+    "docs/analysis/routerbench_prompt_groups_v1_protocol_2026-10-06.md": "ead27924cfd22612564632f16d1ca6430fbfed52749ef880aba52aff5dbd0467"
+  },
+  "finished_at_utc": "2026-10-06T12:01:44.419955+00:00",
+  "scope": "Prompt-only heuristic grouping; no gold outside pilot read, no final split certified"
+}

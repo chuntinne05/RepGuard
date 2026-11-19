@@ -1,0 +1,18 @@
+{
+  "plan_id": "deaee6167f9609bd2f045f46",
+  "source_checks": {
+    "experiments/arqa_v2/worker.py": true,
+    "experiments/arqa_v2/__init__.py": true,
+    "experiments/arqa_v2/oracle.py": true,
+    "experiments/arqa_v2/study.py": true,
+    "experiments/arqa_v2/preflight.py": true
+  },
+  "attempts": 288,
+  "responses": 288,
+  "attempt_response_ids_equal": true,
+  "all_generations_after_registration": true,
+  "native_thinking_outputs": 0,
+  "length_stops": 1,
+  "frozen_evaluator_receipt_audit": "PASS",
+  "post_registration_diagnostic": "Final-result source dependency; not a replacement primary score."
+}

@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "slide_count": 10,
+  "dimensions": [
+    2560,
+    1440
+  ],
+  "format": "PNG",
+  "language": "English, with personal names preserved",
+  "zip_integrity": "PASS",
+  "individual_image_hashes": "PASS",
+  "original_Vietnamese_images_unchanged": true,
+  "visual_review": "All10English slides inspected individually; overview reviewed; no clipped or overlapping content found",
+  "charts": "Matplotlib panels reused with all data, confidence intervals, legend and workflow labels retained",
+  "no_title_slide": true,
+  "last_slide_has_Tin_and_Trung_assignments": true
+}

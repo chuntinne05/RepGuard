@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "run_id": "d6d7cb8e116f7243e5b5f1cf",
+  "real_completed_responses": 16,
+  "mock_calls": 0,
+  "correct": 13,
+  "n": 16,
+  "valid": 15,
+  "native_thinking_nonempty": 0,
+  "length_stops": 0,
+  "input_tokens": 25801,
+  "output_tokens": 4392,
+  "whole_cohort_same_cases_prompt_weights_caps_except_thinking_verified": true,
+  "source_weights_timestamps_and_execution_verified": true,
+  "primary_seven_files_unchanged": true,
+  "original_native_results_preserved": true,
+  "posthoc_adequacy_control": true,
+  "independent_final_test": false
+}

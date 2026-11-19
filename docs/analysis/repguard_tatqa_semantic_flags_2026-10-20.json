@@ -1,0 +1,41 @@
+{
+  "scope": "Source/annotation discrepancies found after ALL144 scoped responses and original scoring. Original labels/scores unchanged; no independent human adjudication or relabels.",
+  "dataset": "TAT-QA TRAIN, pinned revision870accc41953dcde885aabeb963d94aabdc0fbc3",
+  "human_independent_reviews": 0,
+  "flags": [
+    {
+      "id": "3a302dbd-03bf-444b-8f1f-dcf7607e2665",
+      "type": "printed_precision_vs_recomputed_ratio",
+      "source": "Gross profit6279; revenue22104; table explicitly prints gross profit as percentage of revenue28%.",
+      "annotation": "28.41, scale percent; derivation6279/22104",
+      "observed": "All scoped-study arms return28%, source-supported printed rounded margin, official EM0.",
+      "interpretation": "Question does not specify precision/recompute; not established as wrong label. A generic task contract preferring recomputation could resolve this, not reputation."
+    },
+    {
+      "id": "7d8beb14-2862-4b15-9102-145f245a78b3",
+      "type": "fraction_percent_annotation_inconsistency",
+      "source": "Publicly announced program: November191354 shares; December374490 shares.",
+      "arithmetic": "(374490-191354)/191354=0.9570534193170772, or95.70534193170772%.",
+      "annotation": "answer0.96, scale percent; derivation(374490-191354)/191354",
+      "observed": "All scoped-study arms return95.70534 with scale percent and receive EM0.",
+      "interpretation": "Annotation appears to contain rounded fractional value with percent scale. Under the declared value/scale contract, it is inconsistent with the ordinary percent calculation. Keep official score; do not train a policy to prefer a factor100 error."
+    },
+    {
+      "id": "07799e79-f4e9-443c-8651-94d27c8553a1",
+      "type": "metric_scope_question_vs_target",
+      "source": "Question asks change in Total operating income of Communications Solutions. Paragraph explicitly states operating income decreased79million; table totals restructuring/other charges49million in2019 vs13million in2018.",
+      "annotation": "answer36million; derivation49-13",
+      "observed": "All scoped-study arms answer-79million, using paragraph; official EM0.",
+      "interpretation": "Target calculates change in charges/items included in income, not stated total operating-income change. Requires independent semantic adjudication; unchanged labels."
+    },
+    {
+      "id": "28042ec5-d6a5-40e2-8c61-6ba2fb1194b5",
+      "type": "missing_quantity_scale_and_dash_convention",
+      "source": "Fair value on acquisition/issuance row has2019dash and2018value2330. Extracted table header has$ but no explicit in-thousands multiplier; paragraphs do not state that table multiplier.",
+      "annotation": "1165, scale thousand; derivation(0+2330)/2",
+      "observed": "Model recognizes arithmetic1165 but deliberates scale; all registered arms invalid due absent dash numeric source, binding overwrite, or unsupported string assignment.",
+      "interpretation": "Actual interface failures coexist with underspecified scale. A readable output guessing thousand may improve official EM without establishing grounded unit correctness. Do not absolve code failures or call this a proven bad label."
+    }
+  ],
+  "next": "Keep official EM and all cases. Independent source-only review must specify metric/scope/sign/precision/units before comparing any adjudicated metric. This flags4/24 cases; does not establish corpus-wide noise prevalence."
+}

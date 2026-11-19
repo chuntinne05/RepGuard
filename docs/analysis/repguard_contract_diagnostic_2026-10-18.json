@@ -1,0 +1,54 @@
+{
+  "scope": "HISTORY-only development diagnostic, not independent evaluation",
+  "parent_run": "359b8d464d5005b9c5d0f967",
+  "case_ids": [
+    "CCI/2004/page_32.pdf-2",
+    "SLB/2003/page_57.pdf-1",
+    "DISCA/2017/page_41.pdf-1",
+    "DRE/2016/page_59.pdf-2",
+    "MMM/2013/page_26.pdf-2",
+    "ORLY/2016/page_29.pdf-3",
+    "UPS/2010/page_33.pdf-4",
+    "MO/2016/page_10.pdf-4"
+  ],
+  "agent": "B",
+  "variants": {
+    "unconstrained_json": {
+      "questions": 8,
+      "source_bound_executable": 0,
+      "candidate_correct": 0,
+      "checked_and_correct": 0,
+      "input_tokens": 16969,
+      "output_tokens": 1571
+    },
+    "reasoning_first": {
+      "questions": 8,
+      "source_bound_executable": 5,
+      "candidate_correct": 2,
+      "checked_and_correct": 1,
+      "input_tokens": 17193,
+      "output_tokens": 2222
+    }
+  },
+  "max_model_calls": 16,
+  "source_sha256": {
+    "core.py": "f72180eb8284e1bd232f593fbc2ef85d5606c5661b27300ce275469f5d8c8b99",
+    "live_app.py": "49056f94e828fa73c8daf70de5fef0ad99bdf6edb9f7048de89185091f9313fb",
+    "diagnostic.py": "20e5fe6061000a20f67172e0185e2f8be2360772007ad93ce25311c37c52b491",
+    "source_checks.py": "81c7c92134fd1ffff7e0745ef3191480fa1a117c76c70137621c46c64c297b06"
+  },
+  "raw_json_required": true,
+  "strip_markdown_fences": false,
+  "no_quality_retries": true,
+  "test_screen_used": false,
+  "run_id": "63c3562513581721dae03b51",
+  "actual_model_calls": 16,
+  "mock_model_calls": 0,
+  "frozen_B_same_8_history": {
+    "questions": 8,
+    "source_bound_executable": 0,
+    "candidate_correct": 0,
+    "new_model_calls": 0,
+    "source": "Preserved actual v2 responses, not newly inferred"
+  }
+}

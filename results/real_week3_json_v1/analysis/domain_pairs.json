@@ -1,0 +1,1094 @@
+[
+  {
+    "target": "biology",
+    "source": "biology",
+    "t": "same",
+    "tau": 1.0
+  },
+  {
+    "target": "biology",
+    "source": "chemistry",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "biology",
+    "source": "health",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "biology",
+    "source": "business",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "biology",
+    "source": "computer science",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "biology",
+    "source": "economics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "biology",
+    "source": "engineering",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "biology",
+    "source": "history",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "biology",
+    "source": "law",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "biology",
+    "source": "math",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "biology",
+    "source": "other",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "biology",
+    "source": "philosophy",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "biology",
+    "source": "physics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "biology",
+    "source": "psychology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "business",
+    "source": "business",
+    "t": "same",
+    "tau": 1.0
+  },
+  {
+    "target": "business",
+    "source": "economics",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "business",
+    "source": "psychology",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "business",
+    "source": "biology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "business",
+    "source": "chemistry",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "business",
+    "source": "computer science",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "business",
+    "source": "engineering",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "business",
+    "source": "health",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "business",
+    "source": "history",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "business",
+    "source": "law",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "business",
+    "source": "math",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "business",
+    "source": "other",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "business",
+    "source": "philosophy",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "business",
+    "source": "physics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "chemistry",
+    "source": "chemistry",
+    "t": "same",
+    "tau": 1.0
+  },
+  {
+    "target": "chemistry",
+    "source": "biology",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "chemistry",
+    "source": "health",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "chemistry",
+    "source": "business",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "chemistry",
+    "source": "computer science",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "chemistry",
+    "source": "economics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "chemistry",
+    "source": "engineering",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "chemistry",
+    "source": "history",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "chemistry",
+    "source": "law",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "chemistry",
+    "source": "math",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "chemistry",
+    "source": "other",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "chemistry",
+    "source": "philosophy",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "chemistry",
+    "source": "physics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "chemistry",
+    "source": "psychology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "computer science",
+    "source": "computer science",
+    "t": "same",
+    "tau": 1.0
+  },
+  {
+    "target": "computer science",
+    "source": "engineering",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "computer science",
+    "source": "math",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "computer science",
+    "source": "physics",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "computer science",
+    "source": "biology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "computer science",
+    "source": "business",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "computer science",
+    "source": "chemistry",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "computer science",
+    "source": "economics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "computer science",
+    "source": "health",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "computer science",
+    "source": "history",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "computer science",
+    "source": "law",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "computer science",
+    "source": "other",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "computer science",
+    "source": "philosophy",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "computer science",
+    "source": "psychology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "economics",
+    "source": "economics",
+    "t": "same",
+    "tau": 1.0
+  },
+  {
+    "target": "economics",
+    "source": "business",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "economics",
+    "source": "psychology",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "economics",
+    "source": "biology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "economics",
+    "source": "chemistry",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "economics",
+    "source": "computer science",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "economics",
+    "source": "engineering",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "economics",
+    "source": "health",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "economics",
+    "source": "history",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "economics",
+    "source": "law",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "economics",
+    "source": "math",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "economics",
+    "source": "other",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "economics",
+    "source": "philosophy",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "economics",
+    "source": "physics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "engineering",
+    "source": "engineering",
+    "t": "same",
+    "tau": 1.0
+  },
+  {
+    "target": "engineering",
+    "source": "computer science",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "engineering",
+    "source": "math",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "engineering",
+    "source": "physics",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "engineering",
+    "source": "biology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "engineering",
+    "source": "business",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "engineering",
+    "source": "chemistry",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "engineering",
+    "source": "economics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "engineering",
+    "source": "health",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "engineering",
+    "source": "history",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "engineering",
+    "source": "law",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "engineering",
+    "source": "other",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "engineering",
+    "source": "philosophy",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "engineering",
+    "source": "psychology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "health",
+    "source": "health",
+    "t": "same",
+    "tau": 1.0
+  },
+  {
+    "target": "health",
+    "source": "biology",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "health",
+    "source": "chemistry",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "health",
+    "source": "business",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "health",
+    "source": "computer science",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "health",
+    "source": "economics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "health",
+    "source": "engineering",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "health",
+    "source": "history",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "health",
+    "source": "law",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "health",
+    "source": "math",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "health",
+    "source": "other",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "health",
+    "source": "philosophy",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "health",
+    "source": "physics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "health",
+    "source": "psychology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "history",
+    "source": "history",
+    "t": "same",
+    "tau": 1.0
+  },
+  {
+    "target": "history",
+    "source": "law",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "history",
+    "source": "philosophy",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "history",
+    "source": "biology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "history",
+    "source": "business",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "history",
+    "source": "chemistry",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "history",
+    "source": "computer science",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "history",
+    "source": "economics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "history",
+    "source": "engineering",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "history",
+    "source": "health",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "history",
+    "source": "math",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "history",
+    "source": "other",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "history",
+    "source": "physics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "history",
+    "source": "psychology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "law",
+    "source": "law",
+    "t": "same",
+    "tau": 1.0
+  },
+  {
+    "target": "law",
+    "source": "history",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "law",
+    "source": "philosophy",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "law",
+    "source": "biology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "law",
+    "source": "business",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "law",
+    "source": "chemistry",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "law",
+    "source": "computer science",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "law",
+    "source": "economics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "law",
+    "source": "engineering",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "law",
+    "source": "health",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "law",
+    "source": "math",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "law",
+    "source": "other",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "law",
+    "source": "physics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "law",
+    "source": "psychology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "math",
+    "source": "math",
+    "t": "same",
+    "tau": 1.0
+  },
+  {
+    "target": "math",
+    "source": "computer science",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "math",
+    "source": "engineering",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "math",
+    "source": "physics",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "math",
+    "source": "biology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "math",
+    "source": "business",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "math",
+    "source": "chemistry",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "math",
+    "source": "economics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "math",
+    "source": "health",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "math",
+    "source": "history",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "math",
+    "source": "law",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "math",
+    "source": "other",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "math",
+    "source": "philosophy",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "math",
+    "source": "psychology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "philosophy",
+    "source": "philosophy",
+    "t": "same",
+    "tau": 1.0
+  },
+  {
+    "target": "philosophy",
+    "source": "history",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "philosophy",
+    "source": "law",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "philosophy",
+    "source": "biology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "philosophy",
+    "source": "business",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "philosophy",
+    "source": "chemistry",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "philosophy",
+    "source": "computer science",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "philosophy",
+    "source": "economics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "philosophy",
+    "source": "engineering",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "philosophy",
+    "source": "health",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "philosophy",
+    "source": "math",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "philosophy",
+    "source": "other",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "philosophy",
+    "source": "physics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "philosophy",
+    "source": "psychology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "physics",
+    "source": "physics",
+    "t": "same",
+    "tau": 1.0
+  },
+  {
+    "target": "physics",
+    "source": "computer science",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "physics",
+    "source": "engineering",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "physics",
+    "source": "math",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "physics",
+    "source": "biology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "physics",
+    "source": "business",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "physics",
+    "source": "chemistry",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "physics",
+    "source": "economics",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "physics",
+    "source": "health",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "physics",
+    "source": "history",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "physics",
+    "source": "law",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "physics",
+    "source": "other",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "physics",
+    "source": "philosophy",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "physics",
+    "source": "psychology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "psychology",
+    "source": "psychology",
+    "t": "same",
+    "tau": 1.0
+  },
+  {
+    "target": "psychology",
+    "source": "business",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "psychology",
+    "source": "economics",
+    "t": "related",
+    "tau": 0.5
+  },
+  {
+    "target": "psychology",
+    "source": "biology",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "psychology",
+    "source": "chemistry",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "psychology",
+    "source": "computer science",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "psychology",
+    "source": "engineering",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "psychology",
+    "source": "health",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "psychology",
+    "source": "history",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "psychology",
+    "source": "law",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "psychology",
+    "source": "math",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "psychology",
+    "source": "other",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "psychology",
+    "source": "philosophy",
+    "t": "unrelated",
+    "tau": 0.0
+  },
+  {
+    "target": "psychology",
+    "source": "physics",
+    "t": "unrelated",
+    "tau": 0.0
+  }
+]

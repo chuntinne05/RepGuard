@@ -1,0 +1,145 @@
+# ============================================================
+# RepGuard Capability Audit Configuration
+# Step 1.1 — Heterogeneity Gate (OQ-1: Model Pool Composition)
+# ============================================================
+#
+# Usage:
+#   python -m repguard.audit.capability_audit --config configs/capability_audit.yaml
+#
+# To add a new model/provider:
+#   - Append another block under `agents:` with your provider's settings.
+#   - Set the API key in .env (or export to shell) before running.
+#
+# Supported providers: mock | gemini | openai | anthropic
+
+audit:
+  seed: 42
+
+  # Tasks sampled per domain (subject) from the train_calibration split.
+  # With local Ollama (no rate limits):
+  #   - n_samples_per_domain: 5 (8 domains = 40 tasks) takes ~30 seconds per model.
+  #   - n_samples_per_domain: 15 (8 domains = 120 tasks) takes ~1.5 minutes per model.
+  n_samples_per_domain: 5
+
+  # MMLU-Pro subjects to include. Leave empty [] to use all available subjects.
+  # Full list: math, physics, chemistry, biology, computer science, engineering,
+  #            health, psychology, business, economics, history, philosophy, law, other
+  domains:
+    - math
+    - physics
+    - computer science
+    - history
+    - law
+    - psychology
+    - biology
+    - economics
+
+  # Prompt format: "direct" (answer letter only) or "cot" (chain-of-thought)
+  prompt_mode: direct
+
+  # ──────────────────────────────────────────────────────────
+  # Data source
+  # ──────────────────────────────────────────────────────────
+  # Set use_synthetic: true to run the full pipeline WITHOUT network access.
+  # Results will be meaningless for real heterogeneity analysis, but
+  # it validates that all code paths work before spending API budget.
+  use_synthetic: false
+  synthetic_n: 400         # only used when use_synthetic: true
+
+  data_dir: "./data"
+  dataset_id: "TIGER-Lab/MMLU-Pro"
+
+  # Where to write results (JSON, CSV, gate decision)
+  output_dir: "./results/capability_audit"
+
+
+# ============================================================
+# Agent pool
+# ============================================================
+# Each agent entry defines one LLM configuration.
+# The audit evaluates ALL agents on the SAME sampled tasks.
+#
+# Fields:
+#   name             Human-readable label (appears in reports and CSV)
+#   provider         Backend: gemini | openai | anthropic | mock
+#   model_id         Model string sent to the API
+#   temperature      Sampling temperature (0.0 = greedy/deterministic)
+#   max_tokens       Max output tokens
+#   top_p            Top-p sampling parameter
+#   api_key_env      Name of the env var holding the API key
+#   requests_per_minute  Rate limit (adjust to stay within quota)
+#   tokens_per_minute    Token rate limit
+#   cache_dir        Directory for caching API responses (avoids re-spending budget)
+
+agents:
+
+  # ────────────────────────────────────────────────────────────
+  # Agent 1: Qwen3 8B (Primary reasoning agent)
+  # ────────────────────────────────────────────────────────────
+  - name: qwen3-8b
+    provider: ollama
+    model_id: qwen3:8b
+    temperature: 0.0
+    max_tokens: 16
+    top_p: 1.0
+    api_key_env: ""
+    requests_per_minute: 1000
+    tokens_per_minute: 10000000
+    cache_dir: ./.llm_cache
+
+  # ────────────────────────────────────────────────────────────
+  # Agent 2: Gemma2 (Quantitative / Math / Physics specialist)
+  # ────────────────────────────────────────────────────────────
+  - name: gemma2
+    provider: ollama
+    model_id: gemma2
+    temperature: 0.0
+    max_tokens: 16
+    top_p: 1.0
+    api_key_env: ""
+    requests_per_minute: 1000
+    tokens_per_minute: 10000000
+    cache_dir: ./.llm_cache
+
+  # ────────────────────────────────────────────────────────────
+  # Agent 3: Llama3 8B (Generalist baseline)
+  # ────────────────────────────────────────────────────────────
+  - name: llama3-8b
+    provider: ollama
+    model_id: llama3:8b
+    temperature: 0.0
+    max_tokens: 16
+    top_p: 1.0
+    api_key_env: ""
+    requests_per_minute: 1000
+    tokens_per_minute: 10000000
+    cache_dir: ./.llm_cache
+
+  # ────────────────────────────────────────────────────────────
+  # Agent 4: Qwen3 0.6B (Budget / weak agent)
+  # ────────────────────────────────────────────────────────────
+  - name: qwen3-0.6b
+    provider: ollama
+    model_id: qwen3:0.6b
+    temperature: 0.0
+    max_tokens: 16
+    top_p: 1.0
+    api_key_env: ""
+    requests_per_minute: 1000
+    tokens_per_minute: 10000000
+    cache_dir: ./.llm_cache
+
+  # ────────────────────────────────────────────────────────────
+  # (Optional Cloud) Google Gemini Flash
+  # Uncomment if you want to compare local models vs cloud
+  # ────────────────────────────────────────────────────────────
+  # - name: gemini-flash
+  #   provider: gemini
+  #   model_id: gemini-flash-latest
+  #   temperature: 0.0
+  #   max_tokens: 512
+  #   top_p: 1.0
+  #   api_key_env: GEMINI_API_KEY
+  #   requests_per_minute: 4
+  #   tokens_per_minute: 1000000
+  #   cache_dir: ./.llm_cache

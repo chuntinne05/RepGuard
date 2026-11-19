@@ -1,0 +1,124 @@
+{
+  "scope": "Source/schema preflight only; zero model calls, no model outcomes and no oracle adequacy claim.",
+  "repo": "RuilongWang/ARQA-Benchmark",
+  "commit": "483e8c7b084afc6fbfb46d8609617b297b4322b8",
+  "files": [
+    {
+      "file": "ARQA_validated.json",
+      "bytes": 3380324,
+      "git_blob_verified": true,
+      "sha256": "004075187f5e564a1ff7a35111c6d6828f67804f9b5d00c908fbe53d130a4063"
+    },
+    {
+      "file": "pack_context.db",
+      "bytes": 2199552,
+      "git_blob_verified": true,
+      "sha256": "9b76189340c34c0b1cb57fc5b287d4a4e28d864b28702ab934f90fb77a25666a"
+    }
+  ],
+  "qa_shape": {
+    "top_type": "dict",
+    "top_keys": [
+      "packs"
+    ],
+    "packs": {
+      "count": 400,
+      "first_keys": [
+        "paragraph_ids",
+        "qas",
+        "table_id",
+        "year"
+      ]
+    }
+  },
+  "context_db_schema": {
+    "context_packs": {
+      "rows": 560,
+      "columns": [
+        {
+          "name": "table_id",
+          "type": "TEXT"
+        },
+        {
+          "name": "doc_id",
+          "type": "TEXT"
+        },
+        {
+          "name": "year",
+          "type": "INTEGER"
+        },
+        {
+          "name": "page",
+          "type": "INTEGER"
+        },
+        {
+          "name": "bucket",
+          "type": "TEXT"
+        },
+        {
+          "name": "section_name",
+          "type": "TEXT"
+        },
+        {
+          "name": "title",
+          "type": "TEXT"
+        },
+        {
+          "name": "headers",
+          "type": "TEXT"
+        },
+        {
+          "name": "merged_headers",
+          "type": "TEXT"
+        },
+        {
+          "name": "rows",
+          "type": "TEXT"
+        },
+        {
+          "name": "stub_col",
+          "type": "TEXT"
+        },
+        {
+          "name": "paragraphs",
+          "type": "TEXT"
+        }
+      ]
+    }
+  },
+  "database_read": "Verified copy in temp directory, immutable/query-only. Direct workspace URI failed; original source unchanged.",
+  "next": "Check QA/context mapping and scorer semantics, freeze source groups and pilot protocol before new inference.",
+  "metadata_mapping_check": {
+    "qa_packs": 400,
+    "qa_items": 2448,
+    "missing_context_pack_ids": [],
+    "question_types": {
+      "lookup_text": 716,
+      "insight": 535,
+      "lookup_table": 574,
+      "arithmetic": 623
+    },
+    "qa_first_keys": [
+      "answer_text",
+      "evidence",
+      "q_type",
+      "qa_id",
+      "question",
+      "table_id",
+      "verified"
+    ],
+    "context_doc_counts": {
+      "VW2015": 59,
+      "VW2016": 64,
+      "VW2017": 60,
+      "VW2018": 66,
+      "VW2019": 65,
+      "VW2020": 59,
+      "VW2021": 52,
+      "VW2022": 52,
+      "VW2023": 54,
+      "VW2024": 29
+    },
+    "scope": "ID/schema linkage only. No model generation, no automatic declaration of semantic gold correctness."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "run_id": "63bb59fcde70e2533c1d242a",
+  "real_responses": 32,
+  "mock_calls": 0,
+  "distinct_new_live_report_groups": 16,
+  "same_public_prompts_per_question_both_models": true,
+  "native_thinking_nonempty": 32,
+  "pinned_model_and_source_hashes_verified": true,
+  "arithmetic_and_outcomes_recomputed": true,
+  "costs_and_gate_recomputed": true,
+  "primary_seven_files_unchanged": true,
+  "reserved_confirmation_reports_used": 0,
+  "archive_report_disjointness": "UNRESOLVED, not claimed",
+  "independent_final_test": false,
+  "methods": {
+    "qwen3:8b": {
+      "correct": 11,
+      "n": 16,
+      "valid": 13,
+      "input_tokens": 25649,
+      "output_tokens": 24388,
+      "length_stops": 1,
+      "mean_ollama_eval_seconds": 38.43103525,
+      "uniquely_correct": 0
+    },
+    "qwen3:14b": {
+      "correct": 11,
+      "n": 16,
+      "valid": 14,
+      "input_tokens": 25649,
+      "output_tokens": 14271,
+      "length_stops": 0,
+      "mean_ollama_eval_seconds": 37.7095509374375,
+      "uniquely_correct": 0
+    }
+  },
+  "oracle_union": 11,
+  "gate_for_larger_history_collection": false
+}

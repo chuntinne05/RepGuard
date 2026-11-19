@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-19T16:23:57Z",
+  "apps": {
+    "composition": "ap-H1QBQza7gdGhq4UhD8FZoe",
+    "backbone": "ap-oxSrIRlGvzvy6zOfdvHV5R",
+    "modern": "ap-MMiCt8dXwoMLlUfE9xCpMK"
+  },
+  "containers": {
+    "composition": [],
+    "backbone": [],
+    "modern": []
+  },
+  "all_research_containers_zero": true,
+  "old_user_ollama_app_untouched": true
+}

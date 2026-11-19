@@ -1,0 +1,62 @@
+{
+  "questions": 48,
+  "models": 20,
+  "judgments": 960,
+  "valid_fraction": 1.0,
+  "boxed_fraction": 0.9260416666666667,
+  "brier": {
+    "raw_judge": 0.36835447916666664,
+    "crossfit_judge": 0.20856080602000063,
+    "crossfit_gold_only": 0.2379740837191358
+  },
+  "brier_gain_vs_gold_only": 0.029413277699135192,
+  "brier_gain_ci95": [
+    0.00182740137619052,
+    0.056282103058059696
+  ],
+  "pair_residual_variance_ratio": 1.0454070798091268,
+  "pair_residual_variance_ratio_ci95": [
+    1.019378880562028,
+    1.0735299195365071
+  ],
+  "operational_pass": true,
+  "expansion_signal_pass": false,
+  "scope": "Development feedback feasibility; all pilot gold used for cross-fit, no equal-budget routing",
+  "uncertainty": "Question bootstrap of fixed cross-fit predictions; no refit or independent confirmation",
+  "run_id": "0fad63edd346eb0591fd99e1",
+  "usage": {
+    "attempts_started": 960,
+    "responses_recorded": 960,
+    "prompt_tokens_recorded": 1299117,
+    "completion_tokens_recorded": 11240,
+    "unknown_usage_attempts": 0,
+    "inference_seconds_recorded": 632.5070618460007
+  },
+  "environment": {
+    "model": "qwen3:14b",
+    "model_digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+    "ollama": {
+      "version": "0.34.4"
+    },
+    "gpu": "NVIDIA L4, 23034 MiB",
+    "think": false,
+    "num_ctx": 16384,
+    "num_predict": 128,
+    "temperature": 0,
+    "seed": 1404,
+    "archive_mounted": false
+  },
+  "source_sha256": {
+    "infra/modal/routerbench_finqa_feedback_core.py": "e84bbd096c4a011690ba400697738c4706df9d4802c0a605695f61299a4dd830",
+    "infra/modal/routerbench_finqa_feedback_pipeline.py": "3761291eef058c635fc0066bd3c5cd247f4e5c5956e91fe8aa123c63de10f957",
+    "infra/modal/routerbench_finqa_feedback_modal.py": "3dd0720a2e6acd82911f1a493df95ebd08cdf8423682b1ecd04d3bb7dbb731ef",
+    "infra/modal/routerbench_finqa_preflight_modal.py": "cb042a65976b294b9ffbdbbb380ac18f448014dec8df2a187d86e6fba5fc4b4a",
+    "infra/modal/routerbench_intake_core.py": "e4c890b55a2317cf1ebae1328493f5f253a9406cad4e5de7a1d68c3a83d389c4",
+    "run_routerbench_finqa_feedback.py": "9a1ec67bdc1523864d17f1d9022f2c554e636f985be23cc2b85f9fc7852cabf2",
+    "report_routerbench_finqa_feedback.py": "0d05d1d58b895c9c03ca99e8710bae3e0872ffb628dc7f9836299af582f49bca",
+    "tests/test_routerbench_finqa_feedback.py": "cc56377c6d29a8f0f9ea58ae4a820edb990f8d09b0a7f1af437bc31c45d62fcd",
+    "run_dart_gain.py": "ab70c9a79125bcd8aebe0f222cb39a4ac7ad42a1b827451b571528ad986e6168",
+    "docs/analysis/routerbench_finqa_feedback_v1_protocol_2026-10-06.md": "1f8c00840b425550838341e4464ec299c33b14908969f3fdbdcd18e139dafd25"
+  },
+  "verified_cases": 960
+}

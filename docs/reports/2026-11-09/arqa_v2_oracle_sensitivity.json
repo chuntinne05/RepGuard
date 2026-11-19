@@ -1,0 +1,244 @@
+{
+  "scope": "Post-hoc whole24pilot source/measurement flags, automatic heuristics and author inspection, NOT independent human adjudication. No item removed/relabelled, no primary score replaced.",
+  "flag_counts": {
+    "question_measure_vs_production_title_review_required": 4,
+    "published_display_precision_differs_from_frozen_half_cent_rule": 10,
+    "question_mentions_repeated_row_label_without_explicit_scope_check": 1,
+    "published_unit_empty_requires_semantic_unit_review": 2,
+    "numeric_header_may_need_source_layout_review": 2,
+    "segments_vs_consolidated_reconciliation_scope_review": 1
+  },
+  "items_with_any_flag": 15,
+  "item_flags": [
+    {
+      "qa_id": "718ffb9493",
+      "table_id": "VW2019_T704982",
+      "flags": [
+        "question_measure_vs_production_title_review_required"
+      ]
+    },
+    {
+      "qa_id": "f003fe0f98",
+      "table_id": "VW2018_Tfef2f2",
+      "flags": []
+    },
+    {
+      "qa_id": "dd0e3b2ebf",
+      "table_id": "VW2020_T2242ae",
+      "flags": [
+        "published_display_precision_differs_from_frozen_half_cent_rule"
+      ]
+    },
+    {
+      "qa_id": "38902f6191",
+      "table_id": "VW2018_T0a429a",
+      "flags": [
+        "published_display_precision_differs_from_frozen_half_cent_rule"
+      ]
+    },
+    {
+      "qa_id": "bbe603cb82",
+      "table_id": "VW2020_Td3fba5",
+      "flags": []
+    },
+    {
+      "qa_id": "b942b4f982",
+      "table_id": "VW2020_T371eeb",
+      "flags": []
+    },
+    {
+      "qa_id": "a92703c96b",
+      "table_id": "VW2020_Te4a733",
+      "flags": [
+        "published_display_precision_differs_from_frozen_half_cent_rule"
+      ]
+    },
+    {
+      "qa_id": "370f7b0b07",
+      "table_id": "VW2019_T321e09",
+      "flags": [
+        "question_measure_vs_production_title_review_required",
+        "published_display_precision_differs_from_frozen_half_cent_rule"
+      ]
+    },
+    {
+      "qa_id": "cf12fca083",
+      "table_id": "VW2018_T43218a",
+      "flags": [
+        "question_mentions_repeated_row_label_without_explicit_scope_check",
+        "published_display_precision_differs_from_frozen_half_cent_rule"
+      ]
+    },
+    {
+      "qa_id": "c2fcfb3928",
+      "table_id": "VW2015_T7154d0",
+      "flags": []
+    },
+    {
+      "qa_id": "7476bc2acc",
+      "table_id": "VW2018_Tbd47b7",
+      "flags": []
+    },
+    {
+      "qa_id": "a660204d2b",
+      "table_id": "VW2018_T25ff48",
+      "flags": [
+        "published_display_precision_differs_from_frozen_half_cent_rule"
+      ]
+    },
+    {
+      "qa_id": "4dfc8f2ff3",
+      "table_id": "VW2017_T25ff48",
+      "flags": []
+    },
+    {
+      "qa_id": "212f007e27",
+      "table_id": "VW2021_Tf950d4",
+      "flags": []
+    },
+    {
+      "qa_id": "eebf1250e1",
+      "table_id": "VW2018_Tc7190f",
+      "flags": [
+        "published_unit_empty_requires_semantic_unit_review",
+        "numeric_header_may_need_source_layout_review"
+      ]
+    },
+    {
+      "qa_id": "bbfdf7bf37",
+      "table_id": "VW2017_Tc7190f",
+      "flags": [
+        "numeric_header_may_need_source_layout_review"
+      ]
+    },
+    {
+      "qa_id": "f795ec592b",
+      "table_id": "VW2015_T704982",
+      "flags": [
+        "question_measure_vs_production_title_review_required",
+        "published_unit_empty_requires_semantic_unit_review"
+      ]
+    },
+    {
+      "qa_id": "4f219c93b0",
+      "table_id": "VW2016_Taf759f",
+      "flags": [
+        "published_display_precision_differs_from_frozen_half_cent_rule"
+      ]
+    },
+    {
+      "qa_id": "1325b18bfb",
+      "table_id": "VW2018_Tabef26",
+      "flags": [
+        "segments_vs_consolidated_reconciliation_scope_review"
+      ]
+    },
+    {
+      "qa_id": "8e3eb87ea6",
+      "table_id": "VW2017_T0c2e70",
+      "flags": [
+        "published_display_precision_differs_from_frozen_half_cent_rule"
+      ]
+    },
+    {
+      "qa_id": "a0a3f4a7bf",
+      "table_id": "VW2019_Tb99596",
+      "flags": []
+    },
+    {
+      "qa_id": "0f29441c45",
+      "table_id": "VW2016_T7b0ff5",
+      "flags": [
+        "published_display_precision_differs_from_frozen_half_cent_rule"
+      ]
+    },
+    {
+      "qa_id": "d5a035f3d1",
+      "table_id": "VW2017_Tacc6db",
+      "flags": [
+        "question_measure_vs_production_title_review_required",
+        "published_display_precision_differs_from_frozen_half_cent_rule"
+      ]
+    },
+    {
+      "qa_id": "84a076bf13",
+      "table_id": "VW2019_Tb6a79f",
+      "flags": []
+    }
+  ],
+  "sensitivity": {
+    "standard/A": {
+      "published_precision_numeric_only": 21,
+      "source_program_numeric_only": 18,
+      "program_matches_oracle_but_answer_value_does_not": 0,
+      "n": 24
+    },
+    "standard/B": {
+      "published_precision_numeric_only": 17,
+      "source_program_numeric_only": 17,
+      "program_matches_oracle_but_answer_value_does_not": 4,
+      "n": 24
+    },
+    "standard/AA": {
+      "published_precision_numeric_only": 20,
+      "source_program_numeric_only": 17,
+      "program_matches_oracle_but_answer_value_does_not": 0,
+      "n": 24
+    },
+    "standard/BB": {
+      "published_precision_numeric_only": 18,
+      "source_program_numeric_only": 18,
+      "program_matches_oracle_but_answer_value_does_not": 1,
+      "n": 24
+    },
+    "standard/AB": {
+      "published_precision_numeric_only": 21,
+      "source_program_numeric_only": 16,
+      "program_matches_oracle_but_answer_value_does_not": 0,
+      "n": 24
+    },
+    "standard/BA": {
+      "published_precision_numeric_only": 19,
+      "source_program_numeric_only": 19,
+      "program_matches_oracle_but_answer_value_does_not": 2,
+      "n": 24
+    },
+    "checklist/A": {
+      "published_precision_numeric_only": 19,
+      "source_program_numeric_only": 18,
+      "program_matches_oracle_but_answer_value_does_not": 2,
+      "n": 24
+    },
+    "checklist/B": {
+      "published_precision_numeric_only": 17,
+      "source_program_numeric_only": 18,
+      "program_matches_oracle_but_answer_value_does_not": 4,
+      "n": 24
+    },
+    "checklist/AA": {
+      "published_precision_numeric_only": 17,
+      "source_program_numeric_only": 16,
+      "program_matches_oracle_but_answer_value_does_not": 2,
+      "n": 24
+    },
+    "checklist/BB": {
+      "published_precision_numeric_only": 19,
+      "source_program_numeric_only": 19,
+      "program_matches_oracle_but_answer_value_does_not": 2,
+      "n": 24
+    },
+    "checklist/AB": {
+      "published_precision_numeric_only": 19,
+      "source_program_numeric_only": 18,
+      "program_matches_oracle_but_answer_value_does_not": 2,
+      "n": 24
+    },
+    "checklist/BA": {
+      "published_precision_numeric_only": 19,
+      "source_program_numeric_only": 18,
+      "program_matches_oracle_but_answer_value_does_not": 1,
+      "n": 24
+    }
+  },
+  "warning": "Sensitivity changes rounding/ignores units or scores program instead of declared answer. It is a different readout, not method superiority or human semantic truth."
+}

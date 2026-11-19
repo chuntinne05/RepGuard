@@ -1,0 +1,746 @@
+{
+  "review_date_vietnam": "2026-10-18",
+  "scope": "Local completed-development artifacts only; no inference, no new holdout outcomes, no live Modal query",
+  "verification": {
+    "headroom": {
+      "verified_score_files": 40,
+      "recomputed_matches_cloud": true,
+      "datasets": {
+        "mbpp/test": {
+          "best_fixed": 0.78,
+          "oracle": 0.945,
+          "unique_eligible_remaining": 766
+        },
+        "finqa/test": {
+          "best_fixed": 0.74,
+          "oracle": 0.885,
+          "unique_eligible_remaining": 929
+        }
+      }
+    },
+    "finqa_judge": {
+      "verified_cases": 960,
+      "recomputed_matches_cloud_and_public": true,
+      "pair_ratio": 1.0454070798091268,
+      "ci95": [
+        1.019378880562028,
+        1.0735299195365071
+      ],
+      "expansion_pass": false
+    },
+    "finqa_consensus": {
+      "verified_cells": 960,
+      "recomputed_matches_cloud_and_public": true,
+      "pair_ratio": 0.9233883680585767,
+      "ci95": [
+        0.8487292923886495,
+        1.0006126654332912
+      ],
+      "expansion_pass": false
+    }
+  },
+  "local_run_states": {
+    "dart_neural_v1": {
+      "state": "stopped_p0_gate",
+      "updated_at": "2026-10-05T04:34:31.968126+00:00",
+      "completed": 5,
+      "total": 5
+    },
+    "dart_gain_v1": {
+      "state": "completed_review_required",
+      "completed": 305,
+      "total": 305,
+      "updated_at": "2026-10-05T05:41:05.209175+00:00",
+      "primary_signal_pass": false
+    },
+    "dart_history_rectifier_v1": {
+      "state": "completed_review_required",
+      "completed": 300,
+      "total": 300,
+      "updated_at": "2026-10-05T14:53:12.113190+00:00",
+      "primary_signal_pass": false
+    },
+    "dart_paired_history_v1": {
+      "state": "completed_review_required",
+      "completed": 300,
+      "total": 300,
+      "updated_at": "2026-10-05T15:04:57.009930+00:00",
+      "primary_signal_pass": false
+    },
+    "dart_halving_v1": {
+      "state": "completed_review_required",
+      "completed": 300,
+      "total": 300,
+      "updated_at": "2026-10-05T15:34:26.469712+00:00",
+      "new_baseline_signal_pass": false
+    },
+    "routerbench_pilot_v1": {
+      "state": "completed_pilot_review_required",
+      "updated_at": "2026-10-06T00:40:33.062068+00:00",
+      "total_cases": 288,
+      "completed_cases": 288,
+      "expansion_signal_pass": true
+    },
+    "routerbench_sparse_v1": {
+      "state": "completed_development_review_required",
+      "total_cases": 240,
+      "updated_at": "2026-10-06T01:42:46.838554+00:00",
+      "completed_cases": 240,
+      "development_expansion_gate_pass": false
+    },
+    "routerbench_headroom_v1": {
+      "state": "completed_development_headroom_review_required",
+      "updated_at": "2026-10-06T12:16:20.311819+00:00"
+    },
+    "routerbench_finqa_feedback_v1": {
+      "state": "completed_pilot_review_required",
+      "updated_at": "2026-10-06T13:43:29.177440+00:00",
+      "total_cases": 960,
+      "completed_cases": 960,
+      "expansion_signal_pass": false
+    },
+    "routerbench_finqa_consensus_v1": {
+      "state": "completed_development_review_required",
+      "updated_at": "2026-10-06T17:00:46.435439+00:00",
+      "expansion_signal_pass": false
+    }
+  },
+  "public_analysis_json_files_parsed": 23,
+  "source_manifest": [
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/appworld_legacy_react_v7_protocol_2026-10-02.md",
+      "bytes": 3838,
+      "sha256": "3b7cdc22016e4f855a3618e8871888176d737af92ec2afd7cb26dfd1ed3a890b"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/appworld_official_agent_compatibility_2026-10-02.md",
+      "bytes": 4498,
+      "sha256": "71d66e9532bcfa3bc1cdc955cd95d866dce9b58fb3ac3e40b10b07b058d72fc6"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/appworld_v10_simplified_protocol_2026-10-03.md",
+      "bytes": 3877,
+      "sha256": "0f6fd2e8dedbc7f7c9a610acca22735343e811b979763a270fc07d40d40dbd99"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/appworld_v8_coder_capability_protocol_2026-10-02.md",
+      "bytes": 3909,
+      "sha256": "97592d2a8ceb1eef467078c2376e5e8b37562b1b47ec849a75b1e3b2f358ee25"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/appworld_v9_glm_capability_protocol_2026-10-03.md",
+      "bytes": 3665,
+      "sha256": "bb84ff990069e4b9f98f7a452a85669d4a970e37ebfb5d490d8ccceb2d8d04ba"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_continuation_notes_2026-10-04.md",
+      "bytes": 6315,
+      "sha256": "3d11939dc4a53e898000acedfb6fdbfee2e979e3e5d100a5a9bf523e6c9baa89"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_contrast_allocation_amendment_2026-10-04.md",
+      "bytes": 2018,
+      "sha256": "0ae0032de14c2da8221906047f696b7de525f73d6d99805fe9bb2780f68d735d"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_first_implementation_protocol_2026-10-04.md",
+      "bytes": 5757,
+      "sha256": "bdcca7f7d93d604ba21b22377dc9436f6f5323c47b54310c431c3851ef34cfaa"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_followup_aggregate_2026-10-04.json",
+      "bytes": 83005,
+      "sha256": "4990d0521b094a9da2e3e2b01ba849ede4a5bc4f5d4b76adfe2f982868492cfa"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_followup_report_2026-10-04.md",
+      "bytes": 6932,
+      "sha256": "f15b2379f6703be1a049bf47965e4c91f39cc67b207d1027710bdc844151a391"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_full_budget_controls_2026-10-04.md",
+      "bytes": 1334,
+      "sha256": "2bcff096f12f484541b6ebed8fe4a5485add856cc01016ded0b575a4b4860bb6"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_full_run_assessment_2026-10-04.md",
+      "bytes": 10796,
+      "sha256": "bfa18a39fe4be50c0b011054b9b981ba369abb937c355114fe6bee7f4d6e3982"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_gain_v1_assessment_2026-10-05.md",
+      "bytes": 5271,
+      "sha256": "e7b69820c5c04cf90f6f6fb7ea54f52f6ec907037845368de735a336a3bfa696"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_gain_v1_protocol_2026-10-05.md",
+      "bytes": 6618,
+      "sha256": "97b2a1b41ae59bb08c4956eab0d2bf06b67d7ecc2c1f7834f971c00f612f3779"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_gain_v1_results_2026-10-05.json",
+      "bytes": 18533,
+      "sha256": "e94c8a9626c127dafcb55b3fa3caad3b34ae49252148a8f661d51f4478cc8ae2"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_halving_v1_assessment_2026-10-05.md",
+      "bytes": 4226,
+      "sha256": "c7e1749e56268269e543b367062a4b69c29053f4829e5c793e16fcca1147ff48"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_halving_v1_protocol_2026-10-05.md",
+      "bytes": 3884,
+      "sha256": "ce375f1965825c90f0891750b68fa91e17581983ec8bf6895a00374e8b4bfc18"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_halving_v1_results_2026-10-05.json",
+      "bytes": 9959,
+      "sha256": "6a672dada3ecccca4f56a0a1d4284e5a9b3b72759f15ac246386ea0d42f504a7"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_history_rectifier_v1_assessment_2026-10-05.md",
+      "bytes": 4133,
+      "sha256": "fe13d58e2a3d36d45c4db00d223557b176cba30e94bf77aba787576a78c90c53"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_history_rectifier_v1_protocol_2026-10-05.md",
+      "bytes": 4879,
+      "sha256": "6642c41f770728ae484f9e2122170c6fa22f18da14a934570b84c8b59b6d9f8f"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_history_rectifier_v1_results_2026-10-05.json",
+      "bytes": 24630,
+      "sha256": "a2dc91119ede904ead8986eb43f97a381cff263e502cef6b52e96e251929d253"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_implementation_progress_2026-10-04.md",
+      "bytes": 17377,
+      "sha256": "8037f32791520bd194b6742c27e637444e688855755c96e4e18c4682a69d1ac7"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_judge_error_evidence_2026-10-05.json",
+      "bytes": 1295,
+      "sha256": "af45d4d520d35d92d417220cbf35fcddaea9baacc92755d16391c7dbfcfa1a3e"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_leaderboard_capability_protocol_2026-10-04.md",
+      "bytes": 5817,
+      "sha256": "8ec7405af751617a1425bf20ea6941b0e8b17bc5df20ff3b0465c2513fda675d"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_leaderboard_pool_manifest_2026-10-04.json",
+      "bytes": 18962,
+      "sha256": "5faf5555c2bfcfb0d72c2ad60e4b2061a7337a251d99502c1bd4b2818dd6535a"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_neural_cloud_operations_2026-10-05.md",
+      "bytes": 5389,
+      "sha256": "5904c80df8ca27d29cedf7a00f206a42920af546c9dac6211ee65ffa2c1b1328"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_neural_p0_assessment_2026-10-05.md",
+      "bytes": 10417,
+      "sha256": "20335e4e5a89c68c0ee8d8fa4a3d1be2a64c5b7c8ba6b1c4ee0e037253089212"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_neural_p0_p1_protocol_2026-10-05.md",
+      "bytes": 5375,
+      "sha256": "a38d2f601067605d79a301059f2af42db94a19f9da02f95a2a32cea743cadeea"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_neural_p0_results_2026-10-05.json",
+      "bytes": 5351,
+      "sha256": "c5c58c1b94614bf3d2e96794ba45d2e6fbbb0b38e4b9be289ca598f0591e620e"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_neural_research_proposal_2026-10-05.md",
+      "bytes": 28032,
+      "sha256": "ecbc9283c3920c0032532a0b871253e102cc58838c334eaec22d53b5848d0e8d"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_next_evidence_plan_2026-10-05.md",
+      "bytes": 8633,
+      "sha256": "1d806b5b1a61545b5a3793d8675b2ab430e15ee6ee4bcaabff6f1cae023809b2"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_paired_audit_ablation_protocol_2026-10-04.md",
+      "bytes": 3532,
+      "sha256": "1ca5c80de86ccd33671c42900f8a2dbb7d4deddcfd59ba0df8d7d3e03beec1af"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_paired_history_v1_assessment_2026-10-05.md",
+      "bytes": 4456,
+      "sha256": "0abbefef95346c55ee585193c8c0ce31da91ca1f1c77769864ee7b78613916a7"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_paired_history_v1_protocol_2026-10-05.md",
+      "bytes": 2981,
+      "sha256": "c4f068f170aff359b47737f00afb61be5576e0f848cf26401541ee18df37004d"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_paired_history_v1_results_2026-10-05.json",
+      "bytes": 29870,
+      "sha256": "819db85989401bf8c8cef77b83b1f440ae20f810580dc273320eb2b7be8e2712"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_paired_selfreport_aggregate_2026-10-04.json",
+      "bytes": 19414,
+      "sha256": "0cfcbebaa43cc27856a94bb09dcc11f0d2fe2d63f86b478784f598e99f5c3935"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_postrun_diagnostics_2026-10-04.json",
+      "bytes": 36130,
+      "sha256": "64db6c4b73e1cb2432eeeba6d36a9f25a144610277023765fac87a578eacf417"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_postrun_diagnostics_protocol_2026-10-04.md",
+      "bytes": 3068,
+      "sha256": "3927d0d0f469076b4d4c1043a2f1ded347dfe72e901e5093a30396ea001c60c0"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_real_judge_pilot_2026-10-04.json",
+      "bytes": 1482,
+      "sha256": "7ff85231e2b6fabe8d0937cae5dd9ec3c5359bedfbfd1cda7d69aed9043883a1"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_real_judge_protocol_2026-10-04.md",
+      "bytes": 2617,
+      "sha256": "a1f13ffa9b76b0cd42486ce12dd82a082ad9faa425079b39efa5336b50b4aa7e"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_real_judge_replay_protocol_2026-10-04.md",
+      "bytes": 2185,
+      "sha256": "92b777572a2950553a406c4eaed4cefca4460f13f91fe6f647aab1a4477391b3"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_real_judge_result_2026-10-04.json",
+      "bytes": 14564,
+      "sha256": "2abe9b126598c259573b91356a8b05378685174e27bb6b63743d58eced447531"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_real_judge_result_2026-10-04.md",
+      "bytes": 2646,
+      "sha256": "2ac5009cdd61380f026f9a7beb62661c84e94aa93faff0a4144dc3c4ad091e71"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_research_progress_2026-10-05.md",
+      "bytes": 14010,
+      "sha256": "6c964cdacdc0ea8a09a56d9a10da93027b8b246bfb9cfd3c3d5eb03a703da1d6"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_root_causes_and_next_steps_2026-10-05.md",
+      "bytes": 27648,
+      "sha256": "7750eb56f2366dcfca9a920262535903cc1a5f047aab1be26d8d91cc70d2652c"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_same_audit_aggregate_2026-10-05.json",
+      "bytes": 178074,
+      "sha256": "6c0d1430090e1f55b10dba5b7b4525d09e9f2133d506c8795199a7ae1354ef33"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_same_audit_protocol_2026-10-05.md",
+      "bytes": 6022,
+      "sha256": "71635b6cfa7fc0589787cecb711c242ddc1ff3f659a5e5362476b6252fec5a3b"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_same_audit_tables_2026-10-05.md",
+      "bytes": 7111,
+      "sha256": "0aa929a29bc2b8d86355740721fbe9fe0d04a2aae47115155f17d76103cc3792"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_selfreport_selection_diagnostics_2026-10-04.json",
+      "bytes": 13092,
+      "sha256": "fe40bea3608645460d3cd52be657bfc5f21d14c722b1c2b9ac7320ec70b1f09d"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_selfreport_v3_aggregate_2026-10-04.json",
+      "bytes": 12322,
+      "sha256": "bf5df4dd1e6bfdbac60a3906638f18eb6e92a9a7216fc9e8de867450218c1988"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/dart_validation_execution_plan_2026-10-04.md",
+      "bytes": 13691,
+      "sha256": "02e9c1f2d94c3252f95f0f82bc01f9b1720f345bf82fa446edce2d78a5ebf06e"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/deep-research-report-4.md",
+      "bytes": 52111,
+      "sha256": "60167a224fb6a861d23af8537e97c86dcbcd282f81f5128fdb31809162209b86"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/ecrt_dart_failure_forensics_2026-09-30.md",
+      "bytes": 15292,
+      "sha256": "fa59329bef96d676a5b64cb5eb86e43325e643f366cb4d721956b43097c3746f"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/histrepeval_appworld_feasibility_protocol_2026-09-30.md",
+      "bytes": 8378,
+      "sha256": "54a3df0f2ae2cb55f8bb62db6398ce869700f7173cb08909ffc1ca34535092e8"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/histrepeval_appworld_v2_protocol_2026-10-01.md",
+      "bytes": 3019,
+      "sha256": "c00a3449202d262bb2d59d244077fde9443cfa4a8f6ab26801a9a7fcba2e99b6"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/histrepeval_appworld_v3_scaffold_diagnostic_2026-10-01.md",
+      "bytes": 2040,
+      "sha256": "258c4bce7d7bac44bcd6224f5dcaa4dcd2a5051901c17e24c874cee9aed0033a"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/histrepeval_appworld_v4_solver_pilot_2026-10-01.md",
+      "bytes": 1734,
+      "sha256": "23fb45f21a945bc76393401e0c2a4ef0297cd0e2df4928c05cc96d28dff26e5a"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/histrepeval_appworld_v5_thinking_protocol_2026-10-02.md",
+      "bytes": 1584,
+      "sha256": "fe75d13b4940518857ee1012f92152a9d892d1e38ad31f5d913b050b47e4d92c"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/histrepeval_appworld_v5_transport_addendum_2026-10-02.md",
+      "bytes": 3640,
+      "sha256": "b928358a71edae988aa6478479fde9491e4573a3856cbaf22ef5caf682b8bffc"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/histrepeval_appworld_v6_scaffold_protocol_2026-10-02.md",
+      "bytes": 3960,
+      "sha256": "968c792d1aa09343f779660a63de9622a961a39d428add98d4584368911e1859"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/histrepeval_benchmark_card_draft_2026-09-30.md",
+      "bytes": 8064,
+      "sha256": "e2fe8c3d308b4824e8bc93b6237f1de10143f7f76e462da7c89e277736ac27b5"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_6_week_research_plan.md",
+      "bytes": 42499,
+      "sha256": "c7fac8a8e7da399e41f0bf3ca0cf0ee744cff61af4d0bb8b50b31ec2de783a40"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_a_conference_strategy_2026-10-07.md",
+      "bytes": 16677,
+      "sha256": "512b723e80eb04bc1dd2e4e4e6b8d5734f7c8f506a12f69b12bd5c249e0b982c"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_appworld_v10_simplified_results_2026-10-03.md",
+      "bytes": 6156,
+      "sha256": "195d07226adea399c0fa8b0157e0537b17ab73e37a77782756025f757e8c29a1"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_appworld_v6_results_2026-10-02.md",
+      "bytes": 6468,
+      "sha256": "a17616f2b10c3519f6679fa98063d79626b0f3e451f49750a6bcfb41a9d81f84"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_appworld_v7_legacy_react_results_2026-10-02.md",
+      "bytes": 10339,
+      "sha256": "569a317c555d1b6c671b57a7c1c6eca6cc75c29ca0958ef00d452ff9833deeca"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_appworld_v8_paired_results_2026-10-03.md",
+      "bytes": 10194,
+      "sha256": "355b963c965435604d2d4a83d4d04c82353a967e10d5e48530309b4c89444a56"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_appworld_v9_glm_results_2026-10-03.md",
+      "bytes": 6869,
+      "sha256": "e3f7de6bb2fe65847ae945dbcf8d8a7da6c2bb26420a9d2fe200f0dd39783a2c"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_comprehensive_progress_report_2026-09-29.md",
+      "bytes": 37309,
+      "sha256": "f27f83f4d670995b5a39ec886de1e707f3c6f2316654a14130cf3474da561c66"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_dev_pool_complete_2026-10-01.md",
+      "bytes": 10889,
+      "sha256": "d878a833ef8ff77e15f5a2032a7528656d6d1559de83256c232029f85f4a6e6d"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_final_pipeline_assessment_2026-09-30.md",
+      "bytes": 35233,
+      "sha256": "5719100687c2e4db95a575f50a8f8fed47d51f5ce018835763503193f9f37359"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_final_research_proposal.md",
+      "bytes": 39558,
+      "sha256": "f3e4993a33e0ebbdb973f126cadb1edc91747b21a5723298b6194f46106b25de"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_followup_results_2026-10-01.md",
+      "bytes": 13097,
+      "sha256": "c778a335de426fa5840b869ecdcfcccbd92fbaca1301a5b0610441d3417c82b3"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_method_repair_pilot_2026-09-30.md",
+      "bytes": 15159,
+      "sha256": "c703d369af1199dcd1ab46793799788058ea8233d527dc9258edaa007124e124"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_modal_stop_context_diagnostic_2026-09-30.md",
+      "bytes": 3219,
+      "sha256": "20564497276b790b2dd35e91fc8b99c276fd73a01f092bc632257c0cfbbe2786"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_next_execution_plan_2026-09-29.md",
+      "bytes": 17344,
+      "sha256": "d8b03a5a506c498ac682da1bb649e73bad0ba4580ea6f6a2b18f169344eb3263"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_next_study_registered_plan_2026-09-30.md",
+      "bytes": 13784,
+      "sha256": "6e5f4edf0deb37d1c1e267779efc5b2386a870443116b4e4467670b27707b7ce"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_pool_gate_assessment_2026-09-30.md",
+      "bytes": 12146,
+      "sha256": "9334bb43c1052b066d97a024bc2f46c852331a31f4add79d26272fdee50cd5af"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_post_week3_research_direction_2026-09-29.md",
+      "bytes": 12685,
+      "sha256": "5d8309733ab50a69361f1aa496bf494ef5fee6105459d9dce5e46823b2c8b81a"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_publication_gates_2026-10-01.md",
+      "bytes": 14123,
+      "sha256": "9556814eae690fe2fc2bd1570efa9527d749af48ac99659b6b1677d9bebc0156"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_week3_real_report.md",
+      "bytes": 18554,
+      "sha256": "56529eec4b3813867b4dd41e49041bd41c73d70b91f27da2e9a962732fbfef54"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_week4_thinking_pilot_70_report_2026-09-29.md",
+      "bytes": 6280,
+      "sha256": "3a8ac1d28b24a81a0e76941a3c748ae80035771fc0335cdf20e94ec7762016ee"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_week5_blind_judge_protocol_2026-09-29.md",
+      "bytes": 2567,
+      "sha256": "d2483cb8b312a7243201a11d709fcb2fec1a8733436d4d18723ef03eed41530c"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_week5_modal_judge_280_report_2026-09-29.md",
+      "bytes": 6607,
+      "sha256": "dcee48d4b0cd3c87abd4b7f5fa33fff49072471719d6294283dea6b1fb8ab18f"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_week5_modal_judge_protocol_2026-09-29.md",
+      "bytes": 3647,
+      "sha256": "673b1bc18fef87996e088ea677798575aeaebd6a1bf64f1685bbc4c34571eafc"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/repguard_week5_real_feedback_impact_2026-09-29.md",
+      "bytes": 5551,
+      "sha256": "8c756165e28674d77f079e8cac3a59014c01edc1f4a16c100116199abd1714d7"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_finqa_consensus_v1_assessment_2026-10-06.md",
+      "bytes": 1622,
+      "sha256": "c0d6d6be5c781d8a8b487d6f2f91838104339582cb53fc9121435d4ea3ab822a"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_finqa_consensus_v1_diagnostics_2026-10-06.json",
+      "bytes": 1931,
+      "sha256": "dff1347e61a5c95d3e2ce4e56954da50626b04fb10fedce9d9eedd4bdc75d913"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_finqa_consensus_v1_interpretation_2026-10-06.md",
+      "bytes": 7968,
+      "sha256": "e91d81d6a1d95d7fced9d5e7dc950cb7a4df333caaae6f4832fad189b8c7aa06"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_finqa_consensus_v1_protocol_2026-10-06.md",
+      "bytes": 4455,
+      "sha256": "cbb4b391283c501a64824096aec85cb44f91fd7ba0df4788b7f02ab20b773792"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_finqa_consensus_v1_results_2026-10-06.json",
+      "bytes": 2071,
+      "sha256": "51026f5610dd0b455ff07770e4bfb4eb77a8b5280f2081c0f2ec073e20edbe7a"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_finqa_feedback_v1_assessment_2026-10-06.md",
+      "bytes": 1329,
+      "sha256": "847ac8ec02b91026799b4602818c4fd40836eae989a24bbc2e80c13a55f87abf"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_finqa_feedback_v1_diagnostics_2026-10-06.json",
+      "bytes": 2758,
+      "sha256": "ab9500e0c55c29665749753c2025c81be7f64035fbc609b6822aefde7b09b325"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_finqa_feedback_v1_interpretation_2026-10-06.md",
+      "bytes": 8234,
+      "sha256": "e0c3c73ca4db8bea4c2225c2a769440bcd386adf0e63b0f16354b1a01287145c"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_finqa_feedback_v1_operations_2026-10-06.md",
+      "bytes": 2969,
+      "sha256": "42af1f303a153b13cdc474e5edc4c802f2695fefd71bc16c19906f69987a8015"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_finqa_feedback_v1_protocol_2026-10-06.md",
+      "bytes": 4887,
+      "sha256": "1f8c00840b425550838341e4464ec299c33b14908969f3fdbdcd18e139dafd25"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_finqa_feedback_v1_results_2026-10-06.json",
+      "bytes": 2689,
+      "sha256": "ef4811604a01b57ef303ed8e3a6223adf6227e701b80e1d4099cf87bad3f615a"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_headroom_count_erratum_2026-10-07.md",
+      "bytes": 1390,
+      "sha256": "2c20bd85da4aee15023a36a5ee960acc697fdd64e3ad26437416f00d186c5105"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_headroom_v1_assessment_2026-10-06.md",
+      "bytes": 1429,
+      "sha256": "3a82567f92d3cf95262c53d33af32e24419daba5bc99cac2eb459acfa7be24c5"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_headroom_v1_operations_2026-10-06.md",
+      "bytes": 1779,
+      "sha256": "bf7e4b3e39e6af6040fe650ffebf50bfa0d1b4530edef8b2610a4b86223d5548"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_headroom_v1_protocol_2026-10-06.md",
+      "bytes": 3359,
+      "sha256": "da2e9603e98bdef689c72ee437a187745171b68190bf9112174b45893b9d0335"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_headroom_v1_results_2026-10-06.json",
+      "bytes": 4328,
+      "sha256": "49f02b37a7853916d2eb51057acea7b9474a3477d8bc37764c441aa3978ce1cb"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_intake_assessment_2026-10-06.md",
+      "bytes": 3385,
+      "sha256": "f9384ab7a6b7a0a2bee9ee88e15514e4d308a413131fbd1014170aacf9a17781"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_intake_protocol_2026-10-05.md",
+      "bytes": 2606,
+      "sha256": "72f00c91fc080e54726e00df797d333b8688bdf8b25c92b888941f49a96d9cf3"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_intake_v2_protocol_2026-10-05.md",
+      "bytes": 1001,
+      "sha256": "4e4983ae6fd2503f654a5bb2f5ea40ca48d3186e373da74d264dabd48a4a881a"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_next_evidence_plan_2026-10-06.md",
+      "bytes": 7843,
+      "sha256": "34459e0cda2e2b45b639b92a731a487a84d545481133baac000359a049671e14"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_pilot_assessment_2026-10-06.md",
+      "bytes": 3448,
+      "sha256": "222eade885f6bfcedd95ac45fce319ec18f28482222722f98ddf8aaddddfb2ed"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_pilot_operations_2026-10-06.md",
+      "bytes": 5722,
+      "sha256": "695df9637bade8d6e2c21971f95847ffce763a899ec7c75c79905a86d9508d69"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_pilot_protocol_2026-10-06.md",
+      "bytes": 6133,
+      "sha256": "ebc2d4c1459e1d4729b3319c48d857b1b0e3953ba1bfeb8ed128e58423dfce9d"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_pilot_results_2026-10-06.json",
+      "bytes": 2567,
+      "sha256": "8ebbad7b4cdba9b94530553b60e80980e3236fadc862105500006c5d218ef0ed"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_prompt_groups_v1_assessment_2026-10-06.md",
+      "bytes": 1441,
+      "sha256": "2cab7e8155c49d36a67cceccf05b359f252d5a4a912d3356837e0ef57d4a8668"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_prompt_groups_v1_protocol_2026-10-06.md",
+      "bytes": 2651,
+      "sha256": "ead27924cfd22612564632f16d1ca6430fbfed52749ef880aba52aff5dbd0467"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_prompt_groups_v1_results_2026-10-06.json",
+      "bytes": 1588,
+      "sha256": "473828602ec2d724ecabb127d8fe492c84060eeba0b0bb43ff9817217a712f1d"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_prompt_groups_v1_sensitivity_2026-10-06.md",
+      "bytes": 2307,
+      "sha256": "328006fb1dc9407b78b71137d9ea9aec36d9a5b0c669dcbfe5aaf4d9fe49925a"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_related_work_decision_2026-10-06.md",
+      "bytes": 6785,
+      "sha256": "d634a643aa70c060ff51feba339d4a7cc691e786a993c453ec8d84bb1bc266d5"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_sparse_gold_v1_assessment_2026-10-06.md",
+      "bytes": 6179,
+      "sha256": "2de57e5f8028bbc8a1b9c6df6d2f2235206dcde67c0af0383c3ffcd97459d973"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_sparse_gold_v1_interpretation_2026-10-06.md",
+      "bytes": 9956,
+      "sha256": "eecc3923e6e2508ff15d68d3bdbac03b5f665dae21b2737dfe0195f5f33b3a8a"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_sparse_gold_v1_operations_2026-10-06.md",
+      "bytes": 3541,
+      "sha256": "a38affcf4982b7a0531ce152298253059a89667d3466f8d9a6b76637cb065b71"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_sparse_gold_v1_protocol_2026-10-06.md",
+      "bytes": 7386,
+      "sha256": "fd47042a981e6c531698b1d11abce232ea27442697a01afd8b37b98491acc29d"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/analysis/routerbench_sparse_gold_v1_results_2026-10-06.json",
+      "bytes": 24341,
+      "sha256": "54c4be90fa37f4b1a3362f14980e8e4d06167e2a82f4eb68efb658e40576830d"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/README.md",
+      "bytes": 18782,
+      "sha256": "ca14f5db481223791b5544b39e071d1474f3fd900495907bd6bc79d496e95579"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/research_ops/experiment_registry.csv",
+      "bytes": 5030,
+      "sha256": "6d1a349cf40599e2196a1ecb8b9ef523a821f8c74626a6d399fca75fd14be1c0"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/research_ops/open_questions.md",
+      "bytes": 2762,
+      "sha256": "db583cbb0f71efed98987a8889278d1239c6d6c33e5ea982c75b6605dfa391fb"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/research_ops/paper_claims.md",
+      "bytes": 11281,
+      "sha256": "9047079e55059e8e1c2979bf11bfbf6961f77550658bef81b278193567ab36ad"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/research_ops/real_week3_protocol.md",
+      "bytes": 6364,
+      "sha256": "6a1b581de710964ff0cd7c9fb01a5b1a407c973555111eeb0c7fe4e872950988"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/research_ops/research_log.md",
+      "bytes": 14749,
+      "sha256": "d3bb282128742722db2988c04d24dbac70b7ad84a207f38d3255eaaaa827ff73"
+    },
+    {
+      "path": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/docs/book/repguard_research_handbook_2026-10-08.tex",
+      "bytes": 68480,
+      "sha256": "196a495fa5cdbf029e63311652008a6606048b1c14b1e53378f844b429fc2a91"
+    }
+  ]
+}

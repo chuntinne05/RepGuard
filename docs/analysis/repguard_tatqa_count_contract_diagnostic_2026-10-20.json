@@ -1,0 +1,795 @@
+{
+  "scope": "Post-hoc equivalence-preserving readout diagnostic ONLY. No new inference, no prompt changes, no revised primary scores or reputation claims.",
+  "run_id": "746ca756961393ace1ad8c57",
+  "new_model_calls": 0,
+  "raw_invalid_errors": {
+    "Unbound numeric constant": 23,
+    "Source not found": 1,
+    "Binding overwritten": 4
+  },
+  "raw_readability_changes": [
+    {
+      "case": "28958656-bd4d-417e-8c1e-3f07488a45aa",
+      "action": "initial",
+      "value_unchanged": true,
+      "value": 169814.33333,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(cost_2019 + cost_2018 + cost_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "28958656-bd4d-417e-8c1e-3f07488a45aa",
+      "action": "evidence",
+      "value_unchanged": true,
+      "value": 169814.33333,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(cost_2019 + cost_2018 + cost_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "28958656-bd4d-417e-8c1e-3f07488a45aa",
+      "action": "operation",
+      "value_unchanged": true,
+      "value": 169814.33333,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(cost_2019 + cost_2018 + cost_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "28958656-bd4d-417e-8c1e-3f07488a45aa",
+      "action": "self1",
+      "value_unchanged": true,
+      "value": 169814.33333,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(cost_2019 + cost_2018 + cost_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "28958656-bd4d-417e-8c1e-3f07488a45aa",
+      "action": "self2",
+      "value_unchanged": true,
+      "value": 169814.33333,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(cost_2019 + cost_2018 + cost_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "2ba67b9a-9cf8-466f-81cc-b3cf0e3bec49",
+      "action": "initial",
+      "value_unchanged": true,
+      "value": 63.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(val_2019 + val_2018 + val_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "2ba67b9a-9cf8-466f-81cc-b3cf0e3bec49",
+      "action": "self1",
+      "value_unchanged": true,
+      "value": 63.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(val_2019 + val_2018 + val_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "2ba67b9a-9cf8-466f-81cc-b3cf0e3bec49",
+      "action": "self2",
+      "value_unchanged": true,
+      "value": 63.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(val_2019 + val_2018 + val_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "e1280d98-5529-4dd6-83c2-29460e38a76d",
+      "action": "initial",
+      "value_unchanged": true,
+      "value": 2300224.0,
+      "scale": "",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(sb_2019 + sb_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "e1280d98-5529-4dd6-83c2-29460e38a76d",
+      "action": "evidence",
+      "value_unchanged": true,
+      "value": 2300224.0,
+      "scale": "",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(sb_2019 + sb_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "e1280d98-5529-4dd6-83c2-29460e38a76d",
+      "action": "operation",
+      "value_unchanged": true,
+      "value": 2300224.0,
+      "scale": "",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(sb_2019 + sb_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "e1280d98-5529-4dd6-83c2-29460e38a76d",
+      "action": "self1",
+      "value_unchanged": true,
+      "value": 2300224.0,
+      "scale": "",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(sb_2019 + sb_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "e1280d98-5529-4dd6-83c2-29460e38a76d",
+      "action": "self2",
+      "value_unchanged": true,
+      "value": 2300224.0,
+      "scale": "",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(sb_2019 + sb_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "918c1037-ee49-4906-93d5-1517bfb17825",
+      "action": "initial",
+      "value_unchanged": true,
+      "value": -1479.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(discount_2019 + discount_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "918c1037-ee49-4906-93d5-1517bfb17825",
+      "action": "evidence",
+      "value_unchanged": true,
+      "value": -1479.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(discount_2019 + discount_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "918c1037-ee49-4906-93d5-1517bfb17825",
+      "action": "operation",
+      "value_unchanged": true,
+      "value": -1479.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(discount_2019 + discount_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "918c1037-ee49-4906-93d5-1517bfb17825",
+      "action": "self1",
+      "value_unchanged": true,
+      "value": -1479.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(discount_2019 + discount_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "918c1037-ee49-4906-93d5-1517bfb17825",
+      "action": "self2",
+      "value_unchanged": true,
+      "value": -1479.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(discount_2019 + discount_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "cca3062d-1636-446e-8dee-b19424e29c8d",
+      "action": "initial",
+      "value_unchanged": true,
+      "value": 1007.0,
+      "scale": "million",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(total_2017 + total_2018 + total_2019) / 3"
+        }
+      ]
+    },
+    {
+      "case": "cca3062d-1636-446e-8dee-b19424e29c8d",
+      "action": "evidence",
+      "value_unchanged": true,
+      "value": 1007.0,
+      "scale": "million",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(total_2017 + total_2018 + total_2019) / 3"
+        }
+      ]
+    },
+    {
+      "case": "cca3062d-1636-446e-8dee-b19424e29c8d",
+      "action": "operation",
+      "value_unchanged": true,
+      "value": 1007.0,
+      "scale": "million",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(total_2017 + total_2018 + total_2019) / 3"
+        }
+      ]
+    },
+    {
+      "case": "cca3062d-1636-446e-8dee-b19424e29c8d",
+      "action": "self1",
+      "value_unchanged": true,
+      "value": 1007.0,
+      "scale": "million",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(total_2017 + total_2018 + total_2019) / 3"
+        }
+      ]
+    },
+    {
+      "case": "cca3062d-1636-446e-8dee-b19424e29c8d",
+      "action": "self2",
+      "value_unchanged": true,
+      "value": 1007.0,
+      "scale": "million",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(total_2017 + total_2018 + total_2019) / 3"
+        }
+      ]
+    }
+  ],
+  "frozen_workflow_terminal_readability_changes": [
+    {
+      "case": "28958656-bd4d-417e-8c1e-3f07488a45aa",
+      "action": "initial",
+      "value_unchanged": true,
+      "value": 169814.33333,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(cost_2019 + cost_2018 + cost_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "28958656-bd4d-417e-8c1e-3f07488a45aa",
+      "action": "evidence",
+      "value_unchanged": true,
+      "value": 169814.33333,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(cost_2019 + cost_2018 + cost_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "28958656-bd4d-417e-8c1e-3f07488a45aa",
+      "action": "operation",
+      "value_unchanged": true,
+      "value": 169814.33333,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(cost_2019 + cost_2018 + cost_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "28958656-bd4d-417e-8c1e-3f07488a45aa",
+      "action": "combined",
+      "value_unchanged": true,
+      "value": 169814.33333,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(cost_2019 + cost_2018 + cost_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "28958656-bd4d-417e-8c1e-3f07488a45aa",
+      "action": "self1",
+      "value_unchanged": true,
+      "value": 169814.33333,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(cost_2019 + cost_2018 + cost_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "28958656-bd4d-417e-8c1e-3f07488a45aa",
+      "action": "self2",
+      "value_unchanged": true,
+      "value": 169814.33333,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(cost_2019 + cost_2018 + cost_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "2ba67b9a-9cf8-466f-81cc-b3cf0e3bec49",
+      "action": "initial",
+      "value_unchanged": true,
+      "value": 63.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(val_2019 + val_2018 + val_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "2ba67b9a-9cf8-466f-81cc-b3cf0e3bec49",
+      "action": "evidence",
+      "value_unchanged": true,
+      "value": 63.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(val_2019 + val_2018 + val_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "2ba67b9a-9cf8-466f-81cc-b3cf0e3bec49",
+      "action": "combined",
+      "value_unchanged": true,
+      "value": 63.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(val_2019 + val_2018 + val_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "2ba67b9a-9cf8-466f-81cc-b3cf0e3bec49",
+      "action": "self1",
+      "value_unchanged": true,
+      "value": 63.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(val_2019 + val_2018 + val_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "2ba67b9a-9cf8-466f-81cc-b3cf0e3bec49",
+      "action": "self2",
+      "value_unchanged": true,
+      "value": 63.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(val_2019 + val_2018 + val_2017) / 3"
+        }
+      ]
+    },
+    {
+      "case": "e1280d98-5529-4dd6-83c2-29460e38a76d",
+      "action": "initial",
+      "value_unchanged": true,
+      "value": 2300224.0,
+      "scale": "",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(sb_2019 + sb_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "e1280d98-5529-4dd6-83c2-29460e38a76d",
+      "action": "evidence",
+      "value_unchanged": true,
+      "value": 2300224.0,
+      "scale": "",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(sb_2019 + sb_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "e1280d98-5529-4dd6-83c2-29460e38a76d",
+      "action": "operation",
+      "value_unchanged": true,
+      "value": 2300224.0,
+      "scale": "",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(sb_2019 + sb_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "e1280d98-5529-4dd6-83c2-29460e38a76d",
+      "action": "combined",
+      "value_unchanged": true,
+      "value": 2300224.0,
+      "scale": "",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(sb_2019 + sb_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "e1280d98-5529-4dd6-83c2-29460e38a76d",
+      "action": "self1",
+      "value_unchanged": true,
+      "value": 2300224.0,
+      "scale": "",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(sb_2019 + sb_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "e1280d98-5529-4dd6-83c2-29460e38a76d",
+      "action": "self2",
+      "value_unchanged": true,
+      "value": 2300224.0,
+      "scale": "",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(sb_2019 + sb_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "918c1037-ee49-4906-93d5-1517bfb17825",
+      "action": "initial",
+      "value_unchanged": true,
+      "value": -1479.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(discount_2019 + discount_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "918c1037-ee49-4906-93d5-1517bfb17825",
+      "action": "evidence",
+      "value_unchanged": true,
+      "value": -1479.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(discount_2019 + discount_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "918c1037-ee49-4906-93d5-1517bfb17825",
+      "action": "operation",
+      "value_unchanged": true,
+      "value": -1479.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(discount_2019 + discount_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "918c1037-ee49-4906-93d5-1517bfb17825",
+      "action": "combined",
+      "value_unchanged": true,
+      "value": -1479.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(discount_2019 + discount_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "918c1037-ee49-4906-93d5-1517bfb17825",
+      "action": "self1",
+      "value_unchanged": true,
+      "value": -1479.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(discount_2019 + discount_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "918c1037-ee49-4906-93d5-1517bfb17825",
+      "action": "self2",
+      "value_unchanged": true,
+      "value": -1479.0,
+      "scale": "thousand",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 2,
+          "summand_count": 2,
+          "original_expression": "(discount_2019 + discount_2018) / 2"
+        }
+      ]
+    },
+    {
+      "case": "cca3062d-1636-446e-8dee-b19424e29c8d",
+      "action": "initial",
+      "value_unchanged": true,
+      "value": 1007.0,
+      "scale": "million",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(total_2017 + total_2018 + total_2019) / 3"
+        }
+      ]
+    },
+    {
+      "case": "cca3062d-1636-446e-8dee-b19424e29c8d",
+      "action": "evidence",
+      "value_unchanged": true,
+      "value": 1007.0,
+      "scale": "million",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(total_2017 + total_2018 + total_2019) / 3"
+        }
+      ]
+    },
+    {
+      "case": "cca3062d-1636-446e-8dee-b19424e29c8d",
+      "action": "operation",
+      "value_unchanged": true,
+      "value": 1007.0,
+      "scale": "million",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(total_2017 + total_2018 + total_2019) / 3"
+        }
+      ]
+    },
+    {
+      "case": "cca3062d-1636-446e-8dee-b19424e29c8d",
+      "action": "combined",
+      "value_unchanged": true,
+      "value": 1007.0,
+      "scale": "million",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(total_2017 + total_2018 + total_2019) / 3"
+        }
+      ]
+    },
+    {
+      "case": "cca3062d-1636-446e-8dee-b19424e29c8d",
+      "action": "self1",
+      "value_unchanged": true,
+      "value": 1007.0,
+      "scale": "million",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(total_2017 + total_2018 + total_2019) / 3"
+        }
+      ]
+    },
+    {
+      "case": "cca3062d-1636-446e-8dee-b19424e29c8d",
+      "action": "self2",
+      "value_unchanged": true,
+      "value": 1007.0,
+      "scale": "million",
+      "official_em_if_readable": 1.0,
+      "count_proofs": [
+        {
+          "divisor": 3,
+          "summand_count": 3,
+          "original_expression": "(total_2017 + total_2018 + total_2019) / 3"
+        }
+      ]
+    }
+  ],
+  "warning": "Workflow decisions and downstream generation contexts stay exactly as collected. This is NOT a rollout of a new acceptance policy. No hidden targets used to choose rewrites."
+}

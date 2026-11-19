@@ -1,0 +1,84 @@
+{
+  "status": "CYCLE02 COMPLETE; thesis-method superiority/novelty objective NOT YET ACHIEVED",
+  "utc": "2026-10-19T16:27:59Z",
+  "studies": {
+    "composition": {
+      "folder": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/results/thesis_composition_cycle_02",
+      "run_id": "9fc4557bcf3505242c0f32e6",
+      "cap": 72,
+      "completed": 72,
+      "in_flight": 0,
+      "app": "repguard-thesis-real-pilot-20261018",
+      "collector_session": null,
+      "log": "/tmp/repguard_composition_cycle02.log",
+      "verification": "PASS",
+      "result": "PoT17,self1/2 both17,compose16;0rescues1harm;oracleunion17;gateFAIL; no new history learner"
+    },
+    "backbone": {
+      "folder": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/results/thesis_backbone_diversity_probe_v1",
+      "run_id": "63bb59fcde70e2533c1d242a",
+      "cap": 32,
+      "completed": 32,
+      "in_flight": 0,
+      "app": "repguard-thesis-backbone-probe-20261019",
+      "collector_session": null,
+      "log": "/tmp/repguard_backbone_diversity_probe.log",
+      "verification": "PASS",
+      "result": "16newLIVEreportgroups:8B11,14B11,exactsamecorrectnessmask;union11;unique0each;gateFAIL;8B38.431evals,14B37.710evals"
+    },
+    "modern": {
+      "folder": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/results/thesis_modern_backbone_control_v1",
+      "run_id": "fab742ee6d4e2f4850857dec",
+      "cap": 16,
+      "completed": 16,
+      "in_flight": 0,
+      "app": "repguard-thesis-modern-backbone-20261019",
+      "collector_session": null,
+      "log": "/tmp/repguard_modern_control.log",
+      "weight_digest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+      "gpu": "L40S",
+      "verification": "PASS",
+      "result": "11/16,samecorrectnessmaskas8B14B;4/16 LENGTH4096emptycontent;native-think16/16;notadequatecapacityverdict"
+    },
+    "modern_direct": {
+      "folder": "/Users/trinhtrantrungtin/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/DACN:DATN/results/thesis_modern_direct_control_v1",
+      "run_id": "d6d7cb8e116f7243e5b5f1cf",
+      "cap": 16,
+      "completed": 16,
+      "in_flight": 0,
+      "app": "repguard-thesis-modern-backbone-20261019",
+      "collector_session": null,
+      "log": "/tmp/repguard_modern_direct_control.log",
+      "mode": "thinkFalse,same4096cap,ALL16cases,posthoc interfaceadequacycontrol",
+      "source": "modern_direct_app.py addssecondclass whilepreservingoldfrozenmodule; no sourceorresultrewrite",
+      "verification": "PASS",
+      "result": "13/16,15valid,0native/length;vs14B2rescues0harm;11.067evals;pointconfiggainNOTreputation;posthoc16allcaseadequacy"
+    }
+  },
+  "app_ids": {
+    "research": "ap-H1QBQza7gdGhq4UhD8FZoe",
+    "backbone": "ap-oxSrIRlGvzvy6zOfdvHV5R",
+    "modern": "ap-MMiCt8dXwoMLlUfE9xCpMK"
+  },
+  "new_response_cap": 136,
+  "new_models_downloaded": true,
+  "unmodified_primary7": true,
+  "no_subagents": true,
+  "no_goal_or_automation_created": true,
+  "next": "No jobs scheduled. Actual unproven method design in repguard_method_candidate_2026-10-19.md; semantic audit40packets0completed; prefer clear-contract corpus ifFinQAauditconfirmsambiguity. Probe scoped actualrepairs/interaction onNEWdevelopment before fitting history. TATQAonlyprepared, no inference. Keep150confirmationreserved and allfrozen sources/results.",
+  "locked_confirmation_ids": "repguard_reserved_report_splits_2026-10-19.json",
+  "reservation_limitation": "Read repguard_reserved_report_splits_audit_2026-10-19.json; archive report disjointness UNRESOLVED",
+  "tatqa": "64TRAINcontext inventory prepared; OFFICIALmetric64goldidentitysoftwarechecks PASS, zero-interfacecheck PASS. NO modelcalls/score. scipyisolated/tmp/repguard_tatqa_eval_deps1.16.2; numpy2.4.6,pandas3.0.6",
+  "literature": "repguard_research_gap_2026-10-19.md with C3/MERIT/GCJR/CLAIR-Fin added; candidate gap only",
+  "new_model_download": "qwen3.5:27b17.48GBGGUFQ4_K_M in NEWrepguard-thesis-modern-models-20261019; original manifest/volume unchanged; downloadDONE",
+  "forensics": "FRTcomposecopieswrongyearpair89564\u219296454fromDSL, harms5908\u21926890;EWcomposechooses.6instead4.1,neither sumsall4.7;WRKself1/2bothlegitsemanticabstainvaluationallowancevsDTA,targetscorepreserved; blindreview40prepared0humanreviewdone",
+  "reports": [
+    "repguard_research_decision_2026-10-19.md",
+    "repguard_research_cycle_02_2026-10-19.md",
+    "repguard_research_gap_2026-10-19.md",
+    "repguard_tatqa_preparation_2026-10-19.md"
+  ],
+  "resource_observation": "All3researchappscontainerlists[];see repguard_cycle02_resources_2026-10-19.json",
+  "semantic_new16": "4/5sharedofficialerrorsflaggedentitysubset AMATwarehousevsalloffices/plants, APDstockvsflow, FRTsignmagnitude, SNPSsignedchangevspercentdecrease; ZEROindependentadjudications orrelabels. Flagsnotconfirmedbadlabels. SLGusesownership/transaction/tablebinding; inspectscopecarefully, do not absolveall5errors.",
+  "completed_real_responses": 136
+}

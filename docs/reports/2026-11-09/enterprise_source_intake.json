@@ -1,0 +1,74 @@
+{
+  "utc": "2026-11-09T04:40:12.437511+00:00",
+  "scope": "Metadata/source availability only. No model outputs or new benchmark scores opened.",
+  "repos": {
+    "RuilongWang/ARQA-Benchmark": {
+      "commit": "483e8c7b084afc6fbfb46d8609617b297b4322b8",
+      "commit_date": "2026-01-16T12:58:28Z",
+      "tree_truncated": false,
+      "total_files": 90,
+      "data_paths": [
+        {
+          "path": "ARQA_bench/ARQA_validated.json",
+          "bytes": 3380324,
+          "blob_sha": "59c8dd0772c517c6536f0e02308a22158a07f1fc"
+        },
+        {
+          "path": "ARQA_bench/pack_context.db",
+          "bytes": 2199552,
+          "blob_sha": "84663056d25c190a2139a867d5aabebf2b0cc190"
+        }
+      ],
+      "license_paths": [
+        "LICENSE"
+      ]
+    },
+    "sqyangit/FinMRAGBench": {
+      "commit": "f6522801e6abcd77f4d1d5f4bf6832ca4aa5566b",
+      "commit_date": "2026-10-19T10:46:55Z",
+      "tree_truncated": false,
+      "total_files": 63,
+      "data_paths": [
+        {
+          "path": "data_bench/README.md",
+          "bytes": 3475,
+          "blob_sha": "9337d0ec5fcebe83dfa3e03df8afa8e6fdd6d9d5"
+        },
+        {
+          "path": "data_bench/chart_generation.json",
+          "bytes": 228896,
+          "blob_sha": "b237e63174c026b632be4140e1d0d6dbc6654bc2"
+        },
+        {
+          "path": "data_bench/explainable_fact_verification.json",
+          "bytes": 137285,
+          "blob_sha": "5930568c25ee6725398d6661b44f9dbd130cc69c"
+        },
+        {
+          "path": "data_bench/knowledge_reasoning.json",
+          "bytes": 362043,
+          "blob_sha": "9f6bb125120702a940cca7e0be0524cbd070cf80"
+        },
+        {
+          "path": "data_bench/numerical_reasoning.json",
+          "bytes": 94836,
+          "blob_sha": "6c4a65a156e221860c34337445be8f0097e99b1e"
+        },
+        {
+          "path": "data_bench/table_generation.json",
+          "bytes": 186582,
+          "blob_sha": "b41cf629c234aa71efe2bac1e874a80eb962a3f3"
+        }
+      ],
+      "license_paths": [
+        "LICENSE",
+        "NOTICE"
+      ]
+    }
+  },
+  "fined_page": {
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 15726
+  }
+}

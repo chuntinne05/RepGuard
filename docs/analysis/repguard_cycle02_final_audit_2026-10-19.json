@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-19T16:27:59Z",
+  "new_real_completed_responses": 136,
+  "unique_development_questions": 40,
+  "new_input_tokens": 233853,
+  "new_output_tokens": 133838,
+  "length_stops": 5,
+  "native_thinking_nonempty": 120,
+  "studies": {
+    "composition": {
+      "run_id": "9fc4557bcf3505242c0f32e6",
+      "completed": 72,
+      "raw_receipt_hashes_verified": true,
+      "frozen_source_currently_matches": true
+    },
+    "backbone": {
+      "run_id": "63bb59fcde70e2533c1d242a",
+      "completed": 32,
+      "raw_receipt_hashes_verified": true,
+      "frozen_source_currently_matches": true
+    },
+    "modern": {
+      "run_id": "fab742ee6d4e2f4850857dec",
+      "completed": 16,
+      "raw_receipt_hashes_verified": true,
+      "frozen_source_currently_matches": true
+    },
+    "modern_direct": {
+      "run_id": "d6d7cb8e116f7243e5b5f1cf",
+      "completed": 16,
+      "raw_receipt_hashes_verified": true,
+      "frozen_source_currently_matches": true
+    }
+  },
+  "primary_seven_files_unchanged": true,
+  "mock_responses": 0,
+  "unresolved_initiated_calls_in_these_four_completed_runs": 0,
+  "all_research_containers_zero": true,
+  "resource_observation_utc": "2026-10-19T16:23:57Z",
+  "reputation_superiority_proven": false,
+  "novelty_proven": false,
+  "independent_confirmation_used": false,
+  "human_semantic_adjudications_completed": 0,
+  "TATQA_model_calls": 0,
+  "known_scope": "Does not claim zero unresolved calls or total billing for the entire older project; older aborted runs remain separate."
+}

@@ -1,0 +1,837 @@
+{
+  "budgets": {
+    "0.05": {
+      "methods": {
+        "UniformGlobal": {
+          "mean_correct": 41.45,
+          "accuracy": 0.8635416666666667,
+          "regret_vs_posthoc_best_fixed": 0.09479166666666672,
+          "gold_labels_per_history": 11,
+          "fraction_selecting_full_gold_train_best_reference": 0.4,
+          "model_choice_frequency": [
+            0.35,
+            0.3125,
+            0.0375,
+            0.05,
+            0.2375,
+            0.0125
+          ]
+        },
+        "PairedGlobal": {
+          "mean_correct": 40.1,
+          "accuracy": 0.8354166666666667,
+          "regret_vs_posthoc_best_fixed": 0.12291666666666667,
+          "gold_labels_per_history": 11,
+          "fraction_selecting_full_gold_train_best_reference": 0.4,
+          "model_choice_frequency": [
+            0.3125,
+            0.3625,
+            0.05,
+            0.05,
+            0.125,
+            0.1
+          ]
+        },
+        "GoldRidge": {
+          "mean_correct": 39.75,
+          "accuracy": 0.828125,
+          "regret_vs_posthoc_best_fixed": 0.13020833333333337,
+          "gold_labels_per_history": 11,
+          "fraction_selecting_full_gold_train_best_reference": 0.4,
+          "model_choice_frequency": [
+            0.3125,
+            0.3625,
+            0.0375,
+            0.05,
+            0.1125,
+            0.125
+          ]
+        },
+        "CFGoldRectifier": {
+          "mean_correct": 38.45,
+          "accuracy": 0.8010416666666667,
+          "regret_vs_posthoc_best_fixed": 0.15729166666666672,
+          "gold_labels_per_history": 11,
+          "fraction_selecting_full_gold_train_best_reference": 0.3375,
+          "model_choice_frequency": [
+            0.275,
+            0.35,
+            0.0875,
+            0.025,
+            0.1125,
+            0.15
+          ]
+        },
+        "RawJudgeRectifier": {
+          "mean_correct": 45.4,
+          "accuracy": 0.9458333333333333,
+          "regret_vs_posthoc_best_fixed": 0.012500000000000067,
+          "gold_labels_per_history": 11,
+          "fraction_selecting_full_gold_train_best_reference": 0.7875,
+          "model_choice_frequency": [
+            0.7875,
+            0.1375,
+            0.0,
+            0.0,
+            0.075,
+            0.0
+          ]
+        },
+        "CalibratedJudge": {
+          "mean_correct": 42.5,
+          "accuracy": 0.8854166666666666,
+          "regret_vs_posthoc_best_fixed": 0.07291666666666674,
+          "gold_labels_per_history": 11,
+          "fraction_selecting_full_gold_train_best_reference": 0.6,
+          "model_choice_frequency": [
+            0.5625,
+            0.2625,
+            0.025,
+            0.0125,
+            0.05,
+            0.0875
+          ]
+        },
+        "CFJudgeRectifier": {
+          "mean_correct": 40.9,
+          "accuracy": 0.8520833333333333,
+          "regret_vs_posthoc_best_fixed": 0.10625000000000007,
+          "gold_labels_per_history": 11,
+          "fraction_selecting_full_gold_train_best_reference": 0.575,
+          "model_choice_frequency": [
+            0.55,
+            0.2,
+            0.0375,
+            0.0125,
+            0.075,
+            0.125
+          ]
+        },
+        "IndependentSH": {
+          "mean_correct": 40.65,
+          "accuracy": 0.846875,
+          "regret_vs_posthoc_best_fixed": 0.11145833333333333,
+          "gold_labels_per_history": 11,
+          "fraction_selecting_full_gold_train_best_reference": 0.3,
+          "model_choice_frequency": [
+            0.25,
+            0.3625,
+            0.0375,
+            0.075,
+            0.25,
+            0.025
+          ]
+        },
+        "PairedSH": {
+          "mean_correct": 41.05,
+          "accuracy": 0.8552083333333333,
+          "regret_vs_posthoc_best_fixed": 0.10312500000000002,
+          "gold_labels_per_history": 11,
+          "fraction_selecting_full_gold_train_best_reference": 0.3625,
+          "model_choice_frequency": [
+            0.2875,
+            0.375,
+            0.05,
+            0.05,
+            0.2,
+            0.0375
+          ]
+        },
+        "RawJudge": {
+          "mean_correct": 46.0,
+          "accuracy": 0.9583333333333334,
+          "regret_vs_posthoc_best_fixed": 0.0,
+          "gold_labels_per_history": 0,
+          "fraction_selecting_full_gold_train_best_reference": 0.8625,
+          "model_choice_frequency": [
+            0.8625,
+            0.1375,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "primary_contrasts": {
+        "UniformGlobal": {
+          "difference": -0.011458333333333334,
+          "ci95": [
+            -0.03752604166666666,
+            0.013541666666666667
+          ],
+          "mean_rescues": 3.25,
+          "mean_harms": 3.8
+        },
+        "PairedGlobal": {
+          "difference": 0.016666666666666666,
+          "ci95": [
+            -0.0010416666666666664,
+            0.03541666666666667
+          ],
+          "mean_rescues": 2.3,
+          "mean_harms": 1.5
+        },
+        "GoldRidge": {
+          "difference": 0.02395833333333333,
+          "ci95": [
+            0.008333333333333333,
+            0.041666666666666664
+          ],
+          "mean_rescues": 2.4,
+          "mean_harms": 1.25
+        },
+        "CFGoldRectifier": {
+          "difference": 0.05104166666666667,
+          "ci95": [
+            0.03541666666666667,
+            0.06770833333333333
+          ],
+          "mean_rescues": 2.6,
+          "mean_harms": 0.15
+        },
+        "RawJudgeRectifier": {
+          "difference": -0.09375,
+          "ci95": [
+            -0.13124999999999998,
+            -0.05937500000000001
+          ],
+          "mean_rescues": 0.25,
+          "mean_harms": 4.75
+        },
+        "CalibratedJudge": {
+          "difference": -0.03333333333333333,
+          "ci95": [
+            -0.05520833333333334,
+            -0.013541666666666667
+          ],
+          "mean_rescues": 0.3,
+          "mean_harms": 1.9
+        },
+        "IndependentSH": {
+          "difference": 0.005208333333333335,
+          "ci95": [
+            -0.029166666666666664,
+            0.040625
+          ],
+          "mean_rescues": 3.65,
+          "mean_harms": 3.4
+        },
+        "PairedSH": {
+          "difference": -0.0031250000000000006,
+          "ci95": [
+            -0.036458333333333336,
+            0.028125
+          ],
+          "mean_rescues": 3.1,
+          "mean_harms": 3.25
+        },
+        "RawJudge": {
+          "difference": -0.10625,
+          "ci95": [
+            -0.14791666666666667,
+            -0.06874999999999999
+          ],
+          "mean_rescues": 0.0,
+          "mean_harms": 5.1
+        }
+      },
+      "diagnostic": {
+        "crossfit_outer_brier": {
+          "gold": 0.2344142691798942,
+          "judge": 0.15926243424228312
+        },
+        "brier_gain": 0.07515183493761106,
+        "brier_gain_ci95": [
+          0.05491966388944307,
+          0.09412526329222028
+        ],
+        "pair_residual_variance_ratio": 0.8391668752832042,
+        "pair_residual_variance_ratio_ci95": [
+          0.7200022435596455,
+          0.9701326260057658
+        ],
+        "empty_inner_training_partitions": 21,
+        "total_inner_partitions": 240,
+        "mean_paired_labels_per_model": [
+          1.8625,
+          1.8625,
+          1.825,
+          1.8375,
+          1.8125,
+          1.8
+        ]
+      }
+    },
+    "0.1": {
+      "methods": {
+        "UniformGlobal": {
+          "mean_correct": 42.65,
+          "accuracy": 0.8885416666666667,
+          "regret_vs_posthoc_best_fixed": 0.0697916666666667,
+          "gold_labels_per_history": 22,
+          "fraction_selecting_full_gold_train_best_reference": 0.525,
+          "model_choice_frequency": [
+            0.4625,
+            0.3375,
+            0.0125,
+            0.025,
+            0.125,
+            0.0375
+          ]
+        },
+        "PairedGlobal": {
+          "mean_correct": 43.7,
+          "accuracy": 0.9104166666666667,
+          "regret_vs_posthoc_best_fixed": 0.04791666666666672,
+          "gold_labels_per_history": 22,
+          "fraction_selecting_full_gold_train_best_reference": 0.55,
+          "model_choice_frequency": [
+            0.4125,
+            0.45,
+            0.0,
+            0.0375,
+            0.0875,
+            0.0125
+          ]
+        },
+        "GoldRidge": {
+          "mean_correct": 43.7,
+          "accuracy": 0.9104166666666667,
+          "regret_vs_posthoc_best_fixed": 0.04791666666666672,
+          "gold_labels_per_history": 22,
+          "fraction_selecting_full_gold_train_best_reference": 0.55,
+          "model_choice_frequency": [
+            0.4125,
+            0.45,
+            0.0,
+            0.0375,
+            0.0875,
+            0.0125
+          ]
+        },
+        "CFGoldRectifier": {
+          "mean_correct": 42.9,
+          "accuracy": 0.89375,
+          "regret_vs_posthoc_best_fixed": 0.06458333333333333,
+          "gold_labels_per_history": 22,
+          "fraction_selecting_full_gold_train_best_reference": 0.5125,
+          "model_choice_frequency": [
+            0.375,
+            0.4625,
+            0.0,
+            0.05,
+            0.075,
+            0.0375
+          ]
+        },
+        "RawJudgeRectifier": {
+          "mean_correct": 45.15,
+          "accuracy": 0.940625,
+          "regret_vs_posthoc_best_fixed": 0.017708333333333326,
+          "gold_labels_per_history": 22,
+          "fraction_selecting_full_gold_train_best_reference": 0.7375,
+          "model_choice_frequency": [
+            0.725,
+            0.1875,
+            0.0,
+            0.0125,
+            0.075,
+            0.0
+          ]
+        },
+        "CalibratedJudge": {
+          "mean_correct": 44.95,
+          "accuracy": 0.9364583333333333,
+          "regret_vs_posthoc_best_fixed": 0.02187500000000009,
+          "gold_labels_per_history": 22,
+          "fraction_selecting_full_gold_train_best_reference": 0.675,
+          "model_choice_frequency": [
+            0.65,
+            0.275,
+            0.0,
+            0.0125,
+            0.05,
+            0.0125
+          ]
+        },
+        "CFJudgeRectifier": {
+          "mean_correct": 44.3,
+          "accuracy": 0.9229166666666667,
+          "regret_vs_posthoc_best_fixed": 0.03541666666666665,
+          "gold_labels_per_history": 22,
+          "fraction_selecting_full_gold_train_best_reference": 0.6625,
+          "model_choice_frequency": [
+            0.65,
+            0.225,
+            0.0,
+            0.025,
+            0.0875,
+            0.0125
+          ]
+        },
+        "IndependentSH": {
+          "mean_correct": 43.65,
+          "accuracy": 0.909375,
+          "regret_vs_posthoc_best_fixed": 0.048958333333333326,
+          "gold_labels_per_history": 22,
+          "fraction_selecting_full_gold_train_best_reference": 0.5375,
+          "model_choice_frequency": [
+            0.4375,
+            0.425,
+            0.025,
+            0.0125,
+            0.1,
+            0.0
+          ]
+        },
+        "PairedSH": {
+          "mean_correct": 44.1,
+          "accuracy": 0.91875,
+          "regret_vs_posthoc_best_fixed": 0.039583333333333415,
+          "gold_labels_per_history": 22,
+          "fraction_selecting_full_gold_train_best_reference": 0.5,
+          "model_choice_frequency": [
+            0.4,
+            0.4125,
+            0.0,
+            0.0,
+            0.1875,
+            0.0
+          ]
+        },
+        "RawJudge": {
+          "mean_correct": 46.0,
+          "accuracy": 0.9583333333333334,
+          "regret_vs_posthoc_best_fixed": 0.0,
+          "gold_labels_per_history": 0,
+          "fraction_selecting_full_gold_train_best_reference": 0.8625,
+          "model_choice_frequency": [
+            0.8625,
+            0.1375,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "primary_contrasts": {
+        "UniformGlobal": {
+          "difference": 0.034374999999999996,
+          "ci95": [
+            0.013541666666666667,
+            0.05833333333333333
+          ],
+          "mean_rescues": 3.1,
+          "mean_harms": 1.45
+        },
+        "PairedGlobal": {
+          "difference": 0.012499999999999999,
+          "ci95": [
+            -0.0031250000000000006,
+            0.036458333333333336
+          ],
+          "mean_rescues": 1.3,
+          "mean_harms": 0.7
+        },
+        "GoldRidge": {
+          "difference": 0.012499999999999999,
+          "ci95": [
+            -0.0031250000000000006,
+            0.036458333333333336
+          ],
+          "mean_rescues": 1.3,
+          "mean_harms": 0.7
+        },
+        "CFGoldRectifier": {
+          "difference": 0.02916666666666667,
+          "ci95": [
+            0.012499999999999999,
+            0.05416666666666667
+          ],
+          "mean_rescues": 2.1,
+          "mean_harms": 0.7
+        },
+        "RawJudgeRectifier": {
+          "difference": -0.017708333333333336,
+          "ci95": [
+            -0.027083333333333334,
+            -0.009375
+          ],
+          "mean_rescues": 0.1,
+          "mean_harms": 0.95
+        },
+        "CalibratedJudge": {
+          "difference": -0.013541666666666669,
+          "ci95": [
+            -0.023958333333333335,
+            -0.004166666666666667
+          ],
+          "mean_rescues": 0.15,
+          "mean_harms": 0.8
+        },
+        "IndependentSH": {
+          "difference": 0.013541666666666667,
+          "ci95": [
+            -0.0020833333333333333,
+            0.034374999999999996
+          ],
+          "mean_rescues": 1.95,
+          "mean_harms": 1.3
+        },
+        "PairedSH": {
+          "difference": 0.004166666666666668,
+          "ci95": [
+            -0.012500000000000002,
+            0.026041666666666668
+          ],
+          "mean_rescues": 1.35,
+          "mean_harms": 1.15
+        },
+        "RawJudge": {
+          "difference": -0.03541666666666667,
+          "ci95": [
+            -0.053125,
+            -0.019791666666666666
+          ],
+          "mean_rescues": 0.0,
+          "mean_harms": 1.7
+        }
+      },
+      "diagnostic": {
+        "crossfit_outer_brier": {
+          "gold": 0.2139570788601899,
+          "judge": 0.13009597758501915
+        },
+        "brier_gain": 0.08386110127517077,
+        "brier_gain_ci95": [
+          0.05753360348518175,
+          0.10933978789981606
+        ],
+        "pair_residual_variance_ratio": 0.7699813388938885,
+        "pair_residual_variance_ratio_ci95": [
+          0.6226434786660643,
+          0.9328809203915482
+        ],
+        "empty_inner_training_partitions": 0,
+        "total_inner_partitions": 240,
+        "mean_paired_labels_per_model": [
+          3.675,
+          3.7625,
+          3.65,
+          3.675,
+          3.6375,
+          3.6
+        ]
+      }
+    },
+    "0.2": {
+      "methods": {
+        "UniformGlobal": {
+          "mean_correct": 44.65,
+          "accuracy": 0.9302083333333333,
+          "regret_vs_posthoc_best_fixed": 0.028125000000000067,
+          "gold_labels_per_history": 44,
+          "fraction_selecting_full_gold_train_best_reference": 0.6875,
+          "model_choice_frequency": [
+            0.6125,
+            0.3,
+            0.0,
+            0.0,
+            0.075,
+            0.0125
+          ]
+        },
+        "PairedGlobal": {
+          "mean_correct": 44.9,
+          "accuracy": 0.9354166666666667,
+          "regret_vs_posthoc_best_fixed": 0.022916666666666696,
+          "gold_labels_per_history": 44,
+          "fraction_selecting_full_gold_train_best_reference": 0.625,
+          "model_choice_frequency": [
+            0.4875,
+            0.4625,
+            0.0,
+            0.0125,
+            0.0375,
+            0.0
+          ]
+        },
+        "GoldRidge": {
+          "mean_correct": 44.9,
+          "accuracy": 0.9354166666666667,
+          "regret_vs_posthoc_best_fixed": 0.022916666666666696,
+          "gold_labels_per_history": 44,
+          "fraction_selecting_full_gold_train_best_reference": 0.625,
+          "model_choice_frequency": [
+            0.4875,
+            0.4625,
+            0.0,
+            0.0125,
+            0.0375,
+            0.0
+          ]
+        },
+        "CFGoldRectifier": {
+          "mean_correct": 44.7,
+          "accuracy": 0.93125,
+          "regret_vs_posthoc_best_fixed": 0.027083333333333348,
+          "gold_labels_per_history": 44,
+          "fraction_selecting_full_gold_train_best_reference": 0.5875,
+          "model_choice_frequency": [
+            0.4375,
+            0.4875,
+            0.0,
+            0.0,
+            0.075,
+            0.0
+          ]
+        },
+        "RawJudgeRectifier": {
+          "mean_correct": 45.45,
+          "accuracy": 0.946875,
+          "regret_vs_posthoc_best_fixed": 0.011458333333333348,
+          "gold_labels_per_history": 44,
+          "fraction_selecting_full_gold_train_best_reference": 0.7125,
+          "model_choice_frequency": [
+            0.675,
+            0.2875,
+            0.0,
+            0.0,
+            0.0375,
+            0.0
+          ]
+        },
+        "CalibratedJudge": {
+          "mean_correct": 45.85,
+          "accuracy": 0.9552083333333333,
+          "regret_vs_posthoc_best_fixed": 0.0031250000000000444,
+          "gold_labels_per_history": 44,
+          "fraction_selecting_full_gold_train_best_reference": 0.7375,
+          "model_choice_frequency": [
+            0.725,
+            0.2625,
+            0.0,
+            0.0,
+            0.0125,
+            0.0
+          ]
+        },
+        "CFJudgeRectifier": {
+          "mean_correct": 45.4,
+          "accuracy": 0.9458333333333333,
+          "regret_vs_posthoc_best_fixed": 0.012500000000000067,
+          "gold_labels_per_history": 44,
+          "fraction_selecting_full_gold_train_best_reference": 0.6875,
+          "model_choice_frequency": [
+            0.6375,
+            0.325,
+            0.0,
+            0.0,
+            0.0375,
+            0.0
+          ]
+        },
+        "IndependentSH": {
+          "mean_correct": 44.9,
+          "accuracy": 0.9354166666666667,
+          "regret_vs_posthoc_best_fixed": 0.022916666666666696,
+          "gold_labels_per_history": 44,
+          "fraction_selecting_full_gold_train_best_reference": 0.6875,
+          "model_choice_frequency": [
+            0.55,
+            0.4,
+            0.0,
+            0.0,
+            0.05,
+            0.0
+          ]
+        },
+        "PairedSH": {
+          "mean_correct": 45.35,
+          "accuracy": 0.9447916666666667,
+          "regret_vs_posthoc_best_fixed": 0.013541666666666674,
+          "gold_labels_per_history": 44,
+          "fraction_selecting_full_gold_train_best_reference": 0.6625,
+          "model_choice_frequency": [
+            0.55,
+            0.425,
+            0.0,
+            0.0,
+            0.025,
+            0.0
+          ]
+        },
+        "RawJudge": {
+          "mean_correct": 46.0,
+          "accuracy": 0.9583333333333334,
+          "regret_vs_posthoc_best_fixed": 0.0,
+          "gold_labels_per_history": 0,
+          "fraction_selecting_full_gold_train_best_reference": 0.8625,
+          "model_choice_frequency": [
+            0.8625,
+            0.1375,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "primary_contrasts": {
+        "UniformGlobal": {
+          "difference": 0.015625,
+          "ci95": [
+            0.007291666666666668,
+            0.026041666666666668
+          ],
+          "mean_rescues": 1.2,
+          "mean_harms": 0.45
+        },
+        "PairedGlobal": {
+          "difference": 0.010416666666666666,
+          "ci95": [
+            0.0010416666666666667,
+            0.02708333333333333
+          ],
+          "mean_rescues": 0.8,
+          "mean_harms": 0.3
+        },
+        "GoldRidge": {
+          "difference": 0.010416666666666666,
+          "ci95": [
+            0.0010416666666666667,
+            0.02708333333333333
+          ],
+          "mean_rescues": 0.8,
+          "mean_harms": 0.3
+        },
+        "CFGoldRectifier": {
+          "difference": 0.014583333333333335,
+          "ci95": [
+            0.0020833333333333333,
+            0.03541666666666667
+          ],
+          "mean_rescues": 1.0,
+          "mean_harms": 0.3
+        },
+        "RawJudgeRectifier": {
+          "difference": -0.0010416666666666667,
+          "ci95": [
+            -0.0031250000000000006,
+            0.0
+          ],
+          "mean_rescues": 0.0,
+          "mean_harms": 0.05
+        },
+        "CalibratedJudge": {
+          "difference": -0.009375,
+          "ci95": [
+            -0.017708333333333336,
+            -0.0031250000000000006
+          ],
+          "mean_rescues": 0.0,
+          "mean_harms": 0.45
+        },
+        "IndependentSH": {
+          "difference": 0.010416666666666666,
+          "ci95": [
+            0.0010416666666666667,
+            0.02708333333333333
+          ],
+          "mean_rescues": 1.0,
+          "mean_harms": 0.5
+        },
+        "PairedSH": {
+          "difference": 0.001041666666666667,
+          "ci95": [
+            -0.006250000000000001,
+            0.011458333333333334
+          ],
+          "mean_rescues": 0.35,
+          "mean_harms": 0.3
+        },
+        "RawJudge": {
+          "difference": -0.012500000000000002,
+          "ci95": [
+            -0.024999999999999998,
+            -0.004166666666666667
+          ],
+          "mean_rescues": 0.0,
+          "mean_harms": 0.6
+        }
+      },
+      "diagnostic": {
+        "crossfit_outer_brier": {
+          "gold": 0.18934349345255966,
+          "judge": 0.10487743128935245
+        },
+        "brier_gain": 0.08446606216320718,
+        "brier_gain_ci95": [
+          0.05225802740119255,
+          0.11509609789828712
+        ],
+        "pair_residual_variance_ratio": 0.7232833858288674,
+        "pair_residual_variance_ratio_ci95": [
+          0.5531893029087593,
+          0.9141597838005019
+        ],
+        "empty_inner_training_partitions": 0,
+        "total_inner_partitions": 240,
+        "mean_paired_labels_per_model": [
+          7.3625,
+          7.375,
+          7.3375,
+          7.35,
+          7.2875,
+          7.2875
+        ]
+      }
+    }
+  },
+  "development_expansion_gate_pass": false,
+  "tasks": 48,
+  "models": 6,
+  "cases": 240,
+  "method_selections": 2400,
+  "posthoc_best_fixed_accuracy": 0.9583333333333334,
+  "posthoc_per_model_accuracy": [
+    0.9583333333333334,
+    0.9375,
+    0.5,
+    0.5416666666666666,
+    0.7708333333333334,
+    0.4791666666666667
+  ],
+  "posthoc_oracle_per_question_accuracy": 0.9583333333333334,
+  "posthoc_model_disagreement_fraction": 0.6041666666666666,
+  "scope": "Development replay on already observed pilot; global model selection, not fresh solver calls or independent confirmation",
+  "uncertainty": "Question bootstrap of seed-averaged fixed decisions; no training refit, template grouping or adaptivity adjustment",
+  "new_solver_calls": 0,
+  "new_judge_calls": 0,
+  "run_id": "a4c73220bc917a52700300d0",
+  "parent_run_id": "bad5a513bd5d227711eb1e0d",
+  "models_order": [
+    "Qwen3-8B",
+    "DeepSeek-R1-0528-Qwen3-8B",
+    "Llama-3.1-8B-Instruct",
+    "Qwen2.5-Coder-7B-Instruct",
+    "Fin-R1",
+    "gemma-2-9b-it"
+  ],
+  "source_sha256": {
+    "infra/modal/routerbench_sparse_core.py": "c8f1aabf672fa11f26c4113112a195499e982a76467f2e3d3c29499dbccd15d7",
+    "infra/modal/routerbench_sparse_pipeline.py": "0be770098b609d80f368d3c37007aec991f1f3e78fabd11fa91033c39e94c32c",
+    "infra/modal/routerbench_sparse_modal.py": "5edda24e20607c03eee1c32aa1141b1135cf5eaa707109aedf29852bbcdac02e",
+    "run_routerbench_sparse.py": "8b60345f19769d5c8c5f06b0170f97836d9f72f416dd680a50729459a305d5fa",
+    "report_routerbench_pilot.py": "de538fa49ebbfba855978b927f3ca1c1aad81d9d6c9a5f6880c7a9e11d322772",
+    "run_dart_gain.py": "ab70c9a79125bcd8aebe0f222cb39a4ac7ad42a1b827451b571528ad986e6168",
+    "report_routerbench_sparse.py": "959b39e5a4de2490936316c80a08895239f3a300c8b00faece4dc737a1e4a26a",
+    "tests/test_routerbench_sparse.py": "998c4133c2c0119fd087c9004f5dd6067ee7ea21719f1bab18b4f5e763933164",
+    "docs/analysis/routerbench_sparse_gold_v1_protocol_2026-10-06.md": "fd47042a981e6c531698b1d11abce232ea27442697a01afd8b37b98491acc29d"
+  },
+  "verified_cases": 240,
+  "recomputed_method_selections": 2400,
+  "finished_at_utc": "2026-10-06T01:42:46.838554+00:00"
+}

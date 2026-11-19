@@ -1,0 +1,2559 @@
+{
+  "slide_count": 10,
+  "format": "PNG",
+  "dimensions": [
+    2560,
+    1440
+  ],
+  "language": "English",
+  "palette": "One blue accent, black and white; blue tints and antialiasing only",
+  "changes": "Natural explanatory prose; fuller body copy; no small caveat footnotes; same slide order and academic layout",
+  "numeric_results_unchanged": true,
+  "body_text_minimum_size": 18,
+  "outputs": [
+    {
+      "file": "slides/01_agenda.png",
+      "sha256": "8fed331308b8eb1b867efccf5ec569cf6ca63bde1ec92e3c38b6a80069f12817"
+    },
+    {
+      "file": "slides/02_work_completed.png",
+      "sha256": "04908b77674b4945bcc715815a51f9558d70f4da964552a964c2802a676562a6"
+    },
+    {
+      "file": "slides/03_cross_model_vs_self_review.png",
+      "sha256": "41d951dbf5752449f74475ff56c7544dba60531d8ef992efd5a7a39cba9f6d1e"
+    },
+    {
+      "file": "slides/04_workspace_results.png",
+      "sha256": "80f7d5e3cf923eb2824b5ec9a498af3f6fdc4b7eab83af0892cbe10f5e6323b2"
+    },
+    {
+      "file": "slides/05_three_cases.png",
+      "sha256": "9322b411613e01054a7aa81feb21965524fc48706388f954eff919f96aea75db"
+    },
+    {
+      "file": "slides/06_handoff_checker.png",
+      "sha256": "ceb2d6502b16a706fadb71936ddedb85aab84d7475c143de73315a8fa190995d"
+    },
+    {
+      "file": "slides/07_broader_evaluation.png",
+      "sha256": "cfa8f8829c7e5da7cd77350fc69a51ce511310dec0bf714cda1d9ecb56d54a22"
+    },
+    {
+      "file": "slides/08_sql_pilot.png",
+      "sha256": "10c81ef54b97f25ced1615620a444c4d5b6f89358b611920cc29a9aa98920887"
+    },
+    {
+      "file": "slides/09_research_direction.png",
+      "sha256": "9f57914138f5a56c84970f7c3a061c5531bf3abf6b32141888cd047171722fc6"
+    },
+    {
+      "file": "slides/10_next_steps.png",
+      "sha256": "7a99d6df2f5b0d422086a3a4985b2d918d4d2fa02653774a9b377ef87157eaee"
+    }
+  ],
+  "text_layout": [
+    {
+      "slide": 1,
+      "text": "Agenda",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        144.43,
+        63.08
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Tín & Trung",
+      "size": 16,
+      "box": [
+        22,
+        693.0,
+        116.27,
+        715.9
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "RepGuard · Progress Update",
+      "size": 16,
+      "box": [
+        530.3,
+        693.0,
+        749.7,
+        715.9
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "10 Nov 2026",
+      "size": 16,
+      "box": [
+        1000,
+        693.0,
+        1085.36,
+        716.41
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "1 / 10",
+      "size": 16,
+      "box": [
+        1213.06,
+        693.0,
+        1260.0,
+        715.9
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Progress since the October report",
+      "size": 25,
+      "box": [
+        80,
+        116.0,
+        468.4,
+        151.77
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Four studies, a working verification layer, and a plan for the next experiments.",
+      "size": 23,
+      "box": [
+        80,
+        158.0,
+        835.37,
+        191.65
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "1",
+      "size": 18,
+      "box": [
+        87.05,
+        261.0,
+        96.95,
+        286.76
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Work completed",
+      "size": 27,
+      "box": [
+        127,
+        258.0,
+        331.36,
+        296.64
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "What we ran, what we built, and how we moved",
+      "size": 23,
+      "box": [
+        127,
+        307.0,
+        596.73,
+        340.65
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "beyond checking only the final answer.",
+      "size": 23,
+      "box": [
+        127,
+        337.82,
+        498.77,
+        371.47
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "2",
+      "size": 18,
+      "box": [
+        87.05,
+        453.0,
+        96.95,
+        478.76
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "What we learned",
+      "size": 27,
+      "box": [
+        127,
+        450.0,
+        338.0,
+        488.64
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "What the results tell us about review, task",
+      "size": 23,
+      "box": [
+        127,
+        499.0,
+        536.15,
+        532.65
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "completion and the way answers are judged.",
+      "size": 23,
+      "box": [
+        127,
+        529.82,
+        553.77,
+        563.47
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "3",
+      "size": 18,
+      "box": [
+        685.05,
+        261.0,
+        694.95,
+        286.76
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Research direction",
+      "size": 27,
+      "box": [
+        725,
+        258.0,
+        952.37,
+        296.64
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "How we plan to test whether verification",
+      "size": 23,
+      "box": [
+        725,
+        307.0,
+        1117.4,
+        340.65
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "feedback helps agents correct their work.",
+      "size": 23,
+      "box": [
+        725,
+        337.82,
+        1119.8,
+        371.47
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "4",
+      "size": 18,
+      "box": [
+        685.05,
+        453.0,
+        694.95,
+        478.76
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Next steps",
+      "size": 27,
+      "box": [
+        725,
+        450.0,
+        857.19,
+        488.64
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "What Tín and Trung will prepare before the",
+      "size": 23,
+      "box": [
+        725,
+        499.0,
+        1150.62,
+        532.65
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "next comparison.",
+      "size": 23,
+      "box": [
+        725,
+        529.82,
+        888.55,
+        563.47
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "The main question is how agents can check and pass on analytical work more reliably.",
+      "size": 23,
+      "box": [
+        75,
+        628.0,
+        907.0,
+        661.65
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "What we have done since the last report",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        679.37,
+        63.08
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Tín & Trung",
+      "size": 16,
+      "box": [
+        22,
+        693.0,
+        116.27,
+        715.9
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "RepGuard · Progress Update",
+      "size": 16,
+      "box": [
+        530.3,
+        693.0,
+        749.7,
+        715.9
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "10 Nov 2026",
+      "size": 16,
+      "box": [
+        1000,
+        693.0,
+        1085.36,
+        716.41
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "2 / 10",
+      "size": 16,
+      "box": [
+        1213.06,
+        693.0,
+        1260.0,
+        715.9
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "1,265",
+      "size": 51,
+      "box": [
+        75,
+        106.0,
+        202.81,
+        178.98
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "new responses across four studies",
+      "size": 29,
+      "box": [
+        270,
+        126.0,
+        715.21,
+        167.5
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "720",
+      "size": 43,
+      "box": [
+        75,
+        254.0,
+        145.95,
+        315.53
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Evidence checking",
+      "size": 23,
+      "box": [
+        75,
+        320.0,
+        266.96,
+        352.91
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "120 pairs · 24 groups",
+      "size": 21,
+      "box": [
+        75,
+        399.0,
+        270.95,
+        429.72
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "288",
+      "size": 43,
+      "box": [
+        365,
+        254.0,
+        435.95,
+        315.53
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Financial report QA",
+      "size": 23,
+      "box": [
+        365,
+        320.0,
+        573.63,
+        352.91
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "24 questions · 2 prompts",
+      "size": 21,
+      "box": [
+        365,
+        399.0,
+        593.59,
+        429.72
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "113",
+      "size": 43,
+      "box": [
+        655,
+        254.0,
+        725.95,
+        315.53
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Data workspaces",
+      "size": 23,
+      "box": [
+        655,
+        320.0,
+        833.07,
+        352.91
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "6 tasks · 36 runs",
+      "size": 21,
+      "box": [
+        655,
+        399.0,
+        811.79,
+        429.72
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "144",
+      "size": 43,
+      "box": [
+        945,
+        254.0,
+        1015.95,
+        315.53
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "SQL with specified",
+      "size": 23,
+      "box": [
+        945,
+        320.0,
+        1142.52,
+        352.91
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "interpretations",
+      "size": 23,
+      "box": [
+        945,
+        350.82,
+        1098.41,
+        383.73
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "12 tasks · 24 cases",
+      "size": 21,
+      "box": [
+        945,
+        399.0,
+        1120.18,
+        429.72
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "We started with evidence checking and report questions, then moved to agents working with files and",
+      "size": 24,
+      "box": [
+        75,
+        468.0,
+        1098.22,
+        503.11
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "databases. This gave us examples of both reasoning errors and failures to finish a task.",
+      "size": 24,
+      "box": [
+        75,
+        500.16,
+        947.04,
+        535.27
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Alongside these runs, we built a checker that links each SQL query to its source data and the requirements it is",
+      "size": 24,
+      "box": [
+        75,
+        587.0,
+        1197.29,
+        622.11
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "meant to satisfy.",
+      "size": 24,
+      "box": [
+        75,
+        619.16,
+        243.38,
+        654.27
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Does using a different reviewer help?",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        619.7,
+        63.08
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Tín & Trung",
+      "size": 16,
+      "box": [
+        22,
+        693.0,
+        116.27,
+        715.9
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "RepGuard · Progress Update",
+      "size": 16,
+      "box": [
+        530.3,
+        693.0,
+        749.7,
+        715.9
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "10 Nov 2026",
+      "size": 16,
+      "box": [
+        1000,
+        693.0,
+        1085.36,
+        716.41
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "3 / 10",
+      "size": 16,
+      "box": [
+        1213.06,
+        693.0,
+        1260.0,
+        715.9
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "We compared asking a model to check its own answer with asking the other model to review it.",
+      "size": 24,
+      "box": [
+        75,
+        107.0,
+        1038.48,
+        142.11
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Both studies found an average gain of about 2 percentage points, but the confidence intervals include zero. We",
+      "size": 24,
+      "box": [
+        75,
+        545.0,
+        1194.02,
+        580.11
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "do not yet have clear evidence that switching models improves review.",
+      "size": 24,
+      "box": [
+        75,
+        577.16,
+        780.72,
+        612.27
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "These results are why we have kept reputation learning on hold.",
+      "size": 24,
+      "box": [
+        75,
+        634.0,
+        719.71,
+        669.11
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "What happened when agents worked with real files",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        845.76,
+        63.08
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Tín & Trung",
+      "size": 16,
+      "box": [
+        22,
+        693.0,
+        116.27,
+        715.9
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "RepGuard · Progress Update",
+      "size": 16,
+      "box": [
+        530.3,
+        693.0,
+        749.7,
+        715.9
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "10 Nov 2026",
+      "size": 16,
+      "box": [
+        1000,
+        693.0,
+        1085.36,
+        716.41
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "4 / 10",
+      "size": 16,
+      "box": [
+        1213.06,
+        693.0,
+        1260.0,
+        715.9
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "We connected the agents to CSV, JSON, SQLite and PDF files, then examined 36 runs across six tasks.",
+      "size": 24,
+      "box": [
+        75,
+        107.0,
+        1123.66,
+        142.11
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "9",
+      "size": 32,
+      "box": [
+        207.45,
+        220.0,
+        225.05,
+        265.79
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "14",
+      "size": 32,
+      "box": [
+        559.62,
+        220.0,
+        594.82,
+        265.79
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "13",
+      "size": 32,
+      "box": [
+        983.37,
+        220.0,
+        1018.57,
+        265.79
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Matched the reference",
+      "size": 24,
+      "box": [
+        75,
+        316.0,
+        324.91,
+        350.34
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "The submitted table matched the",
+      "size": 23,
+      "box": [
+        75,
+        372.0,
+        397.67,
+        405.65
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "expected rows and columns.",
+      "size": 23,
+      "box": [
+        75,
+        402.82,
+        344.7,
+        436.47
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Returned a different table",
+      "size": 24,
+      "box": [
+        460,
+        316.0,
+        745.96,
+        350.34
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "These outputs needed closer",
+      "size": 23,
+      "box": [
+        460,
+        372.0,
+        732.76,
+        405.65
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "review: the issue could be the",
+      "size": 23,
+      "box": [
+        460,
+        402.82,
+        743.91,
+        436.47
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "chosen field, interpretation or table",
+      "size": 23,
+      "box": [
+        460,
+        433.64,
+        798.31,
+        467.29
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "shape.",
+      "size": 23,
+      "box": [
+        460,
+        464.46,
+        520.26,
+        498.11
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "No final table",
+      "size": 24,
+      "box": [
+        845,
+        316.0,
+        995.46,
+        350.34
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "The agent stopped without a final",
+      "size": 23,
+      "box": [
+        845,
+        372.0,
+        1173.67,
+        405.65
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "table, often after spending its",
+      "size": 23,
+      "box": [
+        845,
+        402.82,
+        1128.61,
+        436.47
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "budget searching or generating",
+      "size": 23,
+      "box": [
+        845,
+        433.64,
+        1141.91,
+        467.29
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "output.",
+      "size": 23,
+      "box": [
+        845,
+        464.46,
+        915.17,
+        498.11
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "The key distinction is between failing to finish and finishing with a result that needs checking. We use the",
+      "size": 24,
+      "box": [
+        75,
+        556.0,
+        1141.85,
+        591.11
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "traces to understand which problem occurred before deciding how another agent could help.",
+      "size": 24,
+      "box": [
+        75,
+        588.16,
+        1000.39,
+        623.27
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Three cases we looked at more closely",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        643.01,
+        63.08
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Tín & Trung",
+      "size": 16,
+      "box": [
+        22,
+        693.0,
+        116.27,
+        715.9
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "RepGuard · Progress Update",
+      "size": 16,
+      "box": [
+        530.3,
+        693.0,
+        749.7,
+        715.9
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "10 Nov 2026",
+      "size": 16,
+      "box": [
+        1000,
+        693.0,
+        1085.36,
+        716.41
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "5 / 10",
+      "size": 16,
+      "box": [
+        1213.06,
+        693.0,
+        1260.0,
+        715.9
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "1",
+      "size": 18,
+      "box": [
+        80.05,
+        121.0,
+        89.95,
+        146.76
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Wrong attribute",
+      "size": 25,
+      "box": [
+        113,
+        119.0,
+        298.93,
+        154.77
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "2",
+      "size": 18,
+      "box": [
+        475.05,
+        121.0,
+        484.95,
+        146.76
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Unclear meaning",
+      "size": 25,
+      "box": [
+        508,
+        119.0,
+        699.9,
+        154.77
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "3",
+      "size": 18,
+      "box": [
+        870.05,
+        121.0,
+        879.95,
+        146.76
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Extra output column",
+      "size": 25,
+      "box": [
+        903,
+        119.0,
+        1140.55,
+        154.77
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Fund manager nationality",
+      "size": 23,
+      "box": [
+        75,
+        190.0,
+        344.95,
+        222.91
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Person name / fund name",
+      "size": 22,
+      "box": [
+        89,
+        259.0,
+        354.85,
+        290.48
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Nationality + correct join",
+      "size": 22,
+      "box": [
+        89,
+        376.0,
+        349.22,
+        407.48
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "We asked for nationality. The",
+      "size": 23,
+      "box": [
+        75,
+        456.0,
+        362.45,
+        489.65
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "query used names as a proxy, even",
+      "size": 23,
+      "box": [
+        75,
+        486.82,
+        409.17,
+        520.47
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "though a Nationality field was",
+      "size": 23,
+      "box": [
+        75,
+        517.64,
+        364.89,
+        551.29
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "available in the source.",
+      "size": 23,
+      "box": [
+        75,
+        548.46,
+        295.04,
+        582.11
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "“Fund abbreviation”",
+      "size": 23,
+      "box": [
+        470,
+        190.0,
+        683.92,
+        222.91
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "SecuAbbr",
+      "size": 22,
+      "box": [
+        484,
+        259.0,
+        580.78,
+        290.48
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "or",
+      "size": 23,
+      "box": [
+        625.32,
+        316.0,
+        644.68,
+        349.65
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "ChiNameAbbr",
+      "size": 22,
+      "box": [
+        484,
+        376.0,
+        625.77,
+        407.48
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "The source had two plausible",
+      "size": 23,
+      "box": [
+        470,
+        456.0,
+        751.5,
+        489.65
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "abbreviation columns. We need to",
+      "size": 23,
+      "box": [
+        470,
+        486.82,
+        798.3,
+        520.47
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "settle the intended meaning before",
+      "size": 23,
+      "box": [
+        470,
+        517.64,
+        803.2,
+        551.29
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "deciding which answer is correct.",
+      "size": 23,
+      "box": [
+        470,
+        548.46,
+        786.85,
+        582.11
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Correct names; extra ID",
+      "size": 23,
+      "box": [
+        865,
+        190.0,
+        1121.01,
+        222.91
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Procedure name",
+      "size": 21,
+      "box": [
+        878,
+        255.0,
+        1034.68,
+        285.05
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "ID",
+      "size": 21,
+      "box": [
+        1087,
+        255.0,
+        1110.63,
+        285.05
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "The names and their order were",
+      "size": 23,
+      "box": [
+        865,
+        456.0,
+        1173.25,
+        489.65
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "correct, but an extra ID column",
+      "size": 23,
+      "box": [
+        865,
+        486.82,
+        1171.2,
+        520.47
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "caused a mismatch with the",
+      "size": 23,
+      "box": [
+        865,
+        517.64,
+        1134.88,
+        551.29
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "expected table.",
+      "size": 23,
+      "box": [
+        865,
+        548.46,
+        1009.56,
+        582.11
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "These cases call for different fixes, rather than a single “wrong answer” category.",
+      "size": 23,
+      "box": [
+        75,
+        639.0,
+        858.17,
+        672.65
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Building checks into the handoff",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        544.87,
+        63.08
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Tín & Trung",
+      "size": 16,
+      "box": [
+        22,
+        693.0,
+        116.27,
+        715.9
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "RepGuard · Progress Update",
+      "size": 16,
+      "box": [
+        530.3,
+        693.0,
+        749.7,
+        715.9
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "10 Nov 2026",
+      "size": 16,
+      "box": [
+        1000,
+        693.0,
+        1085.36,
+        716.41
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "6 / 10",
+      "size": 16,
+      "box": [
+        1213.06,
+        693.0,
+        1260.0,
+        715.9
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "We have implemented a checker for SQL queries. It compares the query with the source schema and",
+      "size": 24,
+      "box": [
+        75,
+        107.0,
+        1086.77,
+        142.11
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "system-defined requirements, then reports what is satisfied, violated or unresolved.",
+      "size": 24,
+      "box": [
+        75,
+        139.16,
+        903.26,
+        174.27
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "The review loop we will test next",
+      "size": 24,
+      "box": [
+        75,
+        209.0,
+        442.25,
+        243.34
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "SQL agent",
+      "size": 22,
+      "box": [
+        89,
+        272.0,
+        196.89,
+        303.48
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Writes a query",
+      "size": 20,
+      "box": [
+        89,
+        314.0,
+        211.82,
+        343.26
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Checker",
+      "size": 22,
+      "box": [
+        389,
+        272.0,
+        469.92,
+        303.48
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Checks source use",
+      "size": 20,
+      "box": [
+        389,
+        314.0,
+        540.12,
+        343.26
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Reviewer",
+      "size": 22,
+      "box": [
+        689,
+        272.0,
+        779.38,
+        303.48
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Reads the findings",
+      "size": 20,
+      "box": [
+        689,
+        314.0,
+        842.54,
+        343.26
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Re-execution",
+      "size": 22,
+      "box": [
+        989,
+        272.0,
+        1119.33,
+        303.48
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Runs the revised SQL",
+      "size": 20,
+      "box": [
+        989,
+        314.0,
+        1169.96,
+        343.26
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Met",
+      "size": 21,
+      "box": [
+        448.12,
+        394.0,
+        487.88,
+        424.05
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Violated",
+      "size": 21,
+      "box": [
+        608.14,
+        394.0,
+        687.86,
+        424.05
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Unresolved",
+      "size": 21,
+      "box": [
+        775.42,
+        394.0,
+        880.58,
+        424.05
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "29",
+      "size": 40,
+      "box": [
+        75,
+        460.0,
+        119.0,
+        517.24
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "New tests",
+      "size": 22,
+      "box": [
+        75,
+        518.0,
+        165.2,
+        550.19
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "87",
+      "size": 40,
+      "box": [
+        470,
+        460.0,
+        514.0,
+        517.24
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Tests passed in the scoped suite",
+      "size": 22,
+      "box": [
+        470,
+        518.0,
+        766.32,
+        550.19
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "20/20",
+      "size": 40,
+      "box": [
+        865,
+        460.0,
+        975.0,
+        517.24
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "SQL outputs reproduced",
+      "size": 22,
+      "box": [
+        865,
+        518.0,
+        1090.28,
+        550.19
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "byte for byte",
+      "size": 22,
+      "box": [
+        865,
+        547.48,
+        983.36,
+        579.67
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "The tests cover source binding and handoff consistency. Replaying old SQL reproduced the same output bytes; the",
+      "size": 23,
+      "box": [
+        75,
+        602.0,
+        1180.84,
+        635.65
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "next experiment will test whether the checker helps agents correct their work.",
+      "size": 23,
+      "box": [
+        75,
+        632.82,
+        824.11,
+        666.47
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Preparing a broader SQL evaluation",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        601.18,
+        63.08
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Tín & Trung",
+      "size": 16,
+      "box": [
+        22,
+        693.0,
+        116.27,
+        715.9
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "RepGuard · Progress Update",
+      "size": 16,
+      "box": [
+        530.3,
+        693.0,
+        749.7,
+        715.9
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "10 Nov 2026",
+      "size": 16,
+      "box": [
+        1000,
+        693.0,
+        1085.36,
+        716.41
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "7 / 10",
+      "size": 16,
+      "box": [
+        1213.06,
+        693.0,
+        1260.0,
+        715.9
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "We prepared 204 SpecBridge tasks across 12 databases and split them by database, so we can develop on one",
+      "size": 24,
+      "box": [
+        75,
+        107.0,
+        1183.25,
+        142.11
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "group before evaluating on the others.",
+      "size": 24,
+      "box": [
+        75,
+        139.16,
+        458.95,
+        174.27
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "45",
+      "size": 29,
+      "box": [
+        183.68,
+        226.0,
+        215.58,
+        267.5
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "67",
+      "size": 29,
+      "box": [
+        493.88,
+        226.0,
+        525.78,
+        267.5
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "92",
+      "size": 29,
+      "box": [
+        934.25,
+        226.0,
+        966.15,
+        267.5
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "45 for development",
+      "size": 24,
+      "box": [
+        75,
+        306.0,
+        288.24,
+        340.34
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Used in the current pilot",
+      "size": 22,
+      "box": [
+        75,
+        348.0,
+        300.83,
+        380.19
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "67 for validation",
+      "size": 24,
+      "box": [
+        415,
+        306.0,
+        594.66,
+        340.34
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "For the next comparison",
+      "size": 22,
+      "box": [
+        415,
+        348.0,
+        640.1,
+        380.19
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "92 set aside",
+      "size": 24,
+      "box": [
+        795,
+        306.0,
+        925.7,
+        340.34
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Kept for final evaluation",
+      "size": 22,
+      "box": [
+        795,
+        348.0,
+        1019.07,
+        380.19
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "90/90",
+      "size": 42,
+      "box": [
+        75,
+        438.0,
+        190.5,
+        498.1
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Reference queries matched as expected",
+      "size": 26,
+      "box": [
+        280,
+        432.0,
+        750.08,
+        469.21
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "We also tested wrong interpretations and missing or extra rows. These checks confirmed that",
+      "size": 23,
+      "box": [
+        280,
+        480.0,
+        1179.76,
+        513.65
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "the grader rejected the cases it should reject.",
+      "size": 23,
+      "box": [
+        280,
+        510.82,
+        713.6,
+        544.47
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "One task changed score between SQLite versions, so we fixed the execution engine before running the models. The",
+      "size": 23,
+      "box": [
+        75,
+        589.0,
+        1182.4,
+        622.65
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "next technical step is to extend the checker to more complex SQL.",
+      "size": 23,
+      "box": [
+        75,
+        619.82,
+        718.13,
+        653.47
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Self-review did better in the SQL pilot",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        640.84,
+        63.08
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Tín & Trung",
+      "size": 16,
+      "box": [
+        22,
+        693.0,
+        116.27,
+        715.9
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "RepGuard · Progress Update",
+      "size": 16,
+      "box": [
+        530.3,
+        693.0,
+        749.7,
+        715.9
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "10 Nov 2026",
+      "size": 16,
+      "box": [
+        1000,
+        693.0,
+        1085.36,
+        716.41
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "8 / 10",
+      "size": 16,
+      "box": [
+        1213.06,
+        693.0,
+        1260.0,
+        715.9
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "We tested Qwen (A) and Gemma (B) on 12 SQL tasks, each with two requested interpretations. The six",
+      "size": 24,
+      "box": [
+        75,
+        107.0,
+        1131.0,
+        142.11
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "workflows produced 144 responses in total.",
+      "size": 24,
+      "box": [
+        75,
+        139.16,
+        506.45,
+        174.27
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Both self-review workflows solved 21 of 24 cases. Cross-model review solved 19 and 20, which was 6.25",
+      "size": 24,
+      "box": [
+        75,
+        564.0,
+        1114.87,
+        599.11
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "percentage points lower on average in this pilot.",
+      "size": 24,
+      "box": [
+        75,
+        596.16,
+        557.64,
+        631.27
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "We will now test whether specific verification feedback changes this result.",
+      "size": 23,
+      "box": [
+        75,
+        644.0,
+        793.89,
+        677.65
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Where we take the research next",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        558.45,
+        63.08
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Tín & Trung",
+      "size": 16,
+      "box": [
+        22,
+        693.0,
+        116.27,
+        715.9
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "RepGuard · Progress Update",
+      "size": 16,
+      "box": [
+        530.3,
+        693.0,
+        749.7,
+        715.9
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "10 Nov 2026",
+      "size": 16,
+      "box": [
+        1000,
+        693.0,
+        1085.36,
+        716.41
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "9 / 10",
+      "size": 16,
+      "box": [
+        1213.06,
+        693.0,
+        1260.0,
+        715.9
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Can verification feedback help agents repair an analysis",
+      "size": 29,
+      "box": [
+        82,
+        123.0,
+        818.92,
+        164.5
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "more reliably than asking them to check it again?",
+      "size": 29,
+      "box": [
+        82,
+        166.0,
+        744.45,
+        207.5
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "What we can already study",
+      "size": 27,
+      "box": [
+        75,
+        258.0,
+        413.17,
+        296.64
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "We have real traces showing wrong fields,",
+      "size": 24,
+      "box": [
+        75,
+        314.0,
+        495.89,
+        349.11
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "ambiguous requests and incomplete outputs.",
+      "size": 24,
+      "box": [
+        75,
+        346.16,
+        521.86,
+        381.27
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "The checker records why a query meets or breaks",
+      "size": 24,
+      "box": [
+        75,
+        435.0,
+        572.98,
+        470.11
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "a requirement, and what still needs review.",
+      "size": 24,
+      "box": [
+        75,
+        467.16,
+        505.37,
+        502.27
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "What we need to compare",
+      "size": 27,
+      "box": [
+        665,
+        258.0,
+        995.07,
+        296.64
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "1.",
+      "size": 24,
+      "box": [
+        665,
+        314.0,
+        685.54,
+        348.34
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Review without diagnostic feedback.",
+      "size": 24,
+      "box": [
+        705,
+        314.0,
+        1069.68,
+        349.11
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "2.",
+      "size": 24,
+      "box": [
+        665,
+        391.0,
+        685.54,
+        425.34
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Review with the checker’s findings.",
+      "size": 24,
+      "box": [
+        705,
+        391.0,
+        1056.65,
+        426.11
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "3.",
+      "size": 24,
+      "box": [
+        665,
+        468.0,
+        685.54,
+        502.34
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Review with shuffled findings.",
+      "size": 24,
+      "box": [
+        705,
+        468.0,
+        1003.58,
+        503.11
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "We will keep the tools and review budget the same, then repeat the comparison on new databases. We will measure",
+      "size": 23,
+      "box": [
+        75,
+        589.0,
+        1193.88,
+        622.65
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "correct completion, repairs, new errors and total cost.",
+      "size": 23,
+      "box": [
+        75,
+        619.82,
+        592.2,
+        653.47
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Next steps for Tín and Trung",
+      "size": 35,
+      "box": [
+        24,
+        13.0,
+        499.86,
+        63.08
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Tín & Trung",
+      "size": 16,
+      "box": [
+        22,
+        693.0,
+        116.27,
+        715.9
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "RepGuard · Progress Update",
+      "size": 16,
+      "box": [
+        530.3,
+        693.0,
+        749.7,
+        715.9
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "10 Nov 2026",
+      "size": 16,
+      "box": [
+        1000,
+        693.0,
+        1085.36,
+        716.41
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "10 / 10",
+      "size": 16,
+      "box": [
+        1204.26,
+        693.0,
+        1260.0,
+        715.9
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "We will first agree on what counts as a correct result, then run the next comparison with a fixed protocol.",
+      "size": 24,
+      "box": [
+        75,
+        107.0,
+        1142.76,
+        142.11
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Tín",
+      "size": 30,
+      "box": [
+        93,
+        195.0,
+        139.5,
+        237.93
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Trung",
+      "size": 30,
+      "box": [
+        688,
+        195.0,
+        771.31,
+        237.93
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "1.",
+      "size": 23,
+      "box": [
+        85,
+        266.0,
+        104.69,
+        298.91
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Extend the checker to handle CTEs and more",
+      "size": 23,
+      "box": [
+        124,
+        266.0,
+        564.34,
+        299.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "complex queries.",
+      "size": 23,
+      "box": [
+        124,
+        296.82,
+        282.61,
+        330.47
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "2.",
+      "size": 23,
+      "box": [
+        85,
+        373.0,
+        104.69,
+        405.91
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Run strong single-model, self-review and",
+      "size": 23,
+      "box": [
+        124,
+        373.0,
+        512.13,
+        406.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "cross-model baselines with the same tools.",
+      "size": 23,
+      "box": [
+        124,
+        403.82,
+        530.55,
+        437.47
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "3.",
+      "size": 23,
+      "box": [
+        85,
+        480.0,
+        104.69,
+        512.91
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Keep a reproducible record of outputs, token",
+      "size": 23,
+      "box": [
+        124,
+        480.0,
+        555.94,
+        513.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "use and running time.",
+      "size": 23,
+      "box": [
+        124,
+        510.82,
+        333.83,
+        544.47
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "1.",
+      "size": 23,
+      "box": [
+        680,
+        266.0,
+        699.69,
+        298.91
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Review the source data and resolve ambiguous",
+      "size": 23,
+      "box": [
+        719,
+        266.0,
+        1167.11,
+        299.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "cases using a shared rubric.",
+      "size": 23,
+      "box": [
+        719,
+        296.82,
+        982.74,
+        330.47
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "2.",
+      "size": 23,
+      "box": [
+        680,
+        373.0,
+        699.69,
+        405.91
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Check the proposed contribution against the",
+      "size": 23,
+      "box": [
+        719,
+        373.0,
+        1146.29,
+        406.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "closest research papers.",
+      "size": 23,
+      "box": [
+        719,
+        403.82,
+        943.92,
+        437.47
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "3.",
+      "size": 23,
+      "box": [
+        680,
+        480.0,
+        699.69,
+        512.91
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Find analysts or students who can try a real",
+      "size": 23,
+      "box": [
+        719,
+        480.0,
+        1142.89,
+        513.65
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "reporting workflow.",
+      "size": 23,
+      "box": [
+        719,
+        510.82,
+        905.65,
+        544.47
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Deliverable: checker coverage",
+      "size": 22,
+      "box": [
+        85,
+        570.0,
+        383.43,
+        601.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "and baseline results",
+      "size": 22,
+      "box": [
+        85,
+        599.48,
+        281.5,
+        630.96
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Deliverable: reviewed cases",
+      "size": 22,
+      "box": [
+        680,
+        570.0,
+        953.42,
+        601.48
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "and a pilot workflow",
+      "size": 22,
+      "box": [
+        680,
+        599.48,
+        886.43,
+        630.96
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Together: review cases, freeze the protocol, then test on the databases set aside.",
+      "size": 23,
+      "box": [
+        75,
+        643.0,
+        852.68,
+        676.65
+      ]
+    }
+  ],
+  "sources": {
+    "docs/reports/2026-11-09/verification_v1_summary.json": "bf6bd192f0f95314e2717a69e8fae775871b2037267dad6070ce4836e5a95ce8",
+    "docs/reports/2026-11-09/arqa_v2_results.json": "d22e6ae4a9a6b5c7aae06b5aff6c002bc7dfc0a00e5bf39a9cb0cda8c3041078",
+    "docs/reports/2026-11-10/specbridge_v6_offline_results.json": "00500d9680bdf536dd7145a7406a53005f128aba10cfd97bef40e354d19200dd"
+  }
+}

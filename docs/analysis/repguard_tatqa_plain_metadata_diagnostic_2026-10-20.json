@@ -1,0 +1,1151 @@
+{
+  "scope": "Post-hoc common terminal-artifact readout only. Actual generation contexts and registered acceptance decisions frozen. Not a new rollout, model call, primary score rewrite or method gain.",
+  "new_model_calls": 0,
+  "run_id": "d11908329d5b94f303c191c7",
+  "methods": {
+    "qwen_plain": {
+      "correct": 20,
+      "valid": 24,
+      "n": 24
+    },
+    "qwen_self1": {
+      "correct": 20,
+      "valid": 24,
+      "n": 24
+    },
+    "qwen_self2": {
+      "correct": 20,
+      "valid": 24,
+      "n": 24
+    },
+    "gemma_plain": {
+      "correct": 18,
+      "valid": 24,
+      "n": 24
+    },
+    "gemma_self1": {
+      "correct": 18,
+      "valid": 24,
+      "n": 24
+    },
+    "gemma_self2": {
+      "correct": 18,
+      "valid": 24,
+      "n": 24
+    }
+  },
+  "oracle_union_diagnostic": 20,
+  "best_fixed": 20,
+  "unique_family_cases": {
+    "qwen": 2,
+    "gemma": 0
+  },
+  "changes": [
+    {
+      "case": "3a302dbd-03bf-444b-8f1f-dcf7607e2665",
+      "workflow": "gemma_plain",
+      "newly_readable": true,
+      "proofs": [
+        {
+          "name": "scale",
+          "literal": "percent",
+          "proof": "pure literal assignment; variable never read; not final answer"
+        }
+      ]
+    },
+    {
+      "case": "3a302dbd-03bf-444b-8f1f-dcf7607e2665",
+      "workflow": "gemma_self1",
+      "newly_readable": true,
+      "proofs": [
+        {
+          "name": "scale",
+          "literal": "percent",
+          "proof": "pure literal assignment; variable never read; not final answer"
+        }
+      ]
+    },
+    {
+      "case": "3a302dbd-03bf-444b-8f1f-dcf7607e2665",
+      "workflow": "gemma_self2",
+      "newly_readable": true,
+      "proofs": [
+        {
+          "name": "scale",
+          "literal": "percent",
+          "proof": "pure literal assignment; variable never read; not final answer"
+        }
+      ]
+    },
+    {
+      "case": "6acd42cd-49ad-480e-9b6d-8ddc8e15fe0c",
+      "workflow": "gemma_plain",
+      "newly_readable": true,
+      "proofs": [
+        {
+          "name": "scale",
+          "literal": "million",
+          "proof": "pure literal assignment; variable never read; not final answer"
+        }
+      ]
+    },
+    {
+      "case": "6acd42cd-49ad-480e-9b6d-8ddc8e15fe0c",
+      "workflow": "gemma_self1",
+      "newly_readable": true,
+      "proofs": [
+        {
+          "name": "scale",
+          "literal": "million",
+          "proof": "pure literal assignment; variable never read; not final answer"
+        }
+      ]
+    },
+    {
+      "case": "6acd42cd-49ad-480e-9b6d-8ddc8e15fe0c",
+      "workflow": "gemma_self2",
+      "newly_readable": true,
+      "proofs": [
+        {
+          "name": "scale",
+          "literal": "million",
+          "proof": "pure literal assignment; variable never read; not final answer"
+        }
+      ]
+    },
+    {
+      "case": "b432b2c4-d9c6-4e7d-90ef-b128d5fa5728",
+      "workflow": "gemma_plain",
+      "newly_readable": true,
+      "proofs": [
+        {
+          "name": "scale",
+          "literal": "million",
+          "proof": "pure literal assignment; variable never read; not final answer"
+        }
+      ]
+    },
+    {
+      "case": "b432b2c4-d9c6-4e7d-90ef-b128d5fa5728",
+      "workflow": "gemma_self1",
+      "newly_readable": true,
+      "proofs": [
+        {
+          "name": "scale",
+          "literal": "million",
+          "proof": "pure literal assignment; variable never read; not final answer"
+        }
+      ]
+    },
+    {
+      "case": "b432b2c4-d9c6-4e7d-90ef-b128d5fa5728",
+      "workflow": "gemma_self2",
+      "newly_readable": true,
+      "proofs": [
+        {
+          "name": "scale",
+          "literal": "million",
+          "proof": "pure literal assignment; variable never read; not final answer"
+        }
+      ]
+    },
+    {
+      "case": "2ba67b9a-9cf8-466f-81cc-b3cf0e3bec49",
+      "workflow": "qwen_plain",
+      "newly_readable": true,
+      "proofs": [
+        {
+          "name": "scale",
+          "literal": "thousand",
+          "proof": "pure literal assignment; variable never read; not final answer"
+        }
+      ]
+    },
+    {
+      "case": "28042ec5-d6a5-40e2-8c61-6ba2fb1194b5",
+      "workflow": "qwen_plain",
+      "newly_readable": true,
+      "proofs": [
+        {
+          "name": "scale",
+          "literal": "million",
+          "proof": "pure literal assignment; variable never read; not final answer"
+        }
+      ]
+    },
+    {
+      "case": "28042ec5-d6a5-40e2-8c61-6ba2fb1194b5",
+      "workflow": "qwen_self1",
+      "newly_readable": true,
+      "proofs": [
+        {
+          "name": "scale",
+          "literal": "million",
+          "proof": "pure literal assignment; variable never read; not final answer"
+        }
+      ]
+    },
+    {
+      "case": "28042ec5-d6a5-40e2-8c61-6ba2fb1194b5",
+      "workflow": "qwen_self2",
+      "newly_readable": true,
+      "proofs": [
+        {
+          "name": "scale",
+          "literal": "million",
+          "proof": "pure literal assignment; variable never read; not final answer"
+        }
+      ]
+    },
+    {
+      "case": "918c1037-ee49-4906-93d5-1517bfb17825",
+      "workflow": "gemma_plain",
+      "newly_readable": true,
+      "proofs": [
+        {
+          "name": "scale",
+          "literal": "thousand",
+          "proof": "pure literal assignment; variable never read; not final answer"
+        }
+      ]
+    },
+    {
+      "case": "918c1037-ee49-4906-93d5-1517bfb17825",
+      "workflow": "gemma_self1",
+      "newly_readable": true,
+      "proofs": [
+        {
+          "name": "scale",
+          "literal": "thousand",
+          "proof": "pure literal assignment; variable never read; not final answer"
+        }
+      ]
+    },
+    {
+      "case": "918c1037-ee49-4906-93d5-1517bfb17825",
+      "workflow": "gemma_self2",
+      "newly_readable": true,
+      "proofs": [
+        {
+          "name": "scale",
+          "literal": "thousand",
+          "proof": "pure literal assignment; variable never read; not final answer"
+        }
+      ]
+    }
+  ],
+  "rows": {
+    "3a302dbd-03bf-444b-8f1f-dcf7607e2665": {
+      "qwen_plain": {
+        "correct": false,
+        "valid": true,
+        "value": 28,
+        "scale": "percent"
+      },
+      "qwen_self1": {
+        "correct": false,
+        "valid": true,
+        "value": 28,
+        "scale": "percent"
+      },
+      "qwen_self2": {
+        "correct": false,
+        "valid": true,
+        "value": 28,
+        "scale": "percent"
+      },
+      "gemma_plain": {
+        "correct": false,
+        "valid": true,
+        "value": 28,
+        "scale": "percent"
+      },
+      "gemma_self1": {
+        "correct": false,
+        "valid": true,
+        "value": 28,
+        "scale": "percent"
+      },
+      "gemma_self2": {
+        "correct": false,
+        "valid": true,
+        "value": 28,
+        "scale": "percent"
+      }
+    },
+    "28958656-bd4d-417e-8c1e-3f07488a45aa": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 169814.33333,
+        "scale": "thousand"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 169814.33333,
+        "scale": "thousand"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 169814.33333,
+        "scale": "thousand"
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 169814.33333,
+        "scale": "thousand"
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 169814.33333,
+        "scale": "thousand"
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 169814.33333,
+        "scale": "thousand"
+      }
+    },
+    "2cc3d001-3758-41f6-9608-b034ea56c464": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": -1.5,
+        "scale": "percent"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": -1.5,
+        "scale": "percent"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": -1.5,
+        "scale": "percent"
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": -1.5,
+        "scale": "percent"
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": -1.5,
+        "scale": "percent"
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": -1.5,
+        "scale": "percent"
+      }
+    },
+    "6349e186-e6e7-40bf-98da-6a7592ea798c": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 72.5,
+        "scale": "million"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 72.5,
+        "scale": "million"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 72.5,
+        "scale": "million"
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 72.5,
+        "scale": "million"
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 72.5,
+        "scale": "million"
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 72.5,
+        "scale": "million"
+      }
+    },
+    "7d8beb14-2862-4b15-9102-145f245a78b3": {
+      "qwen_plain": {
+        "correct": false,
+        "valid": true,
+        "value": 95.70534,
+        "scale": "percent"
+      },
+      "qwen_self1": {
+        "correct": false,
+        "valid": true,
+        "value": 95.70534,
+        "scale": "percent"
+      },
+      "qwen_self2": {
+        "correct": false,
+        "valid": true,
+        "value": 95.70534,
+        "scale": "percent"
+      },
+      "gemma_plain": {
+        "correct": false,
+        "valid": true,
+        "value": 95.70534,
+        "scale": "percent"
+      },
+      "gemma_self1": {
+        "correct": false,
+        "valid": true,
+        "value": 95.70534,
+        "scale": "percent"
+      },
+      "gemma_self2": {
+        "correct": false,
+        "valid": true,
+        "value": 95.70534,
+        "scale": "percent"
+      }
+    },
+    "03c81011-5165-439a-ac47-4ec9cc33e967": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 0.33122,
+        "scale": ""
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 0.33122,
+        "scale": ""
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 0.33122,
+        "scale": ""
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 0.33122,
+        "scale": ""
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 0.33122,
+        "scale": ""
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 0.33122,
+        "scale": ""
+      }
+    },
+    "457ddbe2-9555-4eba-a91c-89a3cdc32054": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 36355,
+        "scale": "thousand"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 36355,
+        "scale": "thousand"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 36355,
+        "scale": "thousand"
+      },
+      "gemma_plain": {
+        "correct": false,
+        "valid": true,
+        "value": 7561,
+        "scale": "thousand"
+      },
+      "gemma_self1": {
+        "correct": false,
+        "valid": true,
+        "value": 7561,
+        "scale": "thousand"
+      },
+      "gemma_self2": {
+        "correct": false,
+        "valid": true,
+        "value": 7561,
+        "scale": "thousand"
+      }
+    },
+    "2817d850-d1d8-4851-b2b1-6bb98aa7d1c1": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 13.21555,
+        "scale": "percent"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 13.21555,
+        "scale": "percent"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 13.21555,
+        "scale": "percent"
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 13.21555,
+        "scale": "percent"
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 13.21555,
+        "scale": "percent"
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 13.21555,
+        "scale": "percent"
+      }
+    },
+    "bc43b597-d752-448b-924d-21543a3880ec": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 23.2476,
+        "scale": "percent"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 23.2476,
+        "scale": "percent"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 23.2476,
+        "scale": "percent"
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 23.2476,
+        "scale": "percent"
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 23.2476,
+        "scale": "percent"
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 23.2476,
+        "scale": "percent"
+      }
+    },
+    "ad442ff4-97f8-404c-a802-55f1643e2583": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 5384.0,
+        "scale": "million"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 5384.0,
+        "scale": "million"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 5384.0,
+        "scale": "million"
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 5384.0,
+        "scale": "million"
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 5384.0,
+        "scale": "million"
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 5384.0,
+        "scale": "million"
+      }
+    },
+    "c4328c5f-8793-49a9-9a4d-b0be3930dbfa": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 0.0,
+        "scale": "percent"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 0.0,
+        "scale": "percent"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 0.0,
+        "scale": "percent"
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 0.0,
+        "scale": "percent"
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 0.0,
+        "scale": "percent"
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 0.0,
+        "scale": "percent"
+      }
+    },
+    "6acd42cd-49ad-480e-9b6d-8ddc8e15fe0c": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": -79,
+        "scale": "million"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": -79,
+        "scale": "million"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": -79,
+        "scale": "million"
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": -79,
+        "scale": "million"
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": -79,
+        "scale": "million"
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": -79,
+        "scale": "million"
+      }
+    },
+    "b432b2c4-d9c6-4e7d-90ef-b128d5fa5728": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 148,
+        "scale": "million"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 148,
+        "scale": "million"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 148,
+        "scale": "million"
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 148,
+        "scale": "million"
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 148,
+        "scale": "million"
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 148,
+        "scale": "million"
+      }
+    },
+    "8dc98f36-0579-49bc-83b5-be5a74d41908": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 2.26582,
+        "scale": "percent"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 2.26582,
+        "scale": "percent"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 2.26582,
+        "scale": "percent"
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 2.26582,
+        "scale": "percent"
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 2.26582,
+        "scale": "percent"
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 2.26582,
+        "scale": "percent"
+      }
+    },
+    "2ba67b9a-9cf8-466f-81cc-b3cf0e3bec49": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 63.0,
+        "scale": "thousand"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 63.0,
+        "scale": "thousand"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 63.0,
+        "scale": "thousand"
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 63.0,
+        "scale": "thousand"
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 63.0,
+        "scale": "thousand"
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 63.0,
+        "scale": "thousand"
+      }
+    },
+    "de92ddd9-a57d-4b3f-8995-02e309da9ee5": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": -77.87894,
+        "scale": "percent"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": -77.87894,
+        "scale": "percent"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": -77.87894,
+        "scale": "percent"
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": -77.87894,
+        "scale": "percent"
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": -77.87894,
+        "scale": "percent"
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": -77.87894,
+        "scale": "percent"
+      }
+    },
+    "e76f2a50-9981-4c74-8969-b2e1e9013519": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": -10,
+        "scale": "million"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": -10,
+        "scale": "million"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": -10,
+        "scale": "million"
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": -10,
+        "scale": "million"
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": -10,
+        "scale": "million"
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": -10,
+        "scale": "million"
+      }
+    },
+    "28042ec5-d6a5-40e2-8c61-6ba2fb1194b5": {
+      "qwen_plain": {
+        "correct": false,
+        "valid": true,
+        "value": 1.165,
+        "scale": "million"
+      },
+      "qwen_self1": {
+        "correct": false,
+        "valid": true,
+        "value": 1.165,
+        "scale": "million"
+      },
+      "qwen_self2": {
+        "correct": false,
+        "valid": true,
+        "value": 1.165,
+        "scale": "million"
+      },
+      "gemma_plain": {
+        "correct": false,
+        "valid": true,
+        "value": 1165.0,
+        "scale": ""
+      },
+      "gemma_self1": {
+        "correct": false,
+        "valid": true,
+        "value": 1165.0,
+        "scale": ""
+      },
+      "gemma_self2": {
+        "correct": false,
+        "valid": true,
+        "value": 1165.0,
+        "scale": ""
+      }
+    },
+    "8b992296-0080-45ab-ace2-de7777b6d118": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 655,
+        "scale": "thousand"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 655,
+        "scale": "thousand"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 655,
+        "scale": "thousand"
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 655,
+        "scale": "thousand"
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 655,
+        "scale": "thousand"
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 655,
+        "scale": "thousand"
+      }
+    },
+    "e1280d98-5529-4dd6-83c2-29460e38a76d": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 2300224.0,
+        "scale": ""
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 2300224.0,
+        "scale": ""
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 2300224.0,
+        "scale": ""
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 2300224.0,
+        "scale": ""
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 2300224.0,
+        "scale": ""
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 2300224.0,
+        "scale": ""
+      }
+    },
+    "918c1037-ee49-4906-93d5-1517bfb17825": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": -1479.0,
+        "scale": "thousand"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": -1479.0,
+        "scale": "thousand"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": -1479.0,
+        "scale": "thousand"
+      },
+      "gemma_plain": {
+        "correct": false,
+        "valid": true,
+        "value": 1479.0,
+        "scale": "thousand"
+      },
+      "gemma_self1": {
+        "correct": false,
+        "valid": true,
+        "value": 1479.0,
+        "scale": "thousand"
+      },
+      "gemma_self2": {
+        "correct": false,
+        "valid": true,
+        "value": 1479.0,
+        "scale": "thousand"
+      }
+    },
+    "8456e6cd-3a12-4508-83a6-38d3de604bee": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 0,
+        "scale": ""
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 0,
+        "scale": ""
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 0,
+        "scale": ""
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 0,
+        "scale": ""
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 0,
+        "scale": ""
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 0,
+        "scale": ""
+      }
+    },
+    "cca3062d-1636-446e-8dee-b19424e29c8d": {
+      "qwen_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 1007.0,
+        "scale": "million"
+      },
+      "qwen_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 1007.0,
+        "scale": "million"
+      },
+      "qwen_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 1007.0,
+        "scale": "million"
+      },
+      "gemma_plain": {
+        "correct": true,
+        "valid": true,
+        "value": 1007.0,
+        "scale": "million"
+      },
+      "gemma_self1": {
+        "correct": true,
+        "valid": true,
+        "value": 1007.0,
+        "scale": "million"
+      },
+      "gemma_self2": {
+        "correct": true,
+        "valid": true,
+        "value": 1007.0,
+        "scale": "million"
+      }
+    },
+    "07799e79-f4e9-443c-8651-94d27c8553a1": {
+      "qwen_plain": {
+        "correct": false,
+        "valid": true,
+        "value": -79,
+        "scale": "million"
+      },
+      "qwen_self1": {
+        "correct": false,
+        "valid": true,
+        "value": -79,
+        "scale": "million"
+      },
+      "qwen_self2": {
+        "correct": false,
+        "valid": true,
+        "value": -79,
+        "scale": "million"
+      },
+      "gemma_plain": {
+        "correct": false,
+        "valid": true,
+        "value": -79,
+        "scale": "million"
+      },
+      "gemma_self1": {
+        "correct": false,
+        "valid": true,
+        "value": -79,
+        "scale": "million"
+      },
+      "gemma_self2": {
+        "correct": false,
+        "valid": true,
+        "value": -79,
+        "scale": "million"
+      }
+    }
+  }
+}

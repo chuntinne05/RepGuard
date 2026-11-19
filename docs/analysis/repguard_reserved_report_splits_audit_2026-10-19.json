@@ -1,0 +1,8 @@
+{
+  "reservation_sha256": "ebfdde0c1469c45b0e4e418232eb304a0f09e9452648cfcd80547b73e51f10ad",
+  "status": "Report disjoint from124 previous LIVE-pilot reports, and disjoint across reserved splits. Archive report disjointness unresolved.",
+  "archive_check": "200 RouterBench origin_query hashes are available but no original report IDs in local metadata; zero exact query matches in TRAIN does not establish disjoint company/year reports. Do not call these globally unseen reports.",
+  "confirmation_use_condition": "Resolve historical archive report identities or disclose archive report overlap as a limitation before final evaluation. No future reserved outcomes have been extracted or inferred.",
+  "selection_unchanged": true,
+  "model_calls": 0
+}

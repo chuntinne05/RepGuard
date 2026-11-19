@@ -1,0 +1,61 @@
+{
+  "tasks": 48,
+  "models": 6,
+  "judgments": 288,
+  "valid_fraction": 1.0,
+  "clipped_fraction": 0.17708333333333334,
+  "brier": {
+    "raw_judge": 0.11577256944444445,
+    "crossfit_judge": 0.09449344179673227,
+    "crossfit_gold_only": 0.17301274219821675
+  },
+  "crossfit_brier_gain": 0.07851930040148447,
+  "crossfit_brier_gain_ci95": [
+    0.04210284492619576,
+    0.11307307366184448
+  ],
+  "pair_residual_variance_ratio": 0.6946696966574826,
+  "pair_residual_variance_ratio_ci95": [
+    0.5198342261937874,
+    0.8804915065350114
+  ],
+  "operational_pass": true,
+  "expansion_signal_pass": true,
+  "scope": "Development diagnostic with all pilot gold for cross-fit calibration; not equal-budget routing or independent confirmation",
+  "uncertainty": "Question bootstrap of fixed cross-fit predictions; does not refit calibration or establish a guarantee",
+  "run_id": "bad5a513bd5d227711eb1e0d",
+  "usage": {
+    "attempts_started": 288,
+    "responses_recorded": 288,
+    "prompt_tokens_recorded": 511561,
+    "completion_tokens_recorded": 3500,
+    "unknown_usage_attempts": 0,
+    "inference_seconds_recorded": 443.94658134200023
+  },
+  "environment": {
+    "model": "qwen3:14b",
+    "model_digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+    "ollama": {
+      "version": "0.34.4"
+    },
+    "gpu": "NVIDIA A10G, 23028 MiB",
+    "think": false,
+    "num_ctx": 16384,
+    "num_predict": 128,
+    "temperature": 0,
+    "seed": 1404,
+    "archive_mounted": false
+  },
+  "source_sha256": {
+    "infra/modal/routerbench_pilot_core.py": "2d6629a3e279e8cbfba3db2635a64fa1fb8384ff9fd1d5f2e5faf33889492814",
+    "infra/modal/routerbench_pilot_pipeline.py": "7315e799df9c87ce6103206d379f709195a7e6db54c0c685df8aa53c4f579869",
+    "infra/modal/routerbench_pilot_modal.py": "b8d625b3e827300f0958e99b665d6d7f8ea621bf35b296754c7c3ba5a72e7d91",
+    "infra/modal/routerbench_intake_core.py": "e4c890b55a2317cf1ebae1328493f5f253a9406cad4e5de7a1d68c3a83d389c4",
+    "infra/modal/routerbench_intake_pipeline.py": "e75bf86b803be0e43fb387194676f547a5e67af248b92b4a4a9a75a9325de9de",
+    "infra/modal/ollama_modal_recovery.py": "51d58962f96546ca155689edf7ce7957889d4973b1fd0d7040d09fb58384947d",
+    "run_routerbench_pilot.py": "e443cc1f0a0160b7f3c12d22e893f1c887e925d2d5c014c07d2e329334ddbedc",
+    "run_dart_gain.py": "ab70c9a79125bcd8aebe0f222cb39a4ac7ad42a1b827451b571528ad986e6168",
+    "docs/analysis/routerbench_pilot_protocol_2026-10-06.md": "ebc2d4c1459e1d4729b3319c48d857b1b0e3953ba1bfeb8ed128e58423dfce9d"
+  },
+  "verified_cases": 288
+}

@@ -1,0 +1,90 @@
+{
+  "standard/A": {
+    "final_dependency_filter_accepted": 24,
+    "wrong_among_accepted_numeric_unit": 8,
+    "risk_relative_to_numeric_unit_gold": 0.3333333333333333,
+    "warnings": {},
+    "semantic_verified_count": 0
+  },
+  "standard/B": {
+    "final_dependency_filter_accepted": 14,
+    "wrong_among_accepted_numeric_unit": 2,
+    "risk_relative_to_numeric_unit_gold": 0.14285714285714285,
+    "warnings": {
+      "source_reads_unused_by_final_result": 1
+    },
+    "semantic_verified_count": 0
+  },
+  "standard/AA": {
+    "final_dependency_filter_accepted": 23,
+    "wrong_among_accepted_numeric_unit": 8,
+    "risk_relative_to_numeric_unit_gold": 0.34782608695652173,
+    "warnings": {},
+    "semantic_verified_count": 0
+  },
+  "standard/BB": {
+    "final_dependency_filter_accepted": 18,
+    "wrong_among_accepted_numeric_unit": 2,
+    "risk_relative_to_numeric_unit_gold": 0.1111111111111111,
+    "warnings": {},
+    "semantic_verified_count": 0
+  },
+  "standard/AB": {
+    "final_dependency_filter_accepted": 22,
+    "wrong_among_accepted_numeric_unit": 7,
+    "risk_relative_to_numeric_unit_gold": 0.3181818181818182,
+    "warnings": {},
+    "semantic_verified_count": 0
+  },
+  "standard/BA": {
+    "final_dependency_filter_accepted": 19,
+    "wrong_among_accepted_numeric_unit": 3,
+    "risk_relative_to_numeric_unit_gold": 0.15789473684210525,
+    "warnings": {},
+    "semantic_verified_count": 0
+  },
+  "checklist/A": {
+    "final_dependency_filter_accepted": 21,
+    "wrong_among_accepted_numeric_unit": 6,
+    "risk_relative_to_numeric_unit_gold": 0.2857142857142857,
+    "warnings": {},
+    "semantic_verified_count": 0
+  },
+  "checklist/B": {
+    "final_dependency_filter_accepted": 15,
+    "wrong_among_accepted_numeric_unit": 2,
+    "risk_relative_to_numeric_unit_gold": 0.13333333333333333,
+    "warnings": {
+      "source_reads_unused_by_final_result": 3
+    },
+    "semantic_verified_count": 0
+  },
+  "checklist/AA": {
+    "final_dependency_filter_accepted": 19,
+    "wrong_among_accepted_numeric_unit": 5,
+    "risk_relative_to_numeric_unit_gold": 0.2631578947368421,
+    "warnings": {},
+    "semantic_verified_count": 0
+  },
+  "checklist/BB": {
+    "final_dependency_filter_accepted": 19,
+    "wrong_among_accepted_numeric_unit": 3,
+    "risk_relative_to_numeric_unit_gold": 0.15789473684210525,
+    "warnings": {},
+    "semantic_verified_count": 0
+  },
+  "checklist/AB": {
+    "final_dependency_filter_accepted": 21,
+    "wrong_among_accepted_numeric_unit": 6,
+    "risk_relative_to_numeric_unit_gold": 0.2857142857142857,
+    "warnings": {},
+    "semantic_verified_count": 0
+  },
+  "checklist/BA": {
+    "final_dependency_filter_accepted": 20,
+    "wrong_among_accepted_numeric_unit": 4,
+    "risk_relative_to_numeric_unit_gold": 0.2,
+    "warnings": {},
+    "semantic_verified_count": 0
+  }
+}

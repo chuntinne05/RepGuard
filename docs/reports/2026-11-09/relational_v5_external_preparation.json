@@ -1,0 +1,66 @@
+{
+  "created_utc": "2026-11-09T15:47:54.804028+00:00",
+  "repository": "Xyc-arch/specbridge-artifact",
+  "revision": "a51be850a113a6b7c0ada57ad3c7806c6c3f25a4",
+  "source_code_sha256": "6023ed1fd8a1c5ec513473fd5c98ec61412601e49dec20d9e1684bf51fc7c3b0",
+  "task_metadata_split_sha256": "e1932892df04ba7b6181e66c3768873336098002b102b09e98bb1837d0df663e",
+  "accepted_tasks": 204,
+  "counts": {
+    "reserved_confirmation": 92,
+    "validation": 67,
+    "development": 45
+  },
+  "database_split": {
+    "financial": "development",
+    "thrombosis_prediction": "validation",
+    "student_club": "reserved_confirmation",
+    "formula_1": "reserved_confirmation",
+    "alien": "development",
+    "archeology": "validation",
+    "crypto": "reserved_confirmation",
+    "insider": "reserved_confirmation",
+    "chinook_1": "development",
+    "sakila_1": "validation",
+    "baseball_1": "reserved_confirmation",
+    "customers_and_invoices": "reserved_confirmation"
+  },
+  "downloaded_development_databases": [
+    {
+      "database": "alien",
+      "path": "results/relational_v5/source_intake/SpecBridge/pinned/benchmark/databases/alien.sqlite",
+      "bytes": 2371584,
+      "sha256": "e160643c9abb43ba69917532f2654637e677460df25678f9daecdefb416046ed",
+      "quick_check": "ok",
+      "table_count": 11
+    },
+    {
+      "database": "chinook_1",
+      "path": "results/relational_v5/source_intake/SpecBridge/pinned/benchmark/databases/chinook_1.sqlite",
+      "bytes": 901120,
+      "sha256": "70b3eb8c3ffb5351eb7943e3bf05b693a5397c22d200ff022ef99e2ca18ab7b9",
+      "quick_check": "ok",
+      "table_count": 11
+    },
+    {
+      "database": "financial",
+      "path": "results/relational_v5/source_intake/SpecBridge/pinned/benchmark/databases/financial.sqlite",
+      "bytes": 71294976,
+      "sha256": "d15d89cdb068a202b6f2b99342af44dffc1d52545b39ceaf62efdc0ba570101e",
+      "quick_check": "ok",
+      "table_count": 8
+    }
+  ],
+  "validation_and_confirmation_databases_downloaded": false,
+  "public_prompt_and_evaluation_packages_separate": true,
+  "cached_model_outputs_downloaded": false,
+  "upstream_scorer_executed": false,
+  "new_model_calls": 0,
+  "new_human_annotations": 0,
+  "licence": "Code MIT; request-set benchmark/databases CC BY-SA4.0 per pinned DATA_LICENSE.md; retain upstream attribution/share-alike for any derived data release",
+  "not_ready_for_model_confirmation": [
+    "Native scorer and interpretation oracle still need validation",
+    "Operator/ambiguity coverage qualification still needed",
+    "Strong-single and same-checker controls not yet run",
+    "Protocol/sample size not frozen; no user benefit measured"
+  ]
+}
