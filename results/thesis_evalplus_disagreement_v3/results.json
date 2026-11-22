@@ -1,0 +1,181 @@
+{
+  "protocol_sha256": "dd760db842df795aadd139fc85ec317b36463aa487dd243dd797e3dad743daa0",
+  "excluded_harness_crash_tasks": {
+    "Mbpp/255": {
+      "crashed_samples": 0,
+      "skipped_not_run": 22
+    },
+    "Mbpp/267": {
+      "crashed_samples": 0,
+      "skipped_not_run": 22
+    },
+    "Mbpp/752": {
+      "crashed_samples": 1,
+      "skipped_not_run": 19
+    },
+    "Mbpp/274": {
+      "crashed_samples": 1,
+      "skipped_not_run": 10
+    },
+    "Mbpp/300": {
+      "crashed_samples": 1,
+      "skipped_not_run": 10
+    },
+    "Mbpp/388": {
+      "crashed_samples": 1,
+      "skipped_not_run": 10
+    },
+    "Mbpp/392": {
+      "crashed_samples": 1,
+      "skipped_not_run": 10
+    }
+  },
+  "confirmation_totals": {
+    "cells": 7458,
+    "B1": 4723,
+    "FP": 783
+  },
+  "mutated_counts": {
+    "min": 0,
+    "n_tasks_below_30": 5,
+    "n_tasks": 378
+  },
+  "pools": {
+    "pool22": {
+      "models": [
+        "code-llama-13b",
+        "code-llama-34b",
+        "code-llama-7b",
+        "codegen-16b",
+        "codegen-2b",
+        "codegen-6b",
+        "codet5p-16b",
+        "codet5p-2b",
+        "codet5p-6b",
+        "deepseek-coder-1.3b-base",
+        "deepseek-coder-1.3b-instruct",
+        "deepseek-coder-33b-instruct",
+        "deepseek-coder-6.7b-base",
+        "deepseek-coder-6.7b-instruct",
+        "gpt-3.5-turbo",
+        "gpt-4-1106-preview",
+        "mistral-7b",
+        "starcoder",
+        "wizardcoder-15b",
+        "wizardcoder-34b",
+        "wizardcoder-7b",
+        "zephyr-7b"
+      ],
+      "n_candidates": 4723,
+      "FP": 783,
+      "n_cal_candidates": 398,
+      "cal_FP": 52,
+      "budgets": {
+        "0.05": {
+          "k": 236,
+          "Random": 39.12513233114546,
+          "AgentRep": 54,
+          "ActionValue": 70,
+          "Disagreement+AV": 107,
+          "Disagreement": 153
+        },
+        "0.1": {
+          "k": 472,
+          "Random": 78.25026466229092,
+          "AgentRep": 103,
+          "ActionValue": 146,
+          "Disagreement+AV": 182,
+          "Disagreement": 278
+        },
+        "0.2": {
+          "k": 945,
+          "Random": 156.6663137836121,
+          "AgentRep": 169,
+          "ActionValue": 257,
+          "Disagreement+AV": 298,
+          "Disagreement": 340
+        }
+      },
+      "AP": {
+        "Random": 0.16578445903027736,
+        "AgentRep": 0.17700117934061338,
+        "ActionValue": 0.2644618173625379,
+        "Disagreement+AV": 0.3341154246618795,
+        "Disagreement": 0.39285318532049407
+      },
+      "fp_concentration": {
+        "n_tasks": 327,
+        "top10pct_tasks": 33,
+        "share_fp_in_top10pct": 0.5747126436781609,
+        "gini": 0.789451689377873
+      },
+      "primary": {
+        "diff": 132,
+        "ci95": [
+          67.0,
+          185.0
+        ],
+        "success": true
+      }
+    },
+    "P7": {
+      "models": [
+        "code-llama-7b",
+        "deepseek-coder-6.7b-base",
+        "mistral-7b",
+        "codegen-6b"
+      ],
+      "n_candidates": 806,
+      "FP": 152,
+      "n_cal_candidates": 65,
+      "cal_FP": 7,
+      "budgets": {
+        "0.05": {
+          "k": 40,
+          "Random": 7.543424317617866,
+          "AgentRep": 3,
+          "ActionValue": 9,
+          "Disagreement+AV": 10,
+          "Disagreement": 18
+        },
+        "0.1": {
+          "k": 81,
+          "Random": 15.275434243176178,
+          "AgentRep": 12,
+          "ActionValue": 24,
+          "Disagreement+AV": 27,
+          "Disagreement": 34
+        },
+        "0.2": {
+          "k": 161,
+          "Random": 30.36228287841191,
+          "AgentRep": 23,
+          "ActionValue": 45,
+          "Disagreement+AV": 49,
+          "Disagreement": 43
+        }
+      },
+      "AP": {
+        "Random": 0.18858560794044665,
+        "AgentRep": 0.17945840641774027,
+        "ActionValue": 0.2525012430644252,
+        "Disagreement+AV": 0.27049950383775595,
+        "Disagreement": 0.2734430332937067
+      },
+      "fp_concentration": {
+        "n_tasks": 274,
+        "top10pct_tasks": 28,
+        "share_fp_in_top10pct": 0.5723684210526315,
+        "gini": 0.802487514406454
+      },
+      "primary": {
+        "diff": 10,
+        "ci95": [
+          -2.0,
+          24.0
+        ],
+        "success": false
+      }
+    }
+  }
+}

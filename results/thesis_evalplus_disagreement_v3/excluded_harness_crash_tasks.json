@@ -1,0 +1,30 @@
+{
+ "Mbpp/255": {
+  "crashed_samples": 0,
+  "skipped_not_run": 22
+ },
+ "Mbpp/267": {
+  "crashed_samples": 0,
+  "skipped_not_run": 22
+ },
+ "Mbpp/752": {
+  "crashed_samples": 1,
+  "skipped_not_run": 19
+ },
+ "Mbpp/274": {
+  "crashed_samples": 1,
+  "skipped_not_run": 10
+ },
+ "Mbpp/300": {
+  "crashed_samples": 1,
+  "skipped_not_run": 10
+ },
+ "Mbpp/388": {
+  "crashed_samples": 1,
+  "skipped_not_run": 10
+ },
+ "Mbpp/392": {
+  "crashed_samples": 1,
+  "skipped_not_run": 10
+ }
+}
