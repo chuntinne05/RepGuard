@@ -1,0 +1,263 @@
+{
+  "protocol_sha256": "361dd67e6cce5bc372a437c66f56e6f89cbfb71284248c904146990ed5249ded",
+  "dataset": "HumanEval+ v0.1.10",
+  "models": [
+    "code-llama-13b",
+    "code-llama-34b",
+    "code-llama-7b",
+    "codegen-16b",
+    "codegen-2b",
+    "codegen-6b",
+    "codet5p-16b",
+    "codet5p-2b",
+    "codet5p-6b",
+    "gpt-4-1106-preview",
+    "mistral-7b",
+    "starcoder"
+  ],
+  "n_models": 12,
+  "excluded_harness_crash_tasks": [],
+  "totals": {
+    "cells": 1968,
+    "B1": 748,
+    "FP": 94
+  },
+  "S1": {
+    "n_tasks": 164,
+    "n_cal": 32,
+    "n_eval": 132,
+    "models": [
+      "code-llama-13b",
+      "code-llama-34b",
+      "code-llama-7b",
+      "codegen-16b",
+      "codegen-2b",
+      "codegen-6b",
+      "codet5p-16b",
+      "codet5p-2b",
+      "codet5p-6b",
+      "gpt-4-1106-preview",
+      "mistral-7b",
+      "starcoder"
+    ],
+    "accuracy": {
+      "Random": 0.7689549717958809,
+      "SingleBest": 0.8257575757575758,
+      "RawRep": 0.8257575757575758,
+      "ECRT": 0.8257575757575758,
+      "AuditedECRT": 0.8257575757575758,
+      "MBR-exec": 0.7651515151515151,
+      "ECRT-v2": 0.8181818181818182,
+      "ECRT-v2-noaudit": 0.8106060606060606,
+      "Oracle": 0.8409090909090909
+    },
+    "primary_vs_max_baselines": {
+      "diff": -0.007575757575757569,
+      "ci95": [
+        -0.022727272727272818,
+        0.0
+      ],
+      "success": false
+    },
+    "secondary": {
+      "v2_vs_ECRT": {
+        "diff": -0.007575757575757569,
+        "ci95": [
+          -0.022727272727272818,
+          0.0
+        ],
+        "success": false
+      },
+      "v2_vs_noaudit": {
+        "diff": 0.00757575757575768,
+        "ci95": [
+          0.0,
+          0.022727272727272818
+        ],
+        "success": false
+      },
+      "v2_vs_MBR": {
+        "diff": 0.053030303030303094,
+        "ci95": [
+          0.007575757575757569,
+          0.09848484848484851
+        ],
+        "success": true
+      }
+    },
+    "audits": {
+      "eval_B1_cells": 609,
+      "ECRT-v2_by_d": 609,
+      "AuditedECRT_random": 62,
+      "d_threshold_p90_cal": 0.0
+    },
+    "calibration": {
+      "sens": 1.0,
+      "spec": 0.9683794466403162,
+      "prior": 0.3411458333333333,
+      "q_by_bin": [
+        0.9357142857142857,
+        0.5,
+        0.6666666666666666,
+        0.5
+      ],
+      "single_best": "gpt-4-1106-preview",
+      "n_cal_B1_cells": 139
+    },
+    "curve_S3": {
+      "20": {
+        "Random": 0.7333333333333333,
+        "SingleBest": 0.75,
+        "RawRep": 0.75,
+        "ECRT": 0.75,
+        "AuditedECRT": 0.75,
+        "MBR-exec": 0.75,
+        "ECRT-v2": 0.75,
+        "ECRT-v2-noaudit": 0.75,
+        "Oracle": 0.75
+      },
+      "50": {
+        "Random": 0.700112554112554,
+        "SingleBest": 0.76,
+        "RawRep": 0.76,
+        "ECRT": 0.76,
+        "AuditedECRT": 0.76,
+        "MBR-exec": 0.72,
+        "ECRT-v2": 0.76,
+        "ECRT-v2-noaudit": 0.76,
+        "Oracle": 0.78
+      },
+      "100": {
+        "Random": 0.7650205627705629,
+        "SingleBest": 0.82,
+        "RawRep": 0.82,
+        "ECRT": 0.82,
+        "AuditedECRT": 0.82,
+        "MBR-exec": 0.77,
+        "ECRT-v2": 0.81,
+        "ECRT-v2-noaudit": 0.8,
+        "Oracle": 0.84
+      }
+    }
+  },
+  "S2": {
+    "n_tasks": 164,
+    "n_cal": 32,
+    "n_eval": 132,
+    "models": [
+      "code-llama-13b",
+      "code-llama-34b",
+      "code-llama-7b",
+      "codegen-16b",
+      "codegen-2b",
+      "codegen-6b",
+      "codet5p-16b",
+      "codet5p-2b",
+      "codet5p-6b",
+      "gpt-4-1106-preview",
+      "mistral-7b",
+      "starcoder",
+      "hardcode-1",
+      "hardcode-2"
+    ],
+    "accuracy": {
+      "Random": 0.4713789997880907,
+      "SingleBest": 0.8257575757575758,
+      "RawRep": 0.0,
+      "ECRT": 0.0,
+      "AuditedECRT": 0.8257575757575758,
+      "MBR-exec": 0.5303030303030303,
+      "ECRT-v2": 0.5757575757575758,
+      "ECRT-v2-noaudit": 0.5757575757575758,
+      "Oracle": 0.8409090909090909
+    },
+    "primary_vs_max_baselines": {
+      "diff": -0.25,
+      "ci95": [
+        -0.3257575757575758,
+        -0.1742424242424242
+      ],
+      "success": false
+    },
+    "secondary": {
+      "v2_vs_ECRT": {
+        "diff": 0.5757575757575758,
+        "ci95": [
+          0.49242424242424243,
+          0.6590909090909091
+        ],
+        "success": true
+      },
+      "v2_vs_noaudit": {
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "success": false
+      },
+      "v2_vs_MBR": {
+        "diff": 0.045454545454545525,
+        "ci95": [
+          0.007575757575757569,
+          0.09090909090909094
+        ],
+        "success": true
+      }
+    },
+    "audits": {
+      "eval_B1_cells": 873,
+      "ECRT-v2_by_d": 198,
+      "AuditedECRT_random": 89,
+      "d_threshold_p90_cal": 1.0
+    },
+    "calibration": {
+      "sens": 1.0,
+      "spec": 0.7728706624605678,
+      "prior": 0.2924107142857143,
+      "q_by_bin": [
+        0.8243243243243243,
+        0.5,
+        0.6666666666666666,
+        0.1724137931034483
+      ],
+      "single_best": "gpt-4-1106-preview",
+      "n_cal_B1_cells": 203
+    },
+    "curve_S3": {
+      "20": {
+        "Random": 0.38749999999999996,
+        "SingleBest": 0.75,
+        "RawRep": 0.0,
+        "ECRT": 0.0,
+        "AuditedECRT": 0.75,
+        "MBR-exec": 0.35,
+        "ECRT-v2": 0.35,
+        "ECRT-v2-noaudit": 0.35,
+        "Oracle": 0.75
+      },
+      "50": {
+        "Random": 0.4153943833943834,
+        "SingleBest": 0.76,
+        "RawRep": 0.0,
+        "ECRT": 0.0,
+        "AuditedECRT": 0.76,
+        "MBR-exec": 0.44,
+        "ECRT-v2": 0.48,
+        "ECRT-v2-noaudit": 0.48,
+        "Oracle": 0.78
+      },
+      "100": {
+        "Random": 0.45820512820512815,
+        "SingleBest": 0.82,
+        "RawRep": 0.0,
+        "ECRT": 0.0,
+        "AuditedECRT": 0.82,
+        "MBR-exec": 0.5,
+        "ECRT-v2": 0.54,
+        "ECRT-v2-noaudit": 0.54,
+        "Oracle": 0.84
+      }
+    }
+  }
+}
