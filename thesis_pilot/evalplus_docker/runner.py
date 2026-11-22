@@ -11,7 +11,8 @@ import tempfile
 from pathlib import Path
 
 work = Path(tempfile.mkdtemp())
-os.environ["MBPP_OVERRIDE_PATH"] = "/in/subset.jsonl"  # read at evalplus import time
+DS = os.environ.get("EP_DATASET", "mbpp")  # humaneval: ECRT-v2 confirmation
+os.environ["MBPP_OVERRIDE_PATH" if DS == "mbpp" else "HUMANEVAL_OVERRIDE_PATH"] = "/in/subset.jsonl"  # read at import time
 os.environ["XDG_CACHE_HOME"] = str(work / "cache")
 
 network_blocked = True
@@ -21,12 +22,15 @@ try:
 except OSError:
     pass
 
-from evalplus.data import get_mbpp_plus  # noqa: E402
+from evalplus.data import get_human_eval_plus, get_mbpp_plus  # noqa: E402
+import evalplus.data.humaneval as _he  # noqa: E402
+
+_he.completeness_check = lambda *a, **k: None  # chunked subsets are incomplete by design
 from evalplus.evaluate import evaluate  # noqa: E402
 from evalplus.sanitize import sanitize  # noqa: E402
 
 samples = json.loads(Path("/in/samples.json").read_text(encoding="utf-8"))
-problems = get_mbpp_plus()
+problems = get_mbpp_plus() if DS == "mbpp" else get_human_eval_plus()
 rows = []
 for s in samples:
     tid = s["task_id"]
@@ -36,7 +40,7 @@ for s in samples:
 samples_path = work / "samples.jsonl"
 samples_path.write_text("".join(json.dumps({"task_id": r["task_id"], "solution": r["solution"]}) + "\n" for r in rows))
 out_path = work / "eval_results.json"
-evaluate("mbpp", samples=str(samples_path), parallel=4, test_details=True, output_file=str(out_path))
+evaluate(DS, samples=str(samples_path), parallel=4, test_details=True, output_file=str(out_path))
 res = json.loads(out_path.read_text())
 
 by_task = {}

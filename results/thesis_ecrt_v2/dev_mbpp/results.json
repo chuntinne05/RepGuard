@@ -1,0 +1,262 @@
+{
+  "protocol_sha256": "361dd67e6cce5bc372a437c66f56e6f89cbfb71284248c904146990ed5249ded",
+  "dataset": "MBPP+ v0.2.0 (development, descriptive only)",
+  "S1": {
+    "n_tasks": 339,
+    "n_cal": 67,
+    "n_eval": 272,
+    "models": [
+      "code-llama-13b",
+      "code-llama-34b",
+      "code-llama-7b",
+      "codegen-16b",
+      "codegen-2b",
+      "codegen-6b",
+      "codet5p-16b",
+      "codet5p-2b",
+      "codet5p-6b",
+      "deepseek-coder-1.3b-base",
+      "deepseek-coder-1.3b-instruct",
+      "deepseek-coder-33b-instruct",
+      "deepseek-coder-6.7b-base",
+      "deepseek-coder-6.7b-instruct",
+      "gpt-3.5-turbo",
+      "gpt-4-1106-preview",
+      "mistral-7b",
+      "starcoder",
+      "wizardcoder-15b",
+      "wizardcoder-34b",
+      "wizardcoder-7b",
+      "zephyr-7b"
+    ],
+    "accuracy": {
+      "Random": 0.7771249107435594,
+      "SingleBest": 0.8235294117647058,
+      "RawRep": 0.8345588235294118,
+      "ECRT": 0.8345588235294118,
+      "AuditedECRT": 0.8235294117647058,
+      "MBR-exec": 0.7830882352941176,
+      "ECRT-v2": 0.8198529411764706,
+      "ECRT-v2-noaudit": 0.8235294117647058,
+      "Oracle": 0.8860294117647058
+    },
+    "primary_vs_max_baselines": {
+      "diff": -0.014705882352941235,
+      "ci95": [
+        -0.0404411764705882,
+        0.007352941176470562
+      ],
+      "success": false
+    },
+    "secondary": {
+      "v2_vs_ECRT": {
+        "diff": -0.014705882352941235,
+        "ci95": [
+          -0.0404411764705882,
+          0.011029411764705843
+        ],
+        "success": false
+      },
+      "v2_vs_noaudit": {
+        "diff": -0.003676470588235281,
+        "ci95": [
+          -0.014705882352941235,
+          0.007352941176470673
+        ],
+        "success": false
+      },
+      "v2_vs_MBR": {
+        "diff": 0.03676470588235292,
+        "ci95": [
+          0.007352941176470562,
+          0.06617647058823539
+        ],
+        "success": true
+      }
+    },
+    "audits": {
+      "eval_B1_cells": 3796,
+      "ECRT-v2_by_d": 350,
+      "AuditedECRT_random": 374,
+      "d_threshold_p90_cal": 0.03333333333333333
+    },
+    "calibration": {
+      "sens": 1.0,
+      "spec": 0.7629009762900977,
+      "prior": 0.5135685210312076,
+      "q_by_bin": [
+        0.8647990255785627,
+        0.36507936507936506,
+        0.5,
+        0.6086956521739131
+      ],
+      "single_best": "gpt-3.5-turbo",
+      "n_cal_B1_cells": 927
+    },
+    "curve_S3": {
+      "20": {
+        "Random": 0.8581249999999999,
+        "SingleBest": 0.95,
+        "RawRep": 0.95,
+        "ECRT": 0.95,
+        "AuditedECRT": 0.95,
+        "MBR-exec": 0.85,
+        "ECRT-v2": 0.9,
+        "ECRT-v2-noaudit": 0.9,
+        "Oracle": 0.95
+      },
+      "50": {
+        "Random": 0.8008750808015513,
+        "SingleBest": 0.86,
+        "RawRep": 0.82,
+        "ECRT": 0.82,
+        "AuditedECRT": 0.86,
+        "MBR-exec": 0.78,
+        "ECRT-v2": 0.82,
+        "ECRT-v2-noaudit": 0.82,
+        "Oracle": 0.9
+      },
+      "100": {
+        "Random": 0.7791023602730259,
+        "SingleBest": 0.83,
+        "RawRep": 0.81,
+        "ECRT": 0.81,
+        "AuditedECRT": 0.83,
+        "MBR-exec": 0.78,
+        "ECRT-v2": 0.8,
+        "ECRT-v2-noaudit": 0.79,
+        "Oracle": 0.87
+      }
+    }
+  },
+  "S2": {
+    "n_tasks": 339,
+    "n_cal": 67,
+    "n_eval": 272,
+    "models": [
+      "code-llama-13b",
+      "code-llama-34b",
+      "code-llama-7b",
+      "codegen-16b",
+      "codegen-2b",
+      "codegen-6b",
+      "codet5p-16b",
+      "codet5p-2b",
+      "codet5p-6b",
+      "deepseek-coder-1.3b-base",
+      "deepseek-coder-1.3b-instruct",
+      "deepseek-coder-33b-instruct",
+      "deepseek-coder-6.7b-base",
+      "deepseek-coder-6.7b-instruct",
+      "gpt-3.5-turbo",
+      "gpt-4-1106-preview",
+      "mistral-7b",
+      "starcoder",
+      "wizardcoder-15b",
+      "wizardcoder-34b",
+      "wizardcoder-7b",
+      "zephyr-7b",
+      "hardcode-1",
+      "hardcode-2"
+    ],
+    "accuracy": {
+      "Random": 0.6538279928839109,
+      "SingleBest": 0.8235294117647058,
+      "RawRep": 0.003676470588235294,
+      "ECRT": 0.003676470588235294,
+      "AuditedECRT": 0.8198529411764706,
+      "MBR-exec": 0.7610294117647058,
+      "ECRT-v2": 0.8125,
+      "ECRT-v2-noaudit": 0.7867647058823529,
+      "Oracle": 0.8860294117647058
+    },
+    "primary_vs_max_baselines": {
+      "diff": -0.011029411764705843,
+      "ci95": [
+        -0.044117647058823484,
+        0.022058823529411797
+      ],
+      "success": false
+    },
+    "secondary": {
+      "v2_vs_ECRT": {
+        "diff": 0.8088235294117647,
+        "ci95": [
+          0.761029411764706,
+          0.8529411764705882
+        ],
+        "success": true
+      },
+      "v2_vs_noaudit": {
+        "diff": 0.02573529411764708,
+        "ci95": [
+          0.0,
+          0.05514705882352944
+        ],
+        "success": false
+      },
+      "v2_vs_MBR": {
+        "diff": 0.05147058823529416,
+        "ci95": [
+          0.014705882352941235,
+          0.0845588235294118
+        ],
+        "success": true
+      }
+    },
+    "audits": {
+      "eval_B1_cells": 4340,
+      "ECRT-v2_by_d": 536,
+      "AuditedECRT_random": 428,
+      "d_threshold_p90_cal": 1.0
+    },
+    "calibration": {
+      "sens": 1.0,
+      "spec": 0.6427732079905993,
+      "prior": 0.47077114427860695,
+      "q_by_bin": [
+        0.8583535108958837,
+        0.36507936507936506,
+        0.41935483870967744,
+        0.10738255033557047
+      ],
+      "single_best": "gpt-3.5-turbo",
+      "n_cal_B1_cells": 1061
+    },
+    "curve_S3": {
+      "20": {
+        "Random": 0.7035722589431028,
+        "SingleBest": 0.95,
+        "RawRep": 0.0,
+        "ECRT": 0.0,
+        "AuditedECRT": 0.95,
+        "MBR-exec": 0.75,
+        "ECRT-v2": 0.8,
+        "ECRT-v2-noaudit": 0.8,
+        "Oracle": 0.95
+      },
+      "50": {
+        "Random": 0.6857534166750078,
+        "SingleBest": 0.86,
+        "RawRep": 0.0,
+        "ECRT": 0.0,
+        "AuditedECRT": 0.86,
+        "MBR-exec": 0.74,
+        "ECRT-v2": 0.78,
+        "ECRT-v2-noaudit": 0.8,
+        "Oracle": 0.9
+      },
+      "100": {
+        "Random": 0.6630485809228237,
+        "SingleBest": 0.83,
+        "RawRep": 0.0,
+        "ECRT": 0.0,
+        "AuditedECRT": 0.83,
+        "MBR-exec": 0.76,
+        "ECRT-v2": 0.77,
+        "ECRT-v2-noaudit": 0.79,
+        "Oracle": 0.87
+      }
+    }
+  }
+}

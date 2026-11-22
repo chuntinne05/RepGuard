@@ -77,10 +77,13 @@ def run_one(code, entry, inputs):
 
 def main():
     import os
-    os.environ["MBPP_OVERRIDE_PATH"] = "/in/subset.jsonl"
+    ds = os.environ.get("EP_DATASET", "mbpp")
+    os.environ["MBPP_OVERRIDE_PATH" if ds == "mbpp" else "HUMANEVAL_OVERRIDE_PATH"] = "/in/subset.jsonl"
     os.environ["XDG_CACHE_HOME"] = "/tmp/cache"
-    from evalplus.data import get_mbpp_plus
-    problems = get_mbpp_plus()
+    from evalplus.data import get_human_eval_plus, get_mbpp_plus
+    import evalplus.data.humaneval as _he
+    _he.completeness_check = lambda *a, **k: None
+    problems = get_mbpp_plus() if ds == "mbpp" else get_human_eval_plus()
     mode = sys.argv[1]
     if mode == "gen":
         import pickle, random
