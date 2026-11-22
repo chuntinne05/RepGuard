@@ -90,10 +90,13 @@ def main():
         from evalplus.gen.type_mut import TypedMutGen
         inputs, counts = {}, {}
         for tid, p in problems.items():
-            sig = next(l for l in p["canonical_solution"].split("\n") if l.startswith(f"def {p['entry_point']}"))
-            first = next(l for l in p["contract"].split("\n") if l.strip())
+            first = next((l for l in p["contract"].split("\n") if l.strip()), "    x")  # empty contract -> 4-space body
             ind = first[: len(first) - len(first.lstrip())]  # match the contract's own indentation
-            code = sig + p["contract"] + "\n" + ind + "return None\n"  # signature line + contract only
+            if ds == "mbpp":
+                sig = next(l for l in p["canonical_solution"].split("\n") if l.startswith(f"def {p['entry_point']}"))
+                code = sig + p["contract"] + "\n" + ind + "return None\n"  # signature line + contract only
+            else:  # HumanEval: prompt = helpers + signature + docstring
+                code = p["prompt"] + p["contract"] + "\n" + ind + "return None\n"
             random.seed(f"20261122|{tid}")
             g = TypedMutGen(p["base_input"], p["entry_point"], code)
             g.timeout = 120

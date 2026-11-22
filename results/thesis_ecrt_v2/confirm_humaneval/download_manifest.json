@@ -1,0 +1,85 @@
+{
+  "protocol_sha256": "361dd67e6cce5bc372a437c66f56e6f89cbfb71284248c904146990ed5249ded",
+  "samples_release": "evalplus/evalplus v0.1.0 (greedy temp 0.0 zips)",
+  "dataset": "evalplus/humanevalplus_release v0.1.10 HumanEvalPlus.jsonl.gz",
+  "dataset_sha256": "272720b90ac375502c8ed23cd791c2a93dfb22a911641a494da74a426c09f101",
+  "not_used": {
+    "wizardcoder-34b.jsonl": "different (jsonl) format, not a zip sample tree; excluded for uniform pipeline",
+    "gpt-3.5-turbo/deepseek-coder*/wizardcoder-7b,15b/zephyr-7b": "no published HumanEval greedy samples in v0.1.0",
+    "chatgpt_temp_0.0.zip": "different model name than v3's gpt-3.5-turbo; not substituted"
+  },
+  "assets": [
+    {
+      "asset": "code-llama-13b_temp_0.0.zip",
+      "model": "code-llama-13b",
+      "bytes": 133315,
+      "sha256": "f73f004315dcab4fdf5a941c2429890de63e475b8873e4047fb0f9d26433f977"
+    },
+    {
+      "asset": "code-llama-34b_temp_0.0.zip",
+      "model": "code-llama-34b",
+      "bytes": 133337,
+      "sha256": "ee68f6199704ead3586efcf17c38c772c3bac0f3011170367019aa9f17e919da"
+    },
+    {
+      "asset": "code-llama-7b_temp_0.0.zip",
+      "model": "code-llama-7b",
+      "bytes": 133337,
+      "sha256": "3bebde78baf5b0ef1f7bbdb45bc31534195288abf20a691081ac91e11f6a42bf"
+    },
+    {
+      "asset": "codegen-16b_temp_0.0.zip",
+      "model": "codegen-16b",
+      "bytes": 121893,
+      "sha256": "48fa063e149f8c010d47440391701cbec93fd5e832d03151fb39f527e68c7e85"
+    },
+    {
+      "asset": "codegen-2b_temp_0.0.zip",
+      "model": "codegen-2b",
+      "bytes": 120671,
+      "sha256": "9e5a3c8327401098e8d85d1a079bc1d9aed76bef8edefdd704ee14782109bf4f"
+    },
+    {
+      "asset": "codegen-6b_temp_0.0.zip",
+      "model": "codegen-6b",
+      "bytes": 120792,
+      "sha256": "1d7df9ab9e2650ef2d16eeb1be3102ed6b00429c98c8708f4722a377c821dcc2"
+    },
+    {
+      "asset": "codet5p-16b_temp_0.0.zip",
+      "model": "codet5p-16b",
+      "bytes": 130195,
+      "sha256": "74f11dfc2c8f267c6cbd861e9dd154ffee1c67436405d50d022335880b8dee8e"
+    },
+    {
+      "asset": "codet5p-2b_temp_0.0.zip",
+      "model": "codet5p-2b",
+      "bytes": 129948,
+      "sha256": "3e169b8260ddd5a79c60642dcaf1cbc4ec01b842637ce3896d2f767064c06782"
+    },
+    {
+      "asset": "codet5p-6b_temp_0.0.zip",
+      "model": "codet5p-6b",
+      "bytes": 130195,
+      "sha256": "f9da56e1f5300be50d64807e736dbf4d2379759e985d263d0e79f7beded15365"
+    },
+    {
+      "asset": "gpt-4-1106-preview_temp_0.0.zip",
+      "model": "gpt-4-1106-preview",
+      "bytes": 99057,
+      "sha256": "cad51c9c1d1f0491adc79cbb5739e10891472497e391d510cbd27ed9707b6015"
+    },
+    {
+      "asset": "mistral-7b_temp_0.0.zip",
+      "model": "mistral-7b",
+      "bytes": 131186,
+      "sha256": "5c66098f79234ec9e259145bf5c1f03070c2e6daa13e2833edf348ffbbebe24f"
+    },
+    {
+      "asset": "starcoder_temp_0.0.zip",
+      "model": "starcoder",
+      "bytes": 127036,
+      "sha256": "46194d49945f4954f2f51015ca1df7b5bba92ba89ed6391abcc08384d833da78"
+    }
+  ]
+}
